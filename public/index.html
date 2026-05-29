@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GYO6 Law Info | AI 법률정보 도우미</title>
-  <meta name="description" content="생활 속 법령과 판례를 쉽게 찾는 AI 법률정보 도우미">
+  <meta name="description" content="특성화고 취업과 학교 현장의 법령·원문 근거를 찾는 AI 법률정보 도우미">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,9 +22,9 @@
   <main>
     <section class="hero" aria-labelledby="page-title">
       <div>
-        <p class="eyebrow">생활 법령 검색부터 원문 확인까지</p>
-        <h1 id="page-title">질문을 법령과 원문으로 정리합니다.</h1>
-        <p class="lead">일상어로 질문하면 확인할 자료, 쉬운 요약 초안, 다음 확인 순서를 한 화면에서 보여줍니다.</p>
+        <p class="eyebrow">특성화고 취업 · 학교 현장 법률정보</p>
+        <h1 id="page-title">취업과 학교 현장의 법령 근거를 함께 찾습니다.</h1>
+        <p class="lead">도제학교, 현장실습, 학교 민원에 필요한 자료와 확인 순서를 정리합니다.</p>
       </div>
       <div class="hero-panel" aria-label="MVP 사용 흐름">
         <div class="hero-panel-head">
@@ -33,7 +33,7 @@
         </div>
         <ol class="hero-steps">
           <li><span>1</span><p>질문 입력</p></li>
-          <li><span>2</span><p>자료 범위 선택</p></li>
+          <li><span>2</span><p>주제와 자료 선택</p></li>
           <li><span>3</span><p>원문 확인</p></li>
         </ol>
         <a class="hero-jump" href="#queryForm">질문 작성하기</a>
@@ -49,22 +49,22 @@
       <article>
         <span>01</span>
         <div>
-          <h2>일상어로 질문</h2>
-          <p>법률 용어를 몰라도 상황을 짧게 적으면 됩니다.</p>
+          <h2>상황 입력</h2>
+          <p>취업, 현장실습, 학교 민원 상황을 짧게 적으면 됩니다.</p>
         </div>
       </article>
       <article>
         <span>02</span>
         <div>
-          <h2>검색 범위 선택</h2>
-          <p>법령, 판례, 원문 근거 중 필요한 자료를 고릅니다.</p>
+          <h2>대상과 주제 선택</h2>
+          <p>학생, 교사, 학부모, 학교 관점에서 필요한 자료를 고릅니다.</p>
         </div>
       </article>
       <article>
         <span>03</span>
         <div>
-          <h2>근거부터 확인</h2>
-          <p>요약 초안은 참고용이며 원문 링크 확인을 우선합니다.</p>
+          <h2>원문부터 확인</h2>
+          <p>요약 초안은 참고용이며 법령 원문과 공식 자료를 우선합니다.</p>
         </div>
       </article>
     </section>
@@ -77,12 +77,12 @@
         </div>
 
         <label class="field-label" for="question">질문</label>
-        <textarea id="question" name="question" rows="6" placeholder="예: 퇴직금을 언제 받을 수 있나요?"></textarea>
+        <textarea id="question" name="question" rows="6" placeholder="예: 현장실습 중 안전사고가 나면 어떤 법령을 확인해야 하나요?"></textarea>
 
         <div class="examples" aria-label="예시 질문">
-          <button type="button" data-example="퇴직금을 언제 받을 수 있나요?">퇴직금</button>
-          <button type="button" data-example="전세 보증금을 돌려받지 못하면 어떤 법령을 확인해야 하나요?">전세 보증금</button>
-          <button type="button" data-example="학교폭력 사안에서 확인할 법령과 절차가 궁금합니다.">학교폭력</button>
+          <button type="button" data-example="현장실습 중 안전사고가 나면 학교와 업체는 어떤 법령을 확인해야 하나요?">현장실습 안전</button>
+          <button type="button" data-example="도제학교 학생의 근로시간과 보호 기준은 무엇을 봐야 하나요?">도제학교</button>
+          <button type="button" data-example="학교폭력 민원에서 학교가 확인해야 할 절차와 법령은 무엇인가요?">학교폭력 민원</button>
         </div>
 
         <div class="field-grid">
@@ -90,10 +90,14 @@
             <span>질문 유형</span>
             <select id="topicType" name="topicType">
               <option value="auto">자동 분류</option>
-              <option value="work">근로·임금</option>
-              <option value="housing">주거·임대차</option>
-              <option value="school">학교·교육</option>
-              <option value="general">기타 생활 법령</option>
+              <option value="employment">취업·근로계약</option>
+              <option value="apprenticeship">도제학교</option>
+              <option value="fieldTraining">현장실습</option>
+              <option value="overseasTraining">해외 현장실습</option>
+              <option value="schoolSafety">중대재해·안전</option>
+              <option value="schoolViolence">학교폭력</option>
+              <option value="staffLabor">교직원·행정직</option>
+              <option value="civilComplaint">학생관리·민원</option>
             </select>
           </label>
 
@@ -132,7 +136,7 @@
         <div id="resultState" class="empty-state">
           <div class="empty-icon" aria-hidden="true">§</div>
           <h3>질문을 입력하면 관련 법령 검색 링크와 요약 초안이 표시됩니다.</h3>
-          <p>현재는 MVP 화면 단계입니다. 법제처 Open API 키가 준비되면 실제 검색 결과로 연결합니다.</p>
+        <p>현재는 MVP 화면 단계입니다. 법제처 Open API 키가 준비되면 실제 검색 결과로 연결합니다.</p>
         </div>
       </section>
     </section>
@@ -140,18 +144,18 @@
     <section class="principles" aria-label="사용 원칙">
       <article>
         <span>1</span>
-        <h3>원문 우선</h3>
-        <p>요약보다 법령과 판례 원문 링크를 먼저 확인하도록 설계합니다.</p>
+        <h3>교육 현장 중심</h3>
+        <p>특성화고 취업, 현장실습, 학교 운영 상황에서 필요한 자료를 먼저 정리합니다.</p>
       </article>
       <article>
         <span>2</span>
-        <h3>정보 제공</h3>
-        <p>답변은 판단이 아니라 확인할 자료와 다음 행동의 방향을 정리합니다.</p>
+        <h3>원문 우선</h3>
+        <p>답변은 판단이 아니라 확인할 법령, 공식 자료, 원문 링크를 중심으로 정리합니다.</p>
       </article>
       <article>
         <span>3</span>
-        <h3>중요 사건 분리</h3>
-        <p>분쟁, 소송, 형사 사건은 전문가 상담 안내를 함께 보여줍니다.</p>
+        <h3>전문가 연계</h3>
+        <p>분쟁, 소송, 형사 사건, 중대한 학교 민원은 전문가 상담 안내를 함께 보여줍니다.</p>
       </article>
     </section>
 
@@ -165,13 +169,13 @@
         </article>
         <article>
           <span>02</span>
-          <h3>AI 쉬운 요약</h3>
-          <p>원문을 바탕으로 핵심 내용을 쉬운 말로 정리하고 근거를 함께 표시합니다.</p>
+          <h3>취업·현장실습 주제 사전</h3>
+          <p>도제학교, 현장실습, 해외 실습, 학교 민원을 주제별 키워드로 정리합니다.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>사용량 제한</h3>
-          <p>비용과 오남용을 막기 위해 일일 사용량과 요청 길이를 제한합니다.</p>
+          <h3>AI 쉬운 요약</h3>
+          <p>원문을 바탕으로 쉬운 말 요약을 만들고 정보 제공 안내를 함께 표시합니다.</p>
         </article>
       </div>
     </section>
