@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GYO6 Law Info | AI 법률정보 도우미</title>
+  <meta name="description" content="생활 속 법령과 판례를 쉽게 찾는 AI 법률정보 도우미">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="GYO6 Law Info 홈">
+      <span class="brand-mark" aria-hidden="true">G6</span>
+      <span>
+        <strong>GYO6 Law Info</strong>
+        <small>AI 법률정보 도우미</small>
+      </span>
+    </a>
+    <span class="phase-badge">MVP 준비중</span>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">생활 법령 검색부터 원문 확인까지</p>
+        <h1 id="page-title">법령과 원문을 쉽게 찾습니다.</h1>
+        <p class="lead">질문을 입력하면 법령 검색 링크와 요약 초안을 보여줍니다.</p>
+      </div>
+      <div class="source-strip" aria-label="연결 예정 데이터">
+        <span>법령</span>
+        <span>판례</span>
+        <span>원문 링크</span>
+        <span>쉬운 요약</span>
+      </div>
+    </section>
+
+    <section class="notice" role="note" aria-label="중요 안내">
+      <strong>정보 제공 안내</strong>
+      <p>이 서비스는 법률 자문이나 사건 판단을 제공하지 않습니다. 실제 분쟁과 소송 등 중요한 판단은 전문가와 상담하세요.</p>
+    </section>
+
+    <section class="workspace" aria-label="법률정보 검색 도구">
+      <form class="query-panel" id="queryForm">
+        <div class="panel-head">
+          <p class="panel-kicker">Question</p>
+          <h2>무엇을 찾아볼까요?</h2>
+        </div>
+
+        <label class="field-label" for="question">질문</label>
+        <textarea id="question" name="question" rows="6" placeholder="예: 퇴직금을 언제 받을 수 있나요?"></textarea>
+
+        <div class="examples" aria-label="예시 질문">
+          <button type="button" data-example="퇴직금을 언제 받을 수 있나요?">퇴직금</button>
+          <button type="button" data-example="전세 보증금을 돌려받지 못하면 어떤 법령을 확인해야 하나요?">전세 보증금</button>
+          <button type="button" data-example="학교폭력 사안에서 확인할 법령과 절차가 궁금합니다.">학교폭력</button>
+        </div>
+
+        <fieldset class="scope-group">
+          <legend>찾을 정보</legend>
+          <label><input type="checkbox" name="scope" value="law" checked> 법령</label>
+          <label><input type="checkbox" name="scope" value="case" checked> 판례</label>
+          <label><input type="checkbox" name="scope" value="source" checked> 원문 근거</label>
+        </fieldset>
+
+        <button class="primary-action" type="submit">
+          <span aria-hidden="true">⌕</span>
+          관련 정보 찾기
+        </button>
+      </form>
+
+      <section class="result-panel" aria-live="polite" aria-label="검색 결과">
+        <div class="panel-head result-head">
+          <div>
+            <p class="panel-kicker">Result</p>
+            <h2>검색 준비 화면</h2>
+          </div>
+          <span class="status-dot">API 연결 전</span>
+        </div>
+
+        <div id="resultState" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">§</div>
+          <h3>질문을 입력하면 관련 법령 검색 링크와 요약 초안이 표시됩니다.</h3>
+          <p>현재는 MVP 화면 단계입니다. 법제처 Open API 키가 준비되면 실제 검색 결과로 연결합니다.</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="roadmap" aria-label="연결 예정 기능">
+      <h2>연결 예정</h2>
+      <div class="roadmap-grid">
+        <article>
+          <span>01</span>
+          <h3>법제처 Open API</h3>
+          <p>법령명, 조문, 시행일, 원문 링크를 검색 결과로 연결합니다.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>AI 쉬운 요약</h3>
+          <p>원문을 바탕으로 핵심 내용을 쉬운 말로 정리하고 근거를 함께 표시합니다.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>사용량 제한</h3>
+          <p>비용과 오남용을 막기 위해 일일 사용량과 요청 길이를 제한합니다.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>GYO6 Law Info · AI 법률정보 도우미</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

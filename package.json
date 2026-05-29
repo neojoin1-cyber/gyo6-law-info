@@ -1,0 +1,9 @@
+{
+  "name": "gyo6-law-info",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI legal information helper MVP for finding Korean laws and original sources.",
+  "scripts": {
+    "check": "node --check public/app.js"
+  }
+}
