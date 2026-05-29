@@ -281,6 +281,39 @@ textarea:focus {
   box-shadow: 0 0 0 4px rgba(19, 135, 131, .12);
 }
 
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.field-stack {
+  display: grid;
+  gap: 7px;
+}
+
+.field-stack span {
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+select {
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 12px;
+  color: var(--ink);
+  background: #fbfcfd;
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 4px rgba(19, 135, 131, .12);
+}
+
 .examples {
   display: flex;
   flex-wrap: wrap;
@@ -483,6 +516,67 @@ textarea:focus {
   font-weight: 700;
 }
 
+.mode-note {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f7fafc;
+  color: var(--navy);
+  font-size: 13px;
+}
+
+.checklist {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding-left: 22px;
+}
+
+.checklist li {
+  padding-left: 2px;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 24px 0 4px;
+}
+
+.principles article {
+  min-height: 142px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.principles span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  background: #edf7f6;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.principles h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.principles p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
 .roadmap {
   padding: 34px 0 44px;
 }
@@ -538,6 +632,7 @@ footer p {
 @media (max-width: 880px) {
   .hero,
   .workspace,
+  .principles,
   .roadmap-grid {
     grid-template-columns: 1fr;
   }
@@ -596,6 +691,10 @@ footer p {
   .query-panel,
   .result-panel {
     padding: 16px;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
   }
 
   .result-head {
