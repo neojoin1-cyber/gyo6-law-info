@@ -34,6 +34,60 @@ const roleGuides = {
   }
 };
 
+const sourceCatalog = {
+  law: {
+    label: "법령 원문",
+    source: "국가법령정보센터",
+    reason: "적용 기준과 조문을 확인하는 가장 기본 자료입니다."
+  },
+  admin: {
+    label: "행정자료",
+    source: "교육부·교육청",
+    reason: "학교 현장에서 실제 절차를 운영할 때 필요한 공식 안내입니다."
+  },
+  case: {
+    label: "판례",
+    source: "법원 판례 검색",
+    reason: "비슷한 분쟁에서 법원이 어떤 기준을 보았는지 확인하는 보조 자료입니다."
+  },
+  safety: {
+    label: "안전 자료",
+    source: "고용노동부·안전보건공단",
+    reason: "현장실습, 중대재해, 안전사고에서는 예방·조치 기준을 함께 확인해야 합니다."
+  },
+  expert: {
+    label: "전문가 확인",
+    source: "변호사·노무사·교육청 담당 부서",
+    reason: "사실관계에 따라 판단이 달라질 수 있는 사안은 전문가 확인이 필요합니다."
+  }
+};
+
+const sourcePlanByTopic = {
+  employment: ["law", "admin", "case", "expert"],
+  apprenticeship: ["admin", "law", "safety", "case", "expert"],
+  fieldTraining: ["admin", "law", "safety", "case", "expert"],
+  overseasTraining: ["admin", "law", "expert"],
+  schoolSafety: ["safety", "law", "admin", "case", "expert"],
+  schoolViolence: ["admin", "law", "case", "expert"],
+  staffLabor: ["law", "admin", "case", "expert"],
+  civilComplaint: ["admin", "law", "case", "expert"],
+  general: ["law", "admin", "case", "expert"]
+};
+
+const factPromptsByTopic = {
+  employment: ["근로계약서가 있나요?", "근무 시작일과 종료일은 언제인가요?", "임금·근로시간 조건을 알고 있나요?", "학생 신분과 근로자성이 함께 문제되나요?"],
+  apprenticeship: ["도제학교 운영 계획이나 훈련계약이 있나요?", "학교와 기업의 역할이 나뉘어 있나요?", "훈련 장소와 시간이 정리되어 있나요?", "안전교육 기록이 있나요?"],
+  fieldTraining: ["실습 협약서가 있나요?", "사고나 문제가 발생한 날짜와 장소는 어디인가요?", "학교·산업체가 어떤 조치를 했나요?", "보호자에게 안내된 자료가 있나요?"],
+  overseasTraining: ["파견 국가와 기관은 어디인가요?", "동의서·보험·비상 연락 체계가 있나요?", "현지 사고나 민원이 발생했나요?", "귀국·중단 절차가 안내되었나요?"],
+  schoolSafety: ["사고 장소와 시간은 언제인가요?", "피해 정도와 즉시 조치가 기록되어 있나요?", "안전교육·점검 기록이 있나요?", "학교·외부 기관의 역할이 구분되나요?"],
+  schoolViolence: ["신고·접수 일자가 언제인가요?", "피해·가해 학생 보호 조치가 있었나요?", "전담기구 확인이나 심의 절차가 진행되었나요?", "교육청 안내 자료를 확인했나요?"],
+  staffLabor: ["정규직·기간제·상근 여부가 무엇인가요?", "계약서와 복무 규정이 있나요?", "징계·민원·근로조건 중 어떤 사안인가요?", "학교법인 또는 교육청 기준이 있나요?"],
+  civilComplaint: ["민원 접수 날짜와 경로가 있나요?", "상담·지도 기록이 시간순으로 정리되어 있나요?", "학교 규정이나 교육청 안내를 확인했나요?", "학생 권리 보호 조치가 필요한가요?"],
+  general: ["누가 관련되어 있나요?", "언제·어디서 발생했나요?", "계약서·공문·기록이 있나요?", "학교나 기관이 이미 안내한 내용이 있나요?"]
+};
+
+const highRiskWords = ["소송", "고소", "고발", "형사", "사망", "중상", "해고", "징계", "손해배상", "폭행", "성폭력", "자살", "중대재해"];
+
 const topicPresets = [
   {
     type: "employment",
@@ -156,6 +210,9 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const roleGuide = getRoleGuide(userRole);
   const sourceLinks = getSourceLinks(encodedQuestion, preset, scopes);
   const keywords = buildKeywords(question, preset);
+  const sourcePlan = getSourcePlan(preset, scopes);
+  const factPrompts = getFactPrompts(preset, userRole);
+  const riskSignals = detectRiskSignals(question);
 
   resultTitle.textContent = "요약 초안";
   statusDot.textContent = "원문 확인 필요";
@@ -177,6 +234,13 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
       <p class="mode-note">${escapeHtml(modeMessage)}</p>
     </section>
 
+    ${riskSignals.length ? `
+      <section class="risk-note" aria-label="주의 신호">
+        <strong>중요 사안 가능성</strong>
+        <p>${escapeHtml(riskSignals.join(", "))} 표현이 포함되어 있습니다. 원문 확인과 별도로 학교 담당 부서 또는 전문가 상담을 우선 검토하세요.</p>
+      </section>
+    ` : ""}
+
     <section class="result-block">
       <h3>우선 확인할 자료</h3>
       <ul>
@@ -188,10 +252,33 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
     </section>
 
     <section class="result-block">
+      <h3>출처 확인 순서</h3>
+      <div class="source-priority-list">
+        ${sourcePlan.map((item, index) => `
+          <article>
+            <span>${index + 1}</span>
+            <div>
+              <strong>${escapeHtml(item.label)}</strong>
+              <small>${escapeHtml(item.source)}</small>
+              <p>${escapeHtml(item.reason)}</p>
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    </section>
+
+    <section class="result-block">
       <h3>확인 순서</h3>
       <ol class="checklist">
         ${preset.checklist.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
       </ol>
+    </section>
+
+    <section class="result-block">
+      <h3>더 적으면 정확해지는 내용</h3>
+      <div class="fact-prompts">
+        ${factPrompts.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
+      </div>
     </section>
 
     <section class="result-block">
@@ -247,6 +334,48 @@ function getModeMessage(answerMode) {
 
 function getRoleGuide(userRole) {
   return roleGuides[userRole] || roleGuides.auto;
+}
+
+function getSourcePlan(preset, scopes) {
+  const basePlan = sourcePlanByTopic[preset.type] || sourcePlanByTopic.general;
+  const filteredPlan = basePlan.filter((type) => {
+    if (!scopes.length || type === "expert" || type === "safety") {
+      return true;
+    }
+
+    if (type === "law") {
+      return scopes.includes("law") || scopes.includes("source");
+    }
+
+    if (type === "admin") {
+      return scopes.includes("admin") || scopes.includes("source");
+    }
+
+    if (type === "case") {
+      return scopes.includes("case");
+    }
+
+    return true;
+  });
+
+  return filteredPlan.map((type) => sourceCatalog[type]).filter(Boolean);
+}
+
+function getFactPrompts(preset, userRole) {
+  const prompts = factPromptsByTopic[preset.type] || factPromptsByTopic.general;
+  const rolePrompt = {
+    student: "학교나 선생님에게 이미 알린 내용이 있나요?",
+    teacher: "상담·지도 기록이 남아 있나요?",
+    parent: "학교에서 받은 안내문이나 문자 기록이 있나요?",
+    principal: "학교장 또는 관리자의 조치 기록이 있나요?",
+    staff: "공문, 계약서, 내부 결재 기록이 있나요?"
+  }[userRole];
+
+  return rolePrompt ? [...prompts, rolePrompt].slice(0, 5) : prompts;
+}
+
+function detectRiskSignals(question) {
+  return highRiskWords.filter((word) => question.includes(word)).slice(0, 4);
 }
 
 function buildKeywords(question, preset) {
