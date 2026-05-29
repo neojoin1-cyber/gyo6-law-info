@@ -86,6 +86,62 @@ const factPromptsByTopic = {
   general: ["누가 관련되어 있나요?", "언제·어디서 발생했나요?", "계약서·공문·기록이 있나요?", "학교나 기관이 이미 안내한 내용이 있나요?"]
 };
 
+const officialMaterialsByTopic = {
+  employment: [
+    { type: "law", title: "근로기준법", source: "국가법령정보센터", use: "임금, 근로시간, 휴게, 해고 절차의 기본 기준을 확인합니다.", query: "근로기준법" },
+    { type: "law", title: "근로자퇴직급여 보장법", source: "국가법령정보센터", use: "퇴직급여와 퇴직금 관련 기준을 확인합니다.", query: "근로자퇴직급여 보장법" },
+    { type: "law", title: "직업교육훈련 촉진법", source: "국가법령정보센터", use: "직업교육훈련과 학생 실습 관련 기준을 함께 확인합니다.", query: "직업교육훈련 촉진법" },
+    { type: "admin", title: "근로조건·노동관계 안내", source: "고용노동부", use: "근로조건 해설, 민원 안내, 노동관계 자료를 확인합니다.", query: "근로조건", url: "https://www.moel.go.kr/index.do" }
+  ],
+  apprenticeship: [
+    { type: "law", title: "산업현장 일학습병행 지원에 관한 법률", source: "국가법령정보센터", use: "도제학교와 일학습병행의 법적 기반을 확인합니다.", query: "산업현장 일학습병행 지원에 관한 법률" },
+    { type: "law", title: "직업교육훈련 촉진법", source: "국가법령정보센터", use: "직업교육훈련과 현장 훈련 기준을 확인합니다.", query: "직업교육훈련 촉진법" },
+    { type: "admin", title: "도제학교·직업계고 정책 자료", source: "교육부", use: "도제학교 운영과 직업계고 정책 자료를 확인합니다.", query: "도제학교", url: "https://www.moe.go.kr/main.do?s=moe" },
+    { type: "safety", title: "산업안전보건 교육 자료", source: "안전보건공단", use: "기업훈련과 실습 현장의 안전교육 자료를 확인합니다.", query: "산업안전보건", url: "https://www.kosha.or.kr/kosha/index.do" }
+  ],
+  fieldTraining: [
+    { type: "law", title: "직업교육훈련 촉진법", source: "국가법령정보센터", use: "현장실습 운영과 직업교육훈련 기준을 확인합니다.", query: "직업교육훈련 촉진법" },
+    { type: "law", title: "산업안전보건법", source: "국가법령정보센터", use: "실습 현장의 안전보건 의무와 조치 기준을 확인합니다.", query: "산업안전보건법" },
+    { type: "law", title: "중대재해 처벌 등에 관한 법률", source: "국가법령정보센터", use: "중대한 안전사고가 포함될 때 관리 책임과 안전보건 체계를 확인합니다.", query: "중대재해 처벌 등에 관한 법률" },
+    { type: "admin", title: "직업계고 현장실습 자료", source: "교육부", use: "학교 현장실습 운영 자료와 공식 안내를 확인합니다.", query: "직업계고 현장실습", url: "https://www.moe.go.kr/main.do?s=moe" }
+  ],
+  overseasTraining: [
+    { type: "law", title: "직업교육훈련 촉진법", source: "국가법령정보센터", use: "해외 현장실습도 직업교육훈련의 기본 틀에서 확인합니다.", query: "직업교육훈련 촉진법" },
+    { type: "law", title: "초중등교육법", source: "국가법령정보센터", use: "학생 지도와 학교 운영의 기본 근거를 확인합니다.", query: "초중등교육법" },
+    { type: "admin", title: "글로벌 현장학습·직업계고 자료", source: "교육부", use: "해외 실습 운영과 파견 전 확인 자료를 찾습니다.", query: "글로벌 현장학습", url: "https://www.moe.go.kr/main.do?s=moe" },
+    { type: "admin", title: "해외안전여행 정보", source: "외교부", use: "파견 국가의 안전정보와 위기 대응 자료를 확인합니다.", query: "해외안전여행", url: "https://www.0404.go.kr" }
+  ],
+  schoolSafety: [
+    { type: "law", title: "중대재해 처벌 등에 관한 법률", source: "국가법령정보센터", use: "중대재해 관련 안전보건 관리체계를 확인합니다.", query: "중대재해 처벌 등에 관한 법률" },
+    { type: "law", title: "산업안전보건법", source: "국가법령정보센터", use: "학교와 실습 현장의 안전보건 기준을 확인합니다.", query: "산업안전보건법" },
+    { type: "law", title: "학교안전사고 예방 및 보상에 관한 법률", source: "국가법령정보센터", use: "학교안전사고 예방과 보상 관련 기준을 확인합니다.", query: "학교안전사고 예방 및 보상에 관한 법률" },
+    { type: "safety", title: "안전보건 자료", source: "안전보건공단", use: "위험성 평가, 안전교육, 사고 예방 자료를 확인합니다.", query: "안전보건", url: "https://www.kosha.or.kr/kosha/index.do" }
+  ],
+  schoolViolence: [
+    { type: "admin", title: "2024년 학교폭력 사안처리 가이드북", source: "교육부", use: "신고, 조사, 심의, 조치 절차를 학교 현장 기준으로 확인합니다.", query: "학교폭력 사안처리 가이드북", url: "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=316&boardSeq=98297&lev=0&m=0302&opType=N&s=moe&statusYN=W" },
+    { type: "law", title: "학교폭력예방 및 대책에 관한 법률", source: "국가법령정보센터", use: "학교폭력 사안 처리의 법적 근거를 확인합니다.", query: "학교폭력예방 및 대책에 관한 법률" },
+    { type: "law", title: "초중등교육법", source: "국가법령정보센터", use: "학생 지도와 학교 운영의 기본 근거를 확인합니다.", query: "초중등교육법" },
+    { type: "case", title: "학교폭력 판례", source: "법원 판례 검색", use: "비슷한 사안에서 다투어진 쟁점을 보조적으로 확인합니다.", query: "학교폭력" }
+  ],
+  staffLabor: [
+    { type: "law", title: "교육공무원법", source: "국가법령정보센터", use: "정규 교사와 교육공무원 신분·복무 기준을 확인합니다.", query: "교육공무원법" },
+    { type: "law", title: "사립학교법", source: "국가법령정보센터", use: "사립학교 교직원 관련 기준을 확인합니다.", query: "사립학교법" },
+    { type: "law", title: "근로기준법", source: "국가법령정보센터", use: "행정직원과 근로관계 사안의 기본 기준을 확인합니다.", query: "근로기준법" },
+    { type: "law", title: "기간제 및 단시간근로자 보호 등에 관한 법률", source: "국가법령정보센터", use: "기간제·단시간 근로자 보호 기준을 확인합니다.", query: "기간제 및 단시간근로자 보호 등에 관한 법률" }
+  ],
+  civilComplaint: [
+    { type: "law", title: "초중등교육법", source: "국가법령정보센터", use: "학생관리와 학교 운영의 기본 근거를 확인합니다.", query: "초중등교육법" },
+    { type: "law", title: "행정절차법", source: "국가법령정보센터", use: "처분, 의견제출, 절차 안내가 필요한 사안에서 확인합니다.", query: "행정절차법" },
+    { type: "admin", title: "학교생활기록 작성 및 관리지침", source: "교육부", use: "학생 기록과 관리 기준이 필요한 경우 확인합니다.", query: "학교생활기록 작성 및 관리지침", url: "https://www.moe.go.kr/main.do?s=moe" },
+    { type: "admin", title: "교육부·교육청 민원 안내", source: "교육부·교육청", use: "민원 접수, 답변, 처리 절차를 확인합니다.", query: "학교 민원 처리", url: "https://www.moe.go.kr/main.do?s=moe" }
+  ],
+  general: [
+    { type: "law", title: "국가법령정보센터 통합검색", source: "국가법령정보센터", use: "질문 핵심어와 관련된 법령을 먼저 찾습니다.", query: "법령 검색" },
+    { type: "admin", title: "교육부 자료 확인", source: "교육부", use: "학교 현장 관련 공식 자료를 확인합니다.", query: "교육부 자료", url: "https://www.moe.go.kr/main.do?s=moe" },
+    { type: "case", title: "판례 검색", source: "법원 판례 검색", use: "비슷한 분쟁의 판단 기준을 보조적으로 확인합니다.", query: "판례" }
+  ]
+};
+
 const highRiskWords = ["소송", "고소", "고발", "형사", "사망", "중상", "해고", "징계", "손해배상", "폭행", "성폭력", "자살", "중대재해"];
 
 const topicPresets = [
@@ -195,6 +251,8 @@ form.addEventListener("submit", (event) => {
   renderResult(question, preset, scopes, answerModeInput.value, userRoleInput.value);
 });
 
+hydrateFromUrl();
+
 function findPreset(question, selectedType) {
   if (selectedType && selectedType !== "auto") {
     return topicPresets.find((preset) => preset.type === selectedType) || fallbackPreset;
@@ -213,6 +271,7 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const sourcePlan = getSourcePlan(preset, scopes);
   const factPrompts = getFactPrompts(preset, userRole);
   const riskSignals = detectRiskSignals(question);
+  const officialMaterials = getOfficialMaterials(preset);
 
   resultTitle.textContent = "요약 초안";
   statusDot.textContent = "원문 확인 필요";
@@ -248,6 +307,27 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
       </ul>
       <div class="search-keywords" aria-label="추천 검색어">
         ${keywords.map((keyword) => `<code>${escapeHtml(keyword)}</code>`).join("")}
+      </div>
+    </section>
+
+    <section class="result-block">
+      <h3>공식 자료 후보</h3>
+      <div class="material-list">
+        ${officialMaterials.map((material, index) => `
+          <article>
+            <div class="material-head">
+              <span>${escapeHtml(getMaterialKindLabel(material.type))}</span>
+              <small>${index + 1}순위</small>
+            </div>
+            <h4>${escapeHtml(material.title)}</h4>
+            <p>${escapeHtml(material.use)}</p>
+            <div class="material-meta">
+              <span>${escapeHtml(material.source)}</span>
+              <code>${escapeHtml(material.query)}</code>
+            </div>
+            <a href="${getMaterialUrl(material, encodedQuestion)}" target="_blank" rel="noopener noreferrer">${escapeHtml(getMaterialActionLabel(material.type))}</a>
+          </article>
+        `).join("")}
       </div>
     </section>
 
@@ -374,8 +454,89 @@ function getFactPrompts(preset, userRole) {
   return rolePrompt ? [...prompts, rolePrompt].slice(0, 5) : prompts;
 }
 
+function getOfficialMaterials(preset) {
+  return officialMaterialsByTopic[preset.type] || officialMaterialsByTopic.general;
+}
+
+function getMaterialKindLabel(type) {
+  const labels = {
+    law: "법령",
+    admin: "행정자료",
+    case: "판례",
+    safety: "안전자료"
+  };
+
+  return labels[type] || "자료";
+}
+
+function getMaterialActionLabel(type) {
+  const labels = {
+    law: "법령명 검색",
+    admin: "공식 자료 확인",
+    case: "판례 검색",
+    safety: "안전 자료 확인"
+  };
+
+  return labels[type] || "자료 확인";
+}
+
+function getMaterialUrl(material, encodedQuestion) {
+  if (material.url) {
+    return material.url;
+  }
+
+  const query = encodeURIComponent(material.query || decodeURIComponent(encodedQuestion));
+
+  if (material.type === "case") {
+    return `https://www.scourt.go.kr/portal/information/events/search/search.jsp?searchWord=${query}`;
+  }
+
+  return `https://www.law.go.kr/LSW/lsSc.do?query=${query}`;
+}
+
 function detectRiskSignals(question) {
   return highRiskWords.filter((word) => question.includes(word)).slice(0, 4);
+}
+
+function hydrateFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const question = params.get("q") || params.get("question");
+
+  if (!question) {
+    return;
+  }
+
+  questionInput.value = question;
+  setSelectValue(userRoleInput, params.get("role"));
+  setSelectValue(topicTypeInput, params.get("topic"));
+  setSelectValue(answerModeInput, params.get("mode"));
+  setScopesFromUrl(params.get("scopes"));
+
+  if (params.get("run") === "1") {
+    form.requestSubmit();
+  }
+}
+
+function setSelectValue(select, value) {
+  if (!value) {
+    return;
+  }
+
+  const hasOption = [...select.options].some((option) => option.value === value);
+  if (hasOption) {
+    select.value = value;
+  }
+}
+
+function setScopesFromUrl(value) {
+  if (!value) {
+    return;
+  }
+
+  const nextScopes = value.split(",").map((scope) => scope.trim()).filter(Boolean);
+  form.querySelectorAll("input[name='scope']").forEach((input) => {
+    input.checked = nextScopes.includes(input.value);
+  });
 }
 
 function buildKeywords(question, preset) {
