@@ -5,6 +5,34 @@ const resultTitle = document.querySelector(".result-head h2");
 const statusDot = document.querySelector(".status-dot");
 const topicTypeInput = document.querySelector("#topicType");
 const answerModeInput = document.querySelector("#answerMode");
+const userRoleInput = document.querySelector("#userRole");
+
+const roleGuides = {
+  auto: {
+    label: "상황 중심",
+    advice: "질문 속 대상과 기관을 먼저 나누고, 법령 원문과 공식 자료를 함께 확인하는 흐름으로 정리합니다."
+  },
+  student: {
+    label: "학생 관점",
+    advice: "권리 보호, 안전, 근로조건, 학교에 요청할 자료를 쉬운 말로 먼저 정리합니다."
+  },
+  teacher: {
+    label: "선생님 관점",
+    advice: "상담 기록, 지도 절차, 학교 규정, 교육청 안내와 함께 확인할 원문을 정리합니다."
+  },
+  parent: {
+    label: "학부모 관점",
+    advice: "절차 이해, 학교와의 소통, 학생 보호를 중심으로 확인할 자료를 정리합니다."
+  },
+  principal: {
+    label: "학교 관리자 관점",
+    advice: "학교 운영, 안전관리, 민원 대응, 교직원·행정직 관리에 필요한 기준을 나누어 확인합니다."
+  },
+  staff: {
+    label: "행정직원 관점",
+    advice: "계약, 복무, 기록, 행정절차와 관련된 법령과 공식 지침을 우선 확인합니다."
+  }
+};
 
 const topicPresets = [
   {
@@ -110,7 +138,7 @@ form.addEventListener("submit", (event) => {
 
   const scopes = [...form.querySelectorAll("input[name='scope']:checked")].map((input) => input.value);
   const preset = findPreset(question, topicTypeInput.value);
-  renderResult(question, preset, scopes, answerModeInput.value);
+  renderResult(question, preset, scopes, answerModeInput.value, userRoleInput.value);
 });
 
 function findPreset(question, selectedType) {
@@ -122,17 +150,23 @@ function findPreset(question, selectedType) {
   return topicPresets.find((preset) => preset.keys.some((key) => normalized.includes(key))) || fallbackPreset;
 }
 
-function renderResult(question, preset, scopes, answerMode) {
+function renderResult(question, preset, scopes, answerMode, userRole) {
   const encodedQuestion = encodeURIComponent(question);
-  const lawSearchUrl = `https://www.law.go.kr/LSW/lsSc.do?query=${encodedQuestion}`;
-  const courtSearchUrl = `https://www.scourt.go.kr/portal/information/events/search/search.jsp?searchWord=${encodedQuestion}`;
   const modeMessage = getModeMessage(answerMode);
+  const roleGuide = getRoleGuide(userRole);
+  const sourceLinks = getSourceLinks(encodedQuestion, preset, scopes);
+  const keywords = buildKeywords(question, preset);
 
   resultTitle.textContent = "요약 초안";
   statusDot.textContent = "원문 확인 필요";
   resultState.className = "summary-box";
   resultState.innerHTML = `
     <div class="query-readout">${escapeHtml(question)}</div>
+
+    <section class="role-note" aria-label="사용자 관점">
+      <strong>${escapeHtml(roleGuide.label)}</strong>
+      <p>${escapeHtml(roleGuide.advice)}</p>
+    </section>
 
     <section class="result-block">
       <h3>${escapeHtml(preset.title)}</h3>
@@ -148,6 +182,9 @@ function renderResult(question, preset, scopes, answerMode) {
       <ul>
         ${preset.laws.map((law) => `<li>${escapeHtml(law)}</li>`).join("")}
       </ul>
+      <div class="search-keywords" aria-label="추천 검색어">
+        ${keywords.map((keyword) => `<code>${escapeHtml(keyword)}</code>`).join("")}
+      </div>
     </section>
 
     <section class="result-block">
@@ -161,14 +198,13 @@ function renderResult(question, preset, scopes, answerMode) {
       <h3>선택한 검색 범위</h3>
       <p>${escapeHtml(formatScopes(scopes))}</p>
       <div class="source-actions">
-        <a href="${lawSearchUrl}" target="_blank" rel="noopener noreferrer">법령 원문 검색</a>
-        <a href="${courtSearchUrl}" target="_blank" rel="noopener noreferrer">판례 검색</a>
+        ${sourceLinks.map((link, index) => `<a class="${index === 0 ? "source-primary" : "source-light"}" href="${link.href}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`).join("")}
       </div>
     </section>
 
     <section class="result-block">
       <h3>주의</h3>
-      <p>이 결과는 MVP 화면의 검색 준비 예시입니다. 실제 판단이나 조치는 원문과 전문가 상담을 통해 확인하세요.</p>
+      <p>이 결과는 MVP 화면의 검색 준비 예시입니다. 실제 판단이나 조치는 원문, 학교·교육청 공식 안내, 전문가 상담을 통해 확인하세요.</p>
     </section>
   `;
 }
@@ -186,12 +222,13 @@ function showEmptyMessage(title, message) {
 
 function formatScopes(scopes) {
   if (!scopes.length) {
-    return "선택한 범위가 없습니다. 기본 검색에서는 법령, 판례, 원문 근거를 함께 확인합니다.";
+    return "선택한 범위가 없습니다. 기본 검색에서는 법령, 판례, 행정자료, 원문 근거를 함께 확인합니다.";
   }
 
   const labels = {
     law: "법령",
     case: "판례",
+    admin: "행정자료",
     source: "원문 근거"
   };
 
@@ -206,6 +243,60 @@ function getModeMessage(answerMode) {
   };
 
   return messages[answerMode] || messages.plain;
+}
+
+function getRoleGuide(userRole) {
+  return roleGuides[userRole] || roleGuides.auto;
+}
+
+function buildKeywords(question, preset) {
+  const questionWords = question
+    .replace(/[^\p{Letter}\p{Number}\s]/gu, " ")
+    .split(/\s+/)
+    .filter((word) => word.length >= 2)
+    .slice(0, 3);
+
+  return [...new Set([...questionWords, ...preset.tags, ...preset.laws])].slice(0, 8);
+}
+
+function getSourceLinks(encodedQuestion, preset, scopes) {
+  const links = [];
+  const wants = (scope) => !scopes.length || scopes.includes(scope);
+
+  if (wants("law") || wants("source")) {
+    links.push({
+      label: "국가법령정보센터 검색",
+      href: `https://www.law.go.kr/LSW/lsSc.do?query=${encodedQuestion}`
+    });
+  }
+
+  if (wants("case")) {
+    links.push({
+      label: "법원 판례 검색",
+      href: `https://www.scourt.go.kr/portal/information/events/search/search.jsp?searchWord=${encodedQuestion}`
+    });
+  }
+
+  if (wants("admin")) {
+    links.push({
+      label: "교육부 자료 확인",
+      href: "https://www.moe.go.kr/main.do?s=moe"
+    });
+  }
+
+  if (preset.type === "schoolViolence") {
+    links.push({
+      label: "학교폭력 가이드북",
+      href: "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=316&boardSeq=98297&lev=0&m=0302&opType=N&s=moe&statusYN=W"
+    });
+  }
+
+  links.push({
+    label: "법령정보 API 안내",
+    href: "https://open.law.go.kr/LSO/openApi/guideList.do"
+  });
+
+  return links;
 }
 
 function escapeHtml(value) {

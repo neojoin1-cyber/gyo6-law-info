@@ -69,6 +69,30 @@
       </article>
     </section>
 
+    <section class="source-hub" aria-label="공식 출처 연결">
+      <div class="section-head">
+        <p class="panel-kicker">Official Sources</p>
+        <h2>공식 원문을 중심으로 연결합니다.</h2>
+      </div>
+      <div class="source-grid">
+        <article>
+          <span>법령·행정규칙</span>
+          <h3>국가법령정보센터</h3>
+          <p>현행 법령, 조문, 행정규칙, 자치법규, 법령해석례를 우선 확인합니다.</p>
+        </article>
+        <article>
+          <span>판례·사법자료</span>
+          <h3>법원·판례 정보</h3>
+          <p>판례 검색과 법원 데이터 API를 보조 출처로 연결합니다.</p>
+        </article>
+        <article>
+          <span>학교 현장 자료</span>
+          <h3>교육부·교육청 자료</h3>
+          <p>학교폭력, 현장실습, 학생관리처럼 현장 지침이 필요한 자료를 함께 확인합니다.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="workspace" aria-label="법률정보 검색 도구">
       <form class="query-panel" id="queryForm">
         <div class="panel-head">
@@ -86,6 +110,18 @@
         </div>
 
         <div class="field-grid">
+          <label class="field-stack" for="userRole">
+            <span>사용자</span>
+            <select id="userRole" name="userRole">
+              <option value="auto">상황에 맞게</option>
+              <option value="student">학생</option>
+              <option value="teacher">선생님</option>
+              <option value="parent">학부모</option>
+              <option value="principal">학교 관리자</option>
+              <option value="staff">행정직원</option>
+            </select>
+          </label>
+
           <label class="field-stack" for="topicType">
             <span>질문 유형</span>
             <select id="topicType" name="topicType">
@@ -115,6 +151,7 @@
           <legend>찾을 정보</legend>
           <label><input type="checkbox" name="scope" value="law" checked> 법령</label>
           <label><input type="checkbox" name="scope" value="case" checked> 판례</label>
+          <label><input type="checkbox" name="scope" value="admin" checked> 행정자료</label>
           <label><input type="checkbox" name="scope" value="source" checked> 원문 근거</label>
         </fieldset>
 
@@ -136,7 +173,7 @@
         <div id="resultState" class="empty-state">
           <div class="empty-icon" aria-hidden="true">§</div>
           <h3>질문을 입력하면 관련 법령 검색 링크와 요약 초안이 표시됩니다.</h3>
-        <p>현재는 MVP 화면 단계입니다. 법제처 Open API 키가 준비되면 실제 검색 결과로 연결합니다.</p>
+          <p>현재는 MVP 화면 단계입니다. 법제처 Open API 키가 준비되면 실제 검색 결과로 연결합니다.</p>
         </div>
       </section>
     </section>

@@ -303,6 +303,63 @@ h1 {
   line-height: 1.65;
 }
 
+.source-hub {
+  margin: 0 0 22px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 16px;
+}
+
+.section-head h2 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.source-grid article {
+  min-height: 132px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+
+.source-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.source-grid h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.source-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
 .workspace {
   display: grid;
   grid-template-columns: minmax(320px, .82fr) minmax(0, 1.18fr);
@@ -381,7 +438,7 @@ textarea:focus {
 
 .field-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   margin: 0 0 18px;
 }
@@ -598,6 +655,54 @@ select:focus {
   color: var(--navy);
 }
 
+.source-actions a.source-light {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+}
+
+.source-actions a.source-primary {
+  background: var(--navy);
+  color: #fff;
+}
+
+.role-note {
+  display: grid;
+  gap: 8px;
+  padding: 13px 14px;
+  border: 1px solid #cfe4e2;
+  border-radius: 8px;
+  background: #f0f8f7;
+}
+
+.role-note strong {
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.role-note p {
+  margin: 0;
+  color: #4f656b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.search-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.search-keywords code {
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: #f4f7fa;
+  color: var(--navy);
+  font-size: 12px;
+  white-space: normal;
+}
+
 .topic-tags {
   display: flex;
   flex-wrap: wrap;
@@ -731,6 +836,7 @@ footer p {
   .hero,
   .workspace,
   .quick-start,
+  .source-grid,
   .principles,
   .roadmap-grid {
     grid-template-columns: 1fr;
@@ -815,6 +921,14 @@ footer p {
 
   .field-grid {
     grid-template-columns: 1fr;
+  }
+
+  .source-hub {
+    padding: 16px;
+  }
+
+  .section-head {
+    display: block;
   }
 
   .result-head {
