@@ -7,6 +7,7 @@
     "dev": "node server.mjs",
     "start": "node server.mjs",
     "test:scenarios": "node tools/scenario-regression.mjs",
-    "check": "node --check public/app.js && node --check server.mjs && node --check functions/index.mjs && node --check functions/shared/api.mjs && npm run test:scenarios"
+    "worker:deploy": "npx wrangler deploy --config workers/ai-analysis/wrangler.toml",
+    "check": "node --check public/app.js && node --check server.mjs && node --check functions/index.mjs && node --check functions/shared/api.mjs && node --check workers/ai-analysis/src/index.js && npm run test:scenarios"
   }
 }

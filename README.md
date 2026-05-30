@@ -30,6 +30,7 @@
 - API 키는 `.env.local`에서만 읽고 브라우저에는 노출하지 않음
 - 법제처 Open API는 신청 도메인 검증을 통과하도록 `LAW_OPEN_API_REFERER` 헤더를 서버에서 함께 전송
 - Firebase Hosting + Functions 배포 구조 준비
+- Cloudflare Workers 기반 AI 사안 분석 API 구조 추가
 - GitHub 원격 저장소 `neojoin1-cyber/gyo6-law-info` 연결 및 `main` push 완료
 
 ## 로컬 확인
@@ -56,15 +57,68 @@ npm run check
 
 ## 다음 개발 순서
 
-1. Firebase Functions 의존성 설치와 Secret 등록
-2. Firebase Hosting + Functions 배포
-3. 배포 URL에서 법제처·안전보건공단 API 재검증
-4. 법제처 법령 검색 결과 정규화 고도화
-5. 안전보건공단 국내재해사례와 안전보건자료 응답 필드 정리
-6. 승인 대기 중인 사법정보공유포털·국회법률도서관 API 연결
-7. AI 요약 기능 연결
-8. 비용 제한, 사용량 제한, 안내문 강화
-9. 개인 홈페이지 카드에서 이 서비스로 링크 연결
+1. Cloudflare Workers에 AI 분석 API 배포
+2. Worker Secret에 `OPENAI_API_KEY` 등록
+3. `public/ai-config.js`에 Worker URL 연결
+4. Firebase Hosting에 정적 화면 배포
+5. 배포 URL에서 AI 분석과 법제처·안전보건공단 API 재검증
+6. 법제처 법령 검색 결과 정규화 고도화
+7. 안전보건공단 국내재해사례와 안전보건자료 응답 필드 정리
+8. 승인 대기 중인 사법정보공유포털·국회법률도서관 API 연결
+9. 비용 제한, 사용량 제한, 안내문 강화
+10. 개인 홈페이지 카드에서 이 서비스로 링크 연결
+
+## Cloudflare Workers AI 분석 API
+
+AI 분석 API는 Firebase Blaze 없이 사용할 수 있도록 Cloudflare Workers로 분리했습니다.
+
+Worker 위치:
+
+```text
+workers/ai-analysis
+```
+
+배포 전 Wrangler 로그인이 필요합니다.
+
+```powershell
+npx wrangler login
+```
+
+OpenAI 키는 Worker Secret으로 등록합니다. 키를 코드나 `public` 폴더에 넣지 않습니다.
+
+```powershell
+npx wrangler secret put OPENAI_API_KEY --config workers/ai-analysis/wrangler.toml
+```
+
+Worker 배포:
+
+```powershell
+npm run worker:deploy
+```
+
+배포 후 나온 Workers URL을 `public/ai-config.js`에 넣습니다.
+
+```js
+window.GYO6_AI_WORKER_BASE_URL = "https://gyo6-law-info-ai.<계정명>.workers.dev";
+```
+
+그 다음 Firebase Hosting에는 정적 파일만 배포하면 됩니다.
+
+```powershell
+firebase deploy --only hosting --project gyo6-law-info
+```
+
+Cloudflare Worker는 `/api/analyze`를 제공하며, AI가 먼저 다음 항목을 구조화해 돌려줍니다.
+
+- 확인된 사실
+- 추정하면 안 되는 사실
+- 핵심 쟁점
+- 꼭 필요한 추가 질문
+- 주체별 조치
+- 증빙자료 우선순위
+- 전문가 상담 상향 여부
+
+기존 규칙형 화면은 AI API 실패 시 보이는 보조 안전장치로 유지합니다.
 
 ## 보안 메모
 
@@ -78,6 +132,8 @@ LAW_OPEN_API_REFERER=https://gyo6.kr/
 PUBLIC_DATA_API_KEY=
 OPENAI_API_KEY=
 ```
+
+현재 AI 분석 운영은 Cloudflare Worker Secret의 `OPENAI_API_KEY`를 우선 사용합니다. Firebase Functions는 향후 Firestore, Auth, 보고서 저장소가 본격화될 때 사용할 수 있는 보조 배포 경로입니다.
 
 Firebase 배포 전에는 Functions Secret에 같은 값을 등록합니다. Secret 등록과 실제 배포는 외부 Firebase 프로젝트 상태를 바꾸므로 실행 직전 사용자 확인을 받고 진행합니다.
 

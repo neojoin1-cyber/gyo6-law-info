@@ -1010,7 +1010,7 @@ async function loadAiAnalysis(question, preset, userRole, answerMode) {
       role: userRole,
       mode: answerMode
     });
-    const response = await fetch(`/api/analyze?${params.toString()}`, {
+    const response = await fetch(getAiAnalyzeUrl(params), {
       headers: { accept: "application/json" }
     });
 
@@ -1027,6 +1027,28 @@ async function loadAiAnalysis(question, preset, userRole, answerMode) {
       <p>현재 화면은 기본 안전장치 분석으로 표시됩니다. API 키와 Functions 배포 상태를 확인해 주세요.</p>
       <p class="api-error-text">${escapeHtml(error.message)}</p>
     `;
+  }
+}
+
+function getAiAnalyzeUrl(params) {
+  const configuredBase = getConfiguredAiWorkerBaseUrl();
+  if (!configuredBase) {
+    return `/api/analyze?${params.toString()}`;
+  }
+
+  return `${configuredBase.replace(/\/+$/, "")}/api/analyze?${params.toString()}`;
+}
+
+function getConfiguredAiWorkerBaseUrl() {
+  const runtimeValue = String(window.GYO6_AI_WORKER_BASE_URL || "").trim();
+  if (runtimeValue) {
+    return runtimeValue;
+  }
+
+  try {
+    return String(window.localStorage.getItem("gyo6AiWorkerBaseUrl") || "").trim();
+  } catch {
+    return "";
   }
 }
 

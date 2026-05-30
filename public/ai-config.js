@@ -1,0 +1,1 @@
+window.GYO6_AI_WORKER_BASE_URL = "";
