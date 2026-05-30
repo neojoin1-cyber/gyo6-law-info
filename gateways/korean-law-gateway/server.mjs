@@ -400,11 +400,34 @@ function getLawApiErrorMessage(data) {
 }
 
 function buildLawDetailUrl(selected, query) {
+  const fallbackUrl = buildLawSearchPageUrl(query || selected?.title || "");
   if (selected?.detailLink) {
     const detail = String(selected.detailLink);
-    return detail.startsWith("http") ? detail : `https://www.law.go.kr${detail}`;
+    const absoluteUrl = detail.startsWith("http")
+      ? detail
+      : detail.startsWith("/")
+        ? `https://www.law.go.kr${detail}`
+        : `https://www.law.go.kr${detail.startsWith("DRF") ? "/" : ""}${detail}`;
+    try {
+      const url = new URL(absoluteUrl);
+      for (const key of ["OC", "serviceKey", "apiKey", "apikey", "key", "KEY"]) {
+        url.searchParams.delete(key);
+      }
+      if (/\/DRF\/law(Service|Search)\.do$/i.test(url.pathname)) {
+        return fallbackUrl;
+      }
+      return url.toString();
+    } catch {
+      return fallbackUrl;
+    }
   }
-  return `https://www.law.go.kr/LSW/lsSc.do?query=${encodeURIComponent(query || selected?.title || "")}`;
+  return fallbackUrl;
+}
+
+function buildLawSearchPageUrl(query) {
+  const url = new URL("https://www.law.go.kr/LSW/lsSc.do");
+  url.searchParams.set("query", query || "법령");
+  return url.toString();
 }
 
 function getValue(item, keys) {

@@ -55,16 +55,17 @@ async function handleSearch(requestUrl) {
     return { error: "질문이 비어 있습니다." };
   }
 
-  const lawQueries = laws.length ? laws.slice(0, 4) : [question];
+  const lawQueries = buildLawQueries({ laws, question, topic, keywords });
   const safetyContext = buildSafetyContext(question, keywords, topic);
   const lawOpenApiKey = getLawOpenApiKey();
   const koreanLawMcpBaseUrl = getKoreanLawMcpBaseUrl();
   const publicDataKey = activeEnv.PUBLIC_DATA_API_KEY;
   const hasKoreanLawMcp = hasUsableValue(koreanLawMcpBaseUrl);
+  const officialQuery = buildOfficialSourceQuery({ question, topic, keywords, lawQueries });
 
   const [lawResults, interpretationResults, disasterResults, materialResults] = await Promise.all([
     searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp, keywords }),
-    searchInterpretationsWithPreferredSource({ lawOpenApiKey, question, hasKoreanLawMcp }),
+    searchInterpretationsWithPreferredSource({ lawOpenApiKey, question: officialQuery, hasKoreanLawMcp }),
     hasUsableValue(publicDataKey) ? searchDisasterCases(publicDataKey, safetyContext) : missingKey("PUBLIC_DATA_API_KEY"),
     hasUsableValue(publicDataKey) ? searchSafetyMaterials(publicDataKey) : missingKey("PUBLIC_DATA_API_KEY")
   ]);
@@ -472,6 +473,105 @@ function missingKey(name) {
   });
 }
 
+function buildLawQueries({ laws = [], question = "", topic = "", keywords = [] } = {}) {
+  const provided = normalizeProvidedLawQueries(laws);
+  if (provided.length) {
+    return provided.slice(0, 4);
+  }
+
+  const text = normalizeMatchText([topic, question, ...keywords].filter(Boolean).join(" "));
+  const candidates = [];
+
+  if (hasAnyTerm(text, ["현장실습", "실습생", "직업계고", "특성화고", "취업", "도제", "일학습병행"])) {
+    candidates.push("직업교육훈련 촉진법");
+  }
+  if (hasAnyTerm(text, ["도제", "일학습병행", "산학일체형"])) {
+    candidates.push("산업현장 일학습병행 지원에 관한 법률");
+  }
+  if (hasAnyTerm(text, ["근로", "직원", "기간제", "계약", "해고", "직장내괴롭힘", "상급자", "야근", "임금", "연차", "재계약"])) {
+    candidates.push("근로기준법", "기간제 및 단시간근로자 보호 등에 관한 법률");
+  }
+  if (hasAnyTerm(text, ["안전", "위험", "기계", "사고", "재해", "중대재해", "산재", "추락", "끼임", "골절"])) {
+    candidates.push("산업안전보건법");
+  }
+  if (hasAnyTerm(text, ["중대재해", "사망"])) {
+    candidates.push("중대재해 처벌 등에 관한 법률");
+  }
+  if (hasAnyTerm(text, ["학교폭력", "학폭", "괴롭힘", "단체채팅", "욕설", "피해학생"])) {
+    candidates.push("학교폭력예방 및 대책에 관한 법률");
+  }
+  if (hasAnyTerm(text, ["학생관리", "생활지도", "교권", "학부모", "민원", "담임", "학교장", "교사"])) {
+    candidates.push("초중등교육법", "행정절차법");
+  }
+  if (hasAnyTerm(text, ["해외", "호주", "글로벌", "파견", "숙소", "보험", "보호자"])) {
+    candidates.push("직업교육훈련 촉진법", "청소년복지 지원법");
+  }
+
+  candidates.push("직업교육훈련 촉진법", "근로기준법");
+  return uniqueStrings(candidates).slice(0, 4);
+}
+
+function buildOfficialSourceQuery({ question = "", topic = "", keywords = [], lawQueries = [] } = {}) {
+  const keywordCandidates = asArray(keywords)
+    .map((keyword) => cleanText(keyword))
+    .filter((keyword) => isSafeOfficialKeyword(keyword))
+    .slice(0, 4);
+
+  if (keywordCandidates.length) {
+    return keywordCandidates.join(" ");
+  }
+
+  const text = normalizeMatchText([topic, question].join(" "));
+  const topicTerms = [];
+  if (hasAnyTerm(text, ["현장실습", "실습생", "특성화고", "직업계고"])) topicTerms.push("현장실습");
+  if (hasAnyTerm(text, ["청소", "업무외", "업무외지시", "심부름"])) topicTerms.push("업무 범위");
+  if (hasAnyTerm(text, ["직장내괴롭힘", "상급자", "근로자", "직원", "폭언", "모욕"])) topicTerms.push("직장 내 괴롭힘");
+  if (hasAnyTerm(text, ["기간제", "계약", "재계약", "해고"])) topicTerms.push("기간제 근로자");
+  if (hasAnyTerm(text, ["중대재해", "산재", "사고", "안전", "위험"])) topicTerms.push("산업안전");
+  if (hasAnyTerm(text, ["학교폭력", "학폭"])) topicTerms.push("학교폭력");
+  if (hasAnyTerm(text, ["민원", "학부모", "생활지도"])) topicTerms.push("학교 민원");
+  if (hasAnyTerm(text, ["해외", "호주", "글로벌"])) topicTerms.push("해외 현장실습");
+
+  const combined = uniqueStrings([...topicTerms, ...lawQueries.slice(0, 2)]).join(" ");
+  return combined || "현장실습";
+}
+
+function isSafeOfficialKeyword(value) {
+  const text = String(value || "").trim();
+  if (!text || text.length > 30) {
+    return false;
+  }
+  if (/@|\d{2,4}[-.\s]?\d{3,4}[-.\s]?\d{4}/.test(text)) {
+    return false;
+  }
+  return !/[<>{}[\]\\]/.test(text);
+}
+
+function normalizeProvidedLawQueries(laws = []) {
+  return uniqueStrings(asArray(laws)
+    .map((law) => cleanText(law))
+    .filter((law) => isSafeLawQuery(law)));
+}
+
+function isSafeLawQuery(value) {
+  const text = String(value || "").trim();
+  if (!text || text.length > 80) {
+    return false;
+  }
+  if (/@|\d{2,4}[-.\s]?\d{3,4}[-.\s]?\d{4}/.test(text)) {
+    return false;
+  }
+  return /법|시행령|시행규칙|규칙|고시|지침|매뉴얼|안내|판례|해석/.test(text);
+}
+
+function hasAnyTerm(text, terms) {
+  return terms.some((term) => text.includes(normalizeMatchText(term)));
+}
+
+function uniqueStrings(items) {
+  return [...new Set(items.map((item) => String(item || "").trim()).filter(Boolean))];
+}
+
 async function searchLaws(openApiKey, queries, keywords = []) {
   const notices = [];
   const batches = await Promise.all(
@@ -651,7 +751,7 @@ function buildKoreanLawGatewayItem(law) {
     source: "국가법령정보센터 원문 API",
     date: law.enforcementDate || law.promulgationDate || "",
     summary: summarizeLawGatewayArticles(law),
-    url: law.sourceUrl || `https://www.law.go.kr/LSW/lsSc.do?query=${encodeURIComponent(query)}`,
+    url: normalizeLawUrl(law.sourceUrl, query, "law"),
     query,
     type: "법령 원문 조문",
     verifiedAt: law.verifiedAt || new Date().toISOString(),
@@ -1256,19 +1356,40 @@ function getValue(object, keys) {
 }
 
 function normalizeLawUrl(detailLink, query, target) {
+  const fallbackUrl = buildLawSearchPageUrl(query || getLawTargetLabel(target));
+
   if (detailLink) {
-    const value = String(detailLink);
-    if (value.startsWith("http")) {
-      return value;
+    const value = String(detailLink).trim();
+    const absoluteUrl = value.startsWith("http")
+      ? value
+      : value.startsWith("/")
+        ? `https://www.law.go.kr${value}`
+        : `https://www.law.go.kr${value.startsWith("DRF") ? "/" : ""}${value}`;
+
+    try {
+      const url = new URL(absoluteUrl);
+      if (/law\.go\.kr$/i.test(url.hostname)) {
+        for (const key of ["OC", "serviceKey", "apiKey", "apikey", "key", "KEY"]) {
+          url.searchParams.delete(key);
+        }
+
+        if (/\/DRF\/law(Service|Search)\.do$/i.test(url.pathname)) {
+          return fallbackUrl;
+        }
+
+        return url.toString();
+      }
+    } catch {
+      return fallbackUrl;
     }
-    if (value.startsWith("/")) {
-      return `https://www.law.go.kr${value}`;
-    }
-    return `https://www.law.go.kr${value.startsWith("DRF") ? "/" : ""}${value}`;
   }
 
+  return fallbackUrl;
+}
+
+function buildLawSearchPageUrl(query) {
   const searchUrl = new URL("https://www.law.go.kr/LSW/lsSc.do");
-  searchUrl.searchParams.set("query", query || getLawTargetLabel(target));
+  searchUrl.searchParams.set("query", query || "법령");
   return searchUrl.toString();
 }
 
