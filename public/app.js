@@ -612,7 +612,7 @@ function compactText(value) {
 }
 
 function hasOccurrenceNegation(normalized) {
-  return /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|발생전|대비|예방|점검표|점검하고싶|만들고싶|다친사람은?없|다친것은?아니|부상자?없|부상은?없|사망자?없|사망은?없|병원이송은?없|치료는?없/.test(normalized);
+  return /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|사고처리절차가?아니|부상[·ㆍ,]?사고가?아니|부상은?아니|발생전|대비|예방|점검표|점검하고싶|만들고싶|다친사람은?없|다친것은?아니|부상자?없|부상은?없|사망자?없|사망은?없|병원이송은?없|치료는?없/.test(normalized);
 }
 
 function hasActualInjurySignal(value) {
@@ -640,6 +640,124 @@ function hasMachineAccidentSignal(value) {
   }
 
   return /끼임|절단|충돌|부딪|깔림|추락/.test(normalized);
+}
+
+function getFieldTrainingScopeProfile(value = "") {
+  const normalized = compactText(value);
+  const hasCleaning = /청소|정리정돈|작업장정리|주변정리|재료|자재/.test(normalized);
+  const hasErrand = /심부름|사적|개인적인|개인부탁|커피|담배|식사|배달|운전/.test(normalized);
+  const hasQuota = /생산량|목표|압박|실적|평가불이익|불이익/.test(normalized);
+  const hasOvertime = /야간|밤\d*시|잔업|초과|장시간|휴일|주말/.test(normalized);
+  const hasSafetyConcern = /위험|가동중인기계|기계|설비|화학|분진|보호구|유해|끼일|다칠|안전/.test(normalized);
+  const hasRepeat = /반복|자꾸|계속|매일|수시로|여러번|지속/.test(normalized);
+
+  if (hasSafetyConcern && !hasCleaning) {
+    return {
+      kind: "unsafe",
+      issueName: "위험하거나 부적절한 업무 외 지시",
+      instructionName: "위험요소가 있는 업무 외 지시",
+      reportLead: "현장실습생에게 실습계약 범위를 벗어나거나 안전 확인이 필요한 업무를 지시한 사안",
+      problemType: "위험요소가 있는 업무 외 지시와 실습 업무 범위 적정성 문제",
+      leadDetail: "현장실습생에게 위험요소가 있거나 실습계약에 없는 업무를 시킨 사안은 사고가 발생하기 전이라도 업무 범위, 안전교육, 보호구, 감독 여부를 먼저 확인해야 합니다.",
+      firstAction: "언제, 누가, 어떤 업무를 지시했고 그 업무에 어떤 위험요소가 있었는지 기록합니다.",
+      secondAction: "현장실습 협약서와 실습계획서에 해당 업무가 포함되는지, 안전교육과 보호구·감독이 있었는지 확인합니다.",
+      keyQuestion: "해당 업무가 실습계약과 안전교육 범위 안에 있었는지",
+      scopeCheck: "해당 업무가 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?",
+      scopePlaceholder: "예: 협약서에는 생산 보조만 있음, 위험 작업은 언급 없음, 아직 못 봄",
+      tags: ["업무범위", "위험 지시", "안전교육", "학생 권익"]
+    };
+  }
+
+  if (hasOvertime) {
+    return {
+      kind: "time",
+      issueName: "현장실습 시간·업무범위 문제",
+      instructionName: "야간·잔업 또는 장시간 실습 지시",
+      reportLead: "현장실습생에게 야간·잔업 또는 장시간 실습을 지시한 사안",
+      problemType: "실습시간·업무범위와 학생 권익보호 문제",
+      leadDetail: "현장실습생에게 야간·잔업 또는 장시간 실습을 지시한 경우에는 실습시간 제한, 보호자 안내, 학교 승인 여부, 실습계약 범위를 먼저 확인해야 합니다.",
+      firstAction: "언제부터 몇 시까지 실습했는지, 누가 잔업이나 야간 실습을 지시했는지 기록합니다.",
+      secondAction: "현장실습 협약서, 실습계획서, 출퇴근 기록에서 실습시간과 연장·야간 지시 근거를 확인합니다.",
+      keyQuestion: "실습시간과 지시가 현장실습 기준 안에 있었는지",
+      scopeCheck: "야간·잔업 또는 장시간 실습이 현장실습 협약서나 실습계획서에 근거가 있나요?",
+      scopePlaceholder: "예: 협약서에는 09:00~17:00만 있음, 밤 9시까지 지시, 학교 승인 모름",
+      tags: ["실습시간", "업무범위", "학생 보호", "현장실습"]
+    };
+  }
+
+  if (hasQuota) {
+    return {
+      kind: "quota",
+      issueName: "생산량 압박·평가 불이익 문제",
+      instructionName: "생산량 목표나 평가 불이익을 동반한 지시",
+      reportLead: "현장실습생에게 정규 직원처럼 생산량 목표를 압박하거나 평가 불이익을 언급한 사안",
+      problemType: "교육 목적과 생산 압박·평가 불이익의 경계 문제",
+      leadDetail: "현장실습생에게 정규 직원 수준의 생산량 목표를 요구하거나 평가 불이익을 암시한 경우에는 교육 목적, 업무 범위, 평가 기준, 학생 보호 조치를 나누어 확인해야 합니다.",
+      firstAction: "생산량 목표, 평가 불이익 발언, 지시자, 반복 시점과 학생이 느낀 부담을 사실 중심으로 기록합니다.",
+      secondAction: "실습계획서와 평가 기준에 생산량 목표가 포함되는지, 교육 목적을 넘는 압박인지 확인합니다.",
+      keyQuestion: "생산량 요구와 평가 기준이 교육 목적 안에 있었는지",
+      scopeCheck: "생산량 목표나 평가 기준이 현장실습 협약서·실습계획서·평가기준에 적혀 있나요?",
+      scopePlaceholder: "예: 실습계획에는 교육 과제만 있음, 생산량 목표는 구두 지시, 평가 불이익 언급",
+      tags: ["생산량 압박", "평가 불이익", "학생 권익", "업무범위"]
+    };
+  }
+
+  if (hasErrand) {
+    return {
+      kind: "errand",
+      issueName: "사적 심부름·업무 외 지시 문제",
+      instructionName: "사적 심부름 또는 업무 외 지시",
+      reportLead: "현장실습생에게 교육 목적과 무관한 사적 심부름이나 업무 외 일을 지시한 사안",
+      problemType: "사적 심부름·업무 외 지시와 실습 업무 범위 적정성 문제",
+      leadDetail: "현장실습생에게 사적 심부름이나 교육 목적과 무관한 업무를 시킨 사안은 실습계약상 업무 범위, 지시 권한, 학생 권익보호를 먼저 확인해야 합니다.",
+      firstAction: "언제, 누가, 어떤 사적 심부름이나 업무 외 일을 지시했는지 구체적으로 기록합니다.",
+      secondAction: "해당 지시가 실습계획서의 직무와 관련 있는지, 지시자가 공식 담당자인지 확인합니다.",
+      keyQuestion: "사적 심부름이나 업무 외 지시가 실습 목적과 관련 있었는지",
+      scopeCheck: "사적 심부름 또는 업무 외 일이 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?",
+      scopePlaceholder: "예: 협약서에는 전공 실습만 있음, 개인 심부름은 없음, 담당자 지시 여부 모름",
+      tags: ["사적 심부름", "업무범위", "학생 권익", "지시 권한"]
+    };
+  }
+
+  if (hasCleaning) {
+    return {
+      kind: "cleaning",
+      issueName: "청소·정리정돈 반복 지시 문제",
+      instructionName: "청소·정리정돈 또는 재료 운반 지시",
+      reportLead: "현장실습생에게 재료 운반, 청소, 정리정돈을 반복 지시한 사안",
+      problemType: "청소·정리정돈 지시와 실습 업무 범위 적정성 문제",
+      leadDetail: "현장실습생에게 재료 운반이나 청소를 반복 지시한 경우에는 교육 목적이 있는 정리정돈인지, 실습 범위 밖 잡무 전가인지 구분해야 합니다.",
+      firstAction: "언제, 누가, 어떤 재료·자재 또는 정리정돈 업무를 지시했고 얼마나 반복됐는지 기록합니다.",
+      secondAction: "현장실습 협약서와 실습계획서에 재료 운반, 작업장 정리, 청소가 실습 내용으로 들어 있는지 확인합니다.",
+      keyQuestion: "청소·정리정돈이 실습 직무와 직접 관련 있었는지",
+      scopeCheck: "청소·재료 운반이 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?",
+      scopePlaceholder: "예: 협약서에는 생산 보조만 있음, 청소 언급 없음, 아직 못 봄",
+      tags: ["업무범위", "반복 지시", "청소·잡무", "학생 권익"]
+    };
+  }
+
+  return {
+    kind: "generic",
+    issueName: hasRepeat ? "업무 외 반복 지시 문제" : "업무 외 지시 문제",
+    instructionName: hasRepeat ? "업무 외 반복 지시" : "업무 외 지시",
+    reportLead: "현장실습생에게 실습계약 또는 실습계획 범위를 벗어난 업무 외 일을 지시한 사안",
+    problemType: "업무 외 지시와 실습 업무 범위 적정성 문제",
+    leadDetail: "현장실습생에게 업무 외 일을 시킨다는 문제는 구체적 업무 내용을 단정하지 말고, 실습계약상 업무 범위, 교육 목적, 지시 권한, 학생 권익보호를 먼저 확인해야 합니다.",
+    firstAction: "언제, 누가, 어떤 업무 외 일을 지시했는지 사실 중심으로 기록합니다.",
+    secondAction: "현장실습 협약서와 실습계획서에 해당 업무가 포함되는지 확인합니다.",
+    keyQuestion: "해당 업무가 실습계약과 교육 목적 안에 있었는지",
+    scopeCheck: "업무 외로 보이는 일이 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?",
+    scopePlaceholder: "예: 협약서에는 전공 실습만 있음, 해당 업무는 없음, 아직 못 봄",
+    tags: ["업무범위", "업무 외 지시", "학생 권익", "지시 권한"]
+  };
+}
+
+function getFieldTrainingInstructorLabel(value = "") {
+  const normalized = compactText(value);
+  if (/기존근로자/.test(normalized)) return "기존 근로자";
+  if (/기업담당멘토|담당멘토|현장멘토|멘토/.test(normalized)) return "기업 담당 멘토";
+  if (/사수|선배|직원|근로자|동료/.test(normalized)) return "기업 내부 직원";
+  return "기업 내부 지시자";
 }
 
 function renderResult(question, preset, scopes, answerMode, userRole) {
@@ -1035,6 +1153,7 @@ function analyzeQuestionScenario(question, preset) {
   const actualInjury = hasActualInjurySignal(normalized) || (!occurrenceNegated && /사망|끼임|깔림|추락/.test(normalized));
   const actualAccident = hasActualAccidentSignal(normalized);
   const scopeIssue = isFieldTraining && /청소|잡무|허드렛일|업무외|업무가아니|반복|자꾸|시키|시킴|지시|불필요|필요도없는|재료|심부름|괴롭힘|부당|권익|실습범위|표준협약|멘토|기존근로자|생산량|목표|압박|평가불이익|불이익|야간|잔업|장시간/.test(normalized);
+  const scopeProfile = scopeIssue ? getFieldTrainingScopeProfile(normalized) : null;
   const safetyConcern = isFieldTraining && !actualInjury && /위험|안전|기계|설비|보호구|화학|유해|먼지|청소중/.test(normalized);
   const minorStudentSafety = preset.type === "schoolSafety"
     && /체육시간|타박상|학교안전공제|과학실|화학물질|두통|가벼운|보건실|학생/.test(normalized)
@@ -1045,7 +1164,7 @@ function analyzeQuestionScenario(question, preset) {
   }
 
   if (scopeIssue) {
-    return { type: "fieldTrainingScopeIssue", isFieldTraining, actualInjury, actualAccident, scopeIssue, safetyConcern };
+    return { type: "fieldTrainingScopeIssue", isFieldTraining, actualInjury, actualAccident, scopeIssue, scopeProfile, safetyConcern };
   }
 
   if (preset.type === "schoolSafety" && occurrenceNegated) {
@@ -1094,14 +1213,16 @@ function getScenarioDisplayPreset(preset, scenario) {
     return preset;
   }
 
+  const scopeProfile = scenario.scopeProfile || getFieldTrainingScopeProfile();
+
   return {
     ...preset,
-    title: "현장실습 업무범위·반복 지시 관련 법령",
-    summary: "현장실습생에게 반복 청소, 잡무, 실습 범위 밖 지시가 있는지는 실습계약·표준협약서의 업무 범위와 학생 권익보호 기준을 먼저 대조해야 합니다.",
+    title: `현장실습 ${scopeProfile.issueName} 관련 법령`,
+    summary: `${scopeProfile.reportLead}은 사고 처리 절차로 단정하지 말고, 현장실습계약·표준협약서의 업무 범위와 학생 권익보호 기준을 먼저 대조해야 합니다.`,
     laws: ["직업교육훈련 촉진법", "근로기준법 제76조의2·제76조의3", "직업계고 현장실습 운영 매뉴얼"],
-    tags: ["업무범위", "반복 지시", "청소·잡무", "학생 권익"],
+    tags: scopeProfile.tags,
     checklist: [
-      "학생에게 지시된 청소·재료 운반의 날짜, 지시자, 장소, 반복 횟수를 시간순으로 적습니다.",
+      `${scopeProfile.instructionName}의 날짜, 지시자, 장소, 반복 여부를 시간순으로 적습니다.`,
       "현장실습계약서·표준협약서의 실습 내용과 실제 지시가 맞는지 대조합니다.",
       "학교 현장실습 담당자와 기업 담당 멘토에게 업무 범위 확인과 시정 요청을 기록으로 남깁니다."
     ]
@@ -1112,20 +1233,23 @@ function getDirectAnswer(question, preset, roleGuide, scenario = analyzeQuestion
   const normalized = compactText(question);
 
   if (scenario.type === "fieldTrainingScopeIssue") {
+    const scopeProfile = scenario.scopeProfile || getFieldTrainingScopeProfile(question);
+    const instructionActor = getFieldTrainingInstructorLabel(question);
+
     return {
-      title: "사고 보고가 아니라, 현장실습 업무 범위와 반복 지시의 적정성을 먼저 확인해야 합니다.",
-      lead: "기존 근로자가 현장실습생에게 재료 운반을 빌미로 반복 청소를 시킨 사안은 사고 처리 절차가 아니라, 실습계약상 업무 범위·교육 목적·권익보호·직장 내 괴롭힘 해당 가능성을 나누어 봐야 합니다.",
+      title: "사고 보고가 아니라, 현장실습 업무 범위와 지시의 적정성을 먼저 확인해야 합니다.",
+      lead: `${scopeProfile.leadDetail} 사고 처리 절차가 아니라, 실습계약상 업무 범위·교육 목적·권익보호·직장 내 괴롭힘 해당 가능성을 나누어 봐야 합니다.`,
       actions: [
-        "언제, 누가, 어떤 재료를 가져오라고 했고, 실제로 어떤 청소를 얼마나 반복시켰는지 기록합니다.",
-        "현장실습 협약서와 실습계획서에 재료 운반, 작업장 정리, 청소가 실습 내용으로 들어 있는지 확인합니다.",
+        scopeProfile.firstAction,
+        scopeProfile.secondAction,
         "학생이 직접 맞서기보다 학교 현장실습 담당자에게 먼저 알리고, 학교가 기업 담당 멘토에게 업무 범위 확인과 시정 요청을 하도록 합니다.",
-        "필요 없는 재료 지시를 반복하며 청소를 시킨 정황이 있으면 단순 정리정돈 교육인지, 잡무 전가나 실습환경 악화인지 분리해 봅니다."
+        `${scopeProfile.keyQuestion}를 확인하고, 교육 목적 밖 잡무 전가나 실습환경 악화 가능성을 분리해 봅니다.`
       ],
       responsibilityTitle: "주체별로 먼저 확인할 책임",
       responsibilities: [
         "학생: 지시 내용과 반복 횟수를 기록하고, 불편감·거부 의사·위험 요소를 학교에 알릴 수 있습니다.",
         "학교·지도교사: 실습계약 범위와 실제 지시를 대조하고, 기업 담당자에게 시정·재발방지 요청을 해야 합니다.",
-        "실습기업: 기존 근로자가 임의로 현장실습생에게 교육 목적 밖의 잡무를 반복시키지 않도록 담당자와 지시 체계를 정리해야 합니다.",
+        `실습기업: ${instructionActor}가 임의로 현장실습생에게 교육 목적 밖의 지시를 하지 않도록 담당자와 지시 체계를 정리해야 합니다.`,
         "보호자: 학생에게 불이익이 생기지 않도록 학교의 확인 결과와 기업의 개선 조치를 문서로 요청할 수 있습니다."
       ],
       warning: "부상이나 사고가 없으면 치료·산재 보고서가 아니라 업무 범위와 권익보호 보고서로 정리해야 합니다. 반복 지시, 모욕, 보복, 위험 작업이 확인될 때만 노무사·교육청 상담을 단계적으로 검토합니다."
@@ -1344,6 +1468,11 @@ function buildFieldTrainingAccidentReport(context, roleGuide, officialMaterials,
 }
 
 function buildFieldTrainingScopeIssueReport(context, roleGuide, officialMaterials, riskSignals, scenario = {}) {
+  const scopeProfile = scenario.scopeProfile || getFieldTrainingScopeProfile(context.baseQuestion);
+  const instructionActor = getFieldTrainingInstructorLabel([
+    context.baseQuestion || "",
+    ...(context.details || []).map((item) => `${item.question} ${item.answer}`)
+  ].join(" "));
   const repeatedInstruction = findDetailAnswer(context.details, "반복") || findDetailAnswer(context.details, "지시") || "";
   const contractScope = findDetailAnswer(context.details, "협약서") || findDetailAnswer(context.details, "실습 내용") || "";
   const studentResponse = findDetailAnswer(context.details, "학생") || "";
@@ -1352,39 +1481,40 @@ function buildFieldTrainingScopeIssueReport(context, roleGuide, officialMaterial
   const reportSeed = {
     context,
     presetType: "fieldTrainingScopeIssue",
+    scopeProfile,
     riskSignals,
     workOrder: repeatedInstruction
   };
 
   return {
-    title: "현장실습 중 업무범위·반복 지시 사안 보고서",
+    title: `현장실습 중 ${scopeProfile.issueName} 사안 보고서`,
     subtitle: "실습계약 범위, 학생 권익보호, 학교·기업 시정 조치 정리",
     audience: roleGuide.label,
     generatedAt: formatDateTime(new Date().toISOString()),
-    lead: "현재 입력 내용은 기존 근로자가 현장실습생에게 재료 운반을 빌미로 반복 청소를 지시하는 사안입니다. 따라서 사고 처리 절차가 아니라 실습 업무 범위, 교육 목적, 지시 체계, 권익침해 가능성을 먼저 확인해야 합니다.",
+    lead: `현재 입력 내용은 ${scopeProfile.reportLead}입니다. 따라서 사고 처리 절차가 아니라 실습 업무 범위, 교육 목적, 지시 체계, 권익침해 가능성을 먼저 확인해야 합니다.`,
     disclaimer: "이 보고서는 법률 자문이나 괴롭힘 인정 판단이 아니라, 현장실습 업무 범위와 학생 권익보호 기준을 확인하기 위한 법률정보 정리 초안입니다. 보복, 모욕, 위험 작업, 지속적 불이익이 확인되면 학교·교육청·노무사 상담을 단계적으로 검토합니다.",
     facts: [
       { label: "원 질문", value: context.baseQuestion || "질문 내용 확인 필요" },
-      { label: "문제 유형", value: "부상·사고가 아니라 반복 청소 지시와 실습 업무 범위 적정성 문제" },
-      { label: "지시 내용", value: repeatedInstruction || "기존 근로자가 재료 운반과 주변 청소를 반복 지시한 경위 확인 필요" },
+      { label: "문제 유형", value: `부상·사고가 아니라 ${scopeProfile.problemType}` },
+      { label: "지시 내용", value: repeatedInstruction || `${scopeProfile.instructionName}의 구체적 내용과 지시 경위 확인 필요` },
       { label: "실습계약상 업무 범위", value: contractScope || "현장실습계약서·표준협약서·실습계획서상 업무 내용 확인 필요" },
       { label: "학생 상태·의사", value: studentResponse || "학생이 부담감, 거부 의사, 불이익 우려, 위험 요소를 느끼는지 상담 필요" },
       { label: "학교 조치", value: schoolAction || "학교 현장실습 담당자 상담, 기업 확인, 순회지도·시정요청 여부 확인 필요" },
-      { label: "기업 담당 체계", value: companyMentor || "기업 담당 멘토와 기존 근로자의 지시 권한·업무분장 확인 필요" }
+      { label: "기업 담당 체계", value: companyMentor || `기업 담당 멘토와 ${instructionActor}의 지시 권한·업무분장 확인 필요` }
     ],
     issueSummary: [
-      "재료 운반과 주변 정리가 현장실습계약서의 실습 내용·방법에 포함되는지 먼저 확인해야 합니다.",
-      "필요 없는 재료 지시를 반복하며 청소를 시킨 정황은 단순 정리정돈 교육인지, 교육 목적 밖 잡무 전가인지 구분해야 합니다.",
-      "기존 근로자가 지위 또는 관계의 우위를 이용해 업무상 적정범위를 넘는 지시를 반복했다면 실습환경 악화와 권익침해 가능성을 검토합니다.",
+      `${scopeProfile.instructionName}이 현장실습계약서의 실습 내용·방법에 포함되는지 먼저 확인해야 합니다.`,
+      `${scopeProfile.keyQuestion}를 확인해 교육 목적 안의 실습인지, 교육 목적 밖 잡무 전가인지 구분해야 합니다.`,
+      `${instructionActor}가 지위 또는 관계의 우위를 이용해 업무상 적정범위를 넘는 지시를 반복했다면 실습환경 악화와 권익침해 가능성을 검토합니다.`,
       "학교는 학생 상담 기록을 남기고, 기업 담당자에게 공식 업무 범위 확인과 시정 요청을 해야 합니다.",
       "현재 질문에 확인된 피해 발생이 없으므로, 업무범위·권익보호 보고서로 정리합니다."
     ],
     immediateActions: [
-      "학생에게 최근 1~2주 동안의 지시 일시, 지시자, 재료명, 청소 장소, 소요시간, 반복 횟수를 적게 합니다.",
-      "현장실습계약서, 표준협약서, 실습계획서, 직무기술서에 재료 운반·정리정돈·청소가 포함되어 있는지 확인합니다.",
-      "학교 현장실습 담당자는 기업 담당 멘토에게 기존 근로자의 지시 권한과 해당 청소 지시의 교육 목적을 확인합니다.",
+      scopeProfile.firstAction,
+      `현장실습계약서, 표준협약서, 실습계획서, 직무기술서에 ${scopeProfile.instructionName}이 포함되어 있는지 확인합니다.`,
+      `학교 현장실습 담당자는 기업 담당 멘토에게 ${instructionActor}의 지시 권한과 ${scopeProfile.instructionName}의 교육 목적을 확인합니다.`,
       "업무 범위 밖 반복 지시로 보이면 학교 명의로 지시 중단, 담당 멘토를 통한 지시 일원화, 학생 불이익 금지를 요청합니다.",
-      "청소 장소가 기계·화학물질·분진 등 위험요소와 연결되면 안전교육·보호구·감독 여부를 별도로 확인합니다."
+      "지시 내용이 기계·화학물질·분진 등 위험요소와 연결되면 안전교육·보호구·감독 여부를 별도로 확인합니다."
     ],
     stakeholders: [
       {
@@ -1392,7 +1522,7 @@ function buildFieldTrainingScopeIssueReport(context, roleGuide, officialMaterial
         summary: "학생이 기업 안에서 직접 문제 제기하기 어려우므로 학교가 사실 확인과 시정 요청의 중심이 되어야 합니다.",
         duties: [
           "학생 상담 내용을 시간순으로 기록하고, 실습계약상 업무 범위와 실제 지시를 대조합니다.",
-          "기업 담당 멘토에게 기존 근로자의 지시 권한, 반복 청소의 필요성, 교육 목적을 확인합니다.",
+          `기업 담당 멘토에게 ${instructionActor}의 지시 권한, ${scopeProfile.instructionName}의 필요성, 교육 목적을 확인합니다.`,
           "업무 범위 밖 지시가 반복되면 시정 요청, 순회지도 강화, 실습 변경·중단·재배치 필요성을 검토합니다.",
           "학생에게 출결·평가·취업상 불이익이 생기지 않도록 별도 관리합니다."
         ],
@@ -1405,8 +1535,8 @@ function buildFieldTrainingScopeIssueReport(context, roleGuide, officialMaterial
         title: "학생·보호자",
         summary: "학생은 문제를 혼자 떠안지 말고 지시 내용을 기록해 학교를 통해 확인하도록 하는 것이 안전합니다.",
         duties: [
-          "언제, 누가, 어떤 방식으로 청소를 시켰는지 사실 위주로 기록합니다.",
-          "감정 표현보다 반복성, 지시자, 업무 관련성, 불필요한 재료 지시 여부를 구체적으로 남깁니다.",
+          `언제, 누가, 어떤 방식으로 ${scopeProfile.instructionName}을 지시했는지 사실 위주로 기록합니다.`,
+          "감정 표현보다 반복성, 지시자, 업무 관련성, 불필요성 여부를 구체적으로 남깁니다.",
           "기업 근로자와 직접 충돌하기보다 학교 담당자에게 먼저 알립니다."
         ],
         rights: [
@@ -1416,11 +1546,11 @@ function buildFieldTrainingScopeIssueReport(context, roleGuide, officialMaterial
       },
       {
         title: "실습기업·산업체",
-        summary: "현장실습생에게는 교육 목적과 계약 범위에 맞는 지시 체계를 제공해야 하며, 기존 근로자의 임의 지시를 방치하면 분쟁이 커질 수 있습니다.",
+        summary: `현장실습생에게는 교육 목적과 계약 범위에 맞는 지시 체계를 제공해야 하며, ${instructionActor}의 임의 지시를 방치하면 분쟁이 커질 수 있습니다.`,
         duties: [
           "현장실습 담당 멘토와 지시 권한자를 명확히 정합니다.",
-          "재료 운반과 정리정돈이 실습 직무에 필요한 경우라도 교육 목적, 범위, 시간, 안전조치를 설명합니다.",
-          "필요 없는 재료 지시를 빌미로 한 반복 청소나 잡무 전가가 없도록 기존 근로자에게 안내합니다.",
+          `${scopeProfile.instructionName}이 실습 직무에 필요한 경우라도 교육 목적, 범위, 시간, 안전조치를 설명합니다.`,
+          `${instructionActor}에게 교육 목적 밖 업무 외 지시나 잡무 전가가 없도록 안내합니다.`,
           "학교의 시정 요청과 학생 보호 조치에 협조합니다."
         ],
         rights: [
@@ -1431,13 +1561,13 @@ function buildFieldTrainingScopeIssueReport(context, roleGuide, officialMaterial
     ],
     evidence: [
       "현장실습계약서·표준협약서·실습계획서",
-      "학생 실습일지와 지시 일시·지시자·청소 장소 기록",
+      `학생 실습일지와 ${scopeProfile.instructionName}의 지시 일시·지시자·장소 기록`,
       "기업 담당 멘토 확인 내용과 학교 상담 기록",
       "반복 지시가 드러나는 문자·메신저·작업표·사진",
-      "청소 장소가 위험구역이면 안전교육·보호구·감독 기록"
+      "위험요소가 있으면 안전교육·보호구·감독 기록"
     ],
     cautions: [
-      "청소라는 단어만으로 위법 또는 괴롭힘이라고 단정하면 안 됩니다. 실습 직무와 직접 관련된 정리정돈인지, 반복 잡무 전가인지가 핵심입니다.",
+      `${scopeProfile.instructionName}만으로 곧바로 위법 또는 괴롭힘이라고 단정하면 안 됩니다. 실습 직무와 직접 관련된 교육활동인지, 반복 잡무 전가인지가 핵심입니다.`,
       "피해 발생이 확인되지 않은 사안에 의료·재해 자료를 요구하면 보고서 신뢰도가 떨어집니다.",
       "학생이 기업에서 불이익을 걱정할 수 있으므로 학교가 먼저 사실 확인과 시정 요청을 중재하는 방식이 적절합니다.",
       "모욕, 협박, 보복, 위험작업 지시, 장기간 반복이 확인되면 직장 내 괴롭힘 또는 권익침해 절차 검토가 필요합니다."
@@ -1514,13 +1644,16 @@ function buildFinalAdvice(seed) {
   const hasProcedureOnly = !hasSeriousInjury && !hasLegalDispute && !seed.riskSignals?.length;
 
   if (seed.presetType === "fieldTrainingScopeIssue") {
+    const scopeProfile = seed.scopeProfile || getFieldTrainingScopeProfile(text);
+    const instructionActor = getFieldTrainingInstructorLabel(text);
+
     return {
       level: "internal",
       title: "학교 확인·기업 시정 요청 우선",
       summary: "현재 내용은 사고 처리보다 현장실습 업무 범위와 학생 권익보호를 확인할 사안입니다. 먼저 학교가 학생 상담기록을 남기고 기업 담당자에게 지시 권한과 실습 범위를 확인하는 것이 적절합니다.",
       actions: [
         "학생 상담기록, 실습협약서, 반복 지시 일지를 묶어 사실관계표를 만듭니다.",
-        "기업 담당 멘토에게 기존 근로자의 지시 권한과 청소 지시의 교육 목적을 확인합니다.",
+        `기업 담당 멘토에게 ${instructionActor}의 지시 권한과 ${scopeProfile.instructionName}의 교육 목적을 확인합니다.`,
         "업무 범위 밖 반복 지시로 보이면 학교 명의로 지시 중단, 담당자 일원화, 학생 불이익 금지를 요청합니다."
       ],
       closingSentence: "현재 사안은 학교가 현장실습 업무 범위를 확인하고 기업에 시정 요청을 우선 진행하되, 보복·모욕·위험 작업 또는 장기간 반복이 확인되면 교육청 또는 노무 상담으로 상향 검토하겠습니다."
@@ -1734,7 +1867,8 @@ function getReportSearchText(report, profileContext = {}) {
 
 function isLikelyFieldTrainingAccident(report, profileContext = {}) {
   const text = compactText(getReportSearchText(report, profileContext));
-  if (/업무범위|반복지시|청소|잡무/.test(report?.title || "") && !hasActualInjurySignal(text)) {
+  const compactTitle = compactText(report?.title || "");
+  if (/업무범위|업무외지시|업무외반복지시|권익보호|반복지시|청소|잡무/.test(compactTitle) && !hasActualInjurySignal(text)) {
     return false;
   }
   return /현장실습|도제|직업계고|특성화고|실습기업|실습기관/.test(text)
@@ -1915,6 +2049,20 @@ function renderStakeholderProfileContextContent(profileContext = {}) {
 
 function buildEvidenceGroups(report) {
   if (isLikelyFieldTrainingScopeIssue(report)) {
+    const scopeText = findReportFact(report, "원 질문") || report.lead || report.title;
+    const scopeProfile = getFieldTrainingScopeProfile(scopeText);
+    const instructionActor = getFieldTrainingInstructorLabel(scopeText);
+    const safetyItems = /위험|기계|설비|화학|분진|보호구|유해|안전/.test(compactText(scopeText || ""))
+      ? [
+          {
+            title: "업무 지시 장소의 안전 위험 확인 자료",
+            reason: "지시된 업무가 기계, 화학물질, 분진, 날카로운 재료 등 위험요소와 연결되면 단순 업무범위를 넘어 안전 문제도 됩니다.",
+            how: "위험구역 여부, 보호구, 안전교육, 감독자 배치 여부를 기업 담당자에게 확인합니다.",
+            basis: formatLegalBasis(["oshSafetyMeasures", "fieldTrainingSafetyEducation"])
+          }
+        ]
+      : [];
+
     return [
       {
         priority: "required",
@@ -1923,20 +2071,20 @@ function buildEvidenceGroups(report) {
         items: [
           {
             title: "현장실습계약서·표준협약서·실습계획서",
-            reason: "재료 운반, 정리정돈, 청소가 실습 직무와 교육 목적 안에 포함되는지 판단하는 기준 자료입니다.",
+            reason: `${scopeProfile.instructionName}이 실습 직무와 교육 목적 안에 포함되는지 판단하는 기준 자료입니다.`,
             how: "학교 취업부·현장실습 담당자, 학생 보관본, 기업 보관본을 대조하고 실제 지시 내용과 다른 부분을 표시합니다.",
             basis: formatLegalBasis(["fieldTrainingContract"])
           },
           {
             title: "학생 상담기록과 지시 사실관계표",
-            reason: "반복성, 지시자, 필요 없는 재료 지시 여부, 학생의 불이익 우려를 사실 중심으로 확인합니다.",
+            reason: "반복성, 지시자, 업무 관련성, 학생의 불이익 우려를 사실 중심으로 확인합니다.",
             how: "지도교사 또는 현장실습 담당자가 학생 면담 후 일시·장소·지시자·내용·소요시간을 표로 정리합니다.",
             basis: formatLegalBasis(["fieldTrainingOperation", "fieldTrainingSafetyEducation"])
           },
           {
             title: "기업 담당 멘토·지시 권한 확인 자료",
-            reason: "기존 근로자가 현장실습생에게 직접 지시할 권한이 있었는지, 지시 체계가 정해져 있었는지 확인합니다.",
-            how: "학교가 기업 담당자에게 담당 멘토, 지시 권한자, 재료 운반·청소 지시의 교육 목적을 서면 또는 상담기록으로 확인합니다.",
+            reason: `${instructionActor}가 현장실습생에게 직접 지시할 권한이 있었는지, 지시 체계가 정해져 있었는지 확인합니다.`,
+            how: `학교가 기업 담당자에게 담당 멘토, 지시 권한자, ${scopeProfile.instructionName}의 교육 목적을 서면 또는 상담기록으로 확인합니다.`,
             basis: formatLegalBasis(["fieldTrainingCompanyDuty", "fieldTrainingContract"])
           }
         ]
@@ -1948,7 +2096,7 @@ function buildEvidenceGroups(report) {
         items: [
           {
             title: "실습일지·작업표·메신저·사진",
-            reason: "반복 청소 지시가 실제로 있었는지, 실습 내용과 얼마나 벗어났는지 보여줍니다.",
+            reason: `${scopeProfile.instructionName}이 실제로 있었는지, 실습 내용과 얼마나 벗어났는지 보여줍니다.`,
             how: "학생 실습일지, 작업표, 메신저, 현장 사진을 모으되 개인정보와 영업기밀은 필요한 범위만 가립니다.",
             basis: formatLegalBasis(["fieldTrainingOperation", "fieldTrainingContract"])
           },
@@ -1958,12 +2106,7 @@ function buildEvidenceGroups(report) {
             how: "통화기록, 상담일지, 공문, 이메일, 순회지도 기록에 기업 답변과 후속 조치를 함께 적습니다.",
             basis: formatLegalBasis(["fieldTrainingOperation", "fieldTrainingCompanyDuty"])
           },
-          {
-            title: "청소 장소의 안전 위험 확인 자료",
-            reason: "청소가 기계, 화학물질, 분진, 날카로운 재료 주변에서 이루어졌다면 단순 업무범위를 넘어 안전 문제도 됩니다.",
-            how: "위험구역 여부, 보호구, 안전교육, 감독자 배치 여부를 기업 담당자에게 확인합니다.",
-            basis: formatLegalBasis(["oshSafetyMeasures", "fieldTrainingSafetyEducation"])
-          }
+          ...safetyItems
         ]
       },
       {
@@ -3164,16 +3307,18 @@ function getRefinementQuestions(question, preset, userRole, riskSignals) {
   const questions = [...(byTopic[preset.type] || byTopic.general)];
 
   if (preset.type === "fieldTraining" && /청소|잡무|업무외|업무가아니|반복|자꾸|시키|시킴|재료|심부름|기존근로자/.test(normalized)) {
+    const scopeProfile = getFieldTrainingScopeProfile(normalized);
+
     questions.unshift(
       {
-        question: "반복 지시한 사람은 기업 담당 멘토인가요, 기존 근로자인가요?",
+        question: "업무 외 지시를 한 사람은 기업 담당 멘토인가요, 기업 내부 직원인가요, 또는 다른 사람인가요?",
         reason: "누가 지시했는지에 따라 지시 권한과 기업의 관리 책임 확인 방향이 달라집니다.",
-        placeholder: "예: 같은 라인 기존 근로자, 현장 멘토 아님, 담당자 모름"
+        placeholder: "예: 같은 라인 직원, 현장 멘토 아님, 담당자 모름"
       },
       {
-        question: "청소·재료 운반이 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?",
-        reason: "실습 범위 안의 정리정돈인지, 교육 목적 밖 잡무 전가인지 구분하는 핵심 자료입니다.",
-        placeholder: "예: 협약서에는 생산 보조만 있음, 청소 언급 없음, 아직 못 봄"
+        question: scopeProfile.scopeCheck,
+        reason: "실습 범위 안의 교육활동인지, 교육 목적 밖 잡무 전가인지 구분하는 핵심 자료입니다.",
+        placeholder: scopeProfile.scopePlaceholder
       },
       {
         question: "학생이 거절하거나 학교에 알렸을 때 불이익을 걱정하고 있나요?",
@@ -3480,8 +3625,9 @@ function buildSafetyPreventionMaterials() {
 }
 
 function buildFieldTrainingScopeMaterials(question = "") {
-  const normalized = String(question || "").replace(/\s+/g, "");
-  const hasSafetyConcern = /위험|기계|설비|화학|분진|보호구|유해|청소중다칠|다칠까/.test(normalized);
+  const normalized = compactText(question);
+  const scopeProfile = getFieldTrainingScopeProfile(question);
+  const hasSafetyConcern = /위험|기계|설비|화학|분진|보호구|유해|다칠|안전/.test(normalized);
   const materials = [
     {
       type: "law",
@@ -3492,13 +3638,13 @@ function buildFieldTrainingScopeMaterials(question = "") {
       provisions: [
         { title: "제7조의2 현장실습 운영기준", why: "학교가 현장실습을 어떤 기준으로 운영·지도·점검해야 하는지 확인합니다.", check: "운영계획, 순회지도, 상담기록, 기업 확인 기록을 대조합니다." },
         { title: "제8조 현장실습산업체의 선정 등", why: "학생 전공과 실습프로그램, 시설·설비, 실습환경이 적정했는지 확인합니다.", check: "산업체 선정자료와 실제 실습 직무를 비교합니다." },
-        { title: "제9조 현장실습계약 등", why: "실습 내용과 방법, 권리·의무가 계약서에 어떻게 정해졌는지 확인합니다.", check: "표준협약서와 반복 청소 지시가 맞는지 표시합니다." },
+        { title: "제9조 현장실습계약 등", why: "실습 내용과 방법, 권리·의무가 계약서에 어떻게 정해졌는지 확인합니다.", check: `표준협약서와 ${scopeProfile.instructionName}이 맞는지 표시합니다.` },
         { title: "제9조의4 현장실습산업체의 책무", why: "산업체가 교육 목적에 맞는 실습환경과 학생 보호 조치를 했는지 확인합니다.", check: "담당 멘토, 지시 권한, 시정 요청 답변을 확인합니다." },
         { title: "제9조의5 현장실습 안전교육 등", why: "학생 권익보호 교육과 안전교육이 이루어졌는지 확인합니다.", check: "학생이 부당하거나 위험한 지시를 어떻게 알리고 보호받는지 안내됐는지 봅니다." }
       ],
       actionChecks: [
-        "재료 운반·정리정돈·청소가 계약상 실습 내용에 포함되는지 확인",
-        "반복 청소가 교육 목적이 있는 정리정돈인지, 기존 근로자의 잡무 전가인지 구분",
+        `${scopeProfile.instructionName}이 계약상 실습 내용에 포함되는지 확인`,
+        `${scopeProfile.keyQuestion}를 확인해 교육 목적 밖 잡무 전가인지 구분`,
         "학교가 기업 담당자에게 업무 범위 확인과 시정 요청을 했는지 기록"
       ]
     },
@@ -3513,7 +3659,7 @@ function buildFieldTrainingScopeMaterials(question = "") {
         { title: "제76조의3 직장 내 괴롭힘 발생 시 조치", why: "신고·인지 후 사실 확인과 피해자 보호 흐름을 참고합니다.", check: "학생에게 불이익이 없도록 학교와 기업의 조치 기록을 남깁니다." }
       ],
       actionChecks: [
-        "청소 자체가 아니라 반복성·불필요성·지시 권한·불이익 우려를 중심으로 확인",
+        "업무 외 지시 자체보다 반복성·불필요성·지시 권한·불이익 우려를 중심으로 확인",
         "괴롭힘이라고 단정하기 전 실습계약과 실제 업무 필요성을 먼저 대조",
         "모욕, 보복, 따돌림, 위험 작업이 함께 있으면 상담 단계 상향"
       ]
@@ -3540,10 +3686,10 @@ function buildFieldTrainingScopeMaterials(question = "") {
   if (hasSafetyConcern) {
     materials.push({
       type: "safety",
-      title: "청소·정리정돈 작업 안전 자료",
+      title: `${scopeProfile.instructionName} 관련 안전 자료`,
       source: "안전보건공단",
-      use: "청소 지시가 기계·화학물질·분진 등 위험요소와 연결될 때 안전교육과 보호조치 기준을 확인합니다.",
-      query: "청소 작업 안전 보호구 정리정돈",
+      use: "업무 외 지시가 기계·화학물질·분진 등 위험요소와 연결될 때 안전교육과 보호조치 기준을 확인합니다.",
+      query: "작업 안전 보호구 위험성평가",
       url: "https://www.kosha.or.kr/kosha/index.do"
     });
   }

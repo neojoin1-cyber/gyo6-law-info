@@ -63,6 +63,20 @@ const cases = [
     mustNotInclude: [...accidentWords, educationDraftText, "중대재해"]
   },
   {
+    id: "field-scope-generic-off-duty",
+    question: "현장 실습 중 업무외 일을 시키는 것은 어떻게 해야 할까요?",
+    expect: { preset: "fieldTraining", scenario: "fieldTrainingScopeIssue", disposition: "internal" },
+    mustInclude: ["업무 외 지시", "업무 범위", "현장실습계약서"],
+    mustNotInclude: ["청소", "재료", "기존 근로자", "기존근로자", "반복 청소", ...accidentWords, educationDraftText]
+  },
+  {
+    id: "field-scope-personal-errand",
+    question: "현장실습 중 회사 직원이 개인 심부름을 시킵니다. 실습 업무와 관련 없는 일 같아 학교에 어떻게 말해야 할까요?",
+    expect: { preset: "fieldTraining", scenario: "fieldTrainingScopeIssue", disposition: "internal" },
+    mustInclude: ["사적 심부름", "현장실습", "업무 범위"],
+    mustNotInclude: ["청소", "재료 운반", "반복 청소", ...accidentWords, educationDraftText]
+  },
+  {
     id: "field-accident-fracture",
     question: "현장실습 중 학생이 실습시간 안에 프레스 기계 주변에서 작업하다 팔 골절상을 입었습니다. 보호자에게 연락했고 병원 치료 중입니다.",
     expect: { preset: "fieldTraining", scenario: "fieldTrainingAccident", disposition: "education-report" },
