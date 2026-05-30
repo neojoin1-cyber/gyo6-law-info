@@ -1075,6 +1075,68 @@ select:focus {
   text-decoration: none;
 }
 
+.report-material-detail {
+  display: grid;
+  gap: 8px;
+  padding-top: 9px;
+  border-top: 1px solid #e4edf4;
+}
+
+.report-material-detail strong {
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.report-mini-list {
+  display: grid;
+  gap: 8px;
+}
+
+.report-mini-card {
+  min-width: 0;
+  border: 1px solid #dce8f0;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+}
+
+.report-mini-card b {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--navy);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.report-mini-card p {
+  margin: 0 0 5px;
+  color: #40556a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.report-mini-card em {
+  display: block;
+  color: #5a6f84;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.report-action-checks ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.report-action-checks li {
+  color: #40556a;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .report-live-sources {
   display: grid;
   gap: 12px;
@@ -2184,6 +2246,7 @@ footer p {
   body.printing-report .report-stakeholders article,
   body.printing-report .report-api-list article,
   body.printing-report .report-materials article,
+  body.printing-report .report-mini-card,
   body.printing-report .report-profile-grid div,
   body.printing-report .report-sign-grid div {
     break-inside: avoid;

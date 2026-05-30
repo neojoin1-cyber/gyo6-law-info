@@ -106,10 +106,81 @@ const officialMaterialsByTopic = {
     { type: "safety", title: "산업안전보건 교육 자료", source: "안전보건공단", use: "기업훈련과 실습 현장의 안전교육 자료를 확인합니다.", query: "산업안전보건", url: "https://www.kosha.or.kr/kosha/index.do" }
   ],
   fieldTraining: [
-    { type: "law", title: "직업교육훈련 촉진법", source: "국가법령정보센터", use: "현장실습 운영과 직업교육훈련 기준을 확인합니다.", query: "직업교육훈련 촉진법" },
-    { type: "law", title: "산업안전보건법", source: "국가법령정보센터", use: "실습 현장의 안전보건 의무와 조치 기준을 확인합니다.", query: "산업안전보건법" },
-    { type: "law", title: "중대재해 처벌 등에 관한 법률", source: "국가법령정보센터", use: "중대한 안전사고가 포함될 때 관리 책임과 안전보건 체계를 확인합니다.", query: "중대재해 처벌 등에 관한 법률" },
-    { type: "admin", title: "직업계고 현장실습 자료", source: "교육부", use: "학교 현장실습 운영 자료와 공식 안내를 확인합니다.", query: "직업계고 현장실습", url: "https://www.moe.go.kr/main.do?s=moe" }
+    {
+      type: "law",
+      title: "직업교육훈련 촉진법",
+      source: "국가법령정보센터",
+      use: "현장실습 운영, 산업체 선정, 협약서, 실습시간, 안전교육 기준을 우선 대조합니다.",
+      query: "직업교육훈련 촉진법",
+      provisions: [
+        { title: "제7조의2 현장실습 운영기준", why: "산업체 선정, 프로그램, 지도·감독 기준이 현장실습 운영기준 안에 있었는지 봅니다.", check: "학교 운영계획, 실습 배치표, 지도교사 방문·점검 기록을 대조합니다." },
+        { title: "제8조 현장실습산업체의 선정 등", why: "학생 전공, 실습프로그램, 시설·설비, 후생복지 여건을 고려했는지 확인합니다.", check: "실습기업 선정 자료, 사전 현장실사, 위험 기계 보유 여부를 확인합니다." },
+        { title: "제9조 현장실습계약 등", why: "표준협약서, 권리·의무, 실습내용, 기간·시간, 복리후생 기재 여부를 확인합니다.", check: "학생·기업·학교가 보관한 협약서 원본과 실제 지시 내용을 비교합니다." },
+        { title: "제9조의2 현장실습 시간", why: "실습시간, 연장, 야간·휴일 실습 여부가 쟁점이면 반드시 봅니다.", check: "출퇴근 기록, 실습일지, 사고 시각이 실습시간 안인지 확인합니다." },
+        { title: "제9조의5 현장실습 안전교육", why: "사고 전 안전교육과 노동인권·권익보호 교육이 이루어졌는지 확인합니다.", check: "교육자료, 서명부, 교육일자, 교육자가 누구였는지 대조합니다." }
+      ],
+      actionChecks: [
+        "현장실습 협약서와 표준협약서가 실제 업무 범위와 맞는지 확인",
+        "사고가 실습시간·실습장소·공식 업무 안에서 발생했는지 확인",
+        "학교 지도·점검, 보호자 안내, 실습 중단 검토 기록 확인"
+      ]
+    },
+    {
+      type: "law",
+      title: "산업안전보건법",
+      source: "국가법령정보센터",
+      use: "기계·기구 사고, 안전교육, 방호조치, 산업재해 보고 여부를 대조합니다.",
+      query: "산업안전보건법",
+      provisions: [
+        { title: "제29조 근로자에 대한 안전보건교육", why: "실습생이 실제 작업을 했다면 작업 전 안전교육의 범위와 기록을 확인합니다.", check: "신규·작업변경·특별교육 자료와 서명부를 확보합니다." },
+        { title: "제38조 안전조치", why: "기계·기구·설비에 의한 위험을 예방하기 위한 필요한 조치가 있었는지 봅니다.", check: "작업표준서, 감독자 배치, 보호구 지급, 접근금지·정지 절차를 확인합니다." },
+        { title: "제57조 산업재해 발생 은폐 금지 및 보고 등", why: "골절처럼 휴업이 예상되는 부상은 보고·조사표 제출 대상인지 대조해야 합니다.", check: "산업재해조사표, 회사 사고보고서, 관할 지방고용노동관서 보고 여부를 확인합니다." },
+        { title: "제80조 유해하거나 위험한 기계·기구에 대한 방호조치", why: "동력 기계의 방호덮개, 안전장치, 비상정지 장치가 사고와 직접 연결될 수 있습니다.", check: "기계 점검표, 방호장치 사진, 사고 당시 장치 작동 여부를 확인합니다." }
+      ],
+      caseHints: [
+        { title: "기계 끼임·말림·부딪힘 재해사례", why: "방호장치 제거, 비상정지 미작동, 작업 중 접근 허용 여부가 반복 쟁점입니다.", check: "안전보건공단 국내재해사례에서 같은 기계·공정·부상 유형을 검색합니다." },
+        { title: "정비·청소·친구 작업 지원 중 사고사례", why: "공식 지시인지 개인적 도움인지, 작업허가와 감독이 있었는지가 책임 확인의 핵심입니다.", check: "작업지시자, 허락 여부, 전원 차단, 출입통제, 목격자 진술을 정리합니다." }
+      ],
+      actionChecks: [
+        "사고 직후 치료·보고·현장 보존 조치가 있었는지 시간순으로 정리",
+        "기계 방호장치, 비상정지, 보호구, 작업표준서, 위험성평가 자료 확보",
+        "산재·보험·학교안전 관련 절차가 중복 또는 누락되지 않았는지 확인"
+      ]
+    },
+    {
+      type: "law",
+      title: "중대재해 처벌 등에 관한 법률",
+      source: "국가법령정보센터",
+      use: "중대한 안전사고 가능성이 있을 때 요건과 안전보건관리체계를 확인합니다.",
+      query: "중대재해 처벌 등에 관한 법률",
+      provisions: [
+        { title: "제2조 정의", why: "사망, 동일 사고 부상자 수, 장기 치료 질병 등 중대산업재해 요건을 먼저 대조합니다.", check: "골절 1건만으로 단정하지 말고 진단서, 치료기간, 부상자 수를 확인합니다." },
+        { title: "제4조 안전 및 보건 확보의무", why: "재해예방 인력·예산, 안전보건관리체계, 재발방지 대책이 있었는지 봅니다.", check: "회사 안전보건관리체계 문서와 사고 후 재발방지 계획을 확인합니다." },
+        { title: "제5조 도급·용역·위탁 등 관계의 안전 및 보건 확보의무", why: "학교, 기업, 위탁기관 등 여러 기관이 얽힌 경우 관계를 확인합니다.", check: "실습 위탁 구조, 계약관계, 실제 지배·운영·관리 주체를 정리합니다." }
+      ],
+      actionChecks: [
+        "중대재해 해당 여부는 요건 검토 전 단정하지 않기",
+        "재발방지 대책과 안전보건관리체계 자료를 회사에 요청할 수 있는지 확인",
+        "중대한 부상·분쟁 가능성이 있으면 노무사·변호사·관계기관 상담 기록 남기기"
+      ]
+    },
+    {
+      type: "admin",
+      title: "직업계고 현장실습 자료",
+      source: "교육부·교육청",
+      use: "학교 현장실습 운영 매뉴얼, 표준협약서, 사고 보고와 보호자 안내 절차를 확인합니다.",
+      query: "직업계고 현장실습",
+      url: "https://www.moe.go.kr/main.do?s=moe",
+      caseHints: [
+        { title: "현장실습 사고 보고·실습 중단 사례", why: "학교가 학생 보호, 보호자 통보, 교육청 보고를 어떻게 처리해야 하는지 봅니다.", check: "관할 교육청 현장실습 매뉴얼과 학교 내부 보고 양식을 함께 확인합니다." },
+        { title: "표준협약서·실습일지 누락 사례", why: "문서가 빠졌거나 실제 업무가 협약과 다르면 책임 확인이 어려워집니다.", check: "협약서, 실습일지, 기업 담당자 확인서, 지도교사 상담기록을 모읍니다." }
+      ],
+      actionChecks: [
+        "관할 교육청의 최신 현장실습 운영 매뉴얼과 학교 내부 지침 확인",
+        "보호자 안내문, 실습 중단 여부, 학생 평가·출결 처리 기준 확인",
+        "교육청 보고가 필요한 사안인지 관리자와 즉시 검토"
+      ]
+    }
   ],
   overseasTraining: [
     { type: "law", title: "직업교육훈련 촉진법", source: "국가법령정보센터", use: "해외 현장실습도 직업교육훈련의 기본 틀에서 확인합니다.", query: "직업교육훈련 촉진법" },
@@ -118,10 +189,53 @@ const officialMaterialsByTopic = {
     { type: "admin", title: "해외안전여행 정보", source: "외교부", use: "파견 국가의 안전정보와 위기 대응 자료를 확인합니다.", query: "해외안전여행", url: "https://www.0404.go.kr" }
   ],
   schoolSafety: [
-    { type: "law", title: "중대재해 처벌 등에 관한 법률", source: "국가법령정보센터", use: "중대재해 관련 안전보건 관리체계를 확인합니다.", query: "중대재해 처벌 등에 관한 법률" },
-    { type: "law", title: "산업안전보건법", source: "국가법령정보센터", use: "학교와 실습 현장의 안전보건 기준을 확인합니다.", query: "산업안전보건법" },
-    { type: "law", title: "학교안전사고 예방 및 보상에 관한 법률", source: "국가법령정보센터", use: "학교안전사고 예방과 보상 관련 기준을 확인합니다.", query: "학교안전사고 예방 및 보상에 관한 법률" },
-    { type: "safety", title: "안전보건 자료", source: "안전보건공단", use: "위험성 평가, 안전교육, 사고 예방 자료를 확인합니다.", query: "안전보건", url: "https://www.kosha.or.kr/kosha/index.do" }
+    {
+      type: "law",
+      title: "중대재해 처벌 등에 관한 법률",
+      source: "국가법령정보센터",
+      use: "중대재해 관련 안전보건 관리체계와 재발방지 조치 후보를 확인합니다.",
+      query: "중대재해 처벌 등에 관한 법률",
+      provisions: [
+        { title: "제2조 정의", why: "중대산업재해·중대시민재해 해당 요건을 먼저 나눕니다.", check: "사망 여부, 부상자 수, 치료기간, 질병 요건을 자료로 확인합니다." },
+        { title: "제4조 안전 및 보건 확보의무", why: "기관이나 사업장의 안전보건관리체계와 재발방지 대책이 핵심입니다.", check: "예산·인력·점검·개선명령 이행 자료를 확인합니다." }
+      ],
+      actionChecks: ["중대재해 여부를 단정하기 전 법정 요건 확인", "재발방지 대책과 사고 조사 기록 확보", "교육청·고용노동부·전문가 상담 필요 여부 검토"]
+    },
+    {
+      type: "law",
+      title: "산업안전보건법",
+      source: "국가법령정보센터",
+      use: "학교와 실습 현장의 안전보건 기준, 교육, 방호조치, 보고 의무를 확인합니다.",
+      query: "산업안전보건법",
+      provisions: [
+        { title: "제29조 근로자에 대한 안전보건교육", why: "작업 전 교육과 특별교육 대상 여부를 확인합니다.", check: "교육자료, 서명부, 교육일자를 확보합니다." },
+        { title: "제38조 안전조치", why: "위험 기계·설비·작업장소에 필요한 예방조치가 있었는지 봅니다.", check: "점검표, 보호구, 작업표준서, 감독자 기록을 확인합니다." },
+        { title: "제57조 산업재해 발생 은폐 금지 및 보고 등", why: "사고 보고와 조사표 제출 대상인지 확인합니다.", check: "회사 보고서, 병원 진단서, 휴업 예상 기간을 대조합니다." }
+      ],
+      caseHints: [
+        { title: "끼임·떨어짐·부딪힘 3대 사고유형", why: "안전보건 자료에서 반복적으로 다루는 고위험 유형입니다.", check: "사고 유형별 예방자료와 국내재해사례를 함께 검색합니다." }
+      ]
+    },
+    {
+      type: "law",
+      title: "학교안전사고 예방 및 보상에 관한 법률",
+      source: "국가법령정보센터",
+      use: "학교 교육활동 중 사고인지, 학교안전공제와 보상 절차가 연결되는지 확인합니다.",
+      query: "학교안전사고 예방 및 보상에 관한 법률",
+      actionChecks: ["교육활동 해당 여부 확인", "학교안전공제회 절차와 산업재해 절차가 혼동되지 않도록 구분", "치료비·보상 관련 안내 기록 보관"]
+    },
+    {
+      type: "safety",
+      title: "안전보건 자료",
+      source: "안전보건공단",
+      use: "위험성 평가, 안전교육, 사고 예방, 국내재해사례 자료를 확인합니다.",
+      query: "안전보건",
+      url: "https://www.kosha.or.kr/kosha/index.do",
+      caseHints: [
+        { title: "기계·설비 방호장치 사례", why: "방호덮개, 인터록, 비상정지, 출입통제가 사고 예방의 직접 자료가 됩니다.", check: "사고 기계와 같은 설비명으로 자료를 검색합니다." },
+        { title: "현장 안전교육 OPS·교안", why: "학교와 기업이 사고 전후 교육자료로 활용할 수 있습니다.", check: "실습 직무와 같은 공정의 OPS, 교안, 동영상 링크를 모읍니다." }
+      ]
+    }
   ],
   schoolViolence: [
     { type: "admin", title: "2024년 학교폭력 사안처리 가이드북", source: "교육부", use: "신고, 조사, 심의, 조치 절차를 학교 현장 기준으로 확인합니다.", query: "학교폭력 사안처리 가이드북", url: "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=316&boardSeq=98297&lev=0&m=0302&opType=N&s=moe&statusYN=W" },
@@ -1013,7 +1127,7 @@ function renderCaseReport(report) {
 
       <div class="report-section">
         <h4>7. 공식 근거 자료</h4>
-        <p class="report-section-note">아래 자료는 보고서 안에서 바로 확인할 수 있도록 정리한 근거 후보입니다. API 결과가 도착하면 현행일자와 원문 링크가 함께 보강됩니다.</p>
+        <p class="report-section-note">아래는 이 사안에서 우선 대조할 조항·사례 후보입니다. 적용 여부는 사실관계와 원문 확인 후 판단해야 하며, API 결과가 도착하면 실제 원문 후보가 함께 보강됩니다.</p>
         ${renderReportMaterials(report.officialMaterials)}
         <div id="reportLiveSources" class="report-live-sources">
           <p>법제처와 안전보건공단 API 자료를 보고서에 반영하고 있습니다.</p>
@@ -1283,6 +1397,14 @@ function getReportSnapshotStyles() {
     .report-section{border-top:1px solid #dce5ee;padding-top:14px;display:grid;gap:10px}
     .report-facts,.report-profile-grid,.report-materials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
     .report-facts div,.report-profile-grid div,.report-stakeholders article,.report-materials article,.report-api-list article{border:1px solid #dce5ee;padding:10px;background:#fbfcfd}
+    .report-materials article{display:grid;gap:8px}
+    .report-material-detail{display:grid;gap:7px;border-top:1px solid #e5edf4;padding-top:8px}
+    .report-mini-list{display:grid;gap:6px}
+    .report-mini-card{border:1px solid #dce5ee;background:#fff;padding:8px}
+    .report-mini-card b{display:block;margin-bottom:4px;color:#111827}
+    .report-mini-card p{margin:0 0 4px}
+    .report-mini-card em{display:block;color:#4d637b;font-style:normal;font-size:12px;line-height:1.55}
+    .report-action-checks ul{margin:0;padding-left:18px}
     strong{color:#142033}
     .report-list{margin:0;padding-left:20px}
     .report-list.checklist{padding-left:0;list-style-position:inside}
@@ -1293,7 +1415,7 @@ function getReportSnapshotStyles() {
     .report-sign-grid div{min-height:68px;border:1px solid #111827;padding:10px}
     a{color:#111827;text-decoration:none}
     footer{margin-top:28px;border-top:1px solid #dce5ee;padding-top:12px;color:#65758b;font-size:12px}
-    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article{break-inside:avoid}}
+    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article,.report-mini-card{break-inside:avoid}}
   `;
 }
 
@@ -1366,9 +1488,48 @@ function renderReportMaterials(materials) {
           <h5>${escapeHtml(material.title)}</h5>
           <p>${escapeHtml(material.use)}</p>
           <small>${escapeHtml(material.source)} · ${escapeHtml(material.query)}</small>
+          ${renderReportMaterialItems("관련 조항 후보", material.provisions)}
+          ${renderReportMaterialItems("사고·사례 확인 후보", material.caseHints)}
+          ${renderReportActionChecks(material.actionChecks)}
           <a href="${escapeHtml(getMaterialUrl(material, encodeURIComponent(material.query || material.title)))}" target="_blank" rel="noopener noreferrer">원문 연결</a>
         </article>
       `).join("")}
+    </div>
+  `;
+}
+
+function renderReportMaterialItems(title, items = []) {
+  if (!items.length) {
+    return "";
+  }
+
+  return `
+    <div class="report-material-detail">
+      <strong>${escapeHtml(title)}</strong>
+      <div class="report-mini-list">
+        ${items.map((item) => `
+          <div class="report-mini-card">
+            <b>${escapeHtml(item.title)}</b>
+            <p>${escapeHtml(item.why)}</p>
+            <em>${escapeHtml(item.check)}</em>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function renderReportActionChecks(items = []) {
+  if (!items.length) {
+    return "";
+  }
+
+  return `
+    <div class="report-material-detail report-action-checks">
+      <strong>보고서 대조 포인트</strong>
+      <ul>
+        ${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+      </ul>
     </div>
   `;
 }
