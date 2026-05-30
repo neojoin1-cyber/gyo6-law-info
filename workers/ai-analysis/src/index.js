@@ -55,6 +55,7 @@ async function handleAnalyze(payload, env) {
   const topic = cleanText(payload.topic || "general");
   const role = cleanText(payload.role || "auto");
   const mode = cleanText(payload.mode || "intake");
+  const caseId = cleanText(payload.caseId || "");
 
   if (!question) {
     return { error: "질문이 비어 있습니다." };
@@ -84,6 +85,7 @@ async function handleAnalyze(payload, env) {
 
       return {
         ok: true,
+        caseId,
         engine: "cloudflare-worker-openai-responses",
         model,
         generatedAt: new Date().toISOString(),
@@ -141,7 +143,7 @@ async function callOpenAiLegalAnalysis(openAiKey, payload) {
         },
         verbosity: "medium"
       },
-      max_output_tokens: 3600
+      max_output_tokens: 4200
     })
   });
 
@@ -174,7 +176,10 @@ function getLegalAnalysisInstructions() {
     "질문에 '청소'만 있으면 '재료 운반'을 추가하지 마세요. 질문에 '재료'가 없으면 재료라는 말을 쓰지 마세요.",
     "질문에 부상, 진단서, 사고, 교육청 보고 요청이 없으면 그런 절차를 기본 결론으로 만들지 마세요.",
     "먼저 사용자가 실제로 말한 사실과 아직 모르는 사실을 분리하세요.",
-    "추가 질문은 미리 정한 문항을 나열하지 말고, 이 사안 판단에 꼭 필요한 3~5개만 생성하세요.",
+    "1차 결과는 긴 보고서가 아니라 상황 파악과 대처 방안 중심의 간편 보고서 초안으로 쓰일 예정입니다. 한 번에 모든 것을 처리하려 하지 말고 우선순위를 좁히세요.",
+    "추가 질문은 미리 정한 문항을 나열하지 말고, 이 사안 판단에 꼭 필요한 1~3개만 생성하세요. 모르거나 민감하면 비워도 되는 질문으로 작성하세요.",
+    "증빙자료는 필수 1~2개와 권고 1~2개 위주로 제한하세요. 실제 법적 필수 자료가 불명확하면 필수라고 과장하지 마세요.",
+    "주체별 조치사항은 현재 사안에 직접 관련된 주체 2~3개만 정리하세요.",
     "법령은 조문을 단정하기보다 우선 확인해야 할 공식자료와 검색어를 제시하세요. 조문을 말할 때는 확인 필요 상태로 표현하세요.",
     "중대한 위험, 보복, 성희롱, 폭행, 산재, 해고, 소송 가능성이 보일 때만 전문가 상담 단계를 올리세요.",
     "출력은 반드시 요청한 JSON 스키마만 따르세요."

@@ -11,6 +11,8 @@ const answerModeInput = document.querySelector("#answerMode");
 const userRoleInput = document.querySelector("#userRole");
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
 let currentReportDraft = null;
+let currentCaseId = "";
+let currentLiveSourceData = null;
 let skipNextAutoScroll = false;
 
 const roleGuides = {
@@ -338,17 +340,9 @@ const highRiskWords = ["소송", "고소", "고발", "형사", "사망", "중상
 const reportProfileFields = [
   { name: "schoolName", label: "학교명", placeholder: "예: ○○공업고등학교" },
   { name: "studentLabel", label: "학생명 또는 식별명", placeholder: "예: 홍길동, 2학년 전기과 학생 A" },
-  { name: "department", label: "학과·학년·반", placeholder: "예: 스마트전자과 2학년 1반" },
-  { name: "teacherName", label: "담임·지도교사", placeholder: "예: 담임 김○○, 현장실습 담당 이○○" },
-  { name: "studentContact", label: "학생 연락처", placeholder: "선택 입력, 내부 보고용" },
-  { name: "guardianContact", label: "보호자 연락처", placeholder: "선택 입력, 내부 보고용" },
+  { name: "teacherName", label: "담당자", placeholder: "예: 담임 김○○, 현장실습 담당 이○○" },
   { name: "companyName", label: "파견 기업·기관", placeholder: "예: ○○테크 생산1팀" },
-  { name: "companyContact", label: "기업 담당자·연락처", placeholder: "예: 현장 멘토, 인사담당자" },
-  { name: "trainingPeriod", label: "파견일자·실습기간", placeholder: "예: 2026.05.01~2026.06.30" },
-  { name: "programName", label: "참여 사업명", placeholder: "예: 산학일체형 도제학교, 현장실습, 해외 현장실습" },
-  { name: "incidentDatePlace", label: "문제·사고 일시와 장소", placeholder: "예: 2026.05.30 14:20, 생산1팀 실습장" },
-  { name: "currentStatus", label: "현재 조치·실습현황", placeholder: "예: 학생 상담 완료, 기업 확인 중, 실습 중단 검토 중", multiline: true },
-  { name: "referenceNote", label: "기타 참고사항", placeholder: "예: 기업 담당자 확인 요청, 관련 자료 보존 요청, 보호자 안내 예정", multiline: true },
+  { name: "currentStatus", label: "현재 조치·추가 메모", placeholder: "예: 학생 상담 완료, 기업 확인 중, 보호자 안내 예정", multiline: true },
   { name: "drafterName", label: "작성자·검토자", placeholder: "예: 취업지도부 김○○ / 관리자 검토 예정" }
 ];
 
@@ -829,6 +823,10 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const directAnswer = getDirectAnswer(question, displayPreset, roleGuide, scenario);
   const refinementQuestions = getRefinementQuestions(question, preset, userRole, riskSignals);
   const caseReport = buildCaseReport(question, displayPreset, roleGuide, officialMaterials, riskSignals, scenario);
+  const caseId = createCaseSessionId();
+  caseReport.caseId = caseId;
+  currentCaseId = caseId;
+  currentLiveSourceData = null;
   currentReportDraft = caseReport;
 
   resultTitle.textContent = "답변 먼저";
@@ -984,13 +982,17 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
     </section>
   `;
 
-  loadAiAnalysis(question, displayPreset, userRole, answerMode);
-  loadLiveSources(question, displayPreset, keywords);
+  loadAiAnalysis(question, displayPreset, userRole, answerMode, caseId);
+  loadLiveSources(question, displayPreset, keywords, caseId);
 }
 
-async function loadAiAnalysis(question, preset, userRole, answerMode) {
+async function loadAiAnalysis(question, preset, userRole, answerMode, caseId) {
   const mount = document.querySelector("#aiAnalysisMount");
   if (!mount) {
+    return;
+  }
+
+  if (caseId !== currentCaseId) {
     return;
   }
 
@@ -1004,14 +1006,19 @@ async function loadAiAnalysis(question, preset, userRole, answerMode) {
   }
 
   try {
-    const params = new URLSearchParams({
-      q: question,
-      topic: preset.type,
-      role: userRole,
-      mode: answerMode
-    });
-    const response = await fetch(getAiAnalyzeUrl(params), {
-      headers: { accept: "application/json" }
+    const response = await fetch(getAiAnalyzeUrl(), {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({
+        caseId,
+        question,
+        topic: preset.type,
+        role: userRole,
+        mode: answerMode
+      })
     });
 
     if (!response.ok) {
@@ -1019,8 +1026,15 @@ async function loadAiAnalysis(question, preset, userRole, answerMode) {
     }
 
     const data = await response.json();
+    if (caseId !== currentCaseId || (data.caseId && data.caseId !== caseId)) {
+      return;
+    }
     mount.innerHTML = renderAiAnalysis(data);
+    applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId);
   } catch (error) {
+    if (caseId !== currentCaseId) {
+      return;
+    }
     mount.innerHTML = `
       <div class="answer-label">AI 분석 실패</div>
       <h3>지능형 분석을 불러오지 못했습니다.</h3>
@@ -1030,13 +1044,14 @@ async function loadAiAnalysis(question, preset, userRole, answerMode) {
   }
 }
 
-function getAiAnalyzeUrl(params) {
+function getAiAnalyzeUrl(params = null) {
   const configuredBase = getConfiguredAiWorkerBaseUrl();
   if (!configuredBase) {
-    return `/api/analyze?${params.toString()}`;
+    return params ? `/api/analyze?${params.toString()}` : "/api/analyze";
   }
 
-  return `${configuredBase.replace(/\/+$/, "")}/api/analyze?${params.toString()}`;
+  const baseUrl = `${configuredBase.replace(/\/+$/, "")}/api/analyze`;
+  return params ? `${baseUrl}?${params.toString()}` : baseUrl;
 }
 
 function getConfiguredAiWorkerBaseUrl() {
@@ -1052,6 +1067,11 @@ function getConfiguredAiWorkerBaseUrl() {
   }
 }
 
+function createCaseSessionId() {
+  const randomPart = Math.random().toString(36).slice(2, 8);
+  return `case-${Date.now()}-${randomPart}`;
+}
+
 function renderAiAnalysis(data) {
   if (data.error || !data.analysis) {
     return `
@@ -1062,6 +1082,9 @@ function renderAiAnalysis(data) {
   }
 
   const analysis = data.analysis;
+  const clarifyingQuestions = (analysis.clarifyingQuestions || []).slice(0, 3);
+  const immediateActions = (analysis.immediateActions || []).slice(0, 4);
+  const keyIssues = (analysis.keyIssues || []).slice(0, 3);
 
   return `
     <div class="answer-label">AI 사안 분석 · ${escapeHtml(data.model || "model")}</div>
@@ -1069,15 +1092,15 @@ function renderAiAnalysis(data) {
     <p>${escapeHtml(analysis.coreFinding)}</p>
     <div class="answer-columns">
       <div>
-        <strong>확인된 사실</strong>
+        <strong>질문에서 확인된 사실</strong>
         <ul>
-          ${analysis.knownFacts.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          ${(analysis.knownFacts || []).slice(0, 4).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
         </ul>
       </div>
       <div>
-        <strong>추정하면 안 되는 사실</strong>
+        <strong>아직 단정하지 않을 것</strong>
         <ul>
-          ${analysis.mustNotAssume.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          ${(analysis.mustNotAssume || []).slice(0, 4).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
         </ul>
       </div>
     </div>
@@ -1085,53 +1108,147 @@ function renderAiAnalysis(data) {
       <div>
         <strong>핵심 쟁점</strong>
         <ul>
-          ${analysis.keyIssues.map((item) => `<li><b>${escapeHtml(item.title)}</b><br>${escapeHtml(item.analysis)}</li>`).join("")}
+          ${keyIssues.map((item) => `<li><b>${escapeHtml(item.title)}</b><br>${escapeHtml(item.analysis)}</li>`).join("")}
         </ul>
       </div>
       <div>
         <strong>지금 바로 할 일</strong>
         <ol>
-          ${analysis.immediateActions.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          ${immediateActions.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
         </ol>
       </div>
     </div>
-    <div class="result-block">
-      <h3>AI가 추가로 확인해야 한다고 본 질문</h3>
-      <div class="source-priority-list">
-        ${analysis.clarifyingQuestions.map((item, index) => `
+    ${clarifyingQuestions.length ? `
+      <div class="result-block">
+        <h3>추가로 확인하면 좋아지는 질문</h3>
+        <div class="source-priority-list">
+          ${clarifyingQuestions.map((item, index) => `
+            <article>
+              <span>${index + 1}</span>
+              <div>
+                <strong>${escapeHtml(item.question)}</strong>
+                <p>${escapeHtml(item.why)}</p>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </div>
+    ` : ""}
+    ${analysis.expertReferral?.reason ? `
+      <div class="result-block">
+        <h3>상담·상향 판단</h3>
+        <div class="source-priority-list">
           <article>
-            <span>${index + 1}</span>
+            <span>${escapeHtml(analysis.expertReferral.level || "확인")}</span>
             <div>
-              <strong>${escapeHtml(item.question)}</strong>
-              <p>${escapeHtml(item.why)}</p>
-              <small>${escapeHtml(item.answerType)}</small>
+              <strong>${escapeHtml(analysis.expertReferral.reason)}</strong>
+              <p>${escapeHtml(analysis.expertReferral.suggestedMessage || "")}</p>
             </div>
           </article>
-        `).join("")}
+        </div>
       </div>
-    </div>
-    <div class="result-block">
-      <h3>증빙자료 우선순위</h3>
-      <div class="material-list">
-        ${analysis.evidencePlan.map((item) => `
-          <article>
-            <div class="material-head">
-              <span>${escapeHtml(item.priority)}</span>
-            </div>
-            <h4>${escapeHtml(item.item)}</h4>
-            <p>${escapeHtml(item.why)}</p>
-            <small>${escapeHtml(item.how)}</small>
-          </article>
-        `).join("")}
-      </div>
-    </div>
+    ` : ""}
     <p class="answer-warning">${escapeHtml(analysis.informationNotice)}</p>
   `;
 }
 
-async function loadLiveSources(question, preset, keywords) {
+function applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId) {
+  if (!data?.analysis || caseId !== currentCaseId) {
+    return;
+  }
+
+  const reportElement = document.querySelector("#caseReport");
+  if (!reportElement) {
+    return;
+  }
+
+  const profile = collectReportProfile();
+  const aiReport = buildAiSimpleReport(data, question, preset, userRole, answerMode, caseId);
+  currentReportDraft = aiReport;
+  reportElement.outerHTML = renderCaseReport(aiReport);
+  restoreReportProfile(profile);
+
+  if (currentLiveSourceData) {
+    updateReportLiveSources(currentLiveSourceData);
+  }
+}
+
+function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseId) {
+  const analysis = data.analysis || {};
+  const referral = analysis.expertReferral || {};
+  const generatedAt = data.generatedAt || new Date().toISOString();
+  const stakeholderActions = (analysis.stakeholderActions || []).slice(0, 3).map((item) => ({
+    title: item.actor || "관련 주체",
+    summary: "",
+    duties: (item.actions || []).slice(0, 3),
+    rights: []
+  }));
+  const evidence = (analysis.evidencePlan || []).slice(0, 4).map((item) => ({
+    priority: item.priority || "권고",
+    text: item.item,
+    reason: item.why,
+    how: item.how
+  }));
+
+  return {
+    caseId,
+    source: "ai",
+    title: `${analysis.title || preset.title} 간편 보고서`,
+    subtitle: "상황 파악과 대처 방안 중심",
+    audience: getRoleGuide(userRole).label,
+    generatedAt: formatDateTime(generatedAt),
+    lead: analysis.coreFinding || analysis.situationSummary || "질문 내용을 바탕으로 상황과 대처 방향을 간단히 정리합니다.",
+    disclaimer: analysis.informationNotice || "이 보고서는 법률 자문이나 사건 판단이 아니라 법률정보 정리 초안입니다.",
+    facts: [
+      { label: "원 질문", value: question },
+      { label: "AI 분류", value: analysis.issueType || preset.title },
+      { label: "상황 요약", value: analysis.situationSummary || "추가 확인 필요" },
+      ...(analysis.knownFacts || []).slice(0, 3).map((item, index) => ({ label: `확인된 사실 ${index + 1}`, value: item }))
+    ],
+    issueSummary: [
+      analysis.coreFinding,
+      ...(analysis.keyIssues || []).slice(0, 3).map((item) => `${item.title}: ${item.analysis}`)
+    ].filter(Boolean),
+    immediateActions: (analysis.immediateActions || []).slice(0, 5),
+    stakeholders: stakeholderActions.length ? stakeholderActions : [
+      {
+        title: "학교 담당자",
+        summary: "사실 확인과 학생 보호 조치를 우선 정리합니다.",
+        duties: (analysis.immediateActions || []).slice(0, 3),
+        rights: []
+      }
+    ],
+    evidence,
+    cautions: [
+      ...(analysis.mustNotAssume || []).slice(0, 3).map((item) => `단정 금지: ${item}`),
+      ...(analysis.missingFacts || []).slice(0, 3).map((item) => `추가 확인: ${item}`)
+    ],
+    clarifyingQuestions: (analysis.clarifyingQuestions || []).slice(0, 3),
+    finalAdvice: {
+      level: mapReferralLevel(referral.level),
+      title: referral.level || "내부 확인",
+      summary: referral.reason || "현재 입력 사실을 기준으로 내부 확인과 기록 정리를 우선합니다.",
+      actions: referral.suggestedMessage ? [referral.suggestedMessage] : []
+    },
+    sourceSearchQueries: (analysis.sourceSearchQueries || []).slice(0, 4),
+    answerMode,
+    officialMaterials: getOfficialMaterials(preset, {}, question)
+  };
+}
+
+function mapReferralLevel(level = "") {
+  if (/노무/.test(level)) return "labor";
+  if (/변호|상향|즉시/.test(level)) return "legal";
+  return "internal";
+}
+
+async function loadLiveSources(question, preset, keywords, caseId) {
   const mount = document.querySelector("#liveSourceMount");
   if (!mount) {
+    return;
+  }
+
+  if (caseId !== currentCaseId) {
     return;
   }
 
@@ -1160,16 +1277,24 @@ async function loadLiveSources(question, preset, keywords) {
     }
 
     const data = await response.json();
+    if (caseId !== currentCaseId) {
+      return;
+    }
+    currentLiveSourceData = data;
     mount.innerHTML = renderLiveSourceResults(data);
     updateReportLiveSources(data);
 
     const total = countApiItems(data);
     statusDot.textContent = total > 0 ? "API 결과 반영" : "API 후보 없음";
   } catch (error) {
+    if (caseId !== currentCaseId) {
+      return;
+    }
     statusDot.textContent = "API 확인 실패";
-    updateReportLiveSources({
+    currentLiveSourceData = {
       error: "API 확인 중 오류가 발생했습니다. 현재 보고서는 기본 공식자료 후보를 기준으로 정리되어 있습니다."
-    });
+    };
+    updateReportLiveSources(currentLiveSourceData);
     mount.innerHTML = `
       <h3>근거 자료 확인</h3>
       <p class="api-source-empty">API 확인 중 오류가 발생했습니다. 비밀키 설정과 네트워크 상태를 확인해 주세요.</p>
@@ -2500,78 +2625,72 @@ function renderCaseReport(report) {
 
       ${renderReportComposer(report)}
 
-      ${renderExecutiveSummarySection(report)}
+      <div class="report-section report-executive-section">
+        <h4>1. 상황 요약</h4>
+        <div id="reportExecutiveSummary">
+          ${renderSimpleSituationSummary(report)}
+        </div>
+      </div>
 
       <div class="report-section">
-        <h4>2. 사안 개요</h4>
+        <h4>2. 사안 파악</h4>
         <div id="reportFactProfileContext"></div>
-        <div class="report-facts">
-          ${report.facts.map((item) => `
-            <div>
-              <strong>${escapeHtml(item.label)}</strong>
-              <p>${escapeHtml(item.value)}</p>
-            </div>
-          `).join("")}
-        </div>
+        ${renderSimpleFacts(report)}
       </div>
 
       <div class="report-section">
-        <h4>3. 핵심 쟁점 및 판단 전제</h4>
-        ${renderReportList(report.issueSummary, "", { basis: true, report })}
+        <h4>3. 핵심 판단 포인트</h4>
+        ${renderReportList((report.issueSummary || []).slice(0, 4), "", { basis: true, report })}
       </div>
 
       <div class="report-section">
-        <h4>4. 즉시 조치 체크리스트</h4>
-        ${renderReportList(report.immediateActions, "checklist", { basis: true, report })}
+        <h4>4. 대처 방안</h4>
+        ${renderReportList((report.immediateActions || []).slice(0, 5), "checklist", { basis: true, report })}
       </div>
 
       <div class="report-section">
-        <h4>5. 주체별 조치사항과 권리·의무</h4>
+        <h4>5. 관련 주체별 할 일</h4>
         <div id="reportStakeholderProfileContext"></div>
-        <div class="report-stakeholders">
-          ${report.stakeholders.map((section) => `
-            <article>
-              <h5>${escapeHtml(section.title)}</h5>
-              <p>${escapeHtml(section.summary)}</p>
-              <strong>해야 할 조치·의무</strong>
-              ${renderReportList(section.duties, "", { basis: true, report })}
-              <strong>확인할 권리·요구할 수 있는 사항</strong>
-              ${renderReportList(section.rights, "", { basis: true, report })}
-            </article>
-          `).join("")}
-        </div>
+        ${renderSimpleStakeholders(report)}
       </div>
 
       <div class="report-section">
-        <h4>6. 준비할 증빙자료</h4>
-        ${renderEvidenceItems(report)}
+        <h4>6. 먼저 챙길 자료</h4>
+        ${renderSimpleEvidenceItems(report)}
       </div>
 
-      <div class="report-section">
-        <h4>7. 유의사항 및 정보 제공 안내</h4>
-        <p class="report-disclaimer">${escapeHtml(report.disclaimer)}</p>
-        ${renderReportList(report.cautions)}
-      </div>
+      ${renderSimpleClarifyingQuestions(report)}
 
       ${renderFinalAdvice(report.finalAdvice)}
 
-      <div class="report-section report-source-section">
-        <h4>9. 유사자료 및 원문 근거 확인</h4>
-        <p class="report-section-note">유사사례는 사고유형, 장소, 설비, 작업상황이 맞는 후보를 우선 표시합니다. 법령과 행정자료는 위 쟁점·조치사항의 법적 근거를 원문으로 재확인하기 위한 보조 영역입니다.</p>
-        <div id="reportLiveSources" class="report-live-sources">
-          <p>법제처와 안전보건공단 API 자료를 보고서에 반영하고 있습니다.</p>
-        </div>
-        ${renderReportSimilarHints(report.officialMaterials)}
-        ${renderReportMaterials(report.officialMaterials)}
+      <div class="report-section">
+        <h4>정보 제공 안내</h4>
+        <p class="report-disclaimer">${escapeHtml(report.disclaimer)}</p>
+        ${report.cautions?.length ? renderReportList(report.cautions.slice(0, 4)) : ""}
       </div>
 
+      ${renderEducationOfficeDraft(report)}
+
+      <details class="report-section report-source-section">
+        <summary>필요하면 볼 공식 근거·유사자료</summary>
+        <p class="report-section-note">첫 보고서에는 핵심만 담고, 더 깊은 검토가 필요할 때 원문 후보와 API 확인 자료를 펼쳐 봅니다.</p>
+        <div id="reportLiveSources" class="report-live-sources">
+          <p>법제처와 안전보건공단 API 자료를 확인하고 있습니다.</p>
+        </div>
+        ${report.sourceSearchQueries?.length ? `
+          <div class="search-keywords" aria-label="추천 검색어">
+            ${report.sourceSearchQueries.map((keyword) => `<code>${escapeHtml(keyword)}</code>`).join("")}
+          </div>
+        ` : ""}
+        ${renderReportMaterials((report.officialMaterials || []).slice(0, 3))}
+      </details>
+
       <div class="report-section report-sign-section">
-        <h4>10. 담당자 의견 작성란</h4>
+        <h4>담당자 의견 작성란</h4>
         <div class="report-opinion-grid">
           <div><strong>담임·지도교사 의견</strong><span></span></div>
           <div><strong>취업지도부·업무담당자 의견</strong><span></span></div>
           <div><strong>관리자 검토 의견</strong><span></span></div>
-          <div class="wide"><strong>교육청 보고·전문가 상담·후속 조치 의견</strong><span></span></div>
         </div>
       </div>
 
@@ -2580,14 +2699,123 @@ function renderCaseReport(report) {
   `;
 }
 
+function renderSimpleSituationSummary(report, profileContext = {}) {
+  const metaItems = [
+    profileContext.documentNo ? `문서번호 ${profileContext.documentNo}` : "",
+    profileContext.savedAtText ? `작성시각 ${profileContext.savedAtText}` : "",
+    profileContext.schoolName ? `학교 ${profileContext.schoolName}` : "",
+    profileContext.studentLabel ? `대상 ${profileContext.studentLabel}` : "",
+    profileContext.companyName ? `기관 ${profileContext.companyName}` : ""
+  ].filter(Boolean);
+
+  return `
+    <div class="admin-summary-card">
+      <div>
+        <span>간편 보고서</span>
+        <p>${escapeHtml(report.lead)}</p>
+      </div>
+      ${metaItems.length ? `
+        <div class="admin-summary-meta">
+          ${metaItems.map((item) => `<small>${escapeHtml(item)}</small>`).join("")}
+        </div>
+      ` : ""}
+    </div>
+  `;
+}
+
+function renderSimpleFacts(report) {
+  const facts = (report.facts || []).slice(0, 5);
+  if (!facts.length) {
+    return `<p class="report-section-note">아직 정리된 사실이 없습니다. 질문을 조금 더 구체적으로 입력하면 자동으로 채워집니다.</p>`;
+  }
+
+  return `
+    <div class="report-facts">
+      ${facts.map((item) => `
+        <div>
+          <strong>${escapeHtml(item.label)}</strong>
+          <p>${escapeHtml(item.value)}</p>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderSimpleStakeholders(report) {
+  const stakeholders = (report.stakeholders || []).slice(0, 3);
+  if (!stakeholders.length) {
+    return `<p class="report-section-note">관련 주체별 조치사항은 추가 확인 후 정리합니다.</p>`;
+  }
+
+  return `
+    <div class="report-stakeholders">
+      ${stakeholders.map((section) => `
+        <article>
+          <h5>${escapeHtml(section.title)}</h5>
+          ${section.summary ? `<p>${escapeHtml(section.summary)}</p>` : ""}
+          ${renderReportList([...(section.duties || []), ...(section.rights || [])].slice(0, 4), "", { basis: true, report })}
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderSimpleEvidenceItems(report) {
+  const evidence = (report.evidence || []).slice(0, 5);
+  if (!evidence.length) {
+    return `<p class="report-section-note">현재 단계에서는 상담기록과 관련 문서부터 보관하면 됩니다.</p>`;
+  }
+
+  return `
+    <div class="evidence-items">
+      ${evidence.map((item) => {
+        const title = typeof item === "string" ? item : item.text || item.title || item.item || "";
+        const priority = typeof item === "string" ? "권고" : item.priority || "권고";
+        const details = [item.reason, item.how].filter(Boolean).join(" ");
+        return `
+          <article>
+            <span class="evidence-priority">${escapeHtml(priority)}</span>
+            <h5>${escapeHtml(title)}</h5>
+            ${details ? `<p>${escapeHtml(details)}</p>` : ""}
+          </article>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function renderSimpleClarifyingQuestions(report) {
+  const questions = (report.clarifyingQuestions || []).slice(0, 3);
+  if (!questions.length) {
+    return "";
+  }
+
+  return `
+    <div class="report-section">
+      <h4>더 정확해지려면 확인할 질문</h4>
+      <div class="source-priority-list">
+        ${questions.map((item, index) => `
+          <article>
+            <span>${index + 1}</span>
+            <div>
+              <strong>${escapeHtml(item.question || item)}</strong>
+              ${item.why ? `<p>${escapeHtml(item.why)}</p>` : ""}
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    </div>
+  `;
+}
+
 function renderReportComposer() {
   return `
     <section class="report-composer" aria-label="보고서 작성 정보 입력">
       <div class="report-composer-head">
         <div>
-          <span>보고서 완성 정보</span>
-          <h4>인쇄 전에 필요한 학생·실습 정보를 입력하세요.</h4>
-          <p>모르는 항목은 비워도 됩니다. 연락처와 이름은 학교 내부 보고에 필요한 경우에만 입력하고, 외부 공유 전에는 비식별 처리하세요.</p>
+          <span>간편 보고서 정보</span>
+          <h4>필요한 기본 정보만 보태세요.</h4>
+          <p>모르는 항목은 비워도 됩니다. 추가 자료가 필요한 사안이면 이후 단계에서 따로 확인합니다.</p>
         </div>
       </div>
       <div class="report-profile-form">
@@ -2702,6 +2930,15 @@ function collectReportProfile() {
   });
 }
 
+function restoreReportProfile(profile = []) {
+  for (const item of profile) {
+    const input = document.querySelector(`[data-report-field="${item.name}"]`);
+    if (input) {
+      input.value = item.value || "";
+    }
+  }
+}
+
 function buildReportProfileContext(profile = [], documentNo = "", savedAt = "") {
   const values = Object.fromEntries(profile.map((item) => [item.name, item.value]));
   return {
@@ -2715,7 +2952,7 @@ function buildReportProfileContext(profile = [], documentNo = "", savedAt = "") 
 function applyReportProfileContext(report, profileContext) {
   const executiveMount = document.querySelector("#reportExecutiveSummary");
   if (executiveMount) {
-    executiveMount.innerHTML = renderExecutiveSummaryContent(report, profileContext);
+    executiveMount.innerHTML = renderSimpleSituationSummary(report, profileContext);
   }
 
   const factMount = document.querySelector("#reportFactProfileContext");
