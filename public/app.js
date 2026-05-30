@@ -279,6 +279,18 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   resultState.innerHTML = `
     <div class="query-readout">${escapeHtml(question)}</div>
 
+    <section class="trust-panel" aria-label="검증 기준">
+      <div>
+        <strong>검증 우선</strong>
+        <p>원문, 출처, 확인시각이 있는 정보만 신뢰 후보로 표시합니다.</p>
+      </div>
+      <ul>
+        <li>공식 원문·승인 API 우선</li>
+        <li>현행 여부·시행일 확인</li>
+        <li>출처 불명확 시 확인 필요</li>
+      </ul>
+    </section>
+
     <section class="role-note" aria-label="사용자 관점">
       <strong>${escapeHtml(roleGuide.label)}</strong>
       <p>${escapeHtml(roleGuide.advice)}</p>
@@ -438,10 +450,16 @@ function renderLiveSourceResults(data) {
 
   const results = data.results || {};
   const notices = data.notices || [];
+  const checkedAt = formatDateTime(data.verification?.checkedAt || data.generatedAt);
 
   return `
     <h3>실제 API 확인</h3>
-    <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 원문 링크와 표시 내용을 다시 확인하세요.</p>
+    <div class="api-verification">
+      <span>확인시각 ${escapeHtml(checkedAt)}</span>
+      <span>공식 API 우선</span>
+      <span>원문 없으면 확인 필요</span>
+    </div>
+    <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 원문 링크, 시행일, 등록일을 다시 확인하세요.</p>
     ${renderApiGroup("법제처 법령 검색", results.laws, "질문과 연결된 법령 후보가 아직 없습니다.")}
     ${renderApiGroup("법령해석례 후보", results.interpretations, "관련 법령해석례 후보가 아직 없습니다.")}
     ${renderApiGroup("국내재해사례", results.safetyDisasters, "관련 국내재해사례 후보가 아직 없습니다.")}
@@ -479,14 +497,20 @@ function renderApiGroup(title, items = [], emptyMessage) {
 
 function renderApiCard(item) {
   const url = safeUrl(item.url);
+  const reliability = item.reliability || {};
+  const verifiedAt = formatDateTime(item.verifiedAt);
 
   return `
     <article class="api-source-card">
-      <div class="api-card-type">${escapeHtml(item.type || item.source || "공식자료")}</div>
+      <div class="api-card-flags">
+        <span class="api-card-type">${escapeHtml(item.type || item.source || "공식자료")}</span>
+        <span class="api-reliability ${reliability.needsReview ? "needs-review" : "verified"}">${escapeHtml(reliability.label || "확인 필요")}</span>
+      </div>
       <h5>${escapeHtml(item.title || "제목 없음")}</h5>
       <p class="api-card-meta">
         <span>${escapeHtml(item.source || "공식 출처")}</span>
-        ${item.date ? `<span>${escapeHtml(item.date)}</span>` : ""}
+        ${item.date ? `<span>일자 ${escapeHtml(item.date)}</span>` : "<span>일자 확인 필요</span>"}
+        ${verifiedAt ? `<span>확인 ${escapeHtml(verifiedAt)}</span>` : ""}
       </p>
       ${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ""}
       ${item.summary ? `<p class="api-card-summary">${escapeHtml(item.summary)}</p>` : ""}
@@ -503,6 +527,22 @@ function countApiItems(data) {
 function safeUrl(value) {
   const text = String(value || "");
   return text.startsWith("https://") || text.startsWith("http://") ? text : "";
+}
+
+function formatDateTime(value) {
+  if (!value) {
+    return "";
+  }
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return String(value);
+  }
+
+  return new Intl.DateTimeFormat("ko-KR", {
+    dateStyle: "medium",
+    timeStyle: "short"
+  }).format(date);
 }
 
 function showEmptyMessage(title, message) {

@@ -112,6 +112,7 @@ async function handleSearch(requestUrl) {
     query: question,
     topic,
     generatedAt: new Date().toISOString(),
+    verification: buildVerificationSummary(),
     status: getHealthStatus().keys,
     results: {
       laws: lawResults.items,
@@ -130,6 +131,15 @@ async function handleSearch(requestUrl) {
 
 function getLawOpenApiKey() {
   return env.LAW_OPEN_API_OC || env.LAW_OPEN_API_KEY;
+}
+
+function buildVerificationSummary() {
+  return {
+    mode: "live-source-first",
+    sourceRule: "공식 원문과 승인된 API 결과만 사용합니다.",
+    noSourceRule: "원문 근거가 없으면 단정하지 않고 확인 필요로 표시합니다.",
+    checkedAt: new Date().toISOString()
+  };
 }
 
 function missingKey(name) {
@@ -312,7 +322,9 @@ function normalizeLawItems(data, target, query) {
       summary: getValue(item, ["제개정구분명", "안건번호", "질의요지", "summary"]) || "",
       url: normalizeLawUrl(detailLink, query, target),
       query,
-      type: getLawTargetLabel(target)
+      type: getLawTargetLabel(target),
+      verifiedAt: new Date().toISOString(),
+      reliability: getReliabilityStatus(detailLink, date)
     };
   }).filter((item) => item.title);
 }
@@ -352,9 +364,38 @@ function normalizePublicDataItems(data, type, source) {
       date,
       summary: String(summary).slice(0, 180),
       url: normalizeUrl(url),
-      type
+      type,
+      verifiedAt: new Date().toISOString(),
+      reliability: getReliabilityStatus(url, date)
     };
   }).filter((item) => item.title);
+}
+
+function getReliabilityStatus(url, date) {
+  const hasSourceUrl = Boolean(url);
+  const hasDate = Boolean(date);
+
+  if (hasSourceUrl && hasDate) {
+    return {
+      level: "source-dated",
+      label: "원문·일자 확인",
+      needsReview: false
+    };
+  }
+
+  if (hasSourceUrl) {
+    return {
+      level: "source-only",
+      label: "원문 확인 필요",
+      needsReview: true
+    };
+  }
+
+  return {
+    level: "needs-review",
+    label: "출처 확인 필요",
+    needsReview: true
+  };
 }
 
 function getValue(object, keys) {
