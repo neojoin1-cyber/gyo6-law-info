@@ -61,6 +61,10 @@ export default {
             firebaseProjectId: cleanText(env.FIREBASE_PROJECT_ID || ""),
             memberDb: Boolean(env.MEMBER_DB)
           },
+          sources: {
+            koreanLawMcp: Boolean(cleanText(env.KOREAN_LAW_MCP_BASE_URL || "")),
+            officialSourcePrefetch: String(env.OFFICIAL_SOURCE_PREFETCH || "true").toLowerCase() !== "false"
+          },
           costControl: getCostControlSettings(env)
         }, 200, corsHeaders);
       }

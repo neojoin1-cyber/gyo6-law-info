@@ -36,6 +36,7 @@ function getHealthStatus() {
     ok: true,
     keys: {
       lawOpenApi: hasUsableValue(getLawOpenApiKey()),
+      koreanLawMcp: hasUsableValue(getKoreanLawMcpBaseUrl()),
       publicData: hasUsableValue(activeEnv.PUBLIC_DATA_API_KEY),
       openAi: hasUsableValue(activeEnv.OPENAI_API_KEY),
       scourt: hasUsableValue(activeEnv.SCOUT_API_KEY),
@@ -57,11 +58,13 @@ async function handleSearch(requestUrl) {
   const lawQueries = laws.length ? laws.slice(0, 4) : [question];
   const safetyContext = buildSafetyContext(question, keywords, topic);
   const lawOpenApiKey = getLawOpenApiKey();
+  const koreanLawMcpBaseUrl = getKoreanLawMcpBaseUrl();
   const publicDataKey = activeEnv.PUBLIC_DATA_API_KEY;
+  const hasKoreanLawMcp = hasUsableValue(koreanLawMcpBaseUrl);
 
   const [lawResults, interpretationResults, disasterResults, materialResults] = await Promise.all([
-    hasUsableValue(lawOpenApiKey) ? searchLaws(lawOpenApiKey, lawQueries) : missingKey("LAW_OPEN_API_OC"),
-    hasUsableValue(lawOpenApiKey) ? searchLawInterpretations(lawOpenApiKey, question) : missingKey("LAW_OPEN_API_OC"),
+    searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp }),
+    searchInterpretationsWithPreferredSource({ lawOpenApiKey, question, hasKoreanLawMcp }),
     hasUsableValue(publicDataKey) ? searchDisasterCases(publicDataKey, safetyContext) : missingKey("PUBLIC_DATA_API_KEY"),
     hasUsableValue(publicDataKey) ? searchSafetyMaterials(publicDataKey) : missingKey("PUBLIC_DATA_API_KEY")
   ]);
@@ -445,6 +448,14 @@ function getLawOpenApiKey() {
   return activeEnv.LAW_OPEN_API_OC || activeEnv.LAW_OPEN_API_KEY;
 }
 
+function getKoreanLawMcpBaseUrl() {
+  return cleanUrl(activeEnv.KOREAN_LAW_MCP_BASE_URL || activeEnv.KOREAN_LAW_MCP_URL || "");
+}
+
+function isMcpResearchEnabled() {
+  return String(activeEnv.KOREAN_LAW_MCP_RESEARCH_ENABLED || "false").toLowerCase() === "true";
+}
+
 function buildVerificationSummary() {
   return {
     mode: "live-source-first",
@@ -501,6 +512,180 @@ async function searchLawInterpretations(openApiKey, question) {
     items: uniqueBy([...labor.items, ...general.items], "url").slice(0, 6),
     notices: [...labor.notices, ...general.notices]
   };
+}
+
+async function searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp }) {
+  if (hasKoreanLawMcp) {
+    const mcpResults = await searchLawsViaMcp(lawQueries);
+    if (mcpResults.items.length || !hasUsableValue(lawOpenApiKey)) {
+      return mcpResults;
+    }
+
+    const fallbackResults = await searchLaws(lawOpenApiKey, lawQueries);
+    return {
+      items: fallbackResults.items,
+      notices: [
+        ...mcpResults.notices,
+        "Korean Law MCP 결과가 비어 있어 법제처 직접 API/원문 링크로 fallback 했습니다.",
+        ...fallbackResults.notices
+      ]
+    };
+  }
+
+  return hasUsableValue(lawOpenApiKey)
+    ? searchLaws(lawOpenApiKey, lawQueries)
+    : missingKey("LAW_OPEN_API_OC 또는 KOREAN_LAW_MCP_BASE_URL");
+}
+
+async function searchInterpretationsWithPreferredSource({ lawOpenApiKey, question, hasKoreanLawMcp }) {
+  if (hasKoreanLawMcp && isMcpResearchEnabled()) {
+    const mcpResults = await searchLegalResearchViaMcp(question);
+    if (mcpResults.items.length || !hasUsableValue(lawOpenApiKey)) {
+      return mcpResults;
+    }
+
+    const fallbackResults = await searchLawInterpretations(lawOpenApiKey, question);
+    return {
+      items: fallbackResults.items,
+      notices: [
+        ...mcpResults.notices,
+        "Korean Law MCP 종합 리서치 결과가 비어 있어 법제처 해석례 직접 API로 fallback 했습니다.",
+        ...fallbackResults.notices
+      ]
+    };
+  }
+
+  return hasUsableValue(lawOpenApiKey)
+    ? searchLawInterpretations(lawOpenApiKey, question)
+    : missingKey("LAW_OPEN_API_OC");
+}
+
+async function searchLawsViaMcp(queries) {
+  const batches = await Promise.all(queries.map((query) => callKoreanLawMcpTool("search_law", {
+    query,
+    display: 5
+  })));
+  const items = [];
+  const notices = [];
+
+  for (const batch of batches) {
+    notices.push(...batch.notices);
+    items.push(...batch.items);
+  }
+
+  return {
+    items: uniqueBy(items, "url").slice(0, 8),
+    notices
+  };
+}
+
+async function searchLegalResearchViaMcp(question) {
+  const result = await callKoreanLawMcpTool("chain_full_research", {
+    query: question,
+    scenario: "action_plan"
+  });
+
+  return {
+    items: result.items.map((item) => ({
+      ...item,
+      type: "법령·판례·해석 종합",
+      subtitle: "Korean Law MCP 종합 리서치"
+    })),
+    notices: result.notices
+  };
+}
+
+async function callKoreanLawMcpTool(name, args) {
+  const baseUrl = getKoreanLawMcpBaseUrl();
+  if (!hasUsableValue(baseUrl)) {
+    return {
+      items: [],
+      notices: ["KOREAN_LAW_MCP_BASE_URL 값이 없어 Korean Law MCP 검색을 건너뛰었습니다."]
+    };
+  }
+
+  const headers = {
+    accept: "application/json",
+    "content-type": "application/json"
+  };
+  const token = cleanText(activeEnv.KOREAN_LAW_MCP_TOKEN || "");
+  if (token) {
+    headers["x-gyo6-mcp-token"] = token;
+  }
+
+  try {
+    const response = await fetch(`${baseUrl.replace(/\/+$/, "")}/mcp`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        id: `gyo6-${Date.now()}`,
+        method: "tools/call",
+        params: {
+          name,
+          arguments: args
+        }
+      }),
+      signal: AbortSignal.timeout(readNumber(activeEnv.KOREAN_LAW_MCP_TIMEOUT_MS) || 12000)
+    });
+
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok || data.error) {
+      throw new Error(data?.error?.message || `HTTP ${response.status}`);
+    }
+
+    const text = extractMcpText(data);
+    if (!text) {
+      throw new Error("MCP 응답이 비어 있습니다.");
+    }
+
+    const query = cleanText(args.query || "");
+    return {
+      items: [buildKoreanLawMcpItem({ tool: name, query, text })],
+      notices: [`Korean Law MCP ${name} 결과를 공식자료 후보로 반영했습니다.`]
+    };
+  } catch (error) {
+    return {
+      items: [],
+      notices: [`Korean Law MCP ${name} 호출 실패: ${error.message}`]
+    };
+  }
+}
+
+function extractMcpText(data) {
+  const content = data?.result?.content || data?.content || [];
+  return asArray(content)
+    .map((item) => typeof item?.text === "string" ? item.text : "")
+    .filter(Boolean)
+    .join("\n")
+    .trim();
+}
+
+function buildKoreanLawMcpItem({ tool, query, text }) {
+  return {
+    title: query || "Korean Law MCP 검색 결과",
+    subtitle: tool === "search_law" ? "Korean Law MCP 법령 검색" : "Korean Law MCP 종합 리서치",
+    source: "Korean Law MCP / 국가법령정보센터",
+    date: "",
+    summary: compactMcpText(text),
+    url: `https://www.law.go.kr/LSW/lsSc.do?query=${encodeURIComponent(query || "")}`,
+    query,
+    type: tool === "search_law" ? "법령 검색" : "법령·판례·해석 종합",
+    verifiedAt: new Date().toISOString(),
+    reliability: {
+      level: "mcp-source",
+      label: "MCP 공식자료 조회",
+      needsReview: false
+    }
+  };
+}
+
+function compactMcpText(text) {
+  return String(text || "")
+    .replace(/\[[A-Z_]+\]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 500);
 }
 
 async function callLawSearch(openApiKey, params) {
@@ -1121,6 +1306,19 @@ function hasUsableValue(value) {
 
 function cleanText(value) {
   return String(value || "").replace(/\s+/g, " ").trim().slice(0, 300);
+}
+
+function cleanUrl(value) {
+  const text = String(value || "").trim();
+  if (!text) {
+    return "";
+  }
+
+  try {
+    return new URL(text).toString().replace(/\/+$/, "");
+  } catch {
+    return "";
+  }
 }
 
 function asArray(value) {

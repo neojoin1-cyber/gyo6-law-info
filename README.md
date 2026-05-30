@@ -126,6 +126,8 @@ Worker는 `/api/analyze` 호출 전에 내부 공식자료 검색을 먼저 실�
 
 자세한 검토 내용은 [docs/MCP_INTEGRATION_REVIEW.md](docs/MCP_INTEGRATION_REVIEW.md)를 참고합니다.
 
+자체 호스팅 Korean Law MCP 또는 MCP 게이트웨이를 연결할 때는 `KOREAN_LAW_MCP_BASE_URL`과 `KOREAN_LAW_MCP_TOKEN`을 Worker 환경변수/secret으로 설정합니다. 무인증 공개 MCP 서버는 사용하지 않습니다. 운영안은 [docs/KOREAN_LAW_MCP_SELF_HOSTING.md](docs/KOREAN_LAW_MCP_SELF_HOSTING.md)를 따릅니다.
+
 ## 보안 메모
 
 API 키와 Firebase 서버 비밀값은 `.env` 계열 파일에 두고 Git에 커밋하지 않습니다. 공개 프론트엔드에 비밀 키를 직접 넣지 않습니다. 배포 환경의 Firebase 웹 앱 공개 설정은 Firebase Hosting의 `/__/firebase/init.json`을 통해 자동 로딩합니다.
@@ -136,6 +138,8 @@ API 키와 Firebase 서버 비밀값은 `.env` 계열 파일에 두고 Git에 �
 LAW_OPEN_API_OC=
 LAW_OPEN_API_REFERER=https://gyo6.kr/
 PUBLIC_DATA_API_KEY=
+KOREAN_LAW_MCP_BASE_URL=
+KOREAN_LAW_MCP_TOKEN=
 OPENAI_API_KEY=
 ```
 
