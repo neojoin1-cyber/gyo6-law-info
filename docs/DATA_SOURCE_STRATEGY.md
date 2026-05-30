@@ -91,6 +91,7 @@
 - 고용노동부 법령해석 목록 조회: `target=moelCgmExpc`
 
 법제처 인증값은 `.env.local`의 `LAW_OPEN_API_OC`를 기본으로 사용하며, 기존 입력 호환을 위해 `LAW_OPEN_API_KEY`도 함께 인식한다.
+법제처 사용자 검증은 신청 도메인 또는 서버 IP와 맞아야 하므로, 서버 호출 시 `LAW_OPEN_API_REFERER` 값을 `Referer`/`Origin` 헤더로 함께 보낸다. 현재 등록 기준 도메인은 `https://gyo6.kr/`이다.
 
 ### 3단계: 판례·행정자료 확장
 

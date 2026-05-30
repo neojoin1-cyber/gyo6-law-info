@@ -204,7 +204,9 @@ async function callLawSearch(openApiKey, params) {
   }
 
   try {
-    const data = await fetchJson(url);
+    const data = await fetchJson(url, {
+      headers: getLawOpenApiHeaders()
+    });
     if (data?.result || data?.msg) {
       throw new Error([data.result, data.msg].filter(Boolean).join(" "));
     }
@@ -218,6 +220,19 @@ async function callLawSearch(openApiKey, params) {
       notices: [`법제처 ${params.target} 검색 실패: ${error.message}`]
     };
   }
+}
+
+function getLawOpenApiHeaders() {
+  const referer = normalizeReferer(env.LAW_OPEN_API_REFERER || env.PUBLIC_SITE_URL || "https://gyo6.kr/");
+
+  if (!referer) {
+    return {};
+  }
+
+  return {
+    Referer: referer,
+    Origin: new URL(referer).origin
+  };
 }
 
 async function searchDisasterCases(publicDataKey, keyword) {
@@ -266,13 +281,16 @@ async function searchSafetyMaterials(publicDataKey) {
   }
 }
 
-async function fetchJson(url) {
+async function fetchJson(url, options = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 9000);
 
   try {
     const response = await fetch(url, {
-      headers: { accept: "application/json" },
+      headers: {
+        accept: "application/json",
+        ...(options.headers || {})
+      },
       signal: controller.signal
     });
 
@@ -444,6 +462,23 @@ function normalizeUrl(value) {
   }
 
   return text;
+}
+
+function normalizeReferer(value) {
+  const text = String(value || "").trim();
+  if (!text) {
+    return "";
+  }
+
+  try {
+    const url = new URL(text.startsWith("http") ? text : `https://${text}`);
+    if (!["http:", "https:"].includes(url.protocol)) {
+      return "";
+    }
+    return url.toString();
+  } catch {
+    return "";
+  }
 }
 
 function getLawTargetLabel(target) {

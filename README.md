@@ -28,6 +28,7 @@
 - 로컬 API 프록시 서버 추가
 - 법제처 Open API, 안전보건공단 국내재해사례, 안전보건자료 링크 API 후보 연결
 - API 키는 `.env.local`에서만 읽고 브라우저에는 노출하지 않음
+- 법제처 Open API는 신청 도메인 검증을 통과하도록 `LAW_OPEN_API_REFERER` 헤더를 서버에서 함께 전송
 - GitHub 원격 저장소 `neojoin1-cyber/gyo6-law-info` 연결 및 `main` push 완료
 
 ## 로컬 확인
@@ -70,6 +71,7 @@ API 키와 Firebase 설정값은 `.env` 계열 파일에 두고 Git에 커밋하
 
 ```env
 LAW_OPEN_API_OC=
+LAW_OPEN_API_REFERER=https://gyo6.kr/
 PUBLIC_DATA_API_KEY=
 OPENAI_API_KEY=
 ```
