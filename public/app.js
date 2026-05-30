@@ -1501,10 +1501,10 @@ function buildSixWRows(report, profileContext = {}) {
 
   return [
     { label: "누가", value: studentInfo || `${report.audience || "관련 사용자"} · 학생·학교·보호자·실습기업 등 관련 주체 확인 필요` },
-    { label: "언제", value: periodInfo || incidentDatePlace || "사고·문제 발생 일시와 실습기간 추가 확인 필요" },
-    { label: "어디서", value: placeInfo || "실습 장소, 학교, 기업, 민원 발생 장소 추가 확인 필요" },
+    { label: "언제", value: periodInfo || incidentDatePlace || "문제 발생 일시, 반복 기간, 실습기간 추가 확인 필요" },
+    { label: "어디서", value: placeInfo || "실습 장소, 학교, 기업 내 관련 장소 추가 확인 필요" },
     { label: "무엇을", value: baseQuestion || "사용자가 입력한 사안 내용 확인 필요" },
-    { label: "어떻게", value: firstResponse || "현재 조치, 보호자 통보, 치료, 보고 여부 추가 확인 필요" },
+    { label: "어떻게", value: firstResponse || "현재 조치, 학생 상담, 기업 확인, 보호자 안내 여부 추가 확인 필요" },
     { label: "왜 중요한가", value: workOrder || report.issueSummary?.[1] || "책임 판단 전 사실관계와 공식 원문 확인이 필요합니다." }
   ];
 }
@@ -1553,10 +1553,33 @@ function isLikelyFieldTrainingScopeIssue(report, profileContext = {}) {
     && !/골절|부상|다침|다쳤|상해|중상|치료|병원|119|응급|입원|수술/.test(text);
 }
 
-function shouldRenderEducationOfficeDraft(report, profileContext = {}) {
+function getReportDisposition(report, profileContext = {}) {
   const text = getReportSearchText(report, profileContext).replace(/\s+/g, "");
-  return isLikelyFieldTrainingAccident(report, profileContext)
-    || /교육청보고|중대재해|사망|중상|골절|입원|수술|장해|민원|언론|분쟁/.test(text);
+  const explicitEducationReport = /교육청보고|교육청에보고|교육청보고필요|공문보고/.test(text);
+  const seriousAccident = isLikelyFieldTrainingAccident(report, profileContext)
+    || /중대재해|사망|중상|골절|입원|수술|장해|119|응급/.test(text);
+
+  if (isLikelyFieldTrainingScopeIssue(report, profileContext)) {
+    if (/보복|불이익발생|불이익을받|불이익이발생|실제불이익|모욕|협박|따돌림|위험작업|장기간반복|시정거부|개선거부/.test(text) || explicitEducationReport) {
+      return "education-review";
+    }
+
+    return "internal";
+  }
+
+  if (seriousAccident || explicitEducationReport) {
+    return "education-report";
+  }
+
+  if (/소송|고소|고발|형사|손해배상|언론/.test(text)) {
+    return "specialist";
+  }
+
+  return "internal";
+}
+
+function shouldRenderEducationOfficeDraft(report, profileContext = {}) {
+  return getReportDisposition(report, profileContext) === "education-report";
 }
 
 function renderEducationOfficeDraft(report, profileContext = {}) {
