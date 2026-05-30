@@ -990,11 +990,11 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
     </section>
   `;
 
-  loadAiAnalysis(question, displayPreset, userRole, answerMode, caseId);
+  loadAiAnalysis(question, displayPreset, keywords, userRole, answerMode, caseId);
   loadLiveSources(question, displayPreset, keywords, caseId);
 }
 
-async function loadAiAnalysis(question, preset, userRole, answerMode, caseId) {
+async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, caseId) {
   const mount = document.querySelector("#aiAnalysisMount");
   if (!mount) {
     return;
@@ -1041,6 +1041,8 @@ async function loadAiAnalysis(question, preset, userRole, answerMode, caseId) {
         caseId,
         question,
         topic: preset.type,
+        laws: preset.laws,
+        keywords,
         role: userRole,
         mode: answerMode
       })

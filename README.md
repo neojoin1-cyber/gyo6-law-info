@@ -62,10 +62,11 @@ npm run check
 1. Firebase 콘솔에서 Email/Password 로그인을 활성화하고 실제 회원가입 흐름을 검증
 2. 총괄관리자 계정 로그인 후 회원 승인·권한 회수 UI 검증
 3. 검증 완료 후 `AUTH_REQUIRED=true`로 전환해 법률정보 AI 접근 제한
-4. 법제처 API가 Cloudflare Worker에서 `HTTP 525`를 반환하는 연결 문제의 별도 중계 방안 검토
-5. 승인 대기 중인 사법정보공유포털·국회법률도서관 API 연결
-6. 채용정보·전자책 서재 권한 등급과 메뉴 연결
-7. 개인 홈페이지 카드에서 이 서비스로 링크 연결
+4. Korean Law MCP의 인용 검증·캐시 구조를 참고해 공식자료 검증 후처리 강화
+5. 법제처 API가 Cloudflare Worker에서 `HTTP 525`를 반환하는 연결 문제의 별도 중계 방안 검토
+6. 승인 대기 중인 사법정보공유포털·국회법률도서관 API 연결
+7. 채용정보·전자책 서재 권한 등급과 메뉴 연결
+8. 개인 홈페이지 카드에서 이 서비스로 링크 연결
 
 ## Cloudflare Workers AI 분석 API
 
@@ -118,6 +119,12 @@ Cloudflare Worker는 `/api/analyze`를 제공하며, AI가 먼저 다음 항목�
 - 전문가 상담 상향 여부
 
 기존 규칙형 화면은 AI API 실패 시 보이는 보조 안전장치로 유지합니다.
+
+### 공식자료 우선 분석
+
+Worker는 `/api/analyze` 호출 전에 내부 공식자료 검색을 먼저 실행하고, 압축된 근거 후보를 AI 입력에 함께 전달합니다. 이 구조는 공개 Korean Law MCP의 "도구 기반 법령 확인" 접근을 참고하되, 학생·학교·기업 관련 민감한 질문을 제3자 서버로 보내지 않도록 자체 Worker 안에서 처리합니다.
+
+자세한 검토 내용은 [docs/MCP_INTEGRATION_REVIEW.md](docs/MCP_INTEGRATION_REVIEW.md)를 참고합니다.
 
 ## 보안 메모
 

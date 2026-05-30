@@ -184,6 +184,8 @@ async function handleAnalyze(payload, env, authContext = null) {
   const role = cleanText(payload.role || "auto");
   const mode = cleanText(payload.mode || "intake");
   const caseId = cleanText(payload.caseId || "");
+  const laws = parsePayloadList(payload.laws);
+  const keywords = parsePayloadList(payload.keywords);
 
   if (!question) {
     return { error: "질문이 비어 있습니다." };
@@ -209,6 +211,12 @@ async function handleAnalyze(payload, env, authContext = null) {
   const fallbackModel = cleanText(env.OPENAI_FALLBACK_MODEL || "gpt-4.1");
   const models = [...new Set([primaryModel, fallbackModel].filter(Boolean))];
   const errors = [];
+  const officialSources = await loadOfficialSourceContext({
+    question,
+    topic,
+    laws,
+    keywords
+  }, env);
 
   for (const model of models) {
     try {
@@ -217,7 +225,8 @@ async function handleAnalyze(payload, env, authContext = null) {
         question,
         topic,
         role,
-        mode
+        mode,
+        officialSources
       }, env);
 
       return {
@@ -229,6 +238,7 @@ async function handleAnalyze(payload, env, authContext = null) {
         analysis: aiResult.analysis,
         usage: aiResult.usage,
         billing: aiResult.billing,
+        sourceGrounding: summarizeSourceGrounding(officialSources),
         member: access.member ? sanitizeMember(access.member) : null,
         costControl: getCostControlSettings(env)
       };
@@ -269,7 +279,8 @@ async function callOpenAiLegalAnalysis(openAiKey, payload, env = {}) {
                 topic: payload.topic,
                 role: payload.role,
                 mode: payload.mode,
-                question: payload.question
+                question: payload.question,
+                officialSources: payload.officialSources || null
               })
             }
           ]
@@ -315,6 +326,94 @@ async function callOpenAiLegalAnalysis(openAiKey, payload, env = {}) {
   }
 }
 
+async function loadOfficialSourceContext(payload, env) {
+  if (String(env.OFFICIAL_SOURCE_PREFETCH || "true").toLowerCase() === "false") {
+    return null;
+  }
+
+  try {
+    const sourceApi = createOfficialSourceApi(env);
+    const url = new URL("https://gyo6.internal/api/search");
+    url.searchParams.set("q", payload.question);
+    url.searchParams.set("topic", payload.topic || "general");
+    if (payload.laws?.length) {
+      url.searchParams.set("laws", payload.laws.slice(0, 5).join("|"));
+    }
+    if (payload.keywords?.length) {
+      url.searchParams.set("keywords", payload.keywords.slice(0, 8).join("|"));
+    }
+
+    return compactOfficialSourceContext(await sourceApi.handleSearch(url));
+  } catch (error) {
+    return {
+      ok: false,
+      checkedAt: new Date().toISOString(),
+      notices: [`공식자료 사전 확인 실패: ${error.message}`],
+      results: {}
+    };
+  }
+}
+
+function compactOfficialSourceContext(data = {}) {
+  const results = data.results || {};
+  return {
+    ok: !data.error,
+    checkedAt: data.verification?.checkedAt || data.generatedAt || new Date().toISOString(),
+    status: data.status || {},
+    notices: asArray(data.notices).slice(0, 6),
+    results: {
+      laws: compactSourceItems(results.laws, 4),
+      interpretations: compactSourceItems(results.interpretations, 3),
+      safetyDisasters: compactSourceItems(results.safetyDisasters, 3),
+      safetyMaterials: compactSourceItems(results.safetyMaterials, 3)
+    }
+  };
+}
+
+function compactSourceItems(items, limit) {
+  return asArray(items).slice(0, limit).map((item) => ({
+    title: cleanText(item.title || ""),
+    type: cleanText(item.type || ""),
+    source: cleanText(item.source || ""),
+    date: cleanText(item.date || ""),
+    summary: truncateText(cleanText(item.summary || ""), 220),
+    url: cleanText(item.url || ""),
+    reliability: cleanText(item.reliability?.label || ""),
+    needsReview: Boolean(item.reliability?.needsReview)
+  })).filter((item) => item.title || item.url);
+}
+
+function summarizeSourceGrounding(sourceContext) {
+  if (!sourceContext) {
+    return {
+      enabled: false,
+      checkedAt: "",
+      itemCount: 0,
+      notices: []
+    };
+  }
+
+  const resultGroups = sourceContext.results || {};
+  const itemCount = Object.values(resultGroups).reduce((sum, items) => sum + asArray(items).length, 0);
+  return {
+    enabled: true,
+    checkedAt: sourceContext.checkedAt || "",
+    itemCount,
+    notices: asArray(sourceContext.notices).slice(0, 4)
+  };
+}
+
+function parsePayloadList(value) {
+  if (Array.isArray(value)) {
+    return value.map((item) => cleanText(item)).filter(Boolean);
+  }
+
+  return String(value || "")
+    .split(/[|,]/)
+    .map((item) => cleanText(item))
+    .filter(Boolean);
+}
+
 function getLegalAnalysisInstructions() {
   return [
     "당신은 한국 특성화고·직업계고 현장실습, 취업지도, 학교 민원 사안을 다루는 법률정보 분석 도우미입니다.",
@@ -323,6 +422,8 @@ function getLegalAnalysisInstructions() {
     "질문에 '청소'만 있으면 '재료 운반'을 추가하지 마세요. 질문에 '재료'가 없으면 재료라는 말을 쓰지 마세요.",
     "질문에 부상, 진단서, 사고, 교육청 보고 요청이 없으면 그런 절차를 기본 결론으로 만들지 마세요.",
     "먼저 사용자가 실제로 말한 사실과 아직 모르는 사실을 분리하세요.",
+    "officialSources가 제공되면 그 안의 공식자료 후보와 확인시각을 우선 반영하세요. 단, '직접 확인 필요' 또는 API 실패로 표시된 자료는 실존 조문으로 단정하지 말고 원문 확인 후보로만 다루세요.",
+    "officialSources에 없는 조문·판례·해석례를 새로 만들어 인용하지 마세요. 필요한 경우 sourceSearchQueries에 추가 검색어로만 제안하세요.",
     "1차 결과는 긴 보고서가 아니라 상황 파악과 대처 방안 중심의 간편 보고서 초안으로 쓰일 예정입니다. 한 번에 모든 것을 처리하려 하지 말고 우선순위를 좁히세요.",
     "추가 질문은 미리 정한 문항을 나열하지 말고, 이 사안 판단에 꼭 필요한 1~3개만 생성하세요. 모르거나 민감하면 비워도 되는 질문으로 작성하세요.",
     "증빙자료는 필수 1~2개와 권고 1~2개 위주로 제한하세요. 실제 법적 필수 자료가 불명확하면 필수라고 과장하지 마세요.",
@@ -1318,6 +1419,18 @@ function roundMoney(value, decimals = 6) {
 
 function cleanText(value) {
   return String(value || "").trim();
+}
+
+function truncateText(value, maxLength) {
+  const text = cleanText(value);
+  return text.length > maxLength ? `${text.slice(0, maxLength).trim()}...` : text;
+}
+
+function asArray(value) {
+  if (Array.isArray(value)) {
+    return value;
+  }
+  return value === undefined || value === null ? [] : [value];
 }
 
 function isRetryableOpenAiError(error) {
