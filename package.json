@@ -4,6 +4,8 @@
   "private": true,
   "description": "AI legal information helper MVP for finding Korean laws and original sources.",
   "scripts": {
-    "check": "node --check public/app.js"
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check public/app.js && node --check server.mjs"
   }
 }

@@ -2,6 +2,7 @@ node_modules/
 .firebase/
 .env
 .env.*
+!.env.example
 dist/
 build/
 *.log

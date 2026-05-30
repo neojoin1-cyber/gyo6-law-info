@@ -274,7 +274,7 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const officialMaterials = getOfficialMaterials(preset);
 
   resultTitle.textContent = "요약 초안";
-  statusDot.textContent = "원문 확인 필요";
+  statusDot.textContent = "API 확인중";
   resultState.className = "summary-box";
   resultState.innerHTML = `
     <div class="query-readout">${escapeHtml(question)}</div>
@@ -331,6 +331,11 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
       </div>
     </section>
 
+    <section class="result-block api-live" id="liveSourceMount" aria-live="polite">
+      <h3>실제 API 확인</h3>
+      <p class="api-source-empty">법제처와 안전보건공단 자료를 확인하고 있습니다.</p>
+    </section>
+
     <section class="result-block">
       <h3>출처 확인 순서</h3>
       <div class="source-priority-list">
@@ -374,6 +379,130 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
       <p>이 결과는 MVP 화면의 검색 준비 예시입니다. 실제 판단이나 조치는 원문, 학교·교육청 공식 안내, 전문가 상담을 통해 확인하세요.</p>
     </section>
   `;
+
+  loadLiveSources(question, preset, keywords);
+}
+
+async function loadLiveSources(question, preset, keywords) {
+  const mount = document.querySelector("#liveSourceMount");
+  if (!mount) {
+    return;
+  }
+
+  if (window.location.protocol === "file:") {
+    statusDot.textContent = "로컬 서버 필요";
+    mount.innerHTML = `
+      <h3>실제 API 확인</h3>
+      <p class="api-source-empty"><code>npm run dev</code>로 실행한 뒤 같은 질문을 검색하면 실제 API 후보를 확인할 수 있습니다.</p>
+    `;
+    return;
+  }
+
+  try {
+    const params = new URLSearchParams({
+      q: question,
+      topic: preset.type,
+      laws: preset.laws.join("|"),
+      keywords: keywords.join("|")
+    });
+    const response = await fetch(`/api/search?${params.toString()}`, {
+      headers: { accept: "application/json" }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    mount.innerHTML = renderLiveSourceResults(data);
+
+    const total = countApiItems(data);
+    statusDot.textContent = total > 0 ? "API 결과 반영" : "API 후보 없음";
+  } catch (error) {
+    statusDot.textContent = "API 확인 실패";
+    mount.innerHTML = `
+      <h3>실제 API 확인</h3>
+      <p class="api-source-empty">API 확인 중 오류가 발생했습니다. 비밀키 설정과 네트워크 상태를 확인해 주세요.</p>
+      <p class="api-error-text">${escapeHtml(error.message)}</p>
+    `;
+  }
+}
+
+function renderLiveSourceResults(data) {
+  if (data.error) {
+    return `
+      <h3>실제 API 확인</h3>
+      <p class="api-source-empty">${escapeHtml(data.error)}</p>
+    `;
+  }
+
+  const results = data.results || {};
+  const notices = data.notices || [];
+
+  return `
+    <h3>실제 API 확인</h3>
+    <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 원문 링크와 표시 내용을 다시 확인하세요.</p>
+    ${renderApiGroup("법제처 법령 검색", results.laws, "질문과 연결된 법령 후보가 아직 없습니다.")}
+    ${renderApiGroup("법령해석례 후보", results.interpretations, "관련 법령해석례 후보가 아직 없습니다.")}
+    ${renderApiGroup("국내재해사례", results.safetyDisasters, "관련 국내재해사례 후보가 아직 없습니다.")}
+    ${renderApiGroup("안전보건자료", results.safetyMaterials, "안전보건자료 후보가 아직 없습니다.")}
+    ${notices.length ? `
+      <div class="api-notices">
+        <strong>연결 메모</strong>
+        <ul>
+          ${notices.map((notice) => `<li>${escapeHtml(notice)}</li>`).join("")}
+        </ul>
+      </div>
+    ` : ""}
+  `;
+}
+
+function renderApiGroup(title, items = [], emptyMessage) {
+  if (!items.length) {
+    return `
+      <section class="api-source-group">
+        <h4>${escapeHtml(title)}</h4>
+        <p class="api-source-empty">${escapeHtml(emptyMessage)}</p>
+      </section>
+    `;
+  }
+
+  return `
+    <section class="api-source-group">
+      <h4>${escapeHtml(title)}</h4>
+      <div class="api-source-grid">
+        ${items.slice(0, 6).map((item) => renderApiCard(item)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderApiCard(item) {
+  const url = safeUrl(item.url);
+
+  return `
+    <article class="api-source-card">
+      <div class="api-card-type">${escapeHtml(item.type || item.source || "공식자료")}</div>
+      <h5>${escapeHtml(item.title || "제목 없음")}</h5>
+      <p class="api-card-meta">
+        <span>${escapeHtml(item.source || "공식 출처")}</span>
+        ${item.date ? `<span>${escapeHtml(item.date)}</span>` : ""}
+      </p>
+      ${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ""}
+      ${item.summary ? `<p class="api-card-summary">${escapeHtml(item.summary)}</p>` : ""}
+      ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
+    </article>
+  `;
+}
+
+function countApiItems(data) {
+  const results = data.results || {};
+  return Object.values(results).reduce((sum, items) => sum + (Array.isArray(items) ? items.length : 0), 0);
+}
+
+function safeUrl(value) {
+  const text = String(value || "");
+  return text.startsWith("https://") || text.startsWith("http://") ? text : "";
 }
 
 function showEmptyMessage(title, message) {
@@ -590,7 +719,7 @@ function getSourceLinks(encodedQuestion, preset, scopes) {
 }
 
 function escapeHtml(value) {
-  return value
+  return String(value ?? "")
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")

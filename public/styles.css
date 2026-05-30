@@ -927,6 +927,129 @@ select:focus {
   padding-left: 2px;
 }
 
+.api-live {
+  border-color: #c7ddea;
+  background: #f8fbfd;
+}
+
+.api-live-summary,
+.api-source-empty,
+.api-error-text {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.api-error-text {
+  color: #9d3321;
+}
+
+.api-source-group {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.api-source-group h4 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.api-source-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.api-source-card {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.api-card-type {
+  width: fit-content;
+  max-width: 100%;
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #edf7f6;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.api-source-card h5 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.api-source-card p {
+  margin: 0;
+  color: #40556a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.api-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.api-card-meta span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.api-card-summary {
+  padding-top: 6px;
+  border-top: 1px solid #eef3f7;
+}
+
+.api-source-card a {
+  justify-self: start;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.api-source-card a:hover {
+  text-decoration: underline;
+}
+
+.api-notices {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #f2d6ab;
+  border-radius: 8px;
+  background: #fffaf0;
+}
+
+.api-notices strong {
+  color: #8b5c08;
+  font-size: 13px;
+}
+
+.api-notices ul {
+  display: grid;
+  gap: 5px;
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: #6e5a2e;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 .principles {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1116,6 +1239,10 @@ footer p {
   }
 
   .material-list {
+    grid-template-columns: 1fr;
+  }
+
+  .api-source-grid {
     grid-template-columns: 1fr;
   }
 
