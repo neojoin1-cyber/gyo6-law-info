@@ -272,6 +272,21 @@ resultState.addEventListener("submit", (event) => {
   applyClarifierAnswers(event.target);
 });
 
+resultState.addEventListener("click", (event) => {
+  const target = event.target instanceof Element ? event.target.closest("[data-print-report]") : null;
+  if (!target) {
+    return;
+  }
+
+  document.body.classList.add("printing-report");
+  window.print();
+  window.setTimeout(() => document.body.classList.remove("printing-report"), 500);
+});
+
+window.addEventListener("afterprint", () => {
+  document.body.classList.remove("printing-report");
+});
+
 hydrateFromUrl();
 
 function findPreset(question, selectedType) {
@@ -300,6 +315,7 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const officialMaterials = getOfficialMaterials(preset);
   const directAnswer = getDirectAnswer(question, preset, roleGuide);
   const refinementQuestions = getRefinementQuestions(question, preset, userRole, riskSignals);
+  const caseReport = buildCaseReport(question, preset, roleGuide, officialMaterials, riskSignals);
 
   resultTitle.textContent = "답변 먼저";
   statusDot.textContent = "API 확인중";
@@ -325,6 +341,8 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
       </div>
       <p class="answer-warning">${escapeHtml(directAnswer.warning)}</p>
     </section>
+
+    ${renderCaseReport(caseReport)}
 
     ${renderRefinementPanel(refinementQuestions)}
 
@@ -481,11 +499,15 @@ async function loadLiveSources(question, preset, keywords) {
 
     const data = await response.json();
     mount.innerHTML = renderLiveSourceResults(data);
+    updateReportLiveSources(data);
 
     const total = countApiItems(data);
     statusDot.textContent = total > 0 ? "API 결과 반영" : "API 후보 없음";
   } catch (error) {
     statusDot.textContent = "API 확인 실패";
+    updateReportLiveSources({
+      error: "API 확인 중 오류가 발생했습니다. 현재 보고서는 기본 공식자료 후보를 기준으로 정리되어 있습니다."
+    });
     mount.innerHTML = `
       <h3>근거 자료 확인</h3>
       <p class="api-source-empty">API 확인 중 오류가 발생했습니다. 비밀키 설정과 네트워크 상태를 확인해 주세요.</p>
@@ -513,7 +535,7 @@ function renderLiveSourceResults(data) {
       <span>공식 API 우선</span>
       <span>원문 없으면 확인 필요</span>
     </div>
-    <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 원문 링크, 시행일, 등록일을 다시 확인하세요.</p>
+    <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 보고서 근거 자료에도 함께 반영합니다.</p>
     ${renderApiGroup("법제처 법령 검색", results.laws, "질문과 연결된 법령 후보가 아직 없습니다.")}
     ${renderApiGroup("법령해석례 후보", results.interpretations, "관련 법령해석례 후보가 아직 없습니다.")}
     ${renderApiGroup("국내재해사례", results.safetyDisasters, "관련 국내재해사례 후보가 아직 없습니다.")}
@@ -701,6 +723,356 @@ function getDirectAnswer(question, preset, roleGuide) {
     ],
     warning: "이 답변은 법률 자문이 아니라 정보 정리입니다. 중요한 판단은 전문가 확인이 필요합니다."
   };
+}
+
+function buildCaseReport(question, preset, roleGuide, officialMaterials, riskSignals) {
+  const context = getQuestionContext(question);
+  const normalized = question.replace(/\s+/g, "");
+  const isFieldAccident = preset.type === "fieldTraining"
+    || preset.type === "schoolSafety"
+    || /현장실습|실습|산업체|기계|골절|부상|사고|안전/.test(normalized);
+
+  if (isFieldAccident) {
+    return buildFieldTrainingAccidentReport(context, roleGuide, officialMaterials, riskSignals);
+  }
+
+  return buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, riskSignals);
+}
+
+function buildFieldTrainingAccidentReport(context, roleGuide, officialMaterials, riskSignals) {
+  const practicePlace = findDetailAnswer(context.details, "실습시간 안에");
+  const workOrder = findDetailAnswer(context.details, "작업을 지시");
+  const practiceRecords = findDetailAnswer(context.details, "협약서");
+  const firstResponse = findDetailAnswer(context.details, "사고 직후");
+  const friendWork = findDetailAnswer(context.details, "친구 일을");
+  const injuryRecord = findDetailAnswer(context.details, "진단명");
+  const privateVisitSignal = /놀러|개인|부탁|비공식|허락.*모름|그냥/.test(friendWork || "");
+
+  return {
+    title: "현장실습 중 안전사고 사안 보고서",
+    subtitle: "학교·학생/보호자·실습기업 조치사항 및 근거자료 정리",
+    audience: roleGuide.label,
+    generatedAt: formatDateTime(new Date().toISOString()),
+    lead: privateVisitSignal
+      ? "현재 입력 내용상 실습기관 안팎에서 기계와 관련된 골절 사고가 발생했고, 친구 일을 도우러 간 경위가 공식 실습 업무인지 개인적 방문인지가 핵심 쟁점입니다. 치료와 학생 보호를 먼저 하되, 책임 판단은 사고 장소·시간·작업 지시·안전관리 기록을 분리해 확인해야 합니다."
+      : "현재 입력 내용상 현장실습 과정에서 기계와 관련된 골절 사고가 발생한 사안입니다. 치료와 학생 보호를 먼저 하되, 학교의 실습 운영 관리와 실습기업의 안전보건 조치, 학생·보호자의 자료 확보를 동시에 진행해야 합니다.",
+    disclaimer: "이 보고서는 법률 자문이나 책임 확정 문서가 아니라, 공식자료와 입력 사실을 바탕으로 한 법률정보 정리 초안입니다. 중상, 장해, 손해배상, 산재, 소송 가능성이 있으면 변호사·노무사·교육청 등 전문가 확인이 필요합니다.",
+    facts: [
+      { label: "원 질문", value: context.baseQuestion || "질문 내용 확인 필요" },
+      { label: "사고 시간·장소", value: practicePlace || "실습시간 안, 실습 장소 안에서 발생했는지 추가 확인 필요" },
+      { label: "작업 지시·허락", value: workOrder || "학생이 해당 작업을 지시받았거나 허락받았는지 추가 확인 필요" },
+      { label: "실습 기록", value: practiceRecords || "현장실습 협약서, 실습일지, 안전교육 기록 확보 필요" },
+      { label: "사고 직후 조치", value: firstResponse || "학교, 보호자, 회사의 최초 조치와 연락 시각 확인 필요" },
+      { label: "친구 일을 도운 경위", value: friendWork || "공식 실습 업무인지, 개인적 부탁인지 추가 확인 필요" },
+      { label: "피해 정도", value: injuryRecord || "진단명, 치료기간, 수술·장해 가능성 자료 확보 필요" }
+    ],
+    issueSummary: [
+      "치료와 안전 확보가 최우선이며, 책임 판단보다 학생 보호·기록 보전·재발 방지가 먼저입니다.",
+      "사고가 공식 실습 범위 안에서 발생했는지, 학생이 허락받은 작업을 했는지, 감독자가 있었는지가 핵심입니다.",
+      "기계 안전장치, 위험성 안내, 안전교육, 작업 지시, 현장 감독 기록이 실습기업 책임 검토의 중심 자료입니다.",
+      "학교는 실습 배치, 사전교육, 순회지도, 사고 후 보호자 통보와 교육청 보고 필요 여부를 확인해야 합니다.",
+      "골절은 가벼운 사고로 보기 어렵기 때문에 치료 기록과 진단서를 기준으로 산재·보험·학교안전 관련 절차 가능성을 함께 검토해야 합니다."
+    ],
+    immediateActions: [
+      "학생의 치료, 추가 위험 차단, 보호자 통보를 우선 완료합니다.",
+      "사고 발생 시각, 장소, 작업 내용, 누가 지시했는지, 누가 목격했는지를 시간순으로 기록합니다.",
+      "진단서, 응급실 기록, 치료비 영수증, 사진, CCTV 보존 요청, 목격자 진술을 확보합니다.",
+      "현장실습 협약서, 실습일지, 출근·퇴근 기록, 안전교육 서명부, 지도교사 방문 기록을 모읍니다.",
+      "기계 안전장치, 작업표준서, 위험성평가, 보호구 지급, 감독자 배치 자료를 실습기업에 요청합니다.",
+      "학생에게 불이익이 생기지 않도록 출결, 평가, 실습 중단·복귀 계획을 학교가 별도로 관리합니다."
+    ],
+    stakeholders: [
+      {
+        title: "학교·지도교사·관리자",
+        summary: "학생 보호와 실습 운영 관리의 중심 주체입니다. 사고 책임을 단정하기보다 기록을 보전하고 공식 절차를 빠르게 세우는 역할이 중요합니다.",
+        duties: [
+          "보호자 통보, 관리자 보고, 필요 시 교육청 보고 여부를 즉시 검토합니다.",
+          "현장실습 협약서, 사전교육, 순회지도, 실습일지, 상담·보고 기록을 정리합니다.",
+          "실습기관에 사고 경위, 안전조치, 작업 지시, 현장 보존, 보험·산재 관련 자료를 공식 요청합니다.",
+          "학생의 치료, 출결, 평가, 실습 중단·재배치, 복귀 여부를 불이익 없이 관리합니다."
+        ],
+        rights: [
+          "실습기관에 안전교육 자료, 작업 지시 기록, 사고 경위서, 재발방지 대책을 요청할 수 있습니다.",
+          "사실관계가 불명확한 부분은 학생·보호자·기업의 진술을 나누어 확인하고 문서화할 수 있습니다."
+        ]
+      },
+      {
+        title: "학생·보호자",
+        summary: "치료와 권리 보호가 최우선입니다. 학생에게 사고 책임을 성급히 돌리기보다 치료 자료와 공식 설명을 확보해야 합니다.",
+        duties: [
+          "진단서, 치료기록, 사진, 사고 당시 기억, 통화·문자 기록을 시간순으로 보관합니다.",
+          "학교와 실습기업에 사고 경위, 보험·산재·보상 절차, 출결·평가 처리 방식을 공식적으로 문의합니다.",
+          "민감정보는 꼭 필요한 범위에서만 제공하고, 사실과 다른 진술서에 서명하지 않도록 주의합니다."
+        ],
+        rights: [
+          "치료와 안전 확보를 먼저 요구할 수 있고, 실습 중단·복귀·재배치에 대한 설명을 요구할 수 있습니다.",
+          "학교와 기업이 보유한 사고 관련 기록, 안전교육 여부, 보호조치 내용을 확인 요청할 수 있습니다.",
+          "중한 부상이나 보상 문제가 있으면 노무사·변호사·교육청 등 전문가 상담을 받을 수 있습니다."
+        ]
+      },
+      {
+        title: "실습기업·산업체",
+        summary: "사업장 안에서 발생한 기계 관련 사고라면 안전보건 조치와 현장 감독 여부가 핵심입니다.",
+        duties: [
+          "응급조치, 사고 보고, 현장 보존, 추가 사고 방지 조치를 즉시 수행합니다.",
+          "기계 안전장치, 보호구, 작업표준, 위험성 안내, 감독자 배치, 작업 지시 자료를 정리합니다.",
+          "학생이 허가받은 작업을 했는지, 친구 작업을 도운 경위가 무엇인지, 담당자가 알고 있었는지 확인합니다.",
+          "보험·산재·재해조사 가능성을 검토하고 학교와 보호자에게 절차를 안내합니다."
+        ],
+        rights: [
+          "정확한 사실관계를 확인하기 위해 목격자 진술, CCTV, 작업일지, 출입기록을 확보할 수 있습니다.",
+          "공식 실습 범위를 벗어난 사정이 있다면 그 경위를 학교와 함께 문서로 정리할 수 있습니다."
+        ]
+      }
+    ],
+    evidence: [
+      "진단서, 치료기록, 치료비 영수증, 향후 치료 소견",
+      "사고 당시 사진, CCTV 보존 요청, 목격자 진술, 통화·문자 기록",
+      "현장실습 협약서, 실습일지, 출퇴근 기록, 실습 배치표",
+      "안전교육 자료, 서명부, 보호구 지급 기록, 위험성평가 자료",
+      "기계 점검표, 작업표준서, 작업 지시자·감독자 기록",
+      "학교 보고서, 보호자 안내 기록, 교육청 보고 검토 기록"
+    ],
+    cautions: [
+      "친구 일을 돕게 된 사정이 공식 실습 업무인지 개인적 방문인지가 불명확하면 책임 판단이 크게 달라질 수 있습니다.",
+      "골절처럼 중한 부상은 단순 사고로 처리하지 말고 치료 경과와 장해 가능성을 계속 기록해야 합니다.",
+      "중대재해처벌법 해당 여부는 사망, 동일 사고 부상자 수, 질병 요건 등 법정 기준에 따라 별도 검토가 필요합니다.",
+      "AI 요약이나 검색 결과만으로 학교·기업·학생의 법적 책임을 확정하면 안 됩니다."
+    ],
+    officialMaterials
+  };
+}
+
+function buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, riskSignals) {
+  return {
+    title: `${preset.title} 사안 보고서`,
+    subtitle: "질문 내용, 확인 쟁점, 주체별 조치사항 및 근거자료 정리",
+    audience: roleGuide.label,
+    generatedAt: formatDateTime(new Date().toISOString()),
+    lead: `${roleGuide.label} 기준으로 입력된 질문을 공식자료와 연결해 정리한 보고서입니다. 사실관계가 더 구체화될수록 적용 자료와 조치사항을 더 좁힐 수 있습니다.`,
+    disclaimer: "이 보고서는 법률 자문이나 사건 판단이 아니라 법률정보 정리 초안입니다. 실제 조치 전에는 공식 원문과 전문가 확인이 필요합니다.",
+    facts: [
+      { label: "원 질문", value: context.baseQuestion || "질문 내용 확인 필요" },
+      ...context.details.map((item) => ({ label: item.question, value: item.answer }))
+    ],
+    issueSummary: [
+      "관련 주체, 날짜, 장소, 이미 진행된 조치를 나누어 확인해야 합니다.",
+      "법령 원문, 행정자료, 판례 후보를 분리해 확인해야 합니다.",
+      riskSignals.length ? `${riskSignals.join(", ")} 표현이 있어 전문가 확인을 우선 검토해야 합니다.` : "중요한 판단은 원문과 사실관계 확인 후 진행해야 합니다."
+    ],
+    immediateActions: [
+      "관련 문서, 공문, 계약서, 문자, 사진, 상담 기록을 시간순으로 정리합니다.",
+      "학교, 기관, 당사자별로 이미 한 조치와 앞으로 필요한 조치를 분리합니다.",
+      "공식 원문과 승인 API 결과를 기준으로 확인하고, 출처 불명 자료는 참고 수준으로 낮춥니다."
+    ],
+    stakeholders: [
+      {
+        title: "학교·기관",
+        summary: "절차 운영과 기록 보전의 중심입니다.",
+        duties: ["사실관계와 조치 기록을 문서화합니다.", "관련 규정과 공식 안내를 기준으로 안내합니다.", "학생 또는 민원인의 권리 보호 조치를 검토합니다."],
+        rights: ["필요한 자료 제출과 사실 확인을 요청할 수 있습니다.", "분쟁 가능성이 있으면 담당 기관과 전문가 검토를 요청할 수 있습니다."]
+      },
+      {
+        title: "당사자·보호자",
+        summary: "권리 보호와 자료 확보가 중요합니다.",
+        duties: ["사실과 자료를 시간순으로 정리합니다.", "민감정보는 필요한 범위에서만 제공합니다.", "확인되지 않은 내용은 단정하지 않습니다."],
+        rights: ["공식 절차와 처리 기준에 대한 설명을 요구할 수 있습니다.", "중요 사안은 전문가 상담을 받을 수 있습니다."]
+      }
+    ],
+    evidence: ["계약서·협약서", "공문·안내문", "상담·지도 기록", "사진·문자·이메일", "관련 기관 답변"],
+    cautions: ["사실관계가 바뀌면 적용 법령과 조치가 달라질 수 있습니다.", "AI 요약은 참고용이며 공식 원문 확인이 필요합니다."],
+    officialMaterials
+  };
+}
+
+function renderCaseReport(report) {
+  return `
+    <section class="case-report" id="caseReport" aria-label="사안 보고서">
+      <div class="report-cover">
+        <div>
+          <p class="report-kicker">PRINTABLE REPORT</p>
+          <h3>${escapeHtml(report.title)}</h3>
+          <p>${escapeHtml(report.subtitle)}</p>
+        </div>
+        <div class="report-actions">
+          <span>${escapeHtml(report.generatedAt)}</span>
+          <button type="button" data-print-report>보고서 인쇄</button>
+        </div>
+      </div>
+
+      <p class="report-lead">${escapeHtml(report.lead)}</p>
+      <p class="report-disclaimer">${escapeHtml(report.disclaimer)}</p>
+
+      <div class="report-section">
+        <h4>1. 사안 개요</h4>
+        <div class="report-facts">
+          ${report.facts.map((item) => `
+            <div>
+              <strong>${escapeHtml(item.label)}</strong>
+              <p>${escapeHtml(item.value)}</p>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+
+      <div class="report-section">
+        <h4>2. 핵심 쟁점 및 판단 전제</h4>
+        ${renderReportList(report.issueSummary)}
+      </div>
+
+      <div class="report-section">
+        <h4>3. 즉시 조치 체크리스트</h4>
+        ${renderReportList(report.immediateActions, "checklist")}
+      </div>
+
+      <div class="report-section">
+        <h4>4. 주체별 조치사항과 권리·의무</h4>
+        <div class="report-stakeholders">
+          ${report.stakeholders.map((section) => `
+            <article>
+              <h5>${escapeHtml(section.title)}</h5>
+              <p>${escapeHtml(section.summary)}</p>
+              <strong>해야 할 조치·의무</strong>
+              ${renderReportList(section.duties)}
+              <strong>확인할 권리·요구할 수 있는 사항</strong>
+              ${renderReportList(section.rights)}
+            </article>
+          `).join("")}
+        </div>
+      </div>
+
+      <div class="report-section">
+        <h4>5. 준비할 증빙자료</h4>
+        ${renderReportList(report.evidence, "compact")}
+      </div>
+
+      <div class="report-section">
+        <h4>6. 공식 근거 자료</h4>
+        <p class="report-section-note">아래 자료는 보고서 안에서 바로 확인할 수 있도록 정리한 근거 후보입니다. API 결과가 도착하면 현행일자와 원문 링크가 함께 보강됩니다.</p>
+        ${renderReportMaterials(report.officialMaterials)}
+        <div id="reportLiveSources" class="report-live-sources">
+          <p>법제처와 안전보건공단 API 자료를 보고서에 반영하고 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="report-section">
+        <h4>7. 주의 및 전문가 확인 필요 사항</h4>
+        ${renderReportList(report.cautions)}
+      </div>
+    </section>
+  `;
+}
+
+function renderReportList(items, variant = "") {
+  return `
+    <ul class="report-list ${variant}">
+      ${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+    </ul>
+  `;
+}
+
+function renderReportMaterials(materials) {
+  return `
+    <div class="report-materials">
+      ${materials.map((material) => `
+        <article>
+          <span>${escapeHtml(getMaterialKindLabel(material.type))}</span>
+          <h5>${escapeHtml(material.title)}</h5>
+          <p>${escapeHtml(material.use)}</p>
+          <small>${escapeHtml(material.source)} · ${escapeHtml(material.query)}</small>
+          <a href="${escapeHtml(getMaterialUrl(material, encodeURIComponent(material.query || material.title)))}" target="_blank" rel="noopener noreferrer">원문 연결</a>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function updateReportLiveSources(data) {
+  const reportMount = document.querySelector("#reportLiveSources");
+  if (!reportMount) {
+    return;
+  }
+
+  reportMount.innerHTML = renderReportLiveSources(data);
+}
+
+function renderReportLiveSources(data) {
+  if (data.error) {
+    return `<p class="report-source-empty">${escapeHtml(data.error)}</p>`;
+  }
+
+  const results = data.results || {};
+  const checkedAt = formatDateTime(data.verification?.checkedAt || data.generatedAt);
+
+  return `
+    <div class="report-api-head">
+      <strong>API 확인 자료</strong>
+      <span>확인시각 ${escapeHtml(checkedAt)}</span>
+    </div>
+    ${renderReportApiGroup("현행 법령", results.laws)}
+    ${renderReportApiGroup("법령해석례", results.interpretations)}
+    ${renderReportApiGroup("국내재해사례", results.safetyDisasters)}
+    ${renderReportApiGroup("안전보건자료", results.safetyMaterials)}
+  `;
+}
+
+function renderReportApiGroup(title, items = []) {
+  if (!items.length) {
+    return "";
+  }
+
+  return `
+    <div class="report-api-group">
+      <h5>${escapeHtml(title)}</h5>
+      <div class="report-api-list">
+        ${items.slice(0, 5).map((item) => {
+          const reliability = item.reliability || {};
+          const url = safeUrl(item.url);
+          return `
+            <article>
+              <div>
+                <strong>${escapeHtml(item.title || "제목 없음")}</strong>
+                <span class="${reliability.needsReview ? "needs-review" : "verified"}">${escapeHtml(reliability.label || "확인 필요")}</span>
+              </div>
+              <p>${escapeHtml(item.summary || item.subtitle || "요약 정보 없음")}</p>
+              <small>${escapeHtml(item.source || "공식 출처")} ${item.date ? `· ${escapeHtml(item.date)}` : "· 일자 확인 필요"}</small>
+              ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
+            </article>
+          `;
+        }).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function getQuestionContext(question) {
+  const [baseQuestion, rawDetails = ""] = String(question || "").split(/\n\n추가 확인 내용:/);
+  const details = rawDetails
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => {
+      const normalized = line.replace(/^-\s*/, "");
+      const separatorIndex = normalized.indexOf(":");
+      if (separatorIndex === -1) {
+        return { question: "추가 확인", answer: normalized };
+      }
+
+      return {
+        question: normalized.slice(0, separatorIndex).trim(),
+        answer: normalized.slice(separatorIndex + 1).trim()
+      };
+    });
+
+  return {
+    baseQuestion: baseQuestion.trim(),
+    details
+  };
+}
+
+function findDetailAnswer(details, keyword) {
+  const item = details.find((detail) => detail.question.includes(keyword));
+  return item?.answer || "";
 }
 
 function getRefinementQuestions(question, preset, userRole, riskSignals) {
