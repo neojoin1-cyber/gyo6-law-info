@@ -43,7 +43,7 @@ KOREAN_LAW_MCP_RESEARCH_ENABLED=false
 
 ## 권장 구축 순서
 
-1. Cloud Run 또는 유사한 Node 호스팅에 MCP 게이트웨이를 만든다.
+1. `gateways/korean-law-gateway`의 최소 게이트웨이를 Cloud Run 또는 유사한 Node 호스팅에 올린다.
 2. 게이트웨이는 `X-GYO6-MCP-TOKEN`을 확인한 요청만 Korean Law MCP로 전달한다.
 3. Korean Law MCP 컨테이너에는 `LAW_OC`, `LAW_API_PROTOCOL=http` 또는 `https`, `RATE_LIMIT_RPM`을 설정한다.
 4. GYO6 Worker secret/variable에 `KOREAN_LAW_MCP_BASE_URL`, `KOREAN_LAW_MCP_TOKEN`을 넣는다.
@@ -55,3 +55,25 @@ KOREAN_LAW_MCP_RESEARCH_ENABLED=false
 - GYO6 `/api/search`는 `KOREAN_LAW_MCP_BASE_URL`이 설정되면 법령 검색에서 MCP를 우선 사용한다.
 - MCP가 없거나 실패하면 기존 법제처 직접 API 또는 원문 직접 확인 링크로 fallback 한다.
 - MCP 종합 리서치(`chain_full_research`)는 비용·지연·응답 길이를 고려해 기본 비활성화 상태다.
+
+## 포함된 최소 게이트웨이
+
+프로젝트에는 Korean Law MCP 전체 도입 전 단계로 사용할 수 있는 최소 게이트웨이가 포함되어 있다.
+
+```text
+gateways/korean-law-gateway
+```
+
+로컬 확인:
+
+```powershell
+npm run law-gateway:test
+```
+
+이 게이트웨이가 성공하면 법제처에서 현행 법령 원문 조문을 읽을 수 있는 실행환경이라는 뜻이다. 이후 같은 코드를 Cloud Run에 올려 GYO6 Worker와 연결한다.
+
+현재 로컬 검증 결과 `직업교육훈련 촉진법` 조회에서 `국가법령정보센터` 원문 API 응답, 시행일자, 조문 본문을 정상 수신했다. 법제처 사용자 검증을 통과하려면 게이트웨이에서 `LAW_OPEN_API_REFERER=https://gyo6.kr/` 값을 `Referer`/`Origin` 헤더로 함께 보내야 한다.
+
+GYO6 Worker의 공식자료 검색은 `KOREAN_LAW_MCP_BASE_URL`이 설정되면 `/gyo6/law/search-and-read` 구조화 엔드포인트를 먼저 호출한다. 이 호출이 성공하면 AI 입력에는 `법제처 원문 확인` 표시와 함께 실제 조문 요약 및 조문 본문 일부가 들어간다. 해당 엔드포인트가 없거나 실패하면 기존 `/mcp` 호출을 시도하고, 그래도 실패하면 원문 직접 확인 링크로 내려간다.
+
+Cloudflare Worker에서 법제처를 직접 호출하는 방식은 `HTTPS 525`, `HTTP 520`이 반복되어 주 통로로 쓰지 않는다. Worker 직접 호출에는 HTTP 재시도 fallback을 남겨 두되, 운영 기준은 `Worker -> 외부 Node 게이트웨이 -> 법제처 원문 API`다.

@@ -63,7 +63,7 @@ async function handleSearch(requestUrl) {
   const hasKoreanLawMcp = hasUsableValue(koreanLawMcpBaseUrl);
 
   const [lawResults, interpretationResults, disasterResults, materialResults] = await Promise.all([
-    searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp }),
+    searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp, keywords }),
     searchInterpretationsWithPreferredSource({ lawOpenApiKey, question, hasKoreanLawMcp }),
     hasUsableValue(publicDataKey) ? searchDisasterCases(publicDataKey, safetyContext) : missingKey("PUBLIC_DATA_API_KEY"),
     hasUsableValue(publicDataKey) ? searchSafetyMaterials(publicDataKey) : missingKey("PUBLIC_DATA_API_KEY")
@@ -472,7 +472,7 @@ function missingKey(name) {
   });
 }
 
-async function searchLaws(openApiKey, queries) {
+async function searchLaws(openApiKey, queries, keywords = []) {
   const notices = [];
   const batches = await Promise.all(
     queries.map((query) => callLawSearch(openApiKey, {
@@ -489,7 +489,12 @@ async function searchLaws(openApiKey, queries) {
     items.push(...batch.items);
   }
 
-  return { items: uniqueBy(items, "url").slice(0, 8), notices };
+  const uniqueItems = uniqueBy(items, "url").slice(0, 8);
+  const enriched = await enrichLawItemsWithOriginalText(openApiKey, uniqueItems, keywords);
+  return {
+    items: enriched.items,
+    notices: [...notices, ...enriched.notices]
+  };
 }
 
 async function searchLawInterpretations(openApiKey, question) {
@@ -514,14 +519,14 @@ async function searchLawInterpretations(openApiKey, question) {
   };
 }
 
-async function searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp }) {
+async function searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp, keywords = [] }) {
   if (hasKoreanLawMcp) {
-    const mcpResults = await searchLawsViaMcp(lawQueries);
+    const mcpResults = await searchLawsViaMcp(lawQueries, keywords);
     if (mcpResults.items.length || !hasUsableValue(lawOpenApiKey)) {
       return mcpResults;
     }
 
-    const fallbackResults = await searchLaws(lawOpenApiKey, lawQueries);
+    const fallbackResults = await searchLaws(lawOpenApiKey, lawQueries, keywords);
     return {
       items: fallbackResults.items,
       notices: [
@@ -533,7 +538,7 @@ async function searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKor
   }
 
   return hasUsableValue(lawOpenApiKey)
-    ? searchLaws(lawOpenApiKey, lawQueries)
+    ? searchLaws(lawOpenApiKey, lawQueries, keywords)
     : missingKey("LAW_OPEN_API_OC 또는 KOREAN_LAW_MCP_BASE_URL");
 }
 
@@ -560,13 +565,18 @@ async function searchInterpretationsWithPreferredSource({ lawOpenApiKey, questio
     : missingKey("LAW_OPEN_API_OC");
 }
 
-async function searchLawsViaMcp(queries) {
+async function searchLawsViaMcp(queries, keywords = []) {
+  const gatewayResults = await callKoreanLawGatewaySearch(queries, keywords);
+  if (gatewayResults.items.length) {
+    return gatewayResults;
+  }
+
   const batches = await Promise.all(queries.map((query) => callKoreanLawMcpTool("search_law", {
     query,
     display: 5
   })));
   const items = [];
-  const notices = [];
+  const notices = [...gatewayResults.notices];
 
   for (const batch of batches) {
     notices.push(...batch.notices);
@@ -577,6 +587,104 @@ async function searchLawsViaMcp(queries) {
     items: uniqueBy(items, "url").slice(0, 8),
     notices
   };
+}
+
+async function callKoreanLawGatewaySearch(queries, keywords = []) {
+  const baseUrl = getKoreanLawMcpBaseUrl();
+  if (!hasUsableValue(baseUrl)) {
+    return {
+      items: [],
+      notices: ["KOREAN_LAW_MCP_BASE_URL 값이 없어 법제처 원문 게이트웨이 검색을 건너뛰었습니다."]
+    };
+  }
+
+  const headers = {
+    accept: "application/json",
+    "content-type": "application/json"
+  };
+  const token = cleanText(activeEnv.KOREAN_LAW_MCP_TOKEN || "");
+  if (token) {
+    headers["x-gyo6-mcp-token"] = token;
+  }
+
+  try {
+    const response = await fetch(`${baseUrl.replace(/\/+$/, "")}/gyo6/law/search-and-read`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({
+        queries: queries.slice(0, 4),
+        keywords: keywords.slice(0, 10),
+        maxArticles: 8
+      }),
+      signal: AbortSignal.timeout(readNumber(activeEnv.KOREAN_LAW_MCP_TIMEOUT_MS) || 12000)
+    });
+
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(data?.error || `HTTP ${response.status}`);
+    }
+
+    return {
+      items: asArray(data.laws).map(buildKoreanLawGatewayItem).filter(Boolean),
+      notices: [
+        ...(data.ok ? ["법제처 원문 게이트웨이에서 현행 법령 원문 조문을 확인했습니다."] : []),
+        ...asArray(data.notices)
+      ]
+    };
+  } catch (error) {
+    return {
+      items: [],
+      notices: [`법제처 원문 게이트웨이 호출 실패: ${error.message}`]
+    };
+  }
+}
+
+function buildKoreanLawGatewayItem(law) {
+  if (!law?.lawName && !law?.sourceUrl) {
+    return null;
+  }
+
+  const query = law.query || law.lawName || "";
+  return {
+    title: law.lawName || query || "법제처 원문 조회 결과",
+    subtitle: law.enforcementDate ? `시행일자 ${law.enforcementDate}` : "현행 법령 원문",
+    source: "국가법령정보센터 원문 API",
+    date: law.enforcementDate || law.promulgationDate || "",
+    summary: summarizeLawGatewayArticles(law),
+    url: law.sourceUrl || `https://www.law.go.kr/LSW/lsSc.do?query=${encodeURIComponent(query)}`,
+    query,
+    type: "법령 원문 조문",
+    verifiedAt: law.verifiedAt || new Date().toISOString(),
+    articles: asArray(law.articles).slice(0, 8).map((article) => ({
+      articleNo: cleanText(article.articleNo || ""),
+      branchNo: cleanText(article.branchNo || ""),
+      title: cleanText(article.title || ""),
+      effectiveDate: cleanText(article.effectiveDate || law.enforcementDate || ""),
+      text: truncateLongText(cleanLongText(article.text || ""), 900)
+    })),
+    reliability: {
+      level: "law-api-original-text",
+      label: "법제처 원문 확인",
+      needsReview: false
+    }
+  };
+}
+
+function summarizeLawGatewayArticles(law) {
+  const intro = [
+    law.lawName,
+    law.enforcementDate ? `시행일자 ${law.enforcementDate}` : "",
+    law.promulgationDate ? `공포일자 ${law.promulgationDate}` : ""
+  ].filter(Boolean).join(" · ");
+  const articles = asArray(law.articles)
+    .slice(0, 5)
+    .map((article) => {
+      const number = `제${article.articleNo}${article.branchNo ? `의${article.branchNo}` : ""}조`;
+      const title = article.title ? `(${article.title})` : "";
+      return `${number}${title}: ${truncateLongText(cleanLongText(article.text || ""), 220)}`;
+    });
+
+  return [intro, ...articles].filter(Boolean).join("\n");
 }
 
 async function searchLegalResearchViaMcp(question) {
@@ -689,7 +797,171 @@ function compactMcpText(text) {
 }
 
 async function callLawSearch(openApiKey, params) {
-  const url = new URL("https://www.law.go.kr/DRF/lawSearch.do");
+  const protocols = getLawApiProtocols();
+  const errors = [];
+
+  for (const protocol of protocols) {
+    const url = buildLawSearchUrl(protocol, openApiKey, params);
+    try {
+      const data = await fetchJson(url, {
+        headers: getLawOpenApiHeaders()
+      });
+      if (data?.result || data?.msg) {
+        throw new Error([data.result, data.msg].filter(Boolean).join(" "));
+      }
+      return {
+        items: normalizeLawItems(data, params.target, params.query),
+        notices: protocol === protocols[0] ? [] : [`법제처 ${params.target} 검색은 ${protocol.toUpperCase()} 재시도로 성공했습니다.`]
+      };
+    } catch (error) {
+      errors.push(`${protocol.toUpperCase()} ${error.message}`);
+    }
+  }
+
+  const fallbackItem = buildLawApiFallbackItem(params);
+  return {
+    items: fallbackItem ? [fallbackItem] : [],
+    notices: [`법제처 ${params.target} 검색 실패: ${errors.join(" / ")}. 공식 원문 검색 링크를 대신 표시합니다.`]
+  };
+}
+
+async function enrichLawItemsWithOriginalText(openApiKey, items, keywords = []) {
+  const enrichedItems = [];
+  const notices = [];
+
+  for (const item of items.slice(0, 4)) {
+    if (!item.mst && !item.lawId) {
+      enrichedItems.push(item);
+      continue;
+    }
+
+    const result = await callLawOriginalText(openApiKey, item, keywords);
+    notices.push(...result.notices);
+    enrichedItems.push(result.item || item);
+  }
+
+  return {
+    items: [...enrichedItems, ...items.slice(4)],
+    notices
+  };
+}
+
+async function callLawOriginalText(openApiKey, item, keywords = []) {
+  const protocols = getLawApiProtocols();
+  const errors = [];
+
+  for (const protocol of protocols) {
+    try {
+      const data = await fetchJson(buildLawServiceUrl(protocol, openApiKey, item), {
+        headers: getLawOpenApiHeaders()
+      });
+      if (data?.result || data?.msg) {
+        throw new Error([data.result, data.msg].filter(Boolean).join(" "));
+      }
+
+      const lawText = normalizeLawOriginalText(data);
+      const articles = selectRelevantLawArticles(lawText.articles, keywords, 8);
+      if (!articles.length) {
+        throw new Error("조문 본문이 비어 있습니다.");
+      }
+
+      const law = {
+        query: item.query,
+        lawName: lawText.lawName || item.title,
+        promulgationDate: lawText.promulgationDate || "",
+        enforcementDate: lawText.enforcementDate || item.date || "",
+        sourceUrl: item.url,
+        articles
+      };
+
+      return {
+        item: {
+          ...item,
+          title: law.lawName,
+          subtitle: law.enforcementDate ? `시행일자 ${law.enforcementDate}` : item.subtitle,
+          source: "국가법령정보센터 원문 API",
+          date: law.enforcementDate || item.date,
+          summary: summarizeLawGatewayArticles(law),
+          type: "법령 원문 조문",
+          verifiedAt: new Date().toISOString(),
+          articles,
+          reliability: {
+            level: "law-api-original-text",
+            label: "법제처 원문 확인",
+            needsReview: false
+          }
+        },
+        notices: [protocol === protocols[0]
+          ? `법제처 원문 API에서 ${law.lawName} 조문을 확인했습니다.`
+          : `법제처 원문 API는 ${protocol.toUpperCase()} 재시도로 ${law.lawName} 조문을 확인했습니다.`]
+      };
+    } catch (error) {
+      errors.push(`${protocol.toUpperCase()} ${error.message}`);
+    }
+  }
+
+  return {
+    item,
+    notices: [`법제처 원문 조문 조회 실패(${item.title}): ${errors.join(" / ")}`]
+  };
+}
+
+function buildLawServiceUrl(protocol, openApiKey, item) {
+  const url = new URL(`${protocol}://www.law.go.kr/DRF/lawService.do`);
+  url.searchParams.set("OC", openApiKey);
+  url.searchParams.set("target", "eflaw");
+  url.searchParams.set("type", "JSON");
+  if (item.mst) {
+    url.searchParams.set("MST", item.mst);
+  } else if (item.lawId) {
+    url.searchParams.set("ID", item.lawId);
+  }
+  return url;
+}
+
+function normalizeLawOriginalText(data) {
+  const law = data?.법령 || data?.Law || data || {};
+  const info = law.기본정보 || law.basicInfo || {};
+  const rawUnits = law?.조문?.조문단위 || law?.articles || [];
+  const articles = asArray(rawUnits)
+    .filter((unit) => String(unit?.조문여부 || unit?.articleType || "조문") === "조문")
+    .map((unit) => ({
+      articleNo: cleanText(getValue(unit, ["조문번호", "articleNo"])),
+      branchNo: cleanText(getValue(unit, ["조문가지번호", "branchNo"])),
+      title: cleanText(getValue(unit, ["조문제목", "title"])),
+      effectiveDate: formatDate(getValue(unit, ["조문시행일자", "effectiveDate"])),
+      text: truncateLongText(cleanLongText([
+        getValue(unit, ["조문내용", "text"]),
+        ...asArray(unit.항).map((hang) => [
+          getValue(hang, ["항번호"]),
+          getValue(hang, ["항내용"]),
+          ...asArray(hang.호).map((ho) => `${getValue(ho, ["호번호"])} ${getValue(ho, ["호내용"])}`)
+        ].filter(Boolean).join(" "))
+      ].filter(Boolean).join("\n")), 900)
+    }))
+    .filter((article) => article.articleNo && article.text);
+
+  return {
+    lawName: cleanText(getValue(info, ["법령명_한글", "법령명한글", "법령명"])),
+    promulgationDate: formatDate(getValue(info, ["공포일자"])),
+    enforcementDate: formatDate(getValue(info, ["시행일자"])),
+    articles
+  };
+}
+
+function selectRelevantLawArticles(articles, keywords = [], limit = 8) {
+  const normalizedKeywords = keywords.map(normalizeMatchText).filter((item) => item.length >= 2);
+  const scored = articles.map((article) => {
+    const haystack = normalizeMatchText(`${article.title} ${article.text}`);
+    const score = normalizedKeywords.reduce((sum, keyword) => sum + (haystack.includes(keyword) ? 1 : 0), 0);
+    return { article, score };
+  });
+  const matched = scored.filter((item) => item.score > 0).sort((left, right) => right.score - left.score);
+  return (matched.length ? matched : scored).slice(0, limit).map((item) => item.article);
+}
+
+function buildLawSearchUrl(protocol, openApiKey, params) {
+  const url = new URL(`${protocol}://www.law.go.kr/DRF/lawSearch.do`);
   url.searchParams.set("OC", openApiKey);
   url.searchParams.set("type", "JSON");
   url.searchParams.set("page", "1");
@@ -700,24 +972,7 @@ async function callLawSearch(openApiKey, params) {
     }
   }
 
-  try {
-    const data = await fetchJson(url, {
-      headers: getLawOpenApiHeaders()
-    });
-    if (data?.result || data?.msg) {
-      throw new Error([data.result, data.msg].filter(Boolean).join(" "));
-    }
-    return {
-      items: normalizeLawItems(data, params.target, params.query),
-      notices: []
-    };
-  } catch (error) {
-    const fallbackItem = buildLawApiFallbackItem(params);
-    return {
-      items: fallbackItem ? [fallbackItem] : [],
-      notices: [`법제처 ${params.target} 검색 실패: ${error.message}. 공식 원문 검색 링크를 대신 표시합니다.`]
-    };
-  }
+  return url;
 }
 
 function buildLawApiFallbackItem(params) {
@@ -754,6 +1009,17 @@ function getLawOpenApiHeaders() {
     Referer: referer,
     Origin: new URL(referer).origin
   };
+}
+
+function getLawApiProtocols() {
+  const requested = cleanText(activeEnv.LAW_API_PROTOCOL || "").toLowerCase();
+  if (requested === "http") {
+    return ["http", "https"];
+  }
+  if (requested === "https") {
+    return ["https", "http"];
+  }
+  return ["https", "http"];
 }
 
 async function searchDisasterCases(publicDataKey, safetyContext) {
@@ -885,6 +1151,8 @@ function normalizeLawItems(data, target, query) {
       formatDate(getValue(item, ["시행일자", "공포일자", "해석일자", "회신일자", "date"])) ||
       "";
     const detailLink = getValue(item, ["법령상세링크", "상세링크", "본문상세링크", "법령해석례상세링크"]);
+    const mst = getValue(item, ["법령일련번호", "MST", "mst"]);
+    const lawId = getValue(item, ["법령ID", "ID", "lawId"]);
 
     return {
       title: String(title),
@@ -895,6 +1163,8 @@ function normalizeLawItems(data, target, query) {
       url: normalizeLawUrl(detailLink, query, target),
       query,
       type: getLawTargetLabel(target),
+      mst,
+      lawId,
       verifiedAt: new Date().toISOString(),
       reliability: getReliabilityStatus(detailLink, date)
     };
@@ -1306,6 +1576,15 @@ function hasUsableValue(value) {
 
 function cleanText(value) {
   return String(value || "").replace(/\s+/g, " ").trim().slice(0, 300);
+}
+
+function cleanLongText(value) {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
+function truncateLongText(value, maxLength) {
+  const text = String(value || "").trim();
+  return text.length > maxLength ? `${text.slice(0, maxLength).trim()}...` : text;
 }
 
 function cleanUrl(value) {

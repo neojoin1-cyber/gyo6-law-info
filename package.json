@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "node server.mjs",
     "start": "node server.mjs",
+    "law-gateway:dev": "node gateways/korean-law-gateway/server.mjs",
+    "law-gateway:test": "node gateways/korean-law-gateway/server.mjs --once \"직업교육훈련 촉진법\" 현장실습 청소",
     "test:scenarios": "node tools/scenario-regression.mjs",
     "worker:deploy": "npx wrangler deploy --config workers/ai-analysis/wrangler.toml",
-    "check": "node --check public/app.js && node --check public/auth.js && node --check public/firebase-config.js && node --check server.mjs && node --check functions/index.mjs && node --check functions/shared/api.mjs && node --check workers/ai-analysis/src/index.js && npm run test:scenarios"
+    "check": "node --check public/app.js && node --check public/auth.js && node --check public/firebase-config.js && node --check server.mjs && node --check functions/index.mjs && node --check functions/shared/api.mjs && node --check workers/ai-analysis/src/index.js && node --check gateways/korean-law-gateway/server.mjs && npm run test:scenarios"
   }
 }

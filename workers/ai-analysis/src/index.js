@@ -380,8 +380,15 @@ function compactSourceItems(items, limit) {
     type: cleanText(item.type || ""),
     source: cleanText(item.source || ""),
     date: cleanText(item.date || ""),
-    summary: truncateText(cleanText(item.summary || ""), 220),
+    summary: truncateText(cleanText(item.summary || ""), 520),
     url: cleanText(item.url || ""),
+    articles: asArray(item.articles).slice(0, 5).map((article) => ({
+      articleNo: cleanText(article.articleNo || ""),
+      branchNo: cleanText(article.branchNo || ""),
+      title: cleanText(article.title || ""),
+      effectiveDate: cleanText(article.effectiveDate || ""),
+      text: truncateText(cleanText(article.text || ""), 420)
+    })),
     reliability: cleanText(item.reliability?.label || ""),
     needsReview: Boolean(item.reliability?.needsReview)
   })).filter((item) => item.title || item.url);
