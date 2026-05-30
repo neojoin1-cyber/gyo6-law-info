@@ -644,10 +644,14 @@ function hasMachineAccidentSignal(value) {
 
 function getFieldTrainingScopeProfile(value = "") {
   const normalized = compactText(value);
-  const hasCleaning = /청소|정리정돈|작업장정리|주변정리|재료|자재/.test(normalized);
+  const hasCleaningWork = /청소/.test(normalized);
+  const hasTidyingWork = /정리정돈|작업장정리|주변정리/.test(normalized);
+  const hasMaterialWork = /재료|자재|부품|물품/.test(normalized);
+  const hasCleaning = hasCleaningWork || hasTidyingWork || hasMaterialWork;
   const hasErrand = /심부름|사적|개인적인|개인부탁|커피|담배|식사|배달|운전/.test(normalized);
   const hasQuota = /생산량|목표|압박|실적|평가불이익|불이익/.test(normalized);
-  const hasOvertime = /야간|밤\d*시|잔업|초과|장시간|휴일|주말/.test(normalized);
+  const hasAfterHours = /실습시간종료후|현장실습시간종료후|근무시간종료후|업무시간종료후|시간종료후|종료후|마친후|끝난후|퇴근후|일과후/.test(normalized);
+  const hasOvertime = hasAfterHours || /야간|밤\d*시|잔업|초과|장시간|휴일|주말/.test(normalized);
   const hasSafetyConcern = /위험|가동중인기계|기계|설비|화학|분진|보호구|유해|끼일|다칠|안전/.test(normalized);
   const hasRepeat = /반복|자꾸|계속|매일|수시로|여러번|지속/.test(normalized);
 
@@ -665,6 +669,23 @@ function getFieldTrainingScopeProfile(value = "") {
       scopeCheck: "해당 업무가 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?",
       scopePlaceholder: "예: 협약서에는 생산 보조만 있음, 위험 작업은 언급 없음, 아직 못 봄",
       tags: ["업무범위", "위험 지시", "안전교육", "학생 권익"]
+    };
+  }
+
+  if (hasAfterHours && (hasCleaningWork || hasTidyingWork)) {
+    return {
+      kind: "afterHoursCleaning",
+      issueName: "실습시간 종료 후 청소 지시 문제",
+      instructionName: "실습시간 종료 후 청소 지시",
+      reportLead: "현장실습생에게 실습시간 종료 후 청소를 반복 지시한 사안",
+      problemType: "실습시간 종료 후 청소 지시와 현장실습 시간·업무범위 적정성 문제",
+      leadDetail: "현장실습 시간이 끝난 뒤 학생에게 청소를 반복 지시한 경우에는 실습시간 제한, 연장 지시 여부, 교육 목적, 학생 동의와 보호자·학교 안내 여부를 먼저 확인해야 합니다.",
+      firstAction: "청소를 시킨 날짜, 종료 예정 시각, 실제 퇴근 시각, 지시자, 반복 횟수를 시간순으로 기록합니다.",
+      secondAction: "현장실습 협약서와 실습계획서의 실습시간, 청소 포함 여부, 연장·잔업 지시 근거를 확인합니다.",
+      keyQuestion: "청소 지시가 실습시간 안의 교육활동인지, 실습시간 종료 후 추가 지시였는지",
+      scopeCheck: "청소가 현장실습 협약서나 실습계획서의 업무에 포함되어 있고, 실습시간 안에 이루어진 일인가요?",
+      scopePlaceholder: "예: 실습은 17시에 종료, 이후 20분 청소 지시, 협약서에는 청소 언급 없음",
+      tags: ["실습시간", "청소 지시", "업무범위", "학생 권익"]
     };
   }
 
@@ -720,19 +741,47 @@ function getFieldTrainingScopeProfile(value = "") {
   }
 
   if (hasCleaning) {
+    const cleaningInstruction = hasMaterialWork && hasCleaningWork
+      ? "청소 및 재료·자재 운반 지시"
+      : hasMaterialWork
+        ? "재료·자재 운반 지시"
+        : hasTidyingWork && !hasCleaningWork
+          ? "정리정돈 지시"
+          : "청소 지시";
+    const cleaningIssue = hasMaterialWork && hasCleaningWork
+      ? "청소·재료 운반 반복 지시 문제"
+      : hasMaterialWork
+        ? "재료·자재 운반 지시 문제"
+        : hasTidyingWork && !hasCleaningWork
+          ? "정리정돈 지시 문제"
+          : "청소 반복 지시 문제";
+    const cleaningLead = hasMaterialWork && hasCleaningWork
+      ? "현장실습생에게 청소와 재료·자재 운반을 반복 지시한 사안"
+      : hasMaterialWork
+        ? "현장실습생에게 재료·자재 운반을 반복 지시한 사안"
+        : hasTidyingWork && !hasCleaningWork
+          ? "현장실습생에게 정리정돈을 반복 지시한 사안"
+          : "현장실습생에게 청소를 반복 지시한 사안";
+    const cleaningScope = hasMaterialWork && hasCleaningWork
+      ? "청소와 재료·자재 운반이 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?"
+      : `${cleaningInstruction}가 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?`;
+    const cleaningPlaceholder = hasMaterialWork && hasCleaningWork
+      ? "예: 협약서에는 생산 보조만 있음, 청소와 자재 운반 언급 없음, 아직 못 봄"
+      : `예: 협약서에는 전공 실습만 있음, ${cleaningInstruction} 언급 없음, 아직 못 봄`;
+
     return {
       kind: "cleaning",
-      issueName: "청소·정리정돈 반복 지시 문제",
-      instructionName: "청소·정리정돈 또는 재료 운반 지시",
-      reportLead: "현장실습생에게 재료 운반, 청소, 정리정돈을 반복 지시한 사안",
-      problemType: "청소·정리정돈 지시와 실습 업무 범위 적정성 문제",
-      leadDetail: "현장실습생에게 재료 운반이나 청소를 반복 지시한 경우에는 교육 목적이 있는 정리정돈인지, 실습 범위 밖 잡무 전가인지 구분해야 합니다.",
-      firstAction: "언제, 누가, 어떤 재료·자재 또는 정리정돈 업무를 지시했고 얼마나 반복됐는지 기록합니다.",
-      secondAction: "현장실습 협약서와 실습계획서에 재료 운반, 작업장 정리, 청소가 실습 내용으로 들어 있는지 확인합니다.",
-      keyQuestion: "청소·정리정돈이 실습 직무와 직접 관련 있었는지",
-      scopeCheck: "청소·재료 운반이 현장실습 협약서나 실습계획서의 업무에 포함되어 있나요?",
-      scopePlaceholder: "예: 협약서에는 생산 보조만 있음, 청소 언급 없음, 아직 못 봄",
-      tags: ["업무범위", "반복 지시", "청소·잡무", "학생 권익"]
+      issueName: cleaningIssue,
+      instructionName: cleaningInstruction,
+      reportLead: cleaningLead,
+      problemType: `${cleaningInstruction}와 실습 업무 범위 적정성 문제`,
+      leadDetail: `현장실습생에게 ${cleaningInstruction}를 반복한 경우에는 교육 목적이 있는 실습활동인지, 실습 범위 밖 잡무 전가인지 구분해야 합니다.`,
+      firstAction: `언제, 누가, 어떤 방식으로 ${cleaningInstruction}를 지시했고 얼마나 반복됐는지 기록합니다.`,
+      secondAction: `현장실습 협약서와 실습계획서에 ${cleaningInstruction}가 실습 내용으로 들어 있는지 확인합니다.`,
+      keyQuestion: `${cleaningInstruction}가 실습 직무와 직접 관련 있었는지`,
+      scopeCheck: cleaningScope,
+      scopePlaceholder: cleaningPlaceholder,
+      tags: ["업무범위", "반복 지시", cleaningInstruction, "학생 권익"]
     };
   }
 
@@ -2056,7 +2105,7 @@ function buildEvidenceGroups(report) {
       ? [
           {
             title: "업무 지시 장소의 안전 위험 확인 자료",
-            reason: "지시된 업무가 기계, 화학물질, 분진, 날카로운 재료 등 위험요소와 연결되면 단순 업무범위를 넘어 안전 문제도 됩니다.",
+            reason: "지시된 업무가 기계, 화학물질, 분진, 날카로운 물체 등 위험요소와 연결되면 단순 업무범위를 넘어 안전 문제도 됩니다.",
             how: "위험구역 여부, 보호구, 안전교육, 감독자 배치 여부를 기업 담당자에게 확인합니다.",
             basis: formatLegalBasis(["oshSafetyMeasures", "fieldTrainingSafetyEducation"])
           }
@@ -3303,6 +3352,88 @@ function getRefinementQuestions(question, preset, userRole, riskSignals) {
       placeholder: "예: 공문 접수, 내부 결재, 계약서"
     }
   }[userRole];
+
+  const scenario = analyzeQuestionScenario(question, preset);
+  if (scenario.type === "fieldTrainingScopeIssue") {
+    const scopeProfile = scenario.scopeProfile || getFieldTrainingScopeProfile(question);
+    const questions = [];
+    const addQuestion = (item) => questions.push(item);
+    const hasTimeDetail = /\d{1,2}시|\d+분|\d+시간|퇴근시각|종료시각|시작시각|실제퇴근/.test(normalized);
+    const hasActorDetail = /누가|멘토|담당|직원|근로자|사수|선배|관리자|반장|팀장|회사담당/.test(normalized);
+    const hasContractDetail = /협약서|계약서|실습계획|표준협약|직무기술서|업무범위/.test(normalized);
+    const hasSchoolAction = /학교|지도교사|선생|담임|취업부|알렸|보고|상담|확인요청|기업에/.test(normalized);
+    const hasStudentConcern = /불이익|보복|평가|거절|싫다|힘들|고충|고민|스트레스/.test(normalized);
+    const hasSafetyConcern = /위험|기계|설비|화학|분진|보호구|다칠|안전/.test(normalized);
+
+    if (scopeProfile.kind === "afterHoursCleaning" || /종료후|퇴근후|일과후|마친후|끝난후/.test(normalized)) {
+      addQuestion({
+        question: "정해진 실습 종료 시각과 실제 퇴근 시각이 각각 언제였나요?",
+        reason: "실습시간 종료 후 지시인지, 협약된 실습시간 안의 활동인지가 이 사안의 첫 판단 기준입니다.",
+        placeholder: "예: 실습은 17시 종료, 청소 후 17시 30분 퇴근, 거의 매일"
+      });
+    } else if (!hasTimeDetail) {
+      addQuestion({
+        question: "문제가 된 지시가 언제, 얼마나 자주, 어느 정도 시간 동안 이루어졌나요?",
+        reason: "일회성 안내인지 반복 지시인지에 따라 학교의 대응 강도가 달라집니다.",
+        placeholder: "예: 이번 주 3회, 매번 20분 정도, 실습 종료 직전"
+      });
+    }
+
+    if (!hasActorDetail) {
+      addQuestion({
+        question: "그 지시를 한 사람은 기업 담당 멘토인가요, 현장 직원인가요, 또는 다른 사람인가요?",
+        reason: "지시 권한이 있는 사람인지 확인해야 기업에 어떤 방식으로 시정 요청할지 정할 수 있습니다.",
+        placeholder: "예: 현장 직원, 담당 멘토는 아님, 정확히 모름"
+      });
+    }
+
+    if (!hasContractDetail) {
+      addQuestion({
+        question: scopeProfile.scopeCheck,
+        reason: "실습 범위 안의 교육활동인지, 교육 목적 밖 업무 전가인지 구분하는 핵심 자료입니다.",
+        placeholder: scopeProfile.scopePlaceholder
+      });
+    }
+
+    if (!hasSchoolAction) {
+      addQuestion({
+        question: "학교 현장실습 담당자나 지도교사에게 이미 알렸고, 기업 확인 요청이 있었나요?",
+        reason: "학생이 기업 안에서 직접 해결하기보다 학교가 사실 확인과 시정 요청의 중심이 되는 것이 안전합니다.",
+        placeholder: "예: 학생 상담만 받음, 기업 확인 전, 지도교사에게 아직 미보고"
+      });
+    }
+
+    if (!hasStudentConcern) {
+      addQuestion({
+        question: "학생이 거절하거나 학교에 알렸을 때 평가·취업·분위기상 불이익을 걱정하고 있나요?",
+        reason: "불이익 우려가 있으면 학교가 학생 보호와 지시 일원화를 함께 요청해야 합니다.",
+        placeholder: "예: 평가 불이익 걱정, 회사 눈치가 보임, 불이익 우려는 아직 없음"
+      });
+    }
+
+    if (hasSafetyConcern) {
+      addQuestion({
+        question: "지시된 일이 기계, 화학물질, 분진, 보호구 같은 안전 위험과 연결되어 있나요?",
+        reason: "위험요소가 있으면 단순 업무범위 문제가 아니라 안전교육과 보호조치 확인까지 필요합니다.",
+        placeholder: "예: 기계 주변, 분진 있음, 보호구 없음"
+      });
+    }
+
+    if (roleQuestion) {
+      addQuestion(roleQuestion);
+    }
+
+    const uniqueScopeQuestions = [];
+    const seenScopeQuestions = new Set();
+    questions.forEach((item) => {
+      if (!seenScopeQuestions.has(item.question)) {
+        seenScopeQuestions.add(item.question);
+        uniqueScopeQuestions.push(item);
+      }
+    });
+
+    return uniqueScopeQuestions.slice(0, 5);
+  }
 
   const questions = [...(byTopic[preset.type] || byTopic.general)];
 

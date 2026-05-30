@@ -77,6 +77,22 @@ const cases = [
     mustNotInclude: ["청소", "재료 운반", "반복 청소", ...accidentWords, educationDraftText]
   },
   {
+    id: "field-after-hours-cleaning",
+    question: "현장 실습생의 고충입니다. 현장실습 시간 종료 후에 자꾸 청소를 시킨다고 학생이 고민을 요청합니다. 이럴 경우에 대처 방안을 알려주세요.",
+    expect: { preset: "fieldTraining", scenario: "fieldTrainingScopeIssue", disposition: "internal" },
+    checkRefinement: true,
+    mustInclude: ["실습시간 종료 후 청소 지시", "실습시간", "청소", "현장실습계약서"],
+    mustNotInclude: ["재료", "재료 운반", "기존 근로자", "기존근로자", ...accidentWords, educationDraftText]
+  },
+  {
+    id: "field-cleaning-only-no-material",
+    question: "현장실습생이 매일 청소만 반복해서 시킨다고 고충을 말했습니다. 실습 업무와 관련 있는지 확인하고 싶습니다.",
+    expect: { preset: "fieldTraining", scenario: "fieldTrainingScopeIssue", disposition: "internal" },
+    checkRefinement: true,
+    mustInclude: ["청소 지시", "업무 범위", "현장실습계약서"],
+    mustNotInclude: ["재료", "재료 운반", "기존 근로자", "기존근로자", ...accidentWords, educationDraftText]
+  },
+  {
     id: "field-accident-fracture",
     question: "현장실습 중 학생이 실습시간 안에 프레스 기계 주변에서 작업하다 팔 골절상을 입었습니다. 보호자에게 연락했고 병원 치료 중입니다.",
     expect: { preset: "fieldTraining", scenario: "fieldTrainingAccident", disposition: "education-report" },
@@ -397,9 +413,11 @@ function buildResult(question) {
   const preset = context.findPreset(question, "auto");
   const scenario = context.analyzeQuestionScenario(question, preset);
   const displayPreset = context.getScenarioDisplayPreset(preset, scenario);
+  const riskSignals = context.detectRiskSignals(question);
   const materials = context.getOfficialMaterials(displayPreset, scenario, question);
-  const report = context.buildCaseReport(question, displayPreset, { label: "상황 중심" }, materials, context.detectRiskSignals(question), scenario);
+  const report = context.buildCaseReport(question, displayPreset, { label: "상황 중심" }, materials, riskSignals, scenario);
   const direct = context.getDirectAnswer(question, displayPreset, { label: "상황 중심" }, scenario);
+  const refinement = context.getRefinementQuestions(question, displayPreset, "auto", riskSignals);
   const html = context.renderCaseReport(report);
 
   return {
@@ -408,6 +426,7 @@ function buildResult(question) {
     displayPreset,
     report,
     direct,
+    refinement,
     html,
     disposition: context.getReportDisposition(report)
   };
@@ -423,7 +442,8 @@ for (const testCase of cases) {
     result.displayPreset.laws.join(" "),
     result.direct.title,
     result.direct.lead,
-    result.html
+    result.html,
+    ...(testCase.checkRefinement ? result.refinement.map((item) => `${item.question} ${item.reason} ${item.placeholder}`) : [])
   ].join("\n");
 
   if (testCase.expect?.preset && result.preset.type !== testCase.expect.preset) {
