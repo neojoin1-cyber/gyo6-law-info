@@ -15,4 +15,11 @@ OPENAI_MONTHLY_WARN_USD = "10"
 OPENAI_MONTHLY_STOP_USD = "50"
 OPENAI_DAILY_CALL_LIMIT = "30"
 OPENAI_COST_PRICING_DATE = "2026-05-30"
+FIREBASE_PROJECT_ID = "gyo6-law-info"
+AUTH_REQUIRED = "false"
 ALLOWED_ORIGINS = "https://gyo6.kr,https://www.gyo6.kr,https://gyo6-law-info.web.app,http://localhost:5173,http://127.0.0.1:5173"
+
+[[d1_databases]]
+binding = "MEMBER_DB"
+database_name = "gyo6-law-info-member-db"
+database_id = "56a7e9b6-2eba-4be1-8e1c-84beb2cd22e3"

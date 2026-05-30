@@ -58,6 +58,14 @@ a {
   backdrop-filter: blur(14px);
 }
 
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+  min-width: 0;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -111,6 +119,201 @@ a {
   color: var(--gold);
   font-size: 12px;
   font-weight: 800;
+}
+
+.auth-mount {
+  position: relative;
+  min-width: 0;
+}
+
+.auth-menu {
+  position: relative;
+}
+
+.auth-menu > summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  border-radius: 8px;
+  padding: 7px 11px;
+  background: var(--navy);
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 900;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.auth-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.auth-card {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  display: grid;
+  gap: 12px;
+  width: min(820px, calc(100vw - 32px));
+  max-height: min(720px, calc(100vh - 96px));
+  overflow: auto;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.auth-card.setup {
+  width: min(360px, calc(100vw - 32px));
+}
+
+.auth-card-head,
+.auth-admin-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.auth-card strong {
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.auth-card p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.auth-grid,
+.auth-profile-form,
+.auth-admin-invite {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.auth-card form {
+  display: grid;
+  gap: 10px;
+}
+
+.auth-card h3 {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.auth-card label {
+  display: grid;
+  gap: 5px;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.auth-card label.wide {
+  grid-column: 1 / -1;
+}
+
+.auth-card input,
+.auth-card select,
+.auth-card textarea {
+  min-height: 36px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #fbfcfd;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.auth-card textarea {
+  resize: vertical;
+}
+
+.auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.auth-card button {
+  min-height: 34px;
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 10px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.auth-card button[type="button"] {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+}
+
+.auth-message {
+  border: 1px solid #cfe4e2;
+  border-radius: 8px;
+  padding: 9px 10px;
+  background: #f4fbfa;
+  color: var(--teal) !important;
+  font-weight: 800;
+}
+
+.capability-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.capability-bar span {
+  border-radius: 999px;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.capability-bar .on {
+  background: #edf7f6;
+  color: var(--teal);
+}
+
+.capability-bar .off {
+  background: #eff4f8;
+  color: var(--muted);
+}
+
+.admin-member-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-member-list {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-member-row {
+  display: grid !important;
+  grid-template-columns: minmax(180px, 1fr) 140px 120px minmax(140px, .8fr) auto;
+  gap: 8px;
+  align-items: end;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
 }
 
 main {
@@ -2642,9 +2845,19 @@ footer p {
 @media (max-width: 560px) {
   .topbar {
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 12px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .auth-card {
+    right: 0;
+    width: calc(100vw - 24px);
   }
 
   .brand {
@@ -2728,6 +2941,10 @@ footer p {
 
   .answer-columns,
   .ai-cost-panel,
+  .auth-grid,
+  .auth-profile-form,
+  .auth-admin-invite,
+  .admin-member-row,
   .clarifier-grid {
     grid-template-columns: 1fr;
   }

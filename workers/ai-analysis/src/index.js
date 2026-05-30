@@ -1,3 +1,5 @@
+import { createApi as createOfficialSourceApi } from "../../../functions/shared/api.mjs";
+
 const JSON_HEADERS = {
   "content-type": "application/json; charset=utf-8",
   "cache-control": "no-store"
@@ -24,6 +26,15 @@ const DEFAULT_COST_CONTROL = {
   pricingDate: "2026-05-30"
 };
 
+const FIREBASE_CERT_URL = "https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com";
+const APPROVED_MEMBER_STATUSES = new Set(["approved"]);
+const LAW_ACCESS_ROLES = new Set(["law", "teacher", "admin", "owner"]);
+const ADMIN_ROLES = new Set(["admin", "owner"]);
+const OWNER_ROLES = new Set(["owner"]);
+const MEMBER_ROLES = ["pending", "general", "jobs", "law", "teacher", "admin", "owner"];
+const MEMBER_STATUSES = ["pending", "approved", "suspended", "deleted"];
+let firebaseCertCache = null;
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get("origin") || "";
@@ -45,6 +56,11 @@ export default {
           service: "gyo6-law-info-ai",
           openAi: Boolean(env.OPENAI_API_KEY),
           model: env.OPENAI_MODEL || "gpt-5.2",
+          auth: {
+            required: isAuthRequired(env),
+            firebaseProjectId: cleanText(env.FIREBASE_PROJECT_ID || ""),
+            memberDb: Boolean(env.MEMBER_DB)
+          },
           costControl: getCostControlSettings(env)
         }, 200, corsHeaders);
       }
@@ -58,8 +74,98 @@ export default {
           ? await readJsonBody(request)
           : Object.fromEntries(url.searchParams.entries());
 
-        const result = await handleAnalyze(payload, env);
-        return sendJson(result, result.error ? 502 : 200, corsHeaders);
+        const authContext = await getOptionalAuthContext(request, env);
+        const result = await handleAnalyze(payload, env, authContext);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/search" || url.pathname === "/search") {
+        if (request.method !== "GET") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const officialSourceApi = createOfficialSourceApi(env);
+        const result = await officialSourceApi.handleSearch(url);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/member/me") {
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) {
+          return sendJson(authContext, authContext.status || 401, corsHeaders);
+        }
+
+        const body = request.method === "POST" ? await readJsonBody(request) : {};
+        const result = request.method === "POST"
+          ? await upsertMemberProfile(authContext.user, body, env)
+          : await getMemberProfile(authContext.user, env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/member/register") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) {
+          return sendJson(authContext, authContext.status || 401, corsHeaders);
+        }
+
+        const result = await registerMember(authContext.user, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/members") {
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await listMembers(env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/member") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await updateMemberByAdmin(adminContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/member/delete") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await softDeleteMember(adminContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/member/invite") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await createMemberInvitation(adminContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
       return sendJson({ error: "지원하지 않는 경로입니다." }, 404, corsHeaders);
@@ -72,7 +178,7 @@ export default {
   }
 };
 
-async function handleAnalyze(payload, env) {
+async function handleAnalyze(payload, env, authContext = null) {
   const question = cleanText(payload.q || payload.question || "");
   const topic = cleanText(payload.topic || "general");
   const role = cleanText(payload.role || "auto");
@@ -81,6 +187,15 @@ async function handleAnalyze(payload, env) {
 
   if (!question) {
     return { error: "질문이 비어 있습니다." };
+  }
+
+  const access = await assertLawAccess(authContext, env);
+  if (!access.ok) {
+    return {
+      error: access.message,
+      code: access.code,
+      status: access.status || 403
+    };
   }
 
   if (!env.OPENAI_API_KEY) {
@@ -114,6 +229,7 @@ async function handleAnalyze(payload, env) {
         analysis: aiResult.analysis,
         usage: aiResult.usage,
         billing: aiResult.billing,
+        member: access.member ? sanitizeMember(access.member) : null,
         costControl: getCostControlSettings(env)
       };
     } catch (error) {
@@ -331,6 +447,748 @@ function getLegalAnalysisSchema() {
   };
 }
 
+async function getOptionalAuthContext(request, env) {
+  const token = getBearerToken(request);
+  if (!token) {
+    return null;
+  }
+
+  return requireAuthContext(request, env);
+}
+
+async function requireAuthContext(request, env) {
+  const token = getBearerToken(request);
+  if (!token) {
+    return {
+      error: "로그인이 필요합니다.",
+      code: "AUTH_REQUIRED",
+      status: 401
+    };
+  }
+
+  try {
+    const user = await verifyFirebaseIdToken(token, env);
+    return {
+      ok: true,
+      user,
+      member: await getMemberForUser(user, env)
+    };
+  } catch (error) {
+    return {
+      error: error.message || "로그인 확인에 실패했습니다.",
+      code: "AUTH_INVALID",
+      status: 401
+    };
+  }
+}
+
+async function requireAdminContext(request, env) {
+  const authContext = await requireAuthContext(request, env);
+  if (authContext.error) {
+    return authContext;
+  }
+
+  if (!hasAdminAccess(authContext.member)) {
+    return {
+      error: "총괄관리자 또는 관리자 권한이 필요합니다.",
+      code: "ADMIN_REQUIRED",
+      status: 403
+    };
+  }
+
+  return authContext;
+}
+
+async function assertLawAccess(authContext, env) {
+  if (!isAuthRequired(env)) {
+    if (!authContext || authContext.error) {
+      return { ok: true, member: null };
+    }
+
+    return { ok: true, member: authContext.member };
+  }
+
+  if (!authContext || authContext.error) {
+    return {
+      ok: false,
+      code: "AUTH_REQUIRED",
+      status: 401,
+      message: authContext?.error || "법률정보 AI는 로그인 후 이용할 수 있습니다."
+    };
+  }
+
+  const member = authContext.member || await getMemberForUser(authContext.user, env);
+  if (!member || member.status !== "approved") {
+    return {
+      ok: false,
+      code: "MEMBER_NOT_APPROVED",
+      status: 403,
+      message: "회원가입 승인 후 법률정보 AI를 이용할 수 있습니다."
+    };
+  }
+
+  if (!LAW_ACCESS_ROLES.has(member.role)) {
+    return {
+      ok: false,
+      code: "LAW_ROLE_REQUIRED",
+      status: 403,
+      message: "법률정보 이용 권한이 없습니다. 관리자에게 법률정보 권한을 요청하세요."
+    };
+  }
+
+  return { ok: true, member };
+}
+
+async function getMemberProfile(user, env) {
+  const member = await getMemberForUser(user, env);
+  return {
+    ok: true,
+    configured: Boolean(env.MEMBER_DB),
+    member: sanitizeMember(member),
+    capabilities: getMemberCapabilities(member)
+  };
+}
+
+async function registerMember(user, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다. Cloudflare D1 연결 후 가입 신청을 저장할 수 있습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503,
+      member: sanitizeMember(buildVirtualMember(user, env))
+    };
+  }
+
+  const now = new Date().toISOString();
+  const existing = await getMemberByUid(user.uid, env);
+  const requestedRole = normalizeRole(body.requestedRole || "general", "general");
+  const displayName = cleanText(body.displayName || user.name || "");
+  const schoolName = cleanText(body.schoolName || "");
+  const phone = cleanText(body.phone || "");
+  const note = cleanText(body.note || "");
+  const invitation = await getInvitationForEmail(user.email, env);
+  const ownerMember = buildVirtualMember(user, env);
+  const isOwner = ownerMember.role === "owner";
+  const role = isOwner ? "owner" : invitation?.role || (existing?.role && existing.role !== "pending" ? existing.role : "pending");
+  const status = isOwner ? "approved" : invitation?.status || (existing?.status && existing.status !== "deleted" ? existing.status : "pending");
+
+  await env.MEMBER_DB.prepare(`
+    INSERT INTO members (
+      uid, email, display_name, school_name, phone, requested_role, role, status,
+      note, created_at, updated_at, approved_at, approved_by, last_login_at
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(uid) DO UPDATE SET
+      email = excluded.email,
+      display_name = excluded.display_name,
+      school_name = excluded.school_name,
+      phone = excluded.phone,
+      requested_role = excluded.requested_role,
+      note = excluded.note,
+      updated_at = excluded.updated_at,
+      last_login_at = excluded.last_login_at
+  `).bind(
+    user.uid,
+    user.email,
+    displayName,
+    schoolName,
+    phone,
+    requestedRole,
+    role,
+    status,
+    note,
+    existing?.createdAt || now,
+    now,
+    isOwner ? now : existing?.approvedAt || null,
+    isOwner ? user.uid : existing?.approvedBy || null,
+    now
+  ).run();
+
+  await writeAuditLog(env, {
+    actorUid: user.uid,
+    targetUid: user.uid,
+    action: existing ? "member.profile.update" : "member.register",
+    detail: JSON.stringify({ requestedRole, status, role })
+  });
+
+  if (invitation) {
+    await env.MEMBER_DB.prepare(`
+      UPDATE member_invitations
+      SET accepted_uid = ?, accepted_at = ?
+      WHERE email = ?
+    `).bind(user.uid, now, user.email).run().catch(() => null);
+  }
+
+  const member = await getMemberForUser(user, env);
+  return {
+    ok: true,
+    member: sanitizeMember(member),
+    capabilities: getMemberCapabilities(member)
+  };
+}
+
+async function upsertMemberProfile(user, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  return registerMember(user, body, env);
+}
+
+async function listMembers(env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다. D1 데이터베이스를 만든 뒤 MEMBER_DB 바인딩을 추가해야 합니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503,
+      members: []
+    };
+  }
+
+  const result = await env.MEMBER_DB.prepare(`
+    SELECT uid, email, display_name, school_name, phone, requested_role, role, status,
+           note, created_at, updated_at, approved_at, approved_by, last_login_at
+    FROM members
+    WHERE status != 'deleted'
+    ORDER BY
+      CASE status WHEN 'pending' THEN 0 WHEN 'approved' THEN 1 ELSE 2 END,
+      updated_at DESC
+    LIMIT 200
+  `).all();
+
+  return {
+    ok: true,
+    members: (result.results || []).map(mapMemberRow).map(sanitizeMember)
+  };
+}
+
+async function updateMemberByAdmin(adminContext, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  const uid = cleanText(body.uid || "");
+  if (!uid) {
+    return { error: "대상 회원 uid가 필요합니다.", code: "UID_REQUIRED", status: 400 };
+  }
+
+  const target = await getMemberByUid(uid, env);
+  if (!target) {
+    return { error: "대상 회원을 찾지 못했습니다.", code: "MEMBER_NOT_FOUND", status: 404 };
+  }
+
+  const nextRole = normalizeRole(body.role || target.role, target.role);
+  const nextStatus = normalizeStatus(body.status || target.status, target.status);
+  const note = cleanText(body.note ?? target.note ?? "");
+
+  if (OWNER_ROLES.has(target.role) && !OWNER_ROLES.has(adminContext.member.role)) {
+    return {
+      error: "총괄관리자 권한은 총괄관리자만 변경할 수 있습니다.",
+      code: "OWNER_PROTECTED",
+      status: 403
+    };
+  }
+
+  if (OWNER_ROLES.has(nextRole) && !OWNER_ROLES.has(adminContext.member.role)) {
+    return {
+      error: "총괄관리자 권한 부여는 총괄관리자만 할 수 있습니다.",
+      code: "OWNER_GRANT_REQUIRED",
+      status: 403
+    };
+  }
+
+  const now = new Date().toISOString();
+  const approvedAt = nextStatus === "approved" && target.status !== "approved"
+    ? now
+    : target.approvedAt || null;
+  const approvedBy = nextStatus === "approved" && target.status !== "approved"
+    ? adminContext.user.uid
+    : target.approvedBy || null;
+
+  await env.MEMBER_DB.prepare(`
+    UPDATE members
+    SET role = ?, status = ?, note = ?, updated_at = ?, approved_at = ?, approved_by = ?
+    WHERE uid = ?
+  `).bind(nextRole, nextStatus, note, now, approvedAt, approvedBy, uid).run();
+
+  await writeAuditLog(env, {
+    actorUid: adminContext.user.uid,
+    targetUid: uid,
+    action: "admin.member.update",
+    detail: JSON.stringify({ role: nextRole, status: nextStatus })
+  });
+
+  return {
+    ok: true,
+    member: sanitizeMember(await getMemberByUid(uid, env))
+  };
+}
+
+async function softDeleteMember(adminContext, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  const uid = cleanText(body.uid || "");
+  if (!uid) {
+    return { error: "대상 회원 uid가 필요합니다.", code: "UID_REQUIRED", status: 400 };
+  }
+
+  const target = await getMemberByUid(uid, env);
+  if (!target) {
+    return { error: "대상 회원을 찾지 못했습니다.", code: "MEMBER_NOT_FOUND", status: 404 };
+  }
+
+  if (OWNER_ROLES.has(target.role) && !OWNER_ROLES.has(adminContext.member.role)) {
+    return {
+      error: "총괄관리자는 일반 관리자가 삭제할 수 없습니다.",
+      code: "OWNER_PROTECTED",
+      status: 403
+    };
+  }
+
+  const now = new Date().toISOString();
+  await env.MEMBER_DB.prepare(`
+    UPDATE members
+    SET status = 'deleted', updated_at = ?, note = ?
+    WHERE uid = ?
+  `).bind(now, cleanText(body.note || "관리자 삭제 처리"), uid).run();
+
+  await writeAuditLog(env, {
+    actorUid: adminContext.user.uid,
+    targetUid: uid,
+    action: "admin.member.delete",
+    detail: cleanText(body.note || "")
+  });
+
+  return { ok: true, uid };
+}
+
+async function createMemberInvitation(adminContext, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  const email = cleanText(body.email || "").toLowerCase();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return { error: "초대할 이메일 주소를 정확히 입력해 주세요.", code: "EMAIL_REQUIRED", status: 400 };
+  }
+
+  const role = normalizeRole(body.role || "general", "general");
+  if (OWNER_ROLES.has(role) && !OWNER_ROLES.has(adminContext.member.role)) {
+    return {
+      error: "총괄관리자 사전 승인 권한은 총괄관리자만 부여할 수 있습니다.",
+      code: "OWNER_GRANT_REQUIRED",
+      status: 403
+    };
+  }
+
+  const status = normalizeStatus(body.status || "approved", "approved");
+  const note = cleanText(body.note || "");
+  const now = new Date().toISOString();
+
+  await env.MEMBER_DB.prepare(`
+    INSERT INTO member_invitations (email, role, status, note, created_at, created_by)
+    VALUES (?, ?, ?, ?, ?, ?)
+    ON CONFLICT(email) DO UPDATE SET
+      role = excluded.role,
+      status = excluded.status,
+      note = excluded.note,
+      created_at = excluded.created_at,
+      created_by = excluded.created_by
+  `).bind(email, role, status, note, now, adminContext.user.uid).run();
+
+  await writeAuditLog(env, {
+    actorUid: adminContext.user.uid,
+    targetUid: email,
+    action: "admin.member.invite",
+    detail: JSON.stringify({ role, status })
+  });
+
+  return {
+    ok: true,
+    invitation: { email, role, status, note, createdAt: now }
+  };
+}
+
+async function getMemberForUser(user, env) {
+  if (!user?.uid) {
+    return null;
+  }
+
+  if (!env.MEMBER_DB) {
+    return buildVirtualMember(user, env);
+  }
+
+  const member = await getMemberByUid(user.uid, env);
+  if (member) {
+    await env.MEMBER_DB.prepare("UPDATE members SET last_login_at = ?, updated_at = ? WHERE uid = ?")
+      .bind(new Date().toISOString(), new Date().toISOString(), user.uid)
+      .run()
+      .catch(() => null);
+    return member;
+  }
+
+  const virtual = buildVirtualMember(user, env);
+  if (virtual.role === "owner") {
+    await registerMember(user, { requestedRole: "owner", displayName: user.name }, env);
+    return getMemberByUid(user.uid, env);
+  }
+
+  return {
+    ...virtual,
+    role: "pending",
+    status: "pending",
+    requestedRole: "general"
+  };
+}
+
+async function getInvitationForEmail(email, env) {
+  if (!env.MEMBER_DB || !email) {
+    return null;
+  }
+
+  const row = await env.MEMBER_DB.prepare(`
+    SELECT email, role, status, note, created_at, created_by, accepted_uid, accepted_at
+    FROM member_invitations
+    WHERE email = ?
+  `).bind(cleanText(email).toLowerCase()).first().catch(() => null);
+
+  if (!row || row.accepted_uid) {
+    return null;
+  }
+
+  return {
+    email: row.email,
+    role: normalizeRole(row.role, "general"),
+    status: normalizeStatus(row.status, "approved"),
+    note: row.note || "",
+    createdAt: row.created_at || "",
+    createdBy: row.created_by || ""
+  };
+}
+
+async function getMemberByUid(uid, env) {
+  if (!env.MEMBER_DB) {
+    return null;
+  }
+
+  const row = await env.MEMBER_DB.prepare(`
+    SELECT uid, email, display_name, school_name, phone, requested_role, role, status,
+           note, created_at, updated_at, approved_at, approved_by, last_login_at
+    FROM members
+    WHERE uid = ?
+  `).bind(uid).first();
+
+  return row ? mapMemberRow(row) : null;
+}
+
+function buildVirtualMember(user, env) {
+  const ownerEmails = parseEmailList(env.OWNER_EMAILS);
+  const adminEmails = parseEmailList(env.ADMIN_EMAILS);
+  const email = cleanText(user.email || "").toLowerCase();
+  const now = new Date().toISOString();
+
+  if (ownerEmails.has(email)) {
+    return {
+      uid: user.uid,
+      email,
+      displayName: user.name || "",
+      schoolName: "",
+      phone: "",
+      requestedRole: "owner",
+      role: "owner",
+      status: "approved",
+      note: "OWNER_EMAILS 환경값으로 자동 총괄관리자 처리",
+      createdAt: now,
+      updatedAt: now,
+      approvedAt: now,
+      approvedBy: "system",
+      lastLoginAt: now
+    };
+  }
+
+  if (adminEmails.has(email)) {
+    return {
+      uid: user.uid,
+      email,
+      displayName: user.name || "",
+      schoolName: "",
+      phone: "",
+      requestedRole: "admin",
+      role: "admin",
+      status: "approved",
+      note: "ADMIN_EMAILS 환경값으로 자동 관리자 처리",
+      createdAt: now,
+      updatedAt: now,
+      approvedAt: now,
+      approvedBy: "system",
+      lastLoginAt: now
+    };
+  }
+
+  return {
+    uid: user.uid,
+    email,
+    displayName: user.name || "",
+    schoolName: "",
+    phone: "",
+    requestedRole: "general",
+    role: isAuthRequired(env) ? "pending" : "law",
+    status: isAuthRequired(env) ? "pending" : "approved",
+    note: env.MEMBER_DB ? "" : "회원 DB 미연결 임시 프로필",
+    createdAt: now,
+    updatedAt: now,
+    approvedAt: isAuthRequired(env) ? "" : now,
+    approvedBy: isAuthRequired(env) ? "" : "system",
+    lastLoginAt: now
+  };
+}
+
+function mapMemberRow(row) {
+  return {
+    uid: row.uid,
+    email: row.email,
+    displayName: row.display_name || "",
+    schoolName: row.school_name || "",
+    phone: row.phone || "",
+    requestedRole: row.requested_role || "general",
+    role: row.role || "pending",
+    status: row.status || "pending",
+    note: row.note || "",
+    createdAt: row.created_at || "",
+    updatedAt: row.updated_at || "",
+    approvedAt: row.approved_at || "",
+    approvedBy: row.approved_by || "",
+    lastLoginAt: row.last_login_at || ""
+  };
+}
+
+function sanitizeMember(member) {
+  if (!member) {
+    return null;
+  }
+
+  return {
+    uid: member.uid,
+    email: member.email,
+    displayName: member.displayName,
+    schoolName: member.schoolName,
+    phone: member.phone,
+    requestedRole: member.requestedRole,
+    role: member.role,
+    status: member.status,
+    note: member.note,
+    createdAt: member.createdAt,
+    updatedAt: member.updatedAt,
+    approvedAt: member.approvedAt,
+    lastLoginAt: member.lastLoginAt
+  };
+}
+
+function getMemberCapabilities(member) {
+  const approved = member?.status === "approved";
+  return {
+    canUsePublic: true,
+    canUseJobs: approved && ["jobs", "law", "teacher", "admin", "owner"].includes(member.role),
+    canUseLawInfo: approved && LAW_ACCESS_ROLES.has(member.role),
+    canManageMembers: approved && ADMIN_ROLES.has(member.role),
+    canGrantOwner: approved && OWNER_ROLES.has(member.role)
+  };
+}
+
+function hasAdminAccess(member) {
+  return member?.status === "approved" && ADMIN_ROLES.has(member.role);
+}
+
+async function writeAuditLog(env, item) {
+  if (!env.MEMBER_DB) {
+    return;
+  }
+
+  await env.MEMBER_DB.prepare(`
+    INSERT INTO member_audit_logs (actor_uid, target_uid, action, detail, created_at)
+    VALUES (?, ?, ?, ?, ?)
+  `).bind(
+    item.actorUid || "",
+    item.targetUid || "",
+    item.action || "",
+    item.detail || "",
+    new Date().toISOString()
+  ).run().catch(() => null);
+}
+
+async function verifyFirebaseIdToken(token, env) {
+  const projectId = cleanText(env.FIREBASE_PROJECT_ID || "");
+  if (!projectId) {
+    throw new Error("FIREBASE_PROJECT_ID 환경값이 필요합니다.");
+  }
+
+  const parts = token.split(".");
+  if (parts.length !== 3) {
+    throw new Error("잘못된 로그인 토큰 형식입니다.");
+  }
+
+  const header = parseJwtPart(parts[0]);
+  const payload = parseJwtPart(parts[1]);
+
+  if (header.alg !== "RS256") {
+    throw new Error("지원하지 않는 로그인 토큰 알고리즘입니다.");
+  }
+
+  if (!header.kid) {
+    throw new Error("로그인 토큰 키 식별자가 없습니다.");
+  }
+
+  const now = Math.floor(Date.now() / 1000);
+  if (Number(payload.exp) <= now) {
+    throw new Error("로그인 세션이 만료되었습니다.");
+  }
+
+  if (Number(payload.iat) > now + 60 || Number(payload.auth_time) > now + 60) {
+    throw new Error("로그인 토큰 시간이 올바르지 않습니다.");
+  }
+
+  if (payload.aud !== projectId || payload.iss !== `https://securetoken.google.com/${projectId}`) {
+    throw new Error("로그인 토큰의 Firebase 프로젝트가 일치하지 않습니다.");
+  }
+
+  if (!payload.sub || String(payload.sub).length > 128) {
+    throw new Error("로그인 토큰의 사용자 식별자가 올바르지 않습니다.");
+  }
+
+  const certs = await getFirebaseCerts();
+  const cert = certs[header.kid];
+  if (!cert) {
+    throw new Error("로그인 토큰 검증 키를 찾지 못했습니다.");
+  }
+
+  const key = await crypto.subtle.importKey(
+    "spki",
+    pemToArrayBuffer(cert),
+    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+    false,
+    ["verify"]
+  );
+  const signingInput = new TextEncoder().encode(`${parts[0]}.${parts[1]}`);
+  const signature = base64UrlToBytes(parts[2]);
+  const verified = await crypto.subtle.verify("RSASSA-PKCS1-v1_5", key, signature, signingInput);
+
+  if (!verified) {
+    throw new Error("로그인 토큰 서명 검증에 실패했습니다.");
+  }
+
+  return {
+    uid: payload.sub,
+    email: cleanText(payload.email || "").toLowerCase(),
+    emailVerified: Boolean(payload.email_verified),
+    name: cleanText(payload.name || payload.email || ""),
+    picture: cleanText(payload.picture || ""),
+    authTime: payload.auth_time,
+    claims: payload
+  };
+}
+
+async function getFirebaseCerts() {
+  if (firebaseCertCache && firebaseCertCache.expiresAt > Date.now()) {
+    return firebaseCertCache.certs;
+  }
+
+  const response = await fetch(FIREBASE_CERT_URL);
+  if (!response.ok) {
+    throw new Error(`Firebase 공개키 조회 실패: HTTP ${response.status}`);
+  }
+
+  const certs = await response.json();
+  const cacheControl = response.headers.get("cache-control") || "";
+  const maxAge = Number(cacheControl.match(/max-age=(\d+)/)?.[1] || 3600);
+  firebaseCertCache = {
+    certs,
+    expiresAt: Date.now() + Math.max(300, maxAge - 60) * 1000
+  };
+  return certs;
+}
+
+function parseJwtPart(value) {
+  try {
+    return JSON.parse(new TextDecoder().decode(base64UrlToBytes(value)));
+  } catch {
+    throw new Error("로그인 토큰을 해석하지 못했습니다.");
+  }
+}
+
+function pemToArrayBuffer(pem) {
+  const base64 = String(pem)
+    .replace(/-----BEGIN CERTIFICATE-----/g, "")
+    .replace(/-----END CERTIFICATE-----/g, "")
+    .replace(/\s+/g, "");
+  return base64ToBytes(base64);
+}
+
+function base64UrlToBytes(value) {
+  const base64 = String(value || "").replace(/-/g, "+").replace(/_/g, "/");
+  return base64ToBytes(base64.padEnd(Math.ceil(base64.length / 4) * 4, "="));
+}
+
+function base64ToBytes(base64) {
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let index = 0; index < binary.length; index += 1) {
+    bytes[index] = binary.charCodeAt(index);
+  }
+  return bytes;
+}
+
+function getBearerToken(request) {
+  const header = request.headers.get("authorization") || "";
+  const match = header.match(/^Bearer\s+(.+)$/i);
+  return match ? match[1].trim() : "";
+}
+
+function isAuthRequired(env) {
+  return /^true$/i.test(String(env.AUTH_REQUIRED || ""));
+}
+
+function normalizeRole(value, fallback = "pending") {
+  const role = cleanText(value);
+  return MEMBER_ROLES.includes(role) ? role : fallback;
+}
+
+function normalizeStatus(value, fallback = "pending") {
+  const status = cleanText(value);
+  return MEMBER_STATUSES.includes(status) ? status : fallback;
+}
+
+function parseEmailList(value) {
+  return new Set(String(value || "")
+    .split(",")
+    .map((item) => item.trim().toLowerCase())
+    .filter(Boolean));
+}
+
+function getResultStatus(result) {
+  if (!result?.error) {
+    return 200;
+  }
+  return result.status || (result.fallback ? 502 : 400);
+}
+
 function getCorsHeaders(origin, env) {
   const allowedOrigins = String(env.ALLOWED_ORIGINS || "")
     .split(",")
@@ -341,7 +1199,7 @@ function getCorsHeaders(origin, env) {
   return {
     "access-control-allow-origin": allowOrigin,
     "access-control-allow-methods": "GET,POST,OPTIONS",
-    "access-control-allow-headers": "content-type,accept",
+    "access-control-allow-headers": "content-type,accept,authorization",
     "vary": "Origin"
   };
 }

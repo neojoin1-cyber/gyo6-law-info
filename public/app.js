@@ -1021,12 +1021,22 @@ async function loadAiAnalysis(question, preset, userRole, answerMode, caseId) {
   }
 
   try {
+    const access = await getLawInfoAccess();
+    if (!access.ok) {
+      mount.innerHTML = renderAiAccessBlocked(access.message);
+      statusDot.textContent = "권한 필요";
+      return;
+    }
+
+    const headers = {
+      accept: "application/json",
+      "content-type": "application/json",
+      ...(access.token ? { authorization: `Bearer ${access.token}` } : {})
+    };
+
     const response = await fetch(getAiAnalyzeUrl(), {
       method: "POST",
-      headers: {
-        accept: "application/json",
-        "content-type": "application/json"
-      },
+      headers,
       body: JSON.stringify({
         caseId,
         question,
@@ -1060,6 +1070,23 @@ async function loadAiAnalysis(question, preset, userRole, answerMode, caseId) {
   }
 }
 
+async function getLawInfoAccess() {
+  if (!window.GYO6_AUTH?.getAccessTokenFor) {
+    return { ok: true, token: "" };
+  }
+
+  return window.GYO6_AUTH.getAccessTokenFor("law");
+}
+
+function renderAiAccessBlocked(message = "") {
+  return `
+    <div class="answer-label">로그인·권한 확인</div>
+    <h3>법률정보 AI 이용권한이 필요합니다.</h3>
+    <p>${escapeHtml(message || "로그인하거나 관리자 승인을 받은 뒤 다시 시도해 주세요.")}</p>
+    <p>공개 자료와 기본 화면은 계속 볼 수 있지만, AI 법률정보 분석은 회원 등급에 따라 제한됩니다.</p>
+  `;
+}
+
 function getAiAnalyzeUrl(params = null) {
   const configuredBase = getConfiguredAiWorkerBaseUrl();
   if (!configuredBase) {
@@ -1068,6 +1095,15 @@ function getAiAnalyzeUrl(params = null) {
 
   const baseUrl = `${configuredBase.replace(/\/+$/, "")}/api/analyze`;
   return params ? `${baseUrl}?${params.toString()}` : baseUrl;
+}
+
+function getOfficialSearchUrl(params) {
+  const configuredBase = getConfiguredAiWorkerBaseUrl();
+  if (!configuredBase) {
+    return `/api/search?${params.toString()}`;
+  }
+
+  return `${configuredBase.replace(/\/+$/, "")}/api/search?${params.toString()}`;
 }
 
 function getConfiguredAiWorkerBaseUrl() {
@@ -1507,7 +1543,7 @@ async function loadLiveSources(question, preset, keywords, caseId) {
       laws: preset.laws.join("|"),
       keywords: keywords.join("|")
     });
-    const response = await fetch(`/api/search?${params.toString()}`, {
+    const response = await fetch(getOfficialSearchUrl(params), {
       headers: { accept: "application/json" }
     });
 

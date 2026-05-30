@@ -8,6 +8,6 @@
     "start": "node server.mjs",
     "test:scenarios": "node tools/scenario-regression.mjs",
     "worker:deploy": "npx wrangler deploy --config workers/ai-analysis/wrangler.toml",
-    "check": "node --check public/app.js && node --check server.mjs && node --check functions/index.mjs && node --check functions/shared/api.mjs && node --check workers/ai-analysis/src/index.js && npm run test:scenarios"
+    "check": "node --check public/app.js && node --check public/auth.js && node --check public/firebase-config.js && node --check server.mjs && node --check functions/index.mjs && node --check functions/shared/api.mjs && node --check workers/ai-analysis/src/index.js && npm run test:scenarios"
   }
 }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GYO6 Law Info | AI 법률정보 도우미</title>
   <meta name="description" content="특성화고 취업과 학교 현장의 법령·원문 근거를 찾는 AI 법률정보 도우미">
-  <link rel="stylesheet" href="styles.css?v=20260530-scenario-regression">
+  <link rel="stylesheet" href="styles.css?v=20260530-member-access">
 </head>
 <body>
   <header class="topbar">
@@ -16,7 +16,10 @@
         <small>AI 법률정보 도우미</small>
       </span>
     </a>
-    <span class="phase-badge">MVP 검증중</span>
+    <div class="topbar-actions">
+      <span class="phase-badge">MVP 검증중</span>
+      <div id="authMount" class="auth-mount" aria-live="polite"></div>
+    </div>
   </header>
 
   <main>
@@ -214,6 +217,8 @@
   </footer>
 
   <script src="ai-config.js?v=20260530-simple-report"></script>
-  <script src="app.js?v=20260530-cost-control"></script>
+  <script src="firebase-config.js?v=20260530-member-access"></script>
+  <script type="module" src="auth.js?v=20260530-member-access"></script>
+  <script src="app.js?v=20260530-member-access"></script>
 </body>
 </html>

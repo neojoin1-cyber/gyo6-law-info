@@ -30,7 +30,9 @@
 - API 키는 `.env.local`에서만 읽고 브라우저에는 노출하지 않음
 - 법제처 Open API는 신청 도메인 검증을 통과하도록 `LAW_OPEN_API_REFERER` 헤더를 서버에서 함께 전송
 - Firebase Hosting + Functions 배포 구조 준비
-- Cloudflare Workers 기반 AI 사안 분석 API 구조 추가
+- Cloudflare Workers 기반 AI 사안 분석·공식자료 검색 API 배포
+- Cloudflare D1 회원 DB와 `MEMBER_DB` 바인딩 구성
+- Firebase Hosting 자동 설정(`/__/firebase/init.json`)을 이용한 로그인 UI 준비
 - GitHub 원격 저장소 `neojoin1-cyber/gyo6-law-info` 연결 및 `main` push 완료
 
 ## 로컬 확인
@@ -57,16 +59,13 @@ npm run check
 
 ## 다음 개발 순서
 
-1. Cloudflare Workers에 AI 분석 API 배포
-2. Worker Secret에 `OPENAI_API_KEY` 등록
-3. `public/ai-config.js`에 Worker URL 연결
-4. Firebase Hosting에 정적 화면 배포
-5. 배포 URL에서 AI 분석과 법제처·안전보건공단 API 재검증
-6. 법제처 법령 검색 결과 정규화 고도화
-7. 안전보건공단 국내재해사례와 안전보건자료 응답 필드 정리
-8. 승인 대기 중인 사법정보공유포털·국회법률도서관 API 연결
-9. 비용 제한, 사용량 제한, 안내문 강화
-10. 개인 홈페이지 카드에서 이 서비스로 링크 연결
+1. Firebase 콘솔에서 Email/Password 로그인을 활성화하고 실제 회원가입 흐름을 검증
+2. 총괄관리자 계정 로그인 후 회원 승인·권한 회수 UI 검증
+3. 검증 완료 후 `AUTH_REQUIRED=true`로 전환해 법률정보 AI 접근 제한
+4. 법제처 API가 Cloudflare Worker에서 `HTTP 525`를 반환하는 연결 문제의 별도 중계 방안 검토
+5. 승인 대기 중인 사법정보공유포털·국회법률도서관 API 연결
+6. 채용정보·전자책 서재 권한 등급과 메뉴 연결
+7. 개인 홈페이지 카드에서 이 서비스로 링크 연결
 
 ## Cloudflare Workers AI 분석 API
 
@@ -122,7 +121,7 @@ Cloudflare Worker는 `/api/analyze`를 제공하며, AI가 먼저 다음 항목�
 
 ## 보안 메모
 
-API 키와 Firebase 설정값은 `.env` 계열 파일에 두고 Git에 커밋하지 않습니다. 공개 프론트엔드에 비밀 키를 직접 넣지 않습니다.
+API 키와 Firebase 서버 비밀값은 `.env` 계열 파일에 두고 Git에 커밋하지 않습니다. 공개 프론트엔드에 비밀 키를 직접 넣지 않습니다. 배포 환경의 Firebase 웹 앱 공개 설정은 Firebase Hosting의 `/__/firebase/init.json`을 통해 자동 로딩합니다.
 
 로컬 개발에서는 다음 값을 사용합니다.
 
@@ -151,15 +150,22 @@ OPENAI_COST_PRICING_DATE=2026-05-30
 
 브라우저 화면의 누적값은 현재 브라우저 기준의 추정치입니다. 실제 청구와 계정 전체 차단은 OpenAI 대시보드의 사용량·예산 설정을 최종 기준으로 확인합니다.
 
-Firebase 배포 전에는 Functions Secret에 같은 값을 등록합니다. Secret 등록과 실제 배포는 외부 Firebase 프로젝트 상태를 바꾸므로 실행 직전 사용자 확인을 받고 진행합니다.
+## 회원·권한 관리
 
-```powershell
-firebase functions:secrets:set LAW_OPEN_API_OC
-firebase functions:secrets:set PUBLIC_DATA_API_KEY
-firebase functions:secrets:set OPENAI_API_KEY
-```
+회원 시스템은 Firebase Authentication으로 로그인하고, Cloudflare Worker가 Firebase ID 토큰과 D1 회원 DB를 확인하는 구조로 설계했습니다.
 
-배포 명령은 사용자 확인 후 실행합니다.
+1차 권한 등급:
+
+- `general`: 일반 사용자
+- `jobs`: 채용정보 회원
+- `law`: 법률정보 회원
+- `teacher`: 교사/학교 회원
+- `admin`: 관리자
+- `owner`: 총괄관리자
+
+초기 배포는 기존 테스트 흐름을 막지 않도록 `AUTH_REQUIRED=false`입니다. D1 `MEMBER_DB`, `OWNER_EMAILS` 설정과 마이그레이션은 적용되어 있으며, Firebase Auth 로그인 검증이 끝난 뒤 `AUTH_REQUIRED=true`로 전환하면 법률정보 AI 접근이 승인 회원으로 제한됩니다.
+
+자세한 운영 계획은 [docs/MEMBER_ACCESS_PLAN.md](docs/MEMBER_ACCESS_PLAN.md)를 참고합니다.
 
 ```powershell
 npm --prefix functions install

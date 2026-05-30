@@ -504,7 +504,7 @@ async function searchLawInterpretations(openApiKey, question) {
 }
 
 async function callLawSearch(openApiKey, params) {
-  const url = new URL("http://www.law.go.kr/DRF/lawSearch.do");
+  const url = new URL("https://www.law.go.kr/DRF/lawSearch.do");
   url.searchParams.set("OC", openApiKey);
   url.searchParams.set("type", "JSON");
   url.searchParams.set("page", "1");
@@ -527,11 +527,35 @@ async function callLawSearch(openApiKey, params) {
       notices: []
     };
   } catch (error) {
+    const fallbackItem = buildLawApiFallbackItem(params);
     return {
-      items: [],
-      notices: [`법제처 ${params.target} 검색 실패: ${error.message}`]
+      items: fallbackItem ? [fallbackItem] : [],
+      notices: [`법제처 ${params.target} 검색 실패: ${error.message}. 공식 원문 검색 링크를 대신 표시합니다.`]
     };
   }
+}
+
+function buildLawApiFallbackItem(params) {
+  if (params.target !== "law" || !params.query) {
+    return null;
+  }
+
+  return {
+    title: params.query,
+    subtitle: "국가법령정보센터 직접 검색",
+    source: "국가법령정보센터",
+    date: "",
+    summary: "API 자동 조회가 실패했으므로 원문 검색 링크에서 현행 여부와 조문을 직접 확인해야 합니다.",
+    url: `https://www.law.go.kr/LSW/lsSc.do?query=${encodeURIComponent(params.query)}`,
+    query: params.query,
+    type: "법령 원문 검색",
+    verifiedAt: new Date().toISOString(),
+    reliability: {
+      level: "manual-source-link",
+      label: "직접 확인 필요",
+      needsReview: true
+    }
+  };
 }
 
 function getLawOpenApiHeaders() {
