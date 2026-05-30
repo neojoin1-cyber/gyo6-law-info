@@ -1,6 +1,11 @@
 name = "gyo6-law-info-ai"
 main = "src/index.js"
 compatibility_date = "2026-05-30"
+workers_dev = true
+preview_urls = false
+
+[placement]
+region = "aws:us-east-1"
 
 [vars]
 OPENAI_MODEL = "gpt-5.2"
