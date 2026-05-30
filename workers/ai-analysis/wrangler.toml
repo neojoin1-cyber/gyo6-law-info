@@ -6,6 +6,3 @@ compatibility_date = "2026-05-30"
 OPENAI_MODEL = "gpt-5.2"
 OPENAI_FALLBACK_MODEL = "gpt-4.1"
 ALLOWED_ORIGINS = "https://gyo6.kr,https://www.gyo6.kr,https://gyo6-law-info.web.app,http://localhost:5173,http://127.0.0.1:5173"
-
-[limits]
-cpu_ms = 1000
