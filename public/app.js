@@ -1,11 +1,15 @@
 const form = document.querySelector("#queryForm");
 const questionInput = document.querySelector("#question");
 const resultState = document.querySelector("#resultState");
+const resultPanel = document.querySelector(".result-panel");
+const queryPanel = document.querySelector(".query-panel");
+const workspace = document.querySelector(".workspace");
 const resultTitle = document.querySelector(".result-head h2");
 const statusDot = document.querySelector(".status-dot");
 const topicTypeInput = document.querySelector("#topicType");
 const answerModeInput = document.querySelector("#answerMode");
 const userRoleInput = document.querySelector("#userRole");
+let skipNextAutoScroll = false;
 
 const roleGuides = {
   auto: {
@@ -249,6 +253,14 @@ form.addEventListener("submit", (event) => {
   const scopes = [...form.querySelectorAll("input[name='scope']:checked")].map((input) => input.value);
   const preset = findPreset(question, topicTypeInput.value);
   renderResult(question, preset, scopes, answerModeInput.value, userRoleInput.value);
+  if (skipNextAutoScroll) {
+    skipNextAutoScroll = false;
+  } else {
+    window.setTimeout(() => {
+      const targetTop = Math.max(0, (resultPanel?.offsetTop || 0) - 88);
+      window.scrollTo(0, targetTop);
+    }, 0);
+  }
 });
 
 hydrateFromUrl();
@@ -263,6 +275,11 @@ function findPreset(question, selectedType) {
 }
 
 function renderResult(question, preset, scopes, answerMode, userRole) {
+  workspace?.classList.add("has-result");
+  if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== resultPanel) {
+    workspace.insertBefore(resultPanel, queryPanel);
+  }
+
   const encodedQuestion = encodeURIComponent(question);
   const modeMessage = getModeMessage(answerMode);
   const roleGuide = getRoleGuide(userRole);
@@ -272,12 +289,32 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const factPrompts = getFactPrompts(preset, userRole);
   const riskSignals = detectRiskSignals(question);
   const officialMaterials = getOfficialMaterials(preset);
+  const directAnswer = getDirectAnswer(question, preset, roleGuide);
 
-  resultTitle.textContent = "요약 초안";
+  resultTitle.textContent = "답변 먼저";
   statusDot.textContent = "API 확인중";
   resultState.className = "summary-box";
   resultState.innerHTML = `
-    <div class="query-readout">${escapeHtml(question)}</div>
+    <section class="answer-first" aria-label="질문에 대한 1차 답변">
+      <div class="answer-label">질문에 대한 1차 답변</div>
+      <h3>${escapeHtml(directAnswer.title)}</h3>
+      <p>${escapeHtml(directAnswer.lead)}</p>
+      <div class="answer-columns">
+        <div>
+          <strong>지금 바로 할 일</strong>
+          <ol>
+            ${directAnswer.actions.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ol>
+        </div>
+        <div>
+          <strong>${escapeHtml(directAnswer.responsibilityTitle)}</strong>
+          <ul>
+            ${directAnswer.responsibilities.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+      <p class="answer-warning">${escapeHtml(directAnswer.warning)}</p>
+    </section>
 
     <section class="trust-panel" aria-label="검증 기준">
       <div>
@@ -290,6 +327,11 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
         <li>출처 불명확 시 확인 필요</li>
       </ul>
     </section>
+
+    <details class="question-detail">
+      <summary>내가 입력한 질문 보기</summary>
+      <div class="query-readout">${escapeHtml(question)}</div>
+    </details>
 
     <section class="role-note" aria-label="사용자 관점">
       <strong>${escapeHtml(roleGuide.label)}</strong>
@@ -344,7 +386,7 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
     </section>
 
     <section class="result-block api-live" id="liveSourceMount" aria-live="polite">
-      <h3>실제 API 확인</h3>
+      <h3>근거 자료 확인</h3>
       <p class="api-source-empty">법제처와 안전보건공단 자료를 확인하고 있습니다.</p>
     </section>
 
@@ -404,7 +446,7 @@ async function loadLiveSources(question, preset, keywords) {
   if (window.location.protocol === "file:") {
     statusDot.textContent = "로컬 서버 필요";
     mount.innerHTML = `
-      <h3>실제 API 확인</h3>
+      <h3>근거 자료 확인</h3>
       <p class="api-source-empty"><code>npm run dev</code>로 실행한 뒤 같은 질문을 검색하면 실제 API 후보를 확인할 수 있습니다.</p>
     `;
     return;
@@ -433,7 +475,7 @@ async function loadLiveSources(question, preset, keywords) {
   } catch (error) {
     statusDot.textContent = "API 확인 실패";
     mount.innerHTML = `
-      <h3>실제 API 확인</h3>
+      <h3>근거 자료 확인</h3>
       <p class="api-source-empty">API 확인 중 오류가 발생했습니다. 비밀키 설정과 네트워크 상태를 확인해 주세요.</p>
       <p class="api-error-text">${escapeHtml(error.message)}</p>
     `;
@@ -443,7 +485,7 @@ async function loadLiveSources(question, preset, keywords) {
 function renderLiveSourceResults(data) {
   if (data.error) {
     return `
-      <h3>실제 API 확인</h3>
+      <h3>근거 자료 확인</h3>
       <p class="api-source-empty">${escapeHtml(data.error)}</p>
     `;
   }
@@ -453,7 +495,7 @@ function renderLiveSourceResults(data) {
   const checkedAt = formatDateTime(data.verification?.checkedAt || data.generatedAt);
 
   return `
-    <h3>실제 API 확인</h3>
+    <h3>근거 자료 확인</h3>
     <div class="api-verification">
       <span>확인시각 ${escapeHtml(checkedAt)}</span>
       <span>공식 API 우선</span>
@@ -546,6 +588,11 @@ function formatDateTime(value) {
 }
 
 function showEmptyMessage(title, message) {
+  workspace?.classList.remove("has-result");
+  if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== queryPanel) {
+    workspace.insertBefore(queryPanel, resultPanel);
+  }
+
   resultTitle.textContent = "입력 필요";
   statusDot.textContent = "대기중";
   resultState.className = "empty-state";
@@ -579,6 +626,69 @@ function getModeMessage(answerMode) {
   };
 
   return messages[answerMode] || messages.plain;
+}
+
+function getDirectAnswer(question, preset, roleGuide) {
+  const normalized = question.replace(/\s+/g, "");
+  const hasInjury = /골절|부상|다침|사고|중상|치료|병원|119/.test(normalized);
+  const hasMachine = /기계|설비|장비|끼임|절단|충돌|부딪/.test(normalized);
+
+  if (preset.type === "fieldTraining" || preset.type === "schoolSafety" || hasInjury || hasMachine) {
+    return {
+      title: "다친 학생 보호와 사고 기록이 먼저이고, 책임 판단은 원문과 사실관계 확인 후 나눠야 합니다.",
+      lead: "현장실습 중 기계 사고로 팔 골절상이 발생했다면 치료, 보호자 통보, 사고 경위 기록, 실습기관과 학교의 조치 확인을 먼저 진행해야 합니다.",
+      actions: [
+        "치료와 안전 확보를 먼저 하고 진단서, 치료 기록, 사고 당시 사진과 목격자 진술을 모읍니다.",
+        "현장실습 협약서, 실습일지, 안전교육 기록, 기계 안전장치와 작업 지시 내용을 확인합니다.",
+        "학교는 지도교사와 관리자에게 즉시 보고하고 보호자 안내, 교육청 보고 필요 여부, 실습 중단 여부를 검토합니다.",
+        "실습기관은 사고 보고, 현장 보존, 안전조치, 보험·산재 관련 절차 가능성을 확인합니다."
+      ],
+      responsibilityTitle: "주체별로 나눠 볼 책임",
+      responsibilities: [
+        "학생: 치료와 사실 기록 확보가 우선이며, 혼자 책임을 떠안기는 어렵습니다.",
+        "학교·지도교사: 실습 배치, 사전교육, 지도·점검, 사고 후 보호 조치가 쟁점입니다.",
+        "실습기관·회사: 현장 안전관리, 기계 안전조치, 작업 지시와 감독이 핵심 쟁점입니다.",
+        "학부모: 치료 자료, 협약서, 학교와 회사의 안내 내용을 모아 공식 절차를 요구할 수 있습니다."
+      ],
+      warning: "골절처럼 중한 부상이 있으면 검색 결과만으로 책임을 단정하지 말고, 학교·교육청·노무사·변호사 등 전문가 확인을 함께 진행해야 합니다."
+    };
+  }
+
+  if (preset.type === "schoolViolence") {
+    return {
+      title: "사실관계 기록과 학생 보호 조치를 먼저 확인해야 합니다.",
+      lead: "학교폭력 의심 사안은 신고·접수, 피해학생 보호, 전담기구 확인, 심의 절차를 순서대로 나누어 봐야 합니다.",
+      actions: [
+        "발생 일시, 장소, 관련 학생, 증거 자료를 시간순으로 정리합니다.",
+        "학교의 접수 여부와 피해학생 보호 조치가 있었는지 확인합니다.",
+        "교육부 학교폭력 사안처리 가이드북과 관련 법령을 함께 확인합니다."
+      ],
+      responsibilityTitle: "확인할 주체",
+      responsibilities: [
+        "학생: 안전 확보와 진술 보호가 우선입니다.",
+        "학교: 접수, 조사, 보호 조치, 절차 안내가 쟁점입니다.",
+        "학부모: 자료 보존과 학교 절차 확인이 중요합니다."
+      ],
+      warning: "징계, 심의, 형사 문제가 연결되면 전문가와 관할 기관 확인이 필요합니다."
+    };
+  }
+
+  return {
+    title: `${preset.title}에 관해 먼저 사실관계와 공식 원문을 나눠 확인해야 합니다.`,
+    lead: `${roleGuide.label} 기준으로는 질문 속 대상, 장소, 날짜, 기관, 이미 진행된 조치를 먼저 정리한 뒤 공식 법령과 행정자료를 확인하는 흐름이 좋습니다.`,
+    actions: [
+      "관련된 사람과 기관을 나눠 적습니다.",
+      "계약서, 협약서, 공문, 상담 기록, 사진 등 원자료를 모읍니다.",
+      "아래 공식 자료 후보와 실제 API 결과에서 원문 링크를 먼저 확인합니다."
+    ],
+    responsibilityTitle: "확인할 기준",
+    responsibilities: [
+      "법령 원문: 적용 기준과 조문을 확인합니다.",
+      "행정자료: 학교 현장에서 실제 운영 절차를 확인합니다.",
+      "전문가 확인: 책임 판단이나 분쟁 가능성이 있으면 별도로 검토합니다."
+    ],
+    warning: "이 답변은 법률 자문이 아니라 정보 정리입니다. 중요한 판단은 전문가 확인이 필요합니다."
+  };
 }
 
 function getRoleGuide(userRole) {
@@ -682,6 +792,7 @@ function hydrateFromUrl() {
   setScopesFromUrl(params.get("scopes"));
 
   if (params.get("run") === "1") {
+    skipNextAutoScroll = true;
     form.requestSubmit();
   }
 }

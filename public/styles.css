@@ -391,7 +391,7 @@ h1 {
 
 .workspace {
   display: grid;
-  grid-template-columns: minmax(320px, .82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(300px, .72fr) minmax(0, 1.28fr);
   gap: 20px;
   align-items: start;
 }
@@ -411,6 +411,7 @@ h1 {
 .result-panel {
   min-height: 520px;
   padding: 22px;
+  scroll-margin-top: 92px;
 }
 
 .panel-head {
@@ -622,6 +623,97 @@ select:focus {
   background: #f0f8f7;
   color: var(--navy);
   line-height: 1.7;
+}
+
+.answer-first {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid #b9dcda;
+  border-left: 5px solid var(--teal);
+  border-radius: 8px;
+  background: #f2fbfa;
+}
+
+.answer-label {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: #dff3f1;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.answer-first h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.answer-first p,
+.answer-first li {
+  color: #31485f;
+  line-height: 1.75;
+}
+
+.answer-first p {
+  margin: 0;
+}
+
+.answer-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.answer-columns > div {
+  padding: 14px;
+  border: 1px solid #cfe4e2;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.answer-columns strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.answer-columns ol,
+.answer-columns ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.answer-warning {
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff7e5;
+  color: #7b530d !important;
+  font-weight: 700;
+}
+
+.question-detail {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.question-detail summary {
+  cursor: pointer;
+  padding: 12px 14px;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.question-detail .query-readout {
+  margin: 0 14px 14px;
 }
 
 .trust-panel {
@@ -1266,6 +1358,12 @@ footer p {
   }
 }
 
+@media (max-width: 1180px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 560px) {
   .topbar {
     align-items: center;
@@ -1350,6 +1448,10 @@ footer p {
   }
 
   .trust-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .answer-columns {
     grid-template-columns: 1fr;
   }
 
