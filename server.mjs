@@ -38,6 +38,10 @@ createServer(async (request, response) => {
       return sendJson(response, await api.handleSearch(requestUrl));
     }
 
+    if (requestUrl.pathname === "/api/analyze") {
+      return sendJson(response, await api.handleAnalyze(requestUrl));
+    }
+
     return serveStatic(requestUrl, response);
   } catch (error) {
     console.error(error);

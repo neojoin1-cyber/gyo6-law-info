@@ -26,6 +26,10 @@ export const api = onRequest({
       return sendJson(response, await apiClient.handleSearch(requestUrl));
     }
 
+    if (apiPath === "/analyze") {
+      return sendJson(response, await apiClient.handleAnalyze(requestUrl));
+    }
+
     return sendJson(response, { error: "지원하지 않는 API 경로입니다." }, 404);
   } catch (error) {
     console.error(error);

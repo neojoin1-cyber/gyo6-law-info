@@ -835,6 +835,12 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   statusDot.textContent = "API 확인중";
   resultState.className = "summary-box";
   resultState.innerHTML = `
+    <section class="answer-first" id="aiAnalysisMount" aria-label="AI 사안 분석">
+      <div class="answer-label">AI 사안 분석 중</div>
+      <h3>질문 내용을 먼저 지능형으로 분석하고 있습니다.</h3>
+      <p>질문에 적힌 사실과 아직 모르는 사실을 분리해, 필요한 추가 질문과 대처 방향을 다시 정리합니다.</p>
+    </section>
+
     <section class="answer-first" aria-label="질문에 대한 1차 답변">
       <div class="answer-label">질문에 대한 1차 답변</div>
       <h3>${escapeHtml(directAnswer.title)}</h3>
@@ -978,7 +984,127 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
     </section>
   `;
 
+  loadAiAnalysis(question, displayPreset, userRole, answerMode);
   loadLiveSources(question, displayPreset, keywords);
+}
+
+async function loadAiAnalysis(question, preset, userRole, answerMode) {
+  const mount = document.querySelector("#aiAnalysisMount");
+  if (!mount) {
+    return;
+  }
+
+  if (window.location.protocol === "file:") {
+    mount.innerHTML = `
+      <div class="answer-label">AI 사안 분석 대기</div>
+      <h3>로컬 서버 또는 배포 환경에서 AI 분석을 사용할 수 있습니다.</h3>
+      <p><code>npm run dev</code>로 실행하면 서버가 OpenAI API 키를 안전하게 사용해 분석합니다.</p>
+    `;
+    return;
+  }
+
+  try {
+    const params = new URLSearchParams({
+      q: question,
+      topic: preset.type,
+      role: userRole,
+      mode: answerMode
+    });
+    const response = await fetch(`/api/analyze?${params.toString()}`, {
+      headers: { accept: "application/json" }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    mount.innerHTML = renderAiAnalysis(data);
+  } catch (error) {
+    mount.innerHTML = `
+      <div class="answer-label">AI 분석 실패</div>
+      <h3>지능형 분석을 불러오지 못했습니다.</h3>
+      <p>현재 화면은 기본 안전장치 분석으로 표시됩니다. API 키와 Functions 배포 상태를 확인해 주세요.</p>
+      <p class="api-error-text">${escapeHtml(error.message)}</p>
+    `;
+  }
+}
+
+function renderAiAnalysis(data) {
+  if (data.error || !data.analysis) {
+    return `
+      <div class="answer-label">AI 분석 미사용</div>
+      <h3>${escapeHtml(data.error || "AI 분석 결과가 없습니다.")}</h3>
+      <p>기본 분석 화면을 참고하되, 중요한 사안은 공식자료와 전문가 확인을 거치세요.</p>
+    `;
+  }
+
+  const analysis = data.analysis;
+
+  return `
+    <div class="answer-label">AI 사안 분석 · ${escapeHtml(data.model || "model")}</div>
+    <h3>${escapeHtml(analysis.title)}</h3>
+    <p>${escapeHtml(analysis.coreFinding)}</p>
+    <div class="answer-columns">
+      <div>
+        <strong>확인된 사실</strong>
+        <ul>
+          ${analysis.knownFacts.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+        </ul>
+      </div>
+      <div>
+        <strong>추정하면 안 되는 사실</strong>
+        <ul>
+          ${analysis.mustNotAssume.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+        </ul>
+      </div>
+    </div>
+    <div class="answer-columns">
+      <div>
+        <strong>핵심 쟁점</strong>
+        <ul>
+          ${analysis.keyIssues.map((item) => `<li><b>${escapeHtml(item.title)}</b><br>${escapeHtml(item.analysis)}</li>`).join("")}
+        </ul>
+      </div>
+      <div>
+        <strong>지금 바로 할 일</strong>
+        <ol>
+          ${analysis.immediateActions.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+        </ol>
+      </div>
+    </div>
+    <div class="result-block">
+      <h3>AI가 추가로 확인해야 한다고 본 질문</h3>
+      <div class="source-priority-list">
+        ${analysis.clarifyingQuestions.map((item, index) => `
+          <article>
+            <span>${index + 1}</span>
+            <div>
+              <strong>${escapeHtml(item.question)}</strong>
+              <p>${escapeHtml(item.why)}</p>
+              <small>${escapeHtml(item.answerType)}</small>
+            </div>
+          </article>
+        `).join("")}
+      </div>
+    </div>
+    <div class="result-block">
+      <h3>증빙자료 우선순위</h3>
+      <div class="material-list">
+        ${analysis.evidencePlan.map((item) => `
+          <article>
+            <div class="material-head">
+              <span>${escapeHtml(item.priority)}</span>
+            </div>
+            <h4>${escapeHtml(item.item)}</h4>
+            <p>${escapeHtml(item.why)}</p>
+            <small>${escapeHtml(item.how)}</small>
+          </article>
+        `).join("")}
+      </div>
+    </div>
+    <p class="answer-warning">${escapeHtml(analysis.informationNotice)}</p>
+  `;
 }
 
 async function loadLiveSources(question, preset, keywords) {
