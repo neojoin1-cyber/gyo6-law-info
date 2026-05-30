@@ -51,6 +51,8 @@ vm.runInContext(code, context, { filename: "app.js" });
 
 const accidentWords = ["다친 학생", "팔 골절", "치료와 안전 확보", "진단서", "산업재해조사표"];
 const educationDraftText = "교육청 보고 초안";
+const noAccidentReport = [educationDraftText, ...accidentWords, "사고 발생 보고 초안"];
+const noSpecialistReferral = ["노무사 상담 우선 검토", "변호사 상담 검토", "노무사·변호사 병행 상담"];
 
 const cases = [
   {
@@ -122,6 +124,258 @@ const cases = [
     expect: { preset: "staffLabor", disposition: "internal" },
     mustInclude: ["기간제", "복무"],
     mustNotInclude: ["학교폭력", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "field-danger-cleaning-no-injury",
+    question: "현장실습생에게 가동 중인 기계 주변 청소를 반복 지시합니다. 아직 다친 것은 아니지만 위험해서 학교가 기업에 중단 요청을 해야 할지 궁금합니다.",
+    expect: { preset: "fieldTraining", scenario: "fieldTrainingScopeIssue", disposition: "education-review" },
+    mustInclude: ["업무 범위", "위험", "안전교육"],
+    mustNotInclude: [educationDraftText, "진단서", "팔 골절"]
+  },
+  {
+    id: "field-night-overtime",
+    question: "현장실습 학생이 기업에서 밤 9시까지 잔업을 하라고 지시받았습니다. 실습시간과 보호자 안내, 학교 조치가 궁금합니다.",
+    expect: { preset: "fieldTraining", disposition: "internal" },
+    mustInclude: ["직업교육훈련 촉진법", "현장실습"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "field-production-quota-pressure",
+    question: "특성화고 현장실습생에게 정규 직원처럼 생산량 목표를 채우라고 압박하고 평가 불이익을 말합니다. 사고는 없지만 학생이 많이 힘들어합니다.",
+    expect: { preset: "fieldTraining", scenario: "fieldTrainingScopeIssue", disposition: "education-review" },
+    mustInclude: ["현장실습", "학생 권익"],
+    mustNotInclude: ["팔 골절", "진단서", educationDraftText]
+  },
+  {
+    id: "apprenticeship-training-allowance",
+    question: "도제학교 참여 학생의 기업훈련 시간이 길어지고 훈련수당 지급 기준이 애매합니다. 학교가 어떤 자료를 확인해야 하나요?",
+    expect: { preset: "apprenticeship", disposition: "internal" },
+    mustInclude: ["도제학교", "일학습병행"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "apprenticeship-company-evaluation-disadvantage",
+    question: "산학일체형 도제학교 학생이 기업훈련 평가에서 불이익을 받을까 봐 부당한 지시를 말하지 못합니다. 학교 상담 기록과 기업 확인 방법이 필요합니다.",
+    expect: { preset: "apprenticeship", disposition: "internal" },
+    mustInclude: ["도제학교", "학생 보호"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "overseas-training-insurance-housing",
+    question: "호주 글로벌 현장학습 파견 전에 보험, 숙소 안전, 현지 비상연락망, 보호자 동의서까지 한 번에 점검하고 싶습니다.",
+    expect: { preset: "overseasTraining", disposition: "internal" },
+    mustInclude: ["해외", "보험", "보호자"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "overseas-training-local-curfew",
+    question: "해외 현장실습 중 현지 숙소에서 통금과 생활규칙을 강하게 요구해 학생 민원이 있습니다. 사고나 폭행은 없고 절차와 안내가 필요합니다.",
+    expect: { preset: "overseasTraining", disposition: "internal" },
+    mustInclude: ["해외", "현지"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "staff-education-worker-harassment",
+    question: "교육공무직 조리실무사가 상급자에게 공개 모욕과 사적 심부름 지시를 반복적으로 받았다고 직장 내 괴롭힘 신고를 했습니다.",
+    expect: { preset: "staffLabor", disposition: "internal" },
+    mustInclude: ["근로기준법", "직장 내 괴롭힘"],
+    mustNotInclude: ["학교폭력", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "staff-sexual-harassment",
+    question: "행정실 직원이 회식 자리와 메신저에서 성희롱성 발언을 반복적으로 받았다고 상담을 요청했습니다. 학교가 내부 조사와 외부 상담을 어떻게 나눠야 하나요?",
+    expect: { preset: "staffLabor", disposition: "specialist" },
+    mustInclude: ["근로기준법"],
+    mustNotInclude: ["학교폭력", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "fixed-term-sick-leave",
+    question: "기간제교사가 병가 사용 후 계약 연장이나 복무평가에서 불리해질까 걱정하며 민원을 냈습니다. 병가와 복무 기준을 확인하고 싶습니다.",
+    expect: { preset: "staffLabor", disposition: "internal" },
+    mustInclude: ["기간제", "복무"],
+    mustNotInclude: [educationDraftText, ...accidentWords]
+  },
+  {
+    id: "fixed-term-admin-annual-leave-pay",
+    question: "상근 기간제 행정직원이 연차수당과 방학 중 근무 처리 기준을 문의했습니다. 학교 내부 안내용으로 정리해야 합니다.",
+    expect: { preset: "staffLabor", disposition: "internal" },
+    mustInclude: ["기간제", "근로기준법"],
+    mustNotInclude: [educationDraftText, ...accidentWords]
+  },
+  {
+    id: "labor-dismissal-nonrenewal-threat",
+    question: "학교 계약직 직원이 문제 제기 후 해고나 재계약 불이익을 암시받았다고 말합니다. 아직 통보는 없고 상담 기록을 남기려 합니다.",
+    expect: { preset: "staffLabor", disposition: "specialist" },
+    mustInclude: ["근로기준법", "계약"],
+    mustNotInclude: ["학교폭력", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "teacher-parent-verbal-abuse",
+    question: "학부모가 담임교사에게 반복적으로 폭언 전화를 하고 교권침해 민원으로 이어질 수 있습니다. 학생 사안은 아니고 교사 보호 조치가 필요합니다.",
+    expect: { preset: "staffLabor", disposition: "internal" },
+    mustInclude: ["교직원", "민원"],
+    mustNotInclude: ["학교폭력", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "teacher-child-abuse-report",
+    question: "교사가 생활지도 중 아동학대 신고를 당했습니다. 신체접촉은 없고 수업 방해 학생에게 자리 이동을 지시한 사안입니다.",
+    expect: { preset: "civilComplaint", disposition: "specialist" },
+    mustInclude: ["생활지도", "민원"],
+    mustNotInclude: [educationDraftText, ...accidentWords]
+  },
+  {
+    id: "teacher-phone-confiscation-complaint",
+    question: "수업 중 휴대전화를 보관했다가 학부모가 학생 인권 침해라고 민원을 냈습니다. 학교 규정과 안내 문구가 필요합니다.",
+    expect: { preset: "civilComplaint", disposition: "internal" },
+    mustInclude: ["학생관리", "민원"],
+    mustNotInclude: [...noAccidentReport, ...noSpecialistReferral]
+  },
+  {
+    id: "parent-grade-record-correction",
+    question: "학부모가 생활기록부 문구를 고쳐 달라고 요구하며 교육청 민원을 예고했습니다. 사실 확인과 답변 방향이 필요합니다.",
+    expect: { preset: "civilComplaint", disposition: "internal" },
+    mustInclude: ["학교생활기록", "민원"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "minor-meal-complaint",
+    question: "학부모가 급식 반찬이 마음에 들지 않는다며 학교장 면담을 요구했습니다. 학생 피해나 식중독은 없고 단순 민원입니다.",
+    expect: { preset: "civilComplaint", disposition: "internal" },
+    mustInclude: ["민원", "상담"],
+    mustNotInclude: [...noAccidentReport, ...noSpecialistReferral, "중대재해"]
+  },
+  {
+    id: "minor-unfriendly-call",
+    question: "민원인이 행정실 전화 응대가 불친절했다며 사과를 요구합니다. 금전 피해나 징계 요구는 없습니다.",
+    expect: { preset: "civilComplaint", disposition: "internal" },
+    mustInclude: ["민원"],
+    mustNotInclude: [...noAccidentReport, ...noSpecialistReferral]
+  },
+  {
+    id: "attendance-document-question",
+    question: "학부모가 인정결석 서류가 너무 많다며 출결 처리 기준을 묻습니다. 분쟁보다는 안내문이 필요한 상황입니다.",
+    expect: { preset: "civilComplaint", disposition: "internal" },
+    mustInclude: ["출결", "민원"],
+    mustNotInclude: [...noAccidentReport, ...noSpecialistReferral]
+  },
+  {
+    id: "student-counseling-privacy",
+    question: "학생이 상담 내용이 다른 선생님에게 전달된 것 같다며 고충을 제기했습니다. 민감정보를 최소화하면서 확인해야 합니다.",
+    expect: { preset: "civilComplaint", disposition: "internal" },
+    mustInclude: ["학생관리", "상담"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "student-dormitory-allocation",
+    question: "기숙사 배정에서 특정 학과 학생이 불리하다는 고충이 접수됐습니다. 차별로 단정하기 전 확인 절차가 필요합니다.",
+    expect: { preset: "civilComplaint", disposition: "internal" },
+    mustInclude: ["학생관리", "민원"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "student-exam-misconduct-misunderstanding",
+    question: "시험 중 부정행위로 오해받은 학생이 이의제기했습니다. 징계 전 사실 확인과 의견청취 절차가 궁금합니다.",
+    expect: { preset: "civilComplaint", disposition: "specialist" },
+    mustInclude: ["행정절차법", "학생관리"],
+    mustNotInclude: [educationDraftText, ...accidentWords]
+  },
+  {
+    id: "school-violence-chat-exclusion",
+    question: "학생들이 단체채팅방에서 한 학생을 초대했다가 반복적으로 욕설하고 따돌렸습니다. 피해학생 보호와 학교폭력 절차가 필요합니다.",
+    expect: { preset: "schoolViolence", disposition: "internal" },
+    mustInclude: ["학교폭력", "피해학생"],
+    mustNotInclude: ["근로기준법", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "school-violence-retaliation-risk",
+    question: "학교폭력 신고 후 가해학생 친구들이 피해학생에게 보복성 메시지를 보냅니다. 긴급 보호 조치를 어떻게 정리해야 하나요?",
+    expect: { preset: "schoolViolence", disposition: "specialist" },
+    mustInclude: ["학교폭력", "피해학생"],
+    mustNotInclude: ["근로기준법", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "school-violence-cyber-defamation",
+    question: "학생 인스타그램에 다른 학생을 비방하는 글이 올라왔고 명예훼손과 학교폭력 절차가 모두 걱정됩니다.",
+    expect: { preset: "schoolViolence", disposition: "specialist" },
+    mustInclude: ["학교폭력", "전담기구"],
+    mustNotInclude: ["근로기준법", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "school-safety-lab-chemical-leak",
+    question: "과학실에서 화학물질 냄새가 나서 학생들이 두통을 호소했습니다. 병원 이송은 없지만 환기와 보호자 안내, 안전점검이 필요합니다.",
+    expect: { preset: "schoolSafety", disposition: "internal" },
+    mustInclude: ["안전", "학교"],
+    mustNotInclude: [educationDraftText, "산업재해조사표", "팔 골절"]
+  },
+  {
+    id: "school-safety-pe-minor-bruise",
+    question: "체육시간에 학생이 넘어져 가벼운 타박상을 입었습니다. 학부모에게 전달하고 학교안전공제 가능성만 안내하려 합니다.",
+    expect: { preset: "schoolSafety", disposition: "internal" },
+    mustInclude: ["학교 안전"],
+    mustNotInclude: [educationDraftText, "중대재해", "산업재해조사표"]
+  },
+  {
+    id: "school-safety-food-worker-burn",
+    question: "학교 급식실 조리실무사가 뜨거운 물에 화상을 입어 병원 치료를 받았습니다. 산업안전보건과 산재 절차를 확인해야 합니다.",
+    expect: { preset: "schoolSafety", disposition: "education-report" },
+    mustInclude: [educationDraftText, "산업안전보건법"],
+    mustNotInclude: ["현장실습 안전사고 발생 보고 초안"]
+  },
+  {
+    id: "school-safety-facility-contractor-near-miss",
+    question: "학교 시설 공사 중 외부업체 작업자가 추락할 뻔한 아차사고가 있었습니다. 다친 사람은 없고 재발방지와 중대재해 예방 점검이 필요합니다.",
+    expect: { preset: "schoolSafety", disposition: "internal" },
+    mustInclude: ["안전보건", "예방"],
+    mustNotInclude: [educationDraftText, "사망", "진단서"]
+  },
+  {
+    id: "school-safety-facility-contractor-death",
+    question: "학교 증축 공사 현장에서 외부업체 근로자가 추락해 사망했습니다. 학교장과 교육청 보고, 중대재해처벌법 검토가 필요합니다.",
+    expect: { preset: "schoolSafety", disposition: "education-report" },
+    mustInclude: [educationDraftText, "중대재해", "사망"],
+    mustNotInclude: ["현장실습 안전사고 발생 보고 초안"]
+  },
+  {
+    id: "serious-accident-training-request",
+    question: "학교 관리자가 중대재해처벌법 교육자료와 위탁업체 안전점검 체크리스트를 만들고 싶습니다. 사고는 없습니다.",
+    expect: { preset: "schoolSafety", scenario: "safetyPrevention", disposition: "internal" },
+    mustInclude: ["예방", "안전보건관리체계"],
+    mustNotInclude: [educationDraftText, "사고 발생 보고 초안", "진단서"]
+  },
+  {
+    id: "employment-job-offer-contract",
+    question: "특성화고 졸업예정 학생이 회사에서 구두로 채용 약속을 받았는데 근로계약서 작성 전 조건이 바뀌었습니다. 취업지도 자료가 필요합니다.",
+    expect: { preset: "employment", disposition: "internal" },
+    mustInclude: ["근로계약", "취업"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "employment-wage-delay",
+    question: "졸업생이 취업 후 첫 월급 일부가 지연됐다고 학교에 문의했습니다. 임금체불 가능성과 확인 자료를 안내하고 싶습니다.",
+    expect: { preset: "employment", disposition: "internal" },
+    mustInclude: ["임금", "근로기준법"],
+    mustNotInclude: noAccidentReport
+  },
+  {
+    id: "employment-probation-dismissal",
+    question: "취업한 학생이 수습기간 중 갑자기 그만 나오라는 말을 들었습니다. 해고인지 권고사직인지 확인해야 합니다.",
+    expect: { preset: "employment", disposition: "specialist" },
+    mustInclude: ["해고", "근로기준법"],
+    mustNotInclude: [educationDraftText, ...accidentWords]
+  },
+  {
+    id: "public-recruitment-info-board",
+    question: "특성화고 학생 대상 공채 정보를 게시판에 올릴 때 채용공고, 직무기술서, 지원서 양식, 접수기한을 어떻게 정리해야 하나요?",
+    expect: { preset: "employment", disposition: "internal" },
+    mustInclude: ["채용", "취업"],
+    mustNotInclude: [...noAccidentReport, ...noSpecialistReferral]
+  },
+  {
+    id: "company-info-for-recruitment",
+    question: "직업계고 공채 안내와 함께 기업 정보, 채용 직무, 자격요건, 관련 전자책 자료를 연결하고 싶습니다. 법률상 주의사항도 알고 싶습니다.",
+    expect: { preset: "employment", disposition: "internal" },
+    mustInclude: ["채용", "근로계약"],
+    mustNotInclude: noAccidentReport
   }
 ];
 

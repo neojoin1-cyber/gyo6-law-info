@@ -333,7 +333,7 @@ const officialMaterialsByTopic = {
   ]
 };
 
-const highRiskWords = ["소송", "고소", "고발", "형사", "사망", "중상", "해고", "징계", "손해배상", "폭행", "성폭력", "자살", "중대재해"];
+const highRiskWords = ["소송", "고소", "고발", "형사", "사망", "중상", "해고", "징계", "손해배상", "폭행", "성폭력", "성희롱", "아동학대", "명예훼손", "자살", "중대재해"];
 
 const reportProfileFields = [
   { name: "schoolName", label: "학교명", placeholder: "예: ○○공업고등학교" },
@@ -550,6 +550,16 @@ function getPresetScore(preset, normalized) {
     }
   });
 
+  if (preset.type === "employment") {
+    if (/취업|채용|공채|근로계약|구두채용|월급|임금|수습기간|권고사직|해고|직무기술서|지원서|접수기한/.test(normalized)) score += 38;
+    if (/학교계약직|계약직직원|행정실|교직원|교육공무직|재계약불이익/.test(normalized)) score -= 25;
+    if (/현장실습|실습생|학교폭력|학폭/.test(normalized)) score -= 20;
+  }
+
+  if (preset.type === "apprenticeship") {
+    if (/도제학교|도제|산학일체형|일학습병행|기업훈련|훈련수당|훈련계약/.test(normalized)) score += 45;
+  }
+
   if (preset.type === "overseasTraining") {
     if (/해외|호주|글로벌|국외/.test(normalized)) score += 30;
     if (/해외현장실습|해외실습|글로벌현장학습/.test(normalized)) score += 40;
@@ -557,32 +567,79 @@ function getPresetScore(preset, normalized) {
 
   if (preset.type === "fieldTraining") {
     if (/현장실습|실습생|실습기업|실습기관/.test(normalized)) score += 18;
+    if (/생산량|목표압박|평가불이익|불이익|야간|잔업|업무범위|잡무|청소/.test(normalized) && /현장실습|실습생|특성화고|직업계고/.test(normalized)) score += 22;
     if (/해외|호주|글로벌/.test(normalized)) score -= 25;
   }
 
   if (preset.type === "staffLabor") {
-    if (/기간제|행정실|행정직|교직원|교육공무직|상근|복무|업무분장|계약갱신|재계약|근로자|직장내괴롭힘|직장.*괴롭힘|상급자|야근|모욕/.test(normalized)) score += 35;
-    if (/담임교사.*학부모|학부모.*담임교사|전화응대|불친절/.test(normalized) && !/기간제|근로자|복무|업무분장|계약|징계/.test(normalized)) score -= 20;
+    if (/기간제|행정실|행정직|교직원|교육공무직|상근|복무|업무분장|계약갱신|재계약|근로자|직장내괴롭힘|직장.*괴롭힘|상급자|야근|모욕|성희롱|계약직직원|학교계약직/.test(normalized)) score += 35;
+    if (/(교육공무직|조리실무사|행정실|계약직직원|학교계약직).*(괴롭힘|모욕|심부름|상급자|성희롱|재계약불이익|해고)|((괴롭힘|모욕|심부름|상급자|성희롱|재계약불이익|해고).*(교육공무직|조리실무사|행정실|계약직직원|학교계약직))/.test(normalized)) score += 45;
+    if (/교권침해|교육활동침해|교사보호|학부모폭언|폭언전화/.test(normalized)) score += 65;
+    if (/담임교사.*학부모|학부모.*담임교사|전화응대|불친절/.test(normalized) && !/기간제|근로자|복무|업무분장|계약|징계(?!요구는?없|요구없|없)/.test(normalized)) score -= 20;
+    if (/전화응대|불친절/.test(normalized) && /징계요구는?없|징계요구없|금전피해/.test(normalized)) score -= 45;
     if (/현장실습|실습생/.test(normalized) && !/기간제|행정실|행정직|교직원|상급자|직장내괴롭힘|복무|업무분장|계약갱신|재계약/.test(normalized)) score -= 35;
+    if (/학생상담|상담내용|기숙사|부정행위|인정결석|휴대전화|휴대폰|생활기록부|급식반찬|학생인권|생활지도/.test(normalized) && !/교권침해|교육활동침해|교사보호/.test(normalized)) score -= 35;
     if (/중대재해|사망|추락|끼임|깔림/.test(normalized)) score -= 25;
   }
 
   if (preset.type === "schoolViolence") {
-    if (/학교폭력|학폭|피해학생|가해학생|학생사이|단체채팅|욕설|따돌림|심의/.test(normalized)) score += 35;
+    if (/학교폭력|학폭|피해학생|가해학생|학생사이|단체채팅|단체채팅방|욕설|따돌림|심의|보복성메시지|사이버|인스타그램/.test(normalized)) score += 35;
     if (/직장|상급자|근로자|기간제|행정실|행정직|교직원|복무|업무분장|계약갱신|재계약/.test(normalized)) score -= 35;
   }
 
   if (preset.type === "civilComplaint") {
-    if (/민원|학부모|담임|전화응대|불친절|사과|재발방지|생활지도|출결|학생관리/.test(normalized)) score += 28;
+    if (/민원|학부모|담임|전화응대|불친절|사과|재발방지|생활지도|출결|학생관리|학생상담|상담내용|민감정보|기숙사|차별|부정행위|이의제기|휴대전화|휴대폰|인권침해|학생인권|인정결석|급식반찬|생활기록부|아동학대|자리이동|고충/.test(normalized)) score += 28;
+    if (/학생|학부모|담임|생활지도|출결|생활기록부|기숙사|부정행위|인정결석|급식|상담내용|휴대전화|휴대폰/.test(normalized)) score += 20;
     if (/기간제|근로자|계약갱신|재계약|임금|해고|징계|노무/.test(normalized)) score -= 20;
+    if (/징계전|징계절차|부정행위|이의제기/.test(normalized)) score += 25;
+    if (/교권침해|교육활동침해|교사보호|학부모폭언|폭언전화/.test(normalized)) score -= 45;
+    if (/체육시간|타박상|학교안전공제|과학실|화학물질|급식실|조리실무사/.test(normalized)) score -= 30;
   }
 
   if (preset.type === "schoolSafety") {
-    if (/중대재해|산업안전|안전보건|위험성평가|안전관리체계|사망|추락|끼임|중상/.test(normalized)) score += 30;
+    if (/중대재해|산업안전|안전보건|위험성평가|안전관리체계|사망|추락|끼임|중상|급식실|조리실무사|화상|과학실|화학물질|두통|체육시간|타박상|학교안전공제|시설공사|외부업체|아차사고/.test(normalized)) score += 30;
     if (/중대재해.*사망|사망.*중대재해|추락해사망|끼임사망|깔림사망/.test(normalized)) score += 45;
+    if (/체육시간|타박상|학교안전공제|과학실|화학물질|급식실|조리실무사/.test(normalized)) score += 35;
+    if (/괴롭힘|모욕|심부름|성희롱/.test(normalized) && !/화상|사고|부상|산재|산업안전|안전보건/.test(normalized)) score -= 50;
+    if (/급식반찬|식단불만|맛이없|반찬이/.test(normalized) && !/식중독|화상|급식실|조리실무사/.test(normalized)) score -= 40;
   }
 
   return score;
+}
+
+function compactText(value) {
+  return String(value || "").replace(/\s+/g, "");
+}
+
+function hasOccurrenceNegation(normalized) {
+  return /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|발생전|대비|예방|점검표|점검하고싶|만들고싶|다친사람은?없|다친것은?아니|부상자?없|부상은?없|사망자?없|사망은?없|병원이송은?없|치료는?없/.test(normalized);
+}
+
+function hasActualInjurySignal(value) {
+  const normalized = compactText(value);
+  if (hasOccurrenceNegation(normalized)) {
+    return false;
+  }
+
+  return /골절|다침|다쳤|다쳐|상해|중상|화상|절단|출혈|입원|수술|119|응급|병원치료|치료를받|치료중|화상을입|타박상|부상(?!담)/.test(normalized);
+}
+
+function hasActualAccidentSignal(value) {
+  const normalized = compactText(value);
+  if (hasOccurrenceNegation(normalized) || /아차사고|사고날뻔|추락할뻔/.test(normalized)) {
+    return false;
+  }
+
+  return /사고(가|는|를)?(발생|났|남|당했|당함|입었|겪었)|산재|산업재해/.test(normalized);
+}
+
+function hasMachineAccidentSignal(value) {
+  const normalized = compactText(value);
+  if (hasOccurrenceNegation(normalized) || /추락할뻔|끼일뻔|깔릴뻔/.test(normalized)) {
+    return false;
+  }
+
+  return /끼임|절단|충돌|부딪|깔림|추락/.test(normalized);
 }
 
 function renderResult(question, preset, scopes, answerMode, userRole) {
@@ -972,13 +1029,16 @@ function getModeMessage(answerMode) {
 }
 
 function analyzeQuestionScenario(question, preset) {
-  const normalized = String(question || "").replace(/\s+/g, "");
-  const occurrenceNegated = /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|발생전|대비|예방|점검표|점검하고싶|만들고싶/.test(normalized);
+  const normalized = compactText(question);
+  const occurrenceNegated = hasOccurrenceNegation(normalized);
   const isFieldTraining = preset.type === "fieldTraining" || /현장실습|실습생|실습기관|실습기업|직업계고|특성화고/.test(normalized);
-  const actualInjury = !occurrenceNegated && /골절|부상|다침|다쳤|다쳐|상해|중상|사망|치료|병원|119|응급|입원|수술|출혈|화상|절단|끼임|깔림|추락/.test(normalized);
-  const actualAccident = !occurrenceNegated && /사고(가|는|를)?(발생|났|남|당했|당함|입었|겪었)|산재|산업재해/.test(normalized);
-  const scopeIssue = isFieldTraining && /청소|잡무|허드렛일|업무외|업무가아니|반복|자꾸|시키|시킴|지시|불필요|필요도없는|재료|심부름|괴롭힘|부당|권익|실습범위|표준협약|멘토|기존근로자/.test(normalized);
+  const actualInjury = hasActualInjurySignal(normalized) || (!occurrenceNegated && /사망|끼임|깔림|추락/.test(normalized));
+  const actualAccident = hasActualAccidentSignal(normalized);
+  const scopeIssue = isFieldTraining && /청소|잡무|허드렛일|업무외|업무가아니|반복|자꾸|시키|시킴|지시|불필요|필요도없는|재료|심부름|괴롭힘|부당|권익|실습범위|표준협약|멘토|기존근로자|생산량|목표|압박|평가불이익|불이익|야간|잔업|장시간/.test(normalized);
   const safetyConcern = isFieldTraining && !actualInjury && /위험|안전|기계|설비|보호구|화학|유해|먼지|청소중/.test(normalized);
+  const minorStudentSafety = preset.type === "schoolSafety"
+    && /체육시간|타박상|학교안전공제|과학실|화학물질|두통|가벼운|보건실|학생/.test(normalized)
+    && !/중상|사망|입원|수술|중대재해|근로자|조리실무사|외부업체|용역|공사/.test(normalized);
 
   if (isFieldTraining && (actualInjury || actualAccident)) {
     return { type: "fieldTrainingAccident", isFieldTraining, actualInjury, actualAccident, scopeIssue, safetyConcern };
@@ -992,10 +1052,29 @@ function analyzeQuestionScenario(question, preset) {
     return { type: "safetyPrevention", isFieldTraining, actualInjury, actualAccident, scopeIssue, safetyConcern };
   }
 
+  if (minorStudentSafety) {
+    return { type: "schoolSafetyMinor", isFieldTraining, actualInjury, actualAccident, scopeIssue, safetyConcern };
+  }
+
   return { type: preset.type, isFieldTraining, actualInjury, actualAccident, scopeIssue, safetyConcern };
 }
 
 function getScenarioDisplayPreset(preset, scenario) {
+  if (scenario.type === "schoolSafetyMinor") {
+    return {
+      ...preset,
+      title: "학교 안전사고·학생 보호 확인 자료",
+      summary: "중대한 사고 보고서로 단정하기보다 학생 상태, 보호자 안내, 학교안전공제 가능성, 재발방지 조치를 차분히 확인하는 자료입니다.",
+      laws: ["학교안전사고 예방 및 보상에 관한 법률", "초중등교육법", "학교 안전관리 관련 교육청 안내"],
+      tags: ["학교 안전", "학생 보호", "보호자 안내", "학교안전공제"],
+      checklist: [
+        "학생 상태와 보호자 안내 내용을 시간순으로 기록합니다.",
+        "학교 교육활동 중 사고인지, 학교안전공제 안내가 필요한지 확인합니다.",
+        "재발방지를 위해 수업·실험·체육 활동의 안전지도 기록을 정리합니다."
+      ]
+    };
+  }
+
   if (scenario.type === "safetyPrevention") {
     return {
       ...preset,
@@ -1030,7 +1109,7 @@ function getScenarioDisplayPreset(preset, scenario) {
 }
 
 function getDirectAnswer(question, preset, roleGuide, scenario = analyzeQuestionScenario(question, preset)) {
-  const normalized = question.replace(/\s+/g, "");
+  const normalized = compactText(question);
 
   if (scenario.type === "fieldTrainingScopeIssue") {
     return {
@@ -1053,12 +1132,12 @@ function getDirectAnswer(question, preset, roleGuide, scenario = analyzeQuestion
     };
   }
 
-  const occurrenceNegated = /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|발생전|대비|예방|점검표|점검하고싶|만들고싶/.test(normalized);
-  const hasInjury = !occurrenceNegated && /골절|부상|다침|다쳤|다쳐|상해|중상|치료|병원|119|응급|입원|수술/.test(normalized);
-  const hasAccident = !occurrenceNegated && /사고(가|는|를)?(발생|났|남|당했|당함|입었|겪었)|산재|산업재해/.test(normalized);
-  const hasMachineAccident = !occurrenceNegated && /끼임|절단|충돌|부딪|깔림|추락/.test(normalized);
+  const hasInjury = hasActualInjurySignal(normalized);
+  const hasAccident = hasActualAccidentSignal(normalized);
+  const hasMachineAccident = hasMachineAccidentSignal(normalized);
+  const isWorkOrTrainingSafety = /현장실습|실습생|산재|산업재해|중대재해|급식실|조리실무사|공사|외부업체|용역|사업장|기계/.test(normalized);
 
-  if (scenario.type === "fieldTrainingAccident" || hasInjury || hasAccident || hasMachineAccident) {
+  if (scenario.type === "fieldTrainingAccident" || ((hasInjury || hasAccident || hasMachineAccident) && isWorkOrTrainingSafety)) {
     return {
       title: "다친 학생 보호와 사고 기록이 먼저이고, 책임 판단은 원문과 사실관계 확인 후 나눠야 합니다.",
       lead: "현장실습 중 기계 사고로 팔 골절상이 발생했다면 치료, 보호자 통보, 사고 경위 기록, 실습기관과 학교의 조치 확인을 먼저 진행해야 합니다.",
@@ -1098,6 +1177,25 @@ function getDirectAnswer(question, preset, roleGuide, scenario = analyzeQuestion
     };
   }
 
+  if (preset.type === "staffLabor") {
+    return {
+      title: "교직원·행정직 노무 사안은 사실관계 기록과 보호 조치를 먼저 나누어야 합니다.",
+      lead: "계약, 복무, 직장 내 괴롭힘, 성희롱, 재계약 불이익처럼 신분과 노동관계가 얽힌 사안은 학교 내부 확인과 외부 전문가 검토 필요성을 구분해야 합니다.",
+      actions: [
+        "계약서, 복무 기준, 업무분장, 지시·발언 기록, 메신저·이메일 등 원자료를 시간순으로 정리합니다.",
+        "신고자 보호, 불리한 처우 금지, 조사 담당자 분리 등 내부 절차를 먼저 확인합니다.",
+        "성희롱, 해고, 재계약 불이익, 형사·손해배상 가능성이 있으면 노무사 또는 변호사 상담 범위를 별도로 정합니다."
+      ],
+      responsibilityTitle: "주체별로 나눠 볼 책임",
+      responsibilities: [
+        "학교·관리자: 사실 확인 절차, 신고자 보호, 불리한 처우 방지, 기록 보존이 핵심입니다.",
+        "당사자: 구체적 일시·장소·발언·지시 내용과 보유 자료를 사실 중심으로 정리합니다.",
+        "인사·행정 담당: 계약·복무·징계·재계약 기준과 실제 조치가 일치하는지 확인합니다."
+      ],
+      warning: "사고나 부상 사안이 아니면 의료·산재 자료를 요구하지 않습니다. 성희롱, 해고, 보복, 형사 문제로 이어질 가능성이 보일 때만 전문가 상담을 상향 검토합니다."
+    };
+  }
+
   return {
     title: `${preset.title}에 관해 먼저 사실관계와 공식 원문을 나눠 확인해야 합니다.`,
     lead: `${roleGuide.label} 기준으로는 질문 속 대상, 장소, 날짜, 기관, 이미 진행된 조치를 먼저 정리한 뒤 공식 법령과 행정자료를 확인하는 흐름이 좋습니다.`,
@@ -1127,7 +1225,7 @@ function buildCaseReport(question, preset, roleGuide, officialMaterials, riskSig
     return buildFieldTrainingScopeIssueReport(context, roleGuide, officialMaterials, riskSignals, scenario);
   }
 
-  return buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, riskSignals);
+  return buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, riskSignals, scenario);
 }
 
 function buildFieldTrainingAccidentReport(context, roleGuide, officialMaterials, riskSignals) {
@@ -1349,10 +1447,11 @@ function buildFieldTrainingScopeIssueReport(context, roleGuide, officialMaterial
   };
 }
 
-function buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, riskSignals) {
+function buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, riskSignals, scenario = {}) {
   const reportSeed = {
     context,
     presetType: preset.type,
+    scenarioType: scenario.type,
     riskSignals
   };
 
@@ -1407,11 +1506,11 @@ function buildFinalAdvice(seed) {
     seed.firstResponse || "",
     seed.friendWork || ""
   ].join(" ");
-  const normalized = text.replace(/\s+/g, "");
-  const hasSeriousInjury = /골절|수술|입원|장해|중상|사망|119|응급|전치|후유/.test(normalized);
-  const hasLaborIssue = /산재|산업재해|임금|근로계약|해고|징계|근로시간|노동위원회|직장|회사|사업장|노무/.test(normalized)
+  const normalized = compactText(text);
+  const hasSeriousInjury = /골절|수술|입원|장해|중상|사망|119|응급|전치|후유|화상/.test(normalized);
+  const hasLaborIssue = /산재|산업재해|임금|근로계약|해고|근로시간|노동위원회|직장|회사|사업장|노무|재계약|권고사직/.test(normalized)
     || ["employment", "apprenticeship", "fieldTraining", "schoolSafety", "staffLabor"].includes(seed.presetType);
-  const hasLegalDispute = /소송|고소|고발|형사|손해배상|합의|민사|경찰|검찰|변호사|폭행|성폭력/.test(normalized);
+  const hasLegalDispute = /소송|고소|고발|형사|손해배상|합의|민사|경찰|검찰|변호사|폭행|성폭력|성희롱|아동학대|명예훼손|보복|부당해고|권고사직|재계약불이익/.test(normalized);
   const hasProcedureOnly = !hasSeriousInjury && !hasLegalDispute && !seed.riskSignals?.length;
 
   if (seed.presetType === "fieldTrainingScopeIssue") {
@@ -1425,6 +1524,20 @@ function buildFinalAdvice(seed) {
         "업무 범위 밖 반복 지시로 보이면 학교 명의로 지시 중단, 담당자 일원화, 학생 불이익 금지를 요청합니다."
       ],
       closingSentence: "현재 사안은 학교가 현장실습 업무 범위를 확인하고 기업에 시정 요청을 우선 진행하되, 보복·모욕·위험 작업 또는 장기간 반복이 확인되면 교육청 또는 노무 상담으로 상향 검토하겠습니다."
+    };
+  }
+
+  if (seed.presetType === "schoolSafety" && !hasSeriousInjury && /예방|점검|아차사고|다친사람은?없|사고는?없|재발방지|관리체계/.test(normalized)) {
+    return {
+      level: "internal",
+      title: "예방 점검과 개선 기록 우선",
+      summary: "현재 내용은 사고 처리나 산재 상담보다 안전보건관리체계, 위험성평가, 위탁업체 점검, 개선 이행 기록을 정리할 사안입니다.",
+      actions: [
+        "아차사고 또는 위험 징후의 일시, 장소, 관련 업체, 즉시 개선 조치를 기록합니다.",
+        "계약서, 과업지시서, 안전관리계획, 순회점검표, 개선 완료 사진을 점검 자료로 묶습니다.",
+        "실제 부상, 중대한 인명피해, 입원, 수술 등 피해가 확인되면 그때 관계기관 보고와 전문가 상담 여부를 상향 검토합니다."
+      ],
+      closingSentence: "현재 사안은 안전보건 예방 점검과 재발방지 기록으로 내부 관리하되, 실제 인명피해나 보고 대상 사고가 확인되면 교육청·관계기관 보고 여부를 즉시 재검토하겠습니다."
     };
   }
 
@@ -1443,6 +1556,20 @@ function buildFinalAdvice(seed) {
   }
 
   if (hasLaborIssue && !hasLegalDispute) {
+    if (["staffLabor", "employment", "apprenticeship"].includes(seed.presetType) && !hasSeriousInjury && !/산재|산업재해|안전사고/.test(normalized)) {
+      return {
+        level: "labor",
+        title: "노무사 상담 우선 검토",
+        summary: "계약, 복무, 임금, 재계약, 직장 내 괴롭힘처럼 노동관계 판단이 필요한 경우에는 사고 자료가 아니라 계약·지시·조치 기록을 중심으로 노무 상담을 검토하는 것이 적절합니다.",
+        actions: [
+          "근로계약서, 임용계약서, 복무 규정, 업무분장표, 임금·근무기록을 상담 자료로 묶습니다.",
+          "문제가 된 발언·지시·통보의 일시, 장소, 상대방, 증인을 사실 중심으로 정리합니다.",
+          "상담 목적은 책임 단정이 아니라 학교가 지금 해야 할 조치와 피해야 할 조치를 확인하는 것으로 정리합니다."
+        ],
+        referralSentence: "교직원·행정직 또는 취업 관련 노무 사안에 관하여 계약·복무·임금·재계약·직장 내 괴롭힘 해당 가능성과 학교의 후속 조치 범위를 확인하고자 합니다. 첨부한 계약서, 복무 기준, 상담기록, 발언·지시 내역을 검토하시고 현재 단계에서 필요한 조치에 대한 노무 상담을 요청드립니다."
+      };
+    }
+
     return {
       level: "labor",
       title: "노무사 상담 우선 검토",
@@ -1467,8 +1594,10 @@ function buildFinalAdvice(seed) {
       "원하는 결론보다 확인할 질문을 먼저 정리합니다. 예: 지금 해야 할 조치, 피해야 할 발언, 보존할 증거, 공식 절차.",
       "상담 결과는 학교 내부 조치와 학생 보호 계획에 반영하되, 당사자에게 불필요한 압박이 되지 않도록 공유 범위를 제한합니다."
     ],
-    referralSentence: hasLaborIssue
+    referralSentence: hasLaborIssue && hasSeriousInjury
       ? "현장실습 사고와 관련하여 산재·노무 절차, 손해배상 가능성, 학교와 실습기업의 책임 범위를 구분해 확인하고자 합니다. 첨부 자료를 검토하시고 노무사 및 변호사 상담이 필요한 쟁점과 우선 조치사항에 대한 의견을 요청드립니다."
+      : hasLaborIssue
+        ? "계약·복무·임금·재계약·직장 내 괴롭힘 또는 불리한 처우 가능성과 관련하여 학교의 사실 확인 절차와 후속 조치 범위를 검토하고자 합니다. 첨부한 계약서, 복무 기준, 상담기록, 발언·지시 내역을 바탕으로 현재 단계에서 필요한 노무·법률 검토 의견을 요청드립니다."
       : "본 사안과 관련하여 학교 절차, 당사자 권리 보호, 손해배상 또는 형사·소송 가능성을 검토하고자 합니다. 첨부한 사실관계표와 증빙자료를 바탕으로 현재 단계에서 필요한 법률상 조치와 유의사항에 대한 상담을 요청드립니다."
   };
 }
@@ -1604,12 +1733,12 @@ function getReportSearchText(report, profileContext = {}) {
 }
 
 function isLikelyFieldTrainingAccident(report, profileContext = {}) {
-  const text = getReportSearchText(report, profileContext).replace(/\s+/g, "");
-  if (/업무범위|반복지시|청소|잡무/.test(report?.title || "") && !/골절|부상|다침|다쳤|상해|중상|치료|병원|119|응급|입원|수술/.test(text)) {
+  const text = compactText(getReportSearchText(report, profileContext));
+  if (/업무범위|반복지시|청소|잡무/.test(report?.title || "") && !hasActualInjurySignal(text)) {
     return false;
   }
   return /현장실습|도제|직업계고|특성화고|실습기업|실습기관/.test(text)
-    && /골절|부상|다침|다쳤|상해|중상|치료|병원|119|응급|입원|수술|산재|산업재해|사고발생|사고가발생|사고났|사고남/.test(text);
+    && (hasActualInjurySignal(text) || hasActualAccidentSignal(text) || /산재|산업재해|사고발생|사고가발생|사고났|사고남/.test(text));
 }
 
 function isLikelyFieldTrainingScopeIssue(report, profileContext = {}) {
@@ -1617,21 +1746,29 @@ function isLikelyFieldTrainingScopeIssue(report, profileContext = {}) {
     return true;
   }
 
-  const text = getReportSearchText(report, profileContext).replace(/\s+/g, "");
+  const text = compactText(getReportSearchText(report, profileContext));
   return /현장실습|실습생|실습기업|실습기관|직업계고|특성화고/.test(text)
-    && /청소|잡무|업무범위|반복지시|반복|자꾸|시키|시킴|재료|심부름|권익침해|실습환경|기존근로자/.test(text)
-    && !/골절|부상|다침|다쳤|상해|중상|치료|병원|119|응급|입원|수술/.test(text);
+    && /청소|잡무|업무범위|반복지시|반복|자꾸|시키|시킴|재료|심부름|권익침해|실습환경|기존근로자|생산량|목표|압박|평가불이익|불이익|야간|잔업|장시간/.test(text)
+    && !hasActualInjurySignal(text);
 }
 
 function getReportDisposition(report, profileContext = {}) {
-  const text = getReportSearchText(report, profileContext).replace(/\s+/g, "");
+  const text = compactText(getReportSearchText(report, profileContext));
+  const originalQuestionText = compactText([
+    findReportFact(report, "원 질문"),
+    profileContext.currentStatus,
+    profileContext.referenceNote
+  ].filter(Boolean).join(" "));
   const explicitEducationReport = /교육청보고|교육청에보고|교육청보고필요|공문보고/.test(text);
-  const occurrenceNegated = /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|발생전|대비|예방|점검표|점검하고싶|만들고싶/.test(text);
+  const occurrenceNegated = hasOccurrenceNegation(text);
+  const actualInjury = hasActualInjurySignal(text);
+  const workerSafetyInjury = actualInjury && /근로자|조리실무사|교육공무직|외부업체|용역|공사|급식실|현장실습|실습생|산업체|사업장/.test(text);
   const seriousAccident = isLikelyFieldTrainingAccident(report, profileContext)
+    || workerSafetyInjury
     || (!occurrenceNegated && /중대재해발생|사망|중상|골절|입원|수술|장해|119|응급|추락해사망|끼임사망/.test(text));
 
   if (isLikelyFieldTrainingScopeIssue(report, profileContext)) {
-    if (/보복|불이익발생|불이익을받|불이익이발생|실제불이익|모욕|협박|따돌림|위험작업|장기간반복|시정거부|개선거부/.test(text) || explicitEducationReport) {
+    if (/보복|불이익발생|불이익을받|불이익이발생|실제불이익|평가불이익|모욕|협박|따돌림|위험작업|위험|가동중인기계|장기간반복|시정거부|개선거부|생산량압박/.test(originalQuestionText) || explicitEducationReport) {
       return "education-review";
     }
 
@@ -1642,7 +1779,8 @@ function getReportDisposition(report, profileContext = {}) {
     return "education-report";
   }
 
-  if (/소송|고소|고발|형사|손해배상|언론/.test(text)) {
+  if (/소송|고소|고발|형사|손해배상|언론|성희롱|성폭력|아동학대|명예훼손|보복성|보복메시지|부당해고|권고사직|재계약불이익|해고|징계전|징계처분|부정행위/.test(text)
+    && !/징계요구는?없|징계요구없|해고는?아니|해고없|해고통보없/.test(text)) {
     return "specialist";
   }
 
@@ -2504,6 +2642,12 @@ function formatLegalBasis(keys = []) {
 
 function getInlineBasisForText(text, report) {
   const normalized = String(text || "").replace(/\s+/g, "");
+  const reportText = compactText([
+    report?.title,
+    report?.lead,
+    report?.subtitle
+  ].filter(Boolean).join(" "));
+  const preventionReport = /예방|점검|관리체계|아차사고/.test(reportText) && !/사망|중상|골절|입원|수술|산재|산업재해/.test(reportText);
   const basisKeys = [];
 
   const add = (...items) => items.forEach((item) => {
@@ -2540,7 +2684,11 @@ function getInlineBasisForText(text, report) {
     add("oshAccidentReport", "oshAccidentReportRule");
   }
   if (/중대재해|중상|사망|장해/.test(normalized)) {
-    add("seriousAccidentDefinition", "seriousAccidentDuty");
+    if (preventionReport) {
+      add("seriousAccidentDuty");
+    } else {
+      add("seriousAccidentDefinition", "seriousAccidentDuty");
+    }
   }
   if (/위탁|도급|용역|파견|관계기관/.test(normalized)) {
     add("seriousAccidentContract");
@@ -3228,7 +3376,56 @@ function getOfficialMaterials(preset, scenario = {}, question = "") {
     return buildSafetyPreventionMaterials();
   }
 
+  if (preset.type === "schoolSafety") {
+    return buildSchoolSafetyMaterials(question, scenario);
+  }
+
   return officialMaterialsByTopic[preset.type] || officialMaterialsByTopic.general;
+}
+
+function buildSchoolSafetyMaterials(question = "", scenario = {}) {
+  const normalized = compactText(question);
+  const actualInjury = hasActualInjurySignal(normalized);
+  const workerSafety = /근로자|조리실무사|외부업체|용역|공사|급식실|산업안전|산재|중대재해/.test(normalized);
+  const majorEvent = !hasOccurrenceNegation(normalized) && (/사망|중상|입원|수술|추락해사망|끼임사망/.test(normalized) || (actualInjury && workerSafety));
+
+  if (scenario.type === "schoolSafetyMinor" || (!majorEvent && /체육시간|학교안전공제|과학실|화학물질|두통|타박상|학생/.test(normalized))) {
+    return [
+      {
+        type: "law",
+        title: "학교안전사고 예방 및 보상에 관한 법률",
+        source: "국가법령정보센터",
+        use: "학교 교육활동 중 사고인지, 학교안전공제 안내와 보호자 통보가 필요한지 확인합니다.",
+        query: "학교안전사고 예방 및 보상에 관한 법률",
+        actionChecks: [
+          "교육활동 해당 여부와 학생 상태 기록",
+          "보호자 안내와 보건실·담당교사 조치 기록",
+          "학교안전공제 안내 필요 여부 확인"
+        ]
+      },
+      {
+        type: "law",
+        title: "초중등교육법",
+        source: "국가법령정보센터",
+        use: "학교의 학생 지도와 교육활동 운영 기준을 함께 확인합니다.",
+        query: "초중등교육법 학생 지도 안전"
+      },
+      {
+        type: "admin",
+        title: "교육청 학교안전 관리 자료",
+        source: "교육부·교육청",
+        use: "수업, 실험, 체육활동 중 안전지도와 보호자 안내 절차를 확인합니다.",
+        query: "학교안전 사고 예방 보호자 안내",
+        url: "https://www.moe.go.kr/main.do?s=moe"
+      }
+    ];
+  }
+
+  if (!majorEvent) {
+    return buildSafetyPreventionMaterials();
+  }
+
+  return officialMaterialsByTopic.schoolSafety;
 }
 
 function buildSafetyPreventionMaterials() {
