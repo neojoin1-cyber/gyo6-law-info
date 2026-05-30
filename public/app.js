@@ -263,6 +263,15 @@ form.addEventListener("submit", (event) => {
   }
 });
 
+resultState.addEventListener("submit", (event) => {
+  if (event.target?.id !== "clarifierForm") {
+    return;
+  }
+
+  event.preventDefault();
+  applyClarifierAnswers(event.target);
+});
+
 hydrateFromUrl();
 
 function findPreset(question, selectedType) {
@@ -290,6 +299,7 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const riskSignals = detectRiskSignals(question);
   const officialMaterials = getOfficialMaterials(preset);
   const directAnswer = getDirectAnswer(question, preset, roleGuide);
+  const refinementQuestions = getRefinementQuestions(question, preset, userRole, riskSignals);
 
   resultTitle.textContent = "답변 먼저";
   statusDot.textContent = "API 확인중";
@@ -315,6 +325,8 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
       </div>
       <p class="answer-warning">${escapeHtml(directAnswer.warning)}</p>
     </section>
+
+    ${renderRefinementPanel(refinementQuestions)}
 
     <section class="trust-panel" aria-label="검증 기준">
       <div>
@@ -689,6 +701,348 @@ function getDirectAnswer(question, preset, roleGuide) {
     ],
     warning: "이 답변은 법률 자문이 아니라 정보 정리입니다. 중요한 판단은 전문가 확인이 필요합니다."
   };
+}
+
+function getRefinementQuestions(question, preset, userRole, riskSignals) {
+  const normalized = question.replace(/\s+/g, "");
+  const hasSeriousInjury = /골절|중상|사망|수술|장해|입원|119|응급|피해/.test(normalized);
+  const hasFriendContext = /친구|동료|다른학생|같은반/.test(normalized);
+  const byTopic = {
+    employment: [
+      {
+        question: "근로계약서나 채용 공고에 적힌 근무 조건이 있나요?",
+        reason: "계약서와 공고는 임금, 근로시간, 채용조건을 확인하는 기준입니다.",
+        placeholder: "예: 근로계약서 있음, 공고만 있음, 아직 못 받음"
+      },
+      {
+        question: "근무 시작일, 근무 장소, 실제 일한 시간이 정리되어 있나요?",
+        reason: "언제 어디서 어떤 일을 했는지에 따라 적용 법령과 자료가 달라집니다.",
+        placeholder: "예: 6월 1일부터 주 5일, 하루 7시간"
+      },
+      {
+        question: "임금, 수당, 휴게시간, 퇴직 관련해서 다투는 지점이 무엇인가요?",
+        reason: "쟁점이 분명해야 법령과 행정자료 후보를 정확히 좁힐 수 있습니다.",
+        placeholder: "예: 야근수당 미지급, 휴게시간 없음"
+      }
+    ],
+    apprenticeship: [
+      {
+        question: "도제학교 훈련계약, 운영계획, 학교 안내문이 있나요?",
+        reason: "도제학교는 학교 교육과 기업훈련의 근거 자료를 함께 봐야 합니다.",
+        placeholder: "예: 훈련계약 있음, 학교 안내문만 있음"
+      },
+      {
+        question: "학생이 기업에서 실제로 맡은 업무와 훈련 시간이 어떻게 되나요?",
+        reason: "훈련인지 근로인지, 안전관리 의무가 어떻게 연결되는지 확인해야 합니다.",
+        placeholder: "예: 주 3일 기업훈련, 장비 조작 포함"
+      },
+      {
+        question: "안전교육, 지도교사 방문, 기업 담당자 지도가 기록되어 있나요?",
+        reason: "지도·감독과 안전교육 기록은 책임과 조치 판단의 핵심 자료입니다.",
+        placeholder: "예: 안전교육 서명부 있음, 방문기록 모름"
+      }
+    ],
+    fieldTraining: [
+      {
+        question: "사고나 문제가 실습시간 안에, 실습 장소에서 발생했나요?",
+        reason: "현장실습 사고인지 개인적인 이동 중 사고인지에 따라 확인할 자료가 달라집니다.",
+        placeholder: "예: 실습 종료 직후 회사 안, 지도교사에게 보고 전"
+      },
+      {
+        question: "학생이 그 작업을 지시받았거나 허락받았나요?",
+        reason: "작업 지시와 감독 여부는 학교와 실습기관 책임을 나눌 때 핵심입니다.",
+        placeholder: "예: 직원 지시, 친구 부탁, 직접 판단"
+      },
+      {
+        question: "현장실습 협약서, 실습일지, 안전교육 기록이 있나요?",
+        reason: "공식 실습과 안전교육 기록은 원문 근거 검색의 출발점입니다.",
+        placeholder: "예: 협약서 있음, 안전교육 기록은 모름"
+      },
+      {
+        question: "사고 직후 학교, 보호자, 회사가 각각 어떤 조치를 했나요?",
+        reason: "보고, 보호자 통보, 치료, 실습 중단 조치가 빠졌는지 확인해야 합니다.",
+        placeholder: "예: 학교 보고, 보호자 통보, 병원 이송"
+      }
+    ],
+    overseasTraining: [
+      {
+        question: "파견 국가, 기관, 기간, 실습 내용이 정리되어 있나요?",
+        reason: "해외 현장실습은 국내 절차와 현지 기관 정보를 함께 확인해야 합니다.",
+        placeholder: "예: 호주, 4주, 호텔 실습"
+      },
+      {
+        question: "동의서, 보험, 비상연락망, 안전교육 자료가 있나요?",
+        reason: "학생 보호와 사고 대응 절차의 기본 근거가 됩니다.",
+        placeholder: "예: 보험 가입, 비상연락망 있음"
+      },
+      {
+        question: "현지에서 사고, 민원, 실습 중단 같은 문제가 발생했나요?",
+        reason: "문제 유형에 따라 학교, 파견기관, 보호자 안내 절차가 달라집니다.",
+        placeholder: "예: 실습 중단 요청, 현지 기관 민원"
+      }
+    ],
+    schoolSafety: [
+      {
+        question: "사고 장소, 시간, 관련 시설 또는 장비가 무엇인가요?",
+        reason: "학교 안전, 산업안전, 중대재해 자료를 구분해 찾기 위해 필요합니다.",
+        placeholder: "예: 실습실, 기계 장비, 방과후"
+      },
+      {
+        question: "피해 정도와 즉시 조치 내용이 기록되어 있나요?",
+        reason: "부상 정도와 응급조치는 보고·보상·전문가 확인 우선순위에 영향을 줍니다.",
+        placeholder: "예: 진단서 있음, 119 이송, 사진 있음"
+      },
+      {
+        question: "안전교육, 점검표, 위험성 평가 기록이 있나요?",
+        reason: "예방 의무와 관리체계 확인에 필요한 자료입니다.",
+        placeholder: "예: 안전교육 서명부 있음, 점검표 없음"
+      }
+    ],
+    schoolViolence: [
+      {
+        question: "발생 일시, 장소, 관련 학생, 증거 자료가 시간순으로 정리되어 있나요?",
+        reason: "학교폭력 절차는 접수와 사실 확인 기록이 매우 중요합니다.",
+        placeholder: "예: 날짜, 장소, 문자 캡처, 목격자"
+      },
+      {
+        question: "학교에 신고 또는 상담이 접수되었나요?",
+        reason: "접수 여부에 따라 학교의 보호 조치와 절차 확인이 달라집니다.",
+        placeholder: "예: 담임 상담, 학교폭력 담당자 접수"
+      },
+      {
+        question: "피해학생 보호 조치나 분리 조치가 있었나요?",
+        reason: "학생 안전을 먼저 확보했는지 확인해야 합니다.",
+        placeholder: "예: 분리 조치, 상담 지원, 보호자 통보"
+      }
+    ],
+    staffLabor: [
+      {
+        question: "정규직, 기간제, 상근, 시간제 등 신분과 계약 형태가 무엇인가요?",
+        reason: "교직원·행정직 사안은 신분과 계약 형태에 따라 적용 기준이 달라집니다.",
+        placeholder: "예: 기간제교사, 상근 행정직, 교육공무직"
+      },
+      {
+        question: "계약서, 복무규정, 공문, 내부 결재 기록이 있나요?",
+        reason: "인사·노무 판단은 문서 근거를 먼저 확인해야 합니다.",
+        placeholder: "예: 계약서 있음, 공문 있음"
+      },
+      {
+        question: "쟁점이 징계, 복무, 민원, 근로조건 중 어디에 가깝나요?",
+        reason: "쟁점 분류가 정확해야 법령과 판례 후보가 좁혀집니다.",
+        placeholder: "예: 복무 위반 민원, 연가 처리, 계약 갱신"
+      }
+    ],
+    civilComplaint: [
+      {
+        question: "민원 접수 날짜, 경로, 요구 내용이 정리되어 있나요?",
+        reason: "민원은 접수와 답변의 시간순 기록이 중요합니다.",
+        placeholder: "예: 국민신문고, 학교 방문, 전화 민원"
+      },
+      {
+        question: "학생 보호나 학교 조치가 필요한 사안인가요?",
+        reason: "학생 안전과 권리 보호가 필요한지 먼저 구분해야 합니다.",
+        placeholder: "예: 출결, 생활지도, 징계, 상담"
+      },
+      {
+        question: "학교 규정, 교육청 안내, 상담 기록이 있나요?",
+        reason: "학교 현장 절차와 공식 기준을 함께 확인해야 합니다.",
+        placeholder: "예: 학교 규정 있음, 상담일지 있음"
+      }
+    ],
+    general: [
+      {
+        question: "누가 관련되어 있나요?",
+        reason: "학생, 학부모, 교사, 학교, 회사 등 주체를 나누면 책임과 절차를 더 정확히 볼 수 있습니다.",
+        placeholder: "예: 학생, 학교, 실습기업, 보호자"
+      },
+      {
+        question: "언제 어디서 어떤 일이 발생했나요?",
+        reason: "날짜와 장소는 적용되는 절차와 자료를 구분하는 기준입니다.",
+        placeholder: "예: 5월 말, 학교 실습실, 회사 현장"
+      },
+      {
+        question: "계약서, 협약서, 공문, 문자, 사진, 진단서 같은 자료가 있나요?",
+        reason: "원자료가 있어야 공식 원문과 연결해 확인할 수 있습니다.",
+        placeholder: "예: 공문 있음, 사진 있음, 계약서 모름"
+      },
+      {
+        question: "이미 학교나 기관이 어떤 조치를 했나요?",
+        reason: "이미 진행된 조치를 알아야 빠진 절차와 다음 행동을 찾을 수 있습니다.",
+        placeholder: "예: 상담 완료, 보호자 통보, 회사 확인 중"
+      }
+    ]
+  };
+
+  const roleQuestion = {
+    student: {
+      question: "학생 본인이 지금 가장 걱정하는 점은 무엇인가요?",
+      reason: "학생 관점에서는 보호, 치료, 불이익 방지, 설명 요청을 먼저 정리해야 합니다.",
+      placeholder: "예: 치료비, 출석, 실습 평가, 회사와 학교 책임"
+    },
+    teacher: {
+      question: "선생님이 남긴 상담·지도·보고 기록이 있나요?",
+      reason: "교사 관점에서는 학생 보호와 지도 절차 기록이 중요합니다.",
+      placeholder: "예: 상담일지, 보호자 통화, 관리자 보고"
+    },
+    parent: {
+      question: "학부모가 학교나 기관에서 받은 안내가 있나요?",
+      reason: "보호자 안내와 동의, 공식 답변 여부를 확인해야 합니다.",
+      placeholder: "예: 문자 안내, 통화 내용, 공문"
+    },
+    principal: {
+      question: "학교장 또는 관리자가 이미 지시하거나 결재한 조치가 있나요?",
+      reason: "관리자 관점에서는 보고체계, 안전관리, 민원 대응 기록이 중요합니다.",
+      placeholder: "예: 실습 중단 지시, 교육청 보고 검토"
+    },
+    staff: {
+      question: "행정 처리나 공문으로 남긴 기록이 있나요?",
+      reason: "행정직 관점에서는 계약, 공문, 결재, 접수 기록이 판단의 출발점입니다.",
+      placeholder: "예: 공문 접수, 내부 결재, 계약서"
+    }
+  }[userRole];
+
+  const questions = [...(byTopic[preset.type] || byTopic.general)];
+
+  if (hasFriendContext && preset.type === "fieldTraining") {
+    questions.push({
+      question: "친구 일을 도우러 간 상황이 공식 실습 업무였나요, 개인적인 부탁이었나요?",
+      reason: "공식 업무 범위인지에 따라 학교와 회사의 확인 지점이 달라질 수 있습니다.",
+      placeholder: "예: 같은 실습 업무, 친구 부탁, 담당자 허락 여부 모름"
+    });
+  }
+
+  if (hasSeriousInjury || riskSignals.length) {
+    questions.push({
+      question: "진단명, 치료 기간, 장해 가능성처럼 피해 정도를 확인할 자료가 있나요?",
+      reason: "중대한 부상이나 분쟁 가능성이 있으면 전문가 확인과 공식 보고를 우선 검토해야 합니다.",
+      placeholder: "예: 팔 골절, 전치 6주, 수술 예정, 자료는 아직 없음"
+    });
+  }
+
+  if (roleQuestion) {
+    questions.push(roleQuestion);
+  }
+
+  const unique = [];
+  const seen = new Set();
+  questions.forEach((item) => {
+    if (!seen.has(item.question)) {
+      seen.add(item.question);
+      unique.push(item);
+    }
+  });
+
+  return unique.slice(0, 6);
+}
+
+function renderRefinementPanel(questions) {
+  if (!questions.length) {
+    return "";
+  }
+
+  return `
+    <section class="clarifier-panel" aria-label="정확도를 높이는 보강 질문">
+      <div class="clarifier-head">
+        <div>
+          <span>질문을 더 정확하게</span>
+          <h3>부족한 사실을 확인해 볼까요?</h3>
+          <p>답할 수 있는 것만 적어도 됩니다. 모르거나 없거나 민감한 내용은 그대로 표시해도 검색 방향을 좁히는 데 도움이 됩니다.</p>
+        </div>
+      </div>
+      <form id="clarifierForm" data-count="${questions.length}">
+        <div class="clarifier-list">
+          ${questions.map((item, index) => `
+            <article class="clarifier-item">
+              <label for="clarifier-note-${index}">${escapeHtml(item.question)}</label>
+              <p class="clarifier-reason">${escapeHtml(item.reason)}</p>
+              <input type="hidden" name="question-${index}" value="${escapeHtml(item.question)}">
+              <div class="clarifier-grid">
+                <select name="status-${index}" aria-label="${escapeHtml(item.question)} 답변 상태">
+                  <option value="answer">답변 입력</option>
+                  <option value="unknown">모름</option>
+                  <option value="none">없음/해당 없음</option>
+                  <option value="sensitive">민감해서 생략</option>
+                </select>
+                <textarea id="clarifier-note-${index}" name="note-${index}" rows="2" placeholder="${escapeHtml(item.placeholder)}"></textarea>
+              </div>
+            </article>
+          `).join("")}
+        </div>
+        <p class="clarifier-note">실명, 주민번호, 전화번호, 주소, 회사 내부 비밀처럼 민감한 정보는 쓰지 않아도 됩니다.</p>
+        <div class="clarifier-actions">
+          <button class="primary-action clarifier-submit" type="submit">답변 반영해서 다시 찾기</button>
+          <span id="clarifierFeedback" class="clarifier-feedback" role="status"></span>
+        </div>
+      </form>
+    </section>
+  `;
+}
+
+function applyClarifierAnswers(formElement) {
+  const count = Number(formElement.dataset.count || 0);
+  const answers = [];
+
+  for (let index = 0; index < count; index += 1) {
+    const question = formElement.elements[`question-${index}`]?.value.trim();
+    const status = formElement.elements[`status-${index}`]?.value || "answer";
+    const note = formElement.elements[`note-${index}`]?.value.trim() || "";
+
+    if (!question) {
+      continue;
+    }
+
+    if (status === "answer" && !note) {
+      continue;
+    }
+
+    answers.push({ question, status, note });
+  }
+
+  const feedback = formElement.querySelector("#clarifierFeedback");
+
+  if (!answers.length) {
+    if (feedback) {
+      feedback.textContent = "아직 반영할 내용이 없습니다. 필요한 항목만 적거나 모름·없음·생략을 선택해 주세요.";
+    }
+    return;
+  }
+
+  questionInput.value = buildRefinedQuestion(stripPreviousRefinement(questionInput.value), answers);
+  if (feedback) {
+    feedback.textContent = "추가 확인 내용을 반영해 다시 찾습니다.";
+  }
+  skipNextAutoScroll = false;
+  window.setTimeout(() => form.requestSubmit(), 0);
+}
+
+function buildRefinedQuestion(baseQuestion, answers) {
+  const lines = answers.map((item) => {
+    const statusLabel = getClarifierStatusLabel(item.status);
+    const value = item.status === "answer"
+      ? item.note
+      : item.note
+        ? `${statusLabel} - ${item.note}`
+        : statusLabel;
+
+    return `- ${item.question}: ${value}`;
+  });
+
+  return `${baseQuestion.trim()}\n\n추가 확인 내용:\n${lines.join("\n")}`;
+}
+
+function stripPreviousRefinement(value) {
+  return String(value || "").split(/\n\n추가 확인 내용:/)[0].trim();
+}
+
+function getClarifierStatusLabel(status) {
+  const labels = {
+    answer: "답변 입력",
+    unknown: "모름",
+    none: "없음/해당 없음",
+    sensitive: "민감해서 생략"
+  };
+
+  return labels[status] || labels.answer;
 }
 
 function getRoleGuide(userRole) {
