@@ -9,6 +9,8 @@ const statusDot = document.querySelector(".status-dot");
 const topicTypeInput = document.querySelector("#topicType");
 const answerModeInput = document.querySelector("#answerMode");
 const userRoleInput = document.querySelector("#userRole");
+const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
+let currentReportDraft = null;
 let skipNextAutoScroll = false;
 
 const roleGuides = {
@@ -148,6 +150,23 @@ const officialMaterialsByTopic = {
 
 const highRiskWords = ["소송", "고소", "고발", "형사", "사망", "중상", "해고", "징계", "손해배상", "폭행", "성폭력", "자살", "중대재해"];
 
+const reportProfileFields = [
+  { name: "schoolName", label: "학교명", placeholder: "예: ○○공업고등학교" },
+  { name: "studentLabel", label: "학생명 또는 식별명", placeholder: "예: 홍길동, 2학년 전기과 학생 A" },
+  { name: "department", label: "학과·학년·반", placeholder: "예: 스마트전자과 2학년 1반" },
+  { name: "teacherName", label: "담임·지도교사", placeholder: "예: 담임 김○○, 현장실습 담당 이○○" },
+  { name: "studentContact", label: "학생 연락처", placeholder: "선택 입력, 내부 보고용" },
+  { name: "guardianContact", label: "보호자 연락처", placeholder: "선택 입력, 내부 보고용" },
+  { name: "companyName", label: "파견 기업·기관", placeholder: "예: ○○테크 생산1팀" },
+  { name: "companyContact", label: "기업 담당자·연락처", placeholder: "예: 현장 멘토, 인사담당자" },
+  { name: "trainingPeriod", label: "파견일자·실습기간", placeholder: "예: 2026.05.01~2026.06.30" },
+  { name: "programName", label: "참여 사업명", placeholder: "예: 산학일체형 도제학교, 현장실습, 해외 현장실습" },
+  { name: "incidentDatePlace", label: "사고·문제 일시와 장소", placeholder: "예: 2026.05.30 14:20, CNC 실습장" },
+  { name: "currentStatus", label: "현재 조치·실습현황", placeholder: "예: 병원 이송 완료, 보호자 통보, 실습 중단 검토 중", multiline: true },
+  { name: "referenceNote", label: "기타 참고사항", placeholder: "예: CCTV 보존 요청, 교육청 보고 검토, 산재·보험 문의 예정", multiline: true },
+  { name: "drafterName", label: "작성자·검토자", placeholder: "예: 취업지도부 김○○ / 관리자 검토 예정" }
+];
+
 const topicPresets = [
   {
     type: "employment",
@@ -273,14 +292,48 @@ resultState.addEventListener("submit", (event) => {
 });
 
 resultState.addEventListener("click", (event) => {
-  const target = event.target instanceof Element ? event.target.closest("[data-print-report]") : null;
+  const target = event.target instanceof Element
+    ? event.target.closest("[data-print-report], [data-save-report], [data-download-report], [data-open-saved-report], [data-download-saved-report], [data-delete-saved-report]")
+    : null;
   if (!target) {
     return;
   }
 
-  document.body.classList.add("printing-report");
-  window.print();
-  window.setTimeout(() => document.body.classList.remove("printing-report"), 500);
+  if (target.matches("[data-print-report]")) {
+    const savedReport = finalizeAndSaveReport();
+    updateReportComposerFeedback(`보고서 자료실에 저장했습니다. 문서번호 ${savedReport.documentNo}`);
+    document.body.classList.add("printing-report");
+    window.print();
+    window.setTimeout(() => document.body.classList.remove("printing-report"), 500);
+    return;
+  }
+
+  if (target.matches("[data-save-report]")) {
+    const savedReport = finalizeAndSaveReport();
+    updateReportComposerFeedback(`보고서 자료실에 저장했습니다. 문서번호 ${savedReport.documentNo}`);
+    return;
+  }
+
+  if (target.matches("[data-download-report]")) {
+    const savedReport = finalizeAndSaveReport();
+    downloadSavedReport(savedReport);
+    updateReportComposerFeedback("HTML 보고서 파일을 만들었습니다.");
+    return;
+  }
+
+  if (target.matches("[data-open-saved-report]")) {
+    openSavedReport(target.dataset.reportId);
+    return;
+  }
+
+  if (target.matches("[data-download-saved-report]")) {
+    downloadSavedReport(target.dataset.reportId);
+    return;
+  }
+
+  if (target.matches("[data-delete-saved-report]")) {
+    deleteSavedReport(target.dataset.reportId);
+  }
 });
 
 window.addEventListener("afterprint", () => {
@@ -316,6 +369,7 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const directAnswer = getDirectAnswer(question, preset, roleGuide);
   const refinementQuestions = getRefinementQuestions(question, preset, userRole, riskSignals);
   const caseReport = buildCaseReport(question, preset, roleGuide, officialMaterials, riskSignals);
+  currentReportDraft = caseReport;
 
   resultTitle.textContent = "답변 먼저";
   statusDot.textContent = "API 확인중";
@@ -896,6 +950,8 @@ function renderCaseReport(report) {
         </div>
         <div class="report-actions">
           <span>${escapeHtml(report.generatedAt)}</span>
+          <button type="button" data-save-report>자료실 저장</button>
+          <button type="button" data-download-report>HTML 저장</button>
           <button type="button" data-print-report>보고서 인쇄</button>
         </div>
       </div>
@@ -903,8 +959,17 @@ function renderCaseReport(report) {
       <p class="report-lead">${escapeHtml(report.lead)}</p>
       <p class="report-disclaimer">${escapeHtml(report.disclaimer)}</p>
 
+      ${renderReportComposer(report)}
+
+      <div class="report-section report-profile-output-section">
+        <h4>1. 보고서 작성 정보</h4>
+        <div id="reportProfileOutput" class="report-profile-output">
+          <p>인쇄 전에 위 입력란을 작성하고 <strong>보고서 인쇄</strong> 또는 <strong>자료실 저장</strong>을 누르면 이 영역에 보고서 정보가 반영됩니다.</p>
+        </div>
+      </div>
+
       <div class="report-section">
-        <h4>1. 사안 개요</h4>
+        <h4>2. 사안 개요</h4>
         <div class="report-facts">
           ${report.facts.map((item) => `
             <div>
@@ -916,17 +981,17 @@ function renderCaseReport(report) {
       </div>
 
       <div class="report-section">
-        <h4>2. 핵심 쟁점 및 판단 전제</h4>
+        <h4>3. 핵심 쟁점 및 판단 전제</h4>
         ${renderReportList(report.issueSummary)}
       </div>
 
       <div class="report-section">
-        <h4>3. 즉시 조치 체크리스트</h4>
+        <h4>4. 즉시 조치 체크리스트</h4>
         ${renderReportList(report.immediateActions, "checklist")}
       </div>
 
       <div class="report-section">
-        <h4>4. 주체별 조치사항과 권리·의무</h4>
+        <h4>5. 주체별 조치사항과 권리·의무</h4>
         <div class="report-stakeholders">
           ${report.stakeholders.map((section) => `
             <article>
@@ -942,12 +1007,12 @@ function renderCaseReport(report) {
       </div>
 
       <div class="report-section">
-        <h4>5. 준비할 증빙자료</h4>
+        <h4>6. 준비할 증빙자료</h4>
         ${renderReportList(report.evidence, "compact")}
       </div>
 
       <div class="report-section">
-        <h4>6. 공식 근거 자료</h4>
+        <h4>7. 공식 근거 자료</h4>
         <p class="report-section-note">아래 자료는 보고서 안에서 바로 확인할 수 있도록 정리한 근거 후보입니다. API 결과가 도착하면 현행일자와 원문 링크가 함께 보강됩니다.</p>
         ${renderReportMaterials(report.officialMaterials)}
         <div id="reportLiveSources" class="report-live-sources">
@@ -956,11 +1021,332 @@ function renderCaseReport(report) {
       </div>
 
       <div class="report-section">
-        <h4>7. 주의 및 전문가 확인 필요 사항</h4>
+        <h4>8. 주의 및 전문가 확인 필요 사항</h4>
         ${renderReportList(report.cautions)}
+      </div>
+
+      <div class="report-section report-sign-section">
+        <h4>9. 확인란</h4>
+        <div class="report-sign-grid">
+          <div><strong>작성자</strong><span></span></div>
+          <div><strong>검토자</strong><span></span></div>
+          <div><strong>확인일</strong><span></span></div>
+        </div>
+      </div>
+
+      ${renderReportLibrary()}
+    </section>
+  `;
+}
+
+function renderReportComposer() {
+  return `
+    <section class="report-composer" aria-label="보고서 작성 정보 입력">
+      <div class="report-composer-head">
+        <div>
+          <span>보고서 완성 정보</span>
+          <h4>인쇄 전에 필요한 학생·실습 정보를 입력하세요.</h4>
+          <p>모르는 항목은 비워도 됩니다. 연락처와 이름은 학교 내부 보고에 필요한 경우에만 입력하고, 외부 공유 전에는 비식별 처리하세요.</p>
+        </div>
+      </div>
+      <div class="report-profile-form">
+        ${reportProfileFields.map((field) => `
+          <label class="${field.multiline ? "wide" : ""}">
+            <span>${escapeHtml(field.label)}</span>
+            ${field.multiline
+              ? `<textarea data-report-field="${escapeHtml(field.name)}" rows="3" placeholder="${escapeHtml(field.placeholder)}"></textarea>`
+              : `<input data-report-field="${escapeHtml(field.name)}" type="text" placeholder="${escapeHtml(field.placeholder)}">`}
+          </label>
+        `).join("")}
+      </div>
+      <div class="report-composer-actions">
+        <button type="button" data-save-report>보고서 자료실 저장</button>
+        <button type="button" data-download-report>HTML 파일 저장</button>
+        <span id="reportComposerFeedback" role="status"></span>
       </div>
     </section>
   `;
+}
+
+function renderReportLibrary() {
+  return `
+    <section class="report-library" aria-label="저장된 보고서 자료실">
+      <div class="report-library-head">
+        <div>
+          <span>보고서 자료실</span>
+          <h4>이 브라우저에 저장된 보고서</h4>
+          <p>자료실 저장은 현재 사용하는 브라우저에 보관됩니다. 장기 보관이나 공유가 필요하면 HTML 파일 저장도 함께 해 두세요.</p>
+        </div>
+      </div>
+      <div id="reportLibraryList">
+        ${renderReportLibraryList()}
+      </div>
+    </section>
+  `;
+}
+
+function renderReportLibraryList() {
+  const reports = getSavedReports();
+  if (!reports.length) {
+    return `<p class="report-library-empty">아직 저장된 보고서가 없습니다. 보고서 정보를 입력한 뒤 저장하거나 인쇄하면 여기에 남습니다.</p>`;
+  }
+
+  return `
+    <div class="report-library-list">
+      ${reports.map((report) => {
+        const savedAt = formatDateTime(report.savedAt);
+        const profileSummary = summarizeReportProfile(report.profile);
+        return `
+          <article>
+            <div>
+              <strong>${escapeHtml(report.title)}</strong>
+              <p>${escapeHtml(report.documentNo)} · ${escapeHtml(savedAt)}</p>
+              <small>${escapeHtml(profileSummary)}</small>
+            </div>
+            <div class="report-library-actions">
+              <button type="button" data-open-saved-report data-report-id="${escapeHtml(report.id)}">열람</button>
+              <button type="button" data-download-saved-report data-report-id="${escapeHtml(report.id)}">HTML 저장</button>
+              <button type="button" data-delete-saved-report data-report-id="${escapeHtml(report.id)}">삭제</button>
+            </div>
+          </article>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function finalizeAndSaveReport() {
+  const reportElement = document.querySelector("#caseReport");
+  const nowIso = new Date().toISOString();
+  const id = reportElement?.dataset.activeReportId || createReportId(nowIso);
+  const documentNo = reportElement?.dataset.documentNo || createDocumentNo(nowIso);
+  const profile = collectReportProfile();
+  const profileMount = document.querySelector("#reportProfileOutput");
+
+  if (profileMount) {
+    profileMount.innerHTML = renderReportProfileOutput(profile, documentNo, nowIso);
+  }
+
+  if (reportElement) {
+    reportElement.dataset.activeReportId = id;
+    reportElement.dataset.documentNo = documentNo;
+  }
+
+  const draft = currentReportDraft || {};
+  const record = {
+    id,
+    documentNo,
+    title: draft.title || "사안 보고서",
+    subtitle: draft.subtitle || "",
+    question: getQuestionContext(questionInput.value).baseQuestion || questionInput.value.trim(),
+    savedAt: nowIso,
+    generatedAt: draft.generatedAt || formatDateTime(nowIso),
+    profile,
+    html: buildReportSnapshotHtml(documentNo, nowIso)
+  };
+
+  const reports = getSavedReports().filter((item) => item.id !== id);
+  reports.unshift(record);
+  setSavedReports(reports.slice(0, 30));
+  refreshReportLibrary();
+
+  return record;
+}
+
+function collectReportProfile() {
+  return reportProfileFields.map((field) => {
+    const input = document.querySelector(`[data-report-field="${field.name}"]`);
+    return {
+      name: field.name,
+      label: field.label,
+      value: input?.value.trim() || ""
+    };
+  });
+}
+
+function renderReportProfileOutput(profile, documentNo, savedAt) {
+  const rows = [
+    { label: "문서번호", value: documentNo },
+    { label: "작성·저장 시각", value: formatDateTime(savedAt) },
+    ...profile
+  ];
+
+  return `
+    <div class="report-profile-grid">
+      ${rows.map((item) => `
+        <div>
+          <strong>${escapeHtml(item.label)}</strong>
+          <p>${escapeHtml(item.value || "미입력")}</p>
+        </div>
+      `).join("")}
+    </div>
+    <p class="report-profile-note">연락처와 실명 등 개인정보가 포함된 보고서는 학교 내부 보관용으로만 관리하고, 외부 공유 시 비식별 처리하세요.</p>
+  `;
+}
+
+function summarizeReportProfile(profile = []) {
+  const values = Object.fromEntries(profile.map((item) => [item.name, item.value]));
+  return [
+    values.studentLabel,
+    values.department,
+    values.companyName,
+    values.trainingPeriod
+  ].filter(Boolean).join(" · ") || "입력 정보 미작성";
+}
+
+function refreshReportLibrary() {
+  const mount = document.querySelector("#reportLibraryList");
+  if (mount) {
+    mount.innerHTML = renderReportLibraryList();
+  }
+}
+
+function updateReportComposerFeedback(message) {
+  const feedback = document.querySelector("#reportComposerFeedback");
+  if (feedback) {
+    feedback.textContent = message;
+  }
+}
+
+function getSavedReports() {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(REPORT_LIBRARY_KEY) || "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function setSavedReports(reports) {
+  try {
+    window.localStorage.setItem(REPORT_LIBRARY_KEY, JSON.stringify(reports));
+  } catch {
+    updateReportComposerFeedback("브라우저 저장 공간이 부족해 자료실 저장에 실패했습니다. HTML 파일 저장을 이용하세요.");
+  }
+}
+
+function createReportId(value) {
+  return `report-${Date.parse(value) || Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function createDocumentNo(value) {
+  const date = new Date(value);
+  const pad = (number) => String(number).padStart(2, "0");
+  const stamp = [
+    date.getFullYear(),
+    pad(date.getMonth() + 1),
+    pad(date.getDate())
+  ].join("");
+  const time = [pad(date.getHours()), pad(date.getMinutes()), pad(date.getSeconds())].join("");
+  return `GYO6-LAW-${stamp}-${time}`;
+}
+
+function buildReportSnapshotHtml(documentNo, savedAt) {
+  const reportElement = document.querySelector("#caseReport");
+  if (!reportElement) {
+    return "";
+  }
+
+  const clone = reportElement.cloneNode(true);
+  clone.querySelectorAll(".report-composer, .report-library, .report-actions").forEach((node) => node.remove());
+  clone.removeAttribute("id");
+
+  return `<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>${escapeHtml(documentNo)} 보고서</title>
+  <style>${getReportSnapshotStyles()}</style>
+</head>
+<body>
+  <main>
+    ${clone.outerHTML}
+    <footer>저장시각 ${escapeHtml(formatDateTime(savedAt))} · GYO6 Law Info</footer>
+  </main>
+</body>
+</html>`;
+}
+
+function getReportSnapshotStyles() {
+  return `
+    body{margin:0;background:#f5f6f8;color:#111827;font-family:Arial,"Noto Sans KR",sans-serif}
+    main{max-width:960px;margin:0 auto;padding:28px;background:#fff}
+    .case-report{display:grid;gap:18px}
+    .report-cover{border-bottom:2px solid #111827;padding-bottom:14px}
+    .report-kicker{margin:0 0 6px;color:#256fc5;font-size:12px;font-weight:800;letter-spacing:.08em}
+    h3{margin:0;font-size:26px;line-height:1.35}
+    h4{margin:0;font-size:18px}
+    h5{margin:0;font-size:15px}
+    p,li{line-height:1.65}
+    .report-lead{border-left:5px solid #256fc5;background:#f4f8fd;padding:14px;font-weight:700}
+    .report-disclaimer{border:1px solid #f0d6a3;background:#fffaf0;padding:12px;color:#79540e}
+    .report-section{border-top:1px solid #dce5ee;padding-top:14px;display:grid;gap:10px}
+    .report-facts,.report-profile-grid,.report-materials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .report-facts div,.report-profile-grid div,.report-stakeholders article,.report-materials article,.report-api-list article{border:1px solid #dce5ee;padding:10px;background:#fbfcfd}
+    strong{color:#142033}
+    .report-list{margin:0;padding-left:20px}
+    .report-list.checklist{padding-left:0;list-style-position:inside}
+    .report-list.checklist li{border:1px solid #dce5ee;margin-bottom:6px;padding:8px;background:#f8fbfd}
+    .report-list.compact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding-left:0;list-style:none}
+    .report-stakeholders{display:grid;gap:10px}
+    .report-sign-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .report-sign-grid div{min-height:68px;border:1px solid #111827;padding:10px}
+    a{color:#111827;text-decoration:none}
+    footer{margin-top:28px;border-top:1px solid #dce5ee;padding-top:12px;color:#65758b;font-size:12px}
+    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article{break-inside:avoid}}
+  `;
+}
+
+function downloadSavedReport(report) {
+  const file = report?.html ? report : getSavedReports().find((item) => item.id === report);
+  if (!file?.html) {
+    updateReportComposerFeedback("저장된 보고서를 찾지 못했습니다.");
+    return;
+  }
+
+  const blob = new Blob([file.html], { type: "text/html;charset=utf-8" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `${file.documentNo || "GYO6-LAW-REPORT"}.html`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(link.href), 500);
+}
+
+function openSavedReport(id) {
+  const report = getSavedReports().find((item) => item.id === id);
+  if (!report?.html) {
+    updateReportComposerFeedback("저장된 보고서를 찾지 못했습니다.");
+    return;
+  }
+
+  const popup = window.open("", "_blank", "noopener,noreferrer");
+  if (!popup) {
+    downloadSavedReport(report);
+    return;
+  }
+
+  popup.document.open();
+  popup.document.write(report.html);
+  popup.document.close();
+}
+
+function deleteSavedReport(id) {
+  const reports = getSavedReports();
+  const target = reports.find((item) => item.id === id);
+  if (!target) {
+    return;
+  }
+
+  const confirmed = window.confirm(`${target.documentNo} 보고서를 자료실에서 삭제할까요?`);
+  if (!confirmed) {
+    return;
+  }
+
+  setSavedReports(reports.filter((item) => item.id !== id));
+  refreshReportLibrary();
+  updateReportComposerFeedback("저장된 보고서를 삭제했습니다.");
 }
 
 function renderReportList(items, variant = "") {
