@@ -80,6 +80,69 @@ const sourcePlanByTopic = {
   general: ["law", "admin", "case", "expert"]
 };
 
+const legalBasisCatalog = {
+  fieldTrainingOperation: {
+    label: "직업교육훈련 촉진법 제7조의2(현장실습 운영기준)",
+    detail: "국가·지자체가 재학 중 직업교육훈련생의 현장실습 내실화를 위한 운영기준을 정하도록 한 조문입니다. 학교 운영계획, 배치, 지도·점검 기준을 대조합니다."
+  },
+  fieldTrainingCompanySelection: {
+    label: "직업교육훈련 촉진법 제8조(현장실습산업체의 선정 등)",
+    detail: "전공 분야, 현장실습프로그램, 시설·설비 적합성, 후생복지 여건 등을 고려해 산업체를 선정했는지 확인하는 조문입니다."
+  },
+  fieldTrainingContract: {
+    label: "직업교육훈련 촉진법 제9조(현장실습계약 등)",
+    detail: "직업교육훈련생과 현장실습산업체가 사전에 현장실습계약을 체결해야 하는 조문입니다. 계약서와 실제 업무 지시를 대조합니다."
+  },
+  fieldTrainingTime: {
+    label: "직업교육훈련 촉진법 제9조의2(현장실습 시간)",
+    detail: "미성년자·재학생 현장실습은 1일 7시간, 1주 35시간을 원칙으로 하며 야간·휴일 실습 제한 여부를 확인합니다."
+  },
+  fieldTrainingCompanyDuty: {
+    label: "직업교육훈련 촉진법 제9조의4(현장실습산업체의 책무)",
+    detail: "산업체가 적절한 실습환경을 조성하고 직업교육훈련생의 생명과 신체 보호에 협조해야 하는지 확인합니다."
+  },
+  fieldTrainingSafetyEducation: {
+    label: "직업교육훈련 촉진법 제9조의5(현장실습 안전교육 등)",
+    detail: "직업교육훈련기관이 현장실습생에게 안전교육 및 노동인권·권익보호 교육을 실시했는지 확인합니다."
+  },
+  oshEducation: {
+    label: "산업안전보건법 제29조(근로자에 대한 안전보건교육)",
+    detail: "사업주가 정기·채용·작업내용 변경 시 필요한 안전보건교육을 했는지 확인합니다. 실습생의 실제 작업 수행 여부와 함께 봅니다."
+  },
+  oshSafetyMeasures: {
+    label: "산업안전보건법 제38조(안전조치)",
+    detail: "기계·기구·설비, 에너지, 추락·낙하 등 위험으로 인한 산업재해 예방조치가 있었는지 확인합니다."
+  },
+  oshAccidentReport: {
+    label: "산업안전보건법 제57조(산업재해 발생 은폐 금지 및 보고 등)",
+    detail: "산업재해 은폐 금지, 발생 원인 기록·보존, 보고 대상 여부를 확인하는 조문입니다."
+  },
+  oshAccidentReportRule: {
+    label: "산업안전보건법 시행규칙 제73조(산업재해 발생 보고 등)",
+    detail: "사망 또는 3일 이상 휴업이 필요한 부상·질병이면 산업재해조사표를 1개월 이내 관할 지방고용노동관서에 제출하는지 확인합니다."
+  },
+  oshMachineGuard: {
+    label: "산업안전보건법 제80조(유해하거나 위험한 기계·기구에 대한 방호조치)",
+    detail: "동력 기계·기구의 유해·위험 방지를 위한 방호조치, 안전장치, 사용 제공 여부를 확인합니다."
+  },
+  seriousAccidentDefinition: {
+    label: "중대재해 처벌 등에 관한 법률 제2조(정의)",
+    detail: "중대산업재해 해당 여부를 사망, 다수 부상, 치료기간 등 법정 요건으로 대조합니다."
+  },
+  seriousAccidentDuty: {
+    label: "중대재해 처벌 등에 관한 법률 제4조(사업주와 경영책임자등의 안전 및 보건 확보의무)",
+    detail: "안전보건관리체계, 재발방지 대책, 관계 법령 의무이행 관리조치가 있었는지 확인합니다."
+  },
+  seriousAccidentContract: {
+    label: "중대재해 처벌 등에 관한 법률 제5조(도급·용역·위탁 등 관계에서의 안전 및 보건 확보의무)",
+    detail: "학교·기업·위탁기관 등 여러 주체가 얽힌 경우 실질적 지배·운영·관리 관계와 안전보건 확보의무를 확인합니다."
+  },
+  schoolSafetyCompensation: {
+    label: "학교안전사고 예방 및 보상에 관한 법률",
+    detail: "학교 교육활동 중 사고인지, 학교안전공제 절차와 보상 가능성을 별도로 확인합니다."
+  }
+};
+
 const factPromptsByTopic = {
   employment: ["근로계약서가 있나요?", "근무 시작일과 종료일은 언제인가요?", "임금·근로시간 조건을 알고 있나요?", "학생 신분과 근로자성이 함께 문제되나요?"],
   apprenticeship: ["도제학교 운영 계획이나 훈련계약이 있나요?", "학교와 기업의 역할이 나뉘어 있나요?", "훈련 장소와 시간이 정리되어 있나요?", "안전교육 기록이 있나요?"],
@@ -1222,6 +1285,7 @@ function renderExecutiveSummaryContent(report, profileContext = {}) {
       <strong>관리자 우선 판단</strong>
       <p>${escapeHtml(buildManagerPriorityText(report, profileContext))}</p>
     </div>
+    ${renderEducationOfficeDraft(report, profileContext)}
   `;
 }
 
@@ -1261,6 +1325,80 @@ function buildManagerPriorityText(report, profileContext = {}) {
   const note = profileContext.referenceNote ? `참고사항: ${profileContext.referenceNote}` : "";
   const actions = report.immediateActions?.slice(0, 2).join(" ") || "";
   return [status, note, actions].filter(Boolean).join(" ") || "학생 보호, 사실관계 기록, 공식 원문 확인, 보고 필요 여부 판단을 우선 진행합니다.";
+}
+
+function getReportSearchText(report, profileContext = {}) {
+  return [
+    report?.title,
+    report?.subtitle,
+    report?.lead,
+    report?.audience,
+    report?.facts?.map((item) => `${item.label} ${item.value}`).join(" "),
+    report?.issueSummary?.join(" "),
+    report?.immediateActions?.join(" "),
+    profileContext.schoolName,
+    profileContext.studentLabel,
+    profileContext.companyName,
+    profileContext.currentStatus,
+    profileContext.referenceNote
+  ].filter(Boolean).join(" ");
+}
+
+function isLikelyFieldTrainingAccident(report, profileContext = {}) {
+  const text = getReportSearchText(report, profileContext).replace(/\s+/g, "");
+  return /현장실습|도제|직업계고|특성화고|실습기업|실습기관/.test(text)
+    && /사고|골절|부상|상해|기계|안전|산재|응급|치료|입원/.test(text);
+}
+
+function shouldRenderEducationOfficeDraft(report, profileContext = {}) {
+  const text = getReportSearchText(report, profileContext).replace(/\s+/g, "");
+  return isLikelyFieldTrainingAccident(report, profileContext)
+    || /교육청보고|중대재해|사망|중상|골절|입원|수술|장해|민원|언론|분쟁/.test(text);
+}
+
+function renderEducationOfficeDraft(report, profileContext = {}) {
+  if (!shouldRenderEducationOfficeDraft(report, profileContext)) {
+    return "";
+  }
+
+  const schoolName = profileContext.schoolName || "학교명 확인 필요";
+  const studentLabel = profileContext.studentLabel || "학생 성명 또는 식별명 확인 필요";
+  const companyName = profileContext.companyName || "실습기업·기관 확인 필요";
+  const incident = profileContext.incidentDatePlace || findReportFact(report, "사고 시간") || "발생 일시·장소 확인 필요";
+  const currentStatus = profileContext.currentStatus || report.immediateActions?.[0] || "치료, 보호자 통보, 실습 중단 여부 확인 필요";
+  const teacherName = profileContext.teacherName || "담당·지도교사 확인 필요";
+  const period = profileContext.trainingPeriod || "파견일자·실습기간 확인 필요";
+  const program = profileContext.programName || "참여 사업명 확인 필요";
+  const facts = report.facts?.slice(0, 3).map((item) => `${item.label}: ${item.value}`).join(" / ") || report.lead;
+
+  const rows = [
+    { label: "수신", value: "관할 교육청 직업교육·현장실습 담당부서" },
+    { label: "제목", value: `[검토용] 현장실습 안전사고 발생 보고 초안 - ${schoolName} ${studentLabel}` },
+    { label: "1. 보고 개요", value: `${schoolName} 소속 ${studentLabel} 관련 현장실습 안전사고로, 학생 보호와 사실관계 확인을 우선 진행 중입니다.` },
+    { label: "2. 발생 일시·장소", value: incident },
+    { label: "3. 관련 학생·학교·실습기업", value: `학생: ${studentLabel} / 담당: ${teacherName} / 실습기업: ${companyName} / 실습기간: ${period} / 참여사업: ${program}` },
+    { label: "4. 사고 경위", value: facts },
+    { label: "5. 즉시 조치", value: currentStatus },
+    { label: "6. 확인 중인 쟁점", value: "공식 현장실습 범위 안의 사고인지, 학생이 허락받은 작업을 했는지, 안전교육·작업지시·감독·방호조치·산재 보고 대상 여부를 확인 중입니다." },
+    { label: "7. 요청·향후 조치", value: "교육청 보고 필요 여부 검토, 학생 치료와 보호자 안내, 현장 보존 요청, 증빙자료 확보, 실습 중단·복귀 계획 검토가 필요합니다." }
+  ];
+
+  return `
+    <div class="education-office-draft">
+      <div>
+        <strong>교육청 보고 초안</strong>
+        <span>관리자 검토 후 공문·보고서 양식에 맞춰 조정</span>
+      </div>
+      <dl>
+        ${rows.map((row) => `
+          <div>
+            <dt>${escapeHtml(row.label)}</dt>
+            <dd>${escapeHtml(row.value)}</dd>
+          </div>
+        `).join("")}
+      </dl>
+    </div>
+  `;
 }
 
 function findReportFact(report, labelPart) {
@@ -1320,6 +1458,160 @@ function renderStakeholderProfileContextContent(profileContext = {}) {
     <div class="stakeholder-context-note">
       <strong>입력 정보 반영</strong>
       <p>${escapeHtml(items.join(" · "))}</p>
+    </div>
+  `;
+}
+
+function buildEvidenceGroups(report) {
+  if (!isLikelyFieldTrainingAccident(report)) {
+    return [
+      {
+        priority: "recommended",
+        title: "권고",
+        description: "사안 판단에 도움이 큰 자료입니다. 원본 보관자와 확보 경로를 함께 기록합니다.",
+        items: (report.evidence || []).map((item) => {
+          const text = typeof item === "string" ? item : item.text;
+          return {
+          title: text,
+          reason: "질문 내용과 관련된 사실관계를 확인하는 데 도움이 됩니다.",
+          how: "학교 담당자, 관련 기관, 당사자 보관 자료 중 원본 또는 사본 확보 가능 여부를 확인합니다.",
+          basis: getInlineBasisForText(text, report)
+        };
+        })
+      }
+    ];
+  }
+
+  return [
+    {
+      priority: "required",
+      title: "필수 확인",
+      description: "법적 판단을 단정하기 위한 필수 증거라는 뜻이 아니라, 보고·보호·산재 대상 여부를 판단하기 위해 먼저 확인해야 할 자료입니다.",
+      items: [
+        {
+          title: "현장실습계약서·표준협약서",
+          reason: "공식 실습 범위, 실습 내용, 기간·시간, 권리·의무와 실제 작업 지시가 맞는지 확인합니다.",
+          how: "학교 취업부·현장실습 담당자, 학생 보관본, 실습기업 보관본을 각각 확인해 서명일자와 내용이 같은지 대조합니다.",
+          basis: formatLegalBasis(["fieldTrainingContract"])
+        },
+        {
+          title: "현장실습 운영계획·산업체 선정·학생 배치 기록",
+          reason: "실습기업 선정과 학생 배치가 전공, 프로그램, 시설·설비, 안전 여건을 고려해 이루어졌는지 확인합니다.",
+          how: "학교 현장실습 운영계획, 산업체 선정 심의·점검 자료, 배치표, 지도교사 방문·순회지도 기록을 학교 내부 자료에서 확보합니다.",
+          basis: formatLegalBasis(["fieldTrainingOperation", "fieldTrainingCompanySelection"])
+        },
+        {
+          title: "현장실습 안전교육 및 노동인권·권익보호 교육 기록",
+          reason: "사고 전 학교와 기업이 어떤 안전교육을 했는지, 학생이 교육을 실제로 받았는지 확인합니다.",
+          how: "교육일자, 교육자료, 서명부, LMS 이수내역, 교육 담당자 기록을 학교와 실습기업 양쪽에서 확인합니다.",
+          basis: formatLegalBasis(["fieldTrainingSafetyEducation", "oshEducation"])
+        },
+        {
+          title: "산업재해조사표 제출 대상 여부 확인 자료",
+          reason: "사망 또는 3일 이상 휴업이 필요한 부상·질병인지가 확인되면 산업재해조사표 제출 대상이 될 수 있습니다.",
+          how: "진단서·휴업 예상기간, 회사 사고보고서, 관할 지방고용노동관서 제출 여부를 실습기업에 확인하고 학교 기록에 남깁니다.",
+          basis: formatLegalBasis(["oshAccidentReport", "oshAccidentReportRule"])
+        },
+        {
+          title: "교육청 보고 필요 여부 판단 자료",
+          reason: "현장실습 중 안전사고는 학생 보호, 실습 중단, 민원 대응, 교육청 보고 필요성을 관리자와 즉시 검토해야 합니다.",
+          how: "관할 교육청 현장실습 매뉴얼, 학교 내부 보고 기준, 관리자 결재라인, 보호자 안내 기록을 확인합니다.",
+          basis: formatLegalBasis(["fieldTrainingOperation", "fieldTrainingCompanyDuty"])
+        }
+      ]
+    },
+    {
+      priority: "recommended",
+      title: "권고",
+      description: "책임 판단과 재발방지에 큰 도움이 되는 자료입니다. 가능한 한 조기에 원본 보존을 요청합니다.",
+      items: [
+        {
+          title: "진단서·응급실 기록·치료비 영수증·향후 치료 소견",
+          reason: "부상 정도, 휴업·치료 기간, 산재·보험·학교안전공제 절차 검토의 기준 자료입니다.",
+          how: "학생·보호자 동의를 받아 의료기관 발급 자료를 확보하고, 개인정보가 포함되므로 열람·보관 권한을 제한합니다.",
+          basis: formatLegalBasis(["oshAccidentReportRule"])
+        },
+        {
+          title: "사고경위 시간표·목격자 진술·CCTV 보존 요청",
+          reason: "누가 지시했는지, 공식 업무였는지, 사고 당시 현장상황이 어땠는지 확인하는 핵심 자료입니다.",
+          how: "학교는 학생·목격자 상담기록을 남기고, 기업에는 CCTV·출입기록·현장 사진 보존을 서면으로 요청합니다.",
+          basis: formatLegalBasis(["fieldTrainingOperation", "oshSafetyMeasures"])
+        },
+        {
+          title: "출퇴근 기록·실습일지·작업지시 내역",
+          reason: "사고가 실습시간 안에서 발생했는지, 학생이 허락받은 작업을 했는지 확인합니다.",
+          how: "학생 실습일지, 기업 출입·근태 기록, 메신저·구두지시 기록, 지도교사 상담기록을 시간순으로 모읍니다.",
+          basis: formatLegalBasis(["fieldTrainingTime", "fieldTrainingContract"])
+        },
+        {
+          title: "기계 방호장치 사진·작업표준서·위험성평가·보호구 지급 자료",
+          reason: "기계 사고에서는 방호조치, 작업방법, 감독, 보호구 지급 여부가 책임 판단의 중심 자료가 됩니다.",
+          how: "실습기업 안전보건 담당자에게 사고 기계 사진, 점검표, 작업표준서, 위험성평가, 보호구 지급대장을 요청합니다.",
+          basis: formatLegalBasis(["oshSafetyMeasures", "oshMachineGuard"])
+        }
+      ]
+    },
+    {
+      priority: "optional",
+      title: "선택",
+      description: "있으면 사안 이해와 소통에 도움이 되지만, 없다고 해서 곧바로 불리하다고 보기는 어려운 자료입니다.",
+      items: [
+        {
+          title: "학생·보호자 개인 메모, 통화·문자 기록",
+          reason: "학교, 기업, 보호자 사이의 안내와 요청 경과를 시간순으로 정리하는 데 도움이 됩니다.",
+          how: "학생·보호자가 보관한 문자, 통화일지, 상담 메모를 필요한 범위에서만 정리하고 민감정보는 가립니다.",
+          basis: "기록 보존 목적의 참고자료 - 공식 보고서에는 사실 확인이 가능한 내용만 반영합니다."
+        },
+        {
+          title: "유사 안전교육 자료·OPS·교안",
+          reason: "사고 후 재발방지 교육과 학생 복귀 전 안전교육 계획을 보강하는 데 도움이 됩니다.",
+          how: "안전보건공단 자료실, 고용노동부·교육부 자료, 학교 보유 교안을 찾아 사고 공정과 직접 관련 있는 자료만 첨부합니다.",
+          basis: formatLegalBasis(["oshSafetyMeasures", "fieldTrainingSafetyEducation"])
+        },
+        {
+          title: "복귀·실습중단·평가 처리 협의 기록",
+          reason: "학생에게 출결·평가·실습 이수상 불이익이 생기지 않도록 사후 조치 경과를 남깁니다.",
+          how: "담임, 취업지도부, 관리자, 보호자 협의 내용을 회의록이나 상담기록으로 남기고 학교 규정에 따라 보관합니다.",
+          basis: formatLegalBasis(["fieldTrainingOperation"])
+        }
+      ]
+    }
+  ];
+}
+
+function renderEvidenceItems(report) {
+  const groups = buildEvidenceGroups(report).filter((group) => group.items?.length);
+
+  return `
+    <div class="evidence-groups">
+      ${groups.map((group) => `
+        <section class="evidence-category ${escapeHtml(group.priority)}">
+          <div class="evidence-category-head">
+            <span class="evidence-priority ${escapeHtml(group.priority)}">${escapeHtml(group.title)}</span>
+            <p>${escapeHtml(group.description)}</p>
+          </div>
+          <div class="evidence-items">
+            ${group.items.map((item) => `
+              <article>
+                <h5>${escapeHtml(item.title)}</h5>
+                <p>${escapeHtml(item.reason)}</p>
+                <dl>
+                  <div>
+                    <dt>확보 방법</dt>
+                    <dd>${escapeHtml(item.how)}</dd>
+                  </div>
+                  ${item.basis ? `
+                    <div>
+                      <dt>근거·확인 조문</dt>
+                      <dd>${escapeHtml(item.basis)}</dd>
+                    </div>
+                  ` : ""}
+                </dl>
+              </article>
+            `).join("")}
+          </div>
+        </section>
+      `).join("")}
     </div>
   `;
 }
@@ -1387,7 +1679,7 @@ function renderCaseReport(report) {
 
       <div class="report-section">
         <h4>6. 준비할 증빙자료</h4>
-        ${renderReportList(report.evidence, "compact")}
+        ${renderEvidenceItems(report)}
       </div>
 
       <div class="report-section">
@@ -1674,8 +1966,15 @@ function getReportSnapshotStyles() {
     .admin-summary-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
     .admin-summary-meta small{background:#fff;border:1px solid #dce5ee;padding:4px 7px;font-size:11px}
     .sixw-grid,.report-context-block,.report-facts,.report-profile-grid,.report-materials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-    .sixw-grid article,.report-context-block article,.report-facts div,.report-profile-grid div,.report-stakeholders article,.report-materials article,.report-api-list article{border:1px solid #dce5ee;padding:10px;background:#fbfcfd}
+    .sixw-grid article,.report-context-block article,.report-facts div,.report-profile-grid div,.report-stakeholders article,.report-materials article,.report-api-list article,.evidence-items article{border:1px solid #dce5ee;padding:10px;background:#fbfcfd}
     .response-summary,.stakeholder-context-note{border:1px solid #dce5ee;background:#f8fbfd;padding:10px}
+    .education-office-draft{display:grid;gap:10px;border:1px solid #cbdbe8;border-left:5px solid #256fc5;background:#f8fbfd;padding:12px}
+    .education-office-draft>div{display:flex;justify-content:space-between;gap:10px}
+    .education-office-draft span{color:#65758b;font-size:12px;font-weight:800}
+    .education-office-draft dl{display:grid;gap:6px;margin:0}
+    .education-office-draft dl div{display:grid;grid-template-columns:140px minmax(0,1fr);gap:8px;border:1px solid #dce5ee;background:#fff;padding:8px}
+    .education-office-draft dt,.education-office-draft dd{margin:0;line-height:1.55}
+    .education-office-draft dt{color:#256fc5;font-size:12px;font-weight:800}
     .report-materials article{display:grid;gap:8px}
     .report-material-detail{display:grid;gap:7px;border-top:1px solid #e5edf4;padding-top:8px}
     .report-mini-list{display:grid;gap:6px}
@@ -1688,6 +1987,9 @@ function getReportSnapshotStyles() {
     .report-similar-hints{border:1px solid #f0d6a3;background:#fffaf0;padding:10px;display:grid;gap:8px}
     .report-similar-hints>div{display:grid;gap:8px}
     .report-similar-hints article{border:1px solid #f0d6a3;background:#fff;padding:8px}
+    .report-similar-hints section{display:grid;gap:6px}
+    .report-similar-hints h5{margin:0;color:#79540e;font-size:12px}
+    .report-similar-hints article>span,.student-case-badge{display:inline-block;width:fit-content;border-radius:999px;padding:3px 7px;background:#edf7f6;color:#12867d;font-size:11px;font-weight:800}
     .report-similar-hints b{display:block;margin-bottom:4px}
     .report-similar-hints p,.report-similar-hints em,.report-similar-hints small{display:block;margin:0 0 4px;color:#40556a;font-size:12px;font-style:normal}
     .report-api-relevance{display:grid;gap:5px;border:1px solid #d9e8f0;background:#f8fbfd;padding:8px}
@@ -1706,6 +2008,21 @@ function getReportSnapshotStyles() {
     .report-list.checklist{padding-left:0;list-style-position:inside}
     .report-list.checklist li{border:1px solid #dce5ee;margin-bottom:6px;padding:8px;background:#f8fbfd}
     .report-list.compact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding-left:0;list-style:none}
+    .evidence-groups{display:grid;gap:10px}
+    .evidence-category{display:grid;gap:8px;border:1px solid #dce5ee;padding:10px;background:#fbfcfd}
+    .evidence-category.required{border-left:5px solid #9d3321}
+    .evidence-category.recommended{border-left:5px solid #256fc5}
+    .evidence-category.optional{border-left:5px solid #12867d}
+    .evidence-category-head{display:flex;gap:8px}
+    .evidence-category-head p{margin:0;color:#40556a;line-height:1.55}
+    .evidence-priority{height:fit-content;border-radius:999px;padding:4px 8px;background:#12867d;color:#fff;font-size:11px;font-weight:800}
+    .evidence-priority.required{background:#9d3321}
+    .evidence-priority.recommended{background:#256fc5}
+    .evidence-items{display:grid;gap:8px}
+    .evidence-items h5,.evidence-items p,.evidence-items dl{margin:0}
+    .evidence-items dl{display:grid;gap:5px}
+    .evidence-items dt{color:#12867d;font-size:12px;font-weight:800}
+    .evidence-items dd{margin:0;color:#40556a;font-size:12px;line-height:1.55}
     .report-stakeholders{display:grid;gap:10px}
     .report-opinion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
     .report-opinion-grid div{min-height:86px;border:1px solid #111827;padding:10px}
@@ -1713,7 +2030,7 @@ function getReportSnapshotStyles() {
     .report-opinion-grid span{display:block;min-height:52px;margin-top:8px;border-bottom:1px solid #111827}
     a{color:#111827;text-decoration:none}
     footer{margin-top:28px;border-top:1px solid #dce5ee;padding-top:12px;color:#65758b;font-size:12px}
-    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article,.report-mini-card,.report-final-advice,.referral-draft,.admin-summary-card,.sixw-grid article,.report-context-block article,.report-similar-hints article,.report-opinion-grid div{break-inside:avoid}}
+    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article,.report-mini-card,.report-final-advice,.referral-draft,.admin-summary-card,.sixw-grid article,.report-context-block article,.report-similar-hints article,.report-opinion-grid div,.evidence-items article,.education-office-draft{break-inside:avoid}}
   `;
 }
 
@@ -1790,61 +2107,78 @@ function renderReportList(items, variant = "", options = {}) {
   `;
 }
 
+function formatLegalBasis(keys = []) {
+  return keys
+    .map((key) => legalBasisCatalog[key])
+    .filter(Boolean)
+    .map((item) => `${item.label} - ${item.detail}`)
+    .join(" / ");
+}
+
 function getInlineBasisForText(text, report) {
   const normalized = String(text || "").replace(/\s+/g, "");
-  const basis = [];
+  const basisKeys = [];
 
   const add = (...items) => items.forEach((item) => {
-    if (item && !basis.includes(item)) {
-      basis.push(item);
+    if (item && !basisKeys.includes(item)) {
+      basisKeys.push(item);
     }
   });
 
   if (/현장실습|실습운영|순회지도|지도.?점검|학교.*관리|교육청/.test(normalized)) {
-    add("직업교육훈련 촉진법 제7조의2");
+    add("fieldTrainingOperation");
   }
   if (/산업체|실습기업|배치|선정/.test(normalized)) {
-    add("직업교육훈련 촉진법 제8조");
+    add("fieldTrainingCompanySelection");
   }
   if (/협약|계약|실습내용|권리|의무/.test(normalized)) {
-    add("직업교육훈련 촉진법 제9조");
+    add("fieldTrainingContract");
   }
   if (/실습시간|출근|퇴근|야간|휴일/.test(normalized)) {
-    add("직업교육훈련 촉진법 제9조의2");
+    add("fieldTrainingTime");
   }
   if (/안전교육|노동인권|권익보호/.test(normalized)) {
-    add("직업교육훈련 촉진법 제9조의5", "산업안전보건법 제29조");
+    add("fieldTrainingSafetyEducation", "oshEducation");
   }
-  if (/기계|안전장치|방호|작업표준|보호구|위험성|감독자|작업지시|현장보존|추가위험/.test(normalized)) {
-    add("산업안전보건법 제38조", "산업안전보건법 제80조");
+  if (/생명|신체|실습환경|학생보호|재발방지/.test(normalized)) {
+    add("fieldTrainingCompanyDuty");
   }
-  if (/산재|산업재해|사고보고|재해조사|보험|휴업/.test(normalized)) {
-    add("산업안전보건법 제57조");
+  if (/기계|안전장치|방호|작업표준|보호구|위험성|감독자|작업지시|현장보존|추가위험|추가위험차단/.test(normalized)) {
+    add("oshSafetyMeasures", "oshMachineGuard");
+  }
+  if (/산재|산업재해|사고보고|재해조사|보험|휴업|진단서/.test(normalized)) {
+    add("oshAccidentReport", "oshAccidentReportRule");
   }
   if (/중대재해|중상|사망|장해/.test(normalized)) {
-    add("중대재해 처벌 등에 관한 법률 제2조", "중대재해 처벌 등에 관한 법률 제4조");
+    add("seriousAccidentDefinition", "seriousAccidentDuty");
+  }
+  if (/위탁|도급|용역|파견|관계기관/.test(normalized)) {
+    add("seriousAccidentContract");
+  }
+  if (/학교안전|공제|보상/.test(normalized)) {
+    add("schoolSafetyCompensation");
   }
   if (/학교폭력|피해학생|가해학생|전담기구|심의/.test(normalized)) {
-    add("학교폭력예방 및 대책에 관한 법률", "교육부 학교폭력 사안처리 가이드북");
+    return "학교폭력예방 및 대책에 관한 법률 - 피해학생 보호조치, 사안 조사, 전담기구·심의 절차를 원문과 교육부 가이드북으로 대조합니다.";
   }
   if (/근로계약|임금|근로시간|휴게|해고|퇴직/.test(normalized)) {
-    add("근로기준법", "근로자퇴직급여 보장법");
+    return "근로기준법 및 근로자퇴직급여 보장법 - 계약, 임금, 근로시간, 휴게, 퇴직급여 쟁점을 원문 조항과 계약서로 대조합니다.";
   }
   if (/민원|처분|의견제출|행정절차/.test(normalized)) {
-    add("행정절차법");
+    return "행정절차법 - 처분, 의견제출, 절차상 고지 여부를 관련 조문과 공문 기록으로 확인합니다.";
   }
 
-  if (!basis.length) {
+  if (!basisKeys.length) {
     const material = report?.officialMaterials?.find((item) => item.provisions?.length) || report?.officialMaterials?.[0];
     const provision = material?.provisions?.[0]?.title;
     if (material?.title && provision) {
-      add(`${material.title} ${provision}`);
+      return `${material.title} ${provision} - ${material.use || "공식 원문으로 적용 범위를 확인합니다."}`;
     } else if (material?.title) {
-      add(material.title);
+      return `${material.title} - ${material.use || "공식 원문으로 적용 범위를 확인합니다."}`;
     }
   }
 
-  return basis.slice(0, 3).join(" / ");
+  return formatLegalBasis(basisKeys.slice(0, 3));
 }
 
 function renderReportSimilarHints(materials = []) {
@@ -1858,18 +2192,45 @@ function renderReportSimilarHints(materials = []) {
     return "";
   }
 
+  const studentPattern = /학생|현장실습|실습생|직업계고|특성화고|마이스터고|학교|지도교사|보호자/;
+  const studentHints = hints.filter((hint) => studentPattern.test(`${hint.title} ${hint.why} ${hint.check} ${hint.materialTitle}`));
+  const generalHints = hints.filter((hint) => !studentHints.includes(hint));
+  const renderHintCard = (hint, priorityLabel) => `
+    <article>
+      <span>${escapeHtml(priorityLabel)}</span>
+      <b>${escapeHtml(hint.title)}</b>
+      <p>${escapeHtml(hint.why)}</p>
+      <em>${escapeHtml(hint.check)}</em>
+      <small>${escapeHtml(hint.source)} · ${escapeHtml(hint.materialTitle)}</small>
+    </article>
+  `;
+
   return `
     <div class="report-similar-hints" aria-label="유사자료 우선 후보">
       <strong>유사자료 우선 후보</strong>
+      <p>학생·현장실습 사고 유사자료를 먼저 보고, 학생 사례가 부족하면 일반 근로자 재해사례를 보조자료로 봅니다.</p>
       <div>
-        ${hints.slice(0, 4).map((hint) => `
-          <article>
-            <b>${escapeHtml(hint.title)}</b>
-            <p>${escapeHtml(hint.why)}</p>
-            <em>${escapeHtml(hint.check)}</em>
-            <small>${escapeHtml(hint.source)} · ${escapeHtml(hint.materialTitle)}</small>
-          </article>
-        `).join("")}
+        ${studentHints.length ? `
+          <section>
+            <h5>1순위: 학생·현장실습 사례</h5>
+            ${studentHints.slice(0, 3).map((hint) => renderHintCard(hint, "학생·현장실습 우선")).join("")}
+          </section>
+        ` : `
+          <section>
+            <h5>1순위: 학생·현장실습 사례</h5>
+            <article>
+              <span>확인 필요</span>
+              <b>학생 사고 유사사례 추가 검색 필요</b>
+              <p>현재 기본 후보 안에는 학생·현장실습 사고로 바로 분류되는 사례가 부족합니다.</p>
+              <em>안전보건공단 국내재해사례와 교육청 현장실습 사고 보고 자료에서 학생, 현장실습, 실습생, 직업계고 키워드를 우선 검색합니다.</em>
+              <small>공식 자료 우선</small>
+            </article>
+          </section>
+        `}
+        <section>
+          <h5>2순위: 일반 근로자 재해사례</h5>
+          ${generalHints.slice(0, 3).map((hint) => renderHintCard(hint, "일반 근로자 보조사례")).join("")}
+        </section>
       </div>
     </div>
   `;
@@ -1964,19 +2325,23 @@ function renderReportApiGroup(title, items = []) {
     return "";
   }
 
+  const visibleItems = prioritizeReportApiItems(title, items).slice(0, 5);
+
   return `
     <div class="report-api-group">
       <h5>${escapeHtml(title)}</h5>
       <div class="report-api-list">
-        ${items.slice(0, 5).map((item) => {
+        ${visibleItems.map((item) => {
           const reliability = item.reliability || {};
           const url = safeUrl(item.url);
+          const studentCase = isStudentFieldTrainingLikeItem(item);
           return `
             <article>
               <div>
                 <strong>${escapeHtml(item.title || "제목 없음")}</strong>
                 <span class="${reliability.needsReview ? "needs-review" : "verified"}">${escapeHtml(reliability.label || "확인 필요")}</span>
               </div>
+              ${studentCase ? `<small class="student-case-badge">학생·현장실습 우선 검토</small>` : ""}
               <p>${escapeHtml(item.summary || item.subtitle || "요약 정보 없음")}</p>
               ${renderReportApiRelevance(item.relevance)}
               <small>${escapeHtml(item.source || "공식 출처")} ${item.date ? `· ${escapeHtml(item.date)}` : "· 일자 확인 필요"}</small>
@@ -1987,6 +2352,30 @@ function renderReportApiGroup(title, items = []) {
       </div>
     </div>
   `;
+}
+
+function prioritizeReportApiItems(title, items = []) {
+  if (title !== "국내재해사례") {
+    return items;
+  }
+
+  return [...items].sort((a, b) => {
+    const bScore = getStudentFieldTrainingScore(b) + Number(b.relevance?.score || 0);
+    const aScore = getStudentFieldTrainingScore(a) + Number(a.relevance?.score || 0);
+    return bScore - aScore;
+  });
+}
+
+function isStudentFieldTrainingLikeItem(item) {
+  return getStudentFieldTrainingScore(item) > 0;
+}
+
+function getStudentFieldTrainingScore(item) {
+  const text = [item.title, item.summary, item.subtitle, item.source, item.relevance?.reason, item.relevance?.matchedSignals?.join(" ")]
+    .filter(Boolean)
+    .join(" ");
+  const terms = ["현장실습", "실습생", "학생", "직업계고", "특성화고", "마이스터고", "학교"];
+  return terms.reduce((score, term) => score + (text.includes(term) ? 30 : 0), 0);
 }
 
 function renderReportApiRelevance(relevance) {

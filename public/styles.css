@@ -879,6 +879,66 @@ select:focus {
   font-weight: 900;
 }
 
+.education-office-draft {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #cbdbe8;
+  border-left: 5px solid var(--blue);
+  border-radius: 8px;
+  background: #f8fbfd;
+}
+
+.education-office-draft > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.education-office-draft strong {
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.education-office-draft span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.education-office-draft dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.education-office-draft dl div {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid #dbe7ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.education-office-draft dt,
+.education-office-draft dd {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.education-office-draft dt {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.education-office-draft dd {
+  color: #40556a;
+}
+
 .report-composer,
 .report-library {
   display: grid;
@@ -1115,6 +1175,123 @@ select:focus {
   background: #fbfcfd;
 }
 
+.evidence-groups {
+  display: grid;
+  gap: 14px;
+}
+
+.evidence-category {
+  display: grid;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+
+.evidence-category.required {
+  border-left: 5px solid #9d3321;
+}
+
+.evidence-category.recommended {
+  border-left: 5px solid var(--blue);
+}
+
+.evidence-category.optional {
+  border-left: 5px solid var(--teal);
+}
+
+.evidence-category-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.evidence-category-head p {
+  margin: 0;
+  color: #40556a;
+  line-height: 1.6;
+}
+
+.evidence-priority {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 5px 9px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.evidence-priority.required {
+  background: #9d3321;
+}
+
+.evidence-priority.recommended {
+  background: var(--blue);
+}
+
+.evidence-priority.optional {
+  background: var(--teal);
+}
+
+.evidence-items {
+  display: grid;
+  gap: 10px;
+}
+
+.evidence-items article {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #dbe7ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.evidence-items h5 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.evidence-items p {
+  margin: 0;
+  color: #40556a;
+  line-height: 1.65;
+}
+
+.evidence-items dl {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+}
+
+.evidence-items dl div {
+  display: grid;
+  gap: 4px;
+  padding-top: 8px;
+  border-top: 1px solid #e6edf3;
+}
+
+.evidence-items dt,
+.evidence-items dd {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.evidence-items dt {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.evidence-items dd {
+  color: #4b6178;
+  font-size: 13px;
+}
+
 .report-stakeholders {
   display: grid;
   gap: 12px;
@@ -1256,9 +1433,27 @@ select:focus {
   font-size: 13px;
 }
 
+.report-similar-hints > p {
+  margin: 0;
+  color: #6a5a34;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
 .report-similar-hints > div {
   display: grid;
   gap: 8px;
+}
+
+.report-similar-hints section {
+  display: grid;
+  gap: 8px;
+}
+
+.report-similar-hints h5 {
+  margin: 0;
+  color: #79540e;
+  font-size: 13px;
 }
 
 .report-similar-hints article {
@@ -1268,6 +1463,17 @@ select:focus {
   border: 1px solid #f0d6a3;
   border-radius: 8px;
   background: #fff;
+}
+
+.report-similar-hints article > span,
+.student-case-badge {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: #edf7f6;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
 }
 
 .report-similar-hints b {
@@ -2328,7 +2534,8 @@ footer p {
   .report-materials,
   .report-list.compact,
   .report-sign-grid,
-  .report-opinion-grid {
+  .report-opinion-grid,
+  .education-office-draft dl div {
     grid-template-columns: 1fr;
   }
 
@@ -2338,6 +2545,11 @@ footer p {
 
   .report-actions {
     justify-items: start;
+  }
+
+  .education-office-draft > div,
+  .evidence-category-head {
+    display: grid;
   }
 
   .report-library-list article {
