@@ -77,3 +77,5 @@ npm run law-gateway:test
 GYO6 Worker의 공식자료 검색은 `KOREAN_LAW_MCP_BASE_URL`이 설정되면 `/gyo6/law/search-and-read` 구조화 엔드포인트를 먼저 호출한다. 이 호출이 성공하면 AI 입력에는 `법제처 원문 확인` 표시와 함께 실제 조문 요약 및 조문 본문 일부가 들어간다. 해당 엔드포인트가 없거나 실패하면 기존 `/mcp` 호출을 시도하고, 그래도 실패하면 원문 직접 확인 링크로 내려간다.
 
 Cloudflare Worker에서 법제처를 직접 호출하는 방식은 `HTTPS 525`, `HTTP 520`이 반복되어 주 통로로 쓰지 않는다. Worker 직접 호출에는 HTTP 재시도 fallback을 남겨 두되, 운영 기준은 `Worker -> 외부 Node 게이트웨이 -> 법제처 원문 API`다.
+
+Cloud Run 배포는 `gateways/korean-law-gateway/deploy-cloud-run.sh`를 기준으로 한다. 이 스크립트는 Google Cloud Shell에서 실행하는 것을 전제로 하며, 법제처 OC 키와 서버간 토큰을 Secret Manager에 저장한 뒤 Cloud Run 서비스에 secret 환경변수로 연결한다.

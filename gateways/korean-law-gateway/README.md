@@ -61,6 +61,22 @@ GYO6 Worker는 해당 값이 있으면 법령 검색에서 이 게이트웨이�
 
 이 폴더에는 Cloud Run 컨테이너 배포용 `Dockerfile`이 포함되어 있습니다.
 
+Google Cloud Shell에서 저장소를 받은 뒤 아래 스크립트를 실행하면 필요한 API 활성화, Secret Manager 저장, Cloud Run 배포, 원문 조회 테스트까지 한 번에 진행합니다.
+
+```bash
+bash gateways/korean-law-gateway/deploy-cloud-run.sh
+```
+
+기본값:
+
+```env
+PROJECT_ID=gyo6-law-info
+REGION=asia-northeast3
+SERVICE_NAME=gyo6-korean-law-gateway
+LAW_OPEN_API_REFERER=https://gyo6.kr/
+LAW_API_PROTOCOL=https
+```
+
 ```powershell
 gcloud run deploy gyo6-korean-law-gateway `
   --source gateways/korean-law-gateway `
@@ -79,3 +95,13 @@ LAW_GATEWAY_TIMEOUT_MS=12000
 ```
 
 배포 URL이 나오면 Worker에 `KOREAN_LAW_MCP_BASE_URL`을 그 URL로 설정하고, `KOREAN_LAW_MCP_TOKEN`은 게이트웨이의 `GYO6_MCP_TOKEN`과 같은 값으로 설정합니다.
+
+로컬 PowerShell에서 Worker 연결값을 넣습니다.
+
+```powershell
+npx.cmd wrangler secret put KOREAN_LAW_MCP_BASE_URL --config workers/ai-analysis/wrangler.toml
+npx.cmd wrangler secret put KOREAN_LAW_MCP_TOKEN --config workers/ai-analysis/wrangler.toml
+npm run worker:deploy
+```
+
+첫 번째에는 Cloud Run URL을, 두 번째에는 Cloud Run 배포 때 입력한 서버간 토큰을 그대로 입력합니다.
