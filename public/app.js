@@ -934,6 +934,16 @@ function buildFieldTrainingAccidentReport(context, roleGuide, officialMaterials,
   const friendWork = findDetailAnswer(context.details, "친구 일을");
   const injuryRecord = findDetailAnswer(context.details, "진단명");
   const privateVisitSignal = /놀러|개인|부탁|비공식|허락.*모름|그냥/.test(friendWork || "");
+  const reportSeed = {
+    context,
+    presetType: "fieldTraining",
+    riskSignals,
+    injuryRecord,
+    workOrder,
+    firstResponse,
+    friendWork,
+    privateVisitSignal
+  };
 
   return {
     title: "현장실습 중 안전사고 사안 보고서",
@@ -1026,11 +1036,18 @@ function buildFieldTrainingAccidentReport(context, roleGuide, officialMaterials,
       "중대재해처벌법 해당 여부는 사망, 동일 사고 부상자 수, 질병 요건 등 법정 기준에 따라 별도 검토가 필요합니다.",
       "AI 요약이나 검색 결과만으로 학교·기업·학생의 법적 책임을 확정하면 안 됩니다."
     ],
+    finalAdvice: buildFinalAdvice(reportSeed),
     officialMaterials
   };
 }
 
 function buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, riskSignals) {
+  const reportSeed = {
+    context,
+    presetType: preset.type,
+    riskSignals
+  };
+
   return {
     title: `${preset.title} 사안 보고서`,
     subtitle: "질문 내용, 확인 쟁점, 주체별 조치사항 및 근거자료 정리",
@@ -1068,8 +1085,97 @@ function buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, r
     ],
     evidence: ["계약서·협약서", "공문·안내문", "상담·지도 기록", "사진·문자·이메일", "관련 기관 답변"],
     cautions: ["사실관계가 바뀌면 적용 법령과 조치가 달라질 수 있습니다.", "AI 요약은 참고용이며 공식 원문 확인이 필요합니다."],
+    finalAdvice: buildFinalAdvice(reportSeed),
     officialMaterials
   };
+}
+
+function buildFinalAdvice(seed) {
+  const text = [
+    seed.context?.baseQuestion || "",
+    ...(seed.context?.details || []).map((item) => `${item.question} ${item.answer}`),
+    seed.injuryRecord || "",
+    seed.workOrder || "",
+    seed.firstResponse || "",
+    seed.friendWork || ""
+  ].join(" ");
+  const normalized = text.replace(/\s+/g, "");
+  const hasSeriousInjury = /골절|수술|입원|장해|중상|사망|119|응급|전치|후유/.test(normalized);
+  const hasLaborIssue = /산재|산업재해|임금|근로계약|해고|징계|근로시간|노동위원회|직장|회사|사업장|노무/.test(normalized)
+    || ["employment", "apprenticeship", "fieldTraining", "schoolSafety", "staffLabor"].includes(seed.presetType);
+  const hasLegalDispute = /소송|고소|고발|형사|손해배상|합의|민사|경찰|검찰|변호사|폭행|성폭력/.test(normalized);
+  const hasProcedureOnly = !hasSeriousInjury && !hasLegalDispute && !seed.riskSignals?.length;
+
+  if (hasProcedureOnly) {
+    return {
+      level: "internal",
+      title: "내부 안내와 기록 정리 우선",
+      summary: "현재 입력된 내용만으로는 곧바로 노무사나 변호사 상담을 의뢰하기보다, 학교 내부 안내·학부모 전달·사실관계 기록 정리를 먼저 진행하는 것이 적절합니다.",
+      actions: [
+        "학부모에게 확인된 사실, 학교의 조치, 추가 확인 예정 사항을 간단히 안내합니다.",
+        "상담일지, 안내 문자, 관련 자료를 보관하고 새 피해나 분쟁 조짐이 생기는지 관찰합니다.",
+        "손해배상, 징계, 산재, 형사 문제로 확대되는 경우에만 전문가 상담 여부를 다시 검토합니다."
+      ],
+      closingSentence: "현재 확인된 내용은 학교 내부 기록으로 정리하고 학부모에게 안내하되, 추가 피해나 분쟁 가능성이 확인되면 별도 전문가 상담을 검토하겠습니다."
+    };
+  }
+
+  if (hasLaborIssue && !hasLegalDispute) {
+    return {
+      level: "labor",
+      title: "노무사 상담 우선 검토",
+      summary: "산재, 근로조건, 실습기업의 안전보건 조치, 산업재해 보고·보험 절차가 핵심이면 노무사 상담을 우선 검토하는 것이 도움이 됩니다. 다만 손해배상, 형사책임, 소송 가능성이 함께 보이면 변호사 상담도 병행해야 합니다.",
+      actions: [
+        "진단서, 사고경위서, 실습협약서, 안전교육 기록, 회사의 사고보고 자료를 묶어 상담 자료로 준비합니다.",
+        "상담 목적은 책임 단정이 아니라 산재·보험·보고 절차와 학교/기업의 다음 조치를 확인하는 것으로 정리합니다.",
+        "학생에게 불이익이 생기지 않도록 출결, 평가, 실습 중단·복귀 처리도 함께 문의합니다."
+      ],
+      referralSentence: "현장실습 중 발생한 사고와 관련하여 산재·보험·산업안전보건 절차 및 학교와 실습기업의 조치 범위를 확인하고자 합니다. 첨부한 진단서, 사고 경위, 현장실습 협약서, 안전교육 기록을 검토하시고 필요한 후속 조치에 대한 노무 상담을 요청드립니다."
+    };
+  }
+
+  return {
+    level: "legal",
+    title: hasLaborIssue ? "노무사·변호사 병행 상담 검토" : "변호사 상담 검토",
+    summary: hasLaborIssue
+      ? "산재·노무 절차와 함께 손해배상, 형사 문제, 소송 가능성이 보이면 노무사와 변호사 상담을 나누어 진행하는 것이 안전합니다."
+      : "징계, 학교폭력 심의, 손해배상, 형사 절차, 소송 가능성이 보이면 변호사 상담을 검토하는 것이 안전합니다.",
+    actions: [
+      "상담 전 사실관계표, 증빙자료 목록, 이미 진행된 학교·기관 조치를 한 장으로 정리합니다.",
+      "원하는 결론보다 확인할 질문을 먼저 정리합니다. 예: 지금 해야 할 조치, 피해야 할 발언, 보존할 증거, 공식 절차.",
+      "상담 결과는 학교 내부 조치와 학생 보호 계획에 반영하되, 당사자에게 불필요한 압박이 되지 않도록 공유 범위를 제한합니다."
+    ],
+    referralSentence: hasLaborIssue
+      ? "현장실습 사고와 관련하여 산재·노무 절차, 손해배상 가능성, 학교와 실습기업의 책임 범위를 구분해 확인하고자 합니다. 첨부 자료를 검토하시고 노무사 및 변호사 상담이 필요한 쟁점과 우선 조치사항에 대한 의견을 요청드립니다."
+      : "본 사안과 관련하여 학교 절차, 당사자 권리 보호, 손해배상 또는 형사·소송 가능성을 검토하고자 합니다. 첨부한 사실관계표와 증빙자료를 바탕으로 현재 단계에서 필요한 법률상 조치와 유의사항에 대한 상담을 요청드립니다."
+  };
+}
+
+function renderFinalAdvice(advice) {
+  if (!advice) {
+    return "";
+  }
+
+  const level = ["internal", "labor", "legal"].includes(advice.level) ? advice.level : "internal";
+  const guidanceTitle = advice.referralSentence ? "상담 의뢰 문장 초안" : "내부 마무리 문장";
+  const guidanceSentence = advice.referralSentence || advice.closingSentence || "";
+
+  return `
+    <div class="report-section report-final-advice ${level}">
+      <h4>9. 최종 조언 및 상담 의뢰 판단</h4>
+      <div class="final-advice-box">
+        <span>${escapeHtml(advice.title)}</span>
+        <p>${escapeHtml(advice.summary)}</p>
+      </div>
+      ${advice.actions?.length ? renderReportList(advice.actions, "checklist") : ""}
+      ${guidanceSentence ? `
+        <div class="referral-draft">
+          <strong>${escapeHtml(guidanceTitle)}</strong>
+          <p>${escapeHtml(guidanceSentence)}</p>
+        </div>
+      ` : ""}
+    </div>
+  `;
 }
 
 function renderCaseReport(report) {
@@ -1158,8 +1264,10 @@ function renderCaseReport(report) {
         ${renderReportList(report.cautions)}
       </div>
 
+      ${renderFinalAdvice(report.finalAdvice)}
+
       <div class="report-section report-sign-section">
-        <h4>9. 확인란</h4>
+        <h4>10. 확인란</h4>
         <div class="report-sign-grid">
           <div><strong>작성자</strong><span></span></div>
           <div><strong>검토자</strong><span></span></div>
@@ -1427,6 +1535,14 @@ function getReportSnapshotStyles() {
     .report-api-relevance{display:grid;gap:5px;border:1px solid #d9e8f0;background:#f8fbfd;padding:8px}
     .report-api-relevance p{margin:0;color:#40556a;font-size:12px;line-height:1.55}
     .report-api-relevance small{color:#12867d;font-size:11px;font-weight:800}
+    .report-final-advice{border:1px solid #dce5ee;border-left:5px solid #12867d;padding:12px;background:#fbfcfd}
+    .report-final-advice.labor{border-left-color:#256fc5}
+    .report-final-advice.legal{border-left-color:#9d3321}
+    .final-advice-box,.referral-draft{display:grid;gap:6px;border:1px solid #dce5ee;background:#fff;padding:10px}
+    .final-advice-box span{color:#12867d;font-size:12px;font-weight:800}
+    .referral-draft{background:#f8fbfd}
+    .referral-draft strong{color:#142033;font-size:13px}
+    .final-advice-box p,.referral-draft p{margin:0;color:#40556a;line-height:1.65}
     strong{color:#142033}
     .report-list{margin:0;padding-left:20px}
     .report-list.checklist{padding-left:0;list-style-position:inside}
@@ -1437,7 +1553,7 @@ function getReportSnapshotStyles() {
     .report-sign-grid div{min-height:68px;border:1px solid #111827;padding:10px}
     a{color:#111827;text-decoration:none}
     footer{margin-top:28px;border-top:1px solid #dce5ee;padding-top:12px;color:#65758b;font-size:12px}
-    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article,.report-mini-card{break-inside:avoid}}
+    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article,.report-mini-card,.report-final-advice,.referral-draft{break-inside:avoid}}
   `;
 }
 
