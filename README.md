@@ -135,6 +135,22 @@ OPENAI_API_KEY=
 
 현재 AI 분석 운영은 Cloudflare Worker Secret의 `OPENAI_API_KEY`를 우선 사용합니다. Firebase Functions는 향후 Firestore, Auth, 보고서 저장소가 본격화될 때 사용할 수 있는 보조 배포 경로입니다.
 
+## 비용 관리 기준
+
+AI 분석은 품질을 위해 기본 모델을 `gpt-5.2`로 유지하고, Worker가 OpenAI 응답의 실제 input/output 토큰을 받아 1회 예상 비용을 계산합니다. 화면에는 이번 답변 비용, 오늘 누적, 이번 달 누적이 표시됩니다.
+
+초기 비용 보호선은 다음과 같습니다.
+
+```env
+OPENAI_KRW_PER_USD=1500
+OPENAI_MONTHLY_WARN_USD=10
+OPENAI_MONTHLY_STOP_USD=50
+OPENAI_DAILY_CALL_LIMIT=30
+OPENAI_COST_PRICING_DATE=2026-05-30
+```
+
+브라우저 화면의 누적값은 현재 브라우저 기준의 추정치입니다. 실제 청구와 계정 전체 차단은 OpenAI 대시보드의 사용량·예산 설정을 최종 기준으로 확인합니다.
+
 Firebase 배포 전에는 Functions Secret에 같은 값을 등록합니다. Secret 등록과 실제 배포는 외부 Firebase 프로젝트 상태를 바꾸므로 실행 직전 사용자 확인을 받고 진행합니다.
 
 ```powershell

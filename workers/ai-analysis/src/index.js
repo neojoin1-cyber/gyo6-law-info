@@ -3,6 +3,27 @@ const JSON_HEADERS = {
   "cache-control": "no-store"
 };
 
+const MODEL_PRICE_DEFAULTS = {
+  "gpt-5.2": {
+    inputUsdPer1M: 1.75,
+    cachedInputUsdPer1M: 0.175,
+    outputUsdPer1M: 14
+  },
+  "gpt-4.1": {
+    inputUsdPer1M: 2,
+    cachedInputUsdPer1M: 0.5,
+    outputUsdPer1M: 8
+  }
+};
+
+const DEFAULT_COST_CONTROL = {
+  krwPerUsd: 1500,
+  monthlyWarnUsd: 10,
+  monthlyStopUsd: 50,
+  dailyCallLimit: 30,
+  pricingDate: "2026-05-30"
+};
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get("origin") || "";
@@ -23,7 +44,8 @@ export default {
           ok: true,
           service: "gyo6-law-info-ai",
           openAi: Boolean(env.OPENAI_API_KEY),
-          model: env.OPENAI_MODEL || "gpt-5.2"
+          model: env.OPENAI_MODEL || "gpt-5.2",
+          costControl: getCostControlSettings(env)
         }, 200, corsHeaders);
       }
 
@@ -75,13 +97,13 @@ async function handleAnalyze(payload, env) {
 
   for (const model of models) {
     try {
-      const analysis = await callOpenAiLegalAnalysis(env.OPENAI_API_KEY, {
+      const aiResult = await callOpenAiLegalAnalysis(env.OPENAI_API_KEY, {
         model,
         question,
         topic,
         role,
         mode
-      });
+      }, env);
 
       return {
         ok: true,
@@ -89,7 +111,10 @@ async function handleAnalyze(payload, env) {
         engine: "cloudflare-worker-openai-responses",
         model,
         generatedAt: new Date().toISOString(),
-        analysis
+        analysis: aiResult.analysis,
+        usage: aiResult.usage,
+        billing: aiResult.billing,
+        costControl: getCostControlSettings(env)
       };
     } catch (error) {
       errors.push(`${model}: ${error.message}`);
@@ -106,7 +131,7 @@ async function handleAnalyze(payload, env) {
   };
 }
 
-async function callOpenAiLegalAnalysis(openAiKey, payload) {
+async function callOpenAiLegalAnalysis(openAiKey, payload, env = {}) {
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
     headers: {
@@ -162,7 +187,13 @@ async function callOpenAiLegalAnalysis(openAiKey, payload) {
   }
 
   try {
-    return JSON.parse(text);
+    const analysis = JSON.parse(text);
+    const usage = normalizeOpenAiUsage(data.usage);
+    return {
+      analysis,
+      usage,
+      billing: estimateOpenAiBilling(usage, payload.model, env)
+    };
   } catch (error) {
     throw new Error(`AI 분석 JSON 파싱 실패: ${error.message}`);
   }
@@ -352,6 +383,79 @@ function extractOpenAiText(data) {
     }
   }
   return chunks.join("\n").trim();
+}
+
+function normalizeOpenAiUsage(usage = {}) {
+  const inputTokens = readNumber(usage.input_tokens ?? usage.prompt_tokens ?? usage.inputTokens);
+  const outputTokens = readNumber(usage.output_tokens ?? usage.completion_tokens ?? usage.outputTokens);
+  const totalTokens = readNumber(usage.total_tokens ?? usage.totalTokens) || inputTokens + outputTokens;
+  const cachedInputTokens = readNumber(
+    usage.input_tokens_details?.cached_tokens ??
+    usage.prompt_tokens_details?.cached_tokens ??
+    usage.cached_input_tokens ??
+    usage.cachedInputTokens
+  );
+
+  return {
+    inputTokens,
+    cachedInputTokens,
+    outputTokens,
+    totalTokens
+  };
+}
+
+function estimateOpenAiBilling(usage, model, env = {}) {
+  const price = getModelPrice(model, env);
+  const costControl = getCostControlSettings(env);
+  const cachedInputTokens = Math.min(usage.cachedInputTokens || 0, usage.inputTokens || 0);
+  const regularInputTokens = Math.max((usage.inputTokens || 0) - cachedInputTokens, 0);
+  const inputUsd = regularInputTokens / 1_000_000 * price.inputUsdPer1M;
+  const cachedInputUsd = cachedInputTokens / 1_000_000 * price.cachedInputUsdPer1M;
+  const outputUsd = (usage.outputTokens || 0) / 1_000_000 * price.outputUsdPer1M;
+  const estimatedUsd = inputUsd + cachedInputUsd + outputUsd;
+
+  return {
+    model,
+    pricingDate: costControl.pricingDate,
+    inputUsdPer1M: price.inputUsdPer1M,
+    cachedInputUsdPer1M: price.cachedInputUsdPer1M,
+    outputUsdPer1M: price.outputUsdPer1M,
+    estimatedUsd: roundMoney(estimatedUsd, 6),
+    estimatedKrw: Math.max(1, Math.round(estimatedUsd * costControl.krwPerUsd)),
+    krwPerUsd: costControl.krwPerUsd,
+    note: "OpenAI API 토큰 단가 기준의 추정값입니다. 실제 청구액은 OpenAI 대시보드가 최종 기준입니다."
+  };
+}
+
+function getModelPrice(model = "", env = {}) {
+  const normalizedModel = String(model || "").trim().toLowerCase();
+  const defaults = Object.entries(MODEL_PRICE_DEFAULTS)
+    .find(([key]) => normalizedModel.includes(key))?.[1] || MODEL_PRICE_DEFAULTS["gpt-5.2"];
+
+  return {
+    inputUsdPer1M: readNumber(env.OPENAI_INPUT_PRICE_PER_1M) || defaults.inputUsdPer1M,
+    cachedInputUsdPer1M: readNumber(env.OPENAI_CACHED_INPUT_PRICE_PER_1M) || defaults.cachedInputUsdPer1M,
+    outputUsdPer1M: readNumber(env.OPENAI_OUTPUT_PRICE_PER_1M) || defaults.outputUsdPer1M
+  };
+}
+
+function getCostControlSettings(env = {}) {
+  return {
+    krwPerUsd: readNumber(env.OPENAI_KRW_PER_USD) || DEFAULT_COST_CONTROL.krwPerUsd,
+    monthlyWarnUsd: readNumber(env.OPENAI_MONTHLY_WARN_USD) || DEFAULT_COST_CONTROL.monthlyWarnUsd,
+    monthlyStopUsd: readNumber(env.OPENAI_MONTHLY_STOP_USD) || DEFAULT_COST_CONTROL.monthlyStopUsd,
+    dailyCallLimit: Math.round(readNumber(env.OPENAI_DAILY_CALL_LIMIT) || DEFAULT_COST_CONTROL.dailyCallLimit),
+    pricingDate: cleanText(env.OPENAI_COST_PRICING_DATE || DEFAULT_COST_CONTROL.pricingDate)
+  };
+}
+
+function readNumber(value) {
+  const number = Number(value);
+  return Number.isFinite(number) && number >= 0 ? number : 0;
+}
+
+function roundMoney(value, decimals = 6) {
+  return Number((Number(value) || 0).toFixed(decimals));
 }
 
 function cleanText(value) {

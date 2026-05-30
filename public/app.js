@@ -10,6 +10,14 @@ const topicTypeInput = document.querySelector("#topicType");
 const answerModeInput = document.querySelector("#answerMode");
 const userRoleInput = document.querySelector("#userRole");
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
+const AI_USAGE_LEDGER_KEY = "gyo6LawInfoAiUsageLedger";
+const LOCAL_COST_CONTROL = {
+  monthlyWarnUsd: 10,
+  monthlyStopUsd: 50,
+  dailyCallLimit: 30,
+  krwPerUsd: 1500,
+  pricingDate: "2026-05-30"
+};
 let currentReportDraft = null;
 let currentCaseId = "";
 let currentLiveSourceData = null;
@@ -1005,6 +1013,13 @@ async function loadAiAnalysis(question, preset, userRole, answerMode, caseId) {
     return;
   }
 
+  const guard = getAiCostGuardStatus();
+  if (guard.blocked) {
+    mount.innerHTML = renderAiCostGuardBlocked(guard);
+    statusDot.textContent = "비용 제한";
+    return;
+  }
+
   try {
     const response = await fetch(getAiAnalyzeUrl(), {
       method: "POST",
@@ -1029,6 +1044,7 @@ async function loadAiAnalysis(question, preset, userRole, answerMode, caseId) {
     if (caseId !== currentCaseId || (data.caseId && data.caseId !== caseId)) {
       return;
     }
+    recordAiUsage(data);
     mount.innerHTML = renderAiAnalysis(data);
     applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId);
   } catch (error) {
@@ -1088,6 +1104,7 @@ function renderAiAnalysis(data) {
 
   return `
     <div class="answer-label">AI 사안 분석 · ${escapeHtml(data.model || "model")}</div>
+    ${renderAiCostSummary(data)}
     <h3>${escapeHtml(analysis.title)}</h3>
     <p>${escapeHtml(analysis.coreFinding)}</p>
     <div class="answer-columns">
@@ -1150,6 +1167,225 @@ function renderAiAnalysis(data) {
     ` : ""}
     <p class="answer-warning">${escapeHtml(analysis.informationNotice)}</p>
   `;
+}
+
+function renderAiCostSummary(data = {}) {
+  const billing = data.billing || {};
+  const usage = data.usage || {};
+  const controls = normalizeCostControl(data.costControl);
+  const summary = summarizeAiUsageLedger(controls);
+  const warning = getAiCostWarning(summary, controls);
+  const costLabel = billing.estimatedKrw
+    ? `이번 답변 예상 비용 약 ${formatKrw(billing.estimatedKrw)}`
+    : "이번 답변 비용 계산 대기";
+  const tokenLabel = usage.totalTokens
+    ? `입력 ${formatNumber(usage.inputTokens)} · 출력 ${formatNumber(usage.outputTokens)} · 합계 ${formatNumber(usage.totalTokens)} 토큰`
+    : "토큰 사용량 확인 대기";
+
+  return `
+    <div class="ai-cost-panel ${warning.level}">
+      <div>
+        <strong>${escapeHtml(costLabel)}</strong>
+        <p>${escapeHtml(tokenLabel)}</p>
+      </div>
+      <div>
+        <span>오늘 ${formatNumber(summary.today.calls)}회 · ${formatKrw(summary.today.krw)}</span>
+        <span>이번 달 ${formatNumber(summary.month.calls)}회 · ${formatKrw(summary.month.krw)}</span>
+      </div>
+      ${warning.message ? `<p>${escapeHtml(warning.message)}</p>` : ""}
+    </div>
+  `;
+}
+
+function renderAiCostGuardBlocked(status = {}) {
+  const summary = status.summary || summarizeAiUsageLedger(status.controls);
+  return `
+    <div class="answer-label">비용 제한 적용</div>
+    <h3>오늘 또는 이번 달 사용 한도에 도달했습니다.</h3>
+    <p>${escapeHtml(status.message || "테스트 비용 보호를 위해 현재 브라우저 기준 AI 호출을 잠시 막았습니다.")}</p>
+    <div class="ai-cost-panel danger">
+      <div>
+        <strong>현재 누적</strong>
+        <p>오늘 ${formatNumber(summary.today.calls)}회 · ${formatKrw(summary.today.krw)} / 이번 달 ${formatNumber(summary.month.calls)}회 · ${formatKrw(summary.month.krw)}</p>
+      </div>
+      <div>
+        <span>월 경고 ${formatUsd(status.controls?.monthlyWarnUsd || LOCAL_COST_CONTROL.monthlyWarnUsd)}</span>
+        <span>월 차단 ${formatUsd(status.controls?.monthlyStopUsd || LOCAL_COST_CONTROL.monthlyStopUsd)}</span>
+      </div>
+    </div>
+    <p>중요한 테스트가 필요하면 브라우저 저장 사용량을 초기화하거나, 운영 전에는 OpenAI 대시보드의 실제 예산 한도를 함께 조정하세요.</p>
+  `;
+}
+
+function renderReportCostMeta(report = {}) {
+  if (!report.billing?.estimatedKrw && !report.usage?.totalTokens) {
+    return "";
+  }
+
+  const parts = [
+    report.billing?.estimatedKrw ? `예상 비용 ${formatKrw(report.billing.estimatedKrw)}` : "",
+    report.usage?.totalTokens ? `토큰 ${formatNumber(report.usage.totalTokens)}` : "",
+    report.billing?.pricingDate ? `단가 기준 ${report.billing.pricingDate}` : ""
+  ].filter(Boolean);
+
+  return `<p class="report-cost-meta">${parts.map(escapeHtml).join(" · ")}</p>`;
+}
+
+function recordAiUsage(data = {}) {
+  if (!data.caseId || !data.billing?.estimatedUsd) {
+    return;
+  }
+
+  const ledger = getAiUsageLedger();
+  if (ledger.some((item) => item.caseId === data.caseId)) {
+    return;
+  }
+
+  const controls = normalizeCostControl(data.costControl);
+  const record = {
+    caseId: data.caseId,
+    model: data.model || data.billing.model || "",
+    generatedAt: data.generatedAt || new Date().toISOString(),
+    estimatedUsd: Number(data.billing.estimatedUsd) || 0,
+    estimatedKrw: Number(data.billing.estimatedKrw) || 0,
+    inputTokens: Number(data.usage?.inputTokens) || 0,
+    outputTokens: Number(data.usage?.outputTokens) || 0,
+    totalTokens: Number(data.usage?.totalTokens) || 0,
+    pricingDate: data.billing.pricingDate || controls.pricingDate
+  };
+
+  setAiUsageLedger([...ledger, record].slice(-500));
+}
+
+function getAiCostGuardStatus() {
+  const controls = normalizeCostControl();
+  const summary = summarizeAiUsageLedger(controls);
+
+  if (summary.month.usd >= controls.monthlyStopUsd) {
+    return {
+      blocked: true,
+      controls,
+      summary,
+      message: `이번 달 현재 브라우저 기준 예상 사용액이 ${formatUsd(controls.monthlyStopUsd)} 차단선에 도달했습니다.`
+    };
+  }
+
+  if (summary.today.calls >= controls.dailyCallLimit) {
+    return {
+      blocked: true,
+      controls,
+      summary,
+      message: `오늘 현재 브라우저 기준 AI 호출 ${controls.dailyCallLimit}회 제한에 도달했습니다.`
+    };
+  }
+
+  return { blocked: false, controls, summary };
+}
+
+function getAiCostWarning(summary, controls) {
+  if (summary.month.usd >= controls.monthlyStopUsd) {
+    return {
+      level: "danger",
+      message: `월 차단 기준 ${formatUsd(controls.monthlyStopUsd)}에 도달했습니다. 추가 호출은 제한됩니다.`
+    };
+  }
+
+  if (summary.month.usd >= controls.monthlyWarnUsd) {
+    return {
+      level: "warning",
+      message: `월 경고 기준 ${formatUsd(controls.monthlyWarnUsd)}를 넘었습니다. 중요한 테스트 위주로 진행하세요.`
+    };
+  }
+
+  if (summary.today.calls >= Math.max(1, controls.dailyCallLimit - 3)) {
+    return {
+      level: "warning",
+      message: `오늘 AI 호출 제한 ${controls.dailyCallLimit}회에 가까워지고 있습니다.`
+    };
+  }
+
+  return { level: "normal", message: "" };
+}
+
+function summarizeAiUsageLedger(controls = normalizeCostControl()) {
+  const now = new Date();
+  const todayKey = toDateKey(now);
+  const monthKey = toMonthKey(now);
+  const validRecords = getAiUsageLedger().filter((item) => {
+    const date = new Date(item.generatedAt || "");
+    return !Number.isNaN(date.getTime()) && toMonthKey(date) === monthKey;
+  });
+  const todayRecords = validRecords.filter((item) => toDateKey(new Date(item.generatedAt)) === todayKey);
+
+  return {
+    today: summarizeUsageRecords(todayRecords, controls),
+    month: summarizeUsageRecords(validRecords, controls)
+  };
+}
+
+function summarizeUsageRecords(records, controls) {
+  const usd = records.reduce((sum, item) => sum + (Number(item.estimatedUsd) || 0), 0);
+  const tokens = records.reduce((sum, item) => sum + (Number(item.totalTokens) || 0), 0);
+  const krw = records.reduce((sum, item) => sum + (Number(item.estimatedKrw) || 0), 0) || Math.round(usd * controls.krwPerUsd);
+
+  return {
+    calls: records.length,
+    usd,
+    krw,
+    tokens
+  };
+}
+
+function getAiUsageLedger() {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(AI_USAGE_LEDGER_KEY) || "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function setAiUsageLedger(records) {
+  try {
+    window.localStorage.setItem(AI_USAGE_LEDGER_KEY, JSON.stringify(records));
+  } catch {
+    // 비용 기록 실패가 상담 흐름을 막으면 안 됩니다.
+  }
+}
+
+function normalizeCostControl(value = {}) {
+  return {
+    monthlyWarnUsd: readPositiveNumber(value.monthlyWarnUsd, LOCAL_COST_CONTROL.monthlyWarnUsd),
+    monthlyStopUsd: readPositiveNumber(value.monthlyStopUsd, LOCAL_COST_CONTROL.monthlyStopUsd),
+    dailyCallLimit: Math.round(readPositiveNumber(value.dailyCallLimit, LOCAL_COST_CONTROL.dailyCallLimit)),
+    krwPerUsd: readPositiveNumber(value.krwPerUsd, LOCAL_COST_CONTROL.krwPerUsd),
+    pricingDate: value.pricingDate || LOCAL_COST_CONTROL.pricingDate
+  };
+}
+
+function readPositiveNumber(value, fallback) {
+  const number = Number(value);
+  return Number.isFinite(number) && number > 0 ? number : fallback;
+}
+
+function toDateKey(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+
+function toMonthKey(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+}
+
+function formatKrw(value) {
+  return `${formatNumber(Math.round(Number(value) || 0))}원`;
+}
+
+function formatUsd(value) {
+  return `$${(Number(value) || 0).toFixed(2)}`;
+}
+
+function formatNumber(value) {
+  return new Intl.NumberFormat("ko-KR").format(Number(value) || 0);
 }
 
 function applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId) {
@@ -1224,6 +1460,9 @@ function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseI
       ...(analysis.missingFacts || []).slice(0, 3).map((item) => `추가 확인: ${item}`)
     ],
     clarifyingQuestions: (analysis.clarifyingQuestions || []).slice(0, 3),
+    usage: data.usage || null,
+    billing: data.billing || null,
+    costControl: data.costControl || null,
     finalAdvice: {
       level: mapReferralLevel(referral.level),
       title: referral.level || "내부 확인",
@@ -2614,6 +2853,7 @@ function renderCaseReport(report) {
           <p class="report-kicker">PRINTABLE REPORT</p>
           <h3>${escapeHtml(report.title)}</h3>
           <p>${escapeHtml(report.subtitle)}</p>
+          ${renderReportCostMeta(report)}
         </div>
         <div class="report-actions">
           <span>${escapeHtml(report.generatedAt)}</span>
@@ -2907,6 +3147,8 @@ function finalizeAndSaveReport() {
     question: getQuestionContext(questionInput.value).baseQuestion || questionInput.value.trim(),
     savedAt: nowIso,
     generatedAt: draft.generatedAt || formatDateTime(nowIso),
+    billing: draft.billing || null,
+    usage: draft.usage || null,
     profile,
     html: buildReportSnapshotHtml(documentNo, nowIso)
   };
@@ -3056,6 +3298,7 @@ function getReportSnapshotStyles() {
     .case-report{display:grid;gap:18px}
     .report-cover{border-bottom:2px solid #111827;padding-bottom:14px}
     .report-kicker{margin:0 0 6px;color:#256fc5;font-size:12px;font-weight:800;letter-spacing:.08em}
+    .report-cost-meta{display:inline-block;margin:8px 0 0;border-radius:999px;padding:5px 9px;background:#edf7f6;color:#12867d;font-size:12px;font-weight:800}
     h3{margin:0;font-size:26px;line-height:1.35}
     h4{margin:0;font-size:18px}
     h5{margin:0;font-size:15px}
