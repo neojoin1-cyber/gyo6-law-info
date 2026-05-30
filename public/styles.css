@@ -1275,6 +1275,21 @@ select:focus {
   color: var(--gold);
 }
 
+.report-api-relevance {
+  display: grid;
+  gap: 5px;
+  border: 1px solid #d9e8f0;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f8fbfd;
+}
+
+.report-api-relevance small {
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
 .clarifier-panel {
   display: grid;
   gap: 14px;
@@ -1893,6 +1908,51 @@ select:focus {
 .api-card-summary {
   padding-top: 6px;
   border-top: 1px solid #eef3f7;
+}
+
+.api-relevance {
+  display: grid;
+  gap: 6px;
+  border: 1px solid #d9e8f0;
+  border-radius: 8px;
+  padding: 9px;
+  background: #f8fbfd;
+}
+
+.api-relevance.high {
+  border-color: #bfe1dc;
+  background: #f3fbf9;
+}
+
+.api-relevance strong,
+.report-api-relevance strong {
+  color: var(--navy);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.api-relevance p,
+.report-api-relevance p {
+  margin: 0;
+  color: #40556a;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.api-relevance div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.api-relevance span {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 3px 7px;
+  background: #edf7f6;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
 }
 
 .api-source-card a {

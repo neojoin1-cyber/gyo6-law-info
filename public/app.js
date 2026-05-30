@@ -703,7 +703,7 @@ function renderLiveSourceResults(data) {
       <span>공식 API 우선</span>
       <span>원문 없으면 확인 필요</span>
     </div>
-    <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 보고서 근거 자료에도 함께 반영합니다.</p>
+    <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 국내재해사례는 사고유형, 설비, 작업상황이 충분히 맞는 후보만 엄선해 표시합니다.</p>
     ${renderApiGroup("법제처 법령 검색", results.laws, "질문과 연결된 법령 후보가 아직 없습니다.")}
     ${renderApiGroup("법령해석례 후보", results.interpretations, "관련 법령해석례 후보가 아직 없습니다.")}
     ${renderApiGroup("국내재해사례", results.safetyDisasters, "관련 국내재해사례 후보가 아직 없습니다.")}
@@ -758,8 +758,27 @@ function renderApiCard(item) {
       </p>
       ${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ""}
       ${item.summary ? `<p class="api-card-summary">${escapeHtml(item.summary)}</p>` : ""}
+      ${renderApiRelevance(item.relevance)}
       ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
     </article>
+  `;
+}
+
+function renderApiRelevance(relevance) {
+  if (!relevance) {
+    return "";
+  }
+
+  return `
+    <div class="api-relevance ${relevance.score >= 70 ? "high" : "medium"}">
+      <strong>${escapeHtml(relevance.label)} · 관련도 ${escapeHtml(relevance.score)}점</strong>
+      <p>${escapeHtml(relevance.reason)}</p>
+      ${relevance.matchedSignals?.length ? `
+        <div>
+          ${relevance.matchedSignals.map((signal) => `<span>${escapeHtml(signal)}</span>`).join("")}
+        </div>
+      ` : ""}
+    </div>
   `;
 }
 
@@ -1405,6 +1424,9 @@ function getReportSnapshotStyles() {
     .report-mini-card p{margin:0 0 4px}
     .report-mini-card em{display:block;color:#4d637b;font-style:normal;font-size:12px;line-height:1.55}
     .report-action-checks ul{margin:0;padding-left:18px}
+    .report-api-relevance{display:grid;gap:5px;border:1px solid #d9e8f0;background:#f8fbfd;padding:8px}
+    .report-api-relevance p{margin:0;color:#40556a;font-size:12px;line-height:1.55}
+    .report-api-relevance small{color:#12867d;font-size:11px;font-weight:800}
     strong{color:#142033}
     .report-list{margin:0;padding-left:20px}
     .report-list.checklist{padding-left:0;list-style-position:inside}
@@ -1582,12 +1604,27 @@ function renderReportApiGroup(title, items = []) {
                 <span class="${reliability.needsReview ? "needs-review" : "verified"}">${escapeHtml(reliability.label || "확인 필요")}</span>
               </div>
               <p>${escapeHtml(item.summary || item.subtitle || "요약 정보 없음")}</p>
+              ${renderReportApiRelevance(item.relevance)}
               <small>${escapeHtml(item.source || "공식 출처")} ${item.date ? `· ${escapeHtml(item.date)}` : "· 일자 확인 필요"}</small>
               ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
             </article>
           `;
         }).join("")}
       </div>
+    </div>
+  `;
+}
+
+function renderReportApiRelevance(relevance) {
+  if (!relevance) {
+    return "";
+  }
+
+  return `
+    <div class="report-api-relevance">
+      <strong>${escapeHtml(relevance.label)} · 관련도 ${escapeHtml(relevance.score)}점</strong>
+      <p>${escapeHtml(relevance.reason)}</p>
+      ${relevance.matchedSignals?.length ? `<small>일치 신호: ${escapeHtml(relevance.matchedSignals.join(", "))}</small>` : ""}
     </div>
   `;
 }
