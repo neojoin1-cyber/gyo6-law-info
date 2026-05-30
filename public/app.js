@@ -1162,7 +1162,7 @@ function renderFinalAdvice(advice) {
 
   return `
     <div class="report-section report-final-advice ${level}">
-      <h4>9. 최종 조언 및 상담 의뢰 판단</h4>
+      <h4>8. 최종 조언 및 상담 의뢰 판단</h4>
       <div class="final-advice-box">
         <span>${escapeHtml(advice.title)}</span>
         <p>${escapeHtml(advice.summary)}</p>
@@ -1174,6 +1174,152 @@ function renderFinalAdvice(advice) {
           <p>${escapeHtml(guidanceSentence)}</p>
         </div>
       ` : ""}
+    </div>
+  `;
+}
+
+function renderExecutiveSummarySection(report) {
+  return `
+    <div class="report-section report-executive-section">
+      <h4>1. 관리자 요약: 6하원칙 및 대처 방향</h4>
+      <div id="reportExecutiveSummary">
+        ${renderExecutiveSummaryContent(report)}
+      </div>
+    </div>
+  `;
+}
+
+function renderExecutiveSummaryContent(report, profileContext = {}) {
+  const rows = buildSixWRows(report, profileContext);
+  const metaItems = [
+    profileContext.documentNo ? `문서번호 ${profileContext.documentNo}` : "",
+    profileContext.savedAtText ? `작성시각 ${profileContext.savedAtText}` : "",
+    profileContext.schoolName ? `학교 ${profileContext.schoolName}` : "",
+    profileContext.drafterName ? `작성·검토 ${profileContext.drafterName}` : ""
+  ].filter(Boolean);
+
+  return `
+    <div class="admin-summary-card">
+      <div>
+        <span>Executive Summary</span>
+        <p>${escapeHtml(report.lead)}</p>
+      </div>
+      ${metaItems.length ? `
+        <div class="admin-summary-meta">
+          ${metaItems.map((item) => `<small>${escapeHtml(item)}</small>`).join("")}
+        </div>
+      ` : ""}
+    </div>
+    <div class="sixw-grid">
+      ${rows.map((row) => `
+        <article>
+          <strong>${escapeHtml(row.label)}</strong>
+          <p>${escapeHtml(row.value)}</p>
+        </article>
+      `).join("")}
+    </div>
+    <div class="response-summary">
+      <strong>관리자 우선 판단</strong>
+      <p>${escapeHtml(buildManagerPriorityText(report, profileContext))}</p>
+    </div>
+  `;
+}
+
+function buildSixWRows(report, profileContext = {}) {
+  const baseQuestion = findReportFact(report, "원 질문") || report.title;
+  const incidentDatePlace = profileContext.incidentDatePlace || findReportFact(report, "사고 시간") || "";
+  const firstResponse = profileContext.currentStatus || findReportFact(report, "사고 직후") || report.immediateActions?.[0] || "";
+  const workOrder = findReportFact(report, "작업 지시") || findReportFact(report, "친구 일을") || "";
+  const studentInfo = [
+    profileContext.studentLabel,
+    profileContext.department,
+    profileContext.teacherName ? `담당 ${profileContext.teacherName}` : "",
+    profileContext.guardianContact ? `보호자 ${profileContext.guardianContact}` : ""
+  ].filter(Boolean).join(" · ");
+  const placeInfo = [
+    profileContext.companyName,
+    profileContext.companyContact,
+    incidentDatePlace
+  ].filter(Boolean).join(" · ");
+  const periodInfo = [
+    profileContext.trainingPeriod,
+    profileContext.programName
+  ].filter(Boolean).join(" · ");
+
+  return [
+    { label: "누가", value: studentInfo || `${report.audience || "관련 사용자"} · 학생·학교·보호자·실습기업 등 관련 주체 확인 필요` },
+    { label: "언제", value: periodInfo || incidentDatePlace || "사고·문제 발생 일시와 실습기간 추가 확인 필요" },
+    { label: "어디서", value: placeInfo || "실습 장소, 학교, 기업, 민원 발생 장소 추가 확인 필요" },
+    { label: "무엇을", value: baseQuestion || "사용자가 입력한 사안 내용 확인 필요" },
+    { label: "어떻게", value: firstResponse || "현재 조치, 보호자 통보, 치료, 보고 여부 추가 확인 필요" },
+    { label: "왜 중요한가", value: workOrder || report.issueSummary?.[1] || "책임 판단 전 사실관계와 공식 원문 확인이 필요합니다." }
+  ];
+}
+
+function buildManagerPriorityText(report, profileContext = {}) {
+  const status = profileContext.currentStatus ? `현재 조치: ${profileContext.currentStatus}` : "";
+  const note = profileContext.referenceNote ? `참고사항: ${profileContext.referenceNote}` : "";
+  const actions = report.immediateActions?.slice(0, 2).join(" ") || "";
+  return [status, note, actions].filter(Boolean).join(" ") || "학생 보호, 사실관계 기록, 공식 원문 확인, 보고 필요 여부 판단을 우선 진행합니다.";
+}
+
+function findReportFact(report, labelPart) {
+  const item = report.facts?.find((fact) => fact.label.includes(labelPart));
+  return item?.value || "";
+}
+
+function renderFactProfileContextContent(profileContext = {}) {
+  const groups = [
+    {
+      title: "학교·담당",
+      value: [profileContext.schoolName, profileContext.teacherName, profileContext.drafterName].filter(Boolean).join(" · ")
+    },
+    {
+      title: "학생·보호자",
+      value: [profileContext.studentLabel, profileContext.department, profileContext.studentContact, profileContext.guardianContact].filter(Boolean).join(" · ")
+    },
+    {
+      title: "실습·기업",
+      value: [profileContext.companyName, profileContext.companyContact, profileContext.trainingPeriod, profileContext.programName].filter(Boolean).join(" · ")
+    },
+    {
+      title: "현재 현황·참고사항",
+      value: [profileContext.currentStatus, profileContext.referenceNote].filter(Boolean).join(" · ")
+    }
+  ].filter((item) => item.value);
+
+  if (!groups.length) {
+    return "";
+  }
+
+  return `
+    <div class="report-context-block">
+      ${groups.map((item) => `
+        <article>
+          <strong>${escapeHtml(item.title)}</strong>
+          <p>${escapeHtml(item.value)}</p>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderStakeholderProfileContextContent(profileContext = {}) {
+  const items = [
+    profileContext.teacherName ? `학교 담당자: ${profileContext.teacherName}` : "",
+    profileContext.companyContact ? `기업 담당자: ${profileContext.companyContact}` : "",
+    profileContext.guardianContact ? `보호자 연락처: ${profileContext.guardianContact}` : "",
+    profileContext.currentStatus ? `현재 조치: ${profileContext.currentStatus}` : ""
+  ].filter(Boolean);
+
+  if (!items.length) {
+    return "";
+  }
+
+  return `
+    <div class="stakeholder-context-note">
+      <strong>입력 정보 반영</strong>
+      <p>${escapeHtml(items.join(" · "))}</p>
     </div>
   `;
 }
@@ -1195,20 +1341,13 @@ function renderCaseReport(report) {
         </div>
       </div>
 
-      <p class="report-lead">${escapeHtml(report.lead)}</p>
-      <p class="report-disclaimer">${escapeHtml(report.disclaimer)}</p>
-
       ${renderReportComposer(report)}
 
-      <div class="report-section report-profile-output-section">
-        <h4>1. 보고서 작성 정보</h4>
-        <div id="reportProfileOutput" class="report-profile-output">
-          <p>인쇄 전에 위 입력란을 작성하고 <strong>보고서 인쇄</strong> 또는 <strong>자료실 저장</strong>을 누르면 이 영역에 보고서 정보가 반영됩니다.</p>
-        </div>
-      </div>
+      ${renderExecutiveSummarySection(report)}
 
       <div class="report-section">
         <h4>2. 사안 개요</h4>
+        <div id="reportFactProfileContext"></div>
         <div class="report-facts">
           ${report.facts.map((item) => `
             <div>
@@ -1221,25 +1360,26 @@ function renderCaseReport(report) {
 
       <div class="report-section">
         <h4>3. 핵심 쟁점 및 판단 전제</h4>
-        ${renderReportList(report.issueSummary)}
+        ${renderReportList(report.issueSummary, "", { basis: true, report })}
       </div>
 
       <div class="report-section">
         <h4>4. 즉시 조치 체크리스트</h4>
-        ${renderReportList(report.immediateActions, "checklist")}
+        ${renderReportList(report.immediateActions, "checklist", { basis: true, report })}
       </div>
 
       <div class="report-section">
         <h4>5. 주체별 조치사항과 권리·의무</h4>
+        <div id="reportStakeholderProfileContext"></div>
         <div class="report-stakeholders">
           ${report.stakeholders.map((section) => `
             <article>
               <h5>${escapeHtml(section.title)}</h5>
               <p>${escapeHtml(section.summary)}</p>
               <strong>해야 할 조치·의무</strong>
-              ${renderReportList(section.duties)}
+              ${renderReportList(section.duties, "", { basis: true, report })}
               <strong>확인할 권리·요구할 수 있는 사항</strong>
-              ${renderReportList(section.rights)}
+              ${renderReportList(section.rights, "", { basis: true, report })}
             </article>
           `).join("")}
         </div>
@@ -1251,27 +1391,30 @@ function renderCaseReport(report) {
       </div>
 
       <div class="report-section">
-        <h4>7. 공식 근거 자료</h4>
-        <p class="report-section-note">아래는 이 사안에서 우선 대조할 조항·사례 후보입니다. 적용 여부는 사실관계와 원문 확인 후 판단해야 하며, API 결과가 도착하면 실제 원문 후보가 함께 보강됩니다.</p>
-        ${renderReportMaterials(report.officialMaterials)}
-        <div id="reportLiveSources" class="report-live-sources">
-          <p>법제처와 안전보건공단 API 자료를 보고서에 반영하고 있습니다.</p>
-        </div>
-      </div>
-
-      <div class="report-section">
-        <h4>8. 주의 및 전문가 확인 필요 사항</h4>
+        <h4>7. 유의사항 및 정보 제공 안내</h4>
+        <p class="report-disclaimer">${escapeHtml(report.disclaimer)}</p>
         ${renderReportList(report.cautions)}
       </div>
 
       ${renderFinalAdvice(report.finalAdvice)}
 
+      <div class="report-section report-source-section">
+        <h4>9. 유사자료 및 원문 근거 확인</h4>
+        <p class="report-section-note">유사사례는 사고유형, 장소, 설비, 작업상황이 맞는 후보를 우선 표시합니다. 법령과 행정자료는 위 쟁점·조치사항의 법적 근거를 원문으로 재확인하기 위한 보조 영역입니다.</p>
+        <div id="reportLiveSources" class="report-live-sources">
+          <p>법제처와 안전보건공단 API 자료를 보고서에 반영하고 있습니다.</p>
+        </div>
+        ${renderReportSimilarHints(report.officialMaterials)}
+        ${renderReportMaterials(report.officialMaterials)}
+      </div>
+
       <div class="report-section report-sign-section">
-        <h4>10. 확인란</h4>
-        <div class="report-sign-grid">
-          <div><strong>작성자</strong><span></span></div>
-          <div><strong>검토자</strong><span></span></div>
-          <div><strong>확인일</strong><span></span></div>
+        <h4>10. 담당자 의견 작성란</h4>
+        <div class="report-opinion-grid">
+          <div><strong>담임·지도교사 의견</strong><span></span></div>
+          <div><strong>취업지도부·업무담당자 의견</strong><span></span></div>
+          <div><strong>관리자 검토 의견</strong><span></span></div>
+          <div class="wide"><strong>교육청 보고·전문가 상담·후속 조치 의견</strong><span></span></div>
         </div>
       </div>
 
@@ -1362,11 +1505,7 @@ function finalizeAndSaveReport() {
   const id = reportElement?.dataset.activeReportId || createReportId(nowIso);
   const documentNo = reportElement?.dataset.documentNo || createDocumentNo(nowIso);
   const profile = collectReportProfile();
-  const profileMount = document.querySelector("#reportProfileOutput");
-
-  if (profileMount) {
-    profileMount.innerHTML = renderReportProfileOutput(profile, documentNo, nowIso);
-  }
+  const profileContext = buildReportProfileContext(profile, documentNo, nowIso);
 
   if (reportElement) {
     reportElement.dataset.activeReportId = id;
@@ -1374,6 +1513,7 @@ function finalizeAndSaveReport() {
   }
 
   const draft = currentReportDraft || {};
+  applyReportProfileContext(draft, profileContext);
   const record = {
     id,
     documentNo,
@@ -1405,24 +1545,31 @@ function collectReportProfile() {
   });
 }
 
-function renderReportProfileOutput(profile, documentNo, savedAt) {
-  const rows = [
-    { label: "문서번호", value: documentNo },
-    { label: "작성·저장 시각", value: formatDateTime(savedAt) },
-    ...profile
-  ];
+function buildReportProfileContext(profile = [], documentNo = "", savedAt = "") {
+  const values = Object.fromEntries(profile.map((item) => [item.name, item.value]));
+  return {
+    ...values,
+    documentNo,
+    savedAt,
+    savedAtText: savedAt ? formatDateTime(savedAt) : ""
+  };
+}
 
-  return `
-    <div class="report-profile-grid">
-      ${rows.map((item) => `
-        <div>
-          <strong>${escapeHtml(item.label)}</strong>
-          <p>${escapeHtml(item.value || "미입력")}</p>
-        </div>
-      `).join("")}
-    </div>
-    <p class="report-profile-note">연락처와 실명 등 개인정보가 포함된 보고서는 학교 내부 보관용으로만 관리하고, 외부 공유 시 비식별 처리하세요.</p>
-  `;
+function applyReportProfileContext(report, profileContext) {
+  const executiveMount = document.querySelector("#reportExecutiveSummary");
+  if (executiveMount) {
+    executiveMount.innerHTML = renderExecutiveSummaryContent(report, profileContext);
+  }
+
+  const factMount = document.querySelector("#reportFactProfileContext");
+  if (factMount) {
+    factMount.innerHTML = renderFactProfileContextContent(profileContext);
+  }
+
+  const stakeholderMount = document.querySelector("#reportStakeholderProfileContext");
+  if (stakeholderMount) {
+    stakeholderMount.innerHTML = renderStakeholderProfileContextContent(profileContext);
+  }
 }
 
 function summarizeReportProfile(profile = []) {
@@ -1522,8 +1669,13 @@ function getReportSnapshotStyles() {
     .report-lead{border-left:5px solid #256fc5;background:#f4f8fd;padding:14px;font-weight:700}
     .report-disclaimer{border:1px solid #f0d6a3;background:#fffaf0;padding:12px;color:#79540e}
     .report-section{border-top:1px solid #dce5ee;padding-top:14px;display:grid;gap:10px}
-    .report-facts,.report-profile-grid,.report-materials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-    .report-facts div,.report-profile-grid div,.report-stakeholders article,.report-materials article,.report-api-list article{border:1px solid #dce5ee;padding:10px;background:#fbfcfd}
+    .admin-summary-card{border:1px solid #c6dceb;border-left:5px solid #256fc5;background:#f4f8fd;padding:12px}
+    .admin-summary-card span{display:block;margin-bottom:5px;color:#256fc5;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .admin-summary-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .admin-summary-meta small{background:#fff;border:1px solid #dce5ee;padding:4px 7px;font-size:11px}
+    .sixw-grid,.report-context-block,.report-facts,.report-profile-grid,.report-materials{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .sixw-grid article,.report-context-block article,.report-facts div,.report-profile-grid div,.report-stakeholders article,.report-materials article,.report-api-list article{border:1px solid #dce5ee;padding:10px;background:#fbfcfd}
+    .response-summary,.stakeholder-context-note{border:1px solid #dce5ee;background:#f8fbfd;padding:10px}
     .report-materials article{display:grid;gap:8px}
     .report-material-detail{display:grid;gap:7px;border-top:1px solid #e5edf4;padding-top:8px}
     .report-mini-list{display:grid;gap:6px}
@@ -1532,6 +1684,12 @@ function getReportSnapshotStyles() {
     .report-mini-card p{margin:0 0 4px}
     .report-mini-card em{display:block;color:#4d637b;font-style:normal;font-size:12px;line-height:1.55}
     .report-action-checks ul{margin:0;padding-left:18px}
+    .inline-basis{display:block;margin-top:4px;color:#12867d;font-size:12px;font-weight:800;line-height:1.5}
+    .report-similar-hints{border:1px solid #f0d6a3;background:#fffaf0;padding:10px;display:grid;gap:8px}
+    .report-similar-hints>div{display:grid;gap:8px}
+    .report-similar-hints article{border:1px solid #f0d6a3;background:#fff;padding:8px}
+    .report-similar-hints b{display:block;margin-bottom:4px}
+    .report-similar-hints p,.report-similar-hints em,.report-similar-hints small{display:block;margin:0 0 4px;color:#40556a;font-size:12px;font-style:normal}
     .report-api-relevance{display:grid;gap:5px;border:1px solid #d9e8f0;background:#f8fbfd;padding:8px}
     .report-api-relevance p{margin:0;color:#40556a;font-size:12px;line-height:1.55}
     .report-api-relevance small{color:#12867d;font-size:11px;font-weight:800}
@@ -1549,11 +1707,13 @@ function getReportSnapshotStyles() {
     .report-list.checklist li{border:1px solid #dce5ee;margin-bottom:6px;padding:8px;background:#f8fbfd}
     .report-list.compact{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding-left:0;list-style:none}
     .report-stakeholders{display:grid;gap:10px}
-    .report-sign-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .report-sign-grid div{min-height:68px;border:1px solid #111827;padding:10px}
+    .report-opinion-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .report-opinion-grid div{min-height:86px;border:1px solid #111827;padding:10px}
+    .report-opinion-grid .wide{grid-column:1/-1}
+    .report-opinion-grid span{display:block;min-height:52px;margin-top:8px;border-bottom:1px solid #111827}
     a{color:#111827;text-decoration:none}
     footer{margin-top:28px;border-top:1px solid #dce5ee;padding-top:12px;color:#65758b;font-size:12px}
-    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article,.report-mini-card,.report-final-advice,.referral-draft{break-inside:avoid}}
+    @media print{body{background:#fff}main{max-width:none;padding:0}.report-section,.report-stakeholders article,.report-materials article,.report-mini-card,.report-final-advice,.referral-draft,.admin-summary-card,.sixw-grid article,.report-context-block article,.report-similar-hints article,.report-opinion-grid div{break-inside:avoid}}
   `;
 }
 
@@ -1609,11 +1769,109 @@ function deleteSavedReport(id) {
   updateReportComposerFeedback("저장된 보고서를 삭제했습니다.");
 }
 
-function renderReportList(items, variant = "") {
+function renderReportList(items, variant = "", options = {}) {
   return `
     <ul class="report-list ${variant}">
-      ${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+      ${items.map((item) => {
+        const text = typeof item === "string" ? item : item.text;
+        const basis = typeof item === "object" && item.basis
+          ? item.basis
+          : options.basis
+            ? getInlineBasisForText(text, options.report)
+            : "";
+        return `
+          <li>
+            <span>${escapeHtml(text)}</span>
+            ${basis ? `<small class="inline-basis">법적 근거: ${escapeHtml(basis)}</small>` : ""}
+          </li>
+        `;
+      }).join("")}
     </ul>
+  `;
+}
+
+function getInlineBasisForText(text, report) {
+  const normalized = String(text || "").replace(/\s+/g, "");
+  const basis = [];
+
+  const add = (...items) => items.forEach((item) => {
+    if (item && !basis.includes(item)) {
+      basis.push(item);
+    }
+  });
+
+  if (/현장실습|실습운영|순회지도|지도.?점검|학교.*관리|교육청/.test(normalized)) {
+    add("직업교육훈련 촉진법 제7조의2");
+  }
+  if (/산업체|실습기업|배치|선정/.test(normalized)) {
+    add("직업교육훈련 촉진법 제8조");
+  }
+  if (/협약|계약|실습내용|권리|의무/.test(normalized)) {
+    add("직업교육훈련 촉진법 제9조");
+  }
+  if (/실습시간|출근|퇴근|야간|휴일/.test(normalized)) {
+    add("직업교육훈련 촉진법 제9조의2");
+  }
+  if (/안전교육|노동인권|권익보호/.test(normalized)) {
+    add("직업교육훈련 촉진법 제9조의5", "산업안전보건법 제29조");
+  }
+  if (/기계|안전장치|방호|작업표준|보호구|위험성|감독자|작업지시|현장보존|추가위험/.test(normalized)) {
+    add("산업안전보건법 제38조", "산업안전보건법 제80조");
+  }
+  if (/산재|산업재해|사고보고|재해조사|보험|휴업/.test(normalized)) {
+    add("산업안전보건법 제57조");
+  }
+  if (/중대재해|중상|사망|장해/.test(normalized)) {
+    add("중대재해 처벌 등에 관한 법률 제2조", "중대재해 처벌 등에 관한 법률 제4조");
+  }
+  if (/학교폭력|피해학생|가해학생|전담기구|심의/.test(normalized)) {
+    add("학교폭력예방 및 대책에 관한 법률", "교육부 학교폭력 사안처리 가이드북");
+  }
+  if (/근로계약|임금|근로시간|휴게|해고|퇴직/.test(normalized)) {
+    add("근로기준법", "근로자퇴직급여 보장법");
+  }
+  if (/민원|처분|의견제출|행정절차/.test(normalized)) {
+    add("행정절차법");
+  }
+
+  if (!basis.length) {
+    const material = report?.officialMaterials?.find((item) => item.provisions?.length) || report?.officialMaterials?.[0];
+    const provision = material?.provisions?.[0]?.title;
+    if (material?.title && provision) {
+      add(`${material.title} ${provision}`);
+    } else if (material?.title) {
+      add(material.title);
+    }
+  }
+
+  return basis.slice(0, 3).join(" / ");
+}
+
+function renderReportSimilarHints(materials = []) {
+  const hints = materials.flatMap((material) => (material.caseHints || []).map((hint) => ({
+    ...hint,
+    source: material.source,
+    materialTitle: material.title
+  })));
+
+  if (!hints.length) {
+    return "";
+  }
+
+  return `
+    <div class="report-similar-hints" aria-label="유사자료 우선 후보">
+      <strong>유사자료 우선 후보</strong>
+      <div>
+        ${hints.slice(0, 4).map((hint) => `
+          <article>
+            <b>${escapeHtml(hint.title)}</b>
+            <p>${escapeHtml(hint.why)}</p>
+            <em>${escapeHtml(hint.check)}</em>
+            <small>${escapeHtml(hint.source)} · ${escapeHtml(hint.materialTitle)}</small>
+          </article>
+        `).join("")}
+      </div>
+    </div>
   `;
 }
 
@@ -1691,13 +1949,13 @@ function renderReportLiveSources(data) {
 
   return `
     <div class="report-api-head">
-      <strong>API 확인 자료</strong>
+      <strong>유사 사례·공식 API 확인 자료</strong>
       <span>확인시각 ${escapeHtml(checkedAt)}</span>
     </div>
-    ${renderReportApiGroup("현행 법령", results.laws)}
-    ${renderReportApiGroup("법령해석례", results.interpretations)}
     ${renderReportApiGroup("국내재해사례", results.safetyDisasters)}
     ${renderReportApiGroup("안전보건자료", results.safetyMaterials)}
+    ${renderReportApiGroup("현행 법령", results.laws)}
+    ${renderReportApiGroup("법령해석례", results.interpretations)}
   `;
 }
 

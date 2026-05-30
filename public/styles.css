@@ -787,6 +787,98 @@ select:focus {
   font-size: 13px;
 }
 
+.admin-summary-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #c6dceb;
+  border-left: 5px solid var(--blue);
+  border-radius: 8px;
+  background: #f4f8fd;
+}
+
+.admin-summary-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.admin-summary-card p,
+.response-summary p,
+.stakeholder-context-note p {
+  margin: 0;
+  color: #31485f;
+  line-height: 1.75;
+}
+
+.admin-summary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.admin-summary-meta small {
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: #fff;
+  color: #40556a;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.sixw-grid,
+.report-context-block {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.sixw-grid article,
+.report-context-block article {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcfd;
+}
+
+.sixw-grid strong,
+.report-context-block strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.sixw-grid p,
+.report-context-block p {
+  margin: 0;
+  color: #40556a;
+  line-height: 1.65;
+}
+
+.response-summary,
+.stakeholder-context-note {
+  padding: 13px 14px;
+  border: 1px solid #d8e6ef;
+  border-radius: 8px;
+  background: #f8fbfd;
+}
+
+.response-summary strong,
+.stakeholder-context-note strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 900;
+}
+
 .report-composer,
 .report-library {
   display: grid;
@@ -990,6 +1082,19 @@ select:focus {
   line-height: 1.7;
 }
 
+.report-list li > span {
+  display: block;
+}
+
+.inline-basis {
+  display: block;
+  margin-top: 5px;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
 .report-list.checklist li {
   padding: 9px 10px;
   border: 1px solid #d8e6ef;
@@ -1137,6 +1242,53 @@ select:focus {
   line-height: 1.55;
 }
 
+.report-similar-hints {
+  display: grid;
+  gap: 9px;
+  padding: 13px;
+  border: 1px solid #ead7a8;
+  border-radius: 8px;
+  background: #fffaf0;
+}
+
+.report-similar-hints > strong {
+  color: #79540e;
+  font-size: 13px;
+}
+
+.report-similar-hints > div {
+  display: grid;
+  gap: 8px;
+}
+
+.report-similar-hints article {
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid #f0d6a3;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.report-similar-hints b {
+  color: var(--navy);
+  line-height: 1.45;
+}
+
+.report-similar-hints p,
+.report-similar-hints em,
+.report-similar-hints small {
+  margin: 0;
+  color: #40556a;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.report-similar-hints em {
+  color: #6a5a34;
+  font-style: normal;
+}
+
 .report-final-advice {
   padding: 16px;
   border: 1px solid #c9dce8;
@@ -1205,29 +1357,37 @@ select:focus {
   line-height: 1.65;
 }
 
-.report-sign-grid {
+.report-sign-grid,
+.report-opinion-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
 }
 
-.report-sign-grid div {
-  min-height: 74px;
+.report-sign-grid div,
+.report-opinion-grid div {
+  min-height: 96px;
   border: 1px solid #b8c7d5;
   border-radius: 8px;
   padding: 12px;
   background: #fff;
 }
 
-.report-sign-grid strong {
+.report-opinion-grid div.wide {
+  grid-column: 1 / -1;
+}
+
+.report-sign-grid strong,
+.report-opinion-grid strong {
   display: block;
   color: var(--navy);
   font-size: 13px;
 }
 
-.report-sign-grid span {
+.report-sign-grid span,
+.report-opinion-grid span {
   display: block;
-  min-height: 34px;
+  min-height: 54px;
   margin-top: 10px;
   border-bottom: 1px solid #c7d3df;
 }
@@ -2160,12 +2320,15 @@ footer p {
   }
 
   .report-cover,
+  .sixw-grid,
   .report-facts,
+  .report-context-block,
   .report-profile-grid,
   .report-profile-form,
   .report-materials,
   .report-list.compact,
-  .report-sign-grid {
+  .report-sign-grid,
+  .report-opinion-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2364,8 +2527,13 @@ footer p {
   body.printing-report .report-mini-card,
   body.printing-report .report-final-advice,
   body.printing-report .referral-draft,
+  body.printing-report .admin-summary-card,
+  body.printing-report .sixw-grid article,
+  body.printing-report .report-context-block article,
+  body.printing-report .report-similar-hints article,
   body.printing-report .report-profile-grid div,
-  body.printing-report .report-sign-grid div {
+  body.printing-report .report-sign-grid div,
+  body.printing-report .report-opinion-grid div {
     break-inside: avoid;
   }
 
