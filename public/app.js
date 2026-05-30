@@ -533,7 +533,56 @@ function findPreset(question, selectedType) {
   }
 
   const normalized = question.replace(/\s+/g, "");
-  return topicPresets.find((preset) => preset.keys.some((key) => normalized.includes(key))) || fallbackPreset;
+  const scored = topicPresets
+    .map((preset) => ({ preset, score: getPresetScore(preset, normalized) }))
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  return scored[0]?.preset || fallbackPreset;
+}
+
+function getPresetScore(preset, normalized) {
+  let score = 0;
+
+  preset.keys.forEach((key) => {
+    if (normalized.includes(key.replace(/\s+/g, ""))) {
+      score += Math.max(2, key.length);
+    }
+  });
+
+  if (preset.type === "overseasTraining") {
+    if (/해외|호주|글로벌|국외/.test(normalized)) score += 30;
+    if (/해외현장실습|해외실습|글로벌현장학습/.test(normalized)) score += 40;
+  }
+
+  if (preset.type === "fieldTraining") {
+    if (/현장실습|실습생|실습기업|실습기관/.test(normalized)) score += 18;
+    if (/해외|호주|글로벌/.test(normalized)) score -= 25;
+  }
+
+  if (preset.type === "staffLabor") {
+    if (/기간제|행정실|행정직|교직원|교육공무직|상근|복무|업무분장|계약갱신|재계약|근로자|직장내괴롭힘|직장.*괴롭힘|상급자|야근|모욕/.test(normalized)) score += 35;
+    if (/담임교사.*학부모|학부모.*담임교사|전화응대|불친절/.test(normalized) && !/기간제|근로자|복무|업무분장|계약|징계/.test(normalized)) score -= 20;
+    if (/현장실습|실습생/.test(normalized) && !/기간제|행정실|행정직|교직원|상급자|직장내괴롭힘|복무|업무분장|계약갱신|재계약/.test(normalized)) score -= 35;
+    if (/중대재해|사망|추락|끼임|깔림/.test(normalized)) score -= 25;
+  }
+
+  if (preset.type === "schoolViolence") {
+    if (/학교폭력|학폭|피해학생|가해학생|학생사이|단체채팅|욕설|따돌림|심의/.test(normalized)) score += 35;
+    if (/직장|상급자|근로자|기간제|행정실|행정직|교직원|복무|업무분장|계약갱신|재계약/.test(normalized)) score -= 35;
+  }
+
+  if (preset.type === "civilComplaint") {
+    if (/민원|학부모|담임|전화응대|불친절|사과|재발방지|생활지도|출결|학생관리/.test(normalized)) score += 28;
+    if (/기간제|근로자|계약갱신|재계약|임금|해고|징계|노무/.test(normalized)) score -= 20;
+  }
+
+  if (preset.type === "schoolSafety") {
+    if (/중대재해|산업안전|안전보건|위험성평가|안전관리체계|사망|추락|끼임|중상/.test(normalized)) score += 30;
+    if (/중대재해.*사망|사망.*중대재해|추락해사망|끼임사망|깔림사망/.test(normalized)) score += 45;
+  }
+
+  return score;
 }
 
 function renderResult(question, preset, scopes, answerMode, userRole) {
@@ -924,9 +973,10 @@ function getModeMessage(answerMode) {
 
 function analyzeQuestionScenario(question, preset) {
   const normalized = String(question || "").replace(/\s+/g, "");
+  const occurrenceNegated = /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|발생전|대비|예방|점검표|점검하고싶|만들고싶/.test(normalized);
   const isFieldTraining = preset.type === "fieldTraining" || /현장실습|실습생|실습기관|실습기업|직업계고|특성화고/.test(normalized);
-  const actualInjury = /골절|부상|다침|다쳤|다쳐|상해|중상|사망|치료|병원|119|응급|입원|수술|출혈|화상|절단|끼임|깔림|추락|재해/.test(normalized);
-  const actualAccident = /사고(가|는|를)?(발생|났|남|당했|당함|입었|겪었)|산재|산업재해/.test(normalized);
+  const actualInjury = !occurrenceNegated && /골절|부상|다침|다쳤|다쳐|상해|중상|사망|치료|병원|119|응급|입원|수술|출혈|화상|절단|끼임|깔림|추락/.test(normalized);
+  const actualAccident = !occurrenceNegated && /사고(가|는|를)?(발생|났|남|당했|당함|입었|겪었)|산재|산업재해/.test(normalized);
   const scopeIssue = isFieldTraining && /청소|잡무|허드렛일|업무외|업무가아니|반복|자꾸|시키|시킴|지시|불필요|필요도없는|재료|심부름|괴롭힘|부당|권익|실습범위|표준협약|멘토|기존근로자/.test(normalized);
   const safetyConcern = isFieldTraining && !actualInjury && /위험|안전|기계|설비|보호구|화학|유해|먼지|청소중/.test(normalized);
 
@@ -938,10 +988,29 @@ function analyzeQuestionScenario(question, preset) {
     return { type: "fieldTrainingScopeIssue", isFieldTraining, actualInjury, actualAccident, scopeIssue, safetyConcern };
   }
 
+  if (preset.type === "schoolSafety" && occurrenceNegated) {
+    return { type: "safetyPrevention", isFieldTraining, actualInjury, actualAccident, scopeIssue, safetyConcern };
+  }
+
   return { type: preset.type, isFieldTraining, actualInjury, actualAccident, scopeIssue, safetyConcern };
 }
 
 function getScenarioDisplayPreset(preset, scenario) {
+  if (scenario.type === "safetyPrevention") {
+    return {
+      ...preset,
+      title: "중대재해 예방·안전보건관리체계 점검 자료",
+      summary: "사고 발생 후 보고가 아니라, 학교장이 안전보건관리체계와 위험성평가를 사전에 점검하기 위한 예방·관리 자료를 정리합니다.",
+      laws: ["중대재해 처벌 등에 관한 법률 제4조", "산업안전보건법", "위험성평가 관련 고시·안내"],
+      tags: ["예방 점검", "안전보건관리체계", "위험성평가", "재발방지 체계"],
+      checklist: [
+        "학교와 용역·위탁업체의 안전보건 역할과 책임자를 구분합니다.",
+        "위험성평가, 순회점검, 개선조치, 교육 기록을 정기 점검표로 만듭니다.",
+        "실제 사고 보고서가 아니라 예방 점검표와 개선 이행 기록으로 관리합니다."
+      ]
+    };
+  }
+
   if (scenario.type !== "fieldTrainingScopeIssue") {
     return preset;
   }
@@ -984,9 +1053,10 @@ function getDirectAnswer(question, preset, roleGuide, scenario = analyzeQuestion
     };
   }
 
-  const hasInjury = /골절|부상|다침|다쳤|다쳐|상해|중상|치료|병원|119|응급|입원|수술/.test(normalized);
-  const hasAccident = /사고(가|는|를)?(발생|났|남|당했|당함|입었|겪었)|산재|산업재해/.test(normalized);
-  const hasMachineAccident = /끼임|절단|충돌|부딪|깔림|추락/.test(normalized);
+  const occurrenceNegated = /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|발생전|대비|예방|점검표|점검하고싶|만들고싶/.test(normalized);
+  const hasInjury = !occurrenceNegated && /골절|부상|다침|다쳤|다쳐|상해|중상|치료|병원|119|응급|입원|수술/.test(normalized);
+  const hasAccident = !occurrenceNegated && /사고(가|는|를)?(발생|났|남|당했|당함|입었|겪었)|산재|산업재해/.test(normalized);
+  const hasMachineAccident = !occurrenceNegated && /끼임|절단|충돌|부딪|깔림|추락/.test(normalized);
 
   if (scenario.type === "fieldTrainingAccident" || hasInjury || hasAccident || hasMachineAccident) {
     return {
@@ -1556,8 +1626,9 @@ function isLikelyFieldTrainingScopeIssue(report, profileContext = {}) {
 function getReportDisposition(report, profileContext = {}) {
   const text = getReportSearchText(report, profileContext).replace(/\s+/g, "");
   const explicitEducationReport = /교육청보고|교육청에보고|교육청보고필요|공문보고/.test(text);
+  const occurrenceNegated = /사고가?발생한것은아닙니다|사고가?발생한것은아니|사고는?발생하지않|사고없|발생전|대비|예방|점검표|점검하고싶|만들고싶/.test(text);
   const seriousAccident = isLikelyFieldTrainingAccident(report, profileContext)
-    || /중대재해|사망|중상|골절|입원|수술|장해|119|응급/.test(text);
+    || (!occurrenceNegated && /중대재해발생|사망|중상|골절|입원|수술|장해|119|응급|추락해사망|끼임사망/.test(text));
 
   if (isLikelyFieldTrainingScopeIssue(report, profileContext)) {
     if (/보복|불이익발생|불이익을받|불이익이발생|실제불이익|모욕|협박|따돌림|위험작업|장기간반복|시정거부|개선거부/.test(text) || explicitEducationReport) {
@@ -1587,26 +1658,42 @@ function renderEducationOfficeDraft(report, profileContext = {}) {
     return "";
   }
 
+  const isFieldTrainingReport = /현장실습|실습기업|실습생/.test(getReportSearchText(report, profileContext));
   const schoolName = profileContext.schoolName || "학교명 확인 필요";
   const studentLabel = profileContext.studentLabel || "학생 성명 또는 식별명 확인 필요";
   const companyName = profileContext.companyName || "실습기업·기관 확인 필요";
   const incident = profileContext.incidentDatePlace || findReportFact(report, "사고 시간") || "발생 일시·장소 확인 필요";
-  const currentStatus = profileContext.currentStatus || report.immediateActions?.[0] || "치료, 보호자 통보, 실습 중단 여부 확인 필요";
+  const currentStatus = profileContext.currentStatus || report.immediateActions?.[0] || (isFieldTrainingReport ? "치료, 보호자 통보, 실습 중단 여부 확인 필요" : "응급조치, 현장 보존, 관계기관 보고 여부 확인 필요");
   const teacherName = profileContext.teacherName || "담당·지도교사 확인 필요";
   const period = profileContext.trainingPeriod || "파견일자·실습기간 확인 필요";
   const program = profileContext.programName || "참여 사업명 확인 필요";
   const facts = report.facts?.slice(0, 3).map((item) => `${item.label}: ${item.value}`).join(" / ") || report.lead;
+  const draftTitle = isFieldTrainingReport
+    ? `[검토용] 현장실습 안전사고 발생 보고 초안 - ${schoolName} ${studentLabel}`
+    : `[검토용] 학교 안전사고·중대재해 관련 보고 초안 - ${schoolName}`;
+  const overview = isFieldTrainingReport
+    ? `${schoolName} 소속 ${studentLabel} 관련 현장실습 안전사고로, 학생 보호와 사실관계 확인을 우선 진행 중입니다.`
+    : `${schoolName} 관련 학교 안전사고 또는 중대재해 의심 사안으로, 피해자 보호·현장 보존·관계기관 보고 필요 여부를 확인 중입니다.`;
+  const relatedParties = isFieldTrainingReport
+    ? `학생: ${studentLabel} / 담당: ${teacherName} / 실습기업: ${companyName} / 실습기간: ${period} / 참여사업: ${program}`
+    : `학교: ${schoolName} / 담당: ${teacherName} / 관련 업체·기관: ${companyName} / 관련 기간: ${period} / 관련 사업: ${program}`;
+  const issueText = isFieldTrainingReport
+    ? "공식 현장실습 범위 안의 사고인지, 학생이 허락받은 작업을 했는지, 안전교육·작업지시·감독·방호조치·산재 보고 대상 여부를 확인 중입니다."
+    : "사고 발생 장소, 피해자 소속, 도급·용역·위탁 관계, 안전보건관리체계, 재발방지 조치, 관계기관 보고 대상 여부를 확인 중입니다.";
+  const nextAction = isFieldTrainingReport
+    ? "교육청 보고 필요 여부 검토, 학생 치료와 보호자 안내, 현장 보존 요청, 증빙자료 확보, 실습 중단·복귀 계획 검토가 필요합니다."
+    : "교육청·고용노동부 등 관계기관 보고 필요 여부 검토, 피해자 보호, 현장 보존, 사고 경위 기록, 재발방지 대책 수립이 필요합니다.";
 
   const rows = [
     { label: "수신", value: "관할 교육청 직업교육·현장실습 담당부서" },
-    { label: "제목", value: `[검토용] 현장실습 안전사고 발생 보고 초안 - ${schoolName} ${studentLabel}` },
-    { label: "1. 보고 개요", value: `${schoolName} 소속 ${studentLabel} 관련 현장실습 안전사고로, 학생 보호와 사실관계 확인을 우선 진행 중입니다.` },
+    { label: "제목", value: draftTitle },
+    { label: "1. 보고 개요", value: overview },
     { label: "2. 발생 일시·장소", value: incident },
-    { label: "3. 관련 학생·학교·실습기업", value: `학생: ${studentLabel} / 담당: ${teacherName} / 실습기업: ${companyName} / 실습기간: ${period} / 참여사업: ${program}` },
+    { label: "3. 관련 주체", value: relatedParties },
     { label: "4. 사고 경위", value: facts },
     { label: "5. 즉시 조치", value: currentStatus },
-    { label: "6. 확인 중인 쟁점", value: "공식 현장실습 범위 안의 사고인지, 학생이 허락받은 작업을 했는지, 안전교육·작업지시·감독·방호조치·산재 보고 대상 여부를 확인 중입니다." },
-    { label: "7. 요청·향후 조치", value: "교육청 보고 필요 여부 검토, 학생 치료와 보호자 안내, 현장 보존 요청, 증빙자료 확보, 실습 중단·복귀 계획 검토가 필요합니다." }
+    { label: "6. 확인 중인 쟁점", value: issueText },
+    { label: "7. 요청·향후 조치", value: nextAction }
   ];
 
   return `
@@ -3137,7 +3224,62 @@ function getOfficialMaterials(preset, scenario = {}, question = "") {
     return buildFieldTrainingScopeMaterials(question);
   }
 
+  if (scenario.type === "safetyPrevention") {
+    return buildSafetyPreventionMaterials();
+  }
+
   return officialMaterialsByTopic[preset.type] || officialMaterialsByTopic.general;
+}
+
+function buildSafetyPreventionMaterials() {
+  return [
+    {
+      type: "law",
+      title: "중대재해 처벌 등에 관한 법률",
+      source: "국가법령정보센터",
+      use: "사고 발생 보고가 아니라, 경영책임자 등의 안전 및 보건 확보의무와 관리체계 점검 기준을 확인합니다.",
+      query: "중대재해 처벌 등에 관한 법률 제4조 안전 및 보건 확보의무",
+      provisions: [
+        { title: "제4조 사업주와 경영책임자등의 안전 및 보건 확보의무", why: "재해예방에 필요한 인력·예산·점검·개선 체계를 갖추었는지 확인합니다.", check: "안전보건 목표, 책임자, 예산, 점검 주기, 개선 이행 기록을 점검표로 만듭니다." },
+        { title: "제5조 도급·용역·위탁 등 관계에서의 안전 및 보건 확보의무", why: "학교 공사, 시설관리, 급식, 통학 등 위탁·용역 관계의 안전관리 범위를 확인합니다.", check: "계약서, 과업지시서, 업체 안전관리계획, 합동점검 기록을 확인합니다." }
+      ],
+      actionChecks: [
+        "사고 발생 보고서가 아니라 예방 점검표로 작성",
+        "학교 직접 업무와 도급·용역·위탁 업무를 분리",
+        "점검 결과를 개선 이행 기록까지 연결"
+      ]
+    },
+    {
+      type: "law",
+      title: "산업안전보건법",
+      source: "국가법령정보센터",
+      use: "학교와 작업 현장의 안전보건교육, 위험성평가, 안전조치, 관리감독 체계를 확인합니다.",
+      query: "산업안전보건법 안전보건교육 위험성평가 안전조치",
+      provisions: [
+        { title: "제29조 근로자에 대한 안전보건교육", why: "직원과 현장 작업자가 필요한 안전보건교육을 받았는지 확인합니다.", check: "교육 계획, 이수 기록, 신규·작업변경 교육 여부를 점검합니다." },
+        { title: "제36조 위험성평가의 실시", why: "유해·위험요인을 찾아 개선하는 정기 절차가 있는지 확인합니다.", check: "위험성평가표, 개선대책, 담당자, 완료일을 기록합니다." },
+        { title: "제38조 안전조치", why: "기계·설비·추락·낙하 등 위험을 예방하기 위한 조치가 있는지 확인합니다.", check: "보호구, 안전표지, 접근통제, 작업표준, 점검표를 확인합니다." }
+      ],
+      actionChecks: [
+        "정기 점검과 수시 점검을 나누어 관리",
+        "위험성평가 결과가 실제 개선조치로 이어졌는지 확인",
+        "교육·점검·개선 완료 기록을 보존"
+      ]
+    },
+    {
+      type: "admin",
+      title: "학교 안전보건관리체계 점검 자료",
+      source: "교육부·교육청·고용노동부",
+      use: "학교 현장에 맞는 안전보건관리체계, 위탁업체 점검, 위험성평가 양식을 확인합니다.",
+      query: "학교 안전보건관리체계 위험성평가 점검표",
+      url: "https://www.moel.go.kr/index.do",
+      actionChecks: [
+        "학교장, 행정실, 시설관리, 급식, 외부업체 담당 역할 분담",
+        "월별·분기별 점검표와 개선 이행 관리표 작성",
+        "사고 발생 전 예방 기록으로 관리"
+      ]
+    }
+  ];
 }
 
 function buildFieldTrainingScopeMaterials(question = "") {
@@ -3249,7 +3391,28 @@ function getMaterialUrl(material, encodedQuestion) {
 }
 
 function detectRiskSignals(question) {
-  return highRiskWords.filter((word) => question.includes(word)).slice(0, 4);
+  const normalized = String(question || "").replace(/\s+/g, "");
+  return highRiskWords.filter((word) => {
+    const compactWord = word.replace(/\s+/g, "");
+
+    if (!normalized.includes(compactWord)) {
+      return false;
+    }
+
+    if (compactWord === "중대재해" && /중대재해처벌법(대비|예방|점검|교육|매뉴얼)|중대재해(대비|예방|점검|교육)|사고가?발생한것은아닙니다/.test(normalized)) {
+      return /사망|중상|골절|입원|수술|발생|추락|끼임|깔림/.test(normalized) && !/사고가?발생한것은아닙니다/.test(normalized);
+    }
+
+    if (compactWord === "징계" && /징계(요구는?|요청은?)?없|징계는?아니|징계하지않|징계요구는없/.test(normalized)) {
+      return false;
+    }
+
+    if (compactWord === "해고" && /해고는?아니|해고없|해고통보없/.test(normalized)) {
+      return false;
+    }
+
+    return true;
+  }).slice(0, 4);
 }
 
 function hydrateFromUrl() {
