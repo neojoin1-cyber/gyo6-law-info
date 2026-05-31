@@ -62,21 +62,25 @@ async function handleSearch(requestUrl) {
   const publicDataKey = activeEnv.PUBLIC_DATA_API_KEY;
   const hasKoreanLawMcp = hasUsableValue(koreanLawMcpBaseUrl);
   const officialQuery = buildOfficialSourceQuery({ question, topic, keywords, lawQueries });
+  const educationRuleQueries = buildEducationAdminRuleQueries({ question, topic, keywords });
 
-  const [lawResults, interpretationResults, disasterResults, materialResults] = await Promise.all([
+  const [lawResults, interpretationResults, educationAdminRuleResults, disasterResults, materialResults] = await Promise.all([
     searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp, keywords }),
     searchInterpretationsWithPreferredSource({ lawOpenApiKey, question: officialQuery, hasKoreanLawMcp }),
+    searchEducationAdminRulesWithPreferredSource({ queries: educationRuleQueries, hasKoreanLawMcp }),
     hasUsableValue(publicDataKey) ? searchDisasterCases(publicDataKey, safetyContext) : missingKey("PUBLIC_DATA_API_KEY"),
     hasUsableValue(publicDataKey) ? searchSafetyMaterials(publicDataKey) : missingKey("PUBLIC_DATA_API_KEY")
   ]);
   const notices = buildUserFacingNotices([
     ...lawResults.notices,
     ...interpretationResults.notices,
+    ...educationAdminRuleResults.notices,
     ...disasterResults.notices,
     ...materialResults.notices
   ], {
     lawResults,
     interpretationResults,
+    educationAdminRuleResults,
     disasterResults,
     materialResults
   });
@@ -90,6 +94,7 @@ async function handleSearch(requestUrl) {
     results: {
       laws: lawResults.items,
       interpretations: interpretationResults.items,
+      educationAdminRules: educationAdminRuleResults.items,
       safetyDisasters: disasterResults.items,
       safetyMaterials: materialResults.items
     },
@@ -655,6 +660,47 @@ function buildOfficialSourceQuery({ question = "", topic = "", keywords = [], la
   return combined || "현장실습";
 }
 
+function buildEducationAdminRuleQueries({ question = "", topic = "", keywords = [] } = {}) {
+  const text = normalizeMatchText([topic, question, ...asArray(keywords)].filter(Boolean).join(" "));
+  const candidates = [];
+  const educationContext = hasAnyTerm(text, [
+    "학교", "학생", "교사", "교원", "학부모", "교육청", "담임", "학교장",
+    "현장실습", "실습생", "직업계고", "특성화고", "도제", "학교폭력", "생활지도"
+  ]);
+
+  if (!educationContext) {
+    return [];
+  }
+
+  if (hasAnyTerm(text, ["학교폭력", "학폭", "피해학생", "가해학생", "학교폭력대책"])) {
+    candidates.push("학교폭력", "학교폭력 가해학생 조치");
+  }
+  if (hasAnyTerm(text, ["생활기록", "생기부", "출결", "인정결석", "무단결석", "학교생활기록"])) {
+    candidates.push("학교생활기록");
+  }
+  if (hasAnyTerm(text, ["생활지도", "교권", "학생지도", "휴대전화", "수업방해", "교육활동"])) {
+    candidates.push("교원의 학생생활지도", "교육활동 보호");
+  }
+  if (hasAnyTerm(text, ["현장실습", "실습생", "직업계고", "특성화고", "도제", "취업"])) {
+    candidates.push("직업계고 현장실습", "현장실습 운영");
+  }
+  if (hasAnyTerm(text, ["개인정보", "민감정보", "상담기록", "학생정보", "유출"])) {
+    candidates.push("학생 개인정보", "학교생활기록");
+  }
+  if (hasAnyTerm(text, ["기간제", "교직원", "교사", "행정직", "공무직", "채용", "복무"])) {
+    candidates.push("교육공무원 인사관리", "기간제교원");
+  }
+  if (hasAnyTerm(text, ["민원", "학부모", "학교장", "관리자"])) {
+    candidates.push("교육활동 보호", "학교 민원");
+  }
+
+  if (!candidates.length) {
+    candidates.push("학교생활기록", "학교폭력");
+  }
+
+  return uniqueStrings(candidates).slice(0, 5);
+}
+
 function isSafeOfficialKeyword(value) {
   const text = String(value || "").trim();
   if (!text || text.length > 30) {
@@ -795,6 +841,15 @@ async function searchInterpretationsWithPreferredSource({ lawOpenApiKey, questio
     : missingKey("LAW_OPEN_API_OC");
 }
 
+async function searchEducationAdminRulesWithPreferredSource({ queries = [], hasKoreanLawMcp }) {
+  const safeQueries = uniqueStrings(asArray(queries).map(cleanText).filter(isSafeOfficialKeyword)).slice(0, 5);
+  if (!safeQueries.length || !hasKoreanLawMcp) {
+    return { items: [], notices: [] };
+  }
+
+  return searchEducationAdminRulesViaGateway(safeQueries);
+}
+
 async function searchInterpretationsViaGateway(question) {
   const baseUrl = getKoreanLawMcpBaseUrl();
   if (!hasUsableValue(baseUrl)) {
@@ -842,6 +897,54 @@ async function searchInterpretationsViaGateway(question) {
   }
 }
 
+async function searchEducationAdminRulesViaGateway(queries) {
+  const baseUrl = getKoreanLawMcpBaseUrl();
+  if (!hasUsableValue(baseUrl)) {
+    return { items: [], notices: [] };
+  }
+
+  const headers = {
+    accept: "application/json",
+    "content-type": "application/json"
+  };
+  const token = cleanText(activeEnv.KOREAN_LAW_MCP_TOKEN || "");
+  if (token) {
+    headers["x-gyo6-mcp-token"] = token;
+  }
+
+  try {
+    const response = await fetch(`${baseUrl.replace(/\/+$/, "")}/gyo6/law/admin-rules`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({
+        queries,
+        ministries: ["교육부"],
+        display: 20
+      }),
+      signal: AbortSignal.timeout(readNumber(activeEnv.KOREAN_LAW_MCP_TIMEOUT_MS) || 12000)
+    });
+
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(data?.error || `HTTP ${response.status}`);
+    }
+
+    const items = asArray(data.adminRules).map(buildKoreanLawGatewayAdminRuleItem).filter(Boolean);
+    return {
+      items,
+      notices: [
+        ...(items.length ? ["법제처 원문 게이트웨이에서 교육부 소관 행정규칙·고시·훈령 후보를 확인했습니다."] : []),
+        ...asArray(data.notices)
+      ]
+    };
+  } catch (error) {
+    return {
+      items: [],
+      notices: [`교육부 공식 기준자료 게이트웨이 호출 실패: ${error.message}`]
+    };
+  }
+}
+
 function buildKoreanLawGatewayInterpretationItem(item) {
   if (!item?.title && !item?.url) {
     return null;
@@ -866,11 +969,36 @@ function buildKoreanLawGatewayInterpretationItem(item) {
   };
 }
 
+function buildKoreanLawGatewayAdminRuleItem(item) {
+  if (!item?.title && !item?.url) {
+    return null;
+  }
+
+  const query = cleanText(item.query || item.title || "");
+  return {
+    title: cleanText(item.title || query || "교육부 공식 기준자료"),
+    subtitle: cleanText(item.subtitle || item.type || "교육부 소관 행정규칙·고시·훈령"),
+    source: cleanText(item.source || "국가법령정보센터"),
+    date: cleanText(item.date || ""),
+    summary: truncateLongText(cleanLongText(item.summary || ""), 700),
+    url: normalizeLawUrl(item.url, query, "admrul"),
+    query,
+    type: cleanText(item.type || "교육부 공식 기준자료"),
+    verifiedAt: cleanText(item.verifiedAt || new Date().toISOString()),
+    reliability: {
+      level: item.reliability?.level || "source-dated",
+      label: item.reliability?.label || "교육부 소관 공식자료 확인",
+      needsReview: Boolean(item.reliability?.needsReview)
+    }
+  };
+}
+
 function buildUserFacingNotices(notices, resultGroups = {}) {
   const uniqueNotices = asArray(notices).map(cleanText).filter(Boolean).filter(uniqueString);
   const groups = [
     resultGroups.lawResults,
     resultGroups.interpretationResults,
+    resultGroups.educationAdminRuleResults,
     resultGroups.disasterResults,
     resultGroups.materialResults
   ];

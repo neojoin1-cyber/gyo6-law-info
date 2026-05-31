@@ -9,6 +9,7 @@
 - 질문 키워드와 관련 있는 조문을 압축해 반환
 - GYO6 Worker가 호출할 수 있는 `/gyo6/law/search-and-read` 제공
 - 고용노동부 법령해석·법령해석례 후보를 조회하는 `/gyo6/law/interpretations` 제공
+- 교육부 소관 행정규칙·고시·훈령 후보를 조회하는 `/gyo6/law/admin-rules` 제공
 - MCP 호환 최소 엔드포인트 `/mcp` 제공
 
 ## 환경변수
@@ -54,6 +55,15 @@ curl.exe -s -X POST http://localhost:8080/gyo6/law/interpretations `
   -H "content-type: application/json" `
   -H "x-gyo6-mcp-token: 서버간_호출_토큰" `
   -d "{\"query\":\"현장실습 시간 종료 후 청소\",\"display\":5}"
+```
+
+교육부 공식 기준자료 후보 확인:
+
+```powershell
+curl.exe -s -X POST http://localhost:8080/gyo6/law/admin-rules `
+  -H "content-type: application/json" `
+  -H "x-gyo6-mcp-token: 서버간_호출_토큰" `
+  -d "{\"queries\":[\"학교폭력\",\"학교생활기록\"],\"ministries\":[\"교육부\"],\"display\":5}"
 ```
 
 ## GYO6 Worker 연결

@@ -1,5 +1,6 @@
 const SECRET_OC = "SECRET_OC_SHOULD_NOT_LEAK";
 const seenLawSearchQueries = [];
+const seenGatewayBodies = [];
 
 function fakeLawSearch(url) {
   const target = url.searchParams.get("target") || "law";
@@ -116,9 +117,37 @@ for (const query of seenLawSearchQueries) {
 }
 
 const unexpectedDirectLawCalls = [];
-globalThis.fetch = async (input) => {
+globalThis.fetch = async (input, init = {}) => {
   const url = new URL(String(input));
   if (url.hostname === "gateway.local") {
+    const body = init?.body ? JSON.parse(String(init.body)) : {};
+    seenGatewayBodies.push({ path: url.pathname, body });
+    if (url.pathname.endsWith("/gyo6/law/admin-rules")) {
+      return jsonResponse({
+        ok: true,
+        generatedAt: "2026-05-31T00:00:00.000Z",
+        source: "국가법령정보센터",
+        protocol: "auto",
+        adminRules: [{
+          query: "학교폭력",
+          title: "학교폭력 가해학생 조치별 적용 세부기준 고시",
+          subtitle: "고시",
+          source: "국가법령정보센터",
+          ministry: "교육부",
+          date: "2026.03.01",
+          summary: "교육부 소관 학교폭력 조치 기준 고시",
+          url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=12345",
+          type: "교육부 행정규칙",
+          verifiedAt: "2026-05-31T00:00:00.000Z",
+          reliability: {
+            level: "source-dated",
+            label: "원문 링크 확인",
+            needsReview: false
+          }
+        }],
+        notices: []
+      });
+    }
     return jsonResponse({
       ok: true,
       generatedAt: "2026-05-31T00:00:00.000Z",
@@ -172,6 +201,14 @@ if (unexpectedDirectLawCalls.length) {
 }
 if (!gatewayApiResult.results?.laws?.length) {
   throw new Error("gateway-backed search did not return original law text");
+}
+if (!gatewayApiResult.results?.educationAdminRules?.length) {
+  throw new Error("gateway-backed search did not return education admin rules");
+}
+for (const request of seenGatewayBodies) {
+  if (request.path.endsWith("/gyo6/law/admin-rules") && /홍길동|010-1234-5678|ABC/.test(JSON.stringify(request.body))) {
+    throw new Error(`education admin rule query leaked sensitive text: ${JSON.stringify(request.body)}`);
+  }
 }
 if (!gatewayApiResult.notices.some((notice) => /원문 게이트웨이/.test(notice))) {
   throw new Error("gateway-backed search should keep the successful original-text notice");

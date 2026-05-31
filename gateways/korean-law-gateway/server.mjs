@@ -55,6 +55,10 @@ export async function handleRequest(request, response) {
       return sendJson(response, await searchInterpretations(await readJsonBody(request)));
     }
 
+    if (url.pathname === "/gyo6/law/admin-rules" && request.method === "POST") {
+      return sendJson(response, await searchAdminRules(await readJsonBody(request)));
+    }
+
     if (url.pathname === "/mcp" && request.method === "POST") {
       return sendJson(response, await handleMcpCall(await readJsonBody(request)));
     }
@@ -136,6 +140,40 @@ export async function searchInterpretations(input = {}) {
   };
 }
 
+export async function searchAdminRules(input = {}) {
+  const queries = parseList(input.queries || input.query).slice(0, 6);
+  const ministries = parseList(input.ministries || input.ministry).map(normalizeMatchText);
+  const display = Math.max(1, Math.min(Number(input.display || 20), 30));
+  const notices = [];
+
+  if (!queries.length) {
+    return { ok: false, error: "검색할 행정규칙 질의어가 없습니다.", adminRules: [], notices };
+  }
+
+  const batches = await Promise.all(
+    queries.map((query) => searchLawTarget({ target: "admrul", search: "1", query, display }))
+  );
+
+  const adminRules = [];
+  for (const batch of batches) {
+    notices.push(...batch.notices);
+    adminRules.push(...batch.items.map((item) => buildAdminRuleResult(item)));
+  }
+
+  const filtered = ministries.length
+    ? adminRules.filter((item) => ministries.some((ministry) => normalizeMatchText(item.ministry).includes(ministry)))
+    : adminRules;
+
+  return {
+    ok: filtered.length > 0,
+    generatedAt: new Date().toISOString(),
+    source: "국가법령정보센터",
+    protocol: LAW_API_PROTOCOL,
+    adminRules: uniqueBy(filtered, "url").slice(0, 10),
+    notices
+  };
+}
+
 async function handleMcpCall(body = {}) {
   const name = body?.params?.name || "";
   const args = body?.params?.arguments || {};
@@ -166,6 +204,21 @@ async function handleMcpCall(body = {}) {
       id,
       result: {
         content: [{ type: "text", text: formatInterpretationsText(result) }]
+      }
+    };
+  }
+
+  if (name === "search_admin_rules") {
+    const result = await searchAdminRules({
+      queries: args.queries || args.query,
+      ministries: args.ministries || args.ministry,
+      display: args.display || 5
+    });
+    return {
+      jsonrpc: "2.0",
+      id,
+      result: {
+        content: [{ type: "text", text: formatAdminRulesText(result) }]
       }
     };
   }
@@ -262,6 +315,8 @@ function normalizeLawSearchItems(data, query, target = "law") {
     root.expc ||
     root.MoelCgmExpc ||
     root.moelCgmExpc ||
+    root.AdmRul ||
+    root.admrul ||
     root.item ||
     root.items ||
     []
@@ -270,14 +325,17 @@ function normalizeLawSearchItems(data, query, target = "law") {
   return rawItems.map((item) => ({
     query,
     target,
-    title: getValue(item, ["법령명한글", "법령명", "법령명_한글", "안건명", "해석례명", "법령해석례명", "title"]) || query,
-    mst: getValue(item, ["법령일련번호", "MST", "mst"]),
-    lawId: getValue(item, ["법령ID", "ID", "lawId"]),
+    title: getValue(item, ["법령명한글", "법령명", "법령명_한글", "행정규칙명", "안건명", "해석례명", "법령해석례명", "title"]) || query,
+    mst: getValue(item, ["법령일련번호", "행정규칙일련번호", "MST", "mst"]),
+    lawId: getValue(item, ["법령ID", "행정규칙ID", "ID", "lawId"]),
     ministry: getValue(item, ["소관부처명", "소관부처", "해석기관명", "질의기관명", "회신기관명", "ministry"]),
-    promulgationDate: formatDate(getValue(item, ["공포일자", "promulgationDate"])),
+    promulgationDate: formatDate(getValue(item, ["공포일자", "발령일자", "promulgationDate"])),
     enforcementDate: formatDate(getValue(item, ["시행일자", "해석일자", "회신일자", "enforcementDate", "date"])),
-    detailLink: getValue(item, ["법령상세링크", "상세링크", "본문상세링크", "법령해석례상세링크", "detailLink"]),
-    summary: getValue(item, ["제개정구분명", "안건번호", "질의요지", "해석요지", "summary"])
+    detailLink: getValue(item, ["법령상세링크", "행정규칙상세링크", "행정규칙상세주소", "상세링크", "본문상세링크", "법령해석례상세링크", "detailLink"]),
+    summary: getValue(item, ["제개정구분명", "안건번호", "질의요지", "해석요지", "행정규칙종류", "발령번호", "summary"]),
+    ruleType: getValue(item, ["행정규칙종류", "ruleType"]),
+    revisionType: getValue(item, ["제개정구분명", "revisionType"]),
+    orderNo: getValue(item, ["발령번호", "orderNo"])
   })).filter((item) => item.title && (target !== "law" || item.mst || item.lawId));
 }
 
@@ -298,6 +356,36 @@ function buildInterpretationResult(item, query) {
       needsReview: !item.detailLink
     }
   };
+}
+
+function buildAdminRuleResult(item) {
+  return {
+    query: item.query || item.title || "",
+    title: item.title || item.query || "행정규칙 조회 결과",
+    subtitle: [item.ruleType, item.orderNo].filter(Boolean).join(" ") || getLawTargetLabel(item.target),
+    source: "국가법령정보센터",
+    ministry: item.ministry || "",
+    date: item.enforcementDate || item.promulgationDate || "",
+    summary: [item.revisionType, item.summary].filter(Boolean).join(" · "),
+    url: buildAdminRuleDetailUrl(item),
+    type: item.ministry ? `${item.ministry} 행정규칙` : getLawTargetLabel(item.target),
+    verifiedAt: new Date().toISOString(),
+    reliability: {
+      level: item.detailLink ? "source-dated" : "source-link",
+      label: item.detailLink ? "원문 링크 확인" : "검색 링크 확인",
+      needsReview: !item.detailLink
+    }
+  };
+}
+
+function buildAdminRuleDetailUrl(item) {
+  const seq = cleanArticleText(item?.mst || "");
+  if (/^\d+$/.test(seq)) {
+    const url = new URL("https://www.law.go.kr/LSW/admRulLsInfoP.do");
+    url.searchParams.set("admRulSeq", seq);
+    return url.toString();
+  }
+  return buildLawDetailUrl(item, item?.query || item?.title || "");
 }
 
 function normalizeLawText(data) {
@@ -452,6 +540,20 @@ function formatInterpretationsText(result) {
   ].filter(Boolean).join("\n")).join("\n\n");
 }
 
+function formatAdminRulesText(result) {
+  if (!result.ok) {
+    return `[NOT_FOUND] ${result.notices.join(" / ")}`;
+  }
+  return result.adminRules.map((item) => [
+    `자료: ${item.title}`,
+    `유형: ${item.type}`,
+    `소관: ${item.ministry || "확인 필요"}`,
+    `시행/발령일: ${item.date || "확인 필요"}`,
+    `원문: ${item.url}`,
+    item.summary ? `요약: ${truncate(item.summary, 500)}` : ""
+  ].filter(Boolean).join("\n")).join("\n\n");
+}
+
 async function readJsonBody(request) {
   const chunks = [];
   let size = 0;
@@ -557,7 +659,8 @@ function getLawTargetLabel(target) {
   return {
     law: "법령",
     expc: "법령해석례",
-    moelCgmExpc: "고용노동부 법령해석"
+    moelCgmExpc: "고용노동부 법령해석",
+    admrul: "행정규칙"
   }[target] || target || "법제처 자료";
 }
 
