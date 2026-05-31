@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 loadEnvFile(path.resolve(__dirname, "../../.env.local"));
 
 const PORT = Number(process.env.PORT || 8080);
-const LAW_API_PROTOCOL = normalizeProtocol(process.env.LAW_API_PROTOCOL || "https");
+const LAW_API_PROTOCOL = normalizeProtocol(process.env.LAW_API_PROTOCOL || "auto");
 const DEFAULT_TIMEOUT_MS = Number(process.env.LAW_GATEWAY_TIMEOUT_MS || 12000);
 const MAX_BODY_BYTES = 128 * 1024;
 
@@ -144,14 +144,14 @@ async function handleMcpCall(body = {}) {
 }
 
 async function searchLaw(query) {
-  const url = lawApiUrl("/lawSearch.do", {
+  const urls = lawApiUrls("/lawSearch.do", {
     OC: getLawApiKey(),
     target: "law",
     type: "JSON",
     query,
     display: "20"
   });
-  const data = await fetchJsonWithRetry(url, { context: "법령 검색" });
+  const data = await fetchJsonWithRetry(urls, { context: "법령 검색" });
   return {
     items: normalizeLawSearchItems(data, query)
   };
@@ -170,7 +170,7 @@ async function getLawText({ mst, lawId, jo } = {}) {
     throw new Error("MST 또는 법령ID가 필요합니다.");
   }
 
-  const data = await fetchJsonWithRetry(lawApiUrl("/lawService.do", params), { context: "법령 원문" });
+  const data = await fetchJsonWithRetry(lawApiUrls("/lawService.do", params), { context: "법령 원문" });
   return normalizeLawText(data);
 }
 
@@ -271,52 +271,58 @@ function selectArticles(articles, keywords, maxArticles) {
   }));
 }
 
-async function fetchJsonWithRetry(url, { context }) {
+async function fetchJsonWithRetry(urls, { context }) {
   let lastError = null;
+  const candidates = Array.isArray(urls) ? urls : [urls];
   for (let attempt = 1; attempt <= 3; attempt += 1) {
-    try {
-      const response = await fetch(url, {
-        headers: {
-          accept: "application/json",
-          "user-agent": "GYO6-Law-Info-Gateway/1.0",
-          ...getLawApiVerificationHeaders()
-        },
-        signal: AbortSignal.timeout(DEFAULT_TIMEOUT_MS)
-      });
-      const text = await response.text();
-      if (!response.ok) {
-        throw new Error(`${context} HTTP ${response.status}`);
+    for (const url of candidates) {
+      try {
+        const response = await fetch(url, {
+          headers: {
+            accept: "application/json",
+            "user-agent": "GYO6-Law-Info-Gateway/1.0",
+            ...getLawApiVerificationHeaders()
+          },
+          signal: AbortSignal.timeout(DEFAULT_TIMEOUT_MS)
+        });
+        const text = await response.text();
+        if (!response.ok) {
+          throw new Error(`${context} ${url.protocol.replace(":", "")} HTTP ${response.status}`);
+        }
+        if (!text.trim()) {
+          throw new Error(`${context} ${url.protocol.replace(":", "")} 빈 응답`);
+        }
+        if (/<!doctype html|<html/i.test(text)) {
+          throw new Error(`${context} ${url.protocol.replace(":", "")} HTML 응답`);
+        }
+        const data = JSON.parse(text);
+        const apiError = getLawApiErrorMessage(data);
+        if (apiError) {
+          throw new Error(`${context} API 오류: ${apiError}`);
+        }
+        return data;
+      } catch (error) {
+        lastError = error;
       }
-      if (!text.trim()) {
-        throw new Error(`${context} 빈 응답`);
-      }
-      if (/<!doctype html|<html/i.test(text)) {
-        throw new Error(`${context} HTML 응답`);
-      }
-      const data = JSON.parse(text);
-      const apiError = getLawApiErrorMessage(data);
-      if (apiError) {
-        throw new Error(`${context} API 오류: ${apiError}`);
-      }
-      return data;
-    } catch (error) {
-      lastError = error;
-      if (attempt < 3) {
-        await sleep(200 * attempt * attempt);
-      }
+    }
+    if (attempt < 3) {
+      await sleep(200 * attempt * attempt);
     }
   }
   throw lastError;
 }
 
-function lawApiUrl(pathname, params) {
-  const url = new URL(`${LAW_API_PROTOCOL}://www.law.go.kr/DRF${pathname}`);
-  for (const [key, value] of Object.entries(params)) {
-    if (value !== undefined && value !== null && value !== "") {
-      url.searchParams.set(key, value);
+function lawApiUrls(pathname, params) {
+  const protocols = LAW_API_PROTOCOL === "auto" ? ["https", "http"] : [LAW_API_PROTOCOL];
+  return protocols.map((protocol) => {
+    const url = new URL(`${protocol}://www.law.go.kr/DRF${pathname}`);
+    for (const [key, value] of Object.entries(params)) {
+      if (value !== undefined && value !== null && value !== "") {
+        url.searchParams.set(key, value);
+      }
     }
-  }
-  return url;
+    return url;
+  });
 }
 
 function formatSearchAndReadText(result) {
@@ -478,7 +484,10 @@ function truncate(value, maxLength) {
 }
 
 function normalizeProtocol(value) {
-  return String(value || "").toLowerCase() === "http" ? "http" : "https";
+  const text = String(value || "").toLowerCase();
+  if (text === "http") return "http";
+  if (text === "https") return "https";
+  return "auto";
 }
 
 function timingSafeEqual(a, b) {

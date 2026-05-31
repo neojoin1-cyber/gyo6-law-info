@@ -15,7 +15,7 @@
 ```env
 LAW_OC=법제처_OC_키
 LAW_OPEN_API_REFERER=https://gyo6.kr/
-LAW_API_PROTOCOL=https
+LAW_API_PROTOCOL=auto
 GYO6_MCP_TOKEN=서버간_호출_토큰
 PORT=8080
 LAW_GATEWAY_TIMEOUT_MS=12000
@@ -24,7 +24,7 @@ LAW_GATEWAY_TIMEOUT_MS=12000
 `LAW_OC`, `LAW_OPEN_API_OC`, `LAW_OPEN_API_KEY` 중 하나가 있으면 법제처 인증키로 사용합니다.
 법제처 사용자 검증 때문에 `LAW_OPEN_API_REFERER`는 API 신청 때 등록한 도메인과 맞춰야 합니다. 기본값은 `https://gyo6.kr/`입니다.
 
-법제처 서버와 HTTPS 연결이 맞지 않는 호스팅 환경에서는 `LAW_API_PROTOCOL=http`를 테스트합니다.
+`LAW_API_PROTOCOL=auto`는 HTTPS를 먼저 시도하고, 호스팅 환경에서 TLS 문제가 생기면 HTTP를 한 번 더 시도합니다. 강제로 고정해야 할 때만 `https` 또는 `http`로 설정합니다.
 
 ## 로컬 단발 테스트
 
@@ -74,7 +74,7 @@ PROJECT_ID=gyo6-law-info
 REGION=asia-northeast3
 SERVICE_NAME=gyo6-korean-law-gateway
 LAW_OPEN_API_REFERER=https://gyo6.kr/
-LAW_API_PROTOCOL=https
+LAW_API_PROTOCOL=auto
 ```
 
 ```powershell
@@ -90,7 +90,7 @@ gcloud run deploy gyo6-korean-law-gateway `
 LAW_OC=법제처_OC_키
 LAW_OPEN_API_REFERER=https://gyo6.kr/
 GYO6_MCP_TOKEN=서버간_호출_토큰
-LAW_API_PROTOCOL=https
+LAW_API_PROTOCOL=auto
 LAW_GATEWAY_TIMEOUT_MS=12000
 ```
 
