@@ -89,40 +89,57 @@
           <h2>무엇을 찾아볼까요?</h2>
         </div>
 
-        <label class="field-label" for="question">질문</label>
-        <textarea id="question" name="question" rows="6" placeholder="예: 현장실습 중 안전사고가 나면 어떤 법령을 확인해야 하나요?"></textarea>
-
-        <div class="examples" aria-label="예시 질문">
-          <button type="button" data-example="현장실습 중 안전사고가 나면 학교와 업체는 어떤 법령을 확인해야 하나요?">현장실습 안전</button>
-          <button type="button" data-example="도제학교 학생의 근로시간과 보호 기준은 무엇을 봐야 하나요?">도제학교</button>
-          <button type="button" data-example="학교폭력 민원에서 학교가 확인해야 할 절차와 법령은 무엇인가요?">학교폭력 민원</button>
-        </div>
-
-        <div class="field-grid">
+        <div class="field-grid intake-grid" aria-label="질문 맥락 선택">
           <label class="field-stack" for="userRole">
-            <span>사용자</span>
+            <span>질문자 <small>답변을 요구하는 주체</small></span>
             <select id="userRole" name="userRole">
               <option value="auto">상황에 맞게</option>
-              <option value="student">학생</option>
-              <option value="teacher">선생님</option>
+              <option value="student">학생 본인</option>
+              <option value="teacher">교사·담당자</option>
               <option value="parent">학부모</option>
               <option value="principal">학교 관리자</option>
-              <option value="staff">행정직원</option>
+              <option value="staff">교직원·행정직원</option>
             </select>
           </label>
 
-          <label class="field-stack" for="topicType">
-            <span>질문 유형</span>
-            <select id="topicType" name="topicType">
+          <label class="field-stack" for="partyRole">
+            <span>당사자 <small>해당 사건의 주인공</small></span>
+            <select id="partyRole" name="partyRole">
+              <option value="auto">상황에 맞게</option>
+              <option value="student">학생</option>
+              <option value="teacher">교사</option>
+              <option value="parent">학부모</option>
+              <option value="principal">학교 관리자</option>
+              <option value="staff">교직원·행정직원</option>
+              <option value="company">실습기업·사업장</option>
+              <option value="multiple">여러 주체</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="topicMajor">
+            <span>질문유형 대분류</span>
+            <select id="topicMajor" name="topicMajor">
               <option value="auto">자동 분류</option>
               <option value="employment">취업·근로계약</option>
-              <option value="apprenticeship">도제학교</option>
-              <option value="fieldTraining">현장실습</option>
-              <option value="overseasTraining">해외 현장실습</option>
-              <option value="schoolSafety">중대재해·안전</option>
-              <option value="schoolViolence">학교폭력</option>
+              <option value="fieldTraining">현장실습·도제</option>
+              <option value="schoolSafety">안전·중대재해</option>
+              <option value="schoolViolence">학교폭력·학생사안</option>
               <option value="staffLabor">교직원·행정직</option>
-              <option value="civilComplaint">학생관리·민원</option>
+              <option value="civilComplaint">민원·생활지도</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="topicMiddle">
+            <span>중분류 <small>선택 사항</small></span>
+            <select id="topicMiddle" name="topicMiddle">
+              <option value="auto">대분류만 사용</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="topicMinor">
+            <span>소분류 <small>선택 사항</small></span>
+            <select id="topicMinor" name="topicMinor">
+              <option value="auto">중분류만 사용</option>
             </select>
           </label>
 
@@ -134,6 +151,16 @@
               <option value="checklist">확인 순서 중심</option>
             </select>
           </label>
+        </div>
+        <input type="hidden" id="topicType" name="topicType" value="auto">
+
+        <label class="field-label" for="question">질문</label>
+        <textarea id="question" name="question" rows="6" placeholder="예: 현장실습 시간 종료 후 자꾸 청소를 시키는 경우 어떻게 대처해야 하나요?"></textarea>
+
+        <div class="examples" aria-label="예시 질문">
+          <button type="button" data-topic-major="fieldTraining" data-topic-middle="scope" data-topic-minor="safety" data-example="현장실습 중 안전사고가 나면 학교와 업체는 어떤 법령을 확인해야 하나요?">현장실습 안전</button>
+          <button type="button" data-topic-major="fieldTraining" data-topic-middle="apprenticeship" data-example="도제학교 학생의 근로시간과 보호 기준은 무엇을 봐야 하나요?">도제학교</button>
+          <button type="button" data-topic-major="schoolViolence" data-topic-middle="procedure" data-example="학교폭력 민원에서 학교가 확인해야 할 절차와 법령은 무엇인가요?">학교폭력 민원</button>
         </div>
 
         <fieldset class="scope-group">

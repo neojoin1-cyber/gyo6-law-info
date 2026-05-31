@@ -7,8 +7,12 @@ const workspace = document.querySelector(".workspace");
 const resultTitle = document.querySelector(".result-head h2");
 const statusDot = document.querySelector(".status-dot");
 const topicTypeInput = document.querySelector("#topicType");
+const topicMajorInput = document.querySelector("#topicMajor");
+const topicMiddleInput = document.querySelector("#topicMiddle");
+const topicMinorInput = document.querySelector("#topicMinor");
 const answerModeInput = document.querySelector("#answerMode");
 const userRoleInput = document.querySelector("#userRole");
+const partyRoleInput = document.querySelector("#partyRole");
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
 const AI_USAGE_LEDGER_KEY = "gyo6LawInfoAiUsageLedger";
 const LOCAL_COST_CONTROL = {
@@ -50,6 +54,41 @@ const roleGuides = {
   }
 };
 
+const partyGuides = {
+  auto: {
+    label: "상황에서 판단",
+    advice: "질문 내용에서 실제 권리·의무가 문제 되는 당사자를 먼저 분리합니다."
+  },
+  student: {
+    label: "학생",
+    advice: "학생 보호, 권익 침해 여부, 학교와 기업의 조치 기준을 우선 확인합니다."
+  },
+  teacher: {
+    label: "교사",
+    advice: "교사의 지도·기록·보고 책임과 개인 권리 보호 지점을 함께 확인합니다."
+  },
+  parent: {
+    label: "학부모",
+    advice: "보호자 안내, 학교와의 소통, 학생 보호 절차를 중심으로 확인합니다."
+  },
+  principal: {
+    label: "학교 관리자",
+    advice: "학교 차원의 판단, 기록, 민원 대응, 보고 필요성을 우선 정리합니다."
+  },
+  staff: {
+    label: "교직원·행정직원",
+    advice: "복무, 근로관계, 업무분장, 민원 대응 기준을 구분해 확인합니다."
+  },
+  company: {
+    label: "실습기업·사업장",
+    advice: "산업체의 지시 권한, 안전·보호 의무, 현장실습 계약 범위를 확인합니다."
+  },
+  multiple: {
+    label: "여러 주체",
+    advice: "학생·학교·기업·보호자 등 주체별 사실관계와 조치 순서를 나눕니다."
+  }
+};
+
 const sourceCatalog = {
   law: {
     label: "법령 원문",
@@ -88,6 +127,170 @@ const sourcePlanByTopic = {
   staffLabor: ["law", "admin", "case", "expert"],
   civilComplaint: ["admin", "law", "case", "expert"],
   general: ["law", "admin", "case", "expert"]
+};
+
+const topicTaxonomy = {
+  auto: {
+    label: "자동 분류",
+    preset: "auto",
+    middles: []
+  },
+  employment: {
+    label: "취업·근로계약",
+    preset: "employment",
+    middles: [
+      {
+        value: "contract",
+        label: "근로계약·임금",
+        preset: "employment",
+        minors: [
+          { value: "contractForm", label: "근로계약서", preset: "employment" },
+          { value: "wage", label: "임금·수당", preset: "employment" },
+          { value: "dismissal", label: "해고·퇴직", preset: "employment" }
+        ]
+      },
+      {
+        value: "hiring",
+        label: "공채·채용절차",
+        preset: "employment",
+        minors: [
+          { value: "highSchoolHiring", label: "고졸채용", preset: "employment" },
+          { value: "recommendation", label: "학교장 추천", preset: "employment" },
+          { value: "document", label: "공고·직무기술서", preset: "employment" }
+        ]
+      }
+    ]
+  },
+  fieldTraining: {
+    label: "현장실습·도제",
+    preset: "fieldTraining",
+    middles: [
+      {
+        value: "scope",
+        label: "업무범위·부당지시",
+        preset: "fieldTraining",
+        minors: [
+          { value: "cleaning", label: "청소·잡무 반복", preset: "fieldTraining" },
+          { value: "afterHours", label: "실습시간 종료 후 지시", preset: "fieldTraining" },
+          { value: "safety", label: "위험작업·안전", preset: "fieldTraining" }
+        ]
+      },
+      {
+        value: "apprenticeship",
+        label: "도제학교·일학습병행",
+        preset: "apprenticeship",
+        minors: [
+          { value: "trainingTime", label: "훈련시간", preset: "apprenticeship" },
+          { value: "trainingContract", label: "훈련계약", preset: "apprenticeship" },
+          { value: "allowance", label: "훈련수당", preset: "apprenticeship" }
+        ]
+      },
+      {
+        value: "overseas",
+        label: "해외 현장실습",
+        preset: "overseasTraining",
+        minors: [
+          { value: "australia", label: "호주·국외 파견", preset: "overseasTraining" },
+          { value: "insurance", label: "보험·안전관리", preset: "overseasTraining" },
+          { value: "consent", label: "동의·보호자 안내", preset: "overseasTraining" }
+        ]
+      }
+    ]
+  },
+  schoolSafety: {
+    label: "안전·중대재해",
+    preset: "schoolSafety",
+    middles: [
+      {
+        value: "accident",
+        label: "사고·산재",
+        preset: "schoolSafety",
+        minors: [
+          { value: "injury", label: "부상·치료", preset: "schoolSafety" },
+          { value: "report", label: "보고·기록", preset: "schoolSafety" },
+          { value: "prevention", label: "재발방지", preset: "schoolSafety" }
+        ]
+      },
+      {
+        value: "seriousAccident",
+        label: "중대재해 판단",
+        preset: "schoolSafety",
+        minors: [
+          { value: "schoolFacility", label: "학교 시설", preset: "schoolSafety" },
+          { value: "workplace", label: "사업장", preset: "schoolSafety" },
+          { value: "safetySystem", label: "안전보건 체계", preset: "schoolSafety" }
+        ]
+      }
+    ]
+  },
+  schoolViolence: {
+    label: "학교폭력·학생사안",
+    preset: "schoolViolence",
+    middles: [
+      {
+        value: "procedure",
+        label: "신고·조사·심의",
+        preset: "schoolViolence",
+        minors: [
+          { value: "reporting", label: "신고·접수", preset: "schoolViolence" },
+          { value: "committee", label: "전담기구·심의", preset: "schoolViolence" },
+          { value: "appeal", label: "불복·재심", preset: "schoolViolence" }
+        ]
+      },
+      {
+        value: "studentRights",
+        label: "생활지도·학생권리",
+        preset: "civilComplaint",
+        minors: [
+          { value: "discipline", label: "징계·출결", preset: "civilComplaint" },
+          { value: "privacy", label: "개인정보·기록", preset: "civilComplaint" },
+          { value: "complaint", label: "학부모 민원", preset: "civilComplaint" }
+        ]
+      }
+    ]
+  },
+  staffLabor: {
+    label: "교직원·행정직",
+    preset: "staffLabor",
+    middles: [
+      {
+        value: "employmentStatus",
+        label: "신분·계약",
+        preset: "staffLabor",
+        minors: [
+          { value: "fixedTerm", label: "기간제·단시간", preset: "staffLabor" },
+          { value: "adminStaff", label: "행정직·교육공무직", preset: "staffLabor" },
+          { value: "renewal", label: "계약갱신·재계약", preset: "staffLabor" }
+        ]
+      },
+      {
+        value: "workplaceIssue",
+        label: "복무·직장 내 문제",
+        preset: "staffLabor",
+        minors: [
+          { value: "leaveTrip", label: "휴가·출장·근태", preset: "staffLabor" },
+          { value: "bullying", label: "직장 내 괴롭힘", preset: "staffLabor" },
+          { value: "discipline", label: "징계·민원", preset: "staffLabor" }
+        ]
+      }
+    ]
+  },
+  civilComplaint: {
+    label: "민원·생활지도",
+    preset: "civilComplaint",
+    middles: [
+      {
+        value: "schoolComplaint",
+        label: "학부모·학생 민원",
+        preset: "civilComplaint",
+        minors: [
+          { value: "guidance", label: "생활지도", preset: "civilComplaint" },
+          { value: "records", label: "기록·증빙", preset: "civilComplaint" },
+          { value: "communication", label: "안내문·면담", preset: "civilComplaint" }
+        ]
+      }
+    ]
+  }
 };
 
 const legalBasisCatalog = {
@@ -438,10 +641,12 @@ const fallbackPreset = {
   checklist: ["질문에서 대상, 장소, 날짜, 기관을 분리합니다.", "관련 키워드로 법령 원문을 검색합니다.", "결과를 실제 사안에 적용하기 전 전문가에게 확인합니다."]
 };
 
+initializeTopicControls();
+
 document.querySelectorAll("[data-example]").forEach((button) => {
   button.addEventListener("click", () => {
     questionInput.value = button.dataset.example;
-    topicTypeInput.value = "auto";
+    setTopicSelection(button.dataset.topicMajor || "auto", button.dataset.topicMiddle || "auto", button.dataset.topicMinor || "auto");
     questionInput.focus();
   });
 });
@@ -456,9 +661,11 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
+  syncTopicTypeInput();
   const scopes = [...form.querySelectorAll("input[name='scope']:checked")].map((input) => input.value);
-  const preset = findPreset(question, topicTypeInput.value);
-  renderResult(question, preset, scopes, answerModeInput.value, userRoleInput.value);
+  const selectedTopicContext = getSelectedTopicContext();
+  const preset = findPreset(question, selectedTopicContext.presetType);
+  renderResult(question, preset, scopes, answerModeInput.value, userRoleInput.value, partyRoleInput.value, selectedTopicContext);
   if (skipNextAutoScroll) {
     skipNextAutoScroll = false;
   } else {
@@ -816,7 +1023,7 @@ function getFieldTrainingInstructorLabel(value = "") {
   return "기업 내부 지시자";
 }
 
-function renderResult(question, preset, scopes, answerMode, userRole) {
+function renderResult(question, preset, scopes, answerMode, userRole, partyRole = "auto", topicContext = null) {
   workspace?.classList.add("has-result");
   if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== resultPanel) {
     workspace.insertBefore(resultPanel, queryPanel);
@@ -825,6 +1032,8 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const encodedQuestion = encodeURIComponent(question);
   const modeMessage = getModeMessage(answerMode);
   const roleGuide = getRoleGuide(userRole);
+  const partyGuide = getPartyGuide(partyRole);
+  const selectedTopicContext = topicContext || getSelectedTopicContext();
   const scenario = analyzeQuestionScenario(question, preset);
   const displayPreset = getScenarioDisplayPreset(preset, scenario);
   const sourceLinks = getSourceLinks(encodedQuestion, displayPreset, scopes);
@@ -836,6 +1045,8 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
   const directAnswer = getDirectAnswer(question, displayPreset, roleGuide, scenario);
   const refinementQuestions = getRefinementQuestions(question, preset, userRole, riskSignals);
   const caseReport = buildCaseReport(question, displayPreset, roleGuide, officialMaterials, riskSignals, scenario);
+  caseReport.party = partyGuide.label;
+  caseReport.topicPath = selectedTopicContext.label;
   const caseId = createCaseSessionId();
   caseReport.caseId = caseId;
   currentCaseId = caseId;
@@ -895,8 +1106,8 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
     </details>
 
     <section class="role-note" aria-label="사용자 관점">
-      <strong>${escapeHtml(roleGuide.label)}</strong>
-      <p>${escapeHtml(roleGuide.advice)}</p>
+      <strong>질문자: ${escapeHtml(roleGuide.label)} · 당사자: ${escapeHtml(partyGuide.label)}</strong>
+      <p>${escapeHtml(roleGuide.advice)} ${escapeHtml(partyGuide.advice)}</p>
     </section>
 
     <section class="result-block">
@@ -995,11 +1206,11 @@ function renderResult(question, preset, scopes, answerMode, userRole) {
     </section>
   `;
 
-  loadAiAnalysis(question, displayPreset, keywords, userRole, answerMode, caseId);
+  loadAiAnalysis(question, displayPreset, keywords, userRole, answerMode, caseId, partyRole, selectedTopicContext);
   loadLiveSources(question, displayPreset, keywords, caseId);
 }
 
-async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, caseId) {
+async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, caseId, partyRole = "auto", topicContext = null) {
   const mount = document.querySelector("#aiAnalysisMount");
   if (!mount) {
     return;
@@ -1049,6 +1260,8 @@ async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, 
         laws: preset.laws,
         keywords,
         role: userRole,
+        partyRole,
+        topicContext,
         mode: answerMode
       })
     });
@@ -1063,7 +1276,7 @@ async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, 
     }
     recordAiUsage(data);
     mount.innerHTML = renderAiAnalysis(data);
-    applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId);
+    applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId, partyRole, topicContext);
   } catch (error) {
     if (caseId !== currentCaseId) {
       return;
@@ -1466,7 +1679,7 @@ function formatNumber(value) {
   return new Intl.NumberFormat("ko-KR").format(Number(value) || 0);
 }
 
-function applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId) {
+function applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId, partyRole = "auto", topicContext = null) {
   if (!data?.analysis || caseId !== currentCaseId) {
     return;
   }
@@ -1477,7 +1690,7 @@ function applyAiAnalysisToReport(data, question, preset, userRole, answerMode, c
   }
 
   const profile = collectReportProfile();
-  const aiReport = buildAiSimpleReport(data, question, preset, userRole, answerMode, caseId);
+  const aiReport = buildAiSimpleReport(data, question, preset, userRole, answerMode, caseId, partyRole, topicContext);
   currentReportDraft = aiReport;
   reportElement.outerHTML = renderCaseReport(aiReport);
   restoreReportProfile(profile);
@@ -1487,7 +1700,7 @@ function applyAiAnalysisToReport(data, question, preset, userRole, answerMode, c
   }
 }
 
-function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseId) {
+function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseId, partyRole = "auto", topicContext = null) {
   const analysis = data.analysis || {};
   const referral = analysis.expertReferral || {};
   const generatedAt = data.generatedAt || new Date().toISOString();
@@ -1511,12 +1724,13 @@ function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseI
     source: "ai",
     title: `${analysis.title || preset.title} 간편 보고서`,
     subtitle: "상황 파악과 대처 방안 중심",
-    audience: getRoleGuide(userRole).label,
+    audience: `${getRoleGuide(userRole).label} / 당사자: ${getPartyGuide(partyRole).label}`,
     generatedAt: formatDateTime(generatedAt),
     lead: analysis.coreFinding || analysis.situationSummary || "질문 내용을 바탕으로 상황과 대처 방향을 간단히 정리합니다.",
     disclaimer: analysis.informationNotice || "이 보고서는 법률 자문이나 사건 판단이 아니라 법률정보 정리 초안입니다.",
     facts: [
       { label: "원 질문", value: question },
+      { label: "질문 맥락", value: topicContext?.label || preset.title },
       { label: "AI 분류", value: analysis.issueType || preset.title },
       { label: "상황 요약", value: analysis.situationSummary || "추가 확인 필요" },
       ...(analysis.knownFacts || []).slice(0, 3).map((item, index) => ({ label: `확인된 사실 ${index + 1}`, value: item }))
@@ -5020,6 +5234,10 @@ function getRoleGuide(userRole) {
   return roleGuides[userRole] || roleGuides.auto;
 }
 
+function getPartyGuide(partyRole) {
+  return partyGuides[partyRole] || partyGuides.auto;
+}
+
 function getSourcePlan(preset, scopes) {
   const basePlan = sourcePlanByTopic[preset.type] || sourcePlanByTopic.general;
   const filteredPlan = basePlan.filter((type) => {
@@ -5314,7 +5532,8 @@ function hydrateFromUrl() {
 
   questionInput.value = question;
   setSelectValue(userRoleInput, params.get("role"));
-  setSelectValue(topicTypeInput, params.get("topic"));
+  setSelectValue(partyRoleInput, params.get("party") || params.get("partyRole"));
+  setTopicSelectionFromUrl(params);
   setSelectValue(answerModeInput, params.get("mode"));
   setScopesFromUrl(params.get("scopes"));
 
@@ -5325,7 +5544,7 @@ function hydrateFromUrl() {
 }
 
 function setSelectValue(select, value) {
-  if (!value) {
+  if (!select || !value) {
     return;
   }
 
@@ -5344,6 +5563,128 @@ function setScopesFromUrl(value) {
   form.querySelectorAll("input[name='scope']").forEach((input) => {
     input.checked = nextScopes.includes(input.value);
   });
+}
+
+function initializeTopicControls() {
+  if (!topicMajorInput || !topicMiddleInput || !topicMinorInput) {
+    syncTopicTypeInput();
+    return;
+  }
+
+  populateTopicMiddleSelect(false);
+  topicMajorInput.addEventListener("change", () => populateTopicMiddleSelect(false));
+  topicMiddleInput.addEventListener("change", () => populateTopicMinorSelect(false));
+  topicMinorInput.addEventListener("change", syncTopicTypeInput);
+}
+
+function setTopicSelection(major = "auto", middle = "auto", minor = "auto") {
+  if (!topicMajorInput || !topicMiddleInput || !topicMinorInput) {
+    if (topicTypeInput) {
+      topicTypeInput.value = major || "auto";
+    }
+    return;
+  }
+
+  setSelectValue(topicMajorInput, major);
+  populateTopicMiddleSelect(true);
+  setSelectValue(topicMiddleInput, middle);
+  populateTopicMinorSelect(true);
+  setSelectValue(topicMinorInput, minor);
+  syncTopicTypeInput();
+}
+
+function setTopicSelectionFromUrl(params) {
+  const major = params.get("topicMajor") || params.get("major");
+  const middle = params.get("topicMiddle") || params.get("middle");
+  const minor = params.get("topicMinor") || params.get("minor");
+  if (major) {
+    setTopicSelection(major, middle || "auto", minor || "auto");
+    return;
+  }
+
+  const legacyTopic = params.get("topic");
+  if (!legacyTopic) {
+    syncTopicTypeInput();
+    return;
+  }
+
+  const majorEntry = Object.entries(topicTaxonomy).find(([, item]) => item.preset === legacyTopic);
+  setTopicSelection(majorEntry?.[0] || "auto", "auto", "auto");
+}
+
+function populateTopicMiddleSelect(keepValue = true) {
+  if (!topicMajorInput || !topicMiddleInput) {
+    return;
+  }
+
+  const previousValue = keepValue ? topicMiddleInput.value : "auto";
+  const middleOptions = topicTaxonomy[topicMajorInput.value]?.middles || [];
+  replaceOptions(topicMiddleInput, [
+    { value: "auto", label: topicMajorInput.value === "auto" ? "자동분류" : "대분류만" },
+    ...middleOptions.map((item) => ({ value: item.value, label: item.label }))
+  ]);
+  setSelectValue(topicMiddleInput, previousValue);
+  populateTopicMinorSelect(keepValue);
+}
+
+function populateTopicMinorSelect(keepValue = true) {
+  if (!topicMajorInput || !topicMiddleInput || !topicMinorInput) {
+    syncTopicTypeInput();
+    return;
+  }
+
+  const previousValue = keepValue ? topicMinorInput.value : "auto";
+  const minorOptions = getSelectedMiddleNode()?.minors || [];
+  replaceOptions(topicMinorInput, [
+    { value: "auto", label: minorOptions.length ? "중분류만" : "선택 안 함" },
+    ...minorOptions.map((item) => ({ value: item.value, label: item.label }))
+  ]);
+  setSelectValue(topicMinorInput, previousValue);
+  syncTopicTypeInput();
+}
+
+function replaceOptions(select, options) {
+  select.innerHTML = "";
+  options.forEach((item) => {
+    const option = document.createElement("option");
+    option.value = item.value;
+    option.textContent = item.label;
+    select.appendChild(option);
+  });
+}
+
+function getSelectedMiddleNode() {
+  const middleOptions = topicTaxonomy[topicMajorInput?.value]?.middles || [];
+  return middleOptions.find((item) => item.value === topicMiddleInput?.value) || null;
+}
+
+function getSelectedMinorNode() {
+  const minorOptions = getSelectedMiddleNode()?.minors || [];
+  return minorOptions.find((item) => item.value === topicMinorInput?.value) || null;
+}
+
+function getSelectedTopicContext() {
+  const majorNode = topicTaxonomy[topicMajorInput?.value] || topicTaxonomy.auto;
+  const middleNode = getSelectedMiddleNode();
+  const minorNode = getSelectedMinorNode();
+  const labels = [majorNode, middleNode, minorNode]
+    .map((item) => item?.label)
+    .filter(Boolean);
+
+  return {
+    major: topicMajorInput?.value || "auto",
+    middle: topicMiddleInput?.value || "auto",
+    minor: topicMinorInput?.value || "auto",
+    presetType: minorNode?.preset || middleNode?.preset || majorNode.preset || "auto",
+    labels,
+    label: labels.join(" > ") || "자동 분류"
+  };
+}
+
+function syncTopicTypeInput() {
+  if (topicTypeInput) {
+    topicTypeInput.value = getSelectedTopicContext().presetType;
+  }
 }
 
 function buildKeywords(question, preset) {
