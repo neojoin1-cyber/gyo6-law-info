@@ -1060,7 +1060,7 @@ function prioritizeEducationAdminRules(items, context = {}) {
       String(left.title || "").localeCompare(String(right.title || ""), "ko-KR")
     );
   const focused = scored.filter((item) => item.relevance.score >= 50);
-  return (focused.length ? focused : scored.slice(0, 2)).slice(0, 6);
+  return focused.filter((item) => asArray(item.relevance.matchedSignals).length > 0).slice(0, 6);
 }
 
 function attachEducationAdminRuleRelevance(item, context = {}) {
