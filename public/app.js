@@ -1704,6 +1704,7 @@ function renderLiveSourceResults(data) {
     <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 국내재해사례는 사고유형, 설비, 작업상황이 충분히 맞는 후보만 엄선해 표시합니다.</p>
     ${renderApiGroup("법제처 법령 검색", results.laws, "질문과 연결된 법령 후보가 아직 없습니다.")}
     ${renderApiGroup("법령해석례 후보", results.interpretations, "관련 법령해석례 후보가 아직 없습니다.")}
+    ${renderApiGroup("교육부 법령해석", results.educationInterpretations, "관련 교육부 법령해석 후보가 아직 없습니다.")}
     ${renderApiGroup("교육부 공식 기준자료", results.educationAdminRules, "관련 교육부 행정규칙·고시·훈령 후보가 아직 없습니다.")}
     ${renderApiGroup("국내재해사례", results.safetyDisasters, "관련 국내재해사례 후보가 아직 없습니다.")}
     ${renderApiGroup("안전보건자료", results.safetyMaterials, "안전보건자료 후보가 아직 없습니다.")}
@@ -4107,6 +4108,7 @@ function renderReportLiveSources(data) {
     ${renderReportApiGroup("안전보건자료", results.safetyMaterials)}
     ${renderReportApiGroup("현행 법령", results.laws)}
     ${renderReportApiGroup("법령해석례", results.interpretations)}
+    ${renderReportApiGroup("교육부 법령해석", results.educationInterpretations)}
     ${renderReportApiGroup("교육부 공식 기준자료", results.educationAdminRules)}
   `;
 }

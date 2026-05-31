@@ -122,6 +122,49 @@ globalThis.fetch = async (input, init = {}) => {
   if (url.hostname === "gateway.local") {
     const body = init?.body ? JSON.parse(String(init.body)) : {};
     seenGatewayBodies.push({ path: url.pathname, body });
+    if (url.pathname.endsWith("/gyo6/law/interpretations")) {
+      return jsonResponse({
+        ok: true,
+        generatedAt: "2026-05-31T00:00:00.000Z",
+        source: "국가법령정보센터",
+        protocol: "auto",
+        interpretations: [
+          {
+            query: "현장실습",
+            title: "현장실습 운영 기준 관련 교육부 법령해석",
+            subtitle: "교육부",
+            source: "국가법령정보센터",
+            date: "2026.03.01",
+            summary: "교육부 법령해석 후보",
+            url: "https://www.law.go.kr/LSW/expcInfoP.do?mode=1",
+            type: "교육부 법령해석",
+            verifiedAt: "2026-05-31T00:00:00.000Z",
+            reliability: {
+              level: "source-dated",
+              label: "원문 링크 확인",
+              needsReview: false
+            }
+          },
+          {
+            query: "현장실습",
+            title: "일반 법령해석례",
+            subtitle: "법령해석례",
+            source: "국가법령정보센터",
+            date: "2025.01.01",
+            summary: "일반 법령해석례 후보",
+            url: "https://www.law.go.kr/LSW/expcInfoP.do?mode=2",
+            type: "법령해석례",
+            verifiedAt: "2026-05-31T00:00:00.000Z",
+            reliability: {
+              level: "source-dated",
+              label: "원문 링크 확인",
+              needsReview: false
+            }
+          }
+        ],
+        notices: []
+      });
+    }
     if (url.pathname.endsWith("/gyo6/law/admin-rules")) {
       return jsonResponse({
         ok: true,
@@ -227,6 +270,12 @@ if (!gatewayApiResult.results?.laws?.length) {
 }
 if (!gatewayApiResult.results?.educationAdminRules?.length) {
   throw new Error("gateway-backed search did not return education admin rules");
+}
+if (!gatewayApiResult.results?.educationInterpretations?.length) {
+  throw new Error("gateway-backed search did not split education interpretations");
+}
+if (gatewayApiResult.results?.interpretations?.some((item) => /교육부/.test(`${item.title} ${item.type} ${item.subtitle}`))) {
+  throw new Error("education interpretations should be separated from the general interpretation group");
 }
 if (!/현장실습/.test(gatewayApiResult.results.educationAdminRules[0].title || "")) {
   throw new Error(`education admin rules were not prioritized by case relevance: ${gatewayApiResult.results.educationAdminRules[0].title}`);

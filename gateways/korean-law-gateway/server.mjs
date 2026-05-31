@@ -121,6 +121,7 @@ export async function searchInterpretations(input = {}) {
 
   const batches = await Promise.all([
     searchLawTarget({ target: "moelCgmExpc", search: "2", query, display }),
+    searchLawTarget({ target: "moeCgmExpc", search: "2", query, display }),
     searchLawTarget({ target: "expc", search: "2", query, display })
   ]);
 
@@ -316,6 +317,8 @@ function normalizeLawSearchItems(data, query, target = "law") {
     data?.expcSearch ||
     data?.MoelCgmExpcSearch ||
     data?.moelCgmExpcSearch ||
+    data?.MoeCgmExpcSearch ||
+    data?.moeCgmExpcSearch ||
     data ||
     {};
   const rawItems = asArray(
@@ -325,6 +328,8 @@ function normalizeLawSearchItems(data, query, target = "law") {
     root.expc ||
     root.MoelCgmExpc ||
     root.moelCgmExpc ||
+    root.MoeCgmExpc ||
+    root.moeCgmExpc ||
     root.AdmRul ||
     root.admrul ||
     root.item ||
@@ -703,6 +708,7 @@ function getLawTargetLabel(target) {
     law: "법령",
     expc: "법령해석례",
     moelCgmExpc: "고용노동부 법령해석",
+    moeCgmExpc: "교육부 법령해석",
     admrul: "행정규칙"
   }[target] || target || "법제처 자료";
 }

@@ -364,6 +364,7 @@ function compactOfficialSourceContext(data = {}) {
   const compactResults = {
     laws: compactSourceItems(results.laws, 4),
     interpretations: compactSourceItems(results.interpretations, 3),
+    educationInterpretations: compactSourceItems(results.educationInterpretations, 3),
     educationAdminRules: compactSourceItems(results.educationAdminRules, 3),
     safetyDisasters: compactSourceItems(results.safetyDisasters, 3),
     safetyMaterials: compactSourceItems(results.safetyMaterials, 3)
@@ -489,6 +490,7 @@ function getLegalAnalysisInstructions() {
     "officialSources가 제공되면 그 안의 공식자료 후보와 확인시각을 우선 반영하세요. 단, '직접 확인 필요' 또는 API 실패로 표시된 자료는 실존 조문으로 단정하지 말고 원문 확인 후보로만 다루세요.",
     "officialSources에 없는 조문·판례·해석례를 새로 만들어 인용하지 마세요. 필요한 경우 sourceSearchQueries에 추가 검색어로만 제안하세요.",
     "officialSources.sourceReferenceIndex는 법제처 원문에서 확인한 조문 인덱스입니다. 이 목록의 citation만 '원문 확인' 근거로 사용할 수 있습니다.",
+    "officialSources.results.educationInterpretations는 교육부 법령해석 후보입니다. 교육부 소관 행정규칙·고시·훈령과 구분해서, 쟁점 해석 방향을 확인하는 보조 근거로 다루세요.",
     "officialSources.results.educationAdminRules는 교육부 소관 행정규칙·고시·훈령 후보입니다. 이를 '교육부 행정해석'이라고 바꾸어 부르지 말고, 학교 실무 기준 확인 자료로만 다루세요.",
     "keyIssues.sourceFocus에는 관련 citation을 그대로 넣고, immediateActions·stakeholderActions·evidencePlan의 문장에는 꼭 필요한 경우 '(근거: citation)' 형식으로 짧게 붙이세요.",
     "officialSources.sourceReferenceIndex에 없는 조문번호나 벌칙을 추측해 쓰지 마세요. 특히 제○조, 징역, 벌금, 과태료, 손해배상 범위는 citation 또는 원문 확인 필요 중 하나로만 처리하세요.",

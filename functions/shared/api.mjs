@@ -71,6 +71,7 @@ async function handleSearch(requestUrl) {
     hasUsableValue(publicDataKey) ? searchDisasterCases(publicDataKey, safetyContext) : missingKey("PUBLIC_DATA_API_KEY"),
     hasUsableValue(publicDataKey) ? searchSafetyMaterials(publicDataKey) : missingKey("PUBLIC_DATA_API_KEY")
   ]);
+  const splitInterpretations = splitEducationInterpretationResults(interpretationResults);
   const notices = buildUserFacingNotices([
     ...lawResults.notices,
     ...interpretationResults.notices,
@@ -93,7 +94,8 @@ async function handleSearch(requestUrl) {
     status: getHealthStatus().keys,
     results: {
       laws: lawResults.items,
-      interpretations: interpretationResults.items,
+      interpretations: splitInterpretations.generalItems,
+      educationInterpretations: splitInterpretations.educationItems,
       educationAdminRules: educationAdminRuleResults.items,
       safetyDisasters: disasterResults.items,
       safetyMaterials: materialResults.items
@@ -763,7 +765,7 @@ async function searchLaws(openApiKey, queries, keywords = []) {
 }
 
 async function searchLawInterpretations(openApiKey, question) {
-  const [general, labor] = await Promise.all([
+  const [general, labor, education] = await Promise.all([
     callLawSearch(openApiKey, {
       target: "expc",
       search: "2",
@@ -775,12 +777,18 @@ async function searchLawInterpretations(openApiKey, question) {
       search: "2",
       query: question,
       display: "3"
+    }),
+    callLawSearch(openApiKey, {
+      target: "moeCgmExpc",
+      search: "2",
+      query: question,
+      display: "3"
     })
   ]);
 
   return {
-    items: uniqueBy([...labor.items, ...general.items], "url").slice(0, 6),
-    notices: [...labor.notices, ...general.notices]
+    items: uniqueBy([...labor.items, ...education.items, ...general.items], "url").slice(0, 8),
+    notices: [...labor.notices, ...education.notices, ...general.notices]
   };
 }
 
@@ -976,6 +984,44 @@ function buildKoreanLawGatewayInterpretationItem(item) {
       needsReview: Boolean(item.reliability?.needsReview)
     }
   };
+}
+
+function splitEducationInterpretationResults(result = {}) {
+  const items = asArray(result.items);
+  const educationItems = items
+    .filter(isEducationInterpretationItem)
+    .sort((left, right) =>
+      getEducationInterpretationPriority(right) - getEducationInterpretationPriority(left) ||
+      getComparableDate(right.date) - getComparableDate(left.date) ||
+      String(left.title || "").localeCompare(String(right.title || ""), "ko-KR")
+    )
+    .slice(0, 5);
+  const educationUrls = new Set(educationItems.map((item) => item.url).filter(Boolean));
+  const generalItems = items
+    .filter((item) => !isEducationInterpretationItem(item) || !educationUrls.has(item.url))
+    .slice(0, 6);
+
+  return { generalItems, educationItems };
+}
+
+function isEducationInterpretationItem(item = {}) {
+  return /교육부|moeCgmExpc/i.test([
+    item.type,
+    item.subtitle,
+    item.source,
+    item.summary,
+    item.query
+  ].filter(Boolean).join(" "));
+}
+
+function getEducationInterpretationPriority(item = {}) {
+  const text = normalizeMatchText([item.title, item.subtitle, item.summary, item.type].filter(Boolean).join(" "));
+  let score = 0;
+  if (/교육부/.test(item.type || item.subtitle || "")) score += 40;
+  if (/현장실습|학교폭력|학교생활기록|생활지도|교육활동|교권|민원|학생/.test(text)) score += 30;
+  if (item.url) score += 10;
+  score += Math.min(scoreAdminRuleDate(item.date), 20);
+  return score;
 }
 
 function buildKoreanLawGatewayAdminRuleItem(item) {
@@ -1818,12 +1864,20 @@ async function fetchJson(url, options = {}) {
 }
 
 function normalizeLawItems(data, target, query) {
-  const root = data?.LawSearch || data?.lawSearch || data || {};
+  const root =
+    data?.LawSearch ||
+    data?.lawSearch ||
+    data?.MoeCgmExpcSearch ||
+    data?.moeCgmExpcSearch ||
+    data ||
+    {};
   const rawItems =
     root.law ||
     root.expc ||
     root.MoelCgmExpc ||
     root.moelCgmExpc ||
+    root.MoeCgmExpc ||
+    root.moeCgmExpc ||
     root.item ||
     root.items ||
     [];
@@ -2028,7 +2082,8 @@ function getLawTargetLabel(target) {
   const labels = {
     law: "법령",
     expc: "법령해석례",
-    moelCgmExpc: "고용노동부 법령해석"
+    moelCgmExpc: "고용노동부 법령해석",
+    moeCgmExpc: "교육부 법령해석"
   };
   return labels[target] || target;
 }
