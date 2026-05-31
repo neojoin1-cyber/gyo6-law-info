@@ -1008,9 +1008,7 @@ function isEducationInterpretationItem(item = {}) {
   return /교육부|moeCgmExpc/i.test([
     item.type,
     item.subtitle,
-    item.source,
-    item.title,
-    item.summary
+    item.source
   ].filter(Boolean).join(" "));
 }
 
