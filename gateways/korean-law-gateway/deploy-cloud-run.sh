@@ -46,6 +46,32 @@ prompt_secret() {
   printf -v "${var_name}" "%s" "${value}"
 }
 
+load_secret_if_empty() {
+  local var_name="$1"
+  local secret_name="$2"
+  local label="$3"
+  local current_value=""
+  local loaded_value=""
+
+  current_value="$(printenv "${var_name}" 2>/dev/null || true)"
+
+  if [[ -n "${current_value}" ]]; then
+    printf -v "${var_name}" "%s" "${current_value}"
+    echo "${label}: environment value detected."
+    return
+  fi
+
+  if loaded_value="$(gcloud secrets versions access latest --secret="${secret_name}" 2>/dev/null)" && [[ -n "${loaded_value}" ]]; then
+    printf -v "${var_name}" "%s" "${loaded_value}"
+    echo "${label}: loaded from Secret Manager (${secret_name})."
+  else
+    echo "${label}: Secret Manager value not found. Manual input is required."
+  fi
+}
+
+load_secret_if_empty LAW_OC "${LAW_OC_SECRET}" "LAW_OC"
+load_secret_if_empty GYO6_MCP_TOKEN "${TOKEN_SECRET}" "GYO6_MCP_TOKEN"
+
 if [[ -z "${LAW_OC:-}" ]]; then
   prompt_secret "법제처 OC 인증키(LAW_OC)를 입력하세요: " LAW_OC
 fi

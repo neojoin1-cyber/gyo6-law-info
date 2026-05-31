@@ -12,10 +12,12 @@ Cloud Shell에 아래 명령을 그대로 붙여넣습니다.
 curl -fsSL https://raw.githubusercontent.com/neojoin1-cyber/gyo6-law-info/main/tools/cloud-shell-deploy-law-gateway.sh | bash
 ```
 
-입력할 값:
+처음 실행할 때 입력할 값:
 
 - `LAW_OC`: 법제처 OC 인증키
 - `GYO6_MCP_TOKEN`: Worker와 게이트웨이가 공유할 긴 비밀 토큰
+
+이미 한 번 성공해서 Secret Manager에 저장되어 있으면 다음 배포부터는 저장된 `gyo6-law-oc`, `gyo6-law-gateway-token` 값을 자동으로 재사용합니다. 이 경우 입력 프롬프트가 나오지 않아야 정상입니다.
 
 스크립트가 저장소 clone/update, Secret Manager 저장, Cloud Run 배포, 원문 조회 테스트까지 실행합니다.
 
@@ -34,10 +36,12 @@ cd gyo6-law-info
 bash gateways/korean-law-gateway/deploy-cloud-run.sh
 ```
 
-입력할 값:
+처음 실행할 때 입력할 값:
 
 - `LAW_OC`: 법제처 OC 인증키
 - `GYO6_MCP_TOKEN`: Worker와 게이트웨이가 공유할 긴 비밀 토큰
+
+이미 Secret Manager에 값이 있으면 자동으로 읽어 사용합니다. 프롬프트가 다시 나오면 저장된 secret 이름이 바뀌었거나 접근 권한이 없는 상태입니다.
 
 성공하면 Cloud Run URL이 출력됩니다. `LAW_API_PROTOCOL` 기본값은 `auto`라서 HTTPS 원문 조회를 먼저 시도하고, 런타임 네트워크에서 TLS 문제가 생기면 HTTP를 한 번 더 시도합니다.
 

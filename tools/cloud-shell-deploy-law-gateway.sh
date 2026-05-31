@@ -29,9 +29,9 @@ fi
 cd "${REPO_DIR}"
 
 echo
-echo "Deploying gateway. You will be asked for:"
-echo "- LAW_OC: 법제처 OC 인증키"
-echo "- GYO6_MCP_TOKEN: Worker와 공유할 긴 서버간 토큰"
+echo "Deploying gateway."
+echo "- Saved secrets will be reused from Google Secret Manager when available."
+echo "- You will only be asked for LAW_OC or GYO6_MCP_TOKEN if the saved secret is missing."
 echo
 
 LAW_API_PROTOCOL="${LAW_API_PROTOCOL:-auto}" bash gateways/korean-law-gateway/deploy-cloud-run.sh
