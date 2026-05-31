@@ -1037,7 +1037,6 @@ function scoreEducationAdminRuleRelevance(item, context = {}) {
     item.subtitle,
     item.summary,
     item.type,
-    item.query,
     item.currentStatus
   ].filter(Boolean).join(" "));
   const questionText = normalizeMatchText([
@@ -1047,10 +1046,12 @@ function scoreEducationAdminRuleRelevance(item, context = {}) {
     ...asArray(context.queries)
   ].filter(Boolean).join(" "));
   const matchedSignals = getEducationAdminRuleMatchedSignals(sourceText, questionText);
+  const requiredSignals = getRequiredEducationAdminRuleSignals(questionText);
+  const missingRequiredSignals = requiredSignals.filter((signal) => !matchedSignals.includes(signal));
   const queryMatches = asArray(context.queries)
     .map((query) => cleanText(query))
     .filter(Boolean)
-    .filter((query) => sourceText.includes(normalizeMatchText(query)) || questionText.includes(normalizeMatchText(query)));
+    .filter((query) => sourceText.includes(normalizeMatchText(query)));
   const current = item.current || /현행/.test(item.currentStatus || "");
   const dateScore = scoreAdminRuleDate(item.date);
   let score = 20;
@@ -1059,11 +1060,20 @@ function scoreEducationAdminRuleRelevance(item, context = {}) {
   score += current ? 18 : item.currentStatus ? -18 : 0;
   score += item.url ? 6 : 0;
   score += dateScore;
-  score += Math.min(matchedSignals.length * 12, 36);
+  score += matchedSignals.reduce((sum, signal) => sum + getEducationAdminRuleSignalWeight(signal), 0);
   score += Math.min(queryMatches.length * 8, 16);
 
   if (sourceText.includes("폐지") || /연혁|폐지/.test(item.currentStatus || "")) {
     score -= 24;
+  }
+  if (missingRequiredSignals.length) {
+    score -= missingRequiredSignals.length * 32;
+  }
+  if (sourceText.includes("유치원") && !questionText.includes("유치원")) {
+    score -= 22;
+  }
+  if (sourceText.includes("대학") && !questionText.includes("대학")) {
+    score -= 16;
   }
 
   score = Math.max(0, Math.min(100, score));
@@ -1071,7 +1081,7 @@ function scoreEducationAdminRuleRelevance(item, context = {}) {
   return {
     score,
     label: score >= 78 ? "우선 확인" : score >= 58 ? "참고 확인" : "보조 후보",
-    reason: buildEducationAdminRuleReason({ score, current, dateScore, matchedSignals, queryMatches, date: item.date }),
+    reason: buildEducationAdminRuleReason({ current, dateScore, matchedSignals, queryMatches, missingRequiredSignals, date: item.date }),
     matchedSignals: uniqueStrings([...matchedSignals, ...queryMatches]).slice(0, 8),
     current,
     dateStatus: getAdminRuleDateStatus(item.date)
@@ -1099,7 +1109,37 @@ function getEducationAdminRuleMatchedSignals(sourceText, questionText) {
     .map((signal) => signal.label);
 }
 
-function buildEducationAdminRuleReason({ current, dateScore, matchedSignals, queryMatches, date }) {
+function getRequiredEducationAdminRuleSignals(questionText) {
+  const required = [];
+  if (hasAnyTerm(questionText, ["학교폭력", "학폭", "피해학생", "가해학생"])) {
+    required.push("학교폭력");
+  }
+  if (hasAnyTerm(questionText, ["학교생활기록", "생활기록", "생기부", "출결", "인정결석", "정정"])) {
+    required.push("학교생활기록");
+  }
+  if (hasAnyTerm(questionText, ["현장실습", "실습생", "직업계고", "특성화고", "도제"])) {
+    required.push("현장실습");
+  }
+  if (hasAnyTerm(questionText, ["개인정보", "민감정보", "학생정보", "상담기록", "유출"])) {
+    required.push("개인정보");
+  }
+  return required;
+}
+
+function getEducationAdminRuleSignalWeight(signal) {
+  return {
+    학교폭력: 32,
+    학교생활기록: 32,
+    현장실습: 32,
+    개인정보: 24,
+    학생생활지도: 16,
+    "교육활동 보호": 16,
+    "민원 대응": 12,
+    교직원: 10
+  }[signal] || 10;
+}
+
+function buildEducationAdminRuleReason({ current, dateScore, matchedSignals, queryMatches, missingRequiredSignals, date }) {
   const parts = [];
   if (current) {
     parts.push("현행 자료");
@@ -1112,6 +1152,9 @@ function buildEducationAdminRuleReason({ current, dateScore, matchedSignals, que
   }
   if (queryMatches.length) {
     parts.push(`검색어 일치: ${queryMatches.slice(0, 2).join(", ")}`);
+  }
+  if (missingRequiredSignals.length) {
+    parts.push(`핵심 주제 직접 일치 부족: ${missingRequiredSignals.slice(0, 2).join(", ")}`);
   }
   if (!parts.length && dateScore > 0) {
     parts.push("공식 출처와 일자 확인");
