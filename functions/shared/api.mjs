@@ -1009,8 +1009,8 @@ function isEducationInterpretationItem(item = {}) {
     item.type,
     item.subtitle,
     item.source,
-    item.summary,
-    item.query
+    item.title,
+    item.summary
   ].filter(Boolean).join(" "));
 }
 
