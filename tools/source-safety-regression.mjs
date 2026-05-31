@@ -375,6 +375,12 @@ if (unexpectedDirectLawCalls.length) {
 if (!gatewayApiResult.results?.laws?.length) {
   throw new Error("gateway-backed search did not return original law text");
 }
+if (!Array.isArray(gatewayApiResult.results?.precedents)) {
+  throw new Error("gateway-backed search should always expose a precedents result slot");
+}
+if (gatewayApiResult.results.precedents.length) {
+  throw new Error("precedents should stay empty until an approved official case-law API is connected");
+}
 if (!gatewayApiResult.results?.educationAdminRules?.length) {
   throw new Error("gateway-backed search did not return education admin rules");
 }

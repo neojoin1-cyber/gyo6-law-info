@@ -568,6 +568,34 @@ if (!interpretationBrief.includes("공식 판례 API 미연결") || !interpretat
   failures.push("interpretation-brief: expected explicit case-law pending status when no official case API is connected");
 }
 
+const precedentBrief = context.renderInterpretationAndCaseBrief({
+  title: "손해배상 검토 보고서",
+  lead: "학생 피해와 손해배상 가능성을 확인합니다.",
+  sourceSearchQueries: ["민법 불법행위 손해배상 위자료 판례"],
+  officialSourceContext: {
+    status: { scourt: true, nanet: false },
+    results: {
+      precedents: [{
+        title: "손해배상 관련 공식 판례",
+        source: "사법정보공유포털",
+        courtName: "대법원",
+        caseNumber: "2026다00000",
+        decisionDate: "2026.05.01",
+        caseType: "민사",
+        summary: "공식 판례 API에서 확인된 판례 요지 후보입니다.",
+        relatedLaws: ["민법"],
+        url: "https://example.test/precedent"
+      }]
+    }
+  }
+});
+if (!precedentBrief.includes("공식 판례") || !precedentBrief.includes("대법원") || !precedentBrief.includes("2026다00000")) {
+  failures.push("precedent-brief: expected official precedent card details");
+}
+if (precedentBrief.includes("공식 판례 API 미연결")) {
+  failures.push("precedent-brief: should not show disconnected status when official precedents are present");
+}
+
 const oldBranchOrder = context.renderReportLiveSources({
   results: {
     laws: [{

@@ -1703,6 +1703,7 @@ function renderLiveSourceResults(data) {
     </div>
     <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 국내재해사례는 사고유형, 설비, 작업상황이 충분히 맞는 후보만 엄선해 표시합니다.</p>
     ${renderApiGroup("법제처 법령 검색", results.laws, "질문과 연결된 법령 후보가 아직 없습니다.")}
+    ${renderApiGroup("공식 판례 후보", results.precedents, "승인된 공식 판례 API 결과가 아직 없습니다. 판례는 확인 필요로 표시합니다.")}
     ${renderApiGroup("법령해석례 후보", results.interpretations, "관련 법령해석례 후보가 아직 없습니다.")}
     ${renderApiGroup("교육부 법령해석", results.educationInterpretations, "관련 교육부 법령해석 후보가 아직 없습니다.")}
     ${renderApiGroup("교육부 공식 기준자료", results.educationAdminRules, "관련 교육부 행정규칙·고시·훈령 후보가 아직 없습니다.")}
@@ -3309,9 +3310,10 @@ function normalizeReportText(value = "") {
 }
 
 function renderInterpretationAndCaseBrief(report = {}) {
+  const precedentItems = selectReportPrecedentItems(report, 3);
   const interpretationItems = selectReportInterpretationItems(report, 4);
-  const caseStatus = buildCaseLawStatus(report);
-  if (!interpretationItems.length && !caseStatus.show) {
+  const caseStatus = buildCaseLawStatus(report, precedentItems.length);
+  if (!precedentItems.length && !interpretationItems.length && !caseStatus.show) {
     return "";
   }
 
@@ -3319,6 +3321,23 @@ function renderInterpretationAndCaseBrief(report = {}) {
     <div class="report-section report-interpretation-brief">
       <h4>3-2. 판례·행정해석 확인 상태</h4>
       <p class="report-section-note">행정해석·교육부 기준자료는 쟁점 판단의 보조자료입니다. 판례는 사법정보공유포털 또는 국회법률도서관 등 승인된 공식 API 결과가 있을 때만 구체적으로 표시합니다.</p>
+      ${precedentItems.length ? `
+        <div class="report-mini-list">
+          ${precedentItems.map((item) => {
+            const url = safeUrl(item.url);
+            return `
+              <article class="report-mini-card">
+                <span class="student-case-badge">공식 판례</span>
+                <b>${escapeHtml(item.title)}</b>
+                <p>${escapeHtml(item.summary || "공식 판례 API에서 확인된 판례 후보입니다. 사안과의 유사성은 사실관계 대조 후 판단합니다.")}</p>
+                <small>${escapeHtml([item.courtName, item.caseNumber, item.date, item.caseType].filter(Boolean).join(" · ") || item.source)}</small>
+                ${item.relatedLaws.length ? `<em>참조 법령: ${escapeHtml(item.relatedLaws.join(", "))}</em>` : ""}
+                ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
+              </article>
+            `;
+          }).join("")}
+        </div>
+      ` : ""}
       ${interpretationItems.length ? `
         <div class="report-mini-list">
           ${interpretationItems.map((item) => {
@@ -3385,6 +3404,32 @@ function selectReportInterpretationItems(report = {}, limit = 4) {
     .slice(0, limit);
 }
 
+function selectReportPrecedentItems(report = {}, limit = 3) {
+  const precedents = normalizeReportPrecedentItems(report.officialSourceContext?.results?.precedents || []);
+  return precedents
+    .sort((left, right) =>
+      getApiComparableDate(right.date) - getApiComparableDate(left.date) ||
+      left.title.localeCompare(right.title, "ko-KR")
+    )
+    .slice(0, limit);
+}
+
+function normalizeReportPrecedentItems(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map((item) => ({
+      title: normalizeReportText(item.title || item.caseName || item.summary || "판례 제목 확인 필요"),
+      source: normalizeReportText(item.source || "공식 판례 API"),
+      courtName: normalizeReportText(item.courtName || item.court || ""),
+      caseNumber: normalizeReportText(item.caseNumber || item.caseNo || ""),
+      date: normalizeReportText(item.decisionDate || item.date || item.sentencedAt || ""),
+      caseType: normalizeReportText(item.caseType || item.type || ""),
+      summary: normalizeReportText(item.summary || item.holding || item.abstract || "").slice(0, 260),
+      relatedLaws: uniqueStrings([...(item.relatedLaws || []), ...(item.referencedLaws || [])]).slice(0, 4),
+      url: item.url || item.sourceUrl || ""
+    }))
+    .filter((item) => item.title && !item.title.includes("확인 필요"));
+}
+
 function normalizeReportSourceItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item) => ({
@@ -3400,7 +3445,7 @@ function normalizeReportSourceItems(items = []) {
     .filter((item) => item.title && !item.title.includes("제목 없음"));
 }
 
-function buildCaseLawStatus(report = {}) {
+function buildCaseLawStatus(report = {}, precedentCount = 0) {
   const sourceContext = report.officialSourceContext || {};
   const status = sourceContext.status || {};
   const queryText = [
@@ -3419,6 +3464,15 @@ function buildCaseLawStatus(report = {}) {
 
   if (!needsCaseLaw && !queries.length) {
     return { show: false, title: "", message: "", queries: [] };
+  }
+
+  if (precedentCount > 0) {
+    return {
+      show: true,
+      title: "공식 판례 결과 반영",
+      message: "위 판례 카드는 승인된 공식 판례 결과 슬롯에 들어온 자료만 표시합니다. 사안 적용 여부는 사건의 사실관계, 조문, 행정자료와 함께 대조해야 합니다.",
+      queries
+    };
   }
 
   if (status.scourt || status.nanet) {
@@ -3480,7 +3534,9 @@ function renderCaseReport(report) {
         ${renderOfficialArticleBrief(report)}
       </div>
 
-      ${renderInterpretationAndCaseBrief(report)}
+      <div id="reportInterpretationAndCaseBrief">
+        ${renderInterpretationAndCaseBrief(report)}
+      </div>
 
       ${renderLegalConsequenceAssessment(report.legalConsequenceAssessment)}
 
@@ -4321,6 +4377,7 @@ function renderReportActionChecks(items = []) {
 function updateReportLiveSources(data) {
   mergeLiveSourcesIntoCurrentReport(data);
   updateReportOfficialArticleBrief();
+  updateReportInterpretationAndCaseBrief();
 
   const reportMount = document.querySelector("#reportLiveSources");
   if (!reportMount) {
@@ -4356,6 +4413,15 @@ function updateReportOfficialArticleBrief() {
   mount.innerHTML = renderOfficialArticleBrief(currentReportDraft || {});
 }
 
+function updateReportInterpretationAndCaseBrief() {
+  const mount = document.querySelector("#reportInterpretationAndCaseBrief");
+  if (!mount) {
+    return;
+  }
+
+  mount.innerHTML = renderInterpretationAndCaseBrief(currentReportDraft || {});
+}
+
 function renderReportLiveSources(data) {
   if (data.error) {
     return `<p class="report-source-empty">${escapeHtml(data.error)}</p>`;
@@ -4372,6 +4438,7 @@ function renderReportLiveSources(data) {
     ${renderReportApiGroup("국내재해사례", results.safetyDisasters)}
     ${renderReportApiGroup("안전보건자료", results.safetyMaterials)}
     ${renderReportApiGroup("현행 법령", results.laws)}
+    ${renderReportApiGroup("공식 판례", results.precedents)}
     ${renderReportApiGroup("법령해석례", results.interpretations)}
     ${renderReportApiGroup("교육부 법령해석", results.educationInterpretations)}
     ${renderReportApiGroup("교육부 공식 기준자료", results.educationAdminRules)}

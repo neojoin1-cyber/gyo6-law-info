@@ -63,6 +63,7 @@ async function handleSearch(requestUrl) {
   const hasKoreanLawMcp = hasUsableValue(koreanLawMcpBaseUrl);
   const officialQuery = buildOfficialSourceQuery({ question, topic, keywords, lawQueries });
   const educationRuleQueries = buildEducationAdminRuleQueries({ question, topic, keywords });
+  const precedentResults = buildPrecedentSearchPreparation({ question, topic, keywords });
 
   const [lawResults, interpretationResults, educationAdminRuleResults, disasterResults, materialResults] = await Promise.all([
     searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp, keywords }),
@@ -94,6 +95,7 @@ async function handleSearch(requestUrl) {
     status: getHealthStatus().keys,
     results: {
       laws: lawResults.items,
+      precedents: precedentResults.items,
       interpretations: splitInterpretations.generalItems,
       educationInterpretations: splitInterpretations.educationItems,
       educationAdminRules: educationAdminRuleResults.items,
@@ -101,6 +103,13 @@ async function handleSearch(requestUrl) {
       safetyMaterials: materialResults.items
     },
     notices
+  };
+}
+
+function buildPrecedentSearchPreparation() {
+  return {
+    items: [],
+    notices: []
   };
 }
 
