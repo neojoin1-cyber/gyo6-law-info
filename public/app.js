@@ -13,6 +13,7 @@ const topicMinorInput = document.querySelector("#topicMinor");
 const answerModeInput = document.querySelector("#answerMode");
 const userRoleInput = document.querySelector("#userRole");
 const partyRoleInput = document.querySelector("#partyRole");
+const resetQuestionButton = document.querySelector("#resetQuestionButton");
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
 const AI_USAGE_LEDGER_KEY = "gyo6LawInfoAiUsageLedger";
 const LOCAL_COST_CONTROL = {
@@ -26,6 +27,9 @@ let currentReportDraft = null;
 let currentCaseId = "";
 let currentLiveSourceData = null;
 let skipNextAutoScroll = false;
+let currentQuestionFingerprint = "";
+let activeAiController = null;
+let activeSourceController = null;
 
 const roleGuides = {
   auto: {
@@ -645,10 +649,16 @@ initializeTopicControls();
 
 document.querySelectorAll("[data-example]").forEach((button) => {
   button.addEventListener("click", () => {
+    resetTransientQuestionState({ keepFormValues: true });
     questionInput.value = button.dataset.example;
     setTopicSelection(button.dataset.topicMajor || "auto", button.dataset.topicMiddle || "auto", button.dataset.topicMinor || "auto");
     questionInput.focus();
   });
+});
+
+resetQuestionButton?.addEventListener("click", () => {
+  resetTransientQuestionState({ resetFormValues: true });
+  questionInput.focus();
 });
 
 form.addEventListener("submit", (event) => {
@@ -656,6 +666,7 @@ form.addEventListener("submit", (event) => {
 
   const question = questionInput.value.trim();
   if (!question) {
+    resetTransientQuestionState({ keepFormValues: true });
     showEmptyMessage("질문을 입력해 주세요.", "취업, 현장실습, 학교 민원처럼 궁금한 상황을 한 문장으로 적어도 괜찮습니다.");
     questionInput.focus();
     return;
@@ -1024,6 +1035,7 @@ function getFieldTrainingInstructorLabel(value = "") {
 }
 
 function renderResult(question, preset, scopes, answerMode, userRole, partyRole = "auto", topicContext = null) {
+  abortActiveRequests();
   workspace?.classList.add("has-result");
   if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== resultPanel) {
     workspace.insertBefore(resultPanel, queryPanel);
@@ -1034,6 +1046,15 @@ function renderResult(question, preset, scopes, answerMode, userRole, partyRole 
   const roleGuide = getRoleGuide(userRole);
   const partyGuide = getPartyGuide(partyRole);
   const selectedTopicContext = topicContext || getSelectedTopicContext();
+  const questionFingerprint = buildQuestionFingerprint({
+    question,
+    presetType: preset.type,
+    scopes,
+    answerMode,
+    userRole,
+    partyRole,
+    topicContext: selectedTopicContext
+  });
   const scenario = analyzeQuestionScenario(question, preset);
   const displayPreset = getScenarioDisplayPreset(preset, scenario);
   const sourceLinks = getSourceLinks(encodedQuestion, displayPreset, scopes);
@@ -1050,6 +1071,7 @@ function renderResult(question, preset, scopes, answerMode, userRole, partyRole 
   const caseId = createCaseSessionId();
   caseReport.caseId = caseId;
   currentCaseId = caseId;
+  currentQuestionFingerprint = questionFingerprint;
   currentLiveSourceData = null;
   currentReportDraft = caseReport;
 
@@ -1206,17 +1228,17 @@ function renderResult(question, preset, scopes, answerMode, userRole, partyRole 
     </section>
   `;
 
-  loadAiAnalysis(question, displayPreset, keywords, userRole, answerMode, caseId, partyRole, selectedTopicContext);
-  loadLiveSources(question, displayPreset, keywords, caseId);
+  loadAiAnalysis(question, displayPreset, keywords, userRole, answerMode, caseId, partyRole, selectedTopicContext, questionFingerprint);
+  loadLiveSources(question, displayPreset, keywords, caseId, questionFingerprint);
 }
 
-async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, caseId, partyRole = "auto", topicContext = null) {
+async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, caseId, partyRole = "auto", topicContext = null, questionFingerprint = "") {
   const mount = document.querySelector("#aiAnalysisMount");
   if (!mount) {
     return;
   }
 
-  if (caseId !== currentCaseId) {
+  if (!isCurrentRequest(caseId, questionFingerprint)) {
     return;
   }
 
@@ -1236,9 +1258,15 @@ async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, 
     return;
   }
 
+  const controller = new AbortController();
+  activeAiController = controller;
+
   try {
     const access = await getLawInfoAccess();
     if (!access.ok) {
+      if (!isCurrentRequest(caseId, questionFingerprint)) {
+        return;
+      }
       mount.innerHTML = renderAiAccessBlocked(access.message);
       statusDot.textContent = "권한 필요";
       return;
@@ -1253,6 +1281,7 @@ async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, 
     const response = await fetch(getAiAnalyzeUrl(), {
       method: "POST",
       headers,
+      signal: controller.signal,
       body: JSON.stringify({
         caseId,
         question,
@@ -1271,14 +1300,14 @@ async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, 
     }
 
     const data = await response.json();
-    if (caseId !== currentCaseId || (data.caseId && data.caseId !== caseId)) {
+    if (!isCurrentRequest(caseId, questionFingerprint) || (data.caseId && data.caseId !== caseId)) {
       return;
     }
     recordAiUsage(data);
     mount.innerHTML = renderAiAnalysis(data);
     applyAiAnalysisToReport(data, question, preset, userRole, answerMode, caseId, partyRole, topicContext);
   } catch (error) {
-    if (caseId !== currentCaseId) {
+    if (error.name === "AbortError" || !isCurrentRequest(caseId, questionFingerprint)) {
       return;
     }
     mount.innerHTML = `
@@ -1287,6 +1316,10 @@ async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, 
       <p>현재 화면은 기본 안전장치 분석으로 표시됩니다. API 키와 Functions 배포 상태를 확인해 주세요.</p>
       <p class="api-error-text">${escapeHtml(error.message)}</p>
     `;
+  } finally {
+    if (activeAiController === controller) {
+      activeAiController = null;
+    }
   }
 }
 
@@ -1342,6 +1375,73 @@ function getConfiguredAiWorkerBaseUrl() {
 function createCaseSessionId() {
   const randomPart = Math.random().toString(36).slice(2, 8);
   return `case-${Date.now()}-${randomPart}`;
+}
+
+function resetTransientQuestionState({ keepFormValues = false, resetFormValues = false } = {}) {
+  abortActiveRequests();
+  currentCaseId = "";
+  currentQuestionFingerprint = "";
+  currentLiveSourceData = null;
+  currentReportDraft = null;
+  skipNextAutoScroll = false;
+
+  if (resetFormValues && form) {
+    form.reset();
+    setTopicSelection("auto", "auto", "auto");
+    if (window.history?.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  }
+
+  if (!keepFormValues && !resetFormValues && questionInput) {
+    questionInput.value = "";
+  }
+
+  if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== queryPanel) {
+    workspace.insertBefore(queryPanel, resultPanel);
+  }
+
+  workspace?.classList.remove("has-result");
+  resultTitle.textContent = "검색 준비 화면";
+  statusDot.textContent = "API 연결 전";
+  resultState.className = "empty-state";
+  resultState.innerHTML = `
+    <div class="empty-icon" aria-hidden="true">§</div>
+    <h3>질문을 입력하면 관련 법령 검색 링크와 API 후보가 표시됩니다.</h3>
+    <p>새 질문은 이전 분석 요청과 보고서 초안 상태를 끊고 현재 입력값만 기준으로 다시 확인합니다.</p>
+  `;
+}
+
+function abortActiveRequests() {
+  activeAiController?.abort();
+  activeSourceController?.abort();
+  activeAiController = null;
+  activeSourceController = null;
+}
+
+function buildQuestionFingerprint({ question, presetType, scopes, answerMode, userRole, partyRole, topicContext }) {
+  return JSON.stringify({
+    question: String(question || "").trim(),
+    presetType: String(presetType || "general"),
+    scopes: [...(scopes || [])].map(String).sort(),
+    answerMode: String(answerMode || "plain"),
+    userRole: String(userRole || "auto"),
+    partyRole: String(partyRole || "auto"),
+    topic: {
+      major: String(topicContext?.major || "auto"),
+      middle: String(topicContext?.middle || "auto"),
+      minor: String(topicContext?.minor || "auto"),
+      presetType: String(topicContext?.presetType || "auto")
+    }
+  });
+}
+
+function isCurrentRequest(caseId, questionFingerprint = "") {
+  return Boolean(
+    caseId &&
+    caseId === currentCaseId &&
+    (!questionFingerprint || questionFingerprint === currentQuestionFingerprint)
+  );
 }
 
 function renderAiAnalysis(data) {
@@ -1835,13 +1935,13 @@ function mapReferralLevel(level = "") {
   return "internal";
 }
 
-async function loadLiveSources(question, preset, keywords, caseId) {
+async function loadLiveSources(question, preset, keywords, caseId, questionFingerprint = "") {
   const mount = document.querySelector("#liveSourceMount");
   if (!mount) {
     return;
   }
 
-  if (caseId !== currentCaseId) {
+  if (!isCurrentRequest(caseId, questionFingerprint)) {
     return;
   }
 
@@ -1854,6 +1954,9 @@ async function loadLiveSources(question, preset, keywords, caseId) {
     return;
   }
 
+  const controller = new AbortController();
+  activeSourceController = controller;
+
   try {
     const params = new URLSearchParams({
       q: question,
@@ -1862,7 +1965,8 @@ async function loadLiveSources(question, preset, keywords, caseId) {
       keywords: keywords.join("|")
     });
     const response = await fetch(getOfficialSearchUrl(params), {
-      headers: { accept: "application/json" }
+      headers: { accept: "application/json" },
+      signal: controller.signal
     });
 
     if (!response.ok) {
@@ -1870,7 +1974,7 @@ async function loadLiveSources(question, preset, keywords, caseId) {
     }
 
     const data = await response.json();
-    if (caseId !== currentCaseId) {
+    if (!isCurrentRequest(caseId, questionFingerprint)) {
       return;
     }
     currentLiveSourceData = data;
@@ -1880,7 +1984,7 @@ async function loadLiveSources(question, preset, keywords, caseId) {
     const total = countApiItems(data);
     statusDot.textContent = total > 0 ? "API 결과 반영" : "API 후보 없음";
   } catch (error) {
-    if (caseId !== currentCaseId) {
+    if (error.name === "AbortError" || !isCurrentRequest(caseId, questionFingerprint)) {
       return;
     }
     statusDot.textContent = "API 확인 실패";
@@ -1893,6 +1997,10 @@ async function loadLiveSources(question, preset, keywords, caseId) {
       <p class="api-source-empty">API 확인 중 오류가 발생했습니다. 비밀키 설정과 네트워크 상태를 확인해 주세요.</p>
       <p class="api-error-text">${escapeHtml(error.message)}</p>
     `;
+  } finally {
+    if (activeSourceController === controller) {
+      activeSourceController = null;
+    }
   }
 }
 

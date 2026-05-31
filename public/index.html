@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GYO6 Law Info | AI 법률정보 도우미</title>
   <meta name="description" content="특성화고 취업과 학교 현장의 법령·원문 근거를 찾는 AI 법률정보 도우미">
-  <link rel="stylesheet" href="styles.css?v=20260530-member-access">
+  <link rel="stylesheet" href="styles.css?v=20260531-portal-intake">
 </head>
 <body>
   <header class="topbar">
@@ -17,6 +17,7 @@
       </span>
     </a>
     <div class="topbar-actions">
+      <a class="portal-link" href="https://gyo6.kr" rel="noopener noreferrer">설탕과소금 포털</a>
       <span class="phase-badge">MVP 검증중</span>
       <div id="authMount" class="auth-mount" aria-live="polite"></div>
     </div>
@@ -32,11 +33,11 @@
       <div class="hero-panel" aria-label="MVP 사용 흐름">
         <div class="hero-panel-head">
           <span>현재 단계</span>
-          <strong>검색 흐름 설계</strong>
+          <strong>질문 구조화</strong>
         </div>
         <ol class="hero-steps">
-          <li><span>1</span><p>질문 입력</p></li>
-          <li><span>2</span><p>주제와 자료 선택</p></li>
+          <li><span>1</span><p>기본 분류 선택</p></li>
+          <li><span>2</span><p>현재 질문만 입력</p></li>
           <li><span>3</span><p>원문 확인</p></li>
         </ol>
         <a class="hero-jump" href="#queryForm">질문 작성하기</a>
@@ -87,6 +88,14 @@
         <div class="panel-head">
           <p class="panel-kicker">Question</p>
           <h2>무엇을 찾아볼까요?</h2>
+        </div>
+
+        <div class="intake-guide">
+          <div>
+            <span>기본 분류</span>
+            <p>질문자와 실제 당사자를 먼저 나누고, 대분류·중분류·소분류는 현재 질문을 이해하기 위한 힌트로만 사용합니다.</p>
+          </div>
+          <button class="ghost-action" id="resetQuestionButton" type="button">새 질문</button>
         </div>
 
         <div class="field-grid intake-grid" aria-label="질문 맥락 선택">
@@ -154,7 +163,10 @@
         </div>
         <input type="hidden" id="topicType" name="topicType" value="auto">
 
-        <label class="field-label" for="question">질문</label>
+        <div class="question-head">
+          <label class="field-label" for="question">질문</label>
+          <p>이 칸에는 지금 묻는 사안만 적어 주세요. 이전 질문은 새 질문 버튼으로 끊을 수 있습니다.</p>
+        </div>
         <textarea id="question" name="question" rows="6" placeholder="예: 현장실습 시간 종료 후 자꾸 청소를 시키는 경우 어떻게 대처해야 하나요?"></textarea>
 
         <div class="examples" aria-label="예시 질문">
@@ -243,9 +255,9 @@
     <p>GYO6 Law Info · AI 법률정보 도우미</p>
   </footer>
 
-  <script src="ai-config.js?v=20260530-simple-report"></script>
-  <script src="firebase-config.js?v=20260530-member-access"></script>
-  <script type="module" src="auth.js?v=20260530-member-access"></script>
-  <script src="app.js?v=20260530-member-access"></script>
+  <script src="ai-config.js?v=20260531-portal-intake"></script>
+  <script src="firebase-config.js?v=20260531-portal-intake"></script>
+  <script type="module" src="auth.js?v=20260531-portal-intake"></script>
+  <script src="app.js?v=20260531-portal-intake"></script>
 </body>
 </html>
