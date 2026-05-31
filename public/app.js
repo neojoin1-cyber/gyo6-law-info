@@ -3157,7 +3157,7 @@ function renderLegalConsequenceAssessment(assessment) {
 
   return `
     <div class="report-section legal-consequence-section">
-      <h4>3-1. 형사·민사 전환 가능성</h4>
+      <h4>3-2. 형사·민사 전환 가능성</h4>
       <p class="report-section-note">${escapeHtml(assessment.summary || "형사·민사 가능성은 원문과 사실관계 확인 후 판단해야 합니다.")}</p>
       <div class="report-api-head">
         <strong>위험도</strong>
@@ -3208,6 +3208,106 @@ function renderLegalConsequenceAssessment(assessment) {
   `;
 }
 
+function renderOfficialArticleBrief(report = {}) {
+  const references = selectReportOfficialArticleReferences(report, 4);
+  if (!references.length) {
+    return "";
+  }
+
+  return `
+    <div class="report-section report-official-article-brief">
+      <h4>3-1. 공식 조문 확인 요약</h4>
+      <p class="report-section-note">법제처 원문 API에서 확인된 조문만 표시합니다. 조문이 없거나 맞지 않으면 단정하지 않고 원문 확인 필요로 남깁니다.</p>
+      <div class="report-mini-list">
+        ${references.map((reference) => {
+          const url = safeUrl(reference.url);
+          return `
+            <article class="report-mini-card">
+              <span class="student-case-badge">법제처 원문 확인</span>
+              <b>${escapeHtml(reference.label)}</b>
+              <p>${escapeHtml(getOfficialArticleUse(reference))}</p>
+              ${reference.text ? `<em>${escapeHtml(summarizeOfficialArticleText(reference.text))}</em>` : ""}
+              ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
+            </article>
+          `;
+        }).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function selectReportOfficialArticleReferences(report = {}, limit = 4) {
+  const references = report.liveSourceReferences?.length
+    ? report.liveSourceReferences
+    : buildLiveSourceReferences(report.officialSourceContext || {});
+  const reportText = compactText([
+    report.title,
+    report.subtitle,
+    report.lead,
+    ...(report.issueSummary || []),
+    ...(report.immediateActions || [])
+  ].filter(Boolean).join(" "));
+  const deduped = [];
+  const seen = new Set();
+
+  for (const reference of references) {
+    const label = normalizeReportText(reference.label || formatLiveArticleCitation(reference));
+    if (!label || /조문번호 확인 필요/.test(label) || seen.has(label)) {
+      continue;
+    }
+    seen.add(label);
+    deduped.push({
+      ...reference,
+      label,
+      score: scoreLiveSourceReference(reference, reportText)
+    });
+  }
+
+  const scored = deduped
+    .filter((item) => item.score > 0)
+    .sort((left, right) => right.score - left.score || left.label.localeCompare(right.label, "ko-KR"));
+  const fallback = deduped
+    .filter((item) => item.score <= 0)
+    .sort((left, right) => left.label.localeCompare(right.label, "ko-KR"));
+
+  return [...scored, ...fallback].slice(0, limit);
+}
+
+function getOfficialArticleUse(reference = {}) {
+  const text = compactText([reference.label, reference.articleTitle, reference.text].filter(Boolean).join(" "));
+  if (/현장실습시간|1일7시간|1주일35시간|야간|휴일|연장/.test(text)) {
+    return "실습시간, 실습 종료 후 지시, 야간·휴일 실습 여부를 판단할 때 우선 대조합니다.";
+  }
+  if (/계약|협약|현장실습계약|권리|의무|실습계획/.test(text)) {
+    return "실습계약·표준협약서와 실제 지시 내용이 맞는지 확인할 때 사용합니다.";
+  }
+  if (/현장실습산업체|선정|실습기업|시설|설비|후생복지/.test(text)) {
+    return "실습기업의 선정·관리와 실습환경 적정성을 확인할 때 사용합니다.";
+  }
+  if (/지도점검|자료제출|보고|현장조사|교육부장관|고용노동부장관|교육감/.test(text)) {
+    return "학교·기업 확인, 지도·점검, 관계기관 보고 필요성을 검토할 때 사용합니다.";
+  }
+  if (/벌칙|징역|벌금|과태료|처한다/.test(text)) {
+    return "형사·행정 제재 가능성은 이 조문과 사실관계를 함께 확인해야 합니다.";
+  }
+  if (/학교폭력|피해학생|가해학생|전담기구|심의/.test(text)) {
+    return "학교폭력 접수, 보호조치, 심의 절차를 확인할 때 우선 대조합니다.";
+  }
+  return "이 사안과 관련된 공식 법령 조문으로, 적용 여부는 사실관계와 원문을 함께 대조합니다.";
+}
+
+function summarizeOfficialArticleText(value = "") {
+  const text = normalizeReportText(value).replace(/^제\d+조(?:의\d+)?(?:\([^)]*\))?\s*/, "");
+  if (text.length <= 180) {
+    return text;
+  }
+  return `${text.slice(0, 180).trim()}...`;
+}
+
+function normalizeReportText(value = "") {
+  return String(value || "").replace(/\s+/g, " ").trim();
+}
+
 function renderCaseReport(report) {
   return `
     <section class="case-report" id="caseReport" aria-label="사안 보고서">
@@ -3244,6 +3344,10 @@ function renderCaseReport(report) {
       <div class="report-section">
         <h4>3. 핵심 판단 포인트</h4>
         ${renderReportList((report.issueSummary || []).slice(0, 4), "", { basis: true, report })}
+      </div>
+
+      <div id="reportOfficialArticleBrief">
+        ${renderOfficialArticleBrief(report)}
       </div>
 
       ${renderLegalConsequenceAssessment(report.legalConsequenceAssessment)}
@@ -4083,12 +4187,41 @@ function renderReportActionChecks(items = []) {
 }
 
 function updateReportLiveSources(data) {
+  mergeLiveSourcesIntoCurrentReport(data);
+  updateReportOfficialArticleBrief();
+
   const reportMount = document.querySelector("#reportLiveSources");
   if (!reportMount) {
     return;
   }
 
   reportMount.innerHTML = renderReportLiveSources(data);
+}
+
+function mergeLiveSourcesIntoCurrentReport(data) {
+  if (!currentReportDraft || !data || data.error) {
+    return;
+  }
+
+  const references = buildLiveSourceReferences(data);
+  if (!references.length) {
+    return;
+  }
+
+  currentReportDraft = {
+    ...currentReportDraft,
+    officialSourceContext: data,
+    liveSourceReferences: references
+  };
+}
+
+function updateReportOfficialArticleBrief() {
+  const mount = document.querySelector("#reportOfficialArticleBrief");
+  if (!mount) {
+    return;
+  }
+
+  mount.innerHTML = renderOfficialArticleBrief(currentReportDraft || {});
 }
 
 function renderReportLiveSources(data) {

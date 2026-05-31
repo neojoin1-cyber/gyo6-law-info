@@ -511,6 +511,22 @@ if (!penaltyBasis.includes("제26조")) {
   failures.push(`live-source-basis: expected 제26조 벌칙 근거, got "${penaltyBasis}"`);
 }
 
+const officialArticleBrief = context.renderOfficialArticleBrief(liveSourceReport);
+if (!officialArticleBrief.includes("3-1. 공식 조문 확인 요약") || !officialArticleBrief.includes("직업교육훈련 촉진법 제9조의2")) {
+  failures.push("official-article-brief: expected confirmed article summary cards in report body");
+}
+if (!officialArticleBrief.includes("실습시간") || !officialArticleBrief.includes("법제처 원문 확인")) {
+  failures.push("official-article-brief: expected practical article use and source confirmation label");
+}
+
+const noOfficialArticleBrief = context.renderOfficialArticleBrief({
+  title: "기본 보고서",
+  liveSourceReferences: []
+});
+if (noOfficialArticleBrief) {
+  failures.push("official-article-brief: should stay hidden when there is no confirmed article");
+}
+
 const oldBranchOrder = context.renderReportLiveSources({
   results: {
     laws: [{
