@@ -307,7 +307,17 @@ function buildLawResult({ query, selected, lawText, keywords, maxArticles }) {
 }
 
 function normalizeLawSearchItems(data, query, target = "law") {
-  const root = data?.LawSearch || data?.lawSearch || data || {};
+  const root =
+    data?.LawSearch ||
+    data?.lawSearch ||
+    data?.AdmRulSearch ||
+    data?.admRulSearch ||
+    data?.ExpcSearch ||
+    data?.expcSearch ||
+    data?.MoelCgmExpcSearch ||
+    data?.moelCgmExpcSearch ||
+    data ||
+    {};
   const rawItems = asArray(
     root[target] ||
     root[getPascalTargetName(target)] ||
@@ -379,13 +389,35 @@ function buildAdminRuleResult(item) {
 }
 
 function buildAdminRuleDetailUrl(item) {
-  const seq = cleanArticleText(item?.mst || "");
+  const seq = cleanArticleText(
+    item?.mst ||
+    getUrlSearchParam(item?.detailLink, "ID") ||
+    getUrlSearchParam(item?.detailLink, "admRulSeq") ||
+    ""
+  );
   if (/^\d+$/.test(seq)) {
     const url = new URL("https://www.law.go.kr/LSW/admRulLsInfoP.do");
     url.searchParams.set("admRulSeq", seq);
     return url.toString();
   }
   return buildLawDetailUrl(item, item?.query || item?.title || "");
+}
+
+function getUrlSearchParam(value, key) {
+  if (!value) {
+    return "";
+  }
+  const text = String(value).trim();
+  const absoluteUrl = text.startsWith("http")
+    ? text
+    : text.startsWith("/")
+      ? `https://www.law.go.kr${text}`
+      : `https://www.law.go.kr${text.startsWith("DRF") ? "/" : ""}${text}`;
+  try {
+    return new URL(absoluteUrl).searchParams.get(key) || "";
+  } catch {
+    return "";
+  }
 }
 
 function normalizeLawText(data) {
