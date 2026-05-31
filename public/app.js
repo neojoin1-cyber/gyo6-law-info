@@ -586,6 +586,7 @@ function getPresetScore(preset, normalized) {
 
   if (preset.type === "schoolViolence") {
     if (/학교폭력|학폭|피해학생|가해학생|학생사이|단체채팅|단체채팅방|욕설|따돌림|심의|보복성메시지|사이버|인스타그램/.test(normalized)) score += 35;
+    if (/학교폭력|폭행|상해|협박/.test(normalized) && /학생|친구|피해|가해|학부모/.test(normalized)) score += 45;
     if (/직장|상급자|근로자|기간제|행정실|행정직|교직원|복무|업무분장|계약갱신|재계약/.test(normalized)) score -= 35;
   }
 
@@ -611,6 +612,10 @@ function getPresetScore(preset, normalized) {
 
 function compactText(value) {
   return String(value || "").replace(/\s+/g, "");
+}
+
+function uniqueStrings(items = []) {
+  return [...new Set(items.map((item) => String(item || "").trim()).filter(Boolean))];
 }
 
 function hasOccurrenceNegation(normalized) {
@@ -1173,6 +1178,7 @@ function renderAiAnalysis(data) {
         </ol>
       </div>
     </div>
+    ${renderAiLegalConsequenceSummary(analysis.legalConsequenceAssessment)}
     ${clarifyingQuestions.length ? `
       <div class="result-block">
         <h3>추가로 확인하면 좋아지는 질문</h3>
@@ -1204,6 +1210,40 @@ function renderAiAnalysis(data) {
       </div>
     ` : ""}
     <p class="answer-warning">${escapeHtml(analysis.informationNotice)}</p>
+  `;
+}
+
+function renderAiLegalConsequenceSummary(assessment) {
+  const normalized = normalizeLegalConsequenceAssessment(assessment);
+  if (!normalized) {
+    return "";
+  }
+
+  const issueText = [
+    ...(normalized.criminalIssues || []).map((item) => `형사: ${item.issue} - ${item.consequence}`),
+    ...(normalized.civilIssues || []).map((item) => `민사: ${item.issue} - ${item.consequence}`)
+  ].slice(0, 3);
+  const evidenceText = (normalized.mitigationPlan || [])
+    .slice(0, 3)
+    .map((item) => `${item.priority}: ${item.action} (${item.evidence})`);
+
+  return `
+    <div class="result-block">
+      <h3>형사·민사 가능성 확인</h3>
+      <p>${escapeHtml(normalized.summary)}</p>
+      ${issueText.length ? `
+        <ul>
+          ${issueText.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+        </ul>
+      ` : ""}
+      ${evidenceText.length ? `
+        <strong>감경·감량 또는 책임 완화 준비</strong>
+        <ul>
+          ${evidenceText.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+        </ul>
+      ` : ""}
+      <p class="answer-warning">${escapeHtml(normalized.caution)}</p>
+    </div>
   `;
 }
 
@@ -1498,6 +1538,7 @@ function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseI
       ...(analysis.missingFacts || []).slice(0, 3).map((item) => `추가 확인: ${item}`)
     ],
     clarifyingQuestions: (analysis.clarifyingQuestions || []).slice(0, 3),
+    legalConsequenceAssessment: normalizeLegalConsequenceAssessment(analysis.legalConsequenceAssessment),
     usage: data.usage || null,
     billing: data.billing || null,
     costControl: data.costControl || null,
@@ -1507,7 +1548,10 @@ function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseI
       summary: referral.reason || "현재 입력 사실을 기준으로 내부 확인과 기록 정리를 우선합니다.",
       actions: referral.suggestedMessage ? [referral.suggestedMessage] : []
     },
-    sourceSearchQueries: (analysis.sourceSearchQueries || []).slice(0, 4),
+    sourceSearchQueries: uniqueStrings([
+      ...(analysis.sourceSearchQueries || []),
+      ...(analysis.legalConsequenceAssessment?.sourceSearchQueries || [])
+    ]).slice(0, 6),
     answerMode,
     officialMaterials: getOfficialMaterials(preset, {}, question)
   };
@@ -2183,6 +2227,7 @@ function buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, r
     scenarioType: scenario.type,
     riskSignals
   };
+  const legalConsequenceAssessment = buildLocalLegalConsequenceAssessment(context, preset, riskSignals);
 
   return {
     title: `${preset.title} 사안 보고서`,
@@ -2221,9 +2266,164 @@ function buildGeneralCaseReport(context, preset, roleGuide, officialMaterials, r
     ],
     evidence: ["계약서·협약서", "공문·안내문", "상담·지도 기록", "사진·문자·이메일", "관련 기관 답변"],
     cautions: ["사실관계가 바뀌면 적용 법령과 조치가 달라질 수 있습니다.", "AI 요약은 참고용이며 공식 원문 확인이 필요합니다."],
+    legalConsequenceAssessment,
+    sourceSearchQueries: legalConsequenceAssessment?.sourceSearchQueries || [],
     finalAdvice: buildFinalAdvice(reportSeed),
     officialMaterials
   };
+}
+
+function normalizeLegalConsequenceAssessment(assessment = {}) {
+  if (!assessment || assessment.applies === false) {
+    return null;
+  }
+
+  const criminalIssues = (assessment.criminalIssues || []).slice(0, 4).map((item) => ({
+    issue: item.issue || "형사 쟁점",
+    legalBasis: item.legalBasis || "원문 확인 필요",
+    consequence: item.potentialConsequence || "법정형·벌금 범위는 법령 원문 확인 후 판단해야 합니다.",
+    sourceStatus: item.sourceStatus || "원문 확인 필요",
+    requiredFacts: (item.requiredFacts || []).slice(0, 3)
+  }));
+  const civilIssues = (assessment.civilIssues || []).slice(0, 4).map((item) => ({
+    issue: item.issue || "민사 쟁점",
+    legalBasis: item.legalBasis || "원문 확인 필요",
+    consequence: item.possibleClaim || "손해배상 범위는 피해, 인과관계, 과실, 판례 경향 확인 후 판단해야 합니다.",
+    sourceStatus: item.sourceStatus || "원문 확인 필요",
+    requiredFacts: (item.requiredFacts || []).slice(0, 3)
+  }));
+  const mitigationPlan = (assessment.mitigationPlan || []).slice(0, 5).map((item) => ({
+    priority: item.priority || "권고",
+    action: item.action || "",
+    evidence: item.evidence || "",
+    why: item.why || "",
+    legalBasis: item.legalBasis || "원문·판례 확인 필요"
+  })).filter((item) => item.action || item.evidence);
+
+  if (!criminalIssues.length && !civilIssues.length && !mitigationPlan.length) {
+    return null;
+  }
+
+  return {
+    applies: true,
+    riskLevel: assessment.riskLevel || "보통",
+    summary: assessment.summary || "형사·민사로 확대될 가능성이 있어 법령 원문과 사실관계 확인이 필요합니다.",
+    criminalIssues,
+    civilIssues,
+    mitigationPlan,
+    sourceSearchQueries: (assessment.sourceSearchQueries || []).slice(0, 5),
+    caution: assessment.caution || "이 내용은 법률정보 정리이며, 처벌·배상 가능성은 원문과 구체적 사실관계에 따라 달라집니다."
+  };
+}
+
+function buildLocalLegalConsequenceAssessment(context, preset, riskSignals = []) {
+  const text = [
+    context.baseQuestion || "",
+    ...(context.details || []).map((item) => `${item.question} ${item.answer}`),
+    preset.title || "",
+    ...riskSignals
+  ].join(" ");
+  const normalized = compactText(text);
+  const hasViolenceNegation = /폭행(은|는)?없|폭행없|상해(는|은)?없|상해없|신체접촉(은|는)?없|신체접촉없/.test(normalized);
+  const hasViolenceSignal = !hasViolenceNegation && /폭행|상해|협박|감금|강요|공갈/.test(normalized);
+  const hasCriminalSignal = hasViolenceSignal || /명예훼손|모욕|성폭력|성추행|불법촬영|아동학대|고소|고발|형사|벌금|합의|스토킹|개인정보유출|개인정보누설/.test(normalized);
+  const hasCivilSignal = /손해배상|민사|치료비|위자료|불법행위|배상|합의금|재산피해|금전피해/.test(normalized) || (!hasViolenceNegation && /폭행|상해/.test(normalized)) || /명예훼손|모욕|아동학대|성폭력/.test(normalized);
+  const hasInjuryRecordNeed = !hasViolenceNegation && /상해|폭행|치료비|병원|진단|다쳤|다침|부상|골절|화상|전치/.test(normalized);
+
+  if (!hasCriminalSignal && !hasCivilSignal) {
+    return null;
+  }
+
+  const criminalIssues = [];
+  if (!hasViolenceNegation && /폭행|상해/.test(normalized)) {
+    criminalIssues.push({
+      issue: "폭행·상해 가능성",
+      legalBasis: "형법상 폭행·상해 관련 조문 - 법제처 원문 확인 필요",
+      consequence: "징역·벌금 등 법정형은 상해 발생 여부, 진단기간, 행위 태양에 따라 달라지므로 원문 조문과 판례 확인 후 기재합니다.",
+      sourceStatus: "원문 확인 필요",
+      requiredFacts: ["신체 접촉 또는 상해 발생 여부", "진단서·치료기록", "목격자·영상 등 객관자료"]
+    });
+  }
+  if (/명예훼손|모욕|비방|인스타그램|단체채팅|사이버/.test(normalized)) {
+    criminalIssues.push({
+      issue: "명예훼손·모욕 가능성",
+      legalBasis: "형법 및 정보통신망법상 명예훼손·모욕 관련 조문 - 법제처 원문 확인 필요",
+      consequence: "공연성, 특정성, 사실 적시 여부, 정보통신망 이용 여부에 따라 처벌 범위가 달라져 원문과 판례 대조가 필요합니다.",
+      sourceStatus: "원문 확인 필요",
+      requiredFacts: ["게시물·대화 원본", "확산 범위와 상대 특정 가능성", "삭제·정정·사과 등 사후 조치"]
+    });
+  }
+  if (/아동학대|정서학대/.test(normalized)) {
+    criminalIssues.push({
+      issue: "아동학대 신고·수사 가능성",
+      legalBasis: "아동학대처벌법·아동복지법 관련 조문 - 법제처 원문 확인 필요",
+      consequence: "행위 내용, 반복성, 학생에게 미친 영향, 교육적 지도 범위에 따라 형사 절차와 행정 절차가 갈릴 수 있습니다.",
+      sourceStatus: "원문 확인 필요",
+      requiredFacts: ["생활지도 경위", "학생 진술과 보호자 주장", "학교 규정·상담·목격 기록"]
+    });
+  }
+  if (/성폭력|성추행|불법촬영|성희롱/.test(normalized)) {
+    criminalIssues.push({
+      issue: "성 관련 형사·징계 가능성",
+      legalBasis: "성폭력처벌법, 형법, 양성평등 관련 법령 - 법제처 원문 확인 필요",
+      consequence: "행위 유형과 피해자 연령, 증거 보전 상태에 따라 형사·징계·보호조치가 함께 문제될 수 있습니다.",
+      sourceStatus: "원문 확인 필요",
+      requiredFacts: ["발언·행위의 일시와 장소", "피해자 진술 보호", "메신저·영상·목격자 등 원자료"]
+    });
+  }
+
+  const civilIssues = hasCivilSignal ? [{
+    issue: "불법행위 손해배상 가능성",
+    legalBasis: "민법 제750조 등 불법행위 책임 관련 조문 - 법제처 원문 확인 필요",
+    consequence: "치료비, 위자료, 재산상 손해는 위법행위, 손해, 인과관계, 과실 및 판례 경향을 확인해 판단합니다.",
+    sourceStatus: "원문 확인 필요",
+    requiredFacts: ["피해와 손해액 자료", "행위자와 피해 사이 인과관계", "학교·기관의 사전·사후 조치"]
+  }] : [];
+
+  return normalizeLegalConsequenceAssessment({
+    applies: true,
+    riskLevel: /성폭력|아동학대|상해|고소|고발|형사|소송/.test(normalized) ? "높음" : "보통",
+    summary: "현재 입력 내용에는 형사 또는 민사 사건으로 확대될 수 있는 표현이 있어, 처벌·벌금·손해배상 가능성을 원문과 사실관계 기준으로 별도 확인해야 합니다.",
+    criminalIssues,
+    civilIssues,
+    mitigationPlan: [
+      {
+        priority: "필수",
+        action: "사실관계표를 시간순으로 작성하고 원자료를 보존합니다.",
+        evidence: hasInjuryRecordNeed
+          ? "상담기록, 문자·메신저 원본, 사진·영상, 진단서·치료기록, 목격자 메모"
+          : "상담기록, 문자·메신저 원본, 사진·영상, 목격자 메모",
+        why: "형사·민사 모두 행위, 피해, 인과관계, 고의·과실 판단의 출발점입니다.",
+        legalBasis: "형법·민법·관련 특별법 조문과 판례 대조 필요"
+      },
+      {
+        priority: "권고",
+        action: "피해 회복 또는 재발방지 조치를 기록하되, 책임 인정 문구는 신중히 검토합니다.",
+        evidence: "사과·정정·삭제·분리조치·상담지원·재발방지 안내 기록",
+        why: "사후 조치는 분쟁 완화와 양형·배상 판단에 참고될 수 있으나, 사실과 다른 인정은 오히려 불리할 수 있습니다.",
+        legalBasis: "양형·손해배상 관련 판례 확인 필요"
+      },
+      {
+        priority: "선택",
+        action: "유사 판례와 행정자료를 찾아 상담 질문지를 만듭니다.",
+        evidence: "관련 판례 요지, 법령 원문 링크, 학교 규정·교육청 안내",
+        why: "전문가 상담 시 쟁점을 좁히고 불필요한 과금을 줄이는 데 도움이 됩니다.",
+        legalBasis: "법원 판례·법제처 원문 확인 필요"
+      }
+    ],
+    sourceSearchQueries: buildLegalConsequenceSourceQueries(normalized),
+    caution: "형량·벌금·손해배상 액수는 현재 보고서에서 단정하지 않고, 법제처 원문·판례·구체적 사실관계 확인 뒤 보강해야 합니다."
+  });
+}
+
+function buildLegalConsequenceSourceQueries(normalized) {
+  const queries = [];
+  if (/폭행|상해/.test(normalized)) queries.push("형법 폭행 상해 법정형 판례");
+  if (/명예훼손|모욕|비방|사이버|인스타그램|단체채팅/.test(normalized)) queries.push("형법 정보통신망법 명예훼손 모욕 판례");
+  if (/아동학대|정서학대/.test(normalized)) queries.push("아동학대처벌법 아동복지법 생활지도 판례");
+  if (/성폭력|성추행|불법촬영|성희롱/.test(normalized)) queries.push("성폭력처벌법 성희롱 징계 판례");
+  if (/손해배상|민사|치료비|위자료|불법행위|배상/.test(normalized)) queries.push("민법 불법행위 손해배상 위자료 판례");
+  return queries.length ? queries : ["형사 처벌 민사 손해배상 판례"];
 }
 
 function buildFinalAdvice(seed) {
@@ -2883,6 +3083,70 @@ function renderEvidenceItems(report) {
   `;
 }
 
+function renderLegalConsequenceAssessment(assessment) {
+  if (!assessment?.applies) {
+    return "";
+  }
+
+  const issueCards = [
+    ...(assessment.criminalIssues || []).map((item) => ({ ...item, type: "형사" })),
+    ...(assessment.civilIssues || []).map((item) => ({ ...item, type: "민사" }))
+  ].slice(0, 5);
+  const mitigation = (assessment.mitigationPlan || []).slice(0, 5);
+
+  return `
+    <div class="report-section legal-consequence-section">
+      <h4>3-1. 형사·민사 전환 가능성</h4>
+      <p class="report-section-note">${escapeHtml(assessment.summary || "형사·민사 가능성은 원문과 사실관계 확인 후 판단해야 합니다.")}</p>
+      <div class="report-api-head">
+        <strong>위험도</strong>
+        <span class="${/높음|즉시/.test(assessment.riskLevel || "") ? "needs-review" : "verified"}">${escapeHtml(assessment.riskLevel || "확인 필요")}</span>
+      </div>
+      ${issueCards.length ? `
+        <div class="report-mini-list">
+          ${issueCards.map((item) => `
+            <article class="report-mini-card">
+              <span class="student-case-badge">${escapeHtml(item.type)} · ${escapeHtml(item.sourceStatus || "원문 확인 필요")}</span>
+              <b>${escapeHtml(item.issue)}</b>
+              <p>${escapeHtml(item.consequence)}</p>
+              <em>법적 근거: ${escapeHtml(item.legalBasis || "원문 확인 필요")}</em>
+              ${item.requiredFacts?.length ? `<em>확인할 사실: ${escapeHtml(item.requiredFacts.join(" · "))}</em>` : ""}
+            </article>
+          `).join("")}
+        </div>
+      ` : ""}
+      ${mitigation.length ? `
+        <div class="evidence-items">
+          <h5>감경·감량 또는 책임 완화 준비자료</h5>
+          ${mitigation.map((item) => `
+            <article>
+              <span class="evidence-priority ${escapeHtml(item.priority === "필수" ? "required" : item.priority === "선택" ? "optional" : "recommended")}">${escapeHtml(item.priority || "권고")}</span>
+              <h5>${escapeHtml(item.action)}</h5>
+              <p>${escapeHtml(item.why || "")}</p>
+              <dl>
+                <div>
+                  <dt>준비 자료</dt>
+                  <dd>${escapeHtml(item.evidence || "관련 원자료와 상담 기록")}</dd>
+                </div>
+                <div>
+                  <dt>근거·판례 확인</dt>
+                  <dd>${escapeHtml(item.legalBasis || "원문·판례 확인 필요")}</dd>
+                </div>
+              </dl>
+            </article>
+          `).join("")}
+        </div>
+      ` : ""}
+      ${assessment.sourceSearchQueries?.length ? `
+        <div class="search-keywords" aria-label="형사 민사 확인 검색어">
+          ${assessment.sourceSearchQueries.map((keyword) => `<code>${escapeHtml(keyword)}</code>`).join("")}
+        </div>
+      ` : ""}
+      ${assessment.caution ? `<p class="report-disclaimer">${escapeHtml(assessment.caution)}</p>` : ""}
+    </div>
+  `;
+}
+
 function renderCaseReport(report) {
   return `
     <section class="case-report" id="caseReport" aria-label="사안 보고서">
@@ -2920,6 +3184,8 @@ function renderCaseReport(report) {
         <h4>3. 핵심 판단 포인트</h4>
         ${renderReportList((report.issueSummary || []).slice(0, 4), "", { basis: true, report })}
       </div>
+
+      ${renderLegalConsequenceAssessment(report.legalConsequenceAssessment)}
 
       <div class="report-section">
         <h4>4. 대처 방안</h4>

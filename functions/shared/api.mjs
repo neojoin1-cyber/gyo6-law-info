@@ -188,7 +188,7 @@ async function callOpenAiLegalAnalysis(openAiKey, payload) {
         },
         verbosity: "medium"
       },
-      max_output_tokens: 4200
+      max_output_tokens: 5600
     }),
     signal: AbortSignal.timeout(25000)
   });
@@ -233,6 +233,11 @@ function getLegalAnalysisInstructions() {
     "증빙자료는 필수 1~2개와 권고 1~2개 위주로 제한하세요. 실제 법적 필수 자료가 불명확하면 필수라고 과장하지 마세요.",
     "주체별 조치사항은 현재 사안에 직접 관련된 주체 2~3개만 정리하세요.",
     "법령은 조문을 단정하기보다 우선 확인해야 할 공식자료와 검색어를 제시하세요. 조문을 말할 때는 확인 필요 상태로 표현하세요.",
+    "교사·학생·학부모의 일반 상담이라도 폭행, 상해, 협박, 명예훼손, 모욕, 성폭력, 아동학대, 개인정보 유출, 손해배상, 고소·고발·소송 가능성이 보이면 legalConsequenceAssessment.applies를 true로 설정하세요.",
+    "형사 사건 또는 민사 사건으로 발전할 가능성이 있으면 형량·벌금·손해배상 범위, 감경·감량 또는 책임 완화에 필요한 행동과 증거를 별도 섹션으로 정리하세요.",
+    "다만 형량, 벌금, 과태료, 징역 기간, 손해배상 범위는 officialSources의 원문 조문·판례·해석례에 근거가 있을 때만 구체적으로 쓰세요. 원문이 없으면 '원문 확인 필요'라고 표시하고 sourceSearchQueries에 확인할 법령·판례 검색어를 넣으세요.",
+    "감경·감량 자료는 필수, 권고, 선택으로 구분하고, 반성문처럼 무조건 유리하다고 단정하지 말고 실제로 필요한 조치와 증거 보전 중심으로 안내하세요.",
+    "단순 안내, 경미한 민원, 학부모 전달로 끝날 가능성이 큰 사안에는 legalConsequenceAssessment.applies를 false로 두고 형사·민사 위험을 과장하지 마세요.",
     "중대한 위험, 보복, 성희롱, 폭행, 산재, 해고, 소송 가능성이 보일 때만 전문가 상담 단계를 올리세요.",
     "출력은 반드시 요청한 JSON 스키마만 따르세요."
   ].join("\n");
@@ -261,6 +266,7 @@ function getLegalAnalysisSchema() {
       "immediateActions",
       "stakeholderActions",
       "evidencePlan",
+      "legalConsequenceAssessment",
       "expertReferral",
       "sourceSearchQueries",
       "informationNotice"
@@ -331,6 +337,84 @@ function getLegalAnalysisSchema() {
             why: { type: "string" },
             how: { type: "string" }
           }
+        }
+      },
+      legalConsequenceAssessment: {
+        type: "object",
+        additionalProperties: false,
+        required: [
+          "applies",
+          "riskLevel",
+          "summary",
+          "criminalIssues",
+          "civilIssues",
+          "mitigationPlan",
+          "sourceSearchQueries",
+          "caution"
+        ],
+        properties: {
+          applies: { type: "boolean" },
+          riskLevel: {
+            type: "string",
+            enum: ["해당 없음", "낮음", "보통", "높음", "즉시 상담"]
+          },
+          summary: { type: "string" },
+          criminalIssues: {
+            type: "array",
+            items: {
+              type: "object",
+              additionalProperties: false,
+              required: ["issue", "legalBasis", "potentialConsequence", "sourceStatus", "requiredFacts"],
+              properties: {
+                issue: { type: "string" },
+                legalBasis: { type: "string" },
+                potentialConsequence: { type: "string" },
+                sourceStatus: {
+                  type: "string",
+                  enum: ["원문 확인", "원문 확인 필요", "판례 확인 필요"]
+                },
+                requiredFacts: stringArray
+              }
+            }
+          },
+          civilIssues: {
+            type: "array",
+            items: {
+              type: "object",
+              additionalProperties: false,
+              required: ["issue", "legalBasis", "possibleClaim", "sourceStatus", "requiredFacts"],
+              properties: {
+                issue: { type: "string" },
+                legalBasis: { type: "string" },
+                possibleClaim: { type: "string" },
+                sourceStatus: {
+                  type: "string",
+                  enum: ["원문 확인", "원문 확인 필요", "판례 확인 필요"]
+                },
+                requiredFacts: stringArray
+              }
+            }
+          },
+          mitigationPlan: {
+            type: "array",
+            items: {
+              type: "object",
+              additionalProperties: false,
+              required: ["priority", "action", "evidence", "why", "legalBasis"],
+              properties: {
+                priority: {
+                  type: "string",
+                  enum: ["필수", "권고", "선택"]
+                },
+                action: { type: "string" },
+                evidence: { type: "string" },
+                why: { type: "string" },
+                legalBasis: { type: "string" }
+              }
+            }
+          },
+          sourceSearchQueries: stringArray,
+          caution: { type: "string" }
         }
       },
       expertReferral: {
@@ -482,6 +566,27 @@ function buildLawQueries({ laws = [], question = "", topic = "", keywords = [] }
   const text = normalizeMatchText([topic, question, ...keywords].filter(Boolean).join(" "));
   const candidates = [];
 
+  if (hasAnyTerm(text, ["폭행", "상해", "협박", "감금", "강요", "공갈", "고소", "고발", "형사", "벌금", "합의"])) {
+    candidates.push("형법");
+  }
+  if (hasAnyTerm(text, ["명예훼손", "모욕", "비방", "허위사실", "사이버", "인스타그램", "단체채팅", "단톡", "카카오톡", "온라인"])) {
+    candidates.push("형법", "정보통신망 이용촉진 및 정보보호 등에 관한 법률");
+  }
+  if (hasAnyTerm(text, ["손해배상", "민사", "치료비", "위자료", "불법행위", "배상", "합의금"])) {
+    candidates.push("민법");
+  }
+  if (hasAnyTerm(text, ["아동학대", "정서학대", "생활지도 신고"])) {
+    candidates.push("아동학대범죄의 처벌 등에 관한 특례법", "아동복지법");
+  }
+  if (hasAnyTerm(text, ["성폭력", "성추행", "성희롱", "성적", "불법촬영"])) {
+    candidates.push("성폭력범죄의 처벌 등에 관한 특례법", "양성평등기본법", "남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률");
+  }
+  if (hasAnyTerm(text, ["스토킹", "지속적 연락", "따라다님", "접근금지"])) {
+    candidates.push("스토킹범죄의 처벌 등에 관한 법률");
+  }
+  if (hasAnyTerm(text, ["개인정보", "민감정보", "상담내용", "유출", "누설"])) {
+    candidates.push("개인정보 보호법");
+  }
   if (hasAnyTerm(text, ["현장실습", "실습생", "직업계고", "특성화고", "취업", "도제", "일학습병행"])) {
     candidates.push("직업교육훈련 촉진법");
   }
@@ -529,6 +634,10 @@ function buildOfficialSourceQuery({ question = "", topic = "", keywords = [], la
   if (hasAnyTerm(text, ["기간제", "계약", "재계약", "해고"])) topicTerms.push("기간제 근로자");
   if (hasAnyTerm(text, ["중대재해", "산재", "사고", "안전", "위험"])) topicTerms.push("산업안전");
   if (hasAnyTerm(text, ["학교폭력", "학폭"])) topicTerms.push("학교폭력");
+  if (hasAnyTerm(text, ["폭행", "상해", "협박", "고소", "고발", "형사", "벌금"])) topicTerms.push("형사 처벌");
+  if (hasAnyTerm(text, ["손해배상", "민사", "치료비", "위자료", "불법행위"])) topicTerms.push("민사 손해배상");
+  if (hasAnyTerm(text, ["명예훼손", "모욕", "사이버", "인스타그램", "단체채팅"])) topicTerms.push("명예훼손 모욕");
+  if (hasAnyTerm(text, ["아동학대", "정서학대", "생활지도 신고"])) topicTerms.push("아동학대 생활지도");
   if (hasAnyTerm(text, ["민원", "학부모", "생활지도"])) topicTerms.push("학교 민원");
   if (hasAnyTerm(text, ["해외", "호주", "글로벌"])) topicTerms.push("해외 현장실습");
 

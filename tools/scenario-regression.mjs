@@ -250,7 +250,7 @@ const cases = [
     id: "teacher-child-abuse-report",
     question: "교사가 생활지도 중 아동학대 신고를 당했습니다. 신체접촉은 없고 수업 방해 학생에게 자리 이동을 지시한 사안입니다.",
     expect: { preset: "civilComplaint", disposition: "specialist" },
-    mustInclude: ["생활지도", "민원"],
+    mustInclude: ["생활지도", "민원", "형사·민사 전환 가능성", "아동학대"],
     mustNotInclude: [educationDraftText, ...accidentWords]
   },
   {
@@ -327,8 +327,15 @@ const cases = [
     id: "school-violence-cyber-defamation",
     question: "학생 인스타그램에 다른 학생을 비방하는 글이 올라왔고 명예훼손과 학교폭력 절차가 모두 걱정됩니다.",
     expect: { preset: "schoolViolence", disposition: "specialist" },
-    mustInclude: ["학교폭력", "전담기구"],
+    mustInclude: ["학교폭력", "전담기구", "형사·민사 전환 가능성", "명예훼손"],
     mustNotInclude: ["근로기준법", educationDraftText, ...accidentWords]
+  },
+  {
+    id: "student-assault-criminal-civil",
+    question: "학생이 친구에게 폭행을 당해 병원 치료를 받았고 학부모가 고소 가능성, 벌금이나 형량, 치료비 손해배상까지 문의합니다. 학교폭력 절차와 함께 어떤 자료를 준비해야 하나요?",
+    expect: { preset: "schoolViolence", disposition: "specialist" },
+    mustInclude: ["학교폭력", "형사·민사 전환 가능성", "감경·감량", "손해배상"],
+    mustNotInclude: ["근로기준법", educationDraftText]
   },
   {
     id: "school-safety-lab-chemical-leak",
