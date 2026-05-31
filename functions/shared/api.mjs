@@ -48,6 +48,13 @@ function getHealthStatus() {
 async function handleSearch(requestUrl) {
   const question = cleanText(requestUrl.searchParams.get("q") || "");
   const topic = cleanText(requestUrl.searchParams.get("topic") || "general");
+  const topicContext = buildRequestTopicContext({
+    topic,
+    major: requestUrl.searchParams.get("topicMajor"),
+    middle: requestUrl.searchParams.get("topicMiddle"),
+    minor: requestUrl.searchParams.get("topicMinor"),
+    path: requestUrl.searchParams.get("topicPath")
+  });
   const laws = parseList(requestUrl.searchParams.get("laws"));
   const keywords = parseList(requestUrl.searchParams.get("keywords"));
 
@@ -55,14 +62,14 @@ async function handleSearch(requestUrl) {
     return { error: "질문이 비어 있습니다." };
   }
 
-  const lawQueries = buildLawQueries({ laws, question, topic, keywords });
-  const safetyContext = buildSafetyContext(question, keywords, topic);
+  const lawQueries = buildLawQueries({ laws, question, topic, keywords, topicContext });
+  const safetyContext = buildSafetyContext(question, keywords, topic, topicContext);
   const lawOpenApiKey = getLawOpenApiKey();
   const koreanLawMcpBaseUrl = getKoreanLawMcpBaseUrl();
   const publicDataKey = activeEnv.PUBLIC_DATA_API_KEY;
   const hasKoreanLawMcp = hasUsableValue(koreanLawMcpBaseUrl);
-  const officialQuery = buildOfficialSourceQuery({ question, topic, keywords, lawQueries });
-  const educationRuleQueries = buildEducationAdminRuleQueries({ question, topic, keywords });
+  const officialQuery = buildOfficialSourceQuery({ question, topic, keywords, lawQueries, topicContext });
+  const educationRuleQueries = buildEducationAdminRuleQueries({ question, topic, keywords, topicContext });
   const precedentResults = buildPrecedentSearchPreparation({ question, topic, keywords });
 
   const [lawResults, interpretationResults, educationAdminRuleResults, disasterResults, materialResults] = await Promise.all([
@@ -90,6 +97,7 @@ async function handleSearch(requestUrl) {
   return {
     query: question,
     topic,
+    topicContext,
     generatedAt: new Date().toISOString(),
     verification: buildVerificationSummary(),
     status: getHealthStatus().keys,
@@ -576,6 +584,26 @@ function buildVerificationSummary() {
   };
 }
 
+function buildRequestTopicContext({ topic = "", major = "", middle = "", minor = "", path = "" } = {}) {
+  const safeTopic = cleanText(topic || "general");
+  const safeMajor = cleanText(major || "auto");
+  const safeMiddle = cleanText(middle || "auto");
+  const safeMinor = cleanText(minor || "auto");
+  const safePath = cleanText(path || "");
+  const text = uniqueStrings([safeTopic, safeMajor, safeMiddle, safeMinor, safePath]
+    .filter((item) => item && item !== "auto")
+  ).join(" ");
+
+  return {
+    topic: safeTopic,
+    major: safeMajor,
+    middle: safeMiddle,
+    minor: safeMinor,
+    path: safePath,
+    text
+  };
+}
+
 function missingKey(name) {
   return Promise.resolve({
     items: [],
@@ -583,13 +611,13 @@ function missingKey(name) {
   });
 }
 
-function buildLawQueries({ laws = [], question = "", topic = "", keywords = [] } = {}) {
+function buildLawQueries({ laws = [], question = "", topic = "", keywords = [], topicContext = null } = {}) {
   const provided = normalizeProvidedLawQueries(laws);
   if (provided.length) {
     return provided.slice(0, 4);
   }
 
-  const text = normalizeMatchText([topic, question, ...keywords].filter(Boolean).join(" "));
+  const text = normalizeMatchText([topic, topicContext?.text, question, ...keywords].filter(Boolean).join(" "));
   const candidates = [];
 
   if (hasAnyTerm(text, ["폭행", "상해", "협박", "감금", "강요", "공갈", "고소", "고발", "형사", "벌금", "합의"])) {
@@ -642,17 +670,13 @@ function buildLawQueries({ laws = [], question = "", topic = "", keywords = [] }
   return uniqueStrings(candidates).slice(0, 4);
 }
 
-function buildOfficialSourceQuery({ question = "", topic = "", keywords = [], lawQueries = [] } = {}) {
+function buildOfficialSourceQuery({ question = "", topic = "", keywords = [], lawQueries = [], topicContext = null } = {}) {
   const keywordCandidates = asArray(keywords)
     .map((keyword) => cleanText(keyword))
     .filter((keyword) => isSafeOfficialKeyword(keyword))
     .slice(0, 4);
 
-  if (keywordCandidates.length) {
-    return keywordCandidates.join(" ");
-  }
-
-  const text = normalizeMatchText([topic, question].join(" "));
+  const text = normalizeMatchText([topic, topicContext?.text, question].join(" "));
   const topicTerms = [];
   if (hasAnyTerm(text, ["현장실습", "실습생", "특성화고", "직업계고"])) topicTerms.push("현장실습");
   if (hasAnyTerm(text, ["청소", "업무외", "업무외지시", "심부름"])) topicTerms.push("업무 범위");
@@ -667,12 +691,12 @@ function buildOfficialSourceQuery({ question = "", topic = "", keywords = [], la
   if (hasAnyTerm(text, ["민원", "학부모", "생활지도"])) topicTerms.push("학교 민원");
   if (hasAnyTerm(text, ["해외", "호주", "글로벌"])) topicTerms.push("해외 현장실습");
 
-  const combined = uniqueStrings([...topicTerms, ...lawQueries.slice(0, 2)]).join(" ");
+  const combined = uniqueStrings([...topicTerms, ...keywordCandidates.slice(0, 3), ...lawQueries.slice(0, 2)]).join(" ");
   return combined || "현장실습";
 }
 
-function buildEducationAdminRuleQueries({ question = "", topic = "", keywords = [] } = {}) {
-  const text = normalizeMatchText([topic, question, ...asArray(keywords)].filter(Boolean).join(" "));
+function buildEducationAdminRuleQueries({ question = "", topic = "", keywords = [], topicContext = null } = {}) {
+  const text = normalizeMatchText([topic, topicContext?.text, question, ...asArray(keywords)].filter(Boolean).join(" "));
   const candidates = [];
   const educationContext = hasAnyTerm(text, [
     "학교", "학생", "교사", "교원", "학부모", "교육청", "담임", "학교장",
@@ -2143,12 +2167,12 @@ const safetySignalCatalog = {
   ]
 };
 
-function buildSafetyContext(question, keywords, topic) {
-  const text = `${question} ${keywords.join(" ")}`;
+function buildSafetyContext(question, keywords, topic, topicContext = null) {
+  const text = `${topicContext?.text || ""} ${question} ${keywords.join(" ")}`;
   const groups = Object.fromEntries(
     Object.entries(safetySignalCatalog).map(([name, signals]) => [name, collectSignals(text, signals)])
   );
-  const disasterQueries = buildDisasterQueries(groups, keywords, topic);
+  const disasterQueries = buildDisasterQueries(groups, keywords, topic, topicContext);
 
   return {
     topic,
@@ -2168,7 +2192,7 @@ function collectSignals(text, signals) {
     }));
 }
 
-function buildDisasterQueries(groups, keywords, topic) {
+function buildDisasterQueries(groups, keywords, topic, topicContext = null) {
   const terms = [
     ...groups.accident.map((item) => item.query),
     ...groups.equipment.map((item) => item.query),
@@ -2176,7 +2200,11 @@ function buildDisasterQueries(groups, keywords, topic) {
     ...groups.injury.map((item) => item.query)
   ];
 
-  if ((topic === "fieldTraining" || topic === "schoolSafety") && !terms.length) {
+  const safetyTopic = [topic, topicContext?.topic, topicContext?.major]
+    .filter(Boolean)
+    .some((item) => ["fieldTraining", "schoolSafety"].includes(item));
+
+  if (safetyTopic && !terms.length) {
     terms.push("안전사고");
   }
 

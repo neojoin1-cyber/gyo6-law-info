@@ -476,6 +476,46 @@ for (const testCase of cases) {
   }
 }
 
+const autoTopicCases = [
+  {
+    id: "auto-topic-field-after-hours",
+    question: "현장실습 시간 종료 후 청소를 반복해서 시킨다는 상담이 들어왔습니다.",
+    expected: { major: "fieldTraining", middle: "scope", minor: "afterHours", keyword: "업무범위" }
+  },
+  {
+    id: "auto-topic-staff-bullying",
+    question: "행정실 기간제근로자가 상급자에게 모욕과 개인 심부름 지시를 반복적으로 받습니다.",
+    expected: { major: "staffLabor", middle: "workplaceIssue", minor: "bullying", keyword: "괴롭힘" }
+  },
+  {
+    id: "auto-topic-recruitment-document",
+    question: "고졸 공채 채용공고와 직무기술서, 접수기한을 게시판에 어떻게 정리해야 하나요?",
+    expected: { major: "employment", middle: "hiring", minor: "document", keyword: "채용절차" }
+  }
+];
+
+for (const testCase of autoTopicCases) {
+  const preset = context.findPreset(testCase.question, "auto");
+  const topicContext = context.resolveTopicContext(testCase.question, preset, { major: "auto", middle: "auto", minor: "auto", presetType: "auto", labels: [], label: "자동 분류" });
+  const keywords = context.buildKeywords(testCase.question, preset, topicContext).join(" ");
+
+  for (const [key, value] of Object.entries(testCase.expected)) {
+    if (key === "keyword") {
+      if (!keywords.includes(value)) {
+        failures.push(`${testCase.id}: expected keyword "${value}" in "${keywords}"`);
+      }
+      continue;
+    }
+    if (topicContext[key] !== value) {
+      failures.push(`${testCase.id}: ${key} expected ${value}, got ${topicContext[key]}`);
+    }
+  }
+
+  if (!topicContext.autoDetected || !topicContext.label.startsWith("자동 분류 > ")) {
+    failures.push(`${testCase.id}: expected auto-detected topic label, got "${topicContext.label}"`);
+  }
+}
+
 const liveSourceReport = {
   title: "현장실습 시간 종료 후 청소 지시 사안 보고서",
   lead: "현장실습생에게 실습시간 종료 후 청소를 반복 지시한 사안입니다.",

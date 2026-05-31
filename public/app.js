@@ -674,8 +674,9 @@ form.addEventListener("submit", (event) => {
 
   syncTopicTypeInput();
   const scopes = [...form.querySelectorAll("input[name='scope']:checked")].map((input) => input.value);
-  const selectedTopicContext = getSelectedTopicContext();
-  const preset = findPreset(question, selectedTopicContext.presetType);
+  const manualTopicContext = getSelectedTopicContext();
+  const preset = findPreset(question, manualTopicContext.presetType);
+  const selectedTopicContext = resolveTopicContext(question, preset, manualTopicContext);
   renderResult(question, preset, scopes, answerModeInput.value, userRoleInput.value, partyRoleInput.value, selectedTopicContext);
   if (skipNextAutoScroll) {
     skipNextAutoScroll = false;
@@ -1058,7 +1059,7 @@ function renderResult(question, preset, scopes, answerMode, userRole, partyRole 
   const scenario = analyzeQuestionScenario(question, preset);
   const displayPreset = getScenarioDisplayPreset(preset, scenario);
   const sourceLinks = getSourceLinks(encodedQuestion, displayPreset, scopes);
-  const keywords = buildKeywords(question, displayPreset);
+  const keywords = buildKeywords(question, displayPreset, selectedTopicContext);
   const sourcePlan = getSourcePlan(displayPreset, scopes);
   const factPrompts = getFactPrompts(displayPreset, userRole);
   const riskSignals = detectRiskSignals(question);
@@ -1131,6 +1132,8 @@ function renderResult(question, preset, scopes, answerMode, userRole, partyRole 
       <strong>질문자: ${escapeHtml(roleGuide.label)} · 당사자: ${escapeHtml(partyGuide.label)}</strong>
       <p>${escapeHtml(roleGuide.advice)} ${escapeHtml(partyGuide.advice)}</p>
     </section>
+
+    ${renderTopicClassificationNote(selectedTopicContext)}
 
     <section class="result-block">
       <h3>${escapeHtml(displayPreset.title)}</h3>
@@ -1229,7 +1232,7 @@ function renderResult(question, preset, scopes, answerMode, userRole, partyRole 
   `;
 
   loadAiAnalysis(question, displayPreset, keywords, userRole, answerMode, caseId, partyRole, selectedTopicContext, questionFingerprint);
-  loadLiveSources(question, displayPreset, keywords, caseId, questionFingerprint);
+  loadLiveSources(question, displayPreset, keywords, caseId, questionFingerprint, selectedTopicContext);
 }
 
 async function loadAiAnalysis(question, preset, keywords, userRole, answerMode, caseId, partyRole = "auto", topicContext = null, questionFingerprint = "") {
@@ -1935,7 +1938,7 @@ function mapReferralLevel(level = "") {
   return "internal";
 }
 
-async function loadLiveSources(question, preset, keywords, caseId, questionFingerprint = "") {
+async function loadLiveSources(question, preset, keywords, caseId, questionFingerprint = "", topicContext = null) {
   const mount = document.querySelector("#liveSourceMount");
   if (!mount) {
     return;
@@ -1962,7 +1965,11 @@ async function loadLiveSources(question, preset, keywords, caseId, questionFinge
       q: question,
       topic: preset.type,
       laws: preset.laws.join("|"),
-      keywords: keywords.join("|")
+      keywords: keywords.join("|"),
+      topicMajor: topicContext?.major || "auto",
+      topicMiddle: topicContext?.middle || "auto",
+      topicMinor: topicContext?.minor || "auto",
+      topicPath: topicContext?.label || preset.title
     });
     const response = await fetch(getOfficialSearchUrl(params), {
       headers: { accept: "application/json" },
@@ -5785,7 +5792,8 @@ function getSelectedTopicContext() {
     minor: topicMinorInput?.value || "auto",
     presetType: minorNode?.preset || middleNode?.preset || majorNode.preset || "auto",
     labels,
-    label: labels.join(" > ") || "자동 분류"
+    label: labels.join(" > ") || "자동 분류",
+    autoDetected: false
   };
 }
 
@@ -5795,14 +5803,141 @@ function syncTopicTypeInput() {
   }
 }
 
-function buildKeywords(question, preset) {
+function resolveTopicContext(question, preset, selectedTopicContext = null) {
+  if (selectedTopicContext?.major && selectedTopicContext.major !== "auto") {
+    return {
+      ...selectedTopicContext,
+      autoDetected: false
+    };
+  }
+
+  return buildTopicContextFromPath(inferTopicPath(question, preset), true);
+}
+
+function inferTopicPath(question, preset) {
+  const normalized = compactText(question);
+  const presetType = preset?.type || "general";
+  const has = (pattern) => pattern.test(normalized);
+
+  if (presetType === "apprenticeship" || has(/도제학교|산학일체형|일학습병행|기업훈련|훈련계약|훈련수당/)) {
+    if (has(/수당|임금|급여/)) return { major: "fieldTraining", middle: "apprenticeship", minor: "allowance" };
+    if (has(/계약|협약/)) return { major: "fieldTraining", middle: "apprenticeship", minor: "trainingContract" };
+    return { major: "fieldTraining", middle: "apprenticeship", minor: has(/시간|야간|휴일|초과/) ? "trainingTime" : "auto" };
+  }
+
+  if (presetType === "overseasTraining" || has(/해외현장실습|해외실습|글로벌현장학습|호주|국외파견|해외/)) {
+    if (has(/보험|안전|사고|위험/)) return { major: "fieldTraining", middle: "overseas", minor: "insurance" };
+    if (has(/동의|보호자|안내/)) return { major: "fieldTraining", middle: "overseas", minor: "consent" };
+    return { major: "fieldTraining", middle: "overseas", minor: has(/호주|국외|파견/) ? "australia" : "auto" };
+  }
+
+  if (presetType === "fieldTraining") {
+    if (has(/위험|기계|프레스|끼임|추락|감전|화상|사고|다쳤|다침|부상|골절|안전/)) {
+      return { major: "fieldTraining", middle: "scope", minor: "safety" };
+    }
+    if (has(/시간종료|종료후|퇴근후|야간|휴일|잔업|초과|늦게/)) {
+      return { major: "fieldTraining", middle: "scope", minor: "afterHours" };
+    }
+    if (has(/청소|잡무|심부름|업무외|업무범위|반복|재료|정리정돈/)) {
+      return { major: "fieldTraining", middle: "scope", minor: "cleaning" };
+    }
+    return { major: "fieldTraining", middle: "scope", minor: "auto" };
+  }
+
+  if (presetType === "schoolSafety") {
+    if (has(/중대재해|안전보건관리체계|위험성평가|경영책임자|위탁업체|외부업체/)) {
+      if (has(/위탁|외부업체|사업장|급식실|조리실무사/)) return { major: "schoolSafety", middle: "seriousAccident", minor: "workplace" };
+      if (has(/체계|점검표|예방|위험성평가/)) return { major: "schoolSafety", middle: "seriousAccident", minor: "safetySystem" };
+      return { major: "schoolSafety", middle: "seriousAccident", minor: "schoolFacility" };
+    }
+    if (has(/보고|기록|교육청|조사표|산재/)) return { major: "schoolSafety", middle: "accident", minor: "report" };
+    if (has(/예방|재발|점검|체크리스트|교육자료/)) return { major: "schoolSafety", middle: "accident", minor: "prevention" };
+    return { major: "schoolSafety", middle: "accident", minor: has(/부상|치료|병원|타박상|두통|화상|골절/) ? "injury" : "auto" };
+  }
+
+  if (presetType === "schoolViolence") {
+    if (has(/불복|재심|행정심판|이의제기/)) return { major: "schoolViolence", middle: "procedure", minor: "appeal" };
+    if (has(/전담기구|심의|조치|위원회/)) return { major: "schoolViolence", middle: "procedure", minor: "committee" };
+    return { major: "schoolViolence", middle: "procedure", minor: "reporting" };
+  }
+
+  if (presetType === "staffLabor") {
+    if (has(/괴롭힘|모욕|성희롱|야근|심부름|상급자|직장내/)) return { major: "staffLabor", middle: "workplaceIssue", minor: "bullying" };
+    if (has(/휴가|출장|근태|복무|연차/)) return { major: "staffLabor", middle: "workplaceIssue", minor: "leaveTrip" };
+    if (has(/징계|민원/)) return { major: "staffLabor", middle: "workplaceIssue", minor: "discipline" };
+    if (has(/행정직|교육공무직|조리실무사|행정실/)) return { major: "staffLabor", middle: "employmentStatus", minor: "adminStaff" };
+    if (has(/재계약|계약갱신|갱신기대권/)) return { major: "staffLabor", middle: "employmentStatus", minor: "renewal" };
+    return { major: "staffLabor", middle: "employmentStatus", minor: has(/기간제|단시간|계약직/) ? "fixedTerm" : "auto" };
+  }
+
+  if (presetType === "civilComplaint") {
+    if (has(/생활기록|생기부|기록|증빙|개인정보|상담내용/)) return { major: "civilComplaint", middle: "schoolComplaint", minor: "records" };
+    if (has(/안내|면담|전화|사과|재발방지|답변/)) return { major: "civilComplaint", middle: "schoolComplaint", minor: "communication" };
+    return { major: "civilComplaint", middle: "schoolComplaint", minor: "guidance" };
+  }
+
+  if (presetType === "employment") {
+    if (has(/공채|채용|지원서|접수|직무기술서|학교장추천|추천/)) {
+      if (has(/추천|학교장/)) return { major: "employment", middle: "hiring", minor: "recommendation" };
+      if (has(/공고|직무기술서|접수/)) return { major: "employment", middle: "hiring", minor: "document" };
+      return { major: "employment", middle: "hiring", minor: "highSchoolHiring" };
+    }
+    if (has(/해고|퇴직|권고사직/)) return { major: "employment", middle: "contract", minor: "dismissal" };
+    if (has(/임금|수당|월급|급여|연차수당/)) return { major: "employment", middle: "contract", minor: "wage" };
+    return { major: "employment", middle: "contract", minor: "contractForm" };
+  }
+
+  return { major: "auto", middle: "auto", minor: "auto" };
+}
+
+function buildTopicContextFromPath(path = {}, autoDetected = false) {
+  const majorValue = path.major || "auto";
+  const majorNode = topicTaxonomy[majorValue] || topicTaxonomy.auto;
+  const middleNode = (majorNode.middles || []).find((item) => item.value === path.middle) || null;
+  const minorNode = (middleNode?.minors || []).find((item) => item.value === path.minor) || null;
+  const labels = [majorNode, middleNode, minorNode]
+    .map((item) => item?.label)
+    .filter(Boolean);
+  const label = labels.join(" > ") || "자동 분류";
+
+  return {
+    major: majorNode === topicTaxonomy.auto ? "auto" : majorValue,
+    middle: middleNode?.value || "auto",
+    minor: minorNode?.value || "auto",
+    presetType: minorNode?.preset || middleNode?.preset || majorNode.preset || "auto",
+    labels,
+    label: autoDetected && label !== "자동 분류" ? `자동 분류 > ${label}` : label,
+    autoDetected
+  };
+}
+
+function renderTopicClassificationNote(topicContext = {}) {
+  const label = topicContext.label || "자동 분류";
+  const guide = topicContext.autoDetected
+    ? "질문 문장만 기준으로 잡은 분류 후보입니다. 맞지 않으면 왼쪽의 대분류·중분류·소분류를 직접 바꿔 다시 검색할 수 있습니다."
+    : "사용자가 선택한 분류를 우선 적용했습니다. 세부 분류는 공식자료 검색어와 보고서 맥락을 좁히는 힌트로만 사용합니다.";
+
+  return `
+    <section class="role-note" aria-label="질문유형 분류">
+      <strong>질문유형: ${escapeHtml(label)}</strong>
+      <p>${escapeHtml(guide)}</p>
+    </section>
+  `;
+}
+
+function buildKeywords(question, preset, topicContext = null) {
   const questionWords = question
     .replace(/[^\p{Letter}\p{Number}\s]/gu, " ")
     .split(/\s+/)
     .filter((word) => word.length >= 2)
     .slice(0, 3);
 
-  return [...new Set([...questionWords, ...preset.tags, ...preset.laws])].slice(0, 8);
+  const topicWords = (topicContext?.labels || [])
+    .flatMap((label) => String(label).split(/[>·ㆍ\-\s]+/))
+    .map((word) => word.trim())
+    .filter((word) => word.length >= 2 && word !== "자동" && word !== "분류");
+
+  return [...new Set([...topicWords, ...questionWords, ...preset.tags, ...preset.laws])].slice(0, 10);
 }
 
 function getSourceLinks(encodedQuestion, preset, scopes) {
