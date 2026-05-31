@@ -3157,7 +3157,7 @@ function renderLegalConsequenceAssessment(assessment) {
 
   return `
     <div class="report-section legal-consequence-section">
-      <h4>3-2. 형사·민사 전환 가능성</h4>
+      <h4>3-3. 형사·민사 전환 가능성</h4>
       <p class="report-section-note">${escapeHtml(assessment.summary || "형사·민사 가능성은 원문과 사실관계 확인 후 판단해야 합니다.")}</p>
       <div class="report-api-head">
         <strong>위험도</strong>
@@ -3308,6 +3308,136 @@ function normalizeReportText(value = "") {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
 
+function renderInterpretationAndCaseBrief(report = {}) {
+  const interpretationItems = selectReportInterpretationItems(report, 4);
+  const caseStatus = buildCaseLawStatus(report);
+  if (!interpretationItems.length && !caseStatus.show) {
+    return "";
+  }
+
+  return `
+    <div class="report-section report-interpretation-brief">
+      <h4>3-2. 판례·행정해석 확인 상태</h4>
+      <p class="report-section-note">행정해석·교육부 기준자료는 쟁점 판단의 보조자료입니다. 판례는 사법정보공유포털 또는 국회법률도서관 등 승인된 공식 API 결과가 있을 때만 구체적으로 표시합니다.</p>
+      ${interpretationItems.length ? `
+        <div class="report-mini-list">
+          ${interpretationItems.map((item) => {
+            const url = safeUrl(item.url);
+            return `
+              <article class="report-mini-card">
+                <span class="student-case-badge">${escapeHtml(item.groupLabel)}</span>
+                <b>${escapeHtml(item.title)}</b>
+                <p>${escapeHtml(item.use)}</p>
+                ${item.summary ? `<em>${escapeHtml(item.summary)}</em>` : ""}
+                <small>${escapeHtml(item.source)}${item.date ? ` · ${escapeHtml(item.date)}` : ""}${item.status ? ` · ${escapeHtml(item.status)}` : ""}</small>
+                ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
+              </article>
+            `;
+          }).join("")}
+        </div>
+      ` : `
+        <p class="report-section-note">현재 질문과 직접 연결된 공식 행정해석 후보는 아직 없습니다.</p>
+      `}
+      ${caseStatus.show ? `
+        <div class="report-api-relevance">
+          <strong>${escapeHtml(caseStatus.title)}</strong>
+          <p>${escapeHtml(caseStatus.message)}</p>
+          ${caseStatus.queries.length ? `<small>확인 검색어: ${escapeHtml(caseStatus.queries.join(", "))}</small>` : ""}
+        </div>
+      ` : ""}
+    </div>
+  `;
+}
+
+function selectReportInterpretationItems(report = {}, limit = 4) {
+  const results = report.officialSourceContext?.results || {};
+  const groups = [
+    {
+      groupLabel: "법령해석례",
+      items: results.interpretations,
+      use: "법령 적용 방향을 확인하는 보조자료입니다. 조문 원문과 사실관계에 맞는지 함께 대조합니다."
+    },
+    {
+      groupLabel: "교육부 법령해석",
+      items: results.educationInterpretations,
+      use: "교육 분야 쟁점에서 교육부 해석 방향을 확인하는 보조자료입니다."
+    },
+    {
+      groupLabel: "교육부 공식 기준자료",
+      items: results.educationAdminRules,
+      use: "학교 실무에 참고할 행정규칙·고시·훈령 후보입니다. 판례나 법령해석으로 바꾸어 부르지 않습니다."
+    }
+  ];
+
+  return groups
+    .flatMap((group) => normalizeReportSourceItems(group.items)
+      .map((item) => ({
+        ...item,
+        groupLabel: group.groupLabel,
+        use: group.use,
+        sortScore: Number(item.relevance?.score || 0) + (item.current ? 20 : 0)
+      })))
+    .sort((left, right) =>
+      right.sortScore - left.sortScore ||
+      getApiComparableDate(right.date) - getApiComparableDate(left.date) ||
+      left.title.localeCompare(right.title, "ko-KR")
+    )
+    .slice(0, limit);
+}
+
+function normalizeReportSourceItems(items = []) {
+  return (Array.isArray(items) ? items : [])
+    .map((item) => ({
+      title: normalizeReportText(item.title || item.subtitle || "제목 없음"),
+      source: normalizeReportText(item.source || "공식 출처"),
+      date: normalizeReportText(item.date || item.effectiveDate || ""),
+      status: normalizeReportText(item.currentStatus || item.reliability?.label || item.reliability || ""),
+      summary: normalizeReportText(item.summary || item.subtitle || "").slice(0, 220),
+      url: item.url || "",
+      current: Boolean(item.current),
+      relevance: item.relevance || null
+    }))
+    .filter((item) => item.title && !item.title.includes("제목 없음"));
+}
+
+function buildCaseLawStatus(report = {}) {
+  const sourceContext = report.officialSourceContext || {};
+  const status = sourceContext.status || {};
+  const queryText = [
+    report.title,
+    report.lead,
+    report.subtitle,
+    ...(report.sourceSearchQueries || []),
+    report.legalConsequenceAssessment?.summary || "",
+    report.legalConsequenceAssessment?.riskLevel || ""
+  ].filter(Boolean).join(" ");
+  const needsCaseLaw = /판례|형사|민사|손해배상|위자료|징역|벌금|과태료|고소|고발|폭행|상해|명예훼손|모욕|아동학대|성폭력|직장내괴롭힘|부당해고|징계|소송/.test(compactText(queryText));
+  const queries = uniqueStrings([
+    ...(report.sourceSearchQueries || []),
+    ...(report.legalConsequenceAssessment?.sourceSearchQueries || [])
+  ]).filter((query) => /판례|형사|민사|손해배상|징역|벌금|처벌|위자료/.test(query)).slice(0, 4);
+
+  if (!needsCaseLaw && !queries.length) {
+    return { show: false, title: "", message: "", queries: [] };
+  }
+
+  if (status.scourt || status.nanet) {
+    return {
+      show: true,
+      title: "판례 공식 API 연결 준비 상태",
+      message: "판례 관련 API 키는 감지되었지만, 현재 보고서 본문에는 공식 판례 결과가 도착한 경우에만 사건명·법원·선고일·요지를 표시합니다. 결과가 없으면 판례 내용을 추정하지 않습니다.",
+      queries
+    };
+  }
+
+  return {
+    show: true,
+    title: "공식 판례 API 미연결",
+    message: "현재 판례는 사법정보공유포털 또는 국회법률도서관 공식 API 승인 결과가 연결되기 전입니다. 따라서 형량, 벌금, 손해배상액, 판례 경향은 단정하지 않고 판례 확인 필요 상태로 남깁니다.",
+    queries
+  };
+}
+
 function renderCaseReport(report) {
   return `
     <section class="case-report" id="caseReport" aria-label="사안 보고서">
@@ -3349,6 +3479,8 @@ function renderCaseReport(report) {
       <div id="reportOfficialArticleBrief">
         ${renderOfficialArticleBrief(report)}
       </div>
+
+      ${renderInterpretationAndCaseBrief(report)}
 
       ${renderLegalConsequenceAssessment(report.legalConsequenceAssessment)}
 

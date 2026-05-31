@@ -527,6 +527,47 @@ if (noOfficialArticleBrief) {
   failures.push("official-article-brief: should stay hidden when there is no confirmed article");
 }
 
+const interpretationBrief = context.renderInterpretationAndCaseBrief({
+  title: "학교 생활지도 민원 보고서",
+  lead: "학생 생활지도와 민원 대응 기준을 확인합니다.",
+  sourceSearchQueries: ["아동학대처벌법 아동복지법 생활지도 판례"],
+  officialSourceContext: {
+    status: { scourt: false, nanet: false },
+    results: {
+      interpretations: [{
+        title: "생활지도 관련 법령해석례",
+        source: "국가법령정보센터",
+        date: "2026.01.01",
+        summary: "생활지도 사안의 법령 적용 방향을 확인하는 후보입니다.",
+        url: "https://www.law.go.kr/LSW/expcInfoP.do?mode=1"
+      }],
+      educationInterpretations: [{
+        title: "교육부 생활지도 법령해석",
+        source: "국가법령정보센터",
+        date: "2026.02.01",
+        summary: "교육부 소관 법령해석 후보입니다."
+      }],
+      educationAdminRules: [{
+        title: "교원의 학생생활지도에 관한 고시",
+        source: "국가법령정보센터",
+        date: "2026.03.01",
+        summary: "학교 실무 기준자료입니다.",
+        current: true,
+        relevance: { score: 91, label: "우선 확인" }
+      }]
+    }
+  }
+});
+if (!interpretationBrief.includes("3-2. 판례·행정해석 확인 상태")) {
+  failures.push("interpretation-brief: expected report body section title");
+}
+if (!interpretationBrief.includes("교육부 공식 기준자료") || interpretationBrief.includes("교육부 행정해석")) {
+  failures.push("interpretation-brief: education admin rules must be labeled as official standards, not interpretations");
+}
+if (!interpretationBrief.includes("공식 판례 API 미연결") || !interpretationBrief.includes("판례 확인 필요")) {
+  failures.push("interpretation-brief: expected explicit case-law pending status when no official case API is connected");
+}
+
 const oldBranchOrder = context.renderReportLiveSources({
   results: {
     laws: [{
