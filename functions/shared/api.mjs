@@ -762,6 +762,13 @@ async function searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKor
 }
 
 async function searchInterpretationsWithPreferredSource({ lawOpenApiKey, question, hasKoreanLawMcp }) {
+  if (hasKoreanLawMcp) {
+    const gatewayResults = await searchInterpretationsViaGateway(question);
+    if (gatewayResults.items.length || !isDirectInterpretationFallbackEnabled()) {
+      return gatewayResults;
+    }
+  }
+
   if (hasKoreanLawMcp && isMcpResearchEnabled()) {
     const mcpResults = await searchLegalResearchViaMcp(question);
     if (mcpResults.items.length || !hasUsableValue(lawOpenApiKey) || !isDirectInterpretationFallbackEnabled()) {
@@ -788,6 +795,77 @@ async function searchInterpretationsWithPreferredSource({ lawOpenApiKey, questio
     : missingKey("LAW_OPEN_API_OC");
 }
 
+async function searchInterpretationsViaGateway(question) {
+  const baseUrl = getKoreanLawMcpBaseUrl();
+  if (!hasUsableValue(baseUrl)) {
+    return { items: [], notices: [] };
+  }
+
+  const headers = {
+    accept: "application/json",
+    "content-type": "application/json"
+  };
+  const token = cleanText(activeEnv.KOREAN_LAW_MCP_TOKEN || "");
+  if (token) {
+    headers["x-gyo6-mcp-token"] = token;
+  }
+
+  try {
+    const response = await fetch(`${baseUrl.replace(/\/+$/, "")}/gyo6/law/interpretations`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({
+        query: question,
+        display: 5
+      }),
+      signal: AbortSignal.timeout(readNumber(activeEnv.KOREAN_LAW_MCP_TIMEOUT_MS) || 12000)
+    });
+
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(data?.error || `HTTP ${response.status}`);
+    }
+
+    const items = asArray(data.interpretations).map(buildKoreanLawGatewayInterpretationItem).filter(Boolean);
+    return {
+      items,
+      notices: [
+        ...(items.length ? ["법제처 원문 게이트웨이에서 행정해석 후보를 확인했습니다."] : []),
+        ...asArray(data.notices)
+      ]
+    };
+  } catch (error) {
+    return {
+      items: [],
+      notices: [`법제처 행정해석 게이트웨이 호출 실패: ${error.message}`]
+    };
+  }
+}
+
+function buildKoreanLawGatewayInterpretationItem(item) {
+  if (!item?.title && !item?.url) {
+    return null;
+  }
+
+  const query = cleanText(item.query || item.title || "");
+  return {
+    title: cleanText(item.title || query || "법제처 행정해석 조회 결과"),
+    subtitle: cleanText(item.subtitle || item.type || "법제처 행정해석"),
+    source: cleanText(item.source || "국가법령정보센터"),
+    date: cleanText(item.date || ""),
+    summary: truncateLongText(cleanLongText(item.summary || ""), 700),
+    url: normalizeLawUrl(item.url, query, "expc"),
+    query,
+    type: cleanText(item.type || "법령해석례"),
+    verifiedAt: cleanText(item.verifiedAt || new Date().toISOString()),
+    reliability: {
+      level: item.reliability?.level || "source-dated",
+      label: item.reliability?.label || "법제처 행정해석 확인",
+      needsReview: Boolean(item.reliability?.needsReview)
+    }
+  };
+}
+
 function buildUserFacingNotices(notices, resultGroups = {}) {
   const uniqueNotices = asArray(notices).map(cleanText).filter(Boolean).filter(uniqueString);
   const groups = [
@@ -812,7 +890,7 @@ function isUserFacingNotice(notice, { hasResults, hasVerifiedLawText }) {
   if (!notice) {
     return false;
   }
-  if (/법제처 원문 게이트웨이.*확인|원문 조문을 확인|재시도로 성공/i.test(notice)) {
+  if (/법제처 원문 게이트웨이.*확인|법제처 .*게이트웨이.*확인|원문 조문을 확인|재시도로 성공/i.test(notice)) {
     return true;
   }
   if (hasVerifiedLawText && /실패|HTTP\s*5\d\d|fallback|건너뛰|숨겼|관련도가 낮|조회되었지만|후보가 없어|값이 없어|MCP .*호출 실패/i.test(notice)) {

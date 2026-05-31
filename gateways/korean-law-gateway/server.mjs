@@ -51,6 +51,10 @@ export async function handleRequest(request, response) {
       return sendJson(response, await searchAndRead(await readJsonBody(request)));
     }
 
+    if (url.pathname === "/gyo6/law/interpretations" && request.method === "POST") {
+      return sendJson(response, await searchInterpretations(await readJsonBody(request)));
+    }
+
     if (url.pathname === "/mcp" && request.method === "POST") {
       return sendJson(response, await handleMcpCall(await readJsonBody(request)));
     }
@@ -75,6 +79,7 @@ export async function searchAndRead(input = {}) {
   for (const query of queries) {
     try {
       const search = await searchLaw(query);
+      notices.push(...search.notices);
       if (!search.items.length) {
         notices.push(`법령 검색 결과 없음: ${query}`);
         continue;
@@ -101,6 +106,36 @@ export async function searchAndRead(input = {}) {
   };
 }
 
+export async function searchInterpretations(input = {}) {
+  const query = cleanArticleText(input.query || input.question || "");
+  const display = Math.max(1, Math.min(Number(input.display || 5), 10));
+  const notices = [];
+
+  if (!query) {
+    return { ok: false, error: "검색할 행정해석 질의어가 없습니다.", interpretations: [], notices };
+  }
+
+  const batches = await Promise.all([
+    searchLawTarget({ target: "moelCgmExpc", search: "2", query, display }),
+    searchLawTarget({ target: "expc", search: "2", query, display })
+  ]);
+
+  const interpretations = [];
+  for (const batch of batches) {
+    notices.push(...batch.notices);
+    interpretations.push(...batch.items.map((item) => buildInterpretationResult(item, query)));
+  }
+
+  return {
+    ok: interpretations.length > 0,
+    generatedAt: new Date().toISOString(),
+    source: "국가법령정보센터",
+    protocol: LAW_API_PROTOCOL,
+    interpretations: uniqueBy(interpretations, "url").slice(0, 8),
+    notices
+  };
+}
+
 async function handleMcpCall(body = {}) {
   const name = body?.params?.name || "";
   const args = body?.params?.arguments || {};
@@ -117,6 +152,20 @@ async function handleMcpCall(body = {}) {
       id,
       result: {
         content: [{ type: "text", text: formatSearchAndReadText(result) }]
+      }
+    };
+  }
+
+  if (name === "search_interpretations") {
+    const result = await searchInterpretations({
+      query: args.query,
+      display: args.display || 5
+    });
+    return {
+      jsonrpc: "2.0",
+      id,
+      result: {
+        content: [{ type: "text", text: formatInterpretationsText(result) }]
       }
     };
   }
@@ -144,17 +193,30 @@ async function handleMcpCall(body = {}) {
 }
 
 async function searchLaw(query) {
-  const urls = lawApiUrls("/lawSearch.do", {
-    OC: getLawApiKey(),
-    target: "law",
-    type: "JSON",
-    query,
-    display: "20"
-  });
-  const data = await fetchJsonWithRetry(urls, { context: "법령 검색" });
-  return {
-    items: normalizeLawSearchItems(data, query)
-  };
+  return searchLawTarget({ target: "law", search: "1", query, display: "20" });
+}
+
+async function searchLawTarget({ target, search, query, display }) {
+  try {
+    const urls = lawApiUrls("/lawSearch.do", {
+      OC: getLawApiKey(),
+      target,
+      type: "JSON",
+      search,
+      query,
+      display
+    });
+    const data = await fetchJsonWithRetry(urls, { context: `${getLawTargetLabel(target)} 검색` });
+    return {
+      items: normalizeLawSearchItems(data, query, target),
+      notices: []
+    };
+  } catch (error) {
+    return {
+      items: [],
+      notices: [`${getLawTargetLabel(target)} 검색 실패: ${scrubSecret(error.message || String(error))}`]
+    };
+  }
 }
 
 async function getLawText({ mst, lawId, jo } = {}) {
@@ -191,20 +253,51 @@ function buildLawResult({ query, selected, lawText, keywords, maxArticles }) {
   };
 }
 
-function normalizeLawSearchItems(data, query) {
+function normalizeLawSearchItems(data, query, target = "law") {
   const root = data?.LawSearch || data?.lawSearch || data || {};
-  const rawItems = asArray(root.law || root.item || root.items || []);
+  const rawItems = asArray(
+    root[target] ||
+    root[getPascalTargetName(target)] ||
+    root.law ||
+    root.expc ||
+    root.MoelCgmExpc ||
+    root.moelCgmExpc ||
+    root.item ||
+    root.items ||
+    []
+  );
 
   return rawItems.map((item) => ({
     query,
-    title: getValue(item, ["법령명한글", "법령명", "법령명_한글", "title"]) || query,
+    target,
+    title: getValue(item, ["법령명한글", "법령명", "법령명_한글", "안건명", "해석례명", "법령해석례명", "title"]) || query,
     mst: getValue(item, ["법령일련번호", "MST", "mst"]),
     lawId: getValue(item, ["법령ID", "ID", "lawId"]),
-    ministry: getValue(item, ["소관부처명", "소관부처", "ministry"]),
+    ministry: getValue(item, ["소관부처명", "소관부처", "해석기관명", "질의기관명", "회신기관명", "ministry"]),
     promulgationDate: formatDate(getValue(item, ["공포일자", "promulgationDate"])),
-    enforcementDate: formatDate(getValue(item, ["시행일자", "enforcementDate"])),
-    detailLink: getValue(item, ["법령상세링크", "상세링크", "detailLink"])
-  })).filter((item) => item.title && (item.mst || item.lawId));
+    enforcementDate: formatDate(getValue(item, ["시행일자", "해석일자", "회신일자", "enforcementDate", "date"])),
+    detailLink: getValue(item, ["법령상세링크", "상세링크", "본문상세링크", "법령해석례상세링크", "detailLink"]),
+    summary: getValue(item, ["제개정구분명", "안건번호", "질의요지", "해석요지", "summary"])
+  })).filter((item) => item.title && (target !== "law" || item.mst || item.lawId));
+}
+
+function buildInterpretationResult(item, query) {
+  return {
+    query,
+    title: item.title || query,
+    subtitle: item.ministry || getLawTargetLabel(item.target),
+    source: "국가법령정보센터",
+    date: item.enforcementDate || item.promulgationDate || "",
+    summary: item.summary || "",
+    url: buildLawDetailUrl(item, query),
+    type: getLawTargetLabel(item.target),
+    verifiedAt: new Date().toISOString(),
+    reliability: {
+      level: item.detailLink ? "source-dated" : "source-link",
+      label: item.detailLink ? "원문 링크 확인" : "검색 링크 확인",
+      needsReview: !item.detailLink
+    }
+  };
 }
 
 function normalizeLawText(data) {
@@ -345,6 +438,20 @@ function formatLawText(lawText) {
   ].join("\n");
 }
 
+function formatInterpretationsText(result) {
+  if (!result.ok) {
+    return `[NOT_FOUND] ${result.notices.join(" / ")}`;
+  }
+  return result.interpretations.map((item) => [
+    `자료: ${item.title}`,
+    `유형: ${item.type}`,
+    `기관: ${item.subtitle || "확인 필요"}`,
+    `일자: ${item.date || "확인 필요"}`,
+    `원문: ${item.url}`,
+    item.summary ? `요약: ${truncate(item.summary, 500)}` : ""
+  ].filter(Boolean).join("\n")).join("\n\n");
+}
+
 async function readJsonBody(request) {
   const chunks = [];
   let size = 0;
@@ -444,6 +551,30 @@ function getValue(item, keys) {
     }
   }
   return "";
+}
+
+function getLawTargetLabel(target) {
+  return {
+    law: "법령",
+    expc: "법령해석례",
+    moelCgmExpc: "고용노동부 법령해석"
+  }[target] || target || "법제처 자료";
+}
+
+function getPascalTargetName(target = "") {
+  return target ? target.charAt(0).toUpperCase() + target.slice(1) : "";
+}
+
+function uniqueBy(items, key) {
+  const seen = new Set();
+  return items.filter((item) => {
+    const value = item?.[key] || JSON.stringify(item);
+    if (seen.has(value)) {
+      return false;
+    }
+    seen.add(value);
+    return true;
+  });
 }
 
 function parseList(value) {
