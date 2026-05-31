@@ -242,6 +242,7 @@ async function handleAnalyze(payload, env, authContext = null) {
         analysis: aiResult.analysis,
         usage: aiResult.usage,
         billing: aiResult.billing,
+        officialSources,
         sourceGrounding: summarizeSourceGrounding(officialSources),
         member: access.member ? sanitizeMember(access.member) : null,
         costControl: getCostControlSettings(env)
@@ -360,18 +361,61 @@ async function loadOfficialSourceContext(payload, env) {
 
 function compactOfficialSourceContext(data = {}) {
   const results = data.results || {};
+  const compactResults = {
+    laws: compactSourceItems(results.laws, 4),
+    interpretations: compactSourceItems(results.interpretations, 3),
+    safetyDisasters: compactSourceItems(results.safetyDisasters, 3),
+    safetyMaterials: compactSourceItems(results.safetyMaterials, 3)
+  };
+
   return {
     ok: !data.error,
     checkedAt: data.verification?.checkedAt || data.generatedAt || new Date().toISOString(),
     status: data.status || {},
     notices: asArray(data.notices).slice(0, 6),
-    results: {
-      laws: compactSourceItems(results.laws, 4),
-      interpretations: compactSourceItems(results.interpretations, 3),
-      safetyDisasters: compactSourceItems(results.safetyDisasters, 3),
-      safetyMaterials: compactSourceItems(results.safetyMaterials, 3)
-    }
+    results: compactResults,
+    sourceReferenceIndex: buildSourceReferenceIndex(compactResults)
   };
+}
+
+function buildSourceReferenceIndex(results = {}) {
+  const references = [];
+  for (const law of asArray(results.laws)) {
+    for (const article of asArray(law.articles)) {
+      references.push({
+        citation: formatArticleCitation(law, article),
+        lawName: cleanText(law.title || ""),
+        articleNo: cleanText(article.articleNo || ""),
+        branchNo: cleanText(article.branchNo || ""),
+        articleTitle: cleanText(article.title || ""),
+        effectiveDate: cleanText(article.effectiveDate || law.date || ""),
+        source: cleanText(law.source || ""),
+        url: cleanText(law.url || ""),
+        text: truncateText(cleanText(article.text || ""), 260)
+      });
+    }
+  }
+  return references.slice(0, 20);
+}
+
+function formatArticleCitation(law, article) {
+  const lawName = cleanText(law.title || "법령");
+  const articleNumber = formatArticleNumber(article);
+  const title = cleanText(article.title || "");
+  const effectiveDate = cleanText(article.effectiveDate || law.date || "");
+  return [
+    `${lawName} ${articleNumber}${title ? `(${title})` : ""}`,
+    effectiveDate ? `시행 ${effectiveDate}` : ""
+  ].filter(Boolean).join(" · ");
+}
+
+function formatArticleNumber(article) {
+  const articleNo = cleanText(article.articleNo || "");
+  const branchNo = cleanText(article.branchNo || "");
+  if (!articleNo) {
+    return "조문번호 확인 필요";
+  }
+  return branchNo ? `제${articleNo}조의${branchNo}` : `제${articleNo}조`;
 }
 
 function compactSourceItems(items, limit) {
@@ -435,11 +479,14 @@ function getLegalAnalysisInstructions() {
     "먼저 사용자가 실제로 말한 사실과 아직 모르는 사실을 분리하세요.",
     "officialSources가 제공되면 그 안의 공식자료 후보와 확인시각을 우선 반영하세요. 단, '직접 확인 필요' 또는 API 실패로 표시된 자료는 실존 조문으로 단정하지 말고 원문 확인 후보로만 다루세요.",
     "officialSources에 없는 조문·판례·해석례를 새로 만들어 인용하지 마세요. 필요한 경우 sourceSearchQueries에 추가 검색어로만 제안하세요.",
+    "officialSources.sourceReferenceIndex는 법제처 원문에서 확인한 조문 인덱스입니다. 이 목록의 citation만 '원문 확인' 근거로 사용할 수 있습니다.",
+    "keyIssues.sourceFocus에는 관련 citation을 그대로 넣고, immediateActions·stakeholderActions·evidencePlan의 문장에는 꼭 필요한 경우 '(근거: citation)' 형식으로 짧게 붙이세요.",
+    "officialSources.sourceReferenceIndex에 없는 조문번호나 벌칙을 추측해 쓰지 마세요. 특히 제○조, 징역, 벌금, 과태료, 손해배상 범위는 citation 또는 원문 확인 필요 중 하나로만 처리하세요.",
     "1차 결과는 긴 보고서가 아니라 상황 파악과 대처 방안 중심의 간편 보고서 초안으로 쓰일 예정입니다. 한 번에 모든 것을 처리하려 하지 말고 우선순위를 좁히세요.",
     "추가 질문은 미리 정한 문항을 나열하지 말고, 이 사안 판단에 꼭 필요한 1~3개만 생성하세요. 모르거나 민감하면 비워도 되는 질문으로 작성하세요.",
     "증빙자료는 필수 1~2개와 권고 1~2개 위주로 제한하세요. 실제 법적 필수 자료가 불명확하면 필수라고 과장하지 마세요.",
     "주체별 조치사항은 현재 사안에 직접 관련된 주체 2~3개만 정리하세요.",
-    "법령은 조문을 단정하기보다 우선 확인해야 할 공식자료와 검색어를 제시하세요. 조문을 말할 때는 확인 필요 상태로 표현하세요.",
+    "법령 조문은 officialSources.sourceReferenceIndex에 citation이 있을 때만 확인된 근거로 쓰고, 없으면 우선 확인해야 할 공식자료와 검색어를 제시하며 확인 필요 상태로 표현하세요.",
     "교사·학생·학부모의 일반 상담이라도 폭행, 상해, 협박, 명예훼손, 모욕, 성폭력, 아동학대, 개인정보 유출, 손해배상, 고소·고발·소송 가능성이 보이면 legalConsequenceAssessment.applies를 true로 설정하세요.",
     "형사 사건 또는 민사 사건으로 발전할 가능성이 있으면 형량·벌금·손해배상 범위, 감경·감량 또는 책임 완화에 필요한 행동과 증거를 별도 섹션으로 정리하세요.",
     "다만 형량, 벌금, 과태료, 징역 기간, 손해배상 범위는 officialSources의 원문 조문·판례·해석례에 근거가 있을 때만 구체적으로 쓰세요. 원문이 없으면 '원문 확인 필요'라고 표시하고 sourceSearchQueries에 확인할 법령·판례 검색어를 넣으세요.",

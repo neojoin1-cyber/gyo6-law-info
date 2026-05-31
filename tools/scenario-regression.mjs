@@ -476,6 +476,59 @@ for (const testCase of cases) {
   }
 }
 
+const liveSourceReport = {
+  title: "현장실습 시간 종료 후 청소 지시 사안 보고서",
+  lead: "현장실습생에게 실습시간 종료 후 청소를 반복 지시한 사안입니다.",
+  subtitle: "법제처 원문 조문 기반",
+  officialMaterials: [],
+  liveSourceReferences: [
+    {
+      label: "직업교육훈련 촉진법 제9조의2(현장실습 시간) · 시행 2025.10.01",
+      lawName: "직업교육훈련 촉진법",
+      articleNo: "9",
+      branchNo: "2",
+      articleTitle: "현장실습 시간",
+      text: "미성년자 또는 재학 중인 직업교육훈련생의 현장실습 시간은 1일 7시간, 1주일 35시간을 초과하지 못한다. 오후 10시부터 오전 6시까지 및 휴일에 현장실습을 시켜서는 아니 된다."
+    },
+    {
+      label: "직업교육훈련 촉진법 제26조(벌칙) · 시행 2025.10.01",
+      lawName: "직업교육훈련 촉진법",
+      articleNo: "26",
+      branchNo: "",
+      articleTitle: "벌칙",
+      text: "제9조의2를 위반하여 현장실습 시간을 초과하거나 야간 및 휴일에 현장실습을 실시한 자는 2년 이하의 징역 또는 2천만원 이하의 벌금에 처한다."
+    }
+  ]
+};
+
+const timeBasis = context.getInlineBasisForText("실습시간 종료 후 청소 지시와 야간·휴일 실습 여부를 확인합니다.", liveSourceReport);
+if (!timeBasis.includes("제9조의2") || !timeBasis.includes("법제처 원문 확인")) {
+  failures.push(`live-source-basis: expected 제9조의2 원문 근거, got "${timeBasis}"`);
+}
+
+const penaltyBasis = context.getInlineBasisForText("벌칙, 징역, 벌금 적용 가능성은 원문 조문으로만 확인합니다.", liveSourceReport);
+if (!penaltyBasis.includes("제26조")) {
+  failures.push(`live-source-basis: expected 제26조 벌칙 근거, got "${penaltyBasis}"`);
+}
+
+const oldBranchOrder = context.renderReportLiveSources({
+  results: {
+    laws: [{
+      title: "직업교육훈련 촉진법",
+      source: "국가법령정보센터 원문 API",
+      date: "2025.10.01",
+      summary: "직업교육훈련 촉진법\n제9조의2(현장실습 시간): 현장실습 시간 원문",
+      url: "https://www.law.go.kr/LSW/lsSc.do?query=test",
+      reliability: { label: "법제처 원문 확인", needsReview: false },
+      articles: []
+    }]
+  },
+  notices: ["법제처 원문 게이트웨이에서 현행 법령 원문 조문을 확인했습니다."]
+});
+if (oldBranchOrder.includes("제9의2조")) {
+  failures.push("live-source-render: branch article number should be 제9조의2, not 제9의2조");
+}
+
 if (failures.length) {
   console.error(`Scenario regression failed: ${failures.length}`);
   failures.forEach((failure) => console.error(`- ${failure}`));

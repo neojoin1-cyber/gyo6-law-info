@@ -943,12 +943,21 @@ function summarizeLawGatewayArticles(law) {
   const articles = asArray(law.articles)
     .slice(0, 5)
     .map((article) => {
-      const number = `제${article.articleNo}${article.branchNo ? `의${article.branchNo}` : ""}조`;
+      const number = formatLawArticleNumber(article);
       const title = article.title ? `(${article.title})` : "";
       return `${number}${title}: ${truncateLongText(cleanLongText(article.text || ""), 220)}`;
     });
 
   return [intro, ...articles].filter(Boolean).join("\n");
+}
+
+function formatLawArticleNumber(article = {}) {
+  const articleNo = cleanText(article.articleNo || "");
+  const branchNo = cleanText(article.branchNo || "");
+  if (!articleNo) {
+    return "조문번호 확인 필요";
+  }
+  return branchNo ? `제${articleNo}조의${branchNo}` : `제${articleNo}조`;
 }
 
 async function searchLegalResearchViaMcp(question) {

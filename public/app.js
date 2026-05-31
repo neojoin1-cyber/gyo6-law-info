@@ -1491,6 +1491,8 @@ function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseI
   const analysis = data.analysis || {};
   const referral = analysis.expertReferral || {};
   const generatedAt = data.generatedAt || new Date().toISOString();
+  const officialSourceContext = data.officialSources || null;
+  const liveSourceReferences = buildLiveSourceReferences(officialSourceContext);
   const stakeholderActions = (analysis.stakeholderActions || []).slice(0, 3).map((item) => ({
     title: item.actor || "관련 주체",
     summary: "",
@@ -1553,8 +1555,64 @@ function buildAiSimpleReport(data, question, preset, userRole, answerMode, caseI
       ...(analysis.legalConsequenceAssessment?.sourceSearchQueries || [])
     ]).slice(0, 6),
     answerMode,
-    officialMaterials: getOfficialMaterials(preset, {}, question)
+    officialMaterials: getOfficialMaterials(preset, {}, question),
+    officialSourceContext,
+    liveSourceReferences
   };
+}
+
+function buildLiveSourceReferences(sourceContext = {}) {
+  const indexed = (sourceContext?.sourceReferenceIndex || []).map((item) => ({
+    label: item.citation || formatLiveArticleCitation(item),
+    lawName: item.lawName || "",
+    articleNo: item.articleNo || "",
+    branchNo: item.branchNo || "",
+    articleTitle: item.articleTitle || "",
+    effectiveDate: item.effectiveDate || "",
+    text: item.text || "",
+    url: item.url || ""
+  }));
+
+  if (indexed.length) {
+    return indexed.filter((item) => item.label);
+  }
+
+  const laws = sourceContext?.results?.laws || sourceContext?.results?.law || [];
+  return laws.flatMap((law) => (law.articles || []).map((article) => ({
+    label: formatLiveArticleCitation({
+      lawName: law.title || law.lawName || "",
+      articleNo: article.articleNo || "",
+      branchNo: article.branchNo || "",
+      articleTitle: article.title || "",
+      effectiveDate: article.effectiveDate || law.date || "",
+      url: law.url || "",
+      text: article.text || ""
+    }),
+    lawName: law.title || law.lawName || "",
+    articleNo: article.articleNo || "",
+    branchNo: article.branchNo || "",
+    articleTitle: article.title || "",
+    effectiveDate: article.effectiveDate || law.date || "",
+    text: article.text || "",
+    url: law.url || ""
+  }))).filter((item) => item.label).slice(0, 20);
+}
+
+function formatLiveArticleCitation(item = {}) {
+  const lawName = item.lawName || "법령";
+  const articleNumber = formatLiveArticleNumber(item);
+  const title = item.articleTitle ? `(${item.articleTitle})` : "";
+  const effectiveDate = item.effectiveDate ? ` · 시행 ${item.effectiveDate}` : "";
+  return `${lawName} ${articleNumber}${title}${effectiveDate}`;
+}
+
+function formatLiveArticleNumber(item = {}) {
+  const articleNo = String(item.articleNo || "").trim();
+  const branchNo = String(item.branchNo || "").trim();
+  if (!articleNo) {
+    return "조문번호 확인 필요";
+  }
+  return branchNo ? `제${articleNo}조의${branchNo}` : `제${articleNo}조`;
 }
 
 function mapReferralLevel(level = "") {
@@ -3766,6 +3824,11 @@ function formatLegalBasis(keys = []) {
 
 function getInlineBasisForText(text, report) {
   const normalized = String(text || "").replace(/\s+/g, "");
+  const liveSourceBasis = getLiveSourceBasisForText(text, report);
+  if (liveSourceBasis) {
+    return liveSourceBasis;
+  }
+
   const reportText = compactText([
     report?.title,
     report?.lead,
@@ -3844,6 +3907,66 @@ function getInlineBasisForText(text, report) {
   }
 
   return formatLegalBasis(basisKeys.slice(0, 3));
+}
+
+function getLiveSourceBasisForText(text, report = {}) {
+  const references = report.liveSourceReferences?.length
+    ? report.liveSourceReferences
+    : buildLiveSourceReferences(report.officialSourceContext || {});
+  if (!references.length) {
+    return "";
+  }
+
+  const normalized = compactText(text || "");
+  const scored = references
+    .map((reference) => ({
+      reference,
+      score: scoreLiveSourceReference(reference, normalized)
+    }))
+    .filter((item) => item.score > 0)
+    .sort((left, right) => right.score - left.score || left.reference.label.localeCompare(right.reference.label, "ko-KR"));
+
+  if (!scored.length) {
+    return "";
+  }
+
+  const labels = uniqueStrings(scored.slice(0, 2).map((item) => item.reference.label)).filter(Boolean);
+  return labels.length ? `${labels.join(" / ")} - 법제처 원문 확인` : "";
+}
+
+function scoreLiveSourceReference(reference, normalizedText) {
+  const sourceText = compactText([
+    reference.lawName,
+    reference.articleTitle,
+    reference.text,
+    reference.label
+  ].filter(Boolean).join(" "));
+  let score = 0;
+
+  if (!normalizedText || !sourceText) {
+    return 0;
+  }
+
+  if (reference.articleTitle && normalizedText.includes(compactText(reference.articleTitle))) {
+    score += 8;
+  }
+  if (/실습시간|시간종료|잔업|야간|휴일|연장/.test(normalizedText) && /현장실습시간|1일7시간|1주일35시간|야간|휴일|연장/.test(sourceText)) {
+    score += 12;
+  }
+  if (/지도점검|보고|자료제출|현장조사|교육청|고용노동부/.test(normalizedText) && /지도점검|보고|자료제출|현장조사|교육부장관|고용노동부장관|시도교육감/.test(sourceText)) {
+    score += 10;
+  }
+  if (/벌칙|징역|벌금|과태료|처벌|형량/.test(normalizedText) && /벌칙|징역|벌금|과태료|처한다/.test(sourceText)) {
+    score += 12;
+  }
+  if (/현장실습|실습생|직업교육훈련|실습기업/.test(normalizedText) && /현장실습|직업교육훈련|현장실습산업체/.test(sourceText)) {
+    score += 3;
+  }
+  if (/청소|잡무|업무범위|심부름|반복지시|권익|협약|계약|실습계획/.test(normalizedText) && /현장실습|직업교육훈련|현장실습산업체|계약|협약|권리|의무/.test(sourceText)) {
+    score += 2;
+  }
+
+  return score;
 }
 
 function renderReportSimilarHints(materials = []) {
