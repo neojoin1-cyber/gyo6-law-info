@@ -1008,14 +1008,15 @@ function buildKoreanLawGatewayAdminRuleItem(item) {
 }
 
 function prioritizeEducationAdminRules(items, context = {}) {
-  return asArray(items)
+  const scored = asArray(items)
     .map((item) => attachEducationAdminRuleRelevance(item, context))
     .sort((left, right) =>
       right.relevance.score - left.relevance.score ||
       getComparableDate(right.date) - getComparableDate(left.date) ||
       String(left.title || "").localeCompare(String(right.title || ""), "ko-KR")
-    )
-    .slice(0, 6);
+    );
+  const focused = scored.filter((item) => item.relevance.score >= 50);
+  return (focused.length ? focused : scored.slice(0, 2)).slice(0, 6);
 }
 
 function attachEducationAdminRuleRelevance(item, context = {}) {
