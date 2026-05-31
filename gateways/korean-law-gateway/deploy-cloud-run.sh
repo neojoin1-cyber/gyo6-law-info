@@ -30,14 +30,28 @@ gcloud services enable \
   artifactregistry.googleapis.com \
   secretmanager.googleapis.com
 
+prompt_secret() {
+  local prompt="$1"
+  local var_name="$2"
+  local value=""
+
+  if [[ -r /dev/tty ]]; then
+    read -r -s -p "${prompt}" value </dev/tty
+    echo >/dev/tty
+  else
+    read -r -s -p "${prompt}" value
+    echo
+  fi
+
+  printf -v "${var_name}" "%s" "${value}"
+}
+
 if [[ -z "${LAW_OC:-}" ]]; then
-  read -r -s -p "법제처 OC 인증키(LAW_OC)를 입력하세요: " LAW_OC
-  echo
+  prompt_secret "법제처 OC 인증키(LAW_OC)를 입력하세요: " LAW_OC
 fi
 
 if [[ -z "${GYO6_MCP_TOKEN:-}" ]]; then
-  read -r -s -p "Worker와 공유할 서버간 토큰(GYO6_MCP_TOKEN)을 입력하세요: " GYO6_MCP_TOKEN
-  echo
+  prompt_secret "Worker와 공유할 서버간 토큰(GYO6_MCP_TOKEN)을 입력하세요: " GYO6_MCP_TOKEN
 fi
 
 if [[ -z "${LAW_OC}" || -z "${GYO6_MCP_TOKEN}" ]]; then
