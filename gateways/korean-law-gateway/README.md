@@ -99,9 +99,15 @@ LAW_GATEWAY_TIMEOUT_MS=12000
 로컬 PowerShell에서 Worker 연결값을 넣습니다.
 
 ```powershell
+npm run law-gateway:connect-worker
+```
+
+Cloud Run URL과 Cloud Run 배포 때 입력한 서버간 토큰을 물어봅니다. 스크립트는 게이트웨이 health, 원문 조문 조회, Worker secret 설정, Worker 재배포, Worker 검색 API 확인까지 순서대로 실행합니다.
+
+수동으로 처리해야 할 때만 아래 명령을 사용합니다.
+
+```powershell
 npx.cmd wrangler secret put KOREAN_LAW_MCP_BASE_URL --config workers/ai-analysis/wrangler.toml
 npx.cmd wrangler secret put KOREAN_LAW_MCP_TOKEN --config workers/ai-analysis/wrangler.toml
 npm run worker:deploy
 ```
-
-첫 번째에는 Cloud Run URL을, 두 번째에는 Cloud Run 배포 때 입력한 서버간 토큰을 그대로 입력합니다.
