@@ -1118,7 +1118,7 @@ function scoreEducationAdminRuleRelevance(item, context = {}) {
     score -= 22;
   }
   if (sourceText.includes("대학") && !questionText.includes("대학")) {
-    score -= 16;
+    score -= 60;
   }
 
   score = Math.max(0, Math.min(100, score));

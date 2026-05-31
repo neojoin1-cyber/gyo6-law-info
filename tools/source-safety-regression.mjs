@@ -209,6 +209,25 @@ globalThis.fetch = async (input, init = {}) => {
               label: "원문 링크 확인",
               needsReview: false
             }
+          },
+          {
+            query: "현장실습",
+            title: "대학생 현장실습학기제 운영규정",
+            subtitle: "고시",
+            source: "국가법령정보센터",
+            ministry: "교육부",
+            date: "2026.03.01",
+            summary: "대학생 현장실습학기제 운영 기준",
+            url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=99999",
+            type: "교육부 행정규칙",
+            currentStatus: "현행",
+            current: true,
+            verifiedAt: "2026-05-31T00:00:00.000Z",
+            reliability: {
+              level: "source-dated",
+              label: "원문 링크 확인",
+              needsReview: false
+            }
           }
         ],
         notices: []
@@ -279,6 +298,9 @@ if (gatewayApiResult.results?.interpretations?.some((item) => /교육부/.test(`
 }
 if (!/현장실습/.test(gatewayApiResult.results.educationAdminRules[0].title || "")) {
   throw new Error(`education admin rules were not prioritized by case relevance: ${gatewayApiResult.results.educationAdminRules[0].title}`);
+}
+if (gatewayApiResult.results.educationAdminRules.some((item) => /대학생/.test(item.title || ""))) {
+  throw new Error("college internship rules should not be shown for vocational high-school field-training questions");
 }
 if ((gatewayApiResult.results.educationAdminRules[0].relevance?.score || 0) < 70) {
   throw new Error("education admin rule priority score is too low for a direct field-training match");
