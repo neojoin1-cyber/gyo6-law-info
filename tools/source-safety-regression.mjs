@@ -166,6 +166,94 @@ globalThis.fetch = async (input, init = {}) => {
       });
     }
     if (url.pathname.endsWith("/gyo6/law/admin-rules")) {
+      const requestText = JSON.stringify(body);
+      if (/생활지도|학생지도|휴대전화|수업방해|교육활동|교권/.test(requestText)) {
+        return jsonResponse({
+          ok: true,
+          generatedAt: "2026-05-31T00:00:00.000Z",
+          source: "국가법령정보센터",
+          protocol: "auto",
+          adminRules: [
+            {
+              query: "교원의 학생생활지도",
+              title: "교원의 학생생활지도에 관한 고시",
+              subtitle: "고시",
+              source: "국가법령정보센터",
+              ministry: "교육부",
+              date: "2026.03.01",
+              summary: "학생생활지도, 휴대전화, 수업 방해, 교육활동 관련 기준",
+              url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=11111",
+              type: "교육부 행정규칙",
+              currentStatus: "현행",
+              current: true,
+              verifiedAt: "2026-05-31T00:00:00.000Z",
+              reliability: {
+                level: "source-dated",
+                label: "원문 링크 확인",
+                needsReview: false
+              }
+            },
+            {
+              query: "교원",
+              title: "기간제교원의 봉급 지급에 관한 예규",
+              subtitle: "예규",
+              source: "국가법령정보센터",
+              ministry: "교육부",
+              date: "2026.01.01",
+              summary: "기간제교원 봉급 지급 기준",
+              url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=22222",
+              type: "교육부 행정규칙",
+              currentStatus: "현행",
+              current: true,
+              verifiedAt: "2026-05-31T00:00:00.000Z",
+              reliability: {
+                level: "source-dated",
+                label: "원문 링크 확인",
+                needsReview: false
+              }
+            },
+            {
+              query: "생활지도",
+              title: "유치원 교원의 유아생활지도에 관한 고시",
+              subtitle: "고시",
+              source: "국가법령정보센터",
+              ministry: "교육부",
+              date: "2026.03.01",
+              summary: "유치원 유아생활지도 기준",
+              url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=33333",
+              type: "교육부 행정규칙",
+              currentStatus: "현행",
+              current: true,
+              verifiedAt: "2026-05-31T00:00:00.000Z",
+              reliability: {
+                level: "source-dated",
+                label: "원문 링크 확인",
+                needsReview: false
+              }
+            },
+            {
+              query: "교원",
+              title: "교육공무원 인사관리규정",
+              subtitle: "훈령",
+              source: "국가법령정보센터",
+              ministry: "교육부",
+              date: "2026.01.01",
+              summary: "교육공무원 인사관리 기준",
+              url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=44444",
+              type: "교육부 행정규칙",
+              currentStatus: "현행",
+              current: true,
+              verifiedAt: "2026-05-31T00:00:00.000Z",
+              reliability: {
+                level: "source-dated",
+                label: "원문 링크 확인",
+                needsReview: false
+              }
+            }
+          ],
+          notices: []
+        });
+      }
       return jsonResponse({
         ok: true,
         generatedAt: "2026-05-31T00:00:00.000Z",
@@ -304,6 +392,21 @@ if (gatewayApiResult.results.educationAdminRules.some((item) => /대학생/.test
 }
 if ((gatewayApiResult.results.educationAdminRules[0].relevance?.score || 0) < 70) {
   throw new Error("education admin rule priority score is too low for a direct field-training match");
+}
+const lifestyleUrl = new URL("https://gyo6.internal/api/search");
+lifestyleUrl.searchParams.set("q", "교사가 학생의 휴대전화 사용과 수업 방해를 생활지도해야 하는 상황입니다.");
+lifestyleUrl.searchParams.set("keywords", "학생생활지도|휴대전화|수업방해|교육활동");
+
+const lifestyleApiResult = await gatewayApi.handleSearch(lifestyleUrl);
+
+if (!lifestyleApiResult.results?.educationAdminRules?.length) {
+  throw new Error("student life-guidance search did not return a focused education admin rule");
+}
+if (lifestyleApiResult.results.educationAdminRules[0].title !== "교원의 학생생활지도에 관한 고시") {
+  throw new Error(`student life-guidance source was not prioritized correctly: ${lifestyleApiResult.results.educationAdminRules[0].title}`);
+}
+if (lifestyleApiResult.results.educationAdminRules.some((item) => /봉급|인사관리|유치원/.test(item.title || ""))) {
+  throw new Error(`student life-guidance search exposed weak education rule candidates: ${lifestyleApiResult.results.educationAdminRules.map((item) => item.title).join(", ")}`);
 }
 for (const request of seenGatewayBodies) {
   if (request.path.endsWith("/gyo6/law/admin-rules") && /홍길동|010-1234-5678|ABC/.test(JSON.stringify(request.body))) {

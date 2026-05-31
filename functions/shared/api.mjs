@@ -1060,7 +1060,10 @@ function prioritizeEducationAdminRules(items, context = {}) {
       String(left.title || "").localeCompare(String(right.title || ""), "ko-KR")
     );
   const focused = scored.filter((item) => item.relevance.score >= 50);
-  return focused.filter((item) => asArray(item.relevance.matchedSignals).length > 0).slice(0, 6);
+  return focused
+    .filter((item) => asArray(item.relevance.matchedSignals).length > 0)
+    .filter((item) => asArray(item.relevance.missingRequiredSignals).length === 0)
+    .slice(0, 6);
 }
 
 function attachEducationAdminRuleRelevance(item, context = {}) {
@@ -1115,7 +1118,7 @@ function scoreEducationAdminRuleRelevance(item, context = {}) {
     score -= missingRequiredSignals.length * 32;
   }
   if (sourceText.includes("유치원") && !questionText.includes("유치원")) {
-    score -= 22;
+    score -= 55;
   }
   if (sourceText.includes("대학") && !questionText.includes("대학")) {
     score -= 60;
@@ -1128,6 +1131,8 @@ function scoreEducationAdminRuleRelevance(item, context = {}) {
     label: score >= 78 ? "우선 확인" : score >= 58 ? "참고 확인" : "보조 후보",
     reason: buildEducationAdminRuleReason({ current, dateScore, matchedSignals, queryMatches, missingRequiredSignals, date: item.date }),
     matchedSignals: uniqueStrings([...matchedSignals, ...queryMatches]).slice(0, 8),
+    requiredSignals,
+    missingRequiredSignals,
     current,
     dateStatus: getAdminRuleDateStatus(item.date)
   };
@@ -1161,6 +1166,9 @@ function getRequiredEducationAdminRuleSignals(questionText) {
   }
   if (hasAnyTerm(questionText, ["학교생활기록", "생활기록", "생기부", "출결", "인정결석", "정정"])) {
     required.push("학교생활기록");
+  }
+  if (hasAnyTerm(questionText, ["생활지도", "학생생활지도", "학생지도", "휴대전화", "수업방해", "교권", "교육활동"])) {
+    required.push("학생생활지도");
   }
   if (hasAnyTerm(questionText, ["현장실습", "실습생", "직업계고", "특성화고", "도제"])) {
     required.push("현장실습");
