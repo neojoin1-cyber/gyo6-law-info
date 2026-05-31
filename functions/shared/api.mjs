@@ -69,6 +69,17 @@ async function handleSearch(requestUrl) {
     hasUsableValue(publicDataKey) ? searchDisasterCases(publicDataKey, safetyContext) : missingKey("PUBLIC_DATA_API_KEY"),
     hasUsableValue(publicDataKey) ? searchSafetyMaterials(publicDataKey) : missingKey("PUBLIC_DATA_API_KEY")
   ]);
+  const notices = buildUserFacingNotices([
+    ...lawResults.notices,
+    ...interpretationResults.notices,
+    ...disasterResults.notices,
+    ...materialResults.notices
+  ], {
+    lawResults,
+    interpretationResults,
+    disasterResults,
+    materialResults
+  });
 
   return {
     query: question,
@@ -82,12 +93,7 @@ async function handleSearch(requestUrl) {
       safetyDisasters: disasterResults.items,
       safetyMaterials: materialResults.items
     },
-    notices: [
-      ...lawResults.notices,
-      ...interpretationResults.notices,
-      ...disasterResults.notices,
-      ...materialResults.notices
-    ].filter(uniqueString).slice(0, 8)
+    notices
   };
 }
 
@@ -541,6 +547,10 @@ function isMcpResearchEnabled() {
   return String(activeEnv.KOREAN_LAW_MCP_RESEARCH_ENABLED || "false").toLowerCase() === "true";
 }
 
+function isDirectInterpretationFallbackEnabled() {
+  return String(activeEnv.LAW_DIRECT_INTERPRETATION_FALLBACK || "false").toLowerCase() === "true";
+}
+
 function buildVerificationSummary() {
   return {
     mode: "live-source-first",
@@ -754,7 +764,7 @@ async function searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKor
 async function searchInterpretationsWithPreferredSource({ lawOpenApiKey, question, hasKoreanLawMcp }) {
   if (hasKoreanLawMcp && isMcpResearchEnabled()) {
     const mcpResults = await searchLegalResearchViaMcp(question);
-    if (mcpResults.items.length || !hasUsableValue(lawOpenApiKey)) {
+    if (mcpResults.items.length || !hasUsableValue(lawOpenApiKey) || !isDirectInterpretationFallbackEnabled()) {
       return mcpResults;
     }
 
@@ -769,9 +779,54 @@ async function searchInterpretationsWithPreferredSource({ lawOpenApiKey, questio
     };
   }
 
+  if (hasKoreanLawMcp && !isDirectInterpretationFallbackEnabled()) {
+    return { items: [], notices: [] };
+  }
+
   return hasUsableValue(lawOpenApiKey)
     ? searchLawInterpretations(lawOpenApiKey, question)
     : missingKey("LAW_OPEN_API_OC");
+}
+
+function buildUserFacingNotices(notices, resultGroups = {}) {
+  const uniqueNotices = asArray(notices).map(cleanText).filter(Boolean).filter(uniqueString);
+  const groups = [
+    resultGroups.lawResults,
+    resultGroups.interpretationResults,
+    resultGroups.disasterResults,
+    resultGroups.materialResults
+  ];
+  const hasResults = groups.some((group) => asArray(group?.items).length > 0);
+  const hasVerifiedLawText = asArray(resultGroups.lawResults?.items).some(isVerifiedLawTextItem);
+
+  if (!hasResults) {
+    return uniqueNotices.slice(0, 8);
+  }
+
+  return uniqueNotices
+    .filter((notice) => isUserFacingNotice(notice, { hasResults, hasVerifiedLawText }))
+    .slice(0, 6);
+}
+
+function isUserFacingNotice(notice, { hasResults, hasVerifiedLawText }) {
+  if (!notice) {
+    return false;
+  }
+  if (/법제처 원문 게이트웨이.*확인|원문 조문을 확인|재시도로 성공/i.test(notice)) {
+    return true;
+  }
+  if (hasVerifiedLawText && /실패|HTTP\s*5\d\d|fallback|건너뛰|숨겼|관련도가 낮|조회되었지만|후보가 없어|값이 없어|MCP .*호출 실패/i.test(notice)) {
+    return false;
+  }
+  if (hasResults && /HTTP\s*5\d\d|건너뛰|숨겼|관련도가 낮|조회되었지만/i.test(notice)) {
+    return false;
+  }
+  return !/fallback/i.test(notice);
+}
+
+function isVerifiedLawTextItem(item) {
+  return item?.reliability?.level === "law-api-original-text" ||
+    /원문 API|원문 확인/i.test(`${item?.source || ""} ${item?.reliability?.label || ""}`);
 }
 
 async function searchLawsViaMcp(queries, keywords = []) {

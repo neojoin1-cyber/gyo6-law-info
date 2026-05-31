@@ -115,4 +115,69 @@ for (const query of seenLawSearchQueries) {
   }
 }
 
+const unexpectedDirectLawCalls = [];
+globalThis.fetch = async (input) => {
+  const url = new URL(String(input));
+  if (url.hostname === "gateway.local") {
+    return jsonResponse({
+      ok: true,
+      generatedAt: "2026-05-31T00:00:00.000Z",
+      source: "국가법령정보센터",
+      protocol: "auto",
+      laws: [{
+        query: "직업교육훈련 촉진법",
+        lawName: "직업교육훈련 촉진법",
+        enforcementDate: "2025.10.01",
+        promulgationDate: "2025.10.01",
+        sourceUrl: "https://www.law.go.kr/LSW/lsSc.do?query=%EC%A7%81%EC%97%85%EA%B5%90%EC%9C%A1%ED%9B%88%EB%A0%A8%20%EC%B4%89%EC%A7%84%EB%B2%95",
+        verifiedAt: "2026-05-31T00:00:00.000Z",
+        articles: [{
+          articleNo: "9",
+          branchNo: "2",
+          title: "현장실습 시간",
+          effectiveDate: "2025.10.01",
+          text: "미성년자 또는 재학 중인 직업교육훈련생의 현장실습 시간은 1일 7시간, 1주일 35시간을 초과하지 못한다."
+        }]
+      }],
+      notices: [
+        "법령 원문 조회 실패(보조 후보): HTTP 520",
+        "국내재해사례는 조회되었지만 질문과 충분히 일치하는 정밀 후보가 없어 숨겼습니다."
+      ]
+    });
+  }
+
+  if (url.hostname === "www.law.go.kr") {
+    unexpectedDirectLawCalls.push(url.toString());
+    return jsonResponse({ result: "ERROR", msg: "HTTP 525" });
+  }
+
+  throw new Error(`Unexpected network call: ${url.toString()}`);
+};
+
+const gatewayApi = createApi({
+  LAW_OPEN_API_OC: SECRET_OC,
+  LAW_OPEN_API_REFERER: "https://gyo6.kr/",
+  KOREAN_LAW_MCP_BASE_URL: "https://gateway.local",
+  KOREAN_LAW_MCP_TOKEN: "TEST_GATEWAY_TOKEN"
+});
+const gatewayUrl = new URL("https://gyo6.internal/api/search");
+gatewayUrl.searchParams.set("q", "현장실습 시간 종료 후 청소를 반복 지시합니다.");
+gatewayUrl.searchParams.set("laws", "직업교육훈련 촉진법");
+gatewayUrl.searchParams.set("keywords", "현장실습|청소|실습시간");
+
+const gatewayApiResult = await gatewayApi.handleSearch(gatewayUrl);
+
+if (unexpectedDirectLawCalls.length) {
+  throw new Error(`gateway-backed search should not call direct law.go.kr fallback: ${unexpectedDirectLawCalls.join(", ")}`);
+}
+if (!gatewayApiResult.results?.laws?.length) {
+  throw new Error("gateway-backed search did not return original law text");
+}
+if (!gatewayApiResult.notices.some((notice) => /원문 게이트웨이/.test(notice))) {
+  throw new Error("gateway-backed search should keep the successful original-text notice");
+}
+if (gatewayApiResult.notices.some((notice) => /HTTP 5\d\d|실패|값이 없어|숨겼|관련도가 낮|fallback/i.test(notice))) {
+  throw new Error(`gateway-backed search exposed noisy fallback notice: ${gatewayApiResult.notices.join(" / ")}`);
+}
+
 console.log("Source safety regression passed");
