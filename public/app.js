@@ -1753,6 +1753,7 @@ function renderApiCard(item) {
       <p class="api-card-meta">
         <span>${escapeHtml(item.source || "공식 출처")}</span>
         ${item.date ? `<span>일자 ${escapeHtml(item.date)}</span>` : "<span>일자 확인 필요</span>"}
+        ${item.currentStatus ? `<span>${escapeHtml(item.currentStatus)}</span>` : ""}
         ${verifiedAt ? `<span>확인 ${escapeHtml(verifiedAt)}</span>` : ""}
       </p>
       ${item.subtitle ? `<p>${escapeHtml(item.subtitle)}</p>` : ""}
@@ -4125,6 +4126,7 @@ function renderReportApiGroup(title, items = []) {
           const reliability = item.reliability || {};
           const url = safeUrl(item.url);
           const studentCase = isStudentFieldTrainingLikeItem(item);
+          const educationPriority = title === "교육부 공식 기준자료" && item.relevance?.label;
           return `
             <article>
               <div>
@@ -4132,9 +4134,10 @@ function renderReportApiGroup(title, items = []) {
                 <span class="${reliability.needsReview ? "needs-review" : "verified"}">${escapeHtml(reliability.label || "확인 필요")}</span>
               </div>
               ${studentCase ? `<small class="student-case-badge">학생·현장실습 우선 검토</small>` : ""}
+              ${educationPriority ? `<small class="student-case-badge">학교 기준자료 ${escapeHtml(item.relevance.label)}</small>` : ""}
               <p>${escapeHtml(item.summary || item.subtitle || "요약 정보 없음")}</p>
               ${renderReportApiRelevance(item.relevance)}
-              <small>${escapeHtml(item.source || "공식 출처")} ${item.date ? `· ${escapeHtml(item.date)}` : "· 일자 확인 필요"}</small>
+              <small>${escapeHtml(item.source || "공식 출처")} ${item.date ? `· ${escapeHtml(item.date)}` : "· 일자 확인 필요"}${item.currentStatus ? ` · ${escapeHtml(item.currentStatus)}` : ""}</small>
               ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
             </article>
           `;
@@ -4145,6 +4148,15 @@ function renderReportApiGroup(title, items = []) {
 }
 
 function prioritizeReportApiItems(title, items = []) {
+  if (title === "교육부 공식 기준자료") {
+    return [...items].sort((a, b) =>
+      Number(b.relevance?.score || 0) - Number(a.relevance?.score || 0) ||
+      Number(Boolean(b.current)) - Number(Boolean(a.current)) ||
+      getApiComparableDate(b.date) - getApiComparableDate(a.date) ||
+      String(a.title || "").localeCompare(String(b.title || ""), "ko-KR")
+    );
+  }
+
   if (title !== "국내재해사례") {
     return items;
   }
@@ -4154,6 +4166,18 @@ function prioritizeReportApiItems(title, items = []) {
     const aScore = getStudentFieldTrainingScore(a) + Number(a.relevance?.score || 0);
     return bScore - aScore;
   });
+}
+
+function getApiComparableDate(value) {
+  const digits = String(value || "").replace(/\D/g, "");
+  if (digits.length < 8) {
+    return 0;
+  }
+  const year = Number(digits.slice(0, 4));
+  const month = Number(digits.slice(4, 6));
+  const day = Number(digits.slice(6, 8));
+  const timestamp = Date.UTC(year, month - 1, day);
+  return Number.isFinite(timestamp) ? timestamp : 0;
 }
 
 function isStudentFieldTrainingLikeItem(item) {

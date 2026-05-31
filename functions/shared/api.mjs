@@ -67,7 +67,7 @@ async function handleSearch(requestUrl) {
   const [lawResults, interpretationResults, educationAdminRuleResults, disasterResults, materialResults] = await Promise.all([
     searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp, keywords }),
     searchInterpretationsWithPreferredSource({ lawOpenApiKey, question: officialQuery, hasKoreanLawMcp }),
-    searchEducationAdminRulesWithPreferredSource({ queries: educationRuleQueries, hasKoreanLawMcp }),
+    searchEducationAdminRulesWithPreferredSource({ queries: educationRuleQueries, question, topic, keywords, hasKoreanLawMcp }),
     hasUsableValue(publicDataKey) ? searchDisasterCases(publicDataKey, safetyContext) : missingKey("PUBLIC_DATA_API_KEY"),
     hasUsableValue(publicDataKey) ? searchSafetyMaterials(publicDataKey) : missingKey("PUBLIC_DATA_API_KEY")
   ]);
@@ -841,13 +841,13 @@ async function searchInterpretationsWithPreferredSource({ lawOpenApiKey, questio
     : missingKey("LAW_OPEN_API_OC");
 }
 
-async function searchEducationAdminRulesWithPreferredSource({ queries = [], hasKoreanLawMcp }) {
+async function searchEducationAdminRulesWithPreferredSource({ queries = [], question = "", topic = "", keywords = [], hasKoreanLawMcp }) {
   const safeQueries = uniqueStrings(asArray(queries).map(cleanText).filter(isSafeOfficialKeyword)).slice(0, 5);
   if (!safeQueries.length || !hasKoreanLawMcp) {
     return { items: [], notices: [] };
   }
 
-  return searchEducationAdminRulesViaGateway(safeQueries);
+  return searchEducationAdminRulesViaGateway(safeQueries, { question, topic, keywords });
 }
 
 async function searchInterpretationsViaGateway(question) {
@@ -897,7 +897,7 @@ async function searchInterpretationsViaGateway(question) {
   }
 }
 
-async function searchEducationAdminRulesViaGateway(queries) {
+async function searchEducationAdminRulesViaGateway(queries, context = {}) {
   const baseUrl = getKoreanLawMcpBaseUrl();
   if (!hasUsableValue(baseUrl)) {
     return { items: [], notices: [] };
@@ -929,7 +929,16 @@ async function searchEducationAdminRulesViaGateway(queries) {
       throw new Error(data?.error || `HTTP ${response.status}`);
     }
 
-    const items = asArray(data.adminRules).map(buildKoreanLawGatewayAdminRuleItem).filter(Boolean);
+    const items = prioritizeEducationAdminRules(
+      uniqueBy(
+        asArray(data.adminRules).map(buildKoreanLawGatewayAdminRuleItem).filter(Boolean),
+        "url"
+      ),
+      {
+        ...context,
+        queries
+      }
+    );
     return {
       items,
       notices: [
@@ -984,6 +993,11 @@ function buildKoreanLawGatewayAdminRuleItem(item) {
     url: normalizeLawUrl(item.url, query, "admrul"),
     query,
     type: cleanText(item.type || "교육부 공식 기준자료"),
+    ruleType: cleanText(item.ruleType || ""),
+    orderNo: cleanText(item.orderNo || ""),
+    revisionType: cleanText(item.revisionType || ""),
+    currentStatus: cleanText(item.currentStatus || ""),
+    current: Boolean(item.current),
     verifiedAt: cleanText(item.verifiedAt || new Date().toISOString()),
     reliability: {
       level: item.reliability?.level || "source-dated",
@@ -991,6 +1005,157 @@ function buildKoreanLawGatewayAdminRuleItem(item) {
       needsReview: Boolean(item.reliability?.needsReview)
     }
   };
+}
+
+function prioritizeEducationAdminRules(items, context = {}) {
+  return asArray(items)
+    .map((item) => attachEducationAdminRuleRelevance(item, context))
+    .sort((left, right) =>
+      right.relevance.score - left.relevance.score ||
+      getComparableDate(right.date) - getComparableDate(left.date) ||
+      String(left.title || "").localeCompare(String(right.title || ""), "ko-KR")
+    )
+    .slice(0, 6);
+}
+
+function attachEducationAdminRuleRelevance(item, context = {}) {
+  const relevance = scoreEducationAdminRuleRelevance(item, context);
+  return {
+    ...item,
+    relevance,
+    reliability: {
+      ...(item.reliability || {}),
+      label: relevance.label,
+      needsReview: relevance.score < 55 || item.reliability?.needsReview
+    }
+  };
+}
+
+function scoreEducationAdminRuleRelevance(item, context = {}) {
+  const sourceText = normalizeMatchText([
+    item.title,
+    item.subtitle,
+    item.summary,
+    item.type,
+    item.query,
+    item.currentStatus
+  ].filter(Boolean).join(" "));
+  const questionText = normalizeMatchText([
+    context.topic,
+    context.question,
+    ...asArray(context.keywords),
+    ...asArray(context.queries)
+  ].filter(Boolean).join(" "));
+  const matchedSignals = getEducationAdminRuleMatchedSignals(sourceText, questionText);
+  const queryMatches = asArray(context.queries)
+    .map((query) => cleanText(query))
+    .filter(Boolean)
+    .filter((query) => sourceText.includes(normalizeMatchText(query)) || questionText.includes(normalizeMatchText(query)));
+  const current = item.current || /현행/.test(item.currentStatus || "");
+  const dateScore = scoreAdminRuleDate(item.date);
+  let score = 20;
+
+  score += /교육부/.test(item.type || item.source || "") ? 12 : 0;
+  score += current ? 18 : item.currentStatus ? -18 : 0;
+  score += item.url ? 6 : 0;
+  score += dateScore;
+  score += Math.min(matchedSignals.length * 12, 36);
+  score += Math.min(queryMatches.length * 8, 16);
+
+  if (sourceText.includes("폐지") || /연혁|폐지/.test(item.currentStatus || "")) {
+    score -= 24;
+  }
+
+  score = Math.max(0, Math.min(100, score));
+
+  return {
+    score,
+    label: score >= 78 ? "우선 확인" : score >= 58 ? "참고 확인" : "보조 후보",
+    reason: buildEducationAdminRuleReason({ score, current, dateScore, matchedSignals, queryMatches, date: item.date }),
+    matchedSignals: uniqueStrings([...matchedSignals, ...queryMatches]).slice(0, 8),
+    current,
+    dateStatus: getAdminRuleDateStatus(item.date)
+  };
+}
+
+function getEducationAdminRuleMatchedSignals(sourceText, questionText) {
+  const signals = [
+    { label: "학교폭력", terms: ["학교폭력", "학폭", "피해학생", "가해학생", "조치"] },
+    { label: "학교생활기록", terms: ["학교생활기록", "생활기록", "생기부", "출결", "인정결석", "정정"] },
+    { label: "학생생활지도", terms: ["생활지도", "학생생활지도", "교권", "휴대전화", "수업방해", "교육활동"] },
+    { label: "현장실습", terms: ["현장실습", "실습생", "직업계고", "특성화고", "도제", "취업"] },
+    { label: "개인정보", terms: ["개인정보", "민감정보", "학생정보", "상담기록", "유출"] },
+    { label: "교직원", terms: ["기간제", "교원", "교사", "행정직", "공무직", "채용", "복무"] },
+    { label: "민원 대응", terms: ["민원", "학부모", "학교장", "관리자", "절차"] },
+    { label: "교육활동 보호", terms: ["교육활동보호", "교육활동", "교권보호", "침해"] }
+  ];
+
+  return signals
+    .filter((signal) => {
+      const sourceHit = signal.terms.some((term) => sourceText.includes(normalizeMatchText(term)));
+      const questionHit = signal.terms.some((term) => questionText.includes(normalizeMatchText(term)));
+      return sourceHit && questionHit;
+    })
+    .map((signal) => signal.label);
+}
+
+function buildEducationAdminRuleReason({ current, dateScore, matchedSignals, queryMatches, date }) {
+  const parts = [];
+  if (current) {
+    parts.push("현행 자료");
+  }
+  if (date) {
+    parts.push(`${getAdminRuleDateStatus(date)} 시행일자`);
+  }
+  if (matchedSignals.length) {
+    parts.push(`질문 신호와 일치: ${matchedSignals.slice(0, 3).join(", ")}`);
+  }
+  if (queryMatches.length) {
+    parts.push(`검색어 일치: ${queryMatches.slice(0, 2).join(", ")}`);
+  }
+  if (!parts.length && dateScore > 0) {
+    parts.push("공식 출처와 일자 확인");
+  }
+  return parts.join(" · ") || "교육부 소관 공식 기준자료 후보입니다.";
+}
+
+function scoreAdminRuleDate(value) {
+  const timestamp = getComparableDate(value);
+  if (!timestamp) {
+    return 0;
+  }
+  const year = new Date(timestamp).getFullYear();
+  const currentYear = new Date().getFullYear();
+  if (year >= currentYear) return 18;
+  if (year >= currentYear - 1) return 15;
+  if (year >= currentYear - 3) return 11;
+  if (year >= currentYear - 6) return 7;
+  return 3;
+}
+
+function getAdminRuleDateStatus(value) {
+  const timestamp = getComparableDate(value);
+  if (!timestamp) {
+    return "일자 확인 필요";
+  }
+  const year = new Date(timestamp).getFullYear();
+  const currentYear = new Date().getFullYear();
+  if (year >= currentYear) return "최신";
+  if (year >= currentYear - 1) return "최근";
+  if (year >= currentYear - 3) return "최근 3년";
+  return "과거";
+}
+
+function getComparableDate(value) {
+  const digits = String(value || "").replace(/\D/g, "");
+  if (digits.length < 8) {
+    return 0;
+  }
+  const year = Number(digits.slice(0, 4));
+  const month = Number(digits.slice(4, 6));
+  const day = Number(digits.slice(6, 8));
+  const timestamp = Date.UTC(year, month - 1, day);
+  return Number.isFinite(timestamp) ? timestamp : 0;
 }
 
 function buildUserFacingNotices(notices, resultGroups = {}) {

@@ -345,7 +345,9 @@ function normalizeLawSearchItems(data, query, target = "law") {
     summary: getValue(item, ["제개정구분명", "안건번호", "질의요지", "해석요지", "행정규칙종류", "발령번호", "summary"]),
     ruleType: getValue(item, ["행정규칙종류", "ruleType"]),
     revisionType: getValue(item, ["제개정구분명", "revisionType"]),
-    orderNo: getValue(item, ["발령번호", "orderNo"])
+    orderNo: getValue(item, ["발령번호", "orderNo"]),
+    currentStatus: getValue(item, ["현행연혁구분", "현행여부", "currentStatus"]),
+    creationDate: formatDate(getValue(item, ["생성일자", "creationDate"]))
   })).filter((item) => item.title && (target !== "law" || item.mst || item.lawId));
 }
 
@@ -376,9 +378,14 @@ function buildAdminRuleResult(item) {
     source: "국가법령정보센터",
     ministry: item.ministry || "",
     date: item.enforcementDate || item.promulgationDate || "",
-    summary: [item.revisionType, item.summary].filter(Boolean).join(" · "),
+    summary: uniqueTextParts([item.currentStatus, item.revisionType, item.summary]).join(" · "),
     url: buildAdminRuleDetailUrl(item),
     type: item.ministry ? `${item.ministry} 행정규칙` : getLawTargetLabel(item.target),
+    ruleType: item.ruleType || "",
+    orderNo: item.orderNo || "",
+    revisionType: item.revisionType || "",
+    currentStatus: item.currentStatus || "",
+    current: item.currentStatus ? /현행/.test(item.currentStatus) : false,
     verifiedAt: new Date().toISOString(),
     reliability: {
       level: item.detailLink ? "source-dated" : "source-link",
@@ -386,6 +393,10 @@ function buildAdminRuleResult(item) {
       needsReview: !item.detailLink
     }
   };
+}
+
+function uniqueTextParts(parts) {
+  return [...new Set(parts.map((part) => cleanArticleText(part || "")).filter(Boolean))];
 }
 
 function buildAdminRuleDetailUrl(item) {

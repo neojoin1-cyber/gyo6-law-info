@@ -427,6 +427,14 @@ function compactSourceItems(items, limit) {
     date: cleanText(item.date || ""),
     summary: truncateText(cleanText(item.summary || ""), 520),
     url: cleanText(item.url || ""),
+    currentStatus: cleanText(item.currentStatus || ""),
+    current: Boolean(item.current),
+    relevance: item.relevance ? {
+      score: Number(item.relevance.score || 0),
+      label: cleanText(item.relevance.label || ""),
+      reason: truncateText(cleanText(item.relevance.reason || ""), 220),
+      matchedSignals: asArray(item.relevance.matchedSignals).slice(0, 6).map((signal) => cleanText(signal)).filter(Boolean)
+    } : null,
     articles: asArray(item.articles).slice(0, 5).map((article) => ({
       articleNo: cleanText(article.articleNo || ""),
       branchNo: cleanText(article.branchNo || ""),

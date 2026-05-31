@@ -128,23 +128,46 @@ globalThis.fetch = async (input, init = {}) => {
         generatedAt: "2026-05-31T00:00:00.000Z",
         source: "국가법령정보센터",
         protocol: "auto",
-        adminRules: [{
-          query: "학교폭력",
-          title: "학교폭력 가해학생 조치별 적용 세부기준 고시",
-          subtitle: "고시",
-          source: "국가법령정보센터",
-          ministry: "교육부",
-          date: "2026.03.01",
-          summary: "교육부 소관 학교폭력 조치 기준 고시",
-          url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=12345",
-          type: "교육부 행정규칙",
-          verifiedAt: "2026-05-31T00:00:00.000Z",
-          reliability: {
-            level: "source-dated",
-            label: "원문 링크 확인",
-            needsReview: false
+        adminRules: [
+          {
+            query: "학교폭력",
+            title: "학교폭력 가해학생 조치별 적용 세부기준 고시",
+            subtitle: "고시",
+            source: "국가법령정보센터",
+            ministry: "교육부",
+            date: "2020.05.01",
+            summary: "교육부 소관 학교폭력 조치 기준 고시",
+            url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=12345",
+            type: "교육부 행정규칙",
+            currentStatus: "현행",
+            current: true,
+            verifiedAt: "2026-05-31T00:00:00.000Z",
+            reliability: {
+              level: "source-dated",
+              label: "원문 링크 확인",
+              needsReview: false
+            }
+          },
+          {
+            query: "직업계고 현장실습",
+            title: "직업계고 현장실습 운영 지침",
+            subtitle: "훈령",
+            source: "국가법령정보센터",
+            ministry: "교육부",
+            date: "2026.03.01",
+            summary: "현장실습, 실습생, 직업계고 운영 기준",
+            url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=67890",
+            type: "교육부 행정규칙",
+            currentStatus: "현행",
+            current: true,
+            verifiedAt: "2026-05-31T00:00:00.000Z",
+            reliability: {
+              level: "source-dated",
+              label: "원문 링크 확인",
+              needsReview: false
+            }
           }
-        }],
+        ],
         notices: []
       });
     }
@@ -204,6 +227,12 @@ if (!gatewayApiResult.results?.laws?.length) {
 }
 if (!gatewayApiResult.results?.educationAdminRules?.length) {
   throw new Error("gateway-backed search did not return education admin rules");
+}
+if (!/현장실습/.test(gatewayApiResult.results.educationAdminRules[0].title || "")) {
+  throw new Error(`education admin rules were not prioritized by case relevance: ${gatewayApiResult.results.educationAdminRules[0].title}`);
+}
+if ((gatewayApiResult.results.educationAdminRules[0].relevance?.score || 0) < 70) {
+  throw new Error("education admin rule priority score is too low for a direct field-training match");
 }
 for (const request of seenGatewayBodies) {
   if (request.path.endsWith("/gyo6/law/admin-rules") && /홍길동|010-1234-5678|ABC/.test(JSON.stringify(request.body))) {
