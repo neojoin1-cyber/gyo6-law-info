@@ -67,13 +67,15 @@ async function handleSearch(requestUrl) {
   const lawOpenApiKey = getLawOpenApiKey();
   const koreanLawMcpBaseUrl = getKoreanLawMcpBaseUrl();
   const publicDataKey = activeEnv.PUBLIC_DATA_API_KEY;
+  const nanetApiKey = activeEnv.NANET_API_KEY;
   const hasKoreanLawMcp = hasUsableValue(koreanLawMcpBaseUrl);
   const officialQuery = buildOfficialSourceQuery({ question, topic, keywords, lawQueries, topicContext });
   const educationRuleQueries = buildEducationAdminRuleQueries({ question, topic, keywords, topicContext });
-  const precedentResults = buildPrecedentSearchPreparation({ question, topic, keywords });
+  const precedentQueries = buildPrecedentQueries({ question, topic, keywords, lawQueries, topicContext });
 
-  const [lawResults, interpretationResults, educationAdminRuleResults, disasterResults, materialResults] = await Promise.all([
+  const [lawResults, precedentResults, interpretationResults, educationAdminRuleResults, disasterResults, materialResults] = await Promise.all([
     searchLawsWithPreferredSource({ lawOpenApiKey, lawQueries, hasKoreanLawMcp, keywords }),
+    hasUsableValue(nanetApiKey) ? searchNanetPrecedents(nanetApiKey, precedentQueries) : missingKey("NANET_API_KEY"),
     searchInterpretationsWithPreferredSource({ lawOpenApiKey, question: officialQuery, hasKoreanLawMcp }),
     searchEducationAdminRulesWithPreferredSource({ queries: educationRuleQueries, question, topic, keywords, hasKoreanLawMcp }),
     hasUsableValue(publicDataKey) ? searchDisasterCases(publicDataKey, safetyContext) : missingKey("PUBLIC_DATA_API_KEY"),
@@ -82,12 +84,14 @@ async function handleSearch(requestUrl) {
   const splitInterpretations = splitEducationInterpretationResults(interpretationResults);
   const notices = buildUserFacingNotices([
     ...lawResults.notices,
+    ...precedentResults.notices,
     ...interpretationResults.notices,
     ...educationAdminRuleResults.notices,
     ...disasterResults.notices,
     ...materialResults.notices
   ], {
     lawResults,
+    precedentResults,
     interpretationResults,
     educationAdminRuleResults,
     disasterResults,
@@ -111,13 +115,6 @@ async function handleSearch(requestUrl) {
       safetyMaterials: materialResults.items
     },
     notices
-  };
-}
-
-function buildPrecedentSearchPreparation() {
-  return {
-    items: [],
-    notices: []
   };
 }
 
@@ -611,6 +608,80 @@ function missingKey(name) {
   });
 }
 
+function buildPrecedentQueries({ question = "", topic = "", keywords = [], lawQueries = [], topicContext = null } = {}) {
+  const text = normalizeMatchText([topic, topicContext?.text, question, ...keywords].filter(Boolean).join(" "));
+  const candidates = [];
+
+  if (hasAnyTerm(text, ["현장실습", "실습시간", "직업계고", "도제", "산학일체형"])) {
+    candidates.push("직업교육훈련 현장실습", "현장실습 판례");
+  }
+  if (hasAnyTerm(text, ["근로", "임금", "해고", "근로계약", "최저임금", "직장내괴롭힘", "직장 내 괴롭힘"])) {
+    candidates.push("근로기준법 판례", "직장 내 괴롭힘 판례");
+  }
+  if (hasAnyTerm(text, ["학교폭력", "학폭", "괴롭힘", "따돌림"])) {
+    candidates.push("학교폭력 판례");
+  }
+  if (hasAnyTerm(text, ["아동학대", "정서학대", "생활지도 신고"])) {
+    candidates.push("아동학대 판례", "학생 생활지도 판례");
+  }
+  if (hasAnyTerm(text, ["폭행", "상해", "협박", "감금", "강요", "형사", "고소", "고발"])) {
+    candidates.push("폭행 상해 판례", "형법 판례");
+  }
+  if (hasAnyTerm(text, ["명예훼손", "모욕", "비방", "허위사실", "사이버", "단체채팅", "단톡"])) {
+    candidates.push("명예훼손 모욕 판례");
+  }
+  if (hasAnyTerm(text, ["성폭력", "성추행", "성희롱", "불법촬영"])) {
+    candidates.push("성폭력 성희롱 판례");
+  }
+  if (hasAnyTerm(text, ["손해배상", "민사", "치료비", "위자료", "불법행위", "배상"])) {
+    candidates.push("민법 손해배상 판례");
+  }
+  if (hasAnyTerm(text, ["산업안전", "중대재해", "안전사고", "끼임", "추락", "감전"])) {
+    candidates.push("산업안전보건 판례", "중대재해 판례");
+  }
+  if (hasAnyTerm(text, ["개인정보", "민감정보", "학생정보", "상담기록", "유출"])) {
+    candidates.push("개인정보보호 판례");
+  }
+  if (hasAnyTerm(text, ["징계", "교원", "공무원", "기간제", "공무직", "복무"])) {
+    candidates.push("교원 징계 판례", "공무원 징계 판례");
+  }
+
+  candidates.push(...asArray(lawQueries).map((query) => `${query} 판례`));
+  candidates.push(...asArray(keywords).filter(isSafeOfficialKeyword).map((keyword) => `${keyword} 판례`));
+
+  const safeQueries = uniqueStrings(candidates)
+    .map(cleanPrecedentQuery)
+    .filter(isSafePrecedentQuery);
+
+  if (safeQueries.length) {
+    return safeQueries.slice(0, 4);
+  }
+
+  return ["학교 법률 분쟁 판례"];
+}
+
+function cleanPrecedentQuery(value) {
+  return cleanText(value)
+    .replace(/[|,;:]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 45);
+}
+
+function isSafePrecedentQuery(value) {
+  const text = String(value || "").trim();
+  if (!text || text.length > 45) {
+    return false;
+  }
+  if (/@|\d{2,4}[-.\s]?\d{3,4}[-.\s]?\d{4}/.test(text)) {
+    return false;
+  }
+  if (/[<>{}[\]\\]/.test(text)) {
+    return false;
+  }
+  return /[가-힣]/.test(text);
+}
+
 function buildLawQueries({ laws = [], question = "", topic = "", keywords = [], topicContext = null } = {}) {
   const provided = normalizeProvidedLawQueries(laws);
   if (provided.length) {
@@ -889,6 +960,213 @@ async function searchEducationAdminRulesWithPreferredSource({ queries = [], ques
   }
 
   return searchEducationAdminRulesViaGateway(safeQueries, { question, topic, keywords });
+}
+
+async function searchNanetPrecedents(nanetApiKey, queries = []) {
+  const safeQueries = uniqueStrings(asArray(queries).map(cleanPrecedentQuery).filter(isSafePrecedentQuery)).slice(0, 4);
+  if (!safeQueries.length) {
+    return {
+      items: [],
+      notices: ["국회법률도서관 OpenAPI 검색어를 만들지 못해 판례·법률자료는 확인 필요로 표시합니다."]
+    };
+  }
+
+  const batches = await Promise.all(safeQueries.map((query) => callNanetPrecedentSearch(nanetApiKey, query)));
+  const items = [];
+  const notices = [];
+
+  for (const batch of batches) {
+    notices.push(...batch.notices);
+    items.push(...batch.items);
+  }
+
+  return {
+    items: uniqueByValue(items, getNanetPrecedentIdentity).slice(0, 8),
+    notices
+  };
+}
+
+async function callNanetPrecedentSearch(nanetApiKey, query) {
+  const url = buildNanetPrecedentUrl(nanetApiKey, query);
+
+  try {
+    const data = await fetchJson(url);
+    const statusRoot = data?.LAW_NAME_INFO || data?.lawNameInfo || data;
+    const resultCode = cleanText(statusRoot?.RESULT_CODE || statusRoot?.resultCode || data?.response?.header?.resultCode || "");
+    const resultMessage = cleanText(statusRoot?.RESULT_MSG || statusRoot?.RESULT_MESSAGE || statusRoot?.resultMsg || data?.response?.header?.resultMsg || "");
+
+    if (resultCode && !/^(success|00|0)$/i.test(resultCode)) {
+      throw new Error([resultCode, resultMessage].filter(Boolean).join(" "));
+    }
+
+    const items = normalizeNanetPrecedentItems(data, query);
+    return {
+      items,
+      notices: items.length
+        ? [`국회법률도서관 OpenAPI에서 "${query}" 판례·법률자료 후보를 확인했습니다.`]
+        : [`국회법률도서관 OpenAPI "${query}" 결과가 비어 있습니다.`]
+    };
+  } catch (error) {
+    return {
+      items: [],
+      notices: [`국회법률도서관 OpenAPI "${query}" 검색 실패: ${error.message}`]
+    };
+  }
+}
+
+function buildNanetPrecedentUrl(nanetApiKey, query) {
+  const url = new URL(getNanetPrecedentEndpoint());
+  url.searchParams.set("PAGE_NO", "1");
+  url.searchParams.set("DISPLAY_LINES", String(readNumber(activeEnv.NANET_DISPLAY_LINES) || 5));
+  url.searchParams.set("TYPE", "json");
+  url.searchParams.set("SEARCH_KEYWORD", query);
+  url.searchParams.set("KEY", nanetApiKey);
+  return url;
+}
+
+function getNanetPrecedentEndpoint() {
+  const configured = cleanText(activeEnv.NANET_API_BASE_URL || activeEnv.NANET_API_URL || "");
+  if (!configured) {
+    return "http://openapi-law.nanet.go.kr/openapi/lawpreced";
+  }
+
+  try {
+    const url = new URL(configured);
+    if (!/\/openapi\/lawpreced\/?$/i.test(url.pathname)) {
+      url.pathname = `${url.pathname.replace(/\/+$/, "")}/openapi/lawpreced`.replace(/\/openapi\/openapi\//i, "/openapi/");
+    }
+    return url.toString();
+  } catch {
+    return "http://openapi-law.nanet.go.kr/openapi/lawpreced";
+  }
+}
+
+function normalizeNanetPrecedentItems(data, query) {
+  return extractNanetRecords(data).map((item) => {
+    const title =
+      getValue(item, ["TRANS_PRECED_NAME", "ORG_PRECED_NAME", "TRANS_LAW_NAME", "ORG_LAW_NAME", "TITLE", "title", "SUBJECT", "subject"]) ||
+      getValue(item, ["LAW_NAME", "PRECED_NAME", "DOC_TITLE", "NAME"]) ||
+      "국회법률도서관 법률자료";
+    const originalTitle =
+      getValue(item, ["ORG_PRECED_NAME", "ORG_LAW_NAME", "ORIGINAL_TITLE", "originalTitle"]) ||
+      "";
+    const country = getValue(item, ["NATION_NAME", "NATION", "COUNTRY", "country"]);
+    const category = getValue(item, ["GUBUN_NAME", "GUBUN", "CATEGORY", "category"]);
+    const caseNumber = getValue(item, ["CASE_NO", "CASE_NUMBER", "CN", "caseNo", "caseNumber"]);
+    const date = formatDate(getValue(item, [
+      "PROC_DATE",
+      "PROC_DT",
+      "ANOC_DATE",
+      "DECISION_DATE",
+      "JUDGMENT_DATE",
+      "REG_DATE",
+      "PUB_DATE",
+      "date"
+    ]));
+    const detailUrl = getValue(item, ["DETAIL_URL", "DETAIL_LINK", "URL", "LINK", "url", "link"]);
+    const summary = buildNanetSummary(item, { originalTitle, country, category, caseNumber });
+    const url = normalizeNanetUrl(detailUrl, query);
+
+    return {
+      title: String(title),
+      subtitle: uniqueStrings([country, category, originalTitle].filter(Boolean)).join(" · ") || "국회법률도서관 법률자료",
+      source: "국회법률도서관 OpenAPI",
+      date,
+      summary,
+      url,
+      query,
+      type: "공식 판례·법률자료 후보",
+      caseNumber: String(caseNumber || ""),
+      country: String(country || ""),
+      verifiedAt: new Date().toISOString(),
+      reliability: getNanetReliabilityStatus(url, date)
+    };
+  }).filter((item) => item.title);
+}
+
+function extractNanetRecords(data) {
+  const root = data?.LAW_NAME_INFO || data?.lawNameInfo || data?.response?.body || data || {};
+  const rawItems =
+    root.RECORD ||
+    root.record ||
+    root.records ||
+    root.ITEM ||
+    root.items ||
+    root.item ||
+    root.list ||
+    root.data ||
+    [];
+  return asArray(rawItems).filter((item) => item && typeof item === "object");
+}
+
+function buildNanetSummary(item, { originalTitle = "", country = "", category = "", caseNumber = "" } = {}) {
+  const summary =
+    getValue(item, ["SUMMARY", "ABSTRACT", "CONTENT", "CONTENTS", "DESC", "description", "summary"]) ||
+    "";
+  const fields = [
+    country ? `국가: ${country}` : "",
+    category ? `구분: ${category}` : "",
+    caseNumber ? `번호: ${caseNumber}` : "",
+    originalTitle ? `원제: ${originalTitle}` : "",
+    summary
+  ];
+  return cleanPublicDataSummary(uniqueStrings(fields).join(" / ")).slice(0, 220);
+}
+
+function normalizeNanetUrl(value, query = "") {
+  const fallbackUrl = buildNanetSearchPageUrl(query);
+  if (!value) {
+    return fallbackUrl;
+  }
+
+  try {
+    const raw = String(value).trim();
+    const absoluteUrl = raw.startsWith("http")
+      ? raw
+      : raw.startsWith("/")
+        ? `https://law.nanet.go.kr${raw}`
+        : `https://law.nanet.go.kr/${raw}`;
+    const url = new URL(absoluteUrl);
+    for (const key of ["KEY", "key", "apiKey", "apikey", "serviceKey", "ServiceKey"]) {
+      url.searchParams.delete(key);
+    }
+    if (/^openapi-law\.nanet\.go\.kr$/i.test(url.hostname)) {
+      return fallbackUrl;
+    }
+    if (/nanet\.go\.kr$/i.test(url.hostname) && url.protocol === "http:") {
+      url.protocol = "https:";
+    }
+    return url.toString();
+  } catch {
+    return fallbackUrl;
+  }
+}
+
+function buildNanetSearchPageUrl(query = "") {
+  const url = new URL("https://law.nanet.go.kr/");
+  if (query) {
+    url.searchParams.set("query", query);
+  }
+  return url.toString();
+}
+
+function getNanetReliabilityStatus(url, date) {
+  const base = getReliabilityStatus(url, date);
+  if (base.needsReview) {
+    return {
+      ...base,
+      label: `${base.label} · 국회법률도서관`
+    };
+  }
+  return {
+    ...base,
+    level: "nanet-source-dated",
+    label: "국회법률도서관 API·일자 확인"
+  };
+}
+
+function getNanetPrecedentIdentity(item) {
+  return normalizeMatchText([item.title, item.caseNumber, item.date, item.country, item.url].filter(Boolean).join("|"));
 }
 
 async function searchInterpretationsViaGateway(question) {
@@ -1291,6 +1569,7 @@ function buildUserFacingNotices(notices, resultGroups = {}) {
   const uniqueNotices = asArray(notices).map(cleanText).filter(Boolean).filter(uniqueString);
   const groups = [
     resultGroups.lawResults,
+    resultGroups.precedentResults,
     resultGroups.interpretationResults,
     resultGroups.educationAdminRuleResults,
     resultGroups.disasterResults,
@@ -1312,13 +1591,13 @@ function isUserFacingNotice(notice, { hasResults, hasVerifiedLawText }) {
   if (!notice) {
     return false;
   }
-  if (/법제처 원문 게이트웨이.*확인|법제처 .*게이트웨이.*확인|원문 조문을 확인|재시도로 성공/i.test(notice)) {
+  if (/법제처 원문 게이트웨이.*확인|법제처 .*게이트웨이.*확인|국회법률도서관 OpenAPI.*확인|원문 조문을 확인|재시도로 성공/i.test(notice)) {
     return true;
   }
   if (hasVerifiedLawText && /실패|HTTP\s*5\d\d|fallback|건너뛰|숨겼|관련도가 낮|조회되었지만|후보가 없어|값이 없어|MCP .*호출 실패/i.test(notice)) {
     return false;
   }
-  if (hasResults && /HTTP\s*5\d\d|건너뛰|숨겼|관련도가 낮|조회되었지만/i.test(notice)) {
+  if (hasResults && /HTTP\s*5\d\d|건너뛰|숨겼|관련도가 낮|조회되었지만|값이 없어|결과가 비어/i.test(notice)) {
     return false;
   }
   return !/fallback/i.test(notice);

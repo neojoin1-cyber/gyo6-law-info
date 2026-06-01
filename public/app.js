@@ -105,9 +105,9 @@ const sourceCatalog = {
     reason: "학교 현장에서 실제 절차를 운영할 때 필요한 공식 안내입니다."
   },
   case: {
-    label: "판례",
-    source: "법원 판례 검색",
-    reason: "비슷한 분쟁에서 법원이 어떤 기준을 보았는지 확인하는 보조 자료입니다."
+    label: "판례·법률자료",
+    source: "국회법률도서관·법원 판례 검색",
+    reason: "비슷한 분쟁에서 어떤 기준이 다루어졌는지 공식 자료 후보로 확인합니다."
   },
   safety: {
     label: "안전 자료",
@@ -529,7 +529,7 @@ const officialMaterialsByTopic = {
     { type: "admin", title: "2024년 학교폭력 사안처리 가이드북", source: "교육부", use: "신고, 조사, 심의, 조치 절차를 학교 현장 기준으로 확인합니다.", query: "학교폭력 사안처리 가이드북", url: "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=316&boardSeq=98297&lev=0&m=0302&opType=N&s=moe&statusYN=W" },
     { type: "law", title: "학교폭력예방 및 대책에 관한 법률", source: "국가법령정보센터", use: "학교폭력 사안 처리의 법적 근거를 확인합니다.", query: "학교폭력예방 및 대책에 관한 법률" },
     { type: "law", title: "초중등교육법", source: "국가법령정보센터", use: "학생 지도와 학교 운영의 기본 근거를 확인합니다.", query: "초중등교육법" },
-    { type: "case", title: "학교폭력 판례", source: "법원 판례 검색", use: "비슷한 사안에서 다투어진 쟁점을 보조적으로 확인합니다.", query: "학교폭력" }
+    { type: "case", title: "학교폭력 판례·법률자료", source: "국회법률도서관·법원 판례 검색", use: "비슷한 사안에서 다투어진 쟁점을 보조적으로 확인합니다.", query: "학교폭력" }
   ],
   staffLabor: [
     { type: "law", title: "교육공무원법", source: "국가법령정보센터", use: "정규 교사와 교육공무원 신분·복무 기준을 확인합니다.", query: "교육공무원법" },
@@ -546,7 +546,7 @@ const officialMaterialsByTopic = {
   general: [
     { type: "law", title: "국가법령정보센터 통합검색", source: "국가법령정보센터", use: "질문 핵심어와 관련된 법령을 먼저 찾습니다.", query: "법령 검색" },
     { type: "admin", title: "교육부 자료 확인", source: "교육부", use: "학교 현장 관련 공식 자료를 확인합니다.", query: "교육부 자료", url: "https://www.moe.go.kr/main.do?s=moe" },
-    { type: "case", title: "판례 검색", source: "법원 판례 검색", use: "비슷한 분쟁의 판단 기준을 보조적으로 확인합니다.", query: "판례" }
+    { type: "case", title: "판례·법률자료 검색", source: "국회법률도서관·법원 판례 검색", use: "비슷한 분쟁의 판단 기준을 보조적으로 확인합니다.", query: "판례" }
   ]
 };
 
@@ -2032,7 +2032,7 @@ function renderLiveSourceResults(data) {
     </div>
     <p class="api-live-summary">승인 완료된 법제처·공공데이터 출처에서 가져온 후보입니다. 국내재해사례는 사고유형, 설비, 작업상황이 충분히 맞는 후보만 엄선해 표시합니다.</p>
     ${renderApiGroup("법제처 법령 검색", results.laws, "질문과 연결된 법령 후보가 아직 없습니다.")}
-    ${renderApiGroup("공식 판례 후보", results.precedents, "승인된 공식 판례 API 결과가 아직 없습니다. 판례는 확인 필요로 표시합니다.")}
+    ${renderApiGroup("공식 판례·법률자료 후보", results.precedents, "국회법률도서관 또는 승인된 공식 판례 API 결과가 아직 없습니다. 판례는 확인 필요로 표시합니다.")}
     ${renderApiGroup("법령해석례 후보", results.interpretations, "관련 법령해석례 후보가 아직 없습니다.")}
     ${renderApiGroup("교육부 법령해석", results.educationInterpretations, "관련 교육부 법령해석 후보가 아직 없습니다.")}
     ${renderApiGroup("교육부 공식 기준자료", results.educationAdminRules, "관련 교육부 행정규칙·고시·훈령 후보가 아직 없습니다.")}
@@ -3649,7 +3649,7 @@ function renderInterpretationAndCaseBrief(report = {}) {
   return `
     <div class="report-section report-interpretation-brief">
       <h4>3-2. 판례·행정해석 확인 상태</h4>
-      <p class="report-section-note">행정해석·교육부 기준자료는 쟁점 판단의 보조자료입니다. 판례는 사법정보공유포털 또는 국회법률도서관 등 승인된 공식 API 결과가 있을 때만 구체적으로 표시합니다.</p>
+      <p class="report-section-note">행정해석·교육부 기준자료는 쟁점 판단의 보조자료입니다. 판례·법률자료는 사법정보공유포털 또는 국회법률도서관 등 승인된 공식 API 결과가 있을 때만 구체적으로 표시합니다.</p>
       ${precedentItems.length ? `
         <div class="report-mini-list">
           ${precedentItems.map((item) => {
@@ -3658,7 +3658,7 @@ function renderInterpretationAndCaseBrief(report = {}) {
               <article class="report-mini-card">
                 <span class="student-case-badge">공식 판례</span>
                 <b>${escapeHtml(item.title)}</b>
-                <p>${escapeHtml(item.summary || "공식 판례 API에서 확인된 판례 후보입니다. 사안과의 유사성은 사실관계 대조 후 판단합니다.")}</p>
+                <p>${escapeHtml(item.summary || "공식 API에서 확인된 판례·법률자료 후보입니다. 사안과의 유사성은 사실관계 대조 후 판단합니다.")}</p>
                 <small>${escapeHtml([item.courtName, item.caseNumber, item.date, item.caseType].filter(Boolean).join(" · ") || item.source)}</small>
                 ${item.relatedLaws.length ? `<em>참조 법령: ${escapeHtml(item.relatedLaws.join(", "))}</em>` : ""}
                 ${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">원문 확인</a>` : ""}
@@ -3747,7 +3747,7 @@ function normalizeReportPrecedentItems(items = []) {
   return (Array.isArray(items) ? items : [])
     .map((item) => ({
       title: normalizeReportText(item.title || item.caseName || item.summary || "판례 제목 확인 필요"),
-      source: normalizeReportText(item.source || "공식 판례 API"),
+      source: normalizeReportText(item.source || "공식 판례·법률자료 API"),
       courtName: normalizeReportText(item.courtName || item.court || ""),
       caseNumber: normalizeReportText(item.caseNumber || item.caseNo || ""),
       date: normalizeReportText(item.decisionDate || item.date || item.sentencedAt || ""),
@@ -3799,7 +3799,7 @@ function buildCaseLawStatus(report = {}, precedentCount = 0) {
     return {
       show: true,
       title: "공식 판례 결과 반영",
-      message: "위 판례 카드는 승인된 공식 판례 결과 슬롯에 들어온 자료만 표시합니다. 사안 적용 여부는 사건의 사실관계, 조문, 행정자료와 함께 대조해야 합니다.",
+      message: "위 카드는 국회법률도서관 또는 승인된 공식 판례 결과 슬롯에 들어온 자료만 표시합니다. 사안 적용 여부는 사건의 사실관계, 조문, 행정자료와 함께 대조해야 합니다.",
       queries
     };
   }
@@ -3808,7 +3808,7 @@ function buildCaseLawStatus(report = {}, precedentCount = 0) {
     return {
       show: true,
       title: "판례 공식 API 연결 준비 상태",
-      message: "판례 관련 API 키는 감지되었지만, 현재 보고서 본문에는 공식 판례 결과가 도착한 경우에만 사건명·법원·선고일·요지를 표시합니다. 결과가 없으면 판례 내용을 추정하지 않습니다.",
+      message: "판례·법률자료 API 키는 감지되었지만, 현재 보고서 본문에는 공식 결과가 도착한 경우에만 사건명·법원·선고일·요지를 표시합니다. 결과가 없으면 판례 내용을 추정하지 않습니다.",
       queries
     };
   }
@@ -3816,7 +3816,7 @@ function buildCaseLawStatus(report = {}, precedentCount = 0) {
   return {
     show: true,
     title: "공식 판례 API 미연결",
-    message: "현재 판례는 사법정보공유포털 또는 국회법률도서관 공식 API 승인 결과가 연결되기 전입니다. 따라서 형량, 벌금, 손해배상액, 판례 경향은 단정하지 않고 판례 확인 필요 상태로 남깁니다.",
+    message: "현재 보고서에는 사법정보공유포털 또는 국회법률도서관 공식 결과가 도착한 경우에만 판례·법률자료 후보를 표시합니다. 결과가 없으면 형량, 벌금, 손해배상액, 판례 경향을 단정하지 않고 판례 확인 필요 상태로 남깁니다.",
     queries
   };
 }
@@ -5953,7 +5953,7 @@ function getSourceLinks(encodedQuestion, preset, scopes) {
 
   if (wants("case")) {
     links.push({
-      label: "법원 판례 검색",
+      label: "국회법률도서관·법원 판례 검색",
       href: `https://www.scourt.go.kr/portal/information/events/search/search.jsp?searchWord=${encodedQuestion}`
     });
   }

@@ -4,13 +4,14 @@ import { createApi } from "./shared/api.mjs";
 
 const lawOpenApiOc = defineSecret("LAW_OPEN_API_OC");
 const publicDataApiKey = defineSecret("PUBLIC_DATA_API_KEY");
+const nanetApiKey = defineSecret("NANET_API_KEY");
 const openAiApiKey = defineSecret("OPENAI_API_KEY");
 
 export const api = onRequest({
   region: "asia-northeast3",
   timeoutSeconds: 30,
   memory: "256MiB",
-  secrets: [lawOpenApiOc, publicDataApiKey, openAiApiKey]
+  secrets: [lawOpenApiOc, publicDataApiKey, nanetApiKey, openAiApiKey]
 }, async (request, response) => {
   const apiClient = createApi(process.env);
 

@@ -1,6 +1,8 @@
 const SECRET_OC = "SECRET_OC_SHOULD_NOT_LEAK";
+const SECRET_NANET = "SECRET_NANET_SHOULD_NOT_LEAK";
 const seenLawSearchQueries = [];
 const seenGatewayBodies = [];
+const seenNanetQueries = [];
 
 function fakeLawSearch(url) {
   const target = url.searchParams.get("target") || "law";
@@ -51,9 +53,36 @@ function fakeLawService() {
   };
 }
 
+function fakeNanetPrecedent(url) {
+  seenNanetQueries.push(url.searchParams.get("SEARCH_KEYWORD") || "");
+  if (url.searchParams.get("KEY") !== SECRET_NANET) {
+    throw new Error("NANET API key was not sent to the server-side OpenAPI call");
+  }
+
+  return {
+    LAW_NAME_INFO: {
+      RESULT_CODE: "SUCCESS",
+      TOTAL_CNT: "1",
+      RECORD: [{
+        TRANS_PRECED_NAME: "현장실습 안전조치 관련 공식 자료",
+        ORG_PRECED_NAME: "Field training safety reference",
+        NATION_NAME: "대한민국",
+        GUBUN_NAME: "판례·법률자료",
+        CN: "NANET-2026-0001",
+        PROC_DATE: "20260601",
+        SUMMARY: "현장실습에서 안전조치와 보호 의무를 확인할 때 참고할 공식 법률자료 후보입니다.",
+        DETAIL_URL: `https://law.nanet.go.kr/detail.do?cn=NANET-2026-0001&KEY=${SECRET_NANET}`
+      }]
+    }
+  };
+}
+
 function installFetchMock() {
   globalThis.fetch = async (input) => {
     const url = new URL(String(input));
+    if (url.hostname === "openapi-law.nanet.go.kr") {
+      return jsonResponse(fakeNanetPrecedent(url));
+    }
     if (url.hostname !== "www.law.go.kr") {
       throw new Error(`Unexpected network call: ${url.toString()}`);
     }
@@ -79,6 +108,9 @@ function assertNoSecretLeak(label, value) {
   if (text.includes(SECRET_OC) || /[?&]OC=/i.test(text)) {
     throw new Error(`${label} leaked law OC value or OC query parameter`);
   }
+  if (text.includes(SECRET_NANET) || /[?&]KEY=/i.test(text)) {
+    throw new Error(`${label} leaked NANET API key value or KEY query parameter`);
+  }
 }
 
 installFetchMock();
@@ -99,7 +131,8 @@ assertNoSecretLeak("gateway", gatewayResult);
 const { createApi } = await import("../functions/shared/api.mjs");
 const api = createApi({
   LAW_OPEN_API_OC: SECRET_OC,
-  LAW_OPEN_API_REFERER: "https://gyo6.kr/"
+  LAW_OPEN_API_REFERER: "https://gyo6.kr/",
+  NANET_API_KEY: SECRET_NANET
 });
 const searchUrl = new URL("https://gyo6.internal/api/search");
 searchUrl.searchParams.set(
@@ -114,6 +147,14 @@ for (const query of seenLawSearchQueries) {
   if (/홍길동|010-1234-5678|ABC/.test(query)) {
     throw new Error(`official source query leaked sensitive text: ${query}`);
   }
+}
+for (const query of seenNanetQueries) {
+  if (/홍길동|010-1234-5678|ABC/.test(query)) {
+    throw new Error(`NANET source query leaked sensitive text: ${query}`);
+  }
+}
+if (!apiResult.results?.precedents?.length) {
+  throw new Error("NANET-backed search did not return official legal-library candidates");
 }
 
 const unexpectedDirectLawCalls = [];
@@ -352,6 +393,9 @@ globalThis.fetch = async (input, init = {}) => {
     unexpectedDirectLawCalls.push(url.toString());
     return jsonResponse({ result: "ERROR", msg: "HTTP 525" });
   }
+  if (url.hostname === "openapi-law.nanet.go.kr") {
+    return jsonResponse(fakeNanetPrecedent(url));
+  }
 
   throw new Error(`Unexpected network call: ${url.toString()}`);
 };
@@ -360,7 +404,8 @@ const gatewayApi = createApi({
   LAW_OPEN_API_OC: SECRET_OC,
   LAW_OPEN_API_REFERER: "https://gyo6.kr/",
   KOREAN_LAW_MCP_BASE_URL: "https://gateway.local",
-  KOREAN_LAW_MCP_TOKEN: "TEST_GATEWAY_TOKEN"
+  KOREAN_LAW_MCP_TOKEN: "TEST_GATEWAY_TOKEN",
+  NANET_API_KEY: SECRET_NANET
 });
 const gatewayUrl = new URL("https://gyo6.internal/api/search");
 gatewayUrl.searchParams.set("q", "현장실습 시간 종료 후 청소를 반복 지시합니다.");
@@ -378,8 +423,8 @@ if (!gatewayApiResult.results?.laws?.length) {
 if (!Array.isArray(gatewayApiResult.results?.precedents)) {
   throw new Error("gateway-backed search should always expose a precedents result slot");
 }
-if (gatewayApiResult.results.precedents.length) {
-  throw new Error("precedents should stay empty until an approved official case-law API is connected");
+if (!gatewayApiResult.results.precedents.length) {
+  throw new Error("gateway-backed search should include NANET official legal-library candidates when the key is configured");
 }
 if (!gatewayApiResult.results?.educationAdminRules?.length) {
   throw new Error("gateway-backed search did not return education admin rules");

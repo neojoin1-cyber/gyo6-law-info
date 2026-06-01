@@ -71,12 +71,12 @@ public/index.html?q=현장실습%20안전사고&role=teacher&topic=fieldTraining
     "precedents": [
       {
         "title": "판례명 또는 사건명",
-        "source": "사법정보공유포털",
+        "source": "사법정보공유포털 또는 국회법률도서관 OpenAPI",
         "courtName": "대법원",
         "caseNumber": "2026다00000",
         "decisionDate": "2026-05-01",
         "caseType": "민사",
-        "summary": "공식 판례 API에서 제공된 요지 또는 허용된 범위의 요약",
+        "summary": "공식 판례·법률자료 API에서 제공된 요지 또는 허용된 범위의 요약",
         "relatedLaws": ["민법"],
         "url": "공식 원문 링크"
       }
@@ -109,7 +109,7 @@ public/index.html?q=현장실습%20안전사고&role=teacher&topic=fieldTraining
 | --- | --- | --- |
 | law | 법령·조문 | 국가법령정보센터 |
 | admin | 행정자료·지침 | 교육부, 교육청, 고용노동부 |
-| case | 판례 | 법원 판례 검색, 사법정보공유포털 |
+| case | 판례·법률자료 | 국회법률도서관 OpenAPI, 법원 판례 검색, 사법정보공유포털 |
 | safety | 안전자료 | 고용노동부, 안전보건공단 |
 | expert | 전문가 확인 | 변호사, 노무사, 교육청 담당 부서 |
 
@@ -136,6 +136,7 @@ total = officialScore + sourceScore + topicScore + freshnessScore
 - 제목, 출처, 자료 유형, 확인 이유, 원문 링크를 한 카드에 표시한다.
 - 시행일이나 확인일이 있으면 함께 표시한다.
 - 원문 링크가 없는 자료는 "후보"로 표시하고, 사용자가 직접 검색하도록 안내한다.
-- 판례는 `results.precedents`에 승인된 공식 API 결과가 들어온 경우에만 사건명, 사건번호, 법원명, 선고일, 판결요지를 표시한다.
+- 판례·법률자료는 `results.precedents`에 승인된 공식 API 결과가 들어온 경우에만 사건명, 사건번호, 법원명, 선고일, 판결요지 또는 공식 요지를 표시한다.
 - 승인된 판례 API 결과가 없으면 판례 내용을 추정하지 않고 "판례 확인 필요"로 표시한다.
+- 국회법률도서관 OpenAPI 결과는 `NANET_API_KEY`가 서버에 있을 때만 조회하며, 공개 URL에는 `KEY` 등 인증 식별자를 포함하지 않는다.
 - 행정자료는 법령과 구분해 "현장 운영 안내"로 표시한다.

@@ -1,6 +1,6 @@
 # 데이터 출처 전략
 
-확인일: 2026-05-30
+확인일: 2026-06-01
 
 이 문서는 `GYO6 Law Info`가 공식 원문 중심으로 작동하기 위한 데이터 출처와 연결 순서를 정리한다.
 
@@ -19,6 +19,7 @@
 | 법령·조문 | 국가법령정보센터 | 현행 법령, 조문, 시행일, 별표·서식 확인 | https://www.law.go.kr |
 | 법령 API | 국가법령정보 공동활용 | 법령 목록·본문, 행정규칙, 자치법규, 판례, 헌재결정례, 법령해석례 API 연동 | https://open.law.go.kr/LSO/openApi/guideList.do |
 | 판례·사법 API | 사법정보공유포털 | 법원 공공데이터 API 검토 | https://openapi.scourt.go.kr/ |
+| 판례·법률자료 API | 국회법률도서관 OpenAPI | `lawpreced` 기반 판례·법률자료 후보 검색 보조 | http://openapi-law.nanet.go.kr/openapi/lawpreced |
 | 학교폭력 | 교육부 학교폭력 사안처리 가이드북 | 학교폭력 절차와 학교 현장 안내 | https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=316&boardSeq=98297&lev=0&m=0302&opType=N&s=moe&statusYN=W |
 | 교육 정책 자료 | 교육부 | 현장실습, 도제학교, 학교 운영 관련 공식 자료 확인 | https://www.moe.go.kr/main.do?s=moe |
 
@@ -39,7 +40,7 @@
 현재 MVP 단계에서는 질문과 주제 사전을 바탕으로 공식 검색 링크를 생성한다.
 
 - 국가법령정보센터 검색
-- 법원 판례 검색
+- 국회법률도서관 OpenAPI 및 법원 판례 검색
 - 교육부 자료 확인
 - 학교폭력 가이드북 직접 연결
 
@@ -96,9 +97,12 @@
 
 ### 3단계: 판례·행정자료 확장
 
+- 국회법률도서관 OpenAPI `lawpreced` 결과를 `results.precedents`에 판례·법률자료 후보로 정규화
 - 사법정보공유포털 API 활용 가능 범위 확인
 - 교육부·교육청 자료 검색 방식 정리
 - 고용노동부와 안전보건공단 자료 연결 검토
+
+국회법률도서관 키는 서버 환경변수 `NANET_API_KEY`로만 사용한다. 공개 응답 URL에는 `KEY`, `apiKey`, `serviceKey` 같은 인증 식별자를 제거하고, 결과는 공식 API에서 도착한 제목·일자·구분 중심으로 표시한다. 개별 사안에 곧바로 적용할 판례인지 여부는 법령 원문, 행정자료, 사실관계와 함께 다시 대조한다.
 
 안전보건공단 자료는 공공데이터포털 일반 인증키로 다음 두 API를 먼저 연결한다.
 
