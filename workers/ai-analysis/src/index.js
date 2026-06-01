@@ -63,6 +63,7 @@ export default {
           },
           sources: {
             koreanLawMcp: Boolean(cleanText(env.KOREAN_LAW_MCP_BASE_URL || "")),
+            nanet: Boolean(cleanText(env.NANET_API_KEY || "")),
             officialSourcePrefetch: String(env.OFFICIAL_SOURCE_PREFETCH || "true").toLowerCase() !== "false"
           },
           costControl: getCostControlSettings(env)

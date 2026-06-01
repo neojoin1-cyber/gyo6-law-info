@@ -80,7 +80,7 @@ function fakeNanetPrecedent(url) {
 function installFetchMock() {
   globalThis.fetch = async (input) => {
     const url = new URL(String(input));
-    if (url.hostname === "openapi-law.nanet.go.kr") {
+    if (url.hostname === "lnp.nanet.go.kr") {
       return jsonResponse(fakeNanetPrecedent(url));
     }
     if (url.hostname !== "www.law.go.kr") {
@@ -393,7 +393,7 @@ globalThis.fetch = async (input, init = {}) => {
     unexpectedDirectLawCalls.push(url.toString());
     return jsonResponse({ result: "ERROR", msg: "HTTP 525" });
   }
-  if (url.hostname === "openapi-law.nanet.go.kr") {
+  if (url.hostname === "lnp.nanet.go.kr") {
     return jsonResponse(fakeNanetPrecedent(url));
   }
 

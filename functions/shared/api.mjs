@@ -1009,7 +1009,7 @@ async function callNanetPrecedentSearch(nanetApiKey, query) {
   } catch (error) {
     return {
       items: [],
-      notices: [`국회법률도서관 OpenAPI "${query}" 검색 실패: ${error.message}`]
+      notices: [buildNanetErrorNotice(query, error)]
     };
   }
 }
@@ -1027,7 +1027,7 @@ function buildNanetPrecedentUrl(nanetApiKey, query) {
 function getNanetPrecedentEndpoint() {
   const configured = cleanText(activeEnv.NANET_API_BASE_URL || activeEnv.NANET_API_URL || "");
   if (!configured) {
-    return "http://openapi-law.nanet.go.kr/openapi/lawpreced";
+    return "http://lnp.nanet.go.kr/openapi/lawpreced";
   }
 
   try {
@@ -1037,8 +1037,22 @@ function getNanetPrecedentEndpoint() {
     }
     return url.toString();
   } catch {
-    return "http://openapi-law.nanet.go.kr/openapi/lawpreced";
+    return "http://lnp.nanet.go.kr/openapi/lawpreced";
   }
+}
+
+function buildNanetErrorNotice(query, error) {
+  const message = cleanText(error?.message || "");
+  if (/ERROR11/i.test(message)) {
+    return "국회법률도서관 OpenAPI IP 허용 필요: 현재 호출 서버 IP가 승인 목록에 없어 결과를 가져오지 못했습니다. 승인 IP 등록 후 다시 조회해야 합니다.";
+  }
+  if (/ERROR0?1|ERROR10/i.test(message)) {
+    return "국회법률도서관 OpenAPI 인증키 확인 필요: 키가 유효하지 않거나 사용 불가 상태입니다.";
+  }
+  if (/ERROR09/i.test(message)) {
+    return "국회법률도서관 OpenAPI 일일 허용 트래픽을 초과했습니다.";
+  }
+  return `국회법률도서관 OpenAPI "${query}" 검색 실패: ${message || "알 수 없는 오류"}`;
 }
 
 function normalizeNanetPrecedentItems(data, query) {
@@ -1130,7 +1144,7 @@ function normalizeNanetUrl(value, query = "") {
     for (const key of ["KEY", "key", "apiKey", "apikey", "serviceKey", "ServiceKey"]) {
       url.searchParams.delete(key);
     }
-    if (/^openapi-law\.nanet\.go\.kr$/i.test(url.hostname)) {
+    if (/^openapi-law\.nanet\.go\.kr$/i.test(url.hostname) || (/nanet\.go\.kr$/i.test(url.hostname) && /^\/openapi\//i.test(url.pathname))) {
       return fallbackUrl;
     }
     if (/nanet\.go\.kr$/i.test(url.hostname) && url.protocol === "http:") {

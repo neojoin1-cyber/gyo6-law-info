@@ -52,8 +52,10 @@ SCOUT_API_BASE_URL=제공받은_API_BASE_URL
 
 ```env
 NANET_API_KEY=발급받은_국회법률도서관_키
-NANET_API_BASE_URL=http://openapi-law.nanet.go.kr/openapi/lawpreced
+NANET_API_BASE_URL=http://lnp.nanet.go.kr/openapi/lawpreced
 ```
+
+`ERROR11`이 나오면 인증키 문제가 아니라 접속 허용 IP 문제입니다. 운영 서버 또는 게이트웨이의 고정 출구 IP를 국회법률도서관 OpenAPI 승인 목록에 등록해야 합니다.
 
 ### 3. 판례 출처 우선순위
 
