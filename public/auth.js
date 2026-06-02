@@ -318,7 +318,7 @@ function renderAuth() {
   if (!state.configured) {
     authMount.innerHTML = `
       <details class="auth-menu">
-        <summary>회원 준비</summary>
+        <summary>로그인</summary>
         <section class="auth-card setup">
           <div>
             <strong>회원 시스템 준비중</strong>
