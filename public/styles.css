@@ -62,6 +62,19 @@ a {
   backdrop-filter: blur(14px);
 }
 
+.portal-brand .brand-mark {
+  background: linear-gradient(135deg, #64baad, var(--navy));
+}
+
+.portal-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: 6px;
+}
+
 .topbar-actions {
   display: flex;
   align-items: center;
@@ -136,6 +149,18 @@ a {
 .portal-link:hover,
 .portal-link:focus-visible {
   border-color: #9ecfc4;
+  color: var(--teal);
+}
+
+.portal-link.active {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: #fff;
+}
+
+.law-home-link {
+  border-color: #cfe3de;
+  background: var(--teal-soft);
   color: var(--teal);
 }
 
@@ -2953,6 +2978,13 @@ footer p {
     flex-wrap: wrap;
     gap: 10px;
     padding: 12px;
+  }
+
+  .portal-menu {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .topbar-actions {
