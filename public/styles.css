@@ -649,6 +649,62 @@ h1 {
   line-height: 1.65;
 }
 
+.admin-knowledge {
+  margin: 0 0 22px;
+  padding: 20px;
+  border: 1px solid #cfe4e2;
+  border-radius: 8px;
+  background: #f7fbfa;
+}
+
+.admin-knowledge .section-head > p {
+  max-width: 430px;
+  margin: 0;
+  color: #40556a;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-grid article {
+  min-height: 154px;
+  padding: 16px;
+  border: 1px solid #cfe4e2;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.admin-grid span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: #eaf6f4;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.admin-grid h3 {
+  margin: 12px 0 7px;
+  color: var(--navy);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.admin-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
 .workspace {
   display: grid;
   grid-template-columns: minmax(300px, .72fr) minmax(0, 1.28fr);
@@ -2925,6 +2981,7 @@ footer p {
   .quick-start,
   .trust-rules,
   .source-grid,
+  .admin-grid,
   .principles,
   .roadmap-grid {
     grid-template-columns: 1fr;
@@ -3090,7 +3147,8 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .source-hub {
+  .source-hub,
+  .admin-knowledge {
     padding: 16px;
   }
 

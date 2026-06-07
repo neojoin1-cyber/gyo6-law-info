@@ -128,6 +128,7 @@ const sourcePlanByTopic = {
   overseasTraining: ["admin", "law", "expert"],
   schoolSafety: ["safety", "law", "admin", "case", "expert"],
   schoolViolence: ["admin", "law", "case", "expert"],
+  schoolAdministration: ["admin", "law", "case", "expert"],
   staffLabor: ["law", "admin", "case", "expert"],
   civilComplaint: ["admin", "law", "case", "expert"],
   general: ["law", "admin", "case", "expert"]
@@ -253,6 +254,42 @@ const topicTaxonomy = {
       }
     ]
   },
+  schoolAdministration: {
+    label: "교육행정·학교회계",
+    preset: "schoolAdministration",
+    middles: [
+      {
+        value: "budgetAccount",
+        label: "학교회계·예산",
+        preset: "schoolAdministration",
+        minors: [
+          { value: "budgetPlan", label: "예산 편성", preset: "schoolAdministration" },
+          { value: "spendingEvidence", label: "지출 증빙", preset: "schoolAdministration" },
+          { value: "contractAccounting", label: "계약·검수", preset: "schoolAdministration" }
+        ]
+      },
+      {
+        value: "studentRecords",
+        label: "학생생활기록",
+        preset: "schoolAdministration",
+        minors: [
+          { value: "schoolRecord", label: "학생부 기재", preset: "schoolAdministration" },
+          { value: "attendanceRecord", label: "출결·증빙", preset: "schoolAdministration" },
+          { value: "correction", label: "정정·보관", preset: "schoolAdministration" }
+        ]
+      },
+      {
+        value: "adminProcedure",
+        label: "공문·행정절차",
+        preset: "schoolAdministration",
+        minors: [
+          { value: "document", label: "공문·품의", preset: "schoolAdministration" },
+          { value: "committee", label: "위원회·회의록", preset: "schoolAdministration" },
+          { value: "infoDisclosure", label: "정보공개·민원", preset: "schoolAdministration" }
+        ]
+      }
+    ]
+  },
   staffLabor: {
     label: "교직원·행정직",
     preset: "staffLabor",
@@ -268,13 +305,23 @@ const topicTaxonomy = {
         ]
       },
       {
-        value: "workplaceIssue",
-        label: "복무·직장 내 문제",
+        value: "attendanceLeave",
+        label: "근태·출장·휴가",
         preset: "staffLabor",
         minors: [
-          { value: "leaveTrip", label: "휴가·출장·근태", preset: "staffLabor" },
+          { value: "teacherLeave", label: "교원 휴가", preset: "staffLabor" },
+          { value: "businessTrip", label: "출장·여비", preset: "staffLabor" },
+          { value: "attendanceEvidence", label: "근태 증빙", preset: "staffLabor" }
+        ]
+      },
+      {
+        value: "workplaceIssue",
+        label: "직장 내 문제·징계",
+        preset: "staffLabor",
+        minors: [
           { value: "bullying", label: "직장 내 괴롭힘", preset: "staffLabor" },
-          { value: "discipline", label: "징계·민원", preset: "staffLabor" }
+          { value: "discipline", label: "징계·민원", preset: "staffLabor" },
+          { value: "workplaceComplaint", label: "고충·보호조치", preset: "staffLabor" }
         ]
       }
     ]
@@ -374,8 +421,9 @@ const factPromptsByTopic = {
   fieldTraining: ["실습 협약서가 있나요?", "사고나 문제가 발생한 날짜와 장소는 어디인가요?", "학교·산업체가 어떤 조치를 했나요?", "보호자에게 안내된 자료가 있나요?"],
   overseasTraining: ["파견 국가와 기관은 어디인가요?", "동의서·보험·비상 연락 체계가 있나요?", "현지 사고나 민원이 발생했나요?", "귀국·중단 절차가 안내되었나요?"],
   schoolSafety: ["사고 장소와 시간은 언제인가요?", "피해 정도와 즉시 조치가 기록되어 있나요?", "안전교육·점검 기록이 있나요?", "학교·외부 기관의 역할이 구분되나요?"],
-  schoolViolence: ["신고·접수 일자가 언제인가요?", "피해·가해 학생 보호 조치가 있었나요?", "전담기구 확인이나 심의 절차가 진행되었나요?", "교육청 안내 자료를 확인했나요?"],
-  staffLabor: ["정규직·기간제·상근 여부가 무엇인가요?", "계약서와 복무 규정이 있나요?", "징계·민원·근로조건 중 어떤 사안인가요?", "학교법인 또는 교육청 기준이 있나요?"],
+  schoolViolence: ["신고·접수 일자가 언제인가요?", "피해·가해 학생 보호 조치가 있었나요?", "전담기구 확인이나 심의 절차가 진행되었나요?", "2025 학교폭력 사안처리 가이드북이나 관할 교육청 자료를 확인했나요?"],
+  schoolAdministration: ["예산·품의·검수·지출 중 어느 단계인가요?", "관할 시도교육청 학교회계 지침이나 학교 내부 규정이 있나요?", "학생부·출결·정정 사안이면 증빙자료와 처리일자가 있나요?", "공문, 회의록, 결재선, 보존기간을 확인해야 하나요?"],
+  staffLabor: ["교원, 지방공무원, 교육공무직, 기간제 등 신분이 무엇인가요?", "휴가·출장·근태라면 신청일, 승인권자, 나이스 기록, 증빙이 있나요?", "계약서, 복무규정, 학교법인 또는 교육청 기준이 있나요?", "징계·민원·근로조건 중 어떤 사안인가요?"],
   civilComplaint: ["민원 접수 날짜와 경로가 있나요?", "상담·지도 기록이 시간순으로 정리되어 있나요?", "학교 규정이나 교육청 안내를 확인했나요?", "학생 권리 보호 조치가 필요한가요?"],
   general: ["누가 관련되어 있나요?", "언제·어디서 발생했나요?", "계약서·공문·기록이 있나요?", "학교나 기관이 이미 안내한 내용이 있나요?"]
 };
@@ -526,16 +574,100 @@ const officialMaterialsByTopic = {
     }
   ],
   schoolViolence: [
-    { type: "admin", title: "2024년 학교폭력 사안처리 가이드북", source: "교육부", use: "신고, 조사, 심의, 조치 절차를 학교 현장 기준으로 확인합니다.", query: "학교폭력 사안처리 가이드북", url: "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=316&boardSeq=98297&lev=0&m=0302&opType=N&s=moe&statusYN=W" },
-    { type: "law", title: "학교폭력예방 및 대책에 관한 법률", source: "국가법령정보센터", use: "학교폭력 사안 처리의 법적 근거를 확인합니다.", query: "학교폭력예방 및 대책에 관한 법률" },
+    {
+      type: "admin",
+      title: "2025년 학교폭력 사안처리 가이드북",
+      source: "교육부·시도교육청",
+      use: "신고, 접수, 조사, 전담기구 확인, 심의 요청, 조치, 불복 절차를 학교 현장 기준으로 확인합니다.",
+      query: "2025년 학교폭력 사안처리 가이드북",
+      url: "https://www.cbe.go.kr/dept-21/na/ntt/selectNttInfo.do?mi=11221&nttSn=1548192",
+      actionChecks: [
+        "신고·접수일과 상담·진술·증거 자료를 시간순으로 정리",
+        "피해학생 보호조치와 관련 학생 분리 필요성 확인",
+        "전담기구 확인, 심의 요청, 조치 결정, 불복 가능 단계 구분"
+      ]
+    },
+    { type: "law", title: "학교폭력예방 및 대책에 관한 법률", source: "국가법령정보센터", use: "학교폭력 사안 처리의 법적 근거와 학생 보호·선도·분쟁조정 기준을 확인합니다.", query: "학교폭력예방 및 대책에 관한 법률" },
+    { type: "law", title: "학교폭력예방 및 대책에 관한 법률 시행령", source: "국가법령정보센터", use: "심의, 전담기구, 피해학생 지원, 교육·예방 등 시행 절차를 확인합니다.", query: "학교폭력예방 및 대책에 관한 법률 시행령" },
     { type: "law", title: "초중등교육법", source: "국가법령정보센터", use: "학생 지도와 학교 운영의 기본 근거를 확인합니다.", query: "초중등교육법" },
     { type: "case", title: "학교폭력 판례·법률자료", source: "국회법률도서관·법원 판례 검색", use: "비슷한 사안에서 다투어진 쟁점을 보조적으로 확인합니다.", query: "학교폭력" }
   ],
+  schoolAdministration: [
+    {
+      type: "admin",
+      title: "2026학년도 학교생활기록부 기재요령",
+      source: "학교생활기록부 종합지원포털",
+      use: "학생생활기록부 기재, 출결, 정정, 증빙 보관 사안에서 당해 학년도 공식 기재 기준을 먼저 확인합니다.",
+      query: "2026학년도 학교생활기록부 기재요령 고등학교",
+      url: "https://star.moe.go.kr/web/contents/m21100.do",
+      actionChecks: [
+        "학교급과 학년도 확인",
+        "정정 사유, 처리일자, 증빙자료, 결재 기록 확인",
+        "출결·창의적 체험활동·세부능력 특기사항 등 항목별 기재 금지·유의사항 확인"
+      ]
+    },
+    {
+      type: "admin",
+      title: "학교생활기록 작성 및 관리지침",
+      source: "국가법령정보센터·교육부",
+      use: "학교생활기록의 작성·관리·정정 업무 원칙과 권한, 자료 입력 기준을 확인합니다.",
+      query: "학교생활기록 작성 및 관리지침",
+      url: "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000188164",
+      actionChecks: [
+        "담당 사용자 권한과 학교장 승인 흐름 확인",
+        "관찰·평가 근거와 보조부·전산자료 보관 상태 확인",
+        "개인정보와 학생 권리 보호 기준 확인"
+      ]
+    },
+    {
+      type: "law",
+      title: "국립 유치원 및 초·중등학교 회계규칙",
+      source: "국가법령정보센터",
+      use: "학교회계 예산, 수입·지출, 출납, 계약·검수, 증빙 보관 기준을 확인합니다.",
+      query: "국립 유치원 및 초·중등학교 회계규칙",
+      url: "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=210514",
+      actionChecks: [
+        "예산 편성·추경·집행 단계 구분",
+        "품의, 계약, 검수, 지출결의, 영수증·세금계산서 등 증빙 확인",
+        "출납원·임시출납원·학교장 결재 흐름 확인"
+      ]
+    },
+    {
+      type: "admin",
+      title: "시도교육청 학교회계 예산편성 기본지침",
+      source: "시도교육청",
+      use: "관할 교육청별 예산 편성 기준, 사업비 집행 제한, 증빙 요구가 다른지 확인합니다.",
+      query: "학교회계 예산편성 기본지침 지출 증빙"
+    },
+    {
+      type: "law",
+      title: "지방자치단체를 당사자로 하는 계약에 관한 법률",
+      source: "국가법령정보센터",
+      use: "학교 물품·용역·공사 계약, 수의계약, 검수, 계약상대자 관련 기준을 보조적으로 확인합니다.",
+      query: "지방자치단체를 당사자로 하는 계약에 관한 법률"
+    }
+  ],
   staffLabor: [
+    {
+      type: "admin",
+      title: "교원휴가에 관한 예규",
+      source: "국가법령정보센터·교육부",
+      use: "교원의 연가, 병가, 공가, 특별휴가, 수업일 중 연가 신청, 나이스 근무상황 처리 기준을 확인합니다.",
+      query: "교원휴가에 관한 예규",
+      url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=20578&efYd=0",
+      actionChecks: [
+        "교원 신분, 수업일·휴업일 여부, 휴가 종류 확인",
+        "나이스 근무상황 신청 사유와 학교장 승인 흐름 확인",
+        "질병 관련 증빙자료 요구 여부를 원문과 교육청 기준으로 확인"
+      ]
+    },
+    { type: "law", title: "국가공무원 복무규정", source: "국가법령정보센터", use: "국가공무원 복무, 근무시간, 휴가, 공가 등 기본 기준을 확인합니다.", query: "국가공무원 복무규정" },
+    { type: "law", title: "지방공무원 복무규정", source: "국가법령정보센터", use: "교육감 소속 지방공무원과 학교 행정직 복무 기준을 확인합니다.", query: "지방공무원 복무규정" },
+    { type: "law", title: "공무원 여비 규정", source: "국가법령정보센터", use: "출장명령, 국내·국외 여비, 운임·숙박비·일비, 증빙자료 기준을 확인합니다.", query: "공무원 여비 규정", url: "https://www.law.go.kr/LSW/lsInfoP.do?lsId=009402&urlMode=lsInfoP" },
     { type: "law", title: "교육공무원법", source: "국가법령정보센터", use: "정규 교사와 교육공무원 신분·복무 기준을 확인합니다.", query: "교육공무원법" },
     { type: "law", title: "사립학교법", source: "국가법령정보센터", use: "사립학교 교직원 관련 기준을 확인합니다.", query: "사립학교법" },
-    { type: "law", title: "근로기준법", source: "국가법령정보센터", use: "행정직원과 근로관계 사안의 기본 기준을 확인합니다.", query: "근로기준법" },
-    { type: "law", title: "기간제 및 단시간근로자 보호 등에 관한 법률", source: "국가법령정보센터", use: "기간제·단시간 근로자 보호 기준을 확인합니다.", query: "기간제 및 단시간근로자 보호 등에 관한 법률" }
+    { type: "law", title: "근로기준법", source: "국가법령정보센터", use: "교육공무직, 행정직원, 계약직 근로관계 사안의 기본 기준을 확인합니다.", query: "근로기준법" },
+    { type: "law", title: "기간제 및 단시간근로자 보호 등에 관한 법률", source: "국가법령정보센터", use: "기간제·단시간 근로자 보호 기준과 차별·계약기간 쟁점을 확인합니다.", query: "기간제 및 단시간근로자 보호 등에 관한 법률" }
   ],
   civilComplaint: [
     { type: "law", title: "초중등교육법", source: "국가법령정보센터", use: "학생관리와 학교 운영의 기본 근거를 확인합니다.", query: "초중등교육법" },
@@ -617,17 +749,26 @@ const topicPresets = [
     checklist: ["발생 일시와 관련 자료를 시간순으로 정리합니다.", "학교와 교육청의 공식 절차 안내를 확인합니다.", "법령 원문과 관할 기관 안내를 함께 확인합니다."]
   },
   {
+    type: "schoolAdministration",
+    keys: ["교육행정", "학교회계", "예산", "품의", "검수", "지출", "증빙", "생활기록부", "생기부", "학생부", "출결", "정정", "공문", "정보공개", "회의록"],
+    title: "교육행정과 학교회계·학생기록 관련 규정",
+    summary: "학교 행정 질문은 신분·업무 단계와 관할 교육청 지침을 먼저 나누고, 법령·훈령·예규·교육청 기준을 함께 확인해야 합니다.",
+    laws: ["학교생활기록 작성 및 관리지침", "국립 유치원 및 초·중등학교 회계규칙", "초중등교육법", "지방자치단체를 당사자로 하는 계약에 관한 법률"],
+    tags: ["교육행정", "학교회계", "학생생활기록", "지출 증빙"],
+    checklist: ["업무 단계를 예산 편성, 품의, 계약, 검수, 지출, 정산 중 하나로 구분합니다.", "관할 시도교육청 지침과 학교 내부 결재·보존 기준을 확인합니다.", "학생부·출결 사안은 당해 학년도 기재요령과 증빙자료를 함께 대조합니다."]
+  },
+  {
     type: "staffLabor",
-    keys: ["기간제", "교사", "행정직", "상근", "교직원", "복무", "징계"],
+    keys: ["기간제", "교사", "행정직", "상근", "교직원", "복무", "징계", "휴가", "출장", "근태", "연가", "병가", "공가", "특별휴가", "여비"],
     title: "교직원과 행정직 인사·노무 관련 법령",
-    summary: "교직원과 행정직 사안은 신분, 계약 형태, 복무 기준, 징계 절차, 근로관계 여부를 먼저 나누어 확인해야 합니다.",
-    laws: ["교육공무원법", "사립학교법", "근로기준법", "기간제 및 단시간근로자 보호 등에 관한 법률"],
-    tags: ["교직원", "기간제", "행정직", "복무"],
-    checklist: ["정규직, 기간제, 상근 여부를 먼저 구분합니다.", "계약서와 복무 규정을 확인합니다.", "교육공무원 규정과 근로관계 법령을 함께 확인합니다."]
+    summary: "교직원과 행정직 사안은 신분, 계약 형태, 휴가·출장·근태 기준, 징계 절차, 근로관계 여부를 먼저 나누어 확인해야 합니다.",
+    laws: ["교원휴가에 관한 예규", "국가공무원 복무규정", "지방공무원 복무규정", "공무원 여비 규정", "근로기준법"],
+    tags: ["교직원", "기간제", "행정직", "근태·휴가"],
+    checklist: ["교원, 지방공무원, 교육공무직, 기간제 등 신분을 먼저 구분합니다.", "휴가·출장·근태라면 신청일, 승인권자, 나이스 기록, 증빙을 확인합니다.", "교육공무원 규정, 복무규정, 근로관계 법령, 교육청 기준을 함께 확인합니다."]
   },
   {
     type: "civilComplaint",
-    keys: ["민원", "학생관리", "학부모", "생활지도", "출결", "징계"],
+    keys: ["민원", "학생관리", "학부모", "생활지도", "징계", "상담", "안내문", "면담"],
     title: "학생관리와 학교 민원 관련 법령",
     summary: "학생관리와 민원은 사실관계 기록, 학교 규정, 학생 권리 보호, 학부모 안내 절차를 함께 정리하는 것이 중요합니다.",
     laws: ["초중등교육법", "학교생활기록 작성 및 관리지침", "행정절차법"],
@@ -794,6 +935,7 @@ function getPresetScore(preset, normalized) {
 
   if (preset.type === "staffLabor") {
     if (/기간제|행정실|행정직|교직원|교육공무직|상근|복무|업무분장|계약갱신|재계약|근로자|직장내괴롭힘|직장.*괴롭힘|상급자|야근|모욕|성희롱|계약직직원|학교계약직/.test(normalized)) score += 35;
+    if (/교원휴가|휴가|연가|병가|공가|특별휴가|출장|출장비|여비|근태|근무상황|나이스|NEIS|조퇴|외출|지각/.test(normalized) && /교원|교사|행정직|교육공무직|기간제|공무원|학교|교직원/.test(normalized)) score += 42;
     if (/(교육공무직|조리실무사|행정실|계약직직원|학교계약직).*(괴롭힘|모욕|심부름|상급자|성희롱|재계약불이익|해고)|((괴롭힘|모욕|심부름|상급자|성희롱|재계약불이익|해고).*(교육공무직|조리실무사|행정실|계약직직원|학교계약직))/.test(normalized)) score += 45;
     if (/교권침해|교육활동침해|교사보호|학부모폭언|폭언전화/.test(normalized)) score += 65;
     if (/담임교사.*학부모|학부모.*담임교사|전화응대|불친절/.test(normalized) && !/기간제|근로자|복무|업무분장|계약|징계(?!요구는?없|요구없|없)/.test(normalized)) score -= 20;
@@ -809,9 +951,19 @@ function getPresetScore(preset, normalized) {
     if (/직장|상급자|근로자|기간제|행정실|행정직|교직원|복무|업무분장|계약갱신|재계약/.test(normalized)) score -= 35;
   }
 
+  if (preset.type === "schoolAdministration") {
+    if (/교육행정|학교회계|예산|품의|검수|지출|증빙|영수증|세금계산서|카드사용|정산|수의계약|계약서|공문|결재|회의록|정보공개|보존기간/.test(normalized)) score += 42;
+    if (/생활기록부|학교생활기록|생기부|학생부|출결|인정결석|정정|기재요령|창의적체험활동|세부능력|특기사항|누가기록/.test(normalized)) score += 48;
+    if (/예산.*(편성|집행|증빙|검수|지출)|지출.*(증빙|품의|검수|영수증)|학생부.*(정정|기재|증빙|보관)|출결.*(증빙|인정결석)/.test(normalized)) score += 35;
+    if (/현장실습|실습생|도제학교|산재|중대재해/.test(normalized)) score -= 25;
+    if (/학교폭력|학폭|피해학생|가해학생|심의/.test(normalized)) score -= 18;
+    if (/해고|임금|근로계약|재계약불이익|직장내괴롭힘|성희롱/.test(normalized)) score -= 18;
+  }
+
   if (preset.type === "civilComplaint") {
-    if (/민원|학부모|담임|전화응대|불친절|사과|재발방지|생활지도|출결|학생관리|학생상담|상담내용|민감정보|기숙사|차별|부정행위|이의제기|휴대전화|휴대폰|인권침해|학생인권|인정결석|급식반찬|생활기록부|아동학대|자리이동|고충/.test(normalized)) score += 28;
-    if (/학생|학부모|담임|생활지도|출결|생활기록부|기숙사|부정행위|인정결석|급식|상담내용|휴대전화|휴대폰/.test(normalized)) score += 20;
+    if (/민원|학부모|담임|전화응대|불친절|사과|재발방지|생활지도|학생관리|학생상담|상담내용|민감정보|기숙사|차별|부정행위|이의제기|휴대전화|휴대폰|인권침해|학생인권|급식반찬|아동학대|자리이동|고충/.test(normalized)) score += 28;
+    if (/학생|학부모|담임|생활지도|기숙사|부정행위|급식|상담내용|휴대전화|휴대폰/.test(normalized)) score += 20;
+    if (/생활기록부|학교생활기록|생기부|학생부|출결|인정결석|정정|기재요령|예산|품의|검수|지출|증빙|학교회계/.test(normalized)) score -= 22;
     if (/기간제|근로자|계약갱신|재계약|임금|해고|징계|노무/.test(normalized)) score -= 20;
     if (/징계전|징계절차|부정행위|이의제기/.test(normalized)) score += 25;
     if (/교권침해|교육활동침해|교사보호|학부모폭언|폭언전화/.test(normalized)) score -= 45;
@@ -2335,11 +2487,33 @@ function getDirectAnswer(question, preset, roleGuide, scenario = analyzeQuestion
     };
   }
 
+  if (preset.type === "schoolAdministration") {
+    return {
+      title: "교육행정 사안은 업무 단계와 관할 기준을 먼저 나누어야 합니다.",
+      lead: "학교회계, 학생생활기록, 공문·회의록·정보공개 사안은 법령만으로 끝나지 않고 교육부 훈령, 당해 학년도 기재요령, 시도교육청 지침, 학교 내부 결재 흐름을 함께 확인해야 합니다.",
+      actions: [
+        "질문이 예산 편성, 품의, 계약, 검수, 지출, 정산, 학생부 기재·정정, 공문 처리 중 어느 단계인지 표시합니다.",
+        "관할 시도교육청 지침, 학교 내부 규정, 결재 문서, 증빙자료, 회의록을 시간순으로 모읍니다.",
+        "학생생활기록 사안은 학교생활기록 작성 및 관리지침과 2026학년도 기재요령을 먼저 대조합니다.",
+        "학교회계 사안은 학교회계 규칙, 예산편성 기본지침, 품의·검수·영수증 등 지출 증빙 흐름을 분리합니다."
+      ],
+      responsibilityTitle: "확인할 주체와 자료",
+      responsibilities: [
+        "담당자: 업무 단계, 결재선, 보유 증빙, 처리일자를 사실 중심으로 정리합니다.",
+        "학교 관리자: 학교장 승인, 위원회·회의록, 내부통제와 보존 기준을 확인합니다.",
+        "교육청 기준: 관할 시도교육청 지침, 학교회계 예산편성 기본지침, 학생부 관련 안내를 대조합니다."
+      ],
+      warning: "예산 집행 책임, 학생부 정정 가능 여부, 개인정보 제공 범위는 원문과 관할 교육청 기준에 따라 달라질 수 있으므로 확인 필요 상태를 명확히 표시해야 합니다."
+    };
+  }
+
   if (preset.type === "staffLabor") {
     return {
       title: "교직원·행정직 노무 사안은 사실관계 기록과 보호 조치를 먼저 나누어야 합니다.",
-      lead: "계약, 복무, 직장 내 괴롭힘, 성희롱, 재계약 불이익처럼 신분과 노동관계가 얽힌 사안은 학교 내부 확인과 외부 전문가 검토 필요성을 구분해야 합니다.",
+      lead: "휴가·출장·근태, 계약, 복무, 직장 내 괴롭힘, 성희롱, 재계약 불이익처럼 신분과 노동관계가 얽힌 사안은 학교 내부 확인과 외부 전문가 검토 필요성을 구분해야 합니다.",
       actions: [
+        "교원, 지방공무원, 교육공무직, 기간제 등 신분과 적용 규정을 먼저 구분합니다.",
+        "휴가·출장·근태라면 신청일, 승인권자, 나이스 근무상황, 공문, 증빙자료를 시간순으로 정리합니다.",
         "계약서, 복무 기준, 업무분장, 지시·발언 기록, 메신저·이메일 등 원자료를 시간순으로 정리합니다.",
         "신고자 보호, 불리한 처우 금지, 조사 담당자 분리 등 내부 절차를 먼저 확인합니다.",
         "성희롱, 해고, 재계약 불이익, 형사·손해배상 가능성이 있으면 노무사 또는 변호사 상담 범위를 별도로 정합니다."
@@ -2861,6 +3035,20 @@ function buildFinalAdvice(seed) {
         "실제 부상, 중대한 인명피해, 입원, 수술 등 피해가 확인되면 그때 관계기관 보고와 전문가 상담 여부를 상향 검토합니다."
       ],
       closingSentence: "현재 사안은 안전보건 예방 점검과 재발방지 기록으로 내부 관리하되, 실제 인명피해나 보고 대상 사고가 확인되면 교육청·관계기관 보고 여부를 즉시 재검토하겠습니다."
+    };
+  }
+
+  if (seed.presetType === "schoolAdministration") {
+    return {
+      level: "internal",
+      title: "공식 지침과 내부 결재 흐름 확인 우선",
+      summary: "현재 내용은 법적 책임 단정보다 학교회계, 학생생활기록, 공문·회의록 처리 기준을 공식자료와 학교 내부 문서로 맞춰 보는 단계입니다.",
+      actions: [
+        "예산·품의·계약·검수·지출·정산 또는 학생부 기재·정정 등 업무 단계를 먼저 표시합니다.",
+        "관할 시도교육청 지침, 학교 내부 규정, 결재 문서, 증빙자료, 회의록을 함께 모읍니다.",
+        "학생부는 2026학년도 기재요령과 학교생활기록 작성 및 관리지침, 회계는 학교회계 규칙과 예산편성 기본지침을 우선 대조합니다."
+      ],
+      closingSentence: "현재 사안은 공식 지침과 내부 결재·증빙 흐름을 먼저 확인하고, 감사·민원·소송 가능성이 구체화될 때 전문가 상담 범위를 별도로 정리하겠습니다."
     };
   }
 
@@ -5011,6 +5199,23 @@ function getRefinementQuestions(question, preset, userRole, riskSignals) {
         placeholder: "예: 분리 조치, 상담 지원, 보호자 통보"
       }
     ],
+    schoolAdministration: [
+      {
+        question: "업무 단계가 예산 편성, 품의, 계약, 검수, 지출, 정산, 학생부 정정 중 어디인가요?",
+        reason: "교육행정은 단계별로 확인할 법령과 증빙자료가 달라집니다.",
+        placeholder: "예: 지출 증빙, 학생부 정정, 회의록 보존"
+      },
+      {
+        question: "관할 시도교육청 지침, 학교 내부 규정, 결재 문서가 있나요?",
+        reason: "학교회계와 행정절차는 교육청별 지침과 내부 결재 흐름 확인이 중요합니다.",
+        placeholder: "예: 예산편성 지침, 품의서, 검수조서"
+      },
+      {
+        question: "학생부·출결 사안이면 학년도, 학교급, 증빙자료와 처리일자가 정리되어 있나요?",
+        reason: "학생생활기록은 당해 학년도 기재요령과 작성·관리지침을 함께 대조해야 합니다.",
+        placeholder: "예: 2026학년도 고등학교, 출결 증빙 있음"
+      }
+    ],
     staffLabor: [
       {
         question: "정규직, 기간제, 상근, 시간제 등 신분과 계약 형태가 무엇인가요?",
@@ -5855,6 +6060,25 @@ function inferTopicPath(question, preset) {
     return { major: "schoolSafety", middle: "accident", minor: has(/부상|치료|병원|타박상|두통|화상|골절/) ? "injury" : "auto" };
   }
 
+  if (
+    presetType === "schoolAdministration"
+    || has(/교육행정|학교회계|예산|품의|검수|지출|증빙|영수증|세금계산서|정산|수의계약|생활기록부|학교생활기록|생기부|학생부|출결|인정결석|정정|기재요령|공문|결재|회의록|정보공개|보존기간/)
+  ) {
+    if (has(/예산|회계|품의|검수|지출|영수증|세금계산서|카드|정산|수의계약|계약/)) {
+      if (has(/편성|본예산|추경|예산서/)) return { major: "schoolAdministration", middle: "budgetAccount", minor: "budgetPlan" };
+      if (has(/계약|수의계약|검수|납품|공사|용역|물품/)) return { major: "schoolAdministration", middle: "budgetAccount", minor: "contractAccounting" };
+      return { major: "schoolAdministration", middle: "budgetAccount", minor: "spendingEvidence" };
+    }
+    if (has(/생활기록부|학교생활기록|생기부|학생부|출결|인정결석|정정|기재요령|창의적체험활동|세부능력|특기사항|누가기록/)) {
+      if (has(/출결|인정결석|결석|지각|조퇴|결과/)) return { major: "schoolAdministration", middle: "studentRecords", minor: "attendanceRecord" };
+      if (has(/정정|보관|보존|증빙|오류|수정/)) return { major: "schoolAdministration", middle: "studentRecords", minor: "correction" };
+      return { major: "schoolAdministration", middle: "studentRecords", minor: "schoolRecord" };
+    }
+    if (has(/정보공개|민원|공개청구/)) return { major: "schoolAdministration", middle: "adminProcedure", minor: "infoDisclosure" };
+    if (has(/위원회|회의록|심의|협의회/)) return { major: "schoolAdministration", middle: "adminProcedure", minor: "committee" };
+    return { major: "schoolAdministration", middle: "adminProcedure", minor: "document" };
+  }
+
   if (presetType === "schoolViolence") {
     if (has(/불복|재심|행정심판|이의제기/)) return { major: "schoolViolence", middle: "procedure", minor: "appeal" };
     if (has(/전담기구|심의|조치|위원회/)) return { major: "schoolViolence", middle: "procedure", minor: "committee" };
@@ -5863,7 +6087,11 @@ function inferTopicPath(question, preset) {
 
   if (presetType === "staffLabor") {
     if (has(/괴롭힘|모욕|성희롱|야근|심부름|상급자|직장내/)) return { major: "staffLabor", middle: "workplaceIssue", minor: "bullying" };
-    if (has(/휴가|출장|근태|복무|연차/)) return { major: "staffLabor", middle: "workplaceIssue", minor: "leaveTrip" };
+    if (has(/휴가|출장|근태|복무|연차|연가|병가|공가|특별휴가|여비|근무상황|나이스|조퇴|외출|지각/)) {
+      if (has(/출장|여비|출장비|운임|숙박/)) return { major: "staffLabor", middle: "attendanceLeave", minor: "businessTrip" };
+      if (has(/근태|근무상황|나이스|증빙|지각|조퇴|외출/)) return { major: "staffLabor", middle: "attendanceLeave", minor: "attendanceEvidence" };
+      return { major: "staffLabor", middle: "attendanceLeave", minor: "teacherLeave" };
+    }
     if (has(/징계|민원/)) return { major: "staffLabor", middle: "workplaceIssue", minor: "discipline" };
     if (has(/행정직|교육공무직|조리실무사|행정실/)) return { major: "staffLabor", middle: "employmentStatus", minor: "adminStaff" };
     if (has(/재계약|계약갱신|갱신기대권/)) return { major: "staffLabor", middle: "employmentStatus", minor: "renewal" };
@@ -5871,7 +6099,8 @@ function inferTopicPath(question, preset) {
   }
 
   if (presetType === "civilComplaint") {
-    if (has(/생활기록|생기부|기록|증빙|개인정보|상담내용/)) return { major: "civilComplaint", middle: "schoolComplaint", minor: "records" };
+    if (has(/생활기록부|학교생활기록|생기부|학생부|출결|인정결석|정정|기재요령/)) return { major: "schoolAdministration", middle: "studentRecords", minor: "schoolRecord" };
+    if (has(/기록|증빙|개인정보|상담내용/)) return { major: "civilComplaint", middle: "schoolComplaint", minor: "records" };
     if (has(/안내|면담|전화|사과|재발방지|답변/)) return { major: "civilComplaint", middle: "schoolComplaint", minor: "communication" };
     return { major: "civilComplaint", middle: "schoolComplaint", minor: "guidance" };
   }
@@ -5967,8 +6196,23 @@ function getSourceLinks(encodedQuestion, preset, scopes) {
 
   if (preset.type === "schoolViolence") {
     links.push({
-      label: "학교폭력 가이드북",
-      href: "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=316&boardSeq=98297&lev=0&m=0302&opType=N&s=moe&statusYN=W"
+      label: "2025 학교폭력 사안처리 가이드북",
+      href: "https://www.cbe.go.kr/dept-21/na/ntt/selectNttInfo.do?mi=11221&nttSn=1548192"
+    });
+  }
+
+  if (preset.type === "schoolAdministration") {
+    links.push({
+      label: "학교생활기록부 기재요령",
+      href: "https://star.moe.go.kr/web/contents/m21100.do"
+    });
+    links.push({
+      label: "학교생활기록 작성 및 관리지침",
+      href: "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000188164"
+    });
+    links.push({
+      label: "교육부·교육청 자료 확인",
+      href: "https://www.moe.go.kr/main.do?s=moe"
     });
   }
 

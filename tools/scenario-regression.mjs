@@ -263,7 +263,7 @@ const cases = [
   {
     id: "parent-grade-record-correction",
     question: "학부모가 생활기록부 문구를 고쳐 달라고 요구하며 교육청 민원을 예고했습니다. 사실 확인과 답변 방향이 필요합니다.",
-    expect: { preset: "civilComplaint", disposition: "internal" },
+    expect: { preset: "schoolAdministration", disposition: "internal" },
     mustInclude: ["학교생활기록", "민원"],
     mustNotInclude: noAccidentReport
   },
@@ -284,7 +284,7 @@ const cases = [
   {
     id: "attendance-document-question",
     question: "학부모가 인정결석 서류가 너무 많다며 출결 처리 기준을 묻습니다. 분쟁보다는 안내문이 필요한 상황입니다.",
-    expect: { preset: "civilComplaint", disposition: "internal" },
+    expect: { preset: "schoolAdministration", disposition: "internal" },
     mustInclude: ["출결", "민원"],
     mustNotInclude: [...noAccidentReport, ...noSpecialistReferral]
   },
