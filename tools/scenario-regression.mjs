@@ -726,6 +726,20 @@ if (!gyeongbukInstructorGuideHtml.includes("경상북도교육청") || !gyeongbu
   failures.push("policy-guide-gyeongbuk-instructor: expected Gyeongbuk source and private-school caveat");
 }
 
+const gyeongbukVicePrincipalGuide = context.buildPolicyGuideResponse({
+  question: "전직 교감의 2시간 강의비는 얼마인가요?",
+  officeCode: "gyeongbuk",
+  roleCode: "privateSchool",
+  categoryCode: "auto"
+});
+const gyeongbukVicePrincipalGuideHtml = context.renderPolicyGuideResponse(gyeongbukVicePrincipalGuide);
+if (!gyeongbukVicePrincipalGuideHtml.includes("전직 교감은 일반강사2") || !gyeongbukVicePrincipalGuideHtml.includes("2시간 강의비는 180,000원") || !gyeongbukVicePrincipalGuideHtml.includes("기본 1시간 120,000원")) {
+  failures.push("policy-guide-gyeongbuk-instructor: expected vice-principal 2-hour fee calculation");
+}
+if (!gyeongbukVicePrincipalGuideHtml.includes("초과 1시간") || !gyeongbukVicePrincipalGuideHtml.includes("60,000원") || !gyeongbukVicePrincipalGuideHtml.includes("교육공무원")) {
+  failures.push("policy-guide-gyeongbuk-instructor: expected vice-principal rate basis and calculation detail");
+}
+
 if (!indexHtml.includes('data-tool-tab="legal"') || !indexHtml.includes('data-tool-tab="guide"') || !indexHtml.includes('data-tool-panel="guide"') || !indexHtml.includes("hidden")) {
   failures.push("tool-tabs: expected legal/guide tab panels with hidden inactive guide panel");
 }

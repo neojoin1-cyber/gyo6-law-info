@@ -1573,34 +1573,8 @@ function getDirectPolicyRule(normalized, category, role, office) {
   }
 
   if (category === policyGuideCategories.budgetExecution && /강사수당|강사료|강의비|강의료|강연료|외부강사|교육강사|강의/.test(normalized)) {
-    const isPrincipalQuestion = /전직\s*교장|퇴직\s*교장|교장|학교장|유초중등학교장|유·초·중등학교장/.test(normalized);
-    if (office?.code === "gyeongbuk" && isPrincipalQuestion) {
-      return {
-        title: "경북교육청 전직 교장 강사수당 확인 기준",
-        lead: "경상북도교육청 2026학년도 공립학교회계 예산편성 기본지침의 교육 강사수당 표를 기준으로 하되, 사립학교는 학교법인·학교 내부 지급 기준을 함께 확인해야 합니다.",
-        answer: [
-          "경북교육청 2026 공립학교회계 기준으로 전직 교장은 보통 일반강사1로 보아 기본 1시간 200,000원, 초과시간당 100,000원을 적용합니다.",
-          "지침의 교육 강사수당 표에서 일반강사1 적용 대상에 유·초·중등학교장이 포함되어 있습니다.",
-          "전직 교장은 강의 주제와 경력상 해당 분야 전문가로 인정하는 내부 결재 근거를 남기는 것이 안전합니다.",
-          "교육운영상 학교장이 특별히 인정하는 강사는 특별강사2로 기본 300,000원, 초과 200,000원까지 가능하지만, 전직 교장이라는 사실만으로 특별강사2를 단정하면 안 됩니다.",
-          "사립학교는 이 지침을 준용하는지, 학교법인 정관·취업규칙·단체협약·내부 강사수당 지급 기준에 별도 단가가 있는지 먼저 확인합니다.",
-          "당해 기관 소속 공무원이 자기 업무와 관련하여 소속 기관에서 교육하거나 교관요원으로 지정된 자체교육 강사인 경우에는 강사수당을 지급하지 않는 예외가 있습니다."
-        ],
-        steps: [
-          "강사가 현재 교장인지 전직 교장인지, 강의 주제가 학교교육·행정 전문성에 해당하는지 확인",
-          "일반강사1 적용 또는 특별강사2 인정 사유를 품의서 산출기초에 명시",
-          "강의 시간은 기본 1시간과 초과시간으로 나누어 산출",
-          "사립학교는 법인·학교 내부 강사수당 기준과 경북교육청 지침 준용 여부 확인",
-          "청탁금지법 시행령 별표 2의 외부강의등 사례금 상한액 초과 여부 확인"
-        ],
-        sourceKeys: ["schoolAccountingRule", "publicRecords"],
-        queries: [
-          "경상북도교육청 2026학년도 공립학교회계 예산편성 기본지침 교육 강사수당 일반강사1 유·초·중등학교장",
-          "경북교육청 교육강사수당 전직 교장 강의비"
-        ],
-        caution: "강사수당은 한도 단가와 내부 결재 사유가 함께 맞아야 합니다. 특히 사립학교는 공립학교회계 지침을 그대로 적용하는지보다 학교법인·학교 내부 규정의 준용 여부가 먼저입니다."
-      };
-    }
+    const instructorRule = buildGyeongbukInstructorFeeRule(normalized, office);
+    if (instructorRule) return instructorRule;
 
     return {
       title: "교육 강사수당 확인 기준",
@@ -1644,6 +1618,144 @@ function getDirectPolicyRule(normalized, category, role, office) {
   }
 
   return null;
+}
+
+function buildGyeongbukInstructorFeeRule(normalized, office) {
+  if (office?.code !== "gyeongbuk") return null;
+
+  const profile = inferGyeongbukInstructorFeeProfile(normalized);
+  if (!profile) return null;
+
+  const subjectLabel = inferInstructorSubjectLabel(normalized, profile);
+  const hours = inferLectureHours(normalized);
+  const hasTotalHours = Number.isFinite(hours) && hours > 0 && !/시간당|1\s*시간당/.test(normalized);
+  const total = hasTotalHours ? calculateInstructorFee(profile, hours) : null;
+  const rateText = `기본 1시간 ${formatWon(profile.base)}, 초과시간당 ${formatWon(profile.extra)}`;
+  const answerLead = hasTotalHours
+    ? `${office.label} 2026 공립학교회계 기준으로 ${subjectLabel}은 ${profile.grade}로 보아 ${formatHours(hours)} 강의비는 ${formatWon(total)}입니다.`
+    : `${office.label} 2026 공립학교회계 기준으로 ${subjectLabel}은 ${profile.grade}로 보아 ${rateText}을 적용합니다.`;
+  const calculationText = hasTotalHours
+    ? `산출식은 기본 1시간 ${formatWon(profile.base)} + 초과 ${formatHours(Math.max(0, hours - 1))} × ${formatWon(profile.extra)} = ${formatWon(total)}입니다.`
+    : `${profile.grade} 단가는 ${rateText}입니다.`;
+
+  return {
+    title: `${office.label} ${subjectLabel} 강사수당 확인 기준`,
+    lead: `${office.label} 2026학년도 공립학교회계 예산편성 기본지침의 교육 강사수당 표를 기준으로 하되, 사립학교는 학교법인·학교 내부 지급 기준을 함께 확인해야 합니다.`,
+    answer: [
+      answerLead,
+      calculationText,
+      profile.basis,
+      "특별강사 인정은 직위명만으로 단정하지 말고 학교장 인정 사유와 내부 결재 근거를 남겨야 합니다.",
+      "사립학교는 이 지침을 준용하는지, 학교법인 정관·취업규칙·단체협약·내부 강사수당 지급 기준에 별도 단가가 있는지 먼저 확인합니다.",
+      "당해 기관 소속 공무원이 자기 업무와 관련하여 소속 기관에서 교육하거나 교관요원으로 지정된 자체교육 강사인 경우에는 강사수당을 지급하지 않는 예외가 있습니다."
+    ],
+    steps: [
+      "강사의 현재·전직 신분과 강의 주제가 해당 분야 전문성에 해당하는지 확인",
+      `${profile.grade} 적용 사유와 ${rateText} 산출기초를 품의서에 명시`,
+      "강의 시간은 기본 1시간과 초과시간으로 나누어 산출",
+      "사립학교는 법인·학교 내부 강사수당 기준과 경북교육청 지침 준용 여부 확인",
+      "청탁금지법 시행령 별표 2의 외부강의등 사례금 상한액 초과 여부 확인"
+    ],
+    sourceKeys: ["schoolAccountingRule", "publicRecords"],
+    queries: [
+      `경상북도교육청 2026학년도 공립학교회계 예산편성 기본지침 교육 강사수당 ${profile.grade}`,
+      `경북교육청 교육강사수당 ${subjectLabel} 강의비`
+    ],
+    caution: "강사수당은 한도 단가와 내부 결재 사유가 함께 맞아야 합니다. 특히 사립학교는 공립학교회계 지침을 그대로 적용하는지보다 학교법인·학교 내부 규정의 준용 여부가 먼저입니다."
+  };
+}
+
+function inferGyeongbukInstructorFeeProfile(normalized) {
+  const profiles = {
+    special2: {
+      grade: "특별강사2",
+      base: 300000,
+      extra: 200000,
+      basis: "특별강사2는 전·현직 장·차관, 국회의원, 대학총장급, 교육감 등 지침에서 정한 고위직·권위자 유형에 적용됩니다."
+    },
+    general1: {
+      grade: "일반강사1",
+      base: 200000,
+      extra: 100000,
+      basis: "일반강사1 적용 대상에는 유·초·중등학교장, 4급 상당 이상 공무원, 장학관·교육연구관, 해당 분야 전문가 등이 포함되어 있습니다."
+    },
+    general2: {
+      grade: "일반강사2",
+      base: 120000,
+      extra: 60000,
+      basis: "일반강사2 적용 대상에는 일반강사1에 해당하지 않는 5급 이하 공무원 및 교육공무원, 대학 시간강사, 외국인 원어민 강사 등이 포함됩니다."
+    },
+    general3: {
+      grade: "일반강사3",
+      base: 80000,
+      extra: 40000,
+      basis: "일반강사3은 외국어, 체육, 전산강사 등 별도 전문강사 유형에 적용됩니다."
+    }
+  };
+
+  if (/교육감|장관|차관|국회의원|대학\s*총장|대학총장|정부출연\s*연구기관장|국영기업체장|인간문화재|유명\s*예술인|특별강사\s*2/.test(normalized)) {
+    return profiles.special2;
+  }
+  if (/교장|학교장|유초중등학교장|유·초·중등학교장|장학관|교육연구관|4급|박사|일반강사\s*1/.test(normalized)) {
+    return profiles.general1;
+  }
+  if (/교감|교사|교원|교육공무원|장학사|교육연구사|5급|6급|7급|8급|9급|시간강사|원어민|일반강사\s*2/.test(normalized)) {
+    return profiles.general2;
+  }
+  if (/전산강사|컴퓨터강사|외국어강사|체육강사|일반강사\s*3/.test(normalized)) {
+    return profiles.general3;
+  }
+
+  return null;
+}
+
+function inferInstructorSubjectLabel(normalized, profile) {
+  if (/전직\s*교장|퇴직\s*교장/.test(normalized)) return "전직 교장";
+  if (/교장|학교장|유초중등학교장|유·초·중등학교장/.test(normalized)) return "교장";
+  if (/전직\s*교감|퇴직\s*교감/.test(normalized)) return "전직 교감";
+  if (/교감/.test(normalized)) return "교감";
+  if (/전직\s*교사|퇴직\s*교사|전직\s*교원|퇴직\s*교원/.test(normalized)) return "전직 교원";
+  if (/교사|교원/.test(normalized)) return "교원";
+  if (/장학관/.test(normalized)) return "장학관";
+  if (/교육연구관/.test(normalized)) return "교육연구관";
+  if (/장학사/.test(normalized)) return "장학사";
+  if (/교육연구사/.test(normalized)) return "교육연구사";
+  if (/교육감/.test(normalized)) return "교육감";
+  if (/대학\s*총장|대학총장/.test(normalized)) return "대학 총장급 강사";
+  if (/전산강사|컴퓨터강사/.test(normalized)) return "전산강사";
+  if (/외국어강사/.test(normalized)) return "외국어강사";
+  if (/체육강사/.test(normalized)) return "체육강사";
+  return `${profile.grade} 대상 강사`;
+}
+
+function inferLectureHours(normalized) {
+  const numericMatch = normalized.match(/(\d+(?:\.\d+)?)\s*시간/);
+  if (numericMatch) return Number(numericMatch[1]);
+
+  const koreanNumbers = {
+    한: 1,
+    두: 2,
+    세: 3,
+    네: 4,
+    다섯: 5,
+    여섯: 6
+  };
+  for (const [word, value] of Object.entries(koreanNumbers)) {
+    if (new RegExp(`${word}\\s*시간`).test(normalized)) return value;
+  }
+  return null;
+}
+
+function calculateInstructorFee(profile, hours) {
+  return profile.base + Math.max(0, hours - 1) * profile.extra;
+}
+
+function formatWon(amount) {
+  return `${Number(amount || 0).toLocaleString("ko-KR")}원`;
+}
+
+function formatHours(hours) {
+  return `${Number(hours).toLocaleString("ko-KR")}시간`;
 }
 
 function findPreset(question, selectedType) {
