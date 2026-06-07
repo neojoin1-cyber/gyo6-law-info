@@ -712,6 +712,20 @@ if (!budgetGuideHtml.includes("강원특별자치도교육청") || !budgetGuideH
   failures.push("policy-guide-budget: expected selected education-office budget guide priority");
 }
 
+const gyeongbukInstructorGuide = context.buildPolicyGuideResponse({
+  question: "전직 교장의 강의비는 시간당 얼마인가요?",
+  officeCode: "gyeongbuk",
+  roleCode: "privateSchool",
+  categoryCode: "budgetExecution"
+});
+const gyeongbukInstructorGuideHtml = context.renderPolicyGuideResponse(gyeongbukInstructorGuide);
+if (!gyeongbukInstructorGuideHtml.includes("기본 1시간 200,000원") || !gyeongbukInstructorGuideHtml.includes("초과시간당 100,000원") || !gyeongbukInstructorGuideHtml.includes("일반강사1")) {
+  failures.push("policy-guide-gyeongbuk-instructor: expected conclusion-first principal instructor fee amount");
+}
+if (!gyeongbukInstructorGuideHtml.includes("경상북도교육청") || !gyeongbukInstructorGuideHtml.includes("2026학년도 공립학교회계 예산편성 기본지침") || !gyeongbukInstructorGuideHtml.includes("사립학교")) {
+  failures.push("policy-guide-gyeongbuk-instructor: expected Gyeongbuk source and private-school caveat");
+}
+
 if (!indexHtml.includes('data-tool-tab="legal"') || !indexHtml.includes('data-tool-tab="guide"') || !indexHtml.includes('data-tool-panel="guide"') || !indexHtml.includes("hidden")) {
   failures.push("tool-tabs: expected legal/guide tab panels with hidden inactive guide panel");
 }

@@ -232,7 +232,17 @@ const educationOfficeCatalog = [
       status: "직접 연결"
     }
   },
-  { code: "gyeongbuk", label: "경상북도교육청", homepage: "https://www.gbe.kr", domain: "gbe.kr" },
+  {
+    code: "gyeongbuk",
+    label: "경상북도교육청",
+    homepage: "https://www.gbe.kr",
+    domain: "gbe.kr",
+    budgetGuide: {
+      title: "2026학년도 공립학교회계 예산편성 기본지침",
+      url: "https://www.gbe.kr/main/na/ntt/selectNttInfo.do?mi=3372&bbsId=1852&nttSn=1564258",
+      status: "공식 게시글 직접 연결"
+    }
+  },
   {
     code: "gyeongnam",
     label: "경상남도교육청",
@@ -356,7 +366,7 @@ const policyGuideCategories = {
   },
   budgetExecution: {
     label: "학교회계·예산·지출",
-    aliases: ["학교회계", "예산", "예산편성", "품의", "검수", "지출", "증빙", "영수증", "세금계산서", "수의계약", "정산", "업무추진비"],
+    aliases: ["학교회계", "예산", "예산편성", "품의", "검수", "지출", "증빙", "영수증", "세금계산서", "수의계약", "정산", "업무추진비", "강사수당", "강사료", "강의비", "강의료", "외부강사"],
     summary: "학교회계는 소속 교육청의 해당 학년도 학교회계 예산편성 기본지침을 최우선으로 보고, 공통 회계규칙과 계약 법령을 보조로 대조합니다.",
     firstSteps: [
       "소속 교육청의 2026학년도 학교회계 예산편성 기본지침 확인",
@@ -1341,7 +1351,7 @@ function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode
   const office = getEducationOffice(officeCode);
   const category = getPolicyGuideCategory(categoryCode === "auto" ? inferPolicyGuideCategory(normalized) : categoryCode);
   const role = getPolicyRole(roleCode === "auto" ? inferPolicyRole(normalized) : roleCode);
-  const directRule = getDirectPolicyRule(normalized, category, role);
+  const directRule = getDirectPolicyRule(normalized, category, role, office);
   const officeSources = buildOfficePolicySources(office, category);
   const sourceKeys = uniqueStrings([...(directRule?.sourceKeys || []), ...(category.sourceKeys || [])]);
   const nationalSources = sourceKeys.map((key) => policySourceCatalog[key]).filter(Boolean);
@@ -1539,7 +1549,7 @@ function buildPolicySearchQueries(question, office, category, role, directRule) 
   ]).slice(0, 10);
 }
 
-function getDirectPolicyRule(normalized, category, role) {
+function getDirectPolicyRule(normalized, category, role, office) {
   if (category === policyGuideCategories.leaveAttendance && /배우자.*(부모|부친|모친)|장인|장모|시부|시모|부모상|상례|사망|경조사/.test(normalized)) {
     return {
       title: "배우자 부모상 경조사휴가 확인 기준",
@@ -1559,6 +1569,49 @@ function getDirectPolicyRule(normalized, category, role) {
       ],
       sourceKeys: ["nationalService", "teacherLeave", "localService", "laborStandard"],
       queries: ["국가공무원 복무규정 제20조 별표2 배우자의 부모 사망 5일", "교원휴가에 관한 예규 경조사휴가", "교육공무직 경조사휴가 배우자의 부모"]
+    };
+  }
+
+  if (category === policyGuideCategories.budgetExecution && /강사수당|강사료|강의비|강의료|강연료|외부강사|교육강사|강의/.test(normalized)) {
+    const isPrincipalQuestion = /전직\s*교장|퇴직\s*교장|교장|학교장|유초중등학교장|유·초·중등학교장/.test(normalized);
+    if (office?.code === "gyeongbuk" && isPrincipalQuestion) {
+      return {
+        title: "경북교육청 전직 교장 강사수당 확인 기준",
+        lead: "경상북도교육청 2026학년도 공립학교회계 예산편성 기본지침의 교육 강사수당 표를 기준으로 하되, 사립학교는 학교법인·학교 내부 지급 기준을 함께 확인해야 합니다.",
+        answer: [
+          "경북교육청 2026 공립학교회계 기준으로 전직 교장은 보통 일반강사1로 보아 기본 1시간 200,000원, 초과시간당 100,000원을 적용합니다.",
+          "지침의 교육 강사수당 표에서 일반강사1 적용 대상에 유·초·중등학교장이 포함되어 있습니다.",
+          "전직 교장은 강의 주제와 경력상 해당 분야 전문가로 인정하는 내부 결재 근거를 남기는 것이 안전합니다.",
+          "교육운영상 학교장이 특별히 인정하는 강사는 특별강사2로 기본 300,000원, 초과 200,000원까지 가능하지만, 전직 교장이라는 사실만으로 특별강사2를 단정하면 안 됩니다.",
+          "사립학교는 이 지침을 준용하는지, 학교법인 정관·취업규칙·단체협약·내부 강사수당 지급 기준에 별도 단가가 있는지 먼저 확인합니다.",
+          "당해 기관 소속 공무원이 자기 업무와 관련하여 소속 기관에서 교육하거나 교관요원으로 지정된 자체교육 강사인 경우에는 강사수당을 지급하지 않는 예외가 있습니다."
+        ],
+        steps: [
+          "강사가 현재 교장인지 전직 교장인지, 강의 주제가 학교교육·행정 전문성에 해당하는지 확인",
+          "일반강사1 적용 또는 특별강사2 인정 사유를 품의서 산출기초에 명시",
+          "강의 시간은 기본 1시간과 초과시간으로 나누어 산출",
+          "사립학교는 법인·학교 내부 강사수당 기준과 경북교육청 지침 준용 여부 확인",
+          "청탁금지법 시행령 별표 2의 외부강의등 사례금 상한액 초과 여부 확인"
+        ],
+        sourceKeys: ["schoolAccountingRule", "publicRecords"],
+        queries: [
+          "경상북도교육청 2026학년도 공립학교회계 예산편성 기본지침 교육 강사수당 일반강사1 유·초·중등학교장",
+          "경북교육청 교육강사수당 전직 교장 강의비"
+        ],
+        caution: "강사수당은 한도 단가와 내부 결재 사유가 함께 맞아야 합니다. 특히 사립학교는 공립학교회계 지침을 그대로 적용하는지보다 학교법인·학교 내부 규정의 준용 여부가 먼저입니다."
+      };
+    }
+
+    return {
+      title: "교육 강사수당 확인 기준",
+      lead: "강사료는 소속 교육청 학교회계 예산편성 기본지침의 교육 강사수당 표에서 강사 등급을 먼저 확정해야 합니다.",
+      answer: [
+        "강의비는 소속 교육청의 해당 학년도 교육 강사수당 표에서 강사 등급과 기본·초과시간 단가를 확인해야 합니다.",
+        "교장, 교감, 교사, 전직 교원, 외부 전문가 여부에 따라 일반강사 등급이 달라질 수 있습니다.",
+        "특별강사 인정은 직위명만으로 단정하지 말고 학교장 인정 사유와 내부 결재 근거를 남겨야 합니다."
+      ],
+      sourceKeys: ["schoolAccountingRule", "publicRecords"],
+      queries: ["교육청 학교회계 예산편성 기본지침 교육 강사수당", "강사수당 일반강사 교장"]
     };
   }
 
