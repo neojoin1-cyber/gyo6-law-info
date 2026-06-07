@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GYO6 Law Info | AI 법률정보 도우미</title>
   <meta name="description" content="특성화고 취업, 교육행정, 학교회계, 학생생활기록, 학교폭력 절차의 법령·원문 근거를 찾는 AI 법률정보 도우미">
-  <link rel="stylesheet" href="styles.css?v=20260607-reg-guide">
+  <link rel="stylesheet" href="styles.css?v=20260607-tabs">
 </head>
 <body>
   <header class="topbar">
@@ -46,7 +46,7 @@
           <li><span>3</span><p>원문·지침 확인</p></li>
         </ol>
         <a class="hero-jump" href="#queryForm">질문 작성하기</a>
-        <a class="hero-jump secondary" href="#guideQa">규정·지침 Q&amp;A</a>
+        <a class="hero-jump secondary" href="#guideQa" data-tool-link="guide">규정·지침 Q&amp;A</a>
       </div>
     </section>
 
@@ -122,17 +122,17 @@
     </section>
 
     <nav class="tool-tabs" aria-label="법률정보 도구 선택">
-      <a class="tool-tab active" href="#queryForm">
+      <a class="tool-tab active" href="#legalTool" data-tool-tab="legal" aria-selected="true">
         <span>법률정보</span>
         <strong>원문·판례·AI 분석</strong>
       </a>
-      <a class="tool-tab" href="#guideQa">
+      <a class="tool-tab" href="#guideQa" data-tool-tab="guide" aria-selected="false">
         <span>규정·지침 Q&amp;A</span>
         <strong>교육청 우선 무료 답변</strong>
       </a>
     </nav>
 
-    <section class="workspace" aria-label="법률정보 검색 도구">
+    <section class="workspace active-tool" id="legalTool" data-tool-panel="legal" aria-label="법률정보 검색 도구">
       <form class="query-panel" id="queryForm">
         <div class="panel-head">
           <p class="panel-kicker">Question</p>
@@ -259,7 +259,7 @@
       </section>
     </section>
 
-    <section class="guide-workspace" id="guideQa" aria-label="규정 및 지침 Q&A">
+    <section class="guide-workspace" id="guideQa" data-tool-panel="guide" aria-label="규정 및 지침 Q&A" hidden>
       <form class="guide-panel" id="guideForm">
         <div class="panel-head">
           <p class="panel-kicker">Rules &amp; Guidelines</p>
@@ -348,13 +348,13 @@
         </button>
       </form>
 
-      <section class="guide-result-panel" aria-live="polite" aria-label="규정 및 지침 답변">
+      <section class="result-panel guide-result-panel" aria-live="polite" aria-label="규정 및 지침 답변">
         <div class="panel-head result-head">
           <div>
-            <p class="panel-kicker">Guideline Answer</p>
-            <h2>규정 질문 준비 화면</h2>
+            <p class="panel-kicker">Result</p>
+            <h2>규정 답변 준비 화면</h2>
           </div>
-          <span class="status-dot guide-status">로컬 지침</span>
+          <span class="status-dot guide-status">무료 로컬</span>
         </div>
 
         <div id="guideResult" class="empty-state">
@@ -417,6 +417,6 @@
   <script src="ai-config.js?v=20260531-auto-topic"></script>
   <script src="firebase-config.js?v=20260531-auto-topic"></script>
   <script type="module" src="auth.js?v=20260602-unified-nav"></script>
-  <script src="app.js?v=20260607-reg-guide"></script>
+  <script src="app.js?v=20260607-tabs"></script>
 </body>
 </html>

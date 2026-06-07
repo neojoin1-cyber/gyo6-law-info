@@ -6,6 +6,9 @@ const queryPanel = document.querySelector(".query-panel");
 const workspace = document.querySelector(".workspace");
 const resultTitle = document.querySelector(".result-head h2");
 const statusDot = document.querySelector(".status-dot");
+const toolTabs = document.querySelectorAll("[data-tool-tab]");
+const toolPanels = document.querySelectorAll("[data-tool-panel]");
+const toolLinks = document.querySelectorAll("[data-tool-link]");
 const topicTypeInput = document.querySelector("#topicType");
 const topicMajorInput = document.querySelector("#topicMajor");
 const topicMiddleInput = document.querySelector("#topicMiddle");
@@ -21,6 +24,7 @@ const guideRoleInput = document.querySelector("#guideRole");
 const guideCategoryInput = document.querySelector("#guideCategory");
 const guideResult = document.querySelector("#guideResult");
 const guideStatus = document.querySelector(".guide-status");
+const guideResultTitle = document.querySelector(".guide-result-panel .result-head h2");
 const resetGuideButton = document.querySelector("#resetGuideButton");
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
 const AI_USAGE_LEDGER_KEY = "gyo6LawInfoAiUsageLedger";
@@ -1116,6 +1120,7 @@ document.querySelectorAll("[data-example]").forEach((button) => {
 
 document.querySelectorAll("[data-guide-question]").forEach((button) => {
   button.addEventListener("click", () => {
+    activateTool("guide");
     guideQuestionInput.value = button.dataset.guideQuestion || "";
     if (button.dataset.guideRole) guideRoleInput.value = button.dataset.guideRole;
     if (button.dataset.guideCategory) guideCategoryInput.value = button.dataset.guideCategory;
@@ -1124,7 +1129,22 @@ document.querySelectorAll("[data-guide-question]").forEach((button) => {
   });
 });
 
+toolTabs.forEach((tab) => {
+  tab.addEventListener("click", (event) => {
+    event.preventDefault();
+    activateTool(tab.dataset.toolTab || "legal", { updateHash: true, scroll: true });
+  });
+});
+
+toolLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    activateTool(link.dataset.toolLink || "legal", { updateHash: true, scroll: true });
+  });
+});
+
 resetQuestionButton?.addEventListener("click", () => {
+  activateTool("legal");
   resetTransientQuestionState({ resetFormValues: true });
   questionInput.focus();
 });
@@ -1140,6 +1160,7 @@ resetGuideButton?.addEventListener("click", () => {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  activateTool("legal");
 
   const question = questionInput.value.trim();
   if (!question) {
@@ -1167,8 +1188,11 @@ form.addEventListener("submit", (event) => {
 
 guideForm?.addEventListener("submit", (event) => {
   event.preventDefault();
+  activateTool("guide");
   renderPolicyGuideResult();
 });
+
+window.addEventListener("hashchange", activateToolFromHash);
 
 resultState.addEventListener("submit", (event) => {
   if (event.target?.id !== "clarifierForm") {
@@ -1228,15 +1252,58 @@ window.addEventListener("afterprint", () => {
   document.body.classList.remove("printing-report");
 });
 
+activateToolFromHash();
 hydrateFromUrl();
+
+function activateToolFromHash() {
+  activateTool(getToolFromHash(window.location?.hash || ""));
+}
+
+function getToolFromHash(hash = "") {
+  const target = String(hash || "").replace("#", "");
+  if (target === "guideQa" || target === "guideForm") {
+    return "guide";
+  }
+  return "legal";
+}
+
+function activateTool(tool = "legal", { updateHash = false, scroll = false } = {}) {
+  const nextTool = tool === "guide" ? "guide" : "legal";
+  const targetHash = nextTool === "guide" ? "#guideQa" : "#legalTool";
+
+  toolPanels.forEach((panel) => {
+    const isActive = panel.dataset.toolPanel === nextTool;
+    panel.hidden = !isActive;
+    panel.classList.toggle("active-tool", isActive);
+  });
+
+  toolTabs.forEach((tab) => {
+    const isActive = tab.dataset.toolTab === nextTool;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", isActive ? "true" : "false");
+  });
+
+  if (updateHash && window.location && window.location.hash !== targetHash) {
+    window.location.hash = targetHash;
+  }
+
+  if (scroll && typeof window.scrollTo === "function") {
+    window.setTimeout(() => {
+      const target = document.querySelector(".tool-tabs");
+      const targetTop = Math.max(0, (target?.offsetTop || 0) - 88);
+      window.scrollTo(0, targetTop);
+    }, 0);
+  }
+}
 
 function showGuideEmptyState() {
   if (!guideResult) return;
-  if (guideStatus) guideStatus.textContent = "로컬 지침";
+  if (guideStatus) guideStatus.textContent = "무료 로컬";
+  if (guideResultTitle) guideResultTitle.textContent = "규정 답변 준비 화면";
   guideResult.className = "empty-state";
   guideResult.innerHTML = `
     <div class="empty-icon" aria-hidden="true">¶</div>
-    <h3>규정·지침 질문을 입력하면 소속 교육청 우선 확인 순서가 표시됩니다.</h3>
+    <h3>규정·지침 질문을 입력하면 오른쪽 답변 공간에 결론부터 표시됩니다.</h3>
     <p>이 메뉴는 외부 AI 호출 없이 미리 정리한 규정 사전으로 답변합니다.</p>
   `;
 }
@@ -1246,6 +1313,7 @@ function renderPolicyGuideResult() {
   if (!question) {
     if (!guideResult) return;
     if (guideStatus) guideStatus.textContent = "입력 필요";
+    if (guideResultTitle) guideResultTitle.textContent = "규정 질문 입력 필요";
     guideResult.className = "empty-state";
     guideResult.innerHTML = `
       <div class="empty-icon" aria-hidden="true">¶</div>
@@ -1263,6 +1331,7 @@ function renderPolicyGuideResult() {
   });
 
   if (guideStatus) guideStatus.textContent = "무료 로컬 답변";
+  if (guideResultTitle) guideResultTitle.textContent = "규정·지침 답변";
   guideResult.className = "summary-box guideline-result";
   guideResult.innerHTML = renderPolicyGuideResponse(response);
 }
@@ -1297,21 +1366,23 @@ function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode
 function renderPolicyGuideResponse(response) {
   const officeLabel = response.office.code === "auto" ? "소속 교육청 미선택" : response.office.label;
   const directItems = response.directRule?.answer || [];
+  const primaryAnswer = directItems[0] || response.firstSteps[0] || response.lead;
+  const supportingItems = directItems.length ? directItems.slice(1) : response.firstSteps.slice(1, 4);
 
   return `
     <section class="guide-answer-card primary">
-      <div class="answer-label">규정·지침 우선 답변</div>
-      <h3>${escapeHtml(response.title)}</h3>
-      <p>${escapeHtml(response.lead)}</p>
+      <div class="answer-label">명확한 답변</div>
+      <h3>${escapeHtml(primaryAnswer)}</h3>
+      <p class="guide-answer-lead">${escapeHtml(response.lead)}</p>
       <dl class="guide-meta">
         <div><dt>교육청</dt><dd>${escapeHtml(officeLabel)}</dd></div>
         <div><dt>신분</dt><dd>${escapeHtml(response.role.label)}</dd></div>
         <div><dt>영역</dt><dd>${escapeHtml(response.category.label)}</dd></div>
       </dl>
-      ${directItems.length ? `
+      ${supportingItems.length ? `
         <div class="guide-direct">
-          <strong>바로 적용할 수 있는 공통 기준</strong>
-          <ul>${directItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          <strong>규정·지침 설명</strong>
+          <ul>${supportingItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
         </div>
       ` : ""}
       <p class="answer-warning">${escapeHtml(response.caution)}</p>
@@ -1474,7 +1545,8 @@ function getDirectPolicyRule(normalized, category, role) {
       title: "배우자 부모상 경조사휴가 확인 기준",
       lead: "공립 교원·국가공무원 기준은 공통 법령에서 일수를 먼저 확인할 수 있지만, 교육공무직·사립학교·기간제 직원은 소속 교육청이나 법인 규정이 더 구체적일 수 있습니다.",
       answer: [
-        "공립 교원·국가공무원 기준: 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표에서 배우자, 본인 및 배우자의 부모 사망은 5일 기준으로 확인합니다.",
+        "공립 교원·국가공무원 기준은 배우자의 부모 사망 경조사휴가 5일입니다.",
+        "근거는 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표입니다.",
         "공립 교원은 교원휴가에 관한 예규와 나이스 근무상황 신청, 학교장 승인 절차를 함께 확인합니다.",
         "지방공무원·행정직은 지방공무원 복무규정과 관할 교육청 복무 조례·예규를 대조합니다.",
         "교육공무직·특수운영직군은 소속 교육청 취업규칙, 단체협약, 근로계약서의 경조사휴가표를 우선 확인합니다.",
@@ -1495,7 +1567,7 @@ function getDirectPolicyRule(normalized, category, role) {
       title: "업무추진비·협의회 지출 확인 기준",
       lead: "업무추진비는 교육청 예산편성 기본지침의 사용 가능 범위와 학교 내부 품의·검수·지출 증빙 흐름을 같이 봐야 합니다.",
       answer: [
-        "소속 교육청의 2026학년도 학교회계 예산편성 기본지침에서 업무추진비 세목과 집행 제한을 먼저 확인합니다.",
+        "업무추진비·협의회 지출은 소속 교육청의 2026학년도 학교회계 예산편성 기본지침을 먼저 확인해야 합니다.",
         "품의서, 참석자 범위, 목적, 일시·장소, 영수증 또는 카드전표, 지출결의서를 함께 보관합니다.",
         "목적사업비나 수익자부담경비 등 재원 성격이 다르면 별도 집행 제한이 있을 수 있습니다."
       ],
@@ -1509,7 +1581,7 @@ function getDirectPolicyRule(normalized, category, role) {
       title: "계약·검수·지출 증빙 확인 기준",
       lead: "계약과 검수는 교육청 학교회계 지침, 학교회계 규칙, 지방계약 법령, 내부 결재 문서가 함께 맞아야 합니다.",
       answer: [
-        "예산 편성 과목과 실제 집행 품목이 맞는지 먼저 확인합니다.",
+        "계약·검수·지출 증빙은 예산 편성 과목과 실제 집행 품목이 일치하는지부터 확인해야 합니다.",
         "품의, 견적 또는 계약, 납품·완료 확인, 검수, 지출결의, 증빙자료 순서로 문서 흐름을 맞춥니다.",
         "수의계약 가능 여부와 견적 기준은 지방계약 법령과 교육청 지침에서 함께 확인합니다."
       ],

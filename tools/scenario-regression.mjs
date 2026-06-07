@@ -2,23 +2,48 @@ import fs from "node:fs";
 import vm from "node:vm";
 
 const code = fs.readFileSync("public/app.js", "utf8");
+const indexHtml = fs.readFileSync("public/index.html", "utf8");
 
-const stubElement = {
-  addEventListener() {},
-  appendChild() {},
-  remove() {},
-  requestSubmit() {},
-  querySelector() { return stubElement; },
-  querySelectorAll() { return []; },
-  classList: { add() {}, remove() {}, toggle() {} },
-  style: {},
-  dataset: {},
-  value: "",
-  innerHTML: "",
-  textContent: "",
-  firstElementChild: null,
-  options: []
-};
+function createStubElement(dataset = {}) {
+  const classes = new Set();
+  return {
+    addEventListener() {},
+    appendChild() {},
+    remove() {},
+    requestSubmit() {},
+    setAttribute(name, value) { this.attributes[name] = String(value); },
+    getAttribute(name) { return this.attributes[name] ?? null; },
+    querySelector() { return stubElement; },
+    querySelectorAll() { return []; },
+    classList: {
+      add(className) { classes.add(className); },
+      remove(className) { classes.delete(className); },
+      toggle(className, force) {
+        const shouldAdd = force === undefined ? !classes.has(className) : Boolean(force);
+        if (shouldAdd) classes.add(className);
+        else classes.delete(className);
+        return shouldAdd;
+      },
+      contains(className) { return classes.has(className); }
+    },
+    style: {},
+    dataset,
+    attributes: {},
+    hidden: false,
+    value: "",
+    innerHTML: "",
+    textContent: "",
+    firstElementChild: null,
+    options: []
+  };
+}
+
+const stubElement = createStubElement();
+const legalToolTab = createStubElement({ toolTab: "legal" });
+const guideToolTab = createStubElement({ toolTab: "guide" });
+const legalToolPanel = createStubElement({ toolPanel: "legal" });
+const guideToolPanel = createStubElement({ toolPanel: "guide" });
+const guideToolLink = createStubElement({ toolLink: "guide" });
 
 const context = {
   console,
@@ -29,7 +54,12 @@ const context = {
     body: stubElement,
     createElement() { return stubElement; },
     querySelector() { return stubElement; },
-    querySelectorAll() { return []; }
+    querySelectorAll(selector) {
+      if (selector === "[data-tool-tab]") return [legalToolTab, guideToolTab];
+      if (selector === "[data-tool-panel]") return [legalToolPanel, guideToolPanel];
+      if (selector === "[data-tool-link]") return [guideToolLink];
+      return [];
+    }
   },
   localStorage: {
     getItem() { return null; },
@@ -664,6 +694,9 @@ const leaveGuideHtml = context.renderPolicyGuideResponse(leaveGuide);
 if (!leaveGuideHtml.includes("5일") || !leaveGuideHtml.includes("국가공무원 복무규정") || !leaveGuideHtml.includes("교원휴가에 관한 예규")) {
   failures.push("policy-guide-leave: expected local answer with 5-day national service rule and teacher leave source");
 }
+if (!leaveGuideHtml.includes("명확한 답변") || !leaveGuideHtml.includes("공립 교원·국가공무원 기준은 배우자의 부모 사망 경조사휴가 5일입니다.")) {
+  failures.push("policy-guide-leave: expected conclusion-first answer format");
+}
 if (!leaveGuideHtml.includes("인천광역시교육청") || !leaveGuideHtml.includes("교육공무직")) {
   failures.push("policy-guide-leave: expected office-priority and non-teacher caveat");
 }
@@ -677,6 +710,19 @@ const budgetGuide = context.buildPolicyGuideResponse({
 const budgetGuideHtml = context.renderPolicyGuideResponse(budgetGuide);
 if (!budgetGuideHtml.includes("강원특별자치도교육청") || !budgetGuideHtml.includes("2026년도 학교회계 예산편성 기본지침") || !budgetGuideHtml.includes("소속 교육청의 2026학년도 학교회계 예산편성 기본지침 확인")) {
   failures.push("policy-guide-budget: expected selected education-office budget guide priority");
+}
+
+if (!indexHtml.includes('data-tool-tab="legal"') || !indexHtml.includes('data-tool-tab="guide"') || !indexHtml.includes('data-tool-panel="guide"') || !indexHtml.includes("hidden")) {
+  failures.push("tool-tabs: expected legal/guide tab panels with hidden inactive guide panel");
+}
+
+context.activateTool("guide");
+if (!legalToolPanel.hidden || guideToolPanel.hidden || !guideToolTab.classList.contains("active") || legalToolTab.classList.contains("active")) {
+  failures.push("tool-tabs: expected only guide panel active after guide tab activation");
+}
+context.activateTool("legal");
+if (legalToolPanel.hidden || !guideToolPanel.hidden || !legalToolTab.classList.contains("active") || guideToolTab.classList.contains("active")) {
+  failures.push("tool-tabs: expected only legal panel active after legal tab activation");
 }
 
 if (failures.length) {
