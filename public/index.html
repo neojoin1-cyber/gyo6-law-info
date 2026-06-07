@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GYO6 Law Info | AI 법률정보 도우미</title>
   <meta name="description" content="특성화고 취업, 교육행정, 학교회계, 학생생활기록, 학교폭력 절차의 법령·원문 근거를 찾는 AI 법률정보 도우미">
-  <link rel="stylesheet" href="styles.css?v=20260607-school-admin">
+  <link rel="stylesheet" href="styles.css?v=20260607-reg-guide">
 </head>
 <body>
   <header class="topbar">
@@ -46,6 +46,7 @@
           <li><span>3</span><p>원문·지침 확인</p></li>
         </ol>
         <a class="hero-jump" href="#queryForm">질문 작성하기</a>
+        <a class="hero-jump secondary" href="#guideQa">규정·지침 Q&amp;A</a>
       </div>
     </section>
 
@@ -119,6 +120,17 @@
         </article>
       </div>
     </section>
+
+    <nav class="tool-tabs" aria-label="법률정보 도구 선택">
+      <a class="tool-tab active" href="#queryForm">
+        <span>법률정보</span>
+        <strong>원문·판례·AI 분석</strong>
+      </a>
+      <a class="tool-tab" href="#guideQa">
+        <span>규정·지침 Q&amp;A</span>
+        <strong>교육청 우선 무료 답변</strong>
+      </a>
+    </nav>
 
     <section class="workspace" aria-label="법률정보 검색 도구">
       <form class="query-panel" id="queryForm">
@@ -247,6 +259,112 @@
       </section>
     </section>
 
+    <section class="guide-workspace" id="guideQa" aria-label="규정 및 지침 Q&A">
+      <form class="guide-panel" id="guideForm">
+        <div class="panel-head">
+          <p class="panel-kicker">Rules &amp; Guidelines</p>
+          <h2>규정·지침 Q&amp;A</h2>
+        </div>
+
+        <div class="intake-guide">
+          <div>
+            <span>로컬 지침 사전</span>
+            <p>소속 교육청 자료를 먼저 올리고, 신분별 공통 규정과 학교 내부 규정 확인 순서를 함께 정리합니다.</p>
+          </div>
+          <button class="ghost-action" id="resetGuideButton" type="button">새 규정 질문</button>
+        </div>
+
+        <div class="field-grid guide-grid" aria-label="규정 질문 맥락 선택">
+          <label class="field-stack" for="guideOffice">
+            <span>소속 교육청</span>
+            <select id="guideOffice" name="guideOffice">
+              <option value="auto">교육청 선택</option>
+              <option value="seoul">서울특별시교육청</option>
+              <option value="busan">부산광역시교육청</option>
+              <option value="daegu">대구광역시교육청</option>
+              <option value="incheon">인천광역시교육청</option>
+              <option value="gwangju">광주광역시교육청</option>
+              <option value="daejeon">대전광역시교육청</option>
+              <option value="ulsan">울산광역시교육청</option>
+              <option value="sejong">세종특별자치시교육청</option>
+              <option value="gyeonggi">경기도교육청</option>
+              <option value="gangwon">강원특별자치도교육청</option>
+              <option value="chungbuk">충청북도교육청</option>
+              <option value="chungnam">충청남도교육청</option>
+              <option value="jeonbuk">전북특별자치도교육청</option>
+              <option value="jeonnam">전라남도교육청</option>
+              <option value="gyeongbuk">경상북도교육청</option>
+              <option value="gyeongnam">경상남도교육청</option>
+              <option value="jeju">제주특별자치도교육청</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="guideRole">
+            <span>대상 신분</span>
+            <select id="guideRole" name="guideRole">
+              <option value="auto">상황에서 판단</option>
+              <option value="student">학생</option>
+              <option value="teacher">공립 교원</option>
+              <option value="fixedTermTeacher">기간제 교원</option>
+              <option value="localOfficer">지방공무원·행정직</option>
+              <option value="educationWorker">교육공무직·특수운영직군</option>
+              <option value="privateSchool">사립학교 교직원</option>
+              <option value="manager">학교 관리자</option>
+              <option value="parent">학부모</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="guideCategory">
+            <span>업무영역</span>
+            <select id="guideCategory" name="guideCategory">
+              <option value="auto">자동 분류</option>
+              <option value="leaveAttendance">휴가·근태·출장</option>
+              <option value="budgetExecution">학교회계·예산·지출</option>
+              <option value="studentRecords">학생생활기록·출결</option>
+              <option value="schoolViolenceGuide">학교폭력 절차</option>
+              <option value="documentDisclosure">공문·기록·정보공개</option>
+              <option value="staffContract">교육공무직·기간제 계약</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="question-head">
+          <label class="field-label" for="guideQuestion">규정 질문</label>
+          <p>법적 분쟁 판단보다 적용할 규정, 지침, 교육청 기준을 찾는 질문을 적어 주세요.</p>
+        </div>
+        <textarea id="guideQuestion" name="guideQuestion" rows="5" placeholder="예: 공립 교원의 배우자 부모상 경조사휴가는 며칠인가요?"></textarea>
+
+        <div class="examples guide-examples" aria-label="규정 예시 질문">
+          <button type="button" data-guide-category="leaveAttendance" data-guide-role="teacher" data-guide-question="공립 교원의 배우자 부모상 경조사휴가는 며칠이고 어떤 규정을 확인해야 하나요?">경조사휴가</button>
+          <button type="button" data-guide-category="leaveAttendance" data-guide-role="localOfficer" data-guide-question="행정직 공무원이 출장 후 여비와 근무상황 처리를 할 때 어떤 규정을 확인해야 하나요?">출장·여비</button>
+          <button type="button" data-guide-category="budgetExecution" data-guide-role="manager" data-guide-question="학교 예산을 편성하고 지출 증빙을 확인할 때 소속 교육청 지침은 무엇을 우선 봐야 하나요?">예산편성</button>
+          <button type="button" data-guide-category="studentRecords" data-guide-role="teacher" data-guide-question="학생 생활기록부 정정과 출결 증빙은 어떤 지침과 기재요령을 봐야 하나요?">학생부 정정</button>
+          <button type="button" data-guide-category="staffContract" data-guide-role="educationWorker" data-guide-question="교육공무직 휴가와 복무는 법령보다 교육청 취업규칙이나 단체협약을 먼저 봐야 하나요?">교육공무직 복무</button>
+        </div>
+
+        <button class="primary-action" type="submit">
+          <span aria-hidden="true">⌕</span>
+          규정·지침 답변 보기
+        </button>
+      </form>
+
+      <section class="guide-result-panel" aria-live="polite" aria-label="규정 및 지침 답변">
+        <div class="panel-head result-head">
+          <div>
+            <p class="panel-kicker">Guideline Answer</p>
+            <h2>규정 질문 준비 화면</h2>
+          </div>
+          <span class="status-dot guide-status">로컬 지침</span>
+        </div>
+
+        <div id="guideResult" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">¶</div>
+          <h3>규정·지침 질문을 입력하면 소속 교육청 우선 확인 순서가 표시됩니다.</h3>
+          <p>이 메뉴는 외부 AI 호출 없이 미리 정리한 규정 사전으로 답변합니다.</p>
+        </div>
+      </section>
+    </section>
+
     <section class="notice" role="note" aria-label="중요 안내">
       <strong>정보 제공 안내</strong>
       <p>이 서비스는 법률 자문이나 사건 판단을 제공하지 않습니다. 실제 분쟁과 소송 등 중요한 판단은 전문가와 상담하세요.</p>
@@ -299,6 +417,6 @@
   <script src="ai-config.js?v=20260531-auto-topic"></script>
   <script src="firebase-config.js?v=20260531-auto-topic"></script>
   <script type="module" src="auth.js?v=20260602-unified-nav"></script>
-  <script src="app.js?v=20260607-school-admin"></script>
+  <script src="app.js?v=20260607-reg-guide"></script>
 </body>
 </html>

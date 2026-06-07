@@ -654,6 +654,31 @@ if (oldBranchOrder.includes("제9의2조")) {
   failures.push("live-source-render: branch article number should be 제9조의2, not 제9의2조");
 }
 
+const leaveGuide = context.buildPolicyGuideResponse({
+  question: "공립 교원의 배우자 부모상 경조사휴가는 며칠이고 어떤 규정을 확인해야 하나요?",
+  officeCode: "incheon",
+  roleCode: "teacher",
+  categoryCode: "leaveAttendance"
+});
+const leaveGuideHtml = context.renderPolicyGuideResponse(leaveGuide);
+if (!leaveGuideHtml.includes("5일") || !leaveGuideHtml.includes("국가공무원 복무규정") || !leaveGuideHtml.includes("교원휴가에 관한 예규")) {
+  failures.push("policy-guide-leave: expected local answer with 5-day national service rule and teacher leave source");
+}
+if (!leaveGuideHtml.includes("인천광역시교육청") || !leaveGuideHtml.includes("교육공무직")) {
+  failures.push("policy-guide-leave: expected office-priority and non-teacher caveat");
+}
+
+const budgetGuide = context.buildPolicyGuideResponse({
+  question: "학교 예산 편성과 지출 증빙은 소속 교육청 기준으로 무엇을 먼저 확인해야 하나요?",
+  officeCode: "gangwon",
+  roleCode: "manager",
+  categoryCode: "budgetExecution"
+});
+const budgetGuideHtml = context.renderPolicyGuideResponse(budgetGuide);
+if (!budgetGuideHtml.includes("강원특별자치도교육청") || !budgetGuideHtml.includes("2026년도 학교회계 예산편성 기본지침") || !budgetGuideHtml.includes("소속 교육청의 2026학년도 학교회계 예산편성 기본지침 확인")) {
+  failures.push("policy-guide-budget: expected selected education-office budget guide priority");
+}
+
 if (failures.length) {
   console.error(`Scenario regression failed: ${failures.length}`);
   failures.forEach((failure) => console.error(`- ${failure}`));

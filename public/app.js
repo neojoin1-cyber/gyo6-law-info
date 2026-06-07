@@ -14,6 +14,14 @@ const answerModeInput = document.querySelector("#answerMode");
 const userRoleInput = document.querySelector("#userRole");
 const partyRoleInput = document.querySelector("#partyRole");
 const resetQuestionButton = document.querySelector("#resetQuestionButton");
+const guideForm = document.querySelector("#guideForm");
+const guideQuestionInput = document.querySelector("#guideQuestion");
+const guideOfficeInput = document.querySelector("#guideOffice");
+const guideRoleInput = document.querySelector("#guideRole");
+const guideCategoryInput = document.querySelector("#guideCategory");
+const guideResult = document.querySelector("#guideResult");
+const guideStatus = document.querySelector(".guide-status");
+const resetGuideButton = document.querySelector("#resetGuideButton");
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
 const AI_USAGE_LEDGER_KEY = "gyo6LawInfoAiUsageLedger";
 const LOCAL_COST_CONTROL = {
@@ -132,6 +140,315 @@ const sourcePlanByTopic = {
   staffLabor: ["law", "admin", "case", "expert"],
   civilComplaint: ["admin", "law", "case", "expert"],
   general: ["law", "admin", "case", "expert"]
+};
+
+const educationOfficeCatalog = [
+  { code: "auto", label: "교육청 미선택", homepage: "https://www.moe.go.kr/main.do?s=moe", domain: "moe.go.kr" },
+  { code: "seoul", label: "서울특별시교육청", homepage: "https://www.sen.go.kr", domain: "sen.go.kr" },
+  {
+    code: "busan",
+    label: "부산광역시교육청",
+    homepage: "https://www.pen.go.kr",
+    domain: "pen.go.kr",
+    budgetGuide: {
+      title: "2026학년도 공립 유·초·중·고·특수학교 학교회계 예산편성 기본지침",
+      url: "https://www.pen.go.kr/upload/main/na/bbs_2461/ntt_1152443/doc_d843vf4ef%3D32v89%3D46vab%3D9cvf4%3D9fc1ve75fve1fe_v2567.pdf",
+      status: "직접 연결"
+    }
+  },
+  { code: "daegu", label: "대구광역시교육청", homepage: "https://www.dge.go.kr", domain: "dge.go.kr" },
+  {
+    code: "incheon",
+    label: "인천광역시교육청",
+    homepage: "https://www.ice.go.kr",
+    domain: "ice.go.kr",
+    budgetGuide: {
+      title: "2026년도 인천광역시 교육비특별회계 예산편성 기본지침",
+      url: "https://www.ice.go.kr/arc/ad/func/ppm/selectPpmInfo.do?mi=10644&pblictnSn=3001563",
+      status: "직접 연결"
+    }
+  },
+  {
+    code: "gwangju",
+    label: "광주광역시교육청",
+    homepage: "https://www.gen.go.kr",
+    domain: "gen.go.kr",
+    budgetGuide: {
+      title: "2026학년도 학교회계 예산편성 기본지침",
+      url: "https://www.gen.go.kr/xboard/board.php?keyset=con_sub&mode=view&number=455196&page=1&sCat=0&searchword=%ED%95%99%EA%B5%90%ED%9A%8C%EA%B3%84&tbnum=340",
+      status: "직접 연결"
+    }
+  },
+  { code: "daejeon", label: "대전광역시교육청", homepage: "https://www.dje.go.kr", domain: "dje.go.kr" },
+  {
+    code: "ulsan",
+    label: "울산광역시교육청",
+    homepage: "https://www.use.go.kr",
+    domain: "use.go.kr",
+    budgetGuide: {
+      title: "2026학년도 학교회계 예산편성 기본지침",
+      url: "https://use.go.kr/usgbe/user/bbs/BD_selectBbs.do?q_bbsDocNo=20260326104644369&q_bbsSn=1345",
+      status: "교육지원청 직접 연결"
+    }
+  },
+  { code: "sejong", label: "세종특별자치시교육청", homepage: "https://www.sje.go.kr", domain: "sje.go.kr" },
+  { code: "gyeonggi", label: "경기도교육청", homepage: "https://www.goe.go.kr", domain: "goe.go.kr" },
+  {
+    code: "gangwon",
+    label: "강원특별자치도교육청",
+    homepage: "https://www.gwe.go.kr",
+    domain: "gwe.go.kr",
+    budgetGuide: {
+      title: "2026년도 학교회계 예산편성 기본지침",
+      url: "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=46704&key=m2307211198550",
+      status: "직접 연결"
+    }
+  },
+  { code: "chungbuk", label: "충청북도교육청", homepage: "https://www.cbe.go.kr", domain: "cbe.go.kr" },
+  { code: "chungnam", label: "충청남도교육청", homepage: "https://www.cne.go.kr", domain: "cne.go.kr" },
+  {
+    code: "jeonbuk",
+    label: "전북특별자치도교육청",
+    homepage: "https://www.jbe.go.kr",
+    domain: "jbe.go.kr",
+    budgetGuide: {
+      title: "2026학년도 학교회계 예산편성 및 운영지침",
+      url: "https://www.jbe.go.kr/board/view.jbe?boardId=BBS_0000191&categoryCode1=H&categoryCode2=H_01%2CH_02&dataSid=929936&keyword=%ED%95%99%EA%B5%90%ED%9A%8C%EA%B3%84&menuCd=DOM_000000707003000000&orderBy=REGISTER_DATE%3ADESC&paging=ok&searchOperation=AND&searchType=DATA_TITLE&startPage=1",
+      status: "직접 연결"
+    }
+  },
+  {
+    code: "jeonnam",
+    label: "전라남도교육청",
+    homepage: "https://www.jne.go.kr",
+    domain: "jne.go.kr",
+    budgetGuide: {
+      title: "2026학년도 학교회계 예산편성 기본지침",
+      url: "https://www.jne.go.kr/upload/open/na/bbs_297/ntt_5160586/doc_ef0fa7d7-1e2f-4498-9c8a-cb1350824da41764a2269b52222.pdf",
+      status: "직접 연결"
+    }
+  },
+  { code: "gyeongbuk", label: "경상북도교육청", homepage: "https://www.gbe.kr", domain: "gbe.kr" },
+  {
+    code: "gyeongnam",
+    label: "경상남도교육청",
+    homepage: "https://www.gne.go.kr",
+    domain: "gne.go.kr",
+    budgetGuide: {
+      title: "2026학년도 학교회계 예산편성 기본지침",
+      url: "https://www.gne.go.kr/user/bbs/BD_selectBbs.do?q_bbsDocNo=20251125132734237&q_bbsSn=1286",
+      status: "직접 연결"
+    }
+  },
+  { code: "jeju", label: "제주특별자치도교육청", homepage: "https://www.jje.go.kr", domain: "jje.go.kr" }
+];
+
+const policySourceCatalog = {
+  teacherLeave: {
+    title: "교원휴가에 관한 예규",
+    source: "국가법령정보센터·교육부",
+    url: "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulId=20578&efYd=0",
+    query: "교원휴가에 관한 예규",
+    note: "공립 교원의 연가·병가·공가·특별휴가 처리 기준"
+  },
+  nationalService: {
+    title: "국가공무원 복무규정",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsSc.do?query=%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%20%EB%B3%B5%EB%AC%B4%EA%B7%9C%EC%A0%95",
+    query: "국가공무원 복무규정 제20조 별표2 경조사별 휴가 일수표",
+    note: "국가공무원 복무와 경조사 특별휴가 공통 기준"
+  },
+  localService: {
+    title: "지방공무원 복무규정",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsSc.do?query=%EC%A7%80%EB%B0%A9%EA%B3%B5%EB%AC%B4%EC%9B%90%20%EB%B3%B5%EB%AC%B4%EA%B7%9C%EC%A0%95",
+    query: "지방공무원 복무규정 특별휴가 경조사휴가",
+    note: "교육감 소속 지방공무원·행정직 복무 기준"
+  },
+  travelExpense: {
+    title: "공무원 여비 규정",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsInfoP.do?lsId=009402&urlMode=lsInfoP",
+    query: "공무원 여비 규정 출장 여비 증빙",
+    note: "출장명령, 운임·숙박비·일비, 여비 증빙 기준"
+  },
+  schoolAccountingRule: {
+    title: "국립 유치원 및 초·중등학교 회계규칙",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=210514",
+    query: "국립 유치원 및 초·중등학교 회계규칙",
+    note: "학교회계 예산·수입·지출·출납·검수 공통 기준"
+  },
+  localContract: {
+    title: "지방자치단체를 당사자로 하는 계약에 관한 법률",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsSc.do?query=%EC%A7%80%EB%B0%A9%EC%9E%90%EC%B9%98%EB%8B%A8%EC%B2%B4%EB%A5%BC%20%EB%8B%B9%EC%82%AC%EC%9E%90%EB%A1%9C%20%ED%95%98%EB%8A%94%20%EA%B3%84%EC%95%BD%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0",
+    query: "지방자치단체를 당사자로 하는 계약에 관한 법률 수의계약 검수",
+    note: "물품·용역·공사 계약과 검수 기준 보조 자료"
+  },
+  schoolRecordGuide: {
+    title: "2026학년도 학교생활기록부 기재요령",
+    source: "학교생활기록부 종합지원포털",
+    url: "https://star.moe.go.kr/web/contents/m21100.do",
+    query: "2026학년도 학교생활기록부 기재요령 고등학교",
+    note: "당해 학년도 학생부 기재·출결·정정 세부 기준"
+  },
+  schoolRecordRule: {
+    title: "학교생활기록 작성 및 관리지침",
+    source: "국가법령정보센터·교육부",
+    url: "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000188164",
+    query: "학교생활기록 작성 및 관리지침",
+    note: "학교생활기록 작성·관리·정정 권한과 절차"
+  },
+  schoolViolenceGuide2025: {
+    title: "2025년 학교폭력 사안처리 가이드북",
+    source: "교육부·시도교육청",
+    url: "https://www.cbe.go.kr/dept-21/na/ntt/selectNttInfo.do?mi=11221&nttSn=1548192",
+    query: "2025년 학교폭력 사안처리 가이드북",
+    note: "학교폭력 신고·접수·조사·심의·조치 단계별 현장 지침"
+  },
+  publicRecords: {
+    title: "공공기록물 관리에 관한 법률",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsSc.do?query=%EA%B3%B5%EA%B3%B5%EA%B8%B0%EB%A1%9D%EB%AC%BC%20%EA%B4%80%EB%A6%AC%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0",
+    query: "공공기록물 관리에 관한 법률 학교 회의록 보존",
+    note: "공문·회의록·증빙자료 보존 체계 확인"
+  },
+  infoDisclosure: {
+    title: "공공기관의 정보공개에 관한 법률",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsSc.do?query=%EA%B3%B5%EA%B3%B5%EA%B8%B0%EA%B4%80%EC%9D%98%20%EC%A0%95%EB%B3%B4%EA%B3%B5%EA%B0%9C%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0",
+    query: "공공기관의 정보공개에 관한 법률 비공개 개인정보 학교",
+    note: "정보공개 청구와 비공개·부분공개 판단"
+  },
+  laborStandard: {
+    title: "근로기준법",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsSc.do?query=%EA%B7%BC%EB%A1%9C%EA%B8%B0%EC%A4%80%EB%B2%95",
+    query: "근로기준법 휴가 근로조건 취업규칙",
+    note: "교육공무직·계약직 근로관계 기본 기준"
+  },
+  fixedTermAct: {
+    title: "기간제 및 단시간근로자 보호 등에 관한 법률",
+    source: "국가법령정보센터",
+    url: "https://www.law.go.kr/LSW/lsSc.do?query=%EA%B8%B0%EA%B0%84%EC%A0%9C%20%EB%B0%8F%20%EB%8B%A8%EC%8B%9C%EA%B0%84%EA%B7%BC%EB%A1%9C%EC%9E%90%20%EB%B3%B4%ED%98%B8%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0",
+    query: "기간제 및 단시간근로자 보호 등에 관한 법률 학교 계약직",
+    note: "기간제·단시간 근로자 차별·계약기간 쟁점"
+  }
+};
+
+const policyGuideCategories = {
+  leaveAttendance: {
+    label: "휴가·근태·출장",
+    aliases: ["휴가", "근태", "출장", "연가", "병가", "공가", "특별휴가", "경조사", "부모상", "배우자", "여비", "나이스", "근무상황"],
+    summary: "휴가·근태는 대상 신분이 먼저입니다. 교원, 지방공무원, 교육공무직, 기간제, 사립학교 교직원은 적용 규정의 출발점이 서로 다릅니다.",
+    firstSteps: [
+      "대상 신분을 교원, 지방공무원, 교육공무직, 기간제교원, 사립학교 교직원 중 하나로 확정",
+      "소속 교육청 복무 지침, 취업규칙, 단체협약, 학교법인 규정이 있는지 확인",
+      "나이스 근무상황, 출장명령, 승인권자, 증빙자료를 함께 대조"
+    ],
+    sourceKeys: ["teacherLeave", "nationalService", "localService", "travelExpense", "laborStandard", "fixedTermAct"],
+    officeQueries: ["교육공무직원 취업규칙 복무", "지방공무원 복무 조례 특별휴가", "교육공무직 단체협약 휴가"]
+  },
+  budgetExecution: {
+    label: "학교회계·예산·지출",
+    aliases: ["학교회계", "예산", "예산편성", "품의", "검수", "지출", "증빙", "영수증", "세금계산서", "수의계약", "정산", "업무추진비"],
+    summary: "학교회계는 소속 교육청의 해당 학년도 학교회계 예산편성 기본지침을 최우선으로 보고, 공통 회계규칙과 계약 법령을 보조로 대조합니다.",
+    firstSteps: [
+      "소속 교육청의 2026학년도 학교회계 예산편성 기본지침 확인",
+      "업무 단계를 예산 편성, 품의, 계약, 검수, 지출결의, 정산 중 하나로 구분",
+      "학교 내부 결재선, 검수조서, 영수증·세금계산서, 카드전표, 사업계획서를 함께 확인"
+    ],
+    sourceKeys: ["schoolAccountingRule", "localContract", "publicRecords"],
+    officeQueries: ["2026학년도 학교회계 예산편성 기본지침", "학교회계 예산편성 기본지침 지출 증빙", "학교회계 세출예산 원가통계비목"]
+  },
+  studentRecords: {
+    label: "학생생활기록·출결",
+    aliases: ["생활기록부", "학교생활기록", "생기부", "학생부", "출결", "인정결석", "정정", "증빙", "기재요령", "누가기록"],
+    summary: "학생부·출결은 당해 학년도 기재요령과 학교생활기록 작성 및 관리지침을 먼저 보며, 학교급과 처리일자가 중요합니다.",
+    firstSteps: [
+      "학교급, 학년도, 항목, 처리일자를 먼저 확정",
+      "정정 사안은 원자료, 증빙자료, 결재 기록, 권한 있는 사용자 처리 여부 확인",
+      "학부모 안내는 확정 판단보다 지침상 처리 절차와 필요 자료 중심으로 작성"
+    ],
+    sourceKeys: ["schoolRecordGuide", "schoolRecordRule", "publicRecords", "infoDisclosure"],
+    officeQueries: ["학교생활기록부 기재요령 Q&A", "학생생활기록 정정 증빙", "출결 인정결석 증빙"]
+  },
+  schoolViolenceGuide: {
+    label: "학교폭력 절차",
+    aliases: ["학교폭력", "학폭", "전담기구", "심의", "피해학생", "가해학생", "불복", "분리", "사안처리"],
+    summary: "학교폭력은 법률 판단보다 신고·접수, 사안조사, 전담기구, 심의 요청, 조치, 불복 단계가 먼저 구분되어야 합니다.",
+    firstSteps: [
+      "신고·접수일, 발생일, 관련 학생, 증거자료를 시간순으로 정리",
+      "피해학생 보호조치와 관련 학생 분리 필요성 확인",
+      "전담기구 확인, 심의 요청, 조치 결정, 불복 가능 단계를 분리"
+    ],
+    sourceKeys: ["schoolViolenceGuide2025"],
+    officeQueries: ["학교폭력 사안처리 세부설명 A to Z", "학교폭력 사안처리 가이드북"]
+  },
+  documentDisclosure: {
+    label: "공문·기록·정보공개",
+    aliases: ["공문", "결재", "회의록", "보존", "기록물", "정보공개", "개인정보", "민원", "비공개", "부분공개"],
+    summary: "공문·회의록·정보공개는 기록물 보존, 개인정보, 비공개 사유, 학교 내부 결재선이 함께 움직입니다.",
+    firstSteps: [
+      "문서 종류를 공문, 회의록, 상담기록, 지출증빙, 학생자료 중 하나로 구분",
+      "보존기간표, 개인정보 포함 여부, 정보공개 비공개 사유를 대조",
+      "민원 답변은 공개 가능한 사실과 내부 검토 자료를 구분"
+    ],
+    sourceKeys: ["publicRecords", "infoDisclosure", "schoolRecordRule"],
+    officeQueries: ["교육청 기록물관리 지침", "정보공개 업무처리 지침 학교", "기록물 보존기간표 학교"]
+  },
+  staffContract: {
+    label: "교육공무직·기간제 계약",
+    aliases: ["교육공무직", "특수운영직군", "기간제", "계약직", "취업규칙", "단체협약", "근로계약", "재계약", "복무"],
+    summary: "교육공무직과 기간제 직원은 법령 공통 기준만으로 끝나지 않고 교육청 취업규칙, 단체협약, 근로계약서를 함께 봐야 합니다.",
+    firstSteps: [
+      "교육공무직, 특수운영직군, 기간제교원, 기간제근로자 중 신분을 확정",
+      "소속 교육청 취업규칙, 단체협약, 인사관리 규정, 근로계약서 확인",
+      "근로기준법·기간제법은 공통 하한선으로 보고 교육청 기준과 충돌 여부 확인"
+    ],
+    sourceKeys: ["laborStandard", "fixedTermAct", "teacherLeave", "localService"],
+    officeQueries: ["교육공무직원 취업규칙", "교육공무직 단체협약", "기간제교원 운영 지침"]
+  }
+};
+
+const policyRoleProfiles = {
+  auto: {
+    label: "상황에서 판단",
+    priority: "질문 속 신분 표현을 기준으로 적용 규정을 갈라야 합니다."
+  },
+  student: {
+    label: "학생",
+    priority: "학생은 학칙, 출결 기준, 학교생활기록부 기재요령, 학생생활규정이 우선입니다."
+  },
+  teacher: {
+    label: "공립 교원",
+    priority: "공립 교원은 교원휴가 예규, 국가공무원 복무규정, 교육공무원 관련 규정과 교육청 지침을 함께 봅니다."
+  },
+  fixedTermTeacher: {
+    label: "기간제 교원",
+    priority: "기간제 교원은 임용계약, 교육청 기간제교원 운영 지침, 교원 복무·휴가 기준 적용 여부를 함께 확인합니다."
+  },
+  localOfficer: {
+    label: "지방공무원·행정직",
+    priority: "교육감 소속 지방공무원은 지방공무원 복무규정과 관할 교육청 복무 조례·예규를 우선 확인합니다."
+  },
+  educationWorker: {
+    label: "교육공무직·특수운영직군",
+    priority: "교육공무직은 근로기준법보다 소속 교육청 취업규칙, 단체협약, 근로계약서의 구체 기준을 먼저 대조합니다."
+  },
+  privateSchool: {
+    label: "사립학교 교직원",
+    priority: "사립학교는 법령 공통 기준 외에 학교법인 정관, 취업규칙, 단체협약, 내부 복무규정 확인이 필요합니다."
+  },
+  manager: {
+    label: "학교 관리자",
+    priority: "학교 관리자는 소속 교육청 지침, 학교장 승인권, 결재선, 내부통제와 기록 보존을 함께 확인합니다."
+  },
+  parent: {
+    label: "학부모",
+    priority: "학부모 안내는 학교가 적용하는 지침명, 처리 절차, 제출 가능한 증빙자료를 명확히 설명하는 방식이 좋습니다."
+  }
 };
 
 const topicTaxonomy = {
@@ -797,9 +1114,28 @@ document.querySelectorAll("[data-example]").forEach((button) => {
   });
 });
 
+document.querySelectorAll("[data-guide-question]").forEach((button) => {
+  button.addEventListener("click", () => {
+    guideQuestionInput.value = button.dataset.guideQuestion || "";
+    if (button.dataset.guideRole) guideRoleInput.value = button.dataset.guideRole;
+    if (button.dataset.guideCategory) guideCategoryInput.value = button.dataset.guideCategory;
+    renderPolicyGuideResult();
+    guideQuestionInput.focus();
+  });
+});
+
 resetQuestionButton?.addEventListener("click", () => {
   resetTransientQuestionState({ resetFormValues: true });
   questionInput.focus();
+});
+
+resetGuideButton?.addEventListener("click", () => {
+  guideQuestionInput.value = "";
+  guideOfficeInput.value = "auto";
+  guideRoleInput.value = "auto";
+  guideCategoryInput.value = "auto";
+  showGuideEmptyState();
+  guideQuestionInput.focus();
 });
 
 form.addEventListener("submit", (event) => {
@@ -827,6 +1163,11 @@ form.addEventListener("submit", (event) => {
       window.scrollTo(0, targetTop);
     }, 0);
   }
+});
+
+guideForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  renderPolicyGuideResult();
 });
 
 resultState.addEventListener("submit", (event) => {
@@ -888,6 +1229,297 @@ window.addEventListener("afterprint", () => {
 });
 
 hydrateFromUrl();
+
+function showGuideEmptyState() {
+  if (!guideResult) return;
+  if (guideStatus) guideStatus.textContent = "로컬 지침";
+  guideResult.className = "empty-state";
+  guideResult.innerHTML = `
+    <div class="empty-icon" aria-hidden="true">¶</div>
+    <h3>규정·지침 질문을 입력하면 소속 교육청 우선 확인 순서가 표시됩니다.</h3>
+    <p>이 메뉴는 외부 AI 호출 없이 미리 정리한 규정 사전으로 답변합니다.</p>
+  `;
+}
+
+function renderPolicyGuideResult() {
+  const question = (guideQuestionInput?.value || "").trim();
+  if (!question) {
+    if (!guideResult) return;
+    if (guideStatus) guideStatus.textContent = "입력 필요";
+    guideResult.className = "empty-state";
+    guideResult.innerHTML = `
+      <div class="empty-icon" aria-hidden="true">¶</div>
+      <h3>규정 질문을 입력해 주세요.</h3>
+      <p>예: 공립 교원의 배우자 부모상 경조사휴가는 며칠인가요?</p>
+    `;
+    return;
+  }
+
+  const response = buildPolicyGuideResponse({
+    question,
+    officeCode: guideOfficeInput?.value || "auto",
+    roleCode: guideRoleInput?.value || "auto",
+    categoryCode: guideCategoryInput?.value || "auto"
+  });
+
+  if (guideStatus) guideStatus.textContent = "무료 로컬 답변";
+  guideResult.className = "summary-box guideline-result";
+  guideResult.innerHTML = renderPolicyGuideResponse(response);
+}
+
+function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode = "auto", categoryCode = "auto" } = {}) {
+  const normalized = compactText(question);
+  const office = getEducationOffice(officeCode);
+  const category = getPolicyGuideCategory(categoryCode === "auto" ? inferPolicyGuideCategory(normalized) : categoryCode);
+  const role = getPolicyRole(roleCode === "auto" ? inferPolicyRole(normalized) : roleCode);
+  const directRule = getDirectPolicyRule(normalized, category, role);
+  const officeSources = buildOfficePolicySources(office, category);
+  const sourceKeys = uniqueStrings([...(directRule?.sourceKeys || []), ...(category.sourceKeys || [])]);
+  const nationalSources = sourceKeys.map((key) => policySourceCatalog[key]).filter(Boolean);
+  const searchQueries = buildPolicySearchQueries(question, office, category, role, directRule);
+
+  return {
+    question,
+    office,
+    category,
+    role,
+    directRule,
+    title: directRule?.title || `${category.label} 규정 확인 순서`,
+    lead: directRule?.lead || category.summary,
+    firstSteps: uniqueStrings([...(directRule?.steps || []), role.priority, ...(category.firstSteps || [])]).slice(0, 7),
+    officeSources,
+    nationalSources,
+    searchQueries,
+    caution: directRule?.caution || "교육청별 지침, 학교 내부 규정, 단체협약, 취업규칙이 공통 법령보다 더 구체적일 수 있으므로 소속 기관 기준을 먼저 확인해야 합니다."
+  };
+}
+
+function renderPolicyGuideResponse(response) {
+  const officeLabel = response.office.code === "auto" ? "소속 교육청 미선택" : response.office.label;
+  const directItems = response.directRule?.answer || [];
+
+  return `
+    <section class="guide-answer-card primary">
+      <div class="answer-label">규정·지침 우선 답변</div>
+      <h3>${escapeHtml(response.title)}</h3>
+      <p>${escapeHtml(response.lead)}</p>
+      <dl class="guide-meta">
+        <div><dt>교육청</dt><dd>${escapeHtml(officeLabel)}</dd></div>
+        <div><dt>신분</dt><dd>${escapeHtml(response.role.label)}</dd></div>
+        <div><dt>영역</dt><dd>${escapeHtml(response.category.label)}</dd></div>
+      </dl>
+      ${directItems.length ? `
+        <div class="guide-direct">
+          <strong>바로 적용할 수 있는 공통 기준</strong>
+          <ul>${directItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+        </div>
+      ` : ""}
+      <p class="answer-warning">${escapeHtml(response.caution)}</p>
+    </section>
+
+    <section class="guide-answer-card">
+      <h3>확인 순서</h3>
+      <ol>${response.firstSteps.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ol>
+    </section>
+
+    <section class="guide-answer-card">
+      <h3>소속 교육청 우선 자료</h3>
+      <div class="guide-source-grid">
+        ${response.officeSources.map(renderPolicySourceCard).join("")}
+      </div>
+    </section>
+
+    <section class="guide-answer-card">
+      <h3>전국 공통 규정</h3>
+      <div class="guide-source-grid">
+        ${response.nationalSources.map(renderPolicySourceCard).join("")}
+      </div>
+    </section>
+
+    <section class="guide-answer-card">
+      <h3>자동 검색어</h3>
+      <div class="guide-query-chips">
+        ${response.searchQueries.map((query) => `<span>${escapeHtml(query)}</span>`).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderPolicySourceCard(source = {}) {
+  const href = source.url || "https://www.law.go.kr";
+  return `
+    <article>
+      <span>${escapeHtml(source.source || "공식자료")}</span>
+      <h4>${escapeHtml(source.title || "공식자료 확인")}</h4>
+      <p>${escapeHtml(source.note || source.query || "원문을 확인합니다.")}</p>
+      ${source.status ? `<em>${escapeHtml(source.status)}</em>` : ""}
+      <a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">원문·자료 보기</a>
+    </article>
+  `;
+}
+
+function getEducationOffice(code = "auto") {
+  return educationOfficeCatalog.find((item) => item.code === code) || educationOfficeCatalog[0];
+}
+
+function getPolicyGuideCategory(code = "leaveAttendance") {
+  return policyGuideCategories[code] || policyGuideCategories.leaveAttendance;
+}
+
+function getPolicyRole(code = "auto") {
+  return policyRoleProfiles[code] || policyRoleProfiles.auto;
+}
+
+function inferPolicyGuideCategory(normalized = "") {
+  const entries = Object.entries(policyGuideCategories)
+    .map(([code, category]) => ({
+      code,
+      score: (category.aliases || []).reduce((sum, alias) => sum + (normalized.includes(compactText(alias)) ? Math.max(2, alias.length) : 0), 0)
+    }))
+    .sort((a, b) => b.score - a.score);
+
+  return entries[0]?.score ? entries[0].code : "leaveAttendance";
+}
+
+function inferPolicyRole(normalized = "") {
+  if (/교육공무직|특수운영직군|무기계약|공무직/.test(normalized)) return "educationWorker";
+  if (/기간제교원|기간제교사|기간제/.test(normalized)) return "fixedTermTeacher";
+  if (/행정직|행정실|지방공무원|교육행정직|일반직/.test(normalized)) return "localOfficer";
+  if (/사립|학교법인|법인/.test(normalized)) return "privateSchool";
+  if (/학교장|교감|관리자|교장|행정실장/.test(normalized)) return "manager";
+  if (/학부모|보호자/.test(normalized)) return "parent";
+  if (/학생|출결|생활기록부|생기부|학생부/.test(normalized)) return "student";
+  if (/교원|교사|담임|수업일|연가|병가|공가|교원휴가/.test(normalized)) return "teacher";
+  return "auto";
+}
+
+function buildOfficePolicySources(office, category) {
+  const sources = [];
+  const label = office.code === "auto" ? "소속 교육청" : office.label;
+
+  if (category === policyGuideCategories.budgetExecution) {
+    if (office.budgetGuide?.url) {
+      sources.push({
+        title: office.budgetGuide.title,
+        source: label,
+        url: office.budgetGuide.url,
+        note: `${label} 학교회계 예산편성 기준을 우선 확인합니다.`,
+        status: office.budgetGuide.status
+      });
+    } else {
+      sources.push({
+        title: `${label} 학교회계 예산편성 기본지침`,
+        source: label,
+        url: buildOfficialDomainSearchUrl(office, "2026학년도 학교회계 예산편성 기본지침"),
+        note: "교육청별 해당 학년도 학교회계 지침을 최우선으로 확인합니다.",
+        status: office.code === "auto" ? "교육청 선택 필요" : "공식 도메인 검색"
+      });
+    }
+  }
+
+  (category.officeQueries || []).slice(0, 3).forEach((query) => {
+    sources.push({
+      title: `${label} ${query}`,
+      source: label,
+      url: buildOfficialDomainSearchUrl(office, query),
+      note: "소속 교육청 자료실·행정자료에서 최신 지침을 우선 확인합니다.",
+      status: office.code === "auto" ? "교육청 선택 필요" : "공식 도메인 검색"
+    });
+  });
+
+  sources.push({
+    title: `${label} 누리집`,
+    source: label,
+    url: office.homepage,
+    note: "교육청 공지, 지침, 행정자료 원문 확인 경로입니다.",
+    status: "공식 누리집"
+  });
+
+  return dedupePolicySources(sources).slice(0, 5);
+}
+
+function buildOfficialDomainSearchUrl(office, query) {
+  if (office.code === "auto") {
+    return `https://www.moe.go.kr/main.do?s=moe`;
+  }
+
+  return `https://www.google.com/search?q=${encodeURIComponent(`site:${office.domain} ${query}`)}`;
+}
+
+function dedupePolicySources(sources = []) {
+  const seen = new Set();
+  return sources.filter((source) => {
+    const key = `${source.title}|${source.url}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function buildPolicySearchQueries(question, office, category, role, directRule) {
+  const officeLabel = office.code === "auto" ? "소속 교육청" : office.label;
+  return uniqueStrings([
+    ...(directRule?.queries || []),
+    `${officeLabel} ${category.label} 지침`,
+    `${officeLabel} ${role.label} 규정`,
+    ...(category.officeQueries || []),
+    ...((category.sourceKeys || []).map((key) => policySourceCatalog[key]?.query).filter(Boolean)),
+    question
+  ]).slice(0, 10);
+}
+
+function getDirectPolicyRule(normalized, category, role) {
+  if (category === policyGuideCategories.leaveAttendance && /배우자.*(부모|부친|모친)|장인|장모|시부|시모|부모상|상례|사망|경조사/.test(normalized)) {
+    return {
+      title: "배우자 부모상 경조사휴가 확인 기준",
+      lead: "공립 교원·국가공무원 기준은 공통 법령에서 일수를 먼저 확인할 수 있지만, 교육공무직·사립학교·기간제 직원은 소속 교육청이나 법인 규정이 더 구체적일 수 있습니다.",
+      answer: [
+        "공립 교원·국가공무원 기준: 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표에서 배우자, 본인 및 배우자의 부모 사망은 5일 기준으로 확인합니다.",
+        "공립 교원은 교원휴가에 관한 예규와 나이스 근무상황 신청, 학교장 승인 절차를 함께 확인합니다.",
+        "지방공무원·행정직은 지방공무원 복무규정과 관할 교육청 복무 조례·예규를 대조합니다.",
+        "교육공무직·특수운영직군은 소속 교육청 취업규칙, 단체협약, 근로계약서의 경조사휴가표를 우선 확인합니다.",
+        "사립학교 교직원은 학교법인 취업규칙, 복무규정, 단체협약에서 같은 경조사휴가가 어떻게 정해졌는지 확인합니다."
+      ],
+      steps: [
+        "신분이 공립 교원인지, 지방공무원인지, 교육공무직인지, 사립학교 교직원인지 확정",
+        "경조사 대상이 배우자의 부모인지, 본인 부모인지, 조부모인지 정확히 구분",
+        "휴가 시작일, 휴일 포함 방식, 나이스 신청 종별, 증빙자료 제출 기준 확인"
+      ],
+      sourceKeys: ["nationalService", "teacherLeave", "localService", "laborStandard"],
+      queries: ["국가공무원 복무규정 제20조 별표2 배우자의 부모 사망 5일", "교원휴가에 관한 예규 경조사휴가", "교육공무직 경조사휴가 배우자의 부모"]
+    };
+  }
+
+  if (category === policyGuideCategories.budgetExecution && /업무추진비|간담회|식비|협의회/.test(normalized)) {
+    return {
+      title: "업무추진비·협의회 지출 확인 기준",
+      lead: "업무추진비는 교육청 예산편성 기본지침의 사용 가능 범위와 학교 내부 품의·검수·지출 증빙 흐름을 같이 봐야 합니다.",
+      answer: [
+        "소속 교육청의 2026학년도 학교회계 예산편성 기본지침에서 업무추진비 세목과 집행 제한을 먼저 확인합니다.",
+        "품의서, 참석자 범위, 목적, 일시·장소, 영수증 또는 카드전표, 지출결의서를 함께 보관합니다.",
+        "목적사업비나 수익자부담경비 등 재원 성격이 다르면 별도 집행 제한이 있을 수 있습니다."
+      ],
+      sourceKeys: ["schoolAccountingRule", "localContract", "publicRecords"],
+      queries: ["학교회계 예산편성 기본지침 업무추진비", "학교회계 업무추진비 지출 증빙"]
+    };
+  }
+
+  if (category === policyGuideCategories.budgetExecution && /수의계약|계약|검수|물품|용역|공사/.test(normalized)) {
+    return {
+      title: "계약·검수·지출 증빙 확인 기준",
+      lead: "계약과 검수는 교육청 학교회계 지침, 학교회계 규칙, 지방계약 법령, 내부 결재 문서가 함께 맞아야 합니다.",
+      answer: [
+        "예산 편성 과목과 실제 집행 품목이 맞는지 먼저 확인합니다.",
+        "품의, 견적 또는 계약, 납품·완료 확인, 검수, 지출결의, 증빙자료 순서로 문서 흐름을 맞춥니다.",
+        "수의계약 가능 여부와 견적 기준은 지방계약 법령과 교육청 지침에서 함께 확인합니다."
+      ],
+      sourceKeys: ["schoolAccountingRule", "localContract", "publicRecords"],
+      queries: ["학교회계 수의계약 검수 지출 증빙", "지방계약법 수의계약 학교"]
+    };
+  }
+
+  return null;
+}
 
 function findPreset(question, selectedType) {
   if (selectedType && selectedType !== "auto") {
