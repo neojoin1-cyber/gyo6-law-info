@@ -740,6 +740,42 @@ if (!gyeongbukVicePrincipalGuideHtml.includes("초과 1시간") || !gyeongbukVic
   failures.push("policy-guide-gyeongbuk-instructor: expected vice-principal rate basis and calculation detail");
 }
 
+const privatePrincipalTravelGuide = context.buildPolicyGuideResponse({
+  question: "사립학교 교장의 서울 출장시 숙박비 한도는?",
+  officeCode: "auto",
+  roleCode: "auto",
+  categoryCode: "auto"
+});
+const privatePrincipalTravelGuideHtml = context.renderPolicyGuideResponse(privatePrincipalTravelGuide);
+if (!privatePrincipalTravelGuideHtml.includes("사립학교 교장") || !privatePrincipalTravelGuideHtml.includes("제1호 기준 실비 정산") || !privatePrincipalTravelGuideHtml.includes("서울 100,000원 상한이 아니라")) {
+  failures.push("policy-guide-travel: expected private principal Seoul lodging answer to use grade 1 actual expense");
+}
+if (!privatePrincipalTravelGuideHtml.includes("별표 9") || !privatePrincipalTravelGuideHtml.includes("국공립학교 교원의 여비 지급등급") || !privatePrincipalTravelGuideHtml.includes("별표 2")) {
+  failures.push("policy-guide-travel: expected private-school and domestic travel table basis");
+}
+
+const privatePrincipalTravelVariant = context.buildPolicyGuideResponse({
+  question: "사립고 학교장이 서울로 관외출장을 가면 1박 숙소비는 얼마까지 인정되나요?",
+  officeCode: "auto",
+  roleCode: "auto",
+  categoryCode: "auto"
+});
+const privatePrincipalTravelVariantHtml = context.renderPolicyGuideResponse(privatePrincipalTravelVariant);
+if (!privatePrincipalTravelVariantHtml.includes("사립학교 교장") || !privatePrincipalTravelVariantHtml.includes("제1호 기준 실비 정산") || !privatePrincipalTravelVariantHtml.includes("출장명령")) {
+  failures.push("policy-guide-travel: expected phrasing variant to normalize to private principal lodging rule");
+}
+
+const teacherTravelGuide = context.buildPolicyGuideResponse({
+  question: "교사의 서울 출장 숙박비는 얼마까지 가능한가요?",
+  officeCode: "auto",
+  roleCode: "teacher",
+  categoryCode: "auto"
+});
+const teacherTravelGuideHtml = context.renderPolicyGuideResponse(teacherTravelGuide);
+if (!teacherTravelGuideHtml.includes("1박당 상한 100,000원") || !teacherTravelGuideHtml.includes("제2호") || !teacherTravelGuideHtml.includes("서울특별시")) {
+  failures.push("policy-guide-travel: expected teacher Seoul lodging cap under grade 2");
+}
+
 if (!indexHtml.includes('data-tool-tab="legal"') || !indexHtml.includes('data-tool-tab="guide"') || !indexHtml.includes('data-tool-panel="guide"') || !indexHtml.includes("hidden")) {
   failures.push("tool-tabs: expected legal/guide tab panels with hidden inactive guide panel");
 }

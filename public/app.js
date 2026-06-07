@@ -283,8 +283,8 @@ const policySourceCatalog = {
     title: "공무원 여비 규정",
     source: "국가법령정보센터",
     url: "https://www.law.go.kr/LSW/lsInfoP.do?lsId=009402&urlMode=lsInfoP",
-    query: "공무원 여비 규정 출장 여비 증빙",
-    note: "출장명령, 운임·숙박비·일비, 여비 증빙 기준"
+    query: "공무원 여비 규정 별표1 별표2 별표9 출장 숙박비",
+    note: "출장명령, 운임·숙박비·일비, 여비 지급등급과 증빙 기준"
   },
   schoolAccountingRule: {
     title: "국립 유치원 및 초·중등학교 회계규칙",
@@ -354,7 +354,7 @@ const policySourceCatalog = {
 const policyGuideCategories = {
   leaveAttendance: {
     label: "휴가·근태·출장",
-    aliases: ["휴가", "근태", "출장", "연가", "병가", "공가", "특별휴가", "경조사", "부모상", "배우자", "여비", "나이스", "근무상황"],
+    aliases: ["휴가", "근태", "출장", "출장비", "관외출장", "국내여비", "연가", "병가", "공가", "특별휴가", "경조사", "부모상", "배우자", "여비", "숙박비", "숙박", "일비", "식비", "운임", "나이스", "근무상황"],
     summary: "휴가·근태는 대상 신분이 먼저입니다. 교원, 지방공무원, 교육공무직, 기간제, 사립학교 교직원은 적용 규정의 출발점이 서로 다릅니다.",
     firstSteps: [
       "대상 신분을 교원, 지방공무원, 교육공무직, 기간제교원, 사립학교 교직원 중 하나로 확정",
@@ -1549,7 +1549,125 @@ function buildPolicySearchQueries(question, office, category, role, directRule) 
   ]).slice(0, 10);
 }
 
+function buildDomesticTravelExpenseRule(normalized, category, role, office) {
+  const isTravelCategory = category === policyGuideCategories.leaveAttendance || category === policyGuideCategories.budgetExecution;
+  if (!isTravelCategory || !isDomesticTravelQuestion(normalized)) return null;
+
+  const expenseItem = inferTravelExpenseItem(normalized);
+  if (expenseItem !== "lodging") return null;
+
+  const profile = inferDomesticTravelProfile(normalized, role);
+  if (!profile) return null;
+
+  const destination = inferDomesticTravelDestination(normalized);
+  const officeLabel = office?.code === "auto" ? "소속 교육청" : office.label;
+  const destinationText = destination.label === "지역 미특정" ? "국내 출장" : `${destination.label} 출장`;
+  const lead = `${profile.subjectLabel}의 ${destinationText} 숙박비는 먼저 공무원 여비 규정 준용 여부와 여비 지급등급을 확정한 뒤 별표 2의 국내 여비 지급표를 적용합니다.`;
+  const primaryAnswer = profile.gradeGroup === "제1호"
+    ? `${profile.subjectLabel}이 공무원 여비 규정을 준용한다면 ${destinationText} 숙박비는 ${destination.label === "서울특별시" ? "서울 100,000원 상한이 아니라 " : ""}제1호 기준 실비 정산입니다.`
+    : `${profile.subjectLabel}이 공무원 여비 규정을 준용한다면 ${destinationText} 숙박비는 실비 정산하되 1박당 상한 ${getTravelLodgingCapText(destination)}을 적용합니다.`;
+  const secondGroupCap = destination.label === "지역 미특정"
+    ? "제2호 숙박비 상한은 서울특별시 100,000원, 광역시 80,000원, 그 밖의 지역 70,000원입니다."
+    : `제2호 숙박비 상한은 ${destination.label} 기준 ${getTravelLodgingCapText(destination)}입니다.`;
+
+  return {
+    title: `${profile.subjectLabel} 국내 출장 숙박비 확인 기준`,
+    lead,
+    answer: uniqueStrings([
+      primaryAnswer,
+      profile.privateSchoolBasis,
+      `${profile.subjectLabel}은 ${profile.gradeDetail}으로 보아 ${profile.gradeGroup} 국내여비 지급표를 적용합니다.`,
+      "공무원 여비 규정 별표 2에서 제1호의 국내 숙박비는 실비이고, 제2호는 지역별 상한이 붙습니다.",
+      secondGroupCap,
+      "실비 정산은 무제한 지급이라는 뜻이 아니라, 출장명령과 숙박 필요성, 카드전표·영수증 등 증빙으로 확인되는 실제 숙박비를 정산한다는 뜻입니다.",
+      `${officeLabel} 지침이나 학교법인 여비규정·취업규칙·내부 복무규정에서 더 구체적인 상한이나 정산 방식이 있으면 그 기준을 함께 적용합니다.`
+    ]),
+    steps: [
+      "사립학교 자체 여비규정이 공무원 여비 규정을 준용하는지, 별도 상한을 두는지 확인",
+      `${profile.subjectLabel}의 여비 지급등급을 ${profile.gradeDetail}으로 확정`,
+      "국내 출장, 근무지 외 출장, 숙박 필요 여부, 목적지와 숙박일수를 출장명령에서 확인",
+      "숙박비는 카드전표·영수증·거래명세 등 실제 지출 증빙을 붙여 정산",
+      "나이스 근무상황, 출장명령, 내부 결재선, 학교법인 또는 교육청 여비 지침을 함께 대조"
+    ],
+    sourceKeys: ["travelExpense", "publicRecords"],
+    queries: [
+      "공무원 여비 규정 별표 1 초·중·고등학교의 교장 제1호 라목",
+      "공무원 여비 규정 별표 2 국내 여비 지급표 숙박비 서울특별시 100000",
+      "공무원 여비 규정 별표 9 사립학교의 교원 국공립학교 교원 여비 지급등급 준용",
+      `${officeLabel} 사립학교 여비 규정 출장 숙박비`
+    ],
+    caution: "사립학교는 법인·학교 내부 여비규정이 실제 지급 근거가 되는 경우가 많습니다. 공무원 여비 규정 준용 기준을 먼저 제시하되, 내부 규정이 더 엄격하면 내부 기준을 확인해야 합니다."
+  };
+}
+
+function isDomesticTravelQuestion(normalized = "") {
+  return /출장|관외|국내여비|국내출장|여비|출장비|숙박비|숙박|숙소|호텔|일비|식비|운임|교통비/.test(normalized);
+}
+
+function inferTravelExpenseItem(normalized = "") {
+  if (/숙박비|숙박|숙소|호텔|1박|박당/.test(normalized)) return "lodging";
+  if (/일비/.test(normalized)) return "daily";
+  if (/식비|식대|식사/.test(normalized)) return "meal";
+  if (/운임|교통비|철도|항공|버스|자동차/.test(normalized)) return "transport";
+  return "general";
+}
+
+function inferDomesticTravelProfile(normalized = "", role = policyRoleProfiles.auto) {
+  const roleLabel = role?.label || "";
+  const isPrivateSchool = /사립|학교법인|법인/.test(normalized) || roleLabel.includes("사립학교");
+
+  if (/교장|학교장/.test(normalized)) {
+    return {
+      subjectLabel: isPrivateSchool ? "사립학교 교장" : "초·중·고등학교 교장",
+      gradeGroup: "제1호",
+      gradeDetail: "공무원 여비 규정 별표 1 제1호 라목",
+      privateSchoolBasis: isPrivateSchool ? "사립학교 교원은 별표 9에서 국공립학교 교원의 여비 지급등급을 준용하도록 정리되어 있습니다." : ""
+    };
+  }
+
+  if (/교감|교사|교원|장학사|교육연구사/.test(normalized) || roleLabel.includes("공립 교원") || roleLabel.includes("기간제 교원")) {
+    return {
+      subjectLabel: isPrivateSchool ? "사립학교 교원" : "교원",
+      gradeGroup: "제2호",
+      gradeDetail: "공무원 여비 규정 별표 1 제2호",
+      privateSchoolBasis: isPrivateSchool ? "사립학교 교원은 별표 9에서 국공립학교 교원의 여비 지급등급을 준용하도록 정리되어 있습니다." : ""
+    };
+  }
+
+  if (/행정직|행정실|지방공무원|교육행정|일반직|공무원/.test(normalized) || roleLabel.includes("지방공무원")) {
+    return {
+      subjectLabel: "지방공무원·행정직",
+      gradeGroup: "제2호",
+      gradeDetail: "공무원 여비 규정 별표 1 제2호",
+      privateSchoolBasis: ""
+    };
+  }
+
+  return null;
+}
+
+function inferDomesticTravelDestination(normalized = "") {
+  if (/서울|서울특별시/.test(normalized)) {
+    return { label: "서울특별시", cap: 100000 };
+  }
+  if (/부산|대구|인천|광주|대전|울산|세종|광역시/.test(normalized)) {
+    return { label: "광역시", cap: 80000 };
+  }
+  if (/제주|경기|강원|충북|충청북도|충남|충청남도|전북|전라북도|전남|전라남도|경북|경상북도|경남|경상남도|도지역|그밖|그외|기타지역/.test(normalized)) {
+    return { label: "그 밖의 지역", cap: 70000 };
+  }
+  return { label: "지역 미특정", cap: null };
+}
+
+function getTravelLodgingCapText(destination) {
+  if (Number.isFinite(destination?.cap)) return formatWon(destination.cap);
+  return "서울특별시 100,000원, 광역시 80,000원, 그 밖의 지역 70,000원";
+}
+
 function getDirectPolicyRule(normalized, category, role, office) {
+  const domesticTravelRule = buildDomesticTravelExpenseRule(normalized, category, role, office);
+  if (domesticTravelRule) return domesticTravelRule;
+
   if (category === policyGuideCategories.leaveAttendance && /배우자.*(부모|부친|모친)|장인|장모|시부|시모|부모상|상례|사망|경조사/.test(normalized)) {
     return {
       title: "배우자 부모상 경조사휴가 확인 기준",
