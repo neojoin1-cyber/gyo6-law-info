@@ -37,6 +37,8 @@ window.GYO6_AUTH = {
   refreshProfile
 };
 
+syncAuthBodyState();
+
 if (!authMount) {
   state.ready = true;
 } else {
@@ -162,6 +164,19 @@ authMount?.addEventListener("submit", async (event) => {
       form.reset();
     }
 
+    if (action === "kakao-approve") {
+      await apiFetch("/api/admin/member/kakao-approve", {
+        method: "POST",
+        body: {
+          accessCode: getFormValue(form, "accessCode"),
+          role: "law",
+          note: getFormValue(form, "note")
+        }
+      });
+      state.message = "카카오 챗봇 이용권한을 승인했습니다.";
+      form.reset();
+    }
+
     if (action === "member-update") {
       await apiFetch("/api/admin/member", {
         method: "POST",
@@ -176,11 +191,11 @@ authMount?.addEventListener("submit", async (event) => {
       await renderAdminMembers();
     }
   } catch (error) {
-    state.message = error.message || "처리 중 오류가 발생했습니다.";
+    state.message = formatAuthErrorMessage(error, action);
   }
 
   renderAuth();
-  if (["invite", "member-update"].includes(action)) {
+  if (["invite", "kakao-approve", "member-update"].includes(action)) {
     window.setTimeout(() => renderAdminMembers(), 0);
   }
 });
@@ -192,6 +207,16 @@ authMount?.addEventListener("click", async (event) => {
   }
 
   const action = target.dataset.authClick;
+  if (action === "close-auth") {
+    state.message = "";
+    const details = authMount.querySelector(".auth-menu");
+    if (details) {
+      details.open = false;
+    }
+    renderAuth();
+    return;
+  }
+
   try {
     if (action === "logout") {
       await signOut(firebaseAuth);
@@ -225,7 +250,7 @@ authMount?.addEventListener("click", async (event) => {
       await renderAdminMembers();
     }
   } catch (error) {
-    state.message = error.message || "처리 중 오류가 발생했습니다.";
+    state.message = formatAuthErrorMessage(error, action);
   }
 
   renderAuth();
@@ -310,7 +335,30 @@ async function apiFetch(path, options = {}) {
   return data;
 }
 
+function syncAuthBodyState() {
+  const root = document.body;
+  if (!root) {
+    return;
+  }
+
+  const canUseLawInfo = Boolean(state.capabilities?.canUseLawInfo);
+  root.classList.toggle("auth-law-ready", canUseLawInfo);
+  root.classList.toggle("auth-law-blocked", !canUseLawInfo);
+  root.classList.toggle("auth-signed-in", Boolean(state.user));
+  root.classList.toggle("auth-guest", !state.user);
+  root.dispatchEvent(new CustomEvent("gyo6-auth-state", {
+    bubbles: true,
+    detail: {
+      canUseLawInfo,
+      signedIn: Boolean(state.user),
+      ready: Boolean(state.ready)
+    }
+  }));
+}
+
 function renderAuth() {
+  syncAuthBodyState();
+
   if (!authMount) {
     return;
   }
@@ -320,13 +368,17 @@ function renderAuth() {
       <details class="auth-menu">
         <summary>로그인</summary>
         <section class="auth-card setup">
-          <div>
-            <strong>회원 시스템 준비중</strong>
-            <p><code>public/firebase-config.js</code>에 Firebase 웹 앱 설정을 넣으면 로그인과 권한관리를 시작할 수 있습니다.</p>
+          <div class="auth-card-head">
+            <div>
+              <strong>회원 시스템 준비중</strong>
+              <p><code>public/firebase-config.js</code>에 Firebase 웹 앱 설정을 넣으면 로그인과 권한관리를 시작할 수 있습니다.</p>
+            </div>
+            <button type="button" data-auth-click="close-auth" aria-label="로그인 창 닫기">닫기</button>
           </div>
         </section>
       </details>
     `;
+    applyRequestedAuthOpen();
     return;
   }
 
@@ -338,8 +390,9 @@ function renderAuth() {
           <div class="auth-card-head">
             <div>
               <strong>회원 로그인</strong>
-              <p>승인된 회원은 등급에 따라 법률정보와 채용정보를 이용합니다.</p>
+              <p>질문창은 닫히지 않습니다. 기본 법률정보 Q&amp;A는 로그인 없이 무료 규정 엔진으로 사용할 수 있고, 로그인은 관리자·회원 관리가 필요할 때 사용합니다.</p>
             </div>
+            <button type="button" data-auth-click="close-auth" aria-label="로그인 창 닫기">닫기</button>
           </div>
           ${renderAuthMessage()}
           <div class="auth-grid">
@@ -373,6 +426,7 @@ function renderAuth() {
         </section>
       </details>
     `;
+    applyRequestedAuthOpen();
     return;
   }
 
@@ -386,7 +440,10 @@ function renderAuth() {
             <strong>${escapeHtml(state.user.displayName || state.user.email || "회원")}</strong>
             <p>${escapeHtml(formatMemberStatus(member))}</p>
           </div>
-          <button type="button" data-auth-click="logout">로그아웃</button>
+          <div class="auth-head-actions">
+            <button type="button" data-auth-click="logout">로그아웃</button>
+            <button type="button" data-auth-click="close-auth" aria-label="회원 창 닫기">닫기</button>
+          </div>
         </div>
         ${renderAuthMessage()}
         ${renderCapabilityBar()}
@@ -410,14 +467,51 @@ function renderAuth() {
       </section>
     </details>
   `;
+  applyRequestedAuthOpen();
+}
+
+function applyRequestedAuthOpen() {
+  const details = authMount?.querySelector(".auth-menu");
+  if (!details) {
+    return;
+  }
+
+  if (hasLoginOpenIntent() || state.message) {
+    details.open = true;
+  }
+
+  if (hasLoginOpenIntent() && !state.user) {
+    window.setTimeout(() => {
+      authMount?.querySelector("[data-login-email]")?.focus({ preventScroll: true });
+    }, 0);
+  }
+}
+
+function hasLoginOpenIntent() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const login = String(params.get("login") || params.get("auth") || "").toLowerCase();
+    return ["1", "true", "law", "legal", "login"].includes(login)
+      || ["#login", "#legalLogin"].includes(window.location.hash);
+  } catch {
+    return false;
+  }
 }
 
 function renderAdminPanelShell() {
   return `
     <details class="admin-member-panel">
       <summary>관리자 회원 관리</summary>
+      <form data-auth-action="kakao-approve" class="auth-kakao-approve">
+        <h3>카카오 챗봇 식별번호 승인</h3>
+        <p class="auth-form-note">카카오톡 챗봇이 알려준 KAKAO-XXXXXXXX 번호를 넣으면 법률정보 회원으로 바로 승인합니다.</p>
+        <label>식별번호<input name="accessCode" type="text" required placeholder="예: KAKAO-85E6EFA9" autocomplete="off"></label>
+        <label>관리 메모<input name="note" type="text" placeholder="예: ○○고 취업지도 교사, 파일럿 승인"></label>
+        <div class="auth-actions"><button type="submit">카카오 챗봇 승인</button></div>
+      </form>
       <form data-auth-action="invite" class="auth-admin-invite">
         <h3>회원 추가/사전 승인</h3>
+        <p class="auth-form-note">이메일로 로그인할 사용자를 미리 승인합니다. 카카오 챗봇 식별번호는 위 승인 칸을 사용하세요.</p>
         <label>이메일<input name="email" type="email" required></label>
         <label>부여 권한<select name="role">${renderRoleOptions("general", true)}</select></label>
         <label class="wide">관리 메모<textarea name="note" rows="2" placeholder="예: ○○고 취업지도 교사"></textarea></label>
@@ -499,6 +593,53 @@ function renderStatusOptions(selected) {
 
 function renderAuthMessage() {
   return state.message ? `<p class="auth-message">${escapeHtml(state.message)}</p>` : "";
+}
+
+function formatAuthErrorMessage(error, action = "") {
+  const code = String(error?.code || "");
+  const message = String(error?.message || "");
+  const text = `${code} ${message}`;
+  const operation = getAuthOperationLabel(action);
+
+  if (/configuration-not-found|CONFIGURATION_NOT_FOUND/.test(text)) {
+    return `${operation}을 진행하려면 Firebase 콘솔에서 Authentication을 시작하고 Email/Password 로그인 제공자를 사용 설정해야 합니다. 설정 전에는 로그인과 회원가입이 작동하지 않습니다.`;
+  }
+
+  if (/operation-not-allowed|OPERATION_NOT_ALLOWED/.test(text)) {
+    return `${operation}에 필요한 Email/Password 로그인 제공자가 꺼져 있습니다. Firebase 콘솔의 Authentication > Sign-in method에서 Email/Password를 사용 설정해 주세요.`;
+  }
+
+  if (/invalid-credential|INVALID_LOGIN_CREDENTIALS|wrong-password|user-not-found/.test(text)) {
+    return "이메일 또는 비밀번호가 맞지 않습니다. 입력값을 확인하거나 비밀번호 재설정을 이용해 주세요.";
+  }
+
+  if (/email-already-in-use/.test(text)) {
+    return "이미 가입된 이메일입니다. 로그인하거나 비밀번호 재설정을 이용해 주세요.";
+  }
+
+  if (/weak-password/.test(text)) {
+    return "비밀번호는 6자 이상으로 입력해 주세요.";
+  }
+
+  if (/too-many-requests/.test(text)) {
+    return "로그인 시도가 잠시 제한되었습니다. 잠시 후 다시 시도해 주세요.";
+  }
+
+  if (/network-request-failed/.test(text)) {
+    return "네트워크 연결이 불안정해 로그인 서버에 연결하지 못했습니다. 잠시 후 다시 시도해 주세요.";
+  }
+
+  return message || "처리 중 오류가 발생했습니다.";
+}
+
+function getAuthOperationLabel(action = "") {
+  if (action === "signup") {
+    return "회원가입";
+  }
+  if (action === "reset-password") {
+    return "비밀번호 재설정";
+  }
+  return "로그인";
 }
 
 function getAccessDeniedMessage() {

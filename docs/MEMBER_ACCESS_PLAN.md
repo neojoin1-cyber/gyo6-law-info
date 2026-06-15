@@ -13,9 +13,9 @@
 | general | 일반 사용자 | 공개 콘텐츠 |
 | jobs | 채용정보 회원 | 공개 콘텐츠, 채용정보 |
 | law | 법률정보 회원 | 공개 콘텐츠, 채용정보, 법률정보 AI |
-| teacher | 교사/학교 회원 | 법률정보 AI, 보고서 활용, 향후 학교 기능 |
+| teacher | 교사/학교 회원 | 전자책 서재의 교사/학교 권한 체계 유지, 법률정보 AI 별도 승인 필요 |
 | admin | 관리자 | 회원 승인, 등급 변경, 권한 회수 |
-| owner | 총괄관리자 | 관리자 권한 포함, 총괄관리자 권한 부여/회수 |
+| owner | 총괄관리자 | 관리자 권한 포함, 법률정보 AI 사용, 총괄관리자 권한 부여/회수 |
 
 ## 승인 상태
 
@@ -32,7 +32,7 @@
 2. 프론트엔드는 Firebase ID 토큰을 받아 Worker API 호출 시 `Authorization: Bearer <token>`으로 보낸다.
 3. Worker는 Firebase 공개키로 ID 토큰을 검증한다.
 4. Worker는 D1 `members` 테이블에서 회원 상태와 등급을 확인한다.
-5. 법률정보 AI는 `law`, `teacher`, `admin`, `owner` 등급이면서 `approved` 상태인 경우만 허용한다.
+5. 법률정보 AI, 공식자료 API 조회, 카카오 챗봇 과금·쿼터 경로는 `law`, `owner` 등급이면서 `approved` 상태인 경우만 허용한다. `teacher`, `admin`, `jobs`, `general`은 전자책 서재 또는 관리 기능 권한을 유지하더라도 법률정보 비용 경로에는 들어가지 않는다.
 
 ## Cloudflare D1 준비
 

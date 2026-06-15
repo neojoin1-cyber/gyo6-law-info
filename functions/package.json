@@ -8,7 +8,7 @@
     "node": "22"
   },
   "scripts": {
-    "check": "node --check index.mjs && node --check shared/api.mjs"
+    "check": "node --check index.mjs && node --check shared/api.mjs && node --check shared/policy-chat.mjs"
   },
   "dependencies": {
     "firebase-admin": "^13.10.0",

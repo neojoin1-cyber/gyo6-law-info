@@ -1,4 +1,9 @@
 import { createApi as createOfficialSourceApi } from "../../../functions/shared/api.mjs";
+import {
+  buildKakaoSkillResponseFromResult,
+  handlePolicyChatRequest,
+  normalizeKakaoRequest
+} from "../../../functions/shared/policy-chat.mjs";
 
 const JSON_HEADERS = {
   "content-type": "application/json; charset=utf-8",
@@ -6,6 +11,21 @@ const JSON_HEADERS = {
 };
 
 const MODEL_PRICE_DEFAULTS = {
+  "gpt-5.4-nano": {
+    inputUsdPer1M: 0.2,
+    cachedInputUsdPer1M: 0.02,
+    outputUsdPer1M: 1.25
+  },
+  "gpt-5.4-mini": {
+    inputUsdPer1M: 0.75,
+    cachedInputUsdPer1M: 0.075,
+    outputUsdPer1M: 4.5
+  },
+  "gpt-5.4": {
+    inputUsdPer1M: 2.5,
+    cachedInputUsdPer1M: 0.25,
+    outputUsdPer1M: 15
+  },
   "gpt-5.2": {
     inputUsdPer1M: 1.75,
     cachedInputUsdPer1M: 0.175,
@@ -21,19 +41,22 @@ const MODEL_PRICE_DEFAULTS = {
 const DEFAULT_COST_CONTROL = {
   krwPerUsd: 1500,
   monthlyWarnUsd: 10,
-  monthlyStopUsd: 50,
+  monthlyStopUsd: 20,
   dailyCallLimit: 30,
-  pricingDate: "2026-05-30"
+  pricingDate: "2026-06-13"
 };
+const DEFAULT_KAKAO_NORMALIZER_TIMEOUT_MS = 1800;
+const KAKAO_CLARIFICATION_SESSION_TTL_MS = 2 * 60 * 60 * 1000;
+let kakaoClarificationTableEnsured = false;
 
-const FIREBASE_CERT_URL = "https://www.googleapis.com/robot/v1/metadata/x509/securetoken@system.gserviceaccount.com";
+const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com";
 const APPROVED_MEMBER_STATUSES = new Set(["approved"]);
-const LAW_ACCESS_ROLES = new Set(["law", "teacher", "admin", "owner"]);
+const LAW_ACCESS_ROLES = new Set(["law", "owner"]);
 const ADMIN_ROLES = new Set(["admin", "owner"]);
 const OWNER_ROLES = new Set(["owner"]);
 const MEMBER_ROLES = ["pending", "general", "jobs", "law", "teacher", "admin", "owner"];
 const MEMBER_STATUSES = ["pending", "approved", "suspended", "deleted"];
-let firebaseCertCache = null;
+let firebaseJwkCache = null;
 
 export default {
   async fetch(request, env) {
@@ -59,7 +82,9 @@ export default {
           auth: {
             required: isAuthRequired(env),
             firebaseProjectId: cleanText(env.FIREBASE_PROJECT_ID || ""),
-            memberDb: Boolean(env.MEMBER_DB)
+            trustedFirebaseProjectIds: getTrustedFirebaseProjectIds(env),
+            memberDb: Boolean(env.MEMBER_DB),
+            kakaoRequired: isKakaoAuthRequired(env)
           },
           sources: {
             koreanLawMcp: Boolean(cleanText(env.KOREAN_LAW_MCP_BASE_URL || "")),
@@ -89,9 +114,46 @@ export default {
           return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
         }
 
+        const authContext = await requireAuthContext(request, env);
+        const access = await assertLawAccess(authContext, env);
+        if (!access.ok) {
+          return sendJson({
+            error: access.message,
+            code: access.code,
+            status: access.status || 403
+          }, access.status || 403, corsHeaders);
+        }
+
         const officialSourceApi = createOfficialSourceApi(env);
         const result = await officialSourceApi.handleSearch(url);
         return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/policy" || url.pathname === "/policy") {
+        if (request.method !== "GET" && request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const payload = request.method === "POST"
+          ? await readJsonBody(request)
+          : Object.fromEntries(url.searchParams.entries());
+        const authContext = await getOptionalAuthContext(request, env);
+        const result = await handlePolicyRequest(payload, env, authContext);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/kakao/skill" || url.pathname === "/kakao/skill") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+        if (!hasValidKakaoSkillToken(request, url, env)) {
+          return sendJson({ error: "카카오 챗봇 스킬 토큰이 올바르지 않습니다." }, 401, corsHeaders);
+        }
+
+        const result = await handleKakaoSkill(await readJsonBody(request), env, {
+          detailUrl: env.PUBLIC_SITE_URL || "https://gyo6-law-info.web.app/"
+        });
+        return sendJson(result, 200, corsHeaders);
       }
 
       if (url.pathname === "/api/member/me") {
@@ -159,6 +221,20 @@ export default {
         return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
+      if (url.pathname === "/api/admin/member/kakao-approve") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await approveKakaoMemberByAdmin(adminContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
       if (url.pathname === "/api/admin/member/invite") {
         if (request.method !== "POST") {
           return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
@@ -205,6 +281,21 @@ async function handleAnalyze(payload, env, authContext = null) {
       code: access.code,
       status: access.status || 403
     };
+  }
+
+  const policyEngineFirst = buildPolicyEngineFirstAnalyzeResult({
+    question,
+    topic,
+    role,
+    partyRole,
+    topicContext,
+    mode,
+    caseId,
+    access,
+    env
+  });
+  if (policyEngineFirst) {
+    return policyEngineFirst;
   }
 
   if (!env.OPENAI_API_KEY) {
@@ -265,6 +356,1582 @@ async function handleAnalyze(payload, env, authContext = null) {
     fallback: true,
     notices: errors.slice(0, 3)
   };
+}
+
+async function handlePolicyRequest(payload = {}, env = {}, authContext = null) {
+  const access = await assertLawAccess(authContext, env);
+  if (!access.ok) {
+    return {
+      error: access.message,
+      code: access.code,
+      status: access.status || 403
+    };
+  }
+
+  const baseResult = handlePolicyChatRequest(payload, {
+    officeLabel: env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
+  });
+  let finalResult = baseResult;
+
+  if (shouldUsePolicyGptNormalizer(payload, baseResult, env)) {
+    const budgetGate = await getOpenAiUsageGate(env, "policy_nlu");
+    if (budgetGate.ok) {
+      const normalizerResult = await runKakaoQuestionNormalizer(payload, baseResult, env);
+      if (normalizerResult.ok) {
+        await recordOpenAiUsage(env, {
+          feature: "policy_nlu",
+          model: normalizerResult.model,
+          usage: normalizerResult.usage,
+          billing: normalizerResult.billing
+        });
+
+        const normalizedPayload = buildPayloadFromKakaoNormalizer(payload, normalizerResult.normalization);
+        const normalizedPolicyResult = handlePolicyChatRequest(normalizedPayload, {
+          officeLabel: env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
+        });
+        finalResult = chooseBetterPolicyResult(baseResult, normalizedPolicyResult);
+        finalResult = attachKakaoNormalizerMetadata(finalResult, normalizerResult, budgetGate, "policy_nlu");
+      } else {
+        finalResult = attachKakaoNormalizerMetadata(baseResult, normalizerResult, budgetGate, "policy_nlu");
+      }
+    } else {
+      finalResult = attachKakaoNormalizerMetadata(baseResult, {
+        ok: false,
+        skipped: true,
+        reason: budgetGate.reason
+      }, budgetGate, "policy_nlu");
+    }
+  }
+
+  finalResult = await maybeAttachGptAnswerComposer(payload, finalResult, env, "policy_answer");
+  return finalResult;
+}
+
+async function handleKakaoSkill(kakaoRequest, env, options = {}) {
+  const basePayload = normalizeKakaoRequest(kakaoRequest);
+  const kakaoAccess = await assertKakaoAccess(basePayload, env);
+  if (!kakaoAccess.ok) {
+    return buildKakaoAccessBlockedResponse(kakaoAccess);
+  }
+
+  const workingPayload = await hydrateKakaoClarificationPayload(basePayload, env);
+  const baseResult = handlePolicyChatRequest(workingPayload, {
+    officeLabel: env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
+  });
+  let finalResult = baseResult;
+
+  if (shouldUseKakaoGptNormalizer(workingPayload, baseResult, env)) {
+    const budgetGate = await getOpenAiUsageGate(env, "kakao_nlu");
+    if (budgetGate.ok) {
+      const normalizerResult = await runKakaoQuestionNormalizer(workingPayload, baseResult, env);
+      if (normalizerResult.ok) {
+        await recordOpenAiUsage(env, {
+          feature: "kakao_nlu",
+          model: normalizerResult.model,
+          usage: normalizerResult.usage,
+          billing: normalizerResult.billing
+        });
+
+        const normalizedPayload = buildPayloadFromKakaoNormalizer(workingPayload, normalizerResult.normalization);
+        const normalizedPolicyResult = handlePolicyChatRequest(normalizedPayload, {
+          officeLabel: env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
+        });
+        finalResult = chooseBetterPolicyResult(baseResult, normalizedPolicyResult);
+        finalResult = attachKakaoNormalizerMetadata(finalResult, normalizerResult, budgetGate);
+      } else {
+        finalResult = attachKakaoNormalizerMetadata(baseResult, normalizerResult, budgetGate);
+      }
+    } else {
+      finalResult = attachKakaoNormalizerMetadata(baseResult, {
+        ok: false,
+        skipped: true,
+        reason: budgetGate.reason
+      }, budgetGate);
+    }
+  }
+
+  finalResult = await maybeAttachGptAnswerComposer(workingPayload, finalResult, env, "kakao_answer");
+
+  await persistKakaoClarificationSession(workingPayload, finalResult, env);
+
+  return buildKakaoSkillResponseFromResult(finalResult, {
+    detailUrl: options.detailUrl || env.PUBLIC_SITE_URL || "https://gyo6-law-info.web.app/",
+    thumbnailUrl: options.thumbnailUrl
+  });
+}
+
+async function assertKakaoAccess(payload = {}, env = {}) {
+  if (!isKakaoAuthRequired(env)) {
+    return { ok: true, member: null };
+  }
+
+  const userKey = getKakaoClarificationUserKey(payload);
+  if (!userKey) {
+    return {
+      ok: false,
+      code: "KAKAO_USER_KEY_REQUIRED",
+      status: 403,
+      message: "카카오 사용자 식별정보를 확인하지 못해 챗봇 이용권한을 확인할 수 없습니다."
+    };
+  }
+
+  if (!env.MEMBER_DB) {
+    return {
+      ok: false,
+      code: "KAKAO_MEMBER_DB_REQUIRED",
+      status: 503,
+      message: "챗봇 이용권한 DB가 아직 연결되지 않았습니다.",
+      userKey
+    };
+  }
+
+  const envApproved = isKakaoUserApprovedByEnv(userKey, env);
+  let member = await getMemberByUid(userKey, env);
+  if (!member) {
+    member = await registerKakaoMember(payload, userKey, env, { approved: envApproved });
+  } else {
+    await touchKakaoMember(payload, member, env, { approved: envApproved });
+    member = await getMemberByUid(userKey, env);
+  }
+
+  if (envApproved && (!member || member.status !== "approved" || !LAW_ACCESS_ROLES.has(member.role))) {
+    await promoteKakaoMemberFromAllowlist(userKey, env);
+    member = await getMemberByUid(userKey, env);
+  }
+
+  if (!member || member.status !== "approved") {
+    return {
+      ok: false,
+      code: "KAKAO_APPROVAL_REQUIRED",
+      status: 403,
+      message: "챗봇 이용권한 승인 후 사용할 수 있습니다.",
+      userKey,
+      member: sanitizeMember(member)
+    };
+  }
+
+  if (!LAW_ACCESS_ROLES.has(member.role)) {
+    return {
+      ok: false,
+      code: "KAKAO_LAW_ROLE_REQUIRED",
+      status: 403,
+      message: "현재 승인 등급에는 법률정보 챗봇 이용권한이 없습니다.",
+      userKey,
+      member: sanitizeMember(member)
+    };
+  }
+
+  return { ok: true, member };
+}
+
+function buildKakaoAccessBlockedResponse(access = {}) {
+  const accessCode = access.userKey ? formatKakaoAccessCode(access.userKey) : "";
+  const lines = [
+    access.message || "챗봇 이용권한 확인이 필요합니다.",
+    accessCode ? `관리자에게 이 식별번호를 알려주세요: ${accessCode}` : "",
+    "승인 전에는 GPT 질문정규화와 답변 생성이 실행되지 않습니다."
+  ].filter(Boolean);
+
+  return {
+    version: "2.0",
+    template: {
+      outputs: [
+        {
+          simpleText: {
+            text: lines.join("\n")
+          }
+        }
+      ],
+      quickReplies: [
+        {
+          action: "message",
+          label: "승인 요청",
+          messageText: accessCode
+            ? `챗봇 이용 승인 요청: ${accessCode}`
+            : "챗봇 이용 승인 요청"
+        }
+      ]
+    }
+  };
+}
+
+async function registerKakaoMember(payload = {}, userKey = "", env = {}, options = {}) {
+  const now = new Date().toISOString();
+  const accessCode = formatKakaoAccessCode(userKey);
+  const role = options.approved ? "law" : "pending";
+  const status = options.approved ? "approved" : "pending";
+  const displayName = getKakaoDisplayName(payload, accessCode);
+  await env.MEMBER_DB.prepare(`
+    INSERT INTO members (
+      uid, email, display_name, school_name, phone, requested_role, role, status,
+      note, created_at, updated_at, approved_at, approved_by, last_login_at
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `).bind(
+    userKey,
+    getKakaoSyntheticEmail(userKey),
+    displayName,
+    "카카오톡 채널",
+    "",
+    "law",
+    role,
+    status,
+    `카카오 챗봇 이용 신청 식별번호: ${accessCode}`,
+    now,
+    now,
+    options.approved ? now : null,
+    options.approved ? "kakao-allowlist" : null,
+    now
+  ).run();
+  return getMemberByUid(userKey, env);
+}
+
+async function touchKakaoMember(payload = {}, member = {}, env = {}, options = {}) {
+  const now = new Date().toISOString();
+  const displayName = getKakaoDisplayName(payload, formatKakaoAccessCode(member.uid));
+  const nextRole = options.approved && !LAW_ACCESS_ROLES.has(member.role) ? "law" : member.role;
+  const nextStatus = options.approved && member.status !== "approved" ? "approved" : member.status;
+  const approvedAt = nextStatus === "approved" && member.status !== "approved" ? now : member.approvedAt || null;
+  const approvedBy = nextStatus === "approved" && member.status !== "approved" ? "kakao-allowlist" : member.approvedBy || null;
+  await env.MEMBER_DB.prepare(`
+    UPDATE members
+    SET display_name = ?, role = ?, status = ?, updated_at = ?, approved_at = ?, approved_by = ?, last_login_at = ?
+    WHERE uid = ?
+  `).bind(
+    displayName || member.displayName || "카카오 사용자",
+    nextRole,
+    nextStatus,
+    now,
+    approvedAt,
+    approvedBy,
+    now,
+    member.uid
+  ).run();
+}
+
+async function promoteKakaoMemberFromAllowlist(userKey = "", env = {}) {
+  const now = new Date().toISOString();
+  await env.MEMBER_DB.prepare(`
+    UPDATE members
+    SET role = 'law',
+        status = 'approved',
+        updated_at = ?,
+        approved_at = COALESCE(approved_at, ?),
+        approved_by = COALESCE(approved_by, 'kakao-allowlist'),
+        last_login_at = ?
+    WHERE uid = ?
+  `).bind(now, now, now, userKey).run();
+}
+
+export async function hydrateKakaoClarificationPayload(payload = {}, env = {}) {
+  const session = await getKakaoClarificationSession(payload, env);
+  if (shouldStartNewKakaoConsultation(payload, session)) {
+    await clearKakaoClarificationSession(getKakaoClarificationUserKey(payload), env);
+    return payload;
+  }
+  if (!shouldMergeKakaoClarificationAnswer(payload, session)) {
+    return payload;
+  }
+  return composeKakaoClarificationFollowUpPayload(payload, session);
+}
+
+export function composeKakaoClarificationFollowUpPayload(payload = {}, session = {}) {
+  const answer = cleanText(payload.question || "");
+  const baseQuestion = cleanText(session.question || "");
+  const nextQuestion = asArray(session.slotQuestions)[0] || {};
+  const label = cleanText(nextQuestion.label || session.domainLabel || "추가 정보");
+  const mergedQuestion = [
+    baseQuestion,
+    "",
+    "추가 확인 내용:",
+    `- ${label}: ${answer}`
+  ].join("\n");
+
+  return {
+    ...payload,
+    question: mergedQuestion,
+    originalQuestion: baseQuestion,
+    sessionContext: {
+      used: true,
+      sessionId: cleanText(session.userKey || ""),
+      previousQuestion: baseQuestion,
+      answer,
+      label
+    }
+  };
+}
+
+export function shouldMergeKakaoClarificationAnswer(payload = {}, session = null) {
+  if (!session?.question) return false;
+  const text = cleanText(payload.question || "");
+  if (!text || text.length > 220) return false;
+  if (shouldStartNewKakaoConsultation(payload, session)) return false;
+  return true;
+}
+
+export function shouldStartNewKakaoConsultation(payload = {}, session = null) {
+  if (!session?.question) return false;
+  const text = cleanText(payload.question || "");
+  if (!text) return false;
+  return isKakaoClarificationResetText(text)
+    || isContextRichKakaoCommand(text)
+    || isLikelyNewCompleteKakaoQuestion(text);
+}
+
+async function persistKakaoClarificationSession(payload = {}, result = {}, env = {}) {
+  const userKey = getKakaoClarificationUserKey(payload);
+  if (!userKey || !env.MEMBER_DB) return;
+
+  try {
+    await ensureKakaoClarificationSessionTable(env);
+    if (!shouldStoreKakaoClarificationSession(result)) {
+      await clearKakaoClarificationSession(userKey, env);
+      return;
+    }
+
+    const now = new Date();
+    const expiresAt = new Date(now.getTime() + KAKAO_CLARIFICATION_SESSION_TTL_MS).toISOString();
+    const slotQuestions = getKakaoSessionSlotQuestions(result);
+    const question = getKakaoSessionQuestion(payload, result);
+    await env.MEMBER_DB.prepare(`
+      INSERT INTO kakao_clarification_sessions (
+        user_key, question, domain_code, domain_label, slot_questions, updated_at, expires_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?)
+      ON CONFLICT(user_key) DO UPDATE SET
+        question = excluded.question,
+        domain_code = excluded.domain_code,
+        domain_label = excluded.domain_label,
+        slot_questions = excluded.slot_questions,
+        updated_at = excluded.updated_at,
+        expires_at = excluded.expires_at
+    `).bind(
+      userKey,
+      question,
+      cleanText(result.semanticFrame?.domainCode || result.completionFlow?.domainCode || ""),
+      cleanText(result.semanticFrame?.domainLabel || result.completionFlow?.domainLabel || ""),
+      JSON.stringify(slotQuestions),
+      now.toISOString(),
+      expiresAt
+    ).run();
+  } catch (error) {
+    console.warn("Kakao clarification session persist skipped:", error?.message || error);
+  }
+}
+
+async function getKakaoClarificationSession(payload = {}, env = {}) {
+  const userKey = getKakaoClarificationUserKey(payload);
+  if (!userKey || !env.MEMBER_DB) return null;
+
+  try {
+    await ensureKakaoClarificationSessionTable(env);
+    const now = new Date().toISOString();
+    const row = await env.MEMBER_DB.prepare(`
+      SELECT user_key, question, domain_code, domain_label, slot_questions, updated_at, expires_at
+      FROM kakao_clarification_sessions
+      WHERE user_key = ? AND expires_at > ?
+    `).bind(userKey, now).first();
+    if (!row) return null;
+    return {
+      userKey: row.user_key,
+      question: cleanText(row.question || ""),
+      domainCode: cleanText(row.domain_code || ""),
+      domainLabel: cleanText(row.domain_label || ""),
+      slotQuestions: parseJsonArray(row.slot_questions),
+      updatedAt: cleanText(row.updated_at || ""),
+      expiresAt: cleanText(row.expires_at || "")
+    };
+  } catch (error) {
+    console.warn("Kakao clarification session load skipped:", error?.message || error);
+    return null;
+  }
+}
+
+async function ensureKakaoClarificationSessionTable(env = {}) {
+  if (kakaoClarificationTableEnsured || !env.MEMBER_DB) return;
+  await env.MEMBER_DB.prepare(`
+    CREATE TABLE IF NOT EXISTS kakao_clarification_sessions (
+      user_key TEXT PRIMARY KEY,
+      question TEXT NOT NULL,
+      domain_code TEXT,
+      domain_label TEXT,
+      slot_questions TEXT,
+      updated_at TEXT NOT NULL,
+      expires_at TEXT NOT NULL
+    )
+  `).run();
+  kakaoClarificationTableEnsured = true;
+}
+
+async function clearKakaoClarificationSession(userKey = "", env = {}) {
+  if (!userKey || !env.MEMBER_DB) return;
+  await env.MEMBER_DB.prepare("DELETE FROM kakao_clarification_sessions WHERE user_key = ?").bind(userKey).run();
+}
+
+export function shouldStoreKakaoClarificationSession(result = {}) {
+  if (!result?.ok) return false;
+  const status = cleanText(result.answerState?.status || "");
+  const hasDomain = Boolean(cleanText(result.semanticFrame?.domainCode || ""));
+  const flow = result.completionFlow || {};
+  const questionBuilder = result.clarificationFlow || {};
+  if (questionBuilder.type === "question_builder" && questionBuilder.status === "collect_slots") return true;
+  if (flow.needed && (!hasDomain || cleanText(flow.type || "") === "choose_domain" || status === "unclassified")) return true;
+  if (result.semanticFrame?.intentClarification?.needsConfirmation) return true;
+  if (status === "unclassified") return true;
+  return status === "needs_slot" && !hasDomain;
+}
+
+function getKakaoSessionQuestion(payload = {}, result = {}) {
+  const flow = result.clarificationFlow || {};
+  if (flow.type === "question_builder" && flow.status === "collect_slots") {
+    return `${flow.profileLabel || result.semanticFrame?.domainLabel || "규정·지침"} 사안입니다. 필요한 정보(${flow.requiredInfo || "대상, 상황, 기간, 증빙, 소속 교육청"})를 보태면 답변합니다.`;
+  }
+  return cleanText(result.question || payload.question || "");
+}
+
+function getKakaoSessionSlotQuestions(result = {}) {
+  return asArray(result.completionFlow?.nextQuestions)
+    .concat(asArray(result.missingSlotQuestions))
+    .concat(asArray(result.answerState?.slotQuestions))
+    .map((item) => ({
+      slot: cleanText(item.slot || "detail"),
+      label: cleanText(item.label || item.slot || "추가 정보"),
+      question: cleanText(item.question || "")
+    }))
+    .filter((item) => item.question || item.label)
+    .slice(0, 3);
+}
+
+function getKakaoClarificationUserKey(payload = {}) {
+  const user = payload.user || {};
+  const properties = user.properties || {};
+  const candidates = [
+    user.id,
+    user.userKey,
+    user.botUserKey,
+    user.appUserId,
+    properties.plusfriendUserKey,
+    properties.botUserKey,
+    properties.appUserId,
+    payload.action?.clientExtra?.userKey
+  ].map((item) => cleanText(item)).filter(Boolean);
+  return candidates.length ? `kakao:${candidates[0]}` : "";
+}
+
+function getKakaoDisplayName(payload = {}, fallback = "카카오 사용자") {
+  const user = payload.user || {};
+  const properties = user.properties || {};
+  return cleanText(
+    properties.nickname ||
+    properties.name ||
+    user.name ||
+    user.nickname ||
+    fallback
+  );
+}
+
+function getKakaoSyntheticEmail(userKey = "") {
+  return `kakao-${stableHash(userKey)}@kakao.local`;
+}
+
+function formatKakaoAccessCode(userKey = "") {
+  return `KAKAO-${stableHash(userKey).slice(0, 10).toUpperCase()}`;
+}
+
+function isKakaoUserApprovedByEnv(userKey = "", env = {}) {
+  const normalized = cleanText(userKey);
+  const raw = normalized.replace(/^kakao:/, "");
+  const hash = stableHash(normalized);
+  const approved = parseKakaoUserKeyList(env.KAKAO_APPROVED_USER_KEYS);
+  return approved.has(normalized) || approved.has(raw) || approved.has(hash) || approved.has(formatKakaoAccessCode(normalized));
+}
+
+function parseKakaoUserKeyList(value = "") {
+  return new Set(
+    String(value || "")
+      .split(",")
+      .map((item) => cleanText(item))
+      .filter(Boolean)
+  );
+}
+
+function stableHash(value = "") {
+  let hash = 2166136261;
+  const text = String(value || "");
+  for (let index = 0; index < text.length; index += 1) {
+    hash ^= text.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0).toString(16).padStart(8, "0");
+}
+
+function isKakaoClarificationResetText(text = "") {
+  return /^(처음|처음부터|새\s*질문|새질문|리셋|취소|그만|다시)$/i.test(cleanText(text));
+}
+
+function isContextRichKakaoCommand(text = "") {
+  return /질문\s*만들기|완성질문|자세히\s*보기|공식\s*출처|출처\s*확인|기준으로\s*다시|원\s*질문|추가\s*확인\s*내용/.test(text);
+}
+
+function isLikelyNewCompleteKakaoQuestion(text = "") {
+  const normalized = cleanText(text);
+  const compacted = normalized.replace(/\s+/g, "");
+  const hasQuestionMark = /[?？]$/.test(normalized) || /[?？]/.test(normalized);
+  const hasAskVerb = /알려|어떻게|되나요|가능|며칠|몇일|얼마|기준|절차|처리|조치|대응|해야|인가요|일까요|해도|수있|받을수|쓸수|내릴수|일수|규정|방법/.test(compacted);
+  const hasDomainAnchor = /출장|여비|학교폭력|학폭|병가|연가|출산|휴가|복무|근태|계약직|행정직|공무직|기간제|개인정보|CCTV|현장실습|채용|근로|임금|민사|소송|형사|고소|고발|학생부|출결|예산|회계|강사료|방과후|수업|학생|생활지도|훈육|지시|불응|선도|학칙|학생생활규정|기숙사|급식|평가|성적|체험학습|장학|보건|상담|교권|교육활동/.test(compacted);
+  return (hasQuestionMark && hasAskVerb && normalized.length >= 12)
+    || (hasDomainAnchor && hasAskVerb && normalized.length >= 24);
+}
+
+function parseJsonArray(value = "") {
+  try {
+    const parsed = JSON.parse(value || "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function shouldUseKakaoGptNormalizer(payload = {}, result = {}, env = {}) {
+  if (!isFeatureEnabled(env.KAKAO_GPT_NORMALIZER_ENABLED)) return false;
+  if (!env.OPENAI_API_KEY) return false;
+
+  const question = cleanText(payload.question || "");
+  if (question.length < 3) return false;
+
+  const mode = cleanText(env.KAKAO_GPT_NORMALIZER_MODE || "auto").toLowerCase();
+  if (mode === "always") return true;
+  if (mode === "off" || mode === "false") return false;
+
+  const threshold = readNumber(env.KAKAO_GPT_NORMALIZER_MIN_CONFIDENCE) || 0.82;
+  const confidence = Number(result.confidence || result.semanticFrame?.confidence || 0);
+  const status = result.answerState?.status || "";
+  const missingSlots = result.missingSlots || [];
+
+  if (!result.ok || !result.semanticFrame?.domainCode) return true;
+  if (status === "unclassified") return true;
+  if (hasUsableKakaoPolicyResult(result)) return false;
+  if (confidence < threshold) return true;
+  if (hasCriticalMissingSlots(missingSlots)) return true;
+  return isLowQualityKakaoPolicyResult(result);
+}
+
+function shouldUsePolicyGptNormalizer(payload = {}, result = {}, env = {}) {
+  const policyEnv = {
+    ...env,
+    KAKAO_GPT_NORMALIZER_ENABLED: env.POLICY_GPT_NORMALIZER_ENABLED ?? env.KAKAO_GPT_NORMALIZER_ENABLED,
+    KAKAO_GPT_NORMALIZER_MODE: env.POLICY_GPT_NORMALIZER_MODE || env.KAKAO_GPT_NORMALIZER_MODE,
+    KAKAO_GPT_NORMALIZER_MIN_CONFIDENCE: env.POLICY_GPT_NORMALIZER_MIN_CONFIDENCE || env.KAKAO_GPT_NORMALIZER_MIN_CONFIDENCE
+  };
+  return shouldUseKakaoGptNormalizer(payload, result, policyEnv);
+}
+
+async function maybeAttachGptAnswerComposer(payload = {}, result = {}, env = {}, feature = "kakao_answer") {
+  if (!shouldUseGptAnswerComposer(payload, result, env, feature)) return result;
+
+  const budgetGate = await getOpenAiUsageGate(env, feature);
+  if (!budgetGate.ok) {
+    return attachPolicyAnswerComposerMetadata(result, {
+      ok: false,
+      skipped: true,
+      reason: budgetGate.reason
+    }, budgetGate, feature);
+  }
+
+  const composerResult = await runPolicyAnswerComposer(payload, result, env, feature);
+  if (composerResult.ok) {
+    await recordOpenAiUsage(env, {
+      feature,
+      model: composerResult.model,
+      usage: composerResult.usage,
+      billing: composerResult.billing
+    });
+  }
+  return attachPolicyAnswerComposerMetadata(result, composerResult, budgetGate, feature);
+}
+
+function shouldUseGptAnswerComposer(payload = {}, result = {}, env = {}, feature = "kakao_answer") {
+  const isPolicy = feature === "policy_answer";
+  const enabled = isPolicy
+    ? env.POLICY_GPT_ANSWER_ENABLED ?? env.KAKAO_GPT_ANSWER_ENABLED
+    : env.KAKAO_GPT_ANSWER_ENABLED;
+  if (!isFeatureEnabled(enabled)) return false;
+  if (!env.OPENAI_API_KEY) return false;
+
+  const mode = cleanText((isPolicy
+    ? env.POLICY_GPT_ANSWER_MODE || env.KAKAO_GPT_ANSWER_MODE
+    : env.KAKAO_GPT_ANSWER_MODE) || "auto").toLowerCase();
+  if (mode === "off" || mode === "false") return false;
+
+  const question = cleanText(payload.question || payload.q || "");
+  if (question.length < 3) return false;
+  if (!result?.ok || !result.semanticFrame?.domainCode || !result.policyResponse) return false;
+  if (result.answerState?.status === "unclassified") return false;
+  if (mode === "always") return true;
+
+  const confidence = Number(result.confidence || result.semanticFrame?.confidence || 0);
+  if (hasUsableKakaoPolicyResult(result)) return false;
+  if (isLowQualityKakaoPolicyResult(result)) return true;
+  if (confidence < readAnswerComposerConfidenceThreshold(env, isPolicy)) return true;
+  if (hasThinPolicyAnswer(result)) return true;
+  return false;
+}
+
+function readAnswerComposerConfidenceThreshold(env = {}, isPolicy = false) {
+  const configured = readNumber(isPolicy
+    ? env.POLICY_GPT_ANSWER_MIN_CONFIDENCE || env.KAKAO_GPT_ANSWER_MIN_CONFIDENCE
+    : env.KAKAO_GPT_ANSWER_MIN_CONFIDENCE);
+  return configured > 0 && configured < 1 ? configured : 0.72;
+}
+
+function hasThinPolicyAnswer(result = {}) {
+  const texts = [
+    result.responseText,
+    result.answerState?.primaryText,
+    ...(result.answerState?.conditionalAnswers || []),
+    ...(result.answerState?.definitiveAnswers || [])
+  ].map(cleanText).filter(Boolean);
+  if (!texts.length) return true;
+  const combined = texts.join(" ");
+  if (/질문만으로는|적용 규정을 특정하기 어렵|먼저.*확인|무엇을 원하는지/.test(combined)) return true;
+  const hasBasisSignal = /규정|지침|법령|예규|취업규칙|근로계약|교육청|학교법인|공식|증빙|진단서|절차|보고|승인|보존|일|원/.test(combined);
+  return !hasBasisSignal || combined.length < 80;
+}
+
+function hasUsableKakaoPolicyResult(result = {}) {
+  const status = result.answerState?.status || "";
+  if (!["definitive", "conditional"].includes(status)) return false;
+  if (!result.semanticFrame?.domainCode) return false;
+  if (asArray(result.missingSlots).length) return false;
+  if (isLowQualityKakaoPolicyResult(result)) return false;
+
+  const text = cleanText([
+    result.responseText,
+    result.answerState?.primaryText,
+    ...(result.answerState?.conditionalAnswers || []),
+    ...(result.answerState?.definitiveAnswers || [])
+  ].join(" "));
+
+  if (result.semanticFrame.domainCode === "domesticTravelExpense") {
+    return /출장비|여비|일비|식비|숙박비|운임/.test(text)
+      && /\d[\d,]*\s*원|최대|합계|실비|상한/.test(text)
+      && !/지역 미특정/.test(text);
+  }
+
+  return /(?:\d+\s*일|진단서|증빙자료|유급|무급|상한|환불|승인|보고|절차)/.test(text);
+}
+
+function hasCriticalMissingSlots(missingSlots = []) {
+  const critical = new Set([
+    "targetSubject",
+    "travelerRole",
+    "destination",
+    "dateRange",
+    "serviceIssue",
+    "procedureStage",
+    "riskSignal",
+    "schoolLevel",
+    "familyRelation",
+    "evidence"
+  ]);
+  return missingSlots.some((slot) => critical.has(slot));
+}
+
+function isLowQualityKakaoPolicyResult(result = {}) {
+  const texts = [
+    result.responseText,
+    result.answerState?.primaryText,
+    ...(result.answerState?.conditionalAnswers || []),
+    ...(result.answerState?.definitiveAnswers || [])
+  ].map((text) => cleanText(text)).filter(Boolean);
+  return texts.some((text) => /질문만으로는 적용 규정을 특정하기 어렵|먼저.*인지.*인지|무엇을 원하는지|제가 할 수 있는 일이 아니|이해하기 어려워요/.test(text));
+}
+
+async function runKakaoQuestionNormalizer(payload, baseResult, env) {
+  const primaryModel = cleanText(env.KAKAO_NLU_MODEL || env.OPENAI_MODEL || "gpt-5.4-nano");
+  const fallbackModel = cleanText(env.KAKAO_NLU_FALLBACK_MODEL || env.OPENAI_FALLBACK_MODEL || "gpt-5.4-mini");
+  const models = [...new Set([primaryModel, fallbackModel].filter(Boolean))];
+  const errors = [];
+
+  for (const model of models) {
+    try {
+      return await callOpenAiKakaoQuestionNormalizer(env.OPENAI_API_KEY, {
+        model,
+        payload,
+        baseResult,
+        timeoutMs: readKakaoNormalizerTimeoutMs(env)
+      }, env);
+    } catch (error) {
+      errors.push(`${model}: ${error.message}`);
+      if (error.code === "KAKAO_NLU_TIMEOUT") break;
+      if (!isRetryableOpenAiError(error)) break;
+    }
+  }
+
+  return {
+    ok: false,
+    error: "카카오 질문 정규화 호출에 실패했습니다.",
+    notices: errors.slice(0, 3)
+  };
+}
+
+async function callOpenAiKakaoQuestionNormalizer(openAiKey, payload, env = {}) {
+  const controller = new AbortController();
+  const timeoutMs = payload.timeoutMs || DEFAULT_KAKAO_NORMALIZER_TIMEOUT_MS;
+  const timeout = setTimeout(() => controller.abort("kakao_nlu_timeout"), timeoutMs);
+  let response;
+
+  try {
+    response = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${openAiKey}`
+      },
+      signal: controller.signal,
+      body: JSON.stringify({
+        model: payload.model,
+        instructions: getKakaoQuestionNormalizerInstructions(),
+        input: [
+          {
+            role: "user",
+            content: [
+              {
+                type: "input_text",
+                text: JSON.stringify({
+                  currentDate: new Date().toISOString().slice(0, 10),
+                  servicePurpose: "특성화고·학교 행정 규정 Q&A 카카오 챗봇",
+                  userUtterance: redactSensitiveText(payload.payload.question),
+                  localEngineResult: compactKakaoBaseResult(payload.baseResult)
+                })
+              }
+            ]
+          }
+        ],
+        text: {
+          format: {
+            type: "json_schema",
+            name: "gyo6_kakao_question_normalization",
+            strict: true,
+            schema: getKakaoQuestionNormalizerSchema()
+          },
+          verbosity: "low"
+        },
+        max_output_tokens: 1200
+      })
+    });
+  } catch (error) {
+    if (controller.signal.aborted) {
+      const timeoutError = new Error(`카카오 응답 제한을 지키기 위해 GPT 질문정규화를 ${timeoutMs}ms에서 중단했습니다.`);
+      timeoutError.status = 408;
+      timeoutError.code = "KAKAO_NLU_TIMEOUT";
+      throw timeoutError;
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const error = new Error(data?.error?.message || `OpenAI API 오류 ${response.status}`);
+    error.status = response.status;
+    error.code = data?.error?.code || data?.error?.type || "";
+    throw error;
+  }
+
+  const text = extractOpenAiText(data);
+  if (!text) {
+    throw new Error("질문 정규화 결과가 비어 있습니다.");
+  }
+
+  const usage = normalizeOpenAiUsage(data.usage);
+  return {
+    ok: true,
+    model: payload.model,
+    normalization: JSON.parse(text),
+    usage,
+    billing: estimateOpenAiBilling(usage, payload.model, env)
+  };
+}
+
+function compactKakaoBaseResult(result = {}) {
+  return {
+    ok: Boolean(result.ok),
+    question: cleanText(result.question || ""),
+    domainCode: cleanText(result.semanticFrame?.domainCode || ""),
+    domainLabel: cleanText(result.semanticFrame?.domainLabel || ""),
+    confidence: Number(result.confidence || result.semanticFrame?.confidence || 0),
+    answerState: cleanText(result.answerState?.status || ""),
+    missingSlots: asArray(result.missingSlots).slice(0, 8),
+    candidates: asArray(result.semanticFrame?.candidates).slice(0, 5)
+  };
+}
+
+function readKakaoNormalizerTimeoutMs(env = {}) {
+  const configured = Math.round(readNumber(env.KAKAO_GPT_NORMALIZER_TIMEOUT_MS));
+  if (configured >= 500 && configured <= 3000) return configured;
+  return DEFAULT_KAKAO_NORMALIZER_TIMEOUT_MS;
+}
+
+async function runPolicyAnswerComposer(payload = {}, baseResult = {}, env = {}, feature = "kakao_answer") {
+  const isPolicy = feature === "policy_answer";
+  const primaryModel = cleanText(
+    (isPolicy ? env.POLICY_ANSWER_MODEL : env.KAKAO_ANSWER_MODEL)
+    || env.KAKAO_ANSWER_MODEL
+    || env.KAKAO_NLU_MODEL
+    || env.OPENAI_MODEL
+    || "gpt-5.4-nano"
+  );
+  const fallbackModel = cleanText(
+    (isPolicy ? env.POLICY_ANSWER_FALLBACK_MODEL : env.KAKAO_ANSWER_FALLBACK_MODEL)
+    || env.KAKAO_ANSWER_FALLBACK_MODEL
+    || env.KAKAO_NLU_FALLBACK_MODEL
+    || env.OPENAI_FALLBACK_MODEL
+    || "gpt-5.4-mini"
+  );
+  const models = [...new Set([primaryModel, fallbackModel].filter(Boolean))];
+  const errors = [];
+
+  for (const model of models) {
+    try {
+      return await callOpenAiPolicyAnswerComposer(env.OPENAI_API_KEY, {
+        model,
+        payload,
+        baseResult,
+        feature,
+        timeoutMs: readAnswerComposerTimeoutMs(env)
+      }, env);
+    } catch (error) {
+      errors.push(`${model}: ${error.message}`);
+      if (error.code === "POLICY_ANSWER_TIMEOUT") break;
+      if (!isRetryableOpenAiError(error)) break;
+    }
+  }
+
+  return {
+    ok: false,
+    error: "GPT 답변 보강 호출에 실패했습니다.",
+    notices: errors.slice(0, 3)
+  };
+}
+
+async function callOpenAiPolicyAnswerComposer(openAiKey, payload, env = {}) {
+  const controller = new AbortController();
+  const timeoutMs = payload.timeoutMs || 2400;
+  const timeout = setTimeout(() => controller.abort("policy_answer_timeout"), timeoutMs);
+  let response;
+
+  try {
+    response = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${openAiKey}`
+      },
+      signal: controller.signal,
+      body: JSON.stringify({
+        model: payload.model,
+        instructions: getPolicyAnswerComposerInstructions(),
+        input: [
+          {
+            role: "user",
+            content: [
+              {
+                type: "input_text",
+                text: JSON.stringify({
+                  currentDate: new Date().toISOString().slice(0, 10),
+                  servicePurpose: "특성화고·학교 행정 규정 Q&A 답변 품질 보강",
+                  channel: payload.feature === "kakao_answer" ? "kakao" : "web",
+                  userQuestion: redactSensitiveText(payload.payload.question || payload.payload.q || ""),
+                  localEngineResult: compactPolicyAnswerBaseResult(payload.baseResult)
+                })
+              }
+            ]
+          }
+        ],
+        text: {
+          format: {
+            type: "json_schema",
+            name: "gyo6_policy_answer_composition",
+            strict: true,
+            schema: getPolicyAnswerComposerSchema()
+          },
+          verbosity: "low"
+        },
+        max_output_tokens: 1400
+      })
+    });
+  } catch (error) {
+    if (controller.signal.aborted) {
+      const timeoutError = new Error(`카카오/웹 응답 제한을 지키기 위해 GPT 답변 보강을 ${timeoutMs}ms에서 중단했습니다.`);
+      timeoutError.status = 408;
+      timeoutError.code = "POLICY_ANSWER_TIMEOUT";
+      throw timeoutError;
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+  }
+
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const error = new Error(data?.error?.message || `OpenAI API 오류 ${response.status}`);
+    error.status = response.status;
+    error.code = data?.error?.code || data?.error?.type || "";
+    throw error;
+  }
+
+  const text = extractOpenAiText(data);
+  if (!text) throw new Error("GPT 답변 보강 결과가 비어 있습니다.");
+
+  const usage = normalizeOpenAiUsage(data.usage);
+  return {
+    ok: true,
+    model: payload.model,
+    draft: JSON.parse(text),
+    usage,
+    billing: estimateOpenAiBilling(usage, payload.model, env)
+  };
+}
+
+function readAnswerComposerTimeoutMs(env = {}) {
+  const configured = Math.round(readNumber(env.KAKAO_GPT_ANSWER_TIMEOUT_MS));
+  if (configured >= 800 && configured <= 4000) return configured;
+  return 2400;
+}
+
+function compactPolicyAnswerBaseResult(result = {}) {
+  const frame = result.semanticFrame || {};
+  const policyResponse = result.policyResponse || {};
+  return {
+    ok: Boolean(result.ok),
+    question: cleanText(result.question || ""),
+    officeLabel: cleanText(result.officeLabel || ""),
+    confidence: Number(result.confidence || frame.confidence || 0),
+    needsClarification: Boolean(result.needsClarification),
+    missingSlots: asArray(result.missingSlots).slice(0, 8),
+    domain: {
+      code: cleanText(frame.domainCode || ""),
+      label: cleanText(frame.domainLabel || ""),
+      task: cleanText(frame.task || result.answerState?.basis?.task || ""),
+      lookupStatus: cleanText(frame.lookupStatus || result.answerState?.basis?.lookupStatus || "")
+    },
+    answerState: {
+      status: cleanText(result.answerState?.status || ""),
+      primaryText: cleanText(result.answerState?.primaryText || ""),
+      conditionalAnswers: asArray(result.answerState?.conditionalAnswers).map(cleanText).filter(Boolean).slice(0, 4),
+      definitiveAnswers: asArray(result.answerState?.definitiveAnswers).map(cleanText).filter(Boolean).slice(0, 4),
+      caveats: asArray(result.answerState?.caveats).map(cleanText).filter(Boolean).slice(0, 3),
+      slotQuestions: asArray(result.answerState?.slotQuestions).slice(0, 3)
+    },
+    policyResponse: {
+      title: cleanText(policyResponse.title || ""),
+      lead: cleanText(policyResponse.lead || ""),
+      answer: normalizePolicyAnswerTexts(policyResponse.answer).slice(0, 6),
+      caution: cleanText(policyResponse.caution || ""),
+      sourceKeys: asArray(policyResponse.sourceKeys).slice(0, 8),
+      sourcePriority: cleanText(policyResponse.sourcePriority || "")
+    }
+  };
+}
+
+function normalizePolicyAnswerTexts(answer) {
+  if (Array.isArray(answer)) {
+    return answer.map((item) => {
+      if (typeof item === "string") return cleanText(item);
+      return cleanText(item?.text || item?.summary || item?.answer || "");
+    }).filter(Boolean);
+  }
+  return cleanText(answer) ? [cleanText(answer)] : [];
+}
+
+function attachPolicyAnswerComposerMetadata(result = {}, composerResult = {}, budgetGate = {}, feature = "kakao_answer") {
+  const metadata = {
+    ok: Boolean(composerResult.ok),
+    feature,
+    model: cleanText(composerResult.model || ""),
+    skipped: Boolean(composerResult.skipped),
+    reason: cleanText(composerResult.reason || composerResult.error || ""),
+    usage: composerResult.usage || null,
+    billing: composerResult.billing || null,
+    budgetGate: sanitizeUsageGate(budgetGate)
+  };
+
+  if (!composerResult.ok || !composerResult.draft) {
+    return {
+      ...result,
+      gptAnswerComposer: metadata
+    };
+  }
+
+  const draft = sanitizePolicyAnswerDraft(composerResult.draft);
+  if (!draft.shortAnswer) {
+    return {
+      ...result,
+      gptAnswerComposer: { ...metadata, draft }
+    };
+  }
+
+  const nextStatus = mapComposerAnswerability(draft.answerability, result);
+  const nextTexts = uniqueStrings([draft.shortAnswer, ...draft.bullets]);
+  const nextPolicyResponse = result.policyResponse
+    ? {
+        ...result.policyResponse,
+        lead: draft.shortAnswer,
+        answer: nextTexts,
+        caution: draft.caution || result.policyResponse.caution || ""
+      }
+    : result.policyResponse;
+  const nextAnswerState = result.answerState
+    ? {
+        ...result.answerState,
+        status: nextStatus,
+        primaryText: draft.shortAnswer,
+        definitiveAnswers: nextStatus === "definitive" ? nextTexts : [],
+        conditionalAnswers: nextStatus === "definitive" ? [] : nextTexts,
+        caveats: uniqueStrings([...(result.answerState.caveats || []), draft.caution]).filter(Boolean),
+        slotQuestions: mergeComposerSlotQuestions(result.answerState.slotQuestions || [], draft.missingQuestions)
+      }
+    : result.answerState;
+
+  return {
+    ...result,
+    policyResponse: nextPolicyResponse,
+    answerState: nextAnswerState,
+    responseText: formatPolicyAnswerDraftText(draft, result),
+    needsClarification: nextStatus === "needs_slot" ? true : result.needsClarification,
+    gptAnswerComposer: {
+      ...metadata,
+      draft
+    }
+  };
+}
+
+function sanitizePolicyAnswerDraft(draft = {}) {
+  return {
+    answerability: cleanText(draft.answerability || "conditional"),
+    shortAnswer: cleanText(draft.shortAnswer || "").slice(0, 360),
+    bullets: asArray(draft.bullets).map((item) => cleanText(item)).filter(Boolean).slice(0, 4),
+    missingQuestions: asArray(draft.missingQuestions).map((item) => cleanText(item)).filter(Boolean).slice(0, 3),
+    caution: cleanText(draft.caution || "").slice(0, 260),
+    confidence: Math.max(0, Math.min(1, readNumber(draft.confidence)))
+  };
+}
+
+function mapComposerAnswerability(answerability = "", result = {}) {
+  const status = cleanText(answerability);
+  if (status === "answerable" && !asArray(result.missingSlots).length) return "definitive";
+  if (status === "needs_slot" || asArray(result.missingSlots).length) return "needs_slot";
+  if (status === "unclassified") return "unclassified";
+  return "conditional";
+}
+
+function mergeComposerSlotQuestions(existing = [], questions = []) {
+  const mapped = asArray(questions).map((question, index) => ({
+    slot: `gptFollowUp${index + 1}`,
+    label: index === 0 ? "추가 확인" : `확인 ${index + 1}`,
+    question
+  }));
+  return uniqueSlotQuestionObjects([...asArray(existing), ...mapped]).slice(0, 3);
+}
+
+function uniqueSlotQuestionObjects(items = []) {
+  const seen = new Set();
+  return items.filter((item) => {
+    const key = `${cleanText(item?.slot || "")}:${cleanText(item?.question || "")}`;
+    if (!item?.question || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function formatPolicyAnswerDraftText(draft = {}, result = {}) {
+  const lines = [];
+  if (draft.shortAnswer) lines.push(draft.shortAnswer);
+  for (const bullet of draft.bullets || []) {
+    if (bullet && bullet !== draft.shortAnswer) lines.push(`- ${bullet}`);
+  }
+  if (draft.missingQuestions?.length) {
+    lines.push("");
+    lines.push(`확인 필요: ${draft.missingQuestions.join(" / ")}`);
+  } else if (result.officeLabel) {
+    lines.push("");
+    lines.push(`기준: ${result.officeLabel}`);
+  }
+  if (draft.caution) {
+    lines.push("");
+    lines.push(draft.caution);
+  }
+  return lines.filter(Boolean).join("\n").slice(0, 980);
+}
+
+function getPolicyAnswerComposerInstructions() {
+  return [
+    "당신은 특성화고·학교 행정 규정 Q&A의 답변 품질 보강기입니다.",
+    "사용자 질문 원문과 로컬 규정 엔진 결과만 근거로 답변 문장을 더 명확하게 정리합니다.",
+    "로컬 결과에 없는 법령명, 조문, 숫자, 일수, 금액, 절차를 새로 만들어내지 마세요.",
+    "로컬 결과에 조건부 기준이 있으면 조건을 앞에 두고 답합니다. 예: 사립학교는 학교법인 규정 우선, 준용 시 60/180일.",
+    "질문이 모호하거나 필수 슬롯이 부족하면 단정하지 말고 missingQuestions에 사용자가 바로 답할 짧은 질문을 넣습니다.",
+    "카카오에서는 첫 답변이 길면 안 되므로 shortAnswer는 1~2문장, bullets는 최대 4개로 압축합니다.",
+    "사용자에게 '규정을 먼저 확인합니다' 같은 내부 처리 문장만 보여주지 말고, 확인된 결론 또는 조건부 결론을 먼저 씁니다.",
+    "법률 자문이나 최종 사건 판단으로 표현하지 말고, 공식 원문·소속 교육청·학교 내부 규정 확인 필요성을 caution에 분리합니다."
+  ].join("\n");
+}
+
+function getPolicyAnswerComposerSchema() {
+  return {
+    type: "object",
+    additionalProperties: false,
+    required: ["answerability", "shortAnswer", "bullets", "missingQuestions", "caution", "confidence"],
+    properties: {
+      answerability: {
+        type: "string",
+        enum: ["answerable", "conditional", "needs_slot", "unclassified"]
+      },
+      shortAnswer: {
+        type: "string",
+        description: "사용자에게 먼저 보일 1~2문장 답변"
+      },
+      bullets: {
+        type: "array",
+        items: { type: "string" },
+        maxItems: 4
+      },
+      missingQuestions: {
+        type: "array",
+        items: { type: "string" },
+        maxItems: 3
+      },
+      caution: {
+        type: "string",
+        description: "공식 원문 확인, 소속 교육청, 학교 내부 규정 등 주의문"
+      },
+      confidence: {
+        type: "number",
+        minimum: 0,
+        maximum: 1
+      }
+    }
+  };
+}
+
+function getKakaoQuestionNormalizerInstructions() {
+  return [
+    "당신은 한국 학교·특성화고 규정 Q&A 챗봇의 질문 이해 계층입니다.",
+    "절대 최종 답변을 생성하지 마세요. 규정 내용, 금액, 일수, 절차를 새로 말하지 마세요.",
+    "역할은 사용자의 거칠고 짧거나 장황한 카카오톡 발화를 규정 엔진이 처리할 수 있는 완성질문과 슬롯 JSON으로 바꾸는 것입니다.",
+    "원문에 없는 사실을 추가하지 마세요. 다만 한국 학교 행정의 일반 표현은 안전하게 표준화할 수 있습니다. 예: 행정실 주무관·행정실장·행정직은 지방공무원/행정직 후보, 1박2일은 기간 1박 2일, 출장비는 국내 출장 여비 후보입니다.",
+    "지역명은 문맥상 출발지와 출장지를 구분하세요. 예: '포항에 있는 학교의 ... 안동 출장'은 출발 학교 소재지를 포항시, 출장지를 안동시로 구조화합니다.",
+    "대상 주체, 사건·사유, 업무 단계, 증빙·위험 신호의 조합을 보존하세요. 예: '남성 교직원 + 출산휴가'는 배우자 출산휴가 후보이고, '여 교직원 + 출산휴가'는 본인 출산 관련 특별휴가 후보입니다.",
+    "구체 업무 물체를 버리지 마세요. 예: 급식 반찬 민원은 단순 민원이 아니라 학교급식·위생·민원 후보, 늘봄 위탁 계약은 단순 회계가 아니라 방과후·돌봄·늘봄 후보입니다.",
+    "교육청이 명시되지 않았고 경북 지역 학교 문맥이면 경상북도교육청을 officeLabel 후보로 둘 수 있지만, 소속 교육청 확인 필요는 유지하세요.",
+    "질문이 모호하면 answerability를 needs_slot 또는 unclassified로 두고, 사용자가 바로 답할 수 있는 짧은 추가질문을 1~3개만 만드세요.",
+    "상담원 연결, 사람 상담, 전화 연결 버튼을 제안하지 마세요.",
+    "normalizedQuestion은 규정 엔진에 넣을 한 문장 질문입니다. 사용자가 원한 핵심만 남기고 군더더기는 제거하세요.",
+    "출력은 반드시 요청한 JSON 스키마만 따르세요."
+  ].join("\n");
+}
+
+function getKakaoQuestionNormalizerSchema() {
+  const stringArray = {
+    type: "array",
+    items: { type: "string" }
+  };
+
+  return {
+    type: "object",
+    additionalProperties: false,
+    required: [
+      "normalizedQuestion",
+      "intentDomain",
+      "answerability",
+      "confidence",
+      "slots",
+      "missingSlots",
+      "clarifyingQuestions",
+      "inferredFacts",
+      "mustNotAssume",
+      "reason"
+    ],
+    properties: {
+      normalizedQuestion: { type: "string" },
+      intentDomain: { type: "string" },
+      answerability: {
+        type: "string",
+        enum: ["answerable", "needs_slot", "unclassified"]
+      },
+      confidence: { type: "number" },
+      slots: {
+        type: "object",
+        additionalProperties: false,
+        required: [
+          "officeLabel",
+          "roleLabel",
+          "targetSubject",
+          "schoolLocation",
+          "institution",
+          "origin",
+          "destination",
+          "duration",
+          "serviceIssue",
+          "procedureStage",
+          "evidence",
+          "riskSignal"
+        ],
+        properties: {
+          officeLabel: { type: "string" },
+          roleLabel: { type: "string" },
+          targetSubject: { type: "string" },
+          schoolLocation: { type: "string" },
+          institution: { type: "string" },
+          origin: { type: "string" },
+          destination: { type: "string" },
+          duration: { type: "string" },
+          serviceIssue: { type: "string" },
+          procedureStage: { type: "string" },
+          evidence: { type: "string" },
+          riskSignal: { type: "string" }
+        }
+      },
+      missingSlots: stringArray,
+      clarifyingQuestions: {
+        type: "array",
+        items: {
+          type: "object",
+          additionalProperties: false,
+          required: ["slot", "label", "question"],
+          properties: {
+            slot: { type: "string" },
+            label: { type: "string" },
+            question: { type: "string" }
+          }
+        }
+      },
+      inferredFacts: stringArray,
+      mustNotAssume: stringArray,
+      reason: { type: "string" }
+    }
+  };
+}
+
+function buildPayloadFromKakaoNormalizer(basePayload = {}, normalization = {}) {
+  const slots = normalization.slots || {};
+  const normalizedQuestion = cleanText(normalization.normalizedQuestion || basePayload.question || "");
+  const roleLabel = cleanText(basePayload.roleLabel || slots.roleLabel || slots.targetSubject || "");
+  const officeLabel = cleanText(basePayload.officeLabel || slots.officeLabel || "");
+
+  return {
+    ...basePayload,
+    question: normalizedQuestion || basePayload.question,
+    originalQuestion: basePayload.question,
+    roleLabel,
+    officeLabel
+  };
+}
+
+export function chooseBetterPolicyResult(baseResult = {}, normalizedResult = {}) {
+  if (!normalizedResult?.ok) return baseResult;
+  if (!baseResult?.ok) return normalizedResult;
+  const baseScore = scorePolicyResult(baseResult);
+  const normalizedScore = scorePolicyResult(normalizedResult);
+  if (hasPolicyResultRegression(baseResult, normalizedResult, { baseScore, normalizedScore })) return baseResult;
+  return normalizedScore > baseScore + 4
+    ? normalizedResult
+    : baseResult;
+}
+
+export function hasPolicyResultRegression(baseResult = {}, candidateResult = {}, scores = {}) {
+  const baseDomain = cleanText(baseResult.semanticFrame?.domainCode || "");
+  const candidateDomain = cleanText(candidateResult.semanticFrame?.domainCode || "");
+  if (baseDomain && candidateDomain && baseDomain !== candidateDomain) {
+    return !shouldAllowDomainSwitch(baseResult, candidateResult, scores);
+  }
+
+  const baseMissing = new Set(asArray(baseResult.missingSlots));
+  const candidateMissing = new Set(asArray(candidateResult.missingSlots));
+  for (const slot of ["targetSubject", "travelerRole", "destination", "dateRange", "serviceIssue", "procedureStage", "riskSignal", "schoolLevel", "familyRelation"]) {
+    if (!baseMissing.has(slot) && candidateMissing.has(slot)) return true;
+  }
+
+  const baseText = cleanText(baseResult.responseText || baseResult.answerState?.primaryText || "");
+  const candidateText = cleanText(candidateResult.responseText || candidateResult.answerState?.primaryText || "");
+  if (/지역 미특정/.test(candidateText) && !/지역 미특정/.test(baseText)) return true;
+  if (/포항시에서\s*안동시로|안동시/.test(baseText) && !/안동시/.test(candidateText)) return true;
+
+  return false;
+}
+
+function shouldAllowDomainSwitch(baseResult = {}, candidateResult = {}, scores = {}) {
+  if (!candidateResult?.semanticFrame?.domainCode) return false;
+  if (isLowQualityKakaoPolicyResult(candidateResult)) return false;
+  const baseDomain = cleanText(baseResult.semanticFrame?.domainCode || "");
+  const candidateDomain = cleanText(candidateResult.semanticFrame?.domainCode || "");
+  if (baseDomain && candidateDomain && baseDomain !== candidateDomain && hasStrongOriginalDomainAnchor(baseResult, baseDomain)) {
+    return false;
+  }
+  if (hasUsableKakaoPolicyResult(baseResult)) return false;
+
+  const baseStatus = cleanText(baseResult.answerState?.status || "");
+  const candidateStatus = cleanText(candidateResult.answerState?.status || "");
+  const baseConfidence = Number(baseResult.confidence || baseResult.semanticFrame?.confidence || 0);
+  const candidateConfidence = Number(candidateResult.confidence || candidateResult.semanticFrame?.confidence || 0);
+  const baseMissing = asArray(baseResult.missingSlots);
+  const candidateMissing = asArray(candidateResult.missingSlots);
+  const baseScore = Number.isFinite(scores.baseScore) ? scores.baseScore : scorePolicyResult(baseResult);
+  const candidateScore = Number.isFinite(scores.normalizedScore) ? scores.normalizedScore : scorePolicyResult(candidateResult);
+  const baseWeak = isLowQualityKakaoPolicyResult(baseResult)
+    || ["unclassified", "needs_slot"].includes(baseStatus)
+    || hasCriticalMissingSlots(baseMissing)
+    || baseConfidence < 0.45;
+  const candidateSpecific = ["definitive", "conditional", "needs_slot"].includes(candidateStatus)
+    && candidateResult.semanticFrame?.domainCode
+    && candidateScore >= baseScore + 8
+    && candidateConfidence >= Math.min(baseConfidence, 0.45);
+
+  if (!baseWeak || !candidateSpecific) return false;
+  const newCriticalMissing = candidateMissing.filter((slot) => !baseMissing.includes(slot) && hasCriticalMissingSlots([slot]));
+  return newCriticalMissing.length === 0;
+}
+
+function hasStrongOriginalDomainAnchor(result = {}, domainCode = "") {
+  const text = cleanText([
+    result.originalQuestion,
+    result.question,
+    result.payload?.question
+  ].join(" "));
+  const patterns = {
+    careerEmploymentGuidance: /졸업생|취업|채용|고졸채용|잡알리오|채용공고|추천채용|공채|근로계약|임금체불|체불임금|수습|해고|권고사직|부당해고|노동상담|노무상담|노동청|고용노동부|근로기준|근로조건/,
+    instructorHonorarium: /강사료|강사수당|강사비|강의료|외부강사|시간당|원고료|자문료/,
+    domesticTravelExpense: /출장비|국내출장|관외출장|근무지외|근무지내|여비|일비|식비|숙박비|운임/,
+    vocationalFieldTrainingOperation: /현장실습|실습기업|참여기업|선도기업|표준협약|도제학교|일학습병행|실습생/,
+    staffAttendanceService: /복무|근태|나이스근무상황|병가|연가|연차|특별휴가|출산휴가|배우자출산|육아시간|조퇴|지각|외출/,
+    schoolViolenceProcedure: /학교폭력|학폭|전담기구|피해학생|가해학생|사안조사|보호조치/,
+    facilityDigitalSecurity: /개인정보|정보보안|나이스계정|계정권한|CCTV|영상정보|초상권|홈페이지|SNS|사진|녹음|녹화/
+  };
+  return Boolean(patterns[domainCode]?.test(text));
+}
+
+export function scorePolicyResult(result = {}) {
+  const stateScores = {
+    definitive: 40,
+    conditional: 32,
+    needs_slot: 20,
+    unclassified: 0
+  };
+  const missingPenalty = asArray(result.missingSlots).length * 4;
+  const confidenceScore = Math.round(Number(result.confidence || result.semanticFrame?.confidence || 0) * 20);
+  const domainScore = result.semanticFrame?.domainCode ? 25 : 0;
+  const qualityPenalty = isLowQualityKakaoPolicyResult(result) ? 25 : 0;
+  return domainScore + confidenceScore + (stateScores[result.answerState?.status] || 0) - missingPenalty - qualityPenalty;
+}
+
+function attachKakaoNormalizerMetadata(result = {}, normalizerResult = {}, budgetGate = {}, feature = "kakao_nlu") {
+  const next = {
+    ...result,
+    aiNormalizer: {
+      feature,
+      enabled: true,
+      used: Boolean(normalizerResult.ok),
+      skipped: Boolean(normalizerResult.skipped),
+      model: cleanText(normalizerResult.model || ""),
+      reason: cleanText(normalizerResult.reason || normalizerResult.error || ""),
+      budget: sanitizeUsageGate(budgetGate),
+      billing: normalizerResult.billing || null,
+      confidence: Number(normalizerResult.normalization?.confidence || 0),
+      answerability: cleanText(normalizerResult.normalization?.answerability || "")
+    }
+  };
+
+  if (normalizerResult.ok && normalizerResult.normalization?.answerability !== "answerable") {
+    next.missingSlotQuestions = mergeSlotQuestions(
+      result.missingSlotQuestions || [],
+      normalizerResult.normalization.clarifyingQuestions || []
+    );
+    next.missingSlots = mergeStrings(result.missingSlots || [], normalizerResult.normalization.missingSlots || []);
+    if (next.answerState) {
+      next.answerState = {
+        ...next.answerState,
+        slotQuestions: mergeSlotQuestions(next.answerState.slotQuestions || [], next.missingSlotQuestions)
+      };
+    }
+  }
+
+  return next;
+}
+
+function mergeSlotQuestions(primary = [], secondary = []) {
+  const seen = new Set();
+  return [...primary, ...secondary]
+    .map((item) => ({
+      slot: cleanText(item.slot || "detail"),
+      label: cleanText(item.label || item.slot || "추가 정보"),
+      question: cleanText(item.question || "")
+    }))
+    .filter((item) => item.question)
+    .filter((item) => {
+      const key = `${item.slot}:${item.question}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, 3);
+}
+
+function mergeStrings(first = [], second = []) {
+  return [...new Set([...asArray(first), ...asArray(second)].map((item) => cleanText(item)).filter(Boolean))];
+}
+
+async function getOpenAiUsageGate(env, feature = "general") {
+  if (!env.OPENAI_API_KEY) {
+    return { ok: false, reason: "OPENAI_API_KEY secret 미설정" };
+  }
+
+  const settings = getCostControlSettings(env);
+  if (!env.MEMBER_DB) {
+    return {
+      ok: true,
+      reason: "usage ledger unavailable",
+      settings
+    };
+  }
+
+  const snapshot = await readOpenAiUsageSnapshot(env, feature);
+  if (!snapshot.ok) {
+    return {
+      ok: true,
+      reason: snapshot.reason,
+      settings
+    };
+  }
+
+  if (settings.dailyCallLimit && snapshot.dailyCalls >= settings.dailyCallLimit) {
+    return {
+      ok: false,
+      reason: `일일 GPT 호출 한도 ${settings.dailyCallLimit}회에 도달했습니다.`,
+      settings,
+      snapshot
+    };
+  }
+
+  if (settings.monthlyStopUsd && snapshot.monthlyEstimatedUsd >= settings.monthlyStopUsd) {
+    return {
+      ok: false,
+      reason: `월 GPT 예상 비용 한도 $${settings.monthlyStopUsd}에 도달했습니다.`,
+      settings,
+      snapshot
+    };
+  }
+
+  return {
+    ok: true,
+    settings,
+    snapshot
+  };
+}
+
+async function readOpenAiUsageSnapshot(env, feature = "general") {
+  try {
+    await ensureOpenAiUsageLedger(env);
+    const now = new Date();
+    const monthKey = now.toISOString().slice(0, 7);
+    const dayKey = now.toISOString().slice(0, 10);
+    const month = await env.MEMBER_DB.prepare(`
+      SELECT COALESCE(SUM(calls), 0) AS calls,
+             COALESCE(SUM(estimated_usd), 0) AS estimated_usd
+      FROM openai_usage_ledger
+      WHERE month_key = ? AND feature = ?
+    `).bind(monthKey, feature).first();
+    const day = await env.MEMBER_DB.prepare(`
+      SELECT COALESCE(SUM(calls), 0) AS calls,
+             COALESCE(SUM(estimated_usd), 0) AS estimated_usd
+      FROM openai_usage_ledger
+      WHERE day_key = ? AND feature = ?
+    `).bind(dayKey, feature).first();
+
+    return {
+      ok: true,
+      monthKey,
+      dayKey,
+      monthlyCalls: Number(month?.calls || 0),
+      monthlyEstimatedUsd: Number(month?.estimated_usd || 0),
+      dailyCalls: Number(day?.calls || 0),
+      dailyEstimatedUsd: Number(day?.estimated_usd || 0)
+    };
+  } catch (error) {
+    return {
+      ok: false,
+      reason: `GPT 사용량 장부 확인 실패: ${error.message}`
+    };
+  }
+}
+
+async function ensureOpenAiUsageLedger(env) {
+  if (!env.MEMBER_DB) return;
+  await env.MEMBER_DB.prepare(`
+    CREATE TABLE IF NOT EXISTS openai_usage_ledger (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      feature TEXT NOT NULL,
+      model TEXT NOT NULL,
+      month_key TEXT NOT NULL,
+      day_key TEXT NOT NULL,
+      calls INTEGER NOT NULL DEFAULT 1,
+      input_tokens INTEGER NOT NULL DEFAULT 0,
+      cached_input_tokens INTEGER NOT NULL DEFAULT 0,
+      output_tokens INTEGER NOT NULL DEFAULT 0,
+      estimated_usd REAL NOT NULL DEFAULT 0,
+      created_at TEXT NOT NULL
+    )
+  `).run();
+}
+
+async function recordOpenAiUsage(env, { feature = "general", model = "", usage = {}, billing = {} } = {}) {
+  if (!env.MEMBER_DB) return;
+  try {
+    await ensureOpenAiUsageLedger(env);
+    const now = new Date();
+    await env.MEMBER_DB.prepare(`
+      INSERT INTO openai_usage_ledger (
+        feature, model, month_key, day_key, calls,
+        input_tokens, cached_input_tokens, output_tokens, estimated_usd, created_at
+      )
+      VALUES (?, ?, ?, ?, 1, ?, ?, ?, ?, ?)
+    `).bind(
+      cleanText(feature || "general"),
+      cleanText(model || billing.model || ""),
+      now.toISOString().slice(0, 7),
+      now.toISOString().slice(0, 10),
+      Math.round(readNumber(usage.inputTokens)),
+      Math.round(readNumber(usage.cachedInputTokens)),
+      Math.round(readNumber(usage.outputTokens)),
+      Number(billing.estimatedUsd || 0),
+      now.toISOString()
+    ).run();
+  } catch {
+    // Usage accounting must not break the user-facing answer path.
+  }
+}
+
+function sanitizeUsageGate(gate = {}) {
+  return {
+    ok: Boolean(gate.ok),
+    reason: cleanText(gate.reason || ""),
+    monthlyEstimatedUsd: roundMoney(gate.snapshot?.monthlyEstimatedUsd || 0, 6),
+    dailyCalls: Number(gate.snapshot?.dailyCalls || 0),
+    monthlyStopUsd: Number(gate.settings?.monthlyStopUsd || 0),
+    dailyCallLimit: Number(gate.settings?.dailyCallLimit || 0)
+  };
+}
+
+function redactSensitiveText(value = "") {
+  return cleanText(value)
+    .replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi, "[email]")
+    .replace(/01[016789]-?\d{3,4}-?\d{4}/g, "[phone]")
+    .replace(/\d{2,3}-\d{3,4}-\d{4}/g, "[phone]")
+    .replace(/\d{6}-?[1-4]\d{6}/g, "[rrn]");
+}
+
+function isFeatureEnabled(value) {
+  return /^(true|1|yes|on)$/i.test(String(value || ""));
 }
 
 async function callOpenAiLegalAnalysis(openAiKey, payload, env = {}) {
@@ -479,6 +2146,323 @@ function summarizeSourceGrounding(sourceContext) {
     itemCount,
     notices: asArray(sourceContext.notices).slice(0, 4)
   };
+}
+
+function buildPolicyEngineFirstAnalyzeResult({
+  question = "",
+  topic = "general",
+  role = "auto",
+  partyRole = "auto",
+  topicContext = null,
+  mode = "intake",
+  caseId = "",
+  access = {},
+  env = {}
+} = {}) {
+  const policyResult = handlePolicyChatRequest({
+    question,
+    q: question,
+    topic,
+    roleLabel: role,
+    partyRole,
+    topicContext,
+    mode
+  }, {
+    officeLabel: env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
+  });
+
+  if (!shouldUsePolicyEngineFirstAnalyze(policyResult)) {
+    return null;
+  }
+
+  const now = new Date().toISOString();
+  return {
+    ok: true,
+    caseId,
+    engine: "policy-engine-first",
+    model: "policy-engine",
+    generatedAt: now,
+    analysis: buildLegalAnalysisFromPolicyResult(policyResult, {
+      question,
+      topic,
+      role,
+      partyRole,
+      topicContext,
+      mode
+    }),
+    usage: {
+      inputTokens: 0,
+      cachedInputTokens: 0,
+      outputTokens: 0,
+      totalTokens: 0
+    },
+    billing: buildZeroOpenAiBilling(env),
+    officialSources: null,
+    sourceGrounding: {
+      enabled: false,
+      checkedAt: now,
+      itemCount: 0,
+      notices: ["규정 엔진 확정 답변으로 OpenAI 분석을 생략했습니다."]
+    },
+    member: access.member ? sanitizeMember(access.member) : null,
+    costControl: getCostControlSettings(env),
+    policyEngineFirst: {
+      used: true,
+      skippedOpenAi: true,
+      reason: "usable_policy_result",
+      domainCode: cleanText(policyResult.semanticFrame?.domainCode || ""),
+      domainLabel: cleanText(policyResult.semanticFrame?.domainLabel || ""),
+      answerStatus: cleanText(policyResult.answerState?.status || ""),
+      sourceKeys: asArray(policyResult.policyResponse?.sourceKeys || policyResult.policyResponse?.ruleLookup?.sourceKeys).map(cleanText).filter(Boolean).slice(0, 8)
+    }
+  };
+}
+
+function shouldUsePolicyEngineFirstAnalyze(result = {}) {
+  if (!result?.ok || !result.policyResponse || !result.semanticFrame?.domainCode) {
+    return false;
+  }
+  if (result.semanticFrame?.intentClarification?.needsConfirmation) {
+    return false;
+  }
+  return hasUsableKakaoPolicyResult(result);
+}
+
+function buildLegalAnalysisFromPolicyResult(result = {}, context = {}) {
+  const frame = result.semanticFrame || {};
+  const policyResponse = result.policyResponse || {};
+  const answerTexts = extractPolicyAnswerTexts(result);
+  const coreFinding = getPolicyEngineCoreFinding(result, answerTexts);
+  const title = getPolicyEngineAnalysisTitle(result, context);
+  const sourceFocus = getPolicyEngineSourceFocus(result);
+  const slotFacts = getPolicyEngineSlotFacts(result);
+  const missingSlots = asArray(result.missingSlots || frame.missingSlots).map((slot) => getPolicySlotLabel(slot, frame));
+  const clarifyingQuestions = asArray(result.answerState?.slotQuestions || result.missingSlotQuestions)
+    .slice(0, 3)
+    .map((item) => ({
+      question: cleanText(item.question || ""),
+      why: `${cleanText(item.label || item.slot || "추가 정보")}에 따라 적용 규정이나 계산 결과가 달라질 수 있습니다.`,
+      answerType: "text"
+    }))
+    .filter((item) => item.question);
+
+  return {
+    title,
+    issueType: cleanText(frame.domainLabel || policyResponse.title || "규정·지침 확인"),
+    situationSummary: getPolicyEngineSituationSummary(result, context),
+    coreFinding,
+    confidence: result.answerState?.status === "definitive" ? "높음" : "보통",
+    knownFacts: uniqueStrings([
+      `질문: ${cleanText(context.question || result.question || "")}`,
+      frame.domainLabel ? `분류: ${frame.domainLabel}` : "",
+      ...slotFacts,
+      result.officeLabel ? `기준: ${result.officeLabel}` : ""
+    ]).slice(0, 6),
+    mustNotAssume: uniqueStrings([
+      result.officeLabel === "경상북도교육청" && !hasPolicyQuestionOfficeSignal(context.question || result.question)
+        ? "소속 교육청이 다르면 교육청 지침이나 학교 내부 규정 확인 결과가 달라질 수 있습니다."
+        : "",
+      policyResponse.caution || "",
+      "최종 집행 전에는 현행 원문, 시행일, 학교 내부 결재 기준을 함께 확인해야 합니다."
+    ]).slice(0, 5),
+    missingFacts: missingSlots.length
+      ? missingSlots
+      : ["현재 질문만으로 규정 엔진이 필수 슬롯을 충족한 것으로 판단했습니다."],
+    clarifyingQuestions,
+    keyIssues: buildPolicyEngineKeyIssues(result, answerTexts, sourceFocus),
+    immediateActions: buildPolicyEngineImmediateActions(result),
+    stakeholderActions: buildPolicyEngineStakeholderActions(result),
+    evidencePlan: buildPolicyEngineEvidencePlan(result),
+    legalConsequenceAssessment: buildPolicyEngineLegalConsequenceAssessment(result),
+    expertReferral: {
+      level: "내부확인",
+      reason: "규정표로 답할 수 있는 사안이므로 먼저 내부 복무·결재 기준과 소속 교육청 지침을 확인하면 됩니다.",
+      suggestedMessage: "현재 질문의 산정 기준과 적용 신분을 내부 복무 담당자에게 확인해 주세요."
+    },
+    sourceSearchQueries: asArray(policyResponse.queries).map(cleanText).filter(Boolean).slice(0, 8),
+    informationNotice: "이 답변은 법률 자문이나 사건 판단이 아니라 규정·지침 정보 정리입니다. 실제 조치 전에는 공식 원문과 기관 기준을 확인하세요."
+  };
+}
+
+function extractPolicyAnswerTexts(result = {}) {
+  const policyResponse = result.policyResponse || {};
+  return uniqueStrings([
+    result.answerState?.primaryText,
+    ...(result.answerState?.definitiveAnswers || []),
+    ...(result.answerState?.conditionalAnswers || []),
+    ...asArray(policyResponse.answer).map((item) => {
+      if (typeof item === "string") return item;
+      return item?.text || item?.summary || item?.title || "";
+    }),
+    policyResponse.lead,
+    policyResponse.caution
+  ]).filter(Boolean);
+}
+
+function getPolicyEngineCoreFinding(result = {}, answerTexts = []) {
+  return answerTexts.find((text) => /(?:\d+\s*일|원|상한|절차|승인|보고|진단서|증빙|전담기구|보호조치)/.test(text))
+    || cleanText(result.answerState?.primaryText || result.policyResponse?.lead || result.responseText || "규정 엔진 기준으로 답변 가능한 사안입니다.");
+}
+
+function getPolicyEngineAnalysisTitle(result = {}, context = {}) {
+  const frame = result.semanticFrame || {};
+  const serviceIssue = cleanText(frame.slots?.serviceIssue?.label || "");
+  const roleLabel = cleanText(frame.slots?.travelerRole?.subjectLabel || frame.slots?.targetSubject?.label || "");
+  const base = [roleLabel, serviceIssue].filter(Boolean).join(" ");
+  if (base) return `${base} 확인`;
+  return cleanText(result.policyResponse?.title || frame.domainLabel || context.topic || "규정·지침 확인");
+}
+
+function getPolicyEngineSituationSummary(result = {}, context = {}) {
+  const question = cleanText(context.question || result.question || "");
+  const domain = cleanText(result.semanticFrame?.domainLabel || "");
+  return `${question || "입력된 질문"}을 ${domain || "규정·지침"} 분야의 내부 규정 엔진으로 먼저 확인했습니다.`;
+}
+
+function getPolicyEngineSourceFocus(result = {}) {
+  const sourceKeys = asArray(result.policyResponse?.sourceKeys || result.policyResponse?.ruleLookup?.sourceKeys)
+    .map(cleanText)
+    .filter(Boolean);
+  return sourceKeys.length
+    ? `우선 출처 후보: ${sourceKeys.slice(0, 4).join(", ")}`
+    : "공식 규정·교육청 지침·학교 내부 기준";
+}
+
+function getPolicyEngineSlotFacts(result = {}) {
+  const frame = result.semanticFrame || {};
+  const slots = frame.slots || {};
+  return [
+    slots.travelerRole?.subjectLabel ? `대상: ${slots.travelerRole.subjectLabel}` : "",
+    slots.serviceIssue?.label ? `사유: ${slots.serviceIssue.label}` : "",
+    slots.employmentType?.label ? `고용 형태: ${slots.employmentType.label}` : "",
+    slots.destination?.label ? `출장지: ${slots.destination.label}` : "",
+    slots.duration?.days ? `기간: ${slots.duration.days}일` : "",
+    slots.riskSignal?.label ? `위험 신호: ${slots.riskSignal.label}` : ""
+  ].filter(Boolean);
+}
+
+function buildPolicyEngineKeyIssues(result = {}, answerTexts = [], sourceFocus = "") {
+  const texts = answerTexts.slice(0, 3);
+  if (!texts.length) {
+    texts.push(cleanText(result.policyResponse?.lead || result.responseText || "적용 규정과 지침을 확인합니다."));
+  }
+  return texts.map((text, index) => ({
+    title: index === 0 ? "핵심 답변" : `확인 기준 ${index + 1}`,
+    analysis: text,
+    sourceFocus
+  }));
+}
+
+function buildPolicyEngineImmediateActions(result = {}) {
+  const steps = asArray(result.policyResponse?.steps).map(cleanText).filter(Boolean);
+  if (steps.length) return steps.slice(0, 4);
+  return [
+    "적용 신분과 소속 기관 기준을 확인합니다.",
+    "공식 원문, 교육청 지침, 학교 내부 규정을 대조합니다.",
+    "나이스·결재·상담·회의록 등 필요한 기록을 남깁니다."
+  ];
+}
+
+function buildPolicyEngineStakeholderActions(result = {}) {
+  const domain = cleanText(result.semanticFrame?.domainLabel || "규정·지침");
+  return [
+    {
+      actor: "질문자",
+      actions: [
+        "본인 신분, 소속 교육청, 재직기간 또는 업무 단계를 확인합니다.",
+        "이미 사용한 일수와 증빙자료를 정리합니다."
+      ]
+    },
+    {
+      actor: "학교·기관",
+      actions: [
+        `${domain} 관련 내부 규정과 결재 기준을 확인합니다.`,
+        "공식 지침과 실제 처리 기록을 대조합니다."
+      ]
+    }
+  ];
+}
+
+function buildPolicyEngineEvidencePlan(result = {}) {
+  const frame = result.semanticFrame || {};
+  const issueCode = cleanText(frame.slots?.serviceIssue?.code || "");
+  const evidence = [
+    {
+      priority: "필수",
+      item: "적용 신분과 소속 기관 기준",
+      why: "교원, 기간제, 교육공무직, 사립학교 여부에 따라 적용 규정이 달라질 수 있습니다.",
+      how: "인사·복무 담당자, 학교 내부 규정, 소속 교육청 지침으로 확인합니다."
+    }
+  ];
+
+  if (frame.domainCode === "staffAttendanceService") {
+    evidence.push({
+      priority: "필수",
+      item: issueCode === "annualLeave" ? "재직기간과 올해 사용한 연가 일수" : "나이스 근무상황과 증빙자료",
+      why: "일수 산정과 승인 가능 여부의 직접 기준입니다.",
+      how: "나이스 근무상황, 복무 결재, 인사기록, 증빙자료를 대조합니다."
+    });
+  } else {
+    evidence.push({
+      priority: "권고",
+      item: "처리 기록과 공식 자료",
+      why: "사후 민원이나 분쟁 시 판단 근거가 됩니다.",
+      how: "상담기록, 회의록, 공문, 안내문, 공식 원문 링크를 함께 보관합니다."
+    });
+  }
+
+  return evidence.slice(0, 4);
+}
+
+function buildPolicyEngineLegalConsequenceAssessment(result = {}) {
+  return {
+    applies: false,
+    riskLevel: "해당 없음",
+    summary: "현재 질문은 우선 규정·지침 확인 사안으로 보이며 형사·민사 판단은 별도 사실관계가 있을 때만 검토합니다.",
+    criminalIssues: [],
+    civilIssues: [],
+    mitigationPlan: [],
+    sourceSearchQueries: asArray(result.policyResponse?.queries).map(cleanText).filter(Boolean).slice(0, 5),
+    caution: "분쟁, 손해, 징계, 형사 문제가 함께 제기되면 사실관계를 분리해 추가 상담이 필요합니다."
+  };
+}
+
+function buildZeroOpenAiBilling(env = {}) {
+  const costControl = getCostControlSettings(env);
+  return {
+    model: "policy-engine",
+    pricingDate: costControl.pricingDate,
+    estimatedUsd: 0,
+    estimatedKrw: 0,
+    krwPerUsd: costControl.krwPerUsd,
+    free: true,
+    reason: "policy_engine_first",
+    note: "규정 엔진 확정 답변으로 OpenAI API 호출을 생략했습니다."
+  };
+}
+
+function getPolicySlotLabel(slot = "", frame = {}) {
+  const labels = {
+    office: "소속 교육청",
+    targetSubject: "대상자",
+    travelerRole: frame.domainCode === "domesticTravelExpense" ? "출장자 신분" : "대상 신분",
+    role: "신분",
+    employmentType: "고용 형태",
+    schoolLevel: "학교급",
+    schoolRule: "학교 내부 규정",
+    procedureStage: "업무 단계",
+    dateRange: "기간",
+    evidence: "증빙",
+    riskSignal: "위험 신호",
+    familyRelation: "가족관계",
+    fiscalYear: "회계연도",
+    serviceIssue: "복무 사유"
+  };
+  return labels[slot] || cleanText(slot);
+}
+
+function hasPolicyQuestionOfficeSignal(text = "") {
+  return /교육청|서울|부산|대구|인천|광주|대전|울산|세종|경기|강원|충북|충남|전북|전남|경북|경상북도|경남|제주/.test(cleanText(text));
 }
 
 function parsePayloadList(value) {
@@ -1067,6 +3051,102 @@ async function softDeleteMember(adminContext, body = {}, env) {
   return { ok: true, uid };
 }
 
+async function approveKakaoMemberByAdmin(adminContext, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  const accessCode = normalizeKakaoAccessCode(body.accessCode || body.kakaoCode || "");
+  if (!accessCode) {
+    return {
+      error: "카카오톡 챗봇에서 받은 KAKAO-XXXXXXXX 식별번호를 입력해 주세요.",
+      code: "KAKAO_ACCESS_CODE_REQUIRED",
+      status: 400
+    };
+  }
+
+  const role = normalizeRole(body.role || "law", "law");
+  if (!LAW_ACCESS_ROLES.has(role) && !OWNER_ROLES.has(role)) {
+    return {
+      error: "카카오 챗봇 이용권한은 법률정보 회원 또는 총괄관리자 권한으로만 승인할 수 있습니다.",
+      code: "LAW_ROLE_REQUIRED",
+      status: 400
+    };
+  }
+
+  if (OWNER_ROLES.has(role) && !OWNER_ROLES.has(adminContext.member.role)) {
+    return {
+      error: "총괄관리자 권한 부여는 총괄관리자만 할 수 있습니다.",
+      code: "OWNER_GRANT_REQUIRED",
+      status: 403
+    };
+  }
+
+  const likeCode = `%${accessCode}%`;
+  const row = await env.MEMBER_DB.prepare(`
+    SELECT uid, email, display_name, school_name, phone, requested_role, role, status,
+           note, created_at, updated_at, approved_at, approved_by, last_login_at
+    FROM members
+    WHERE status != 'deleted'
+      AND (
+        UPPER(note) LIKE ?
+        OR UPPER(display_name) LIKE ?
+        OR UPPER(email) LIKE ?
+      )
+    ORDER BY updated_at DESC
+    LIMIT 1
+  `).bind(likeCode, likeCode, likeCode).first();
+
+  if (!row) {
+    return {
+      error: "해당 식별번호의 카카오 챗봇 이용 신청을 찾지 못했습니다. 사용자가 챗봇에서 승인 요청 버튼을 한 번 누른 뒤 다시 승인해 주세요.",
+      code: "KAKAO_MEMBER_NOT_FOUND",
+      status: 404,
+      accessCode
+    };
+  }
+
+  const target = mapMemberRow(row);
+  if (OWNER_ROLES.has(target.role) && !OWNER_ROLES.has(adminContext.member.role)) {
+    return {
+      error: "총괄관리자 권한은 총괄관리자만 변경할 수 있습니다.",
+      code: "OWNER_PROTECTED",
+      status: 403
+    };
+  }
+
+  const now = new Date().toISOString();
+  const note = mergeAdminNote(target.note, cleanText(body.note || `카카오 챗봇 승인: ${accessCode}`));
+
+  await env.MEMBER_DB.prepare(`
+    UPDATE members
+    SET role = ?,
+        status = 'approved',
+        note = ?,
+        updated_at = ?,
+        approved_at = COALESCE(approved_at, ?),
+        approved_by = COALESCE(approved_by, ?)
+    WHERE uid = ?
+  `).bind(role, note, now, now, adminContext.user.uid, target.uid).run();
+
+  await writeAuditLog(env, {
+    actorUid: adminContext.user.uid,
+    targetUid: target.uid,
+    action: "admin.member.kakao_approve",
+    detail: JSON.stringify({ accessCode, role })
+  });
+
+  return {
+    ok: true,
+    accessCode,
+    member: sanitizeMember(await getMemberByUid(target.uid, env))
+  };
+}
+
 async function createMemberInvitation(adminContext, body = {}, env) {
   if (!env.MEMBER_DB) {
     return {
@@ -1118,6 +3198,21 @@ async function createMemberInvitation(adminContext, body = {}, env) {
   };
 }
 
+function normalizeKakaoAccessCode(value = "") {
+  const code = cleanText(value).toUpperCase().replace(/\s+/g, "");
+  const match = code.match(/KAKAO-[A-F0-9]{8,10}/);
+  return match ? match[0] : "";
+}
+
+function mergeAdminNote(current = "", addition = "") {
+  const base = cleanText(current);
+  const next = cleanText(addition);
+  if (!next) return base;
+  if (!base) return next;
+  if (base.includes(next)) return base;
+  return `${base} / ${next}`;
+}
+
 async function getMemberForUser(user, env) {
   if (!user?.uid) {
     return null;
@@ -1134,6 +3229,15 @@ async function getMemberForUser(user, env) {
       .run()
       .catch(() => null);
     return member;
+  }
+
+  const emailMatchedMember = user.emailVerified ? await getMemberByEmail(user.email, env) : null;
+  if (emailMatchedMember) {
+    await env.MEMBER_DB.prepare("UPDATE members SET last_login_at = ?, updated_at = ? WHERE uid = ?")
+      .bind(new Date().toISOString(), new Date().toISOString(), emailMatchedMember.uid)
+      .run()
+      .catch(() => null);
+    return emailMatchedMember;
   }
 
   const virtual = buildVirtualMember(user, env);
@@ -1186,6 +3290,22 @@ async function getMemberByUid(uid, env) {
     FROM members
     WHERE uid = ?
   `).bind(uid).first();
+
+  return row ? mapMemberRow(row) : null;
+}
+
+async function getMemberByEmail(email, env) {
+  const normalizedEmail = cleanText(email || "").toLowerCase();
+  if (!env.MEMBER_DB || !normalizedEmail) {
+    return null;
+  }
+
+  const row = await env.MEMBER_DB.prepare(`
+    SELECT uid, email, display_name, school_name, phone, requested_role, role, status,
+           note, created_at, updated_at, approved_at, approved_by, last_login_at
+    FROM members
+    WHERE email = ? AND status != 'deleted'
+  `).bind(normalizedEmail).first();
 
   return row ? mapMemberRow(row) : null;
 }
@@ -1326,9 +3446,9 @@ async function writeAuditLog(env, item) {
 }
 
 async function verifyFirebaseIdToken(token, env) {
-  const projectId = cleanText(env.FIREBASE_PROJECT_ID || "");
-  if (!projectId) {
-    throw new Error("FIREBASE_PROJECT_ID 환경값이 필요합니다.");
+  const trustedProjectIds = getTrustedFirebaseProjectIds(env);
+  if (!trustedProjectIds.length) {
+    throw new Error("FIREBASE_PROJECT_ID 또는 FIREBASE_TRUSTED_PROJECT_IDS 환경값이 필요합니다.");
   }
 
   const parts = token.split(".");
@@ -1356,7 +3476,8 @@ async function verifyFirebaseIdToken(token, env) {
     throw new Error("로그인 토큰 시간이 올바르지 않습니다.");
   }
 
-  if (payload.aud !== projectId || payload.iss !== `https://securetoken.google.com/${projectId}`) {
+  const tokenProjectId = cleanText(payload.aud || "");
+  if (!trustedProjectIds.includes(tokenProjectId) || payload.iss !== `https://securetoken.google.com/${tokenProjectId}`) {
     throw new Error("로그인 토큰의 Firebase 프로젝트가 일치하지 않습니다.");
   }
 
@@ -1364,15 +3485,15 @@ async function verifyFirebaseIdToken(token, env) {
     throw new Error("로그인 토큰의 사용자 식별자가 올바르지 않습니다.");
   }
 
-  const certs = await getFirebaseCerts();
-  const cert = certs[header.kid];
-  if (!cert) {
+  const keys = await getFirebaseJwks();
+  const jwk = keys[header.kid];
+  if (!jwk) {
     throw new Error("로그인 토큰 검증 키를 찾지 못했습니다.");
   }
 
   const key = await crypto.subtle.importKey(
-    "spki",
-    pemToArrayBuffer(cert),
+    "jwk",
+    jwk,
     { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
     false,
     ["verify"]
@@ -1387,6 +3508,7 @@ async function verifyFirebaseIdToken(token, env) {
 
   return {
     uid: payload.sub,
+    authProjectId: tokenProjectId,
     email: cleanText(payload.email || "").toLowerCase(),
     emailVerified: Boolean(payload.email_verified),
     name: cleanText(payload.name || payload.email || ""),
@@ -1396,24 +3518,29 @@ async function verifyFirebaseIdToken(token, env) {
   };
 }
 
-async function getFirebaseCerts() {
-  if (firebaseCertCache && firebaseCertCache.expiresAt > Date.now()) {
-    return firebaseCertCache.certs;
+async function getFirebaseJwks() {
+  if (firebaseJwkCache && firebaseJwkCache.expiresAt > Date.now()) {
+    return firebaseJwkCache.keys;
   }
 
-  const response = await fetch(FIREBASE_CERT_URL);
+  const response = await fetch(FIREBASE_JWKS_URL);
   if (!response.ok) {
     throw new Error(`Firebase 공개키 조회 실패: HTTP ${response.status}`);
   }
 
-  const certs = await response.json();
+  const data = await response.json();
+  const keys = Object.fromEntries(
+    (Array.isArray(data.keys) ? data.keys : [])
+      .filter((key) => key?.kid)
+      .map((key) => [key.kid, key])
+  );
   const cacheControl = response.headers.get("cache-control") || "";
   const maxAge = Number(cacheControl.match(/max-age=(\d+)/)?.[1] || 3600);
-  firebaseCertCache = {
-    certs,
+  firebaseJwkCache = {
+    keys,
     expiresAt: Date.now() + Math.max(300, maxAge - 60) * 1000
   };
-  return certs;
+  return keys;
 }
 
 function parseJwtPart(value) {
@@ -1422,14 +3549,6 @@ function parseJwtPart(value) {
   } catch {
     throw new Error("로그인 토큰을 해석하지 못했습니다.");
   }
-}
-
-function pemToArrayBuffer(pem) {
-  const base64 = String(pem)
-    .replace(/-----BEGIN CERTIFICATE-----/g, "")
-    .replace(/-----END CERTIFICATE-----/g, "")
-    .replace(/\s+/g, "");
-  return base64ToBytes(base64);
 }
 
 function base64UrlToBytes(value) {
@@ -1454,6 +3573,42 @@ function getBearerToken(request) {
 
 function isAuthRequired(env) {
   return /^true$/i.test(String(env.AUTH_REQUIRED || ""));
+}
+
+function isKakaoAuthRequired(env = {}) {
+  const explicit = cleanText(env.KAKAO_AUTH_REQUIRED || "");
+  if (explicit) {
+    return /^true$/i.test(explicit);
+  }
+  return isAuthRequired(env);
+}
+
+function getTrustedFirebaseProjectIds(env = {}) {
+  return uniqueStrings([
+    cleanText(env.FIREBASE_PROJECT_ID || ""),
+    ...String(env.FIREBASE_TRUSTED_PROJECT_IDS || "")
+      .split(",")
+      .map((item) => cleanText(item))
+  ]).filter(Boolean);
+}
+
+function uniqueStrings(values = []) {
+  return [...new Set(values.map((value) => cleanText(value)).filter(Boolean))];
+}
+
+function hasValidKakaoSkillToken(request, url, env) {
+  const expected = cleanText(env.KAKAO_SKILL_TOKEN || "");
+  if (!expected) {
+    return true;
+  }
+
+  const provided = cleanText(
+    url.searchParams.get("token") ||
+    request.headers.get("x-gyo6-kakao-token") ||
+    request.headers.get("x-kakao-skill-token") ||
+    ""
+  );
+  return provided === expected;
 }
 
 function normalizeRole(value, fallback = "pending") {

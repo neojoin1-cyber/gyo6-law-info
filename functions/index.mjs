@@ -24,11 +24,19 @@ export const api = onRequest({
     }
 
     if (apiPath === "/search") {
+      if (!isLegacySearchEnabled()) {
+        return sendJson(response, {
+          error: "레거시 공식자료 검색 API는 비활성화되어 있습니다. 법률정보 회원 권한을 확인하는 Worker API를 사용해 주세요.",
+          code: "LEGACY_SEARCH_DISABLED",
+          status: 410
+        }, 410);
+      }
       return sendJson(response, await apiClient.handleSearch(requestUrl));
     }
 
     if (apiPath === "/analyze") {
-      return sendJson(response, await apiClient.handleAnalyze(requestUrl));
+      const result = await apiClient.handleAnalyze(requestUrl);
+      return sendJson(response, result, getResultStatus(result));
     }
 
     return sendJson(response, { error: "지원하지 않는 API 경로입니다." }, 404);
@@ -60,4 +68,13 @@ function sendJson(response, data, status = 200) {
     "content-type": "application/json; charset=utf-8",
     "cache-control": "no-store"
   }).send(JSON.stringify(data));
+}
+
+function getResultStatus(data) {
+  const status = Number(data?.status || 200);
+  return Number.isInteger(status) && status >= 100 && status <= 599 ? status : 200;
+}
+
+function isLegacySearchEnabled() {
+  return /^true$/i.test(String(process.env.LEGACY_SEARCH_ENABLED || "").trim());
 }

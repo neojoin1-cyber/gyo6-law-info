@@ -4,6 +4,7 @@ import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createApi } from "./functions/shared/api.mjs";
+import { buildKakaoSkillResponse, handlePolicyChatRequest } from "./functions/shared/policy-chat.mjs";
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(rootDir, "public");
@@ -35,11 +36,38 @@ createServer(async (request, response) => {
     }
 
     if (requestUrl.pathname === "/api/search") {
+      if (!isLegacySearchEnabled(env)) {
+        return sendJson(response, {
+          error: "레거시 공식자료 검색 API는 비활성화되어 있습니다. 법률정보 회원 권한을 확인하는 Worker API를 사용해 주세요.",
+          code: "LEGACY_SEARCH_DISABLED",
+          status: 410
+        }, 410);
+      }
       return sendJson(response, await api.handleSearch(requestUrl));
     }
 
     if (requestUrl.pathname === "/api/analyze") {
-      return sendJson(response, await api.handleAnalyze(requestUrl));
+      const result = await api.handleAnalyze(requestUrl);
+      return sendJson(response, result, getResultStatus(result));
+    }
+
+    if (requestUrl.pathname === "/api/policy") {
+      const payload = request.method === "POST"
+        ? await readJsonBody(request)
+        : Object.fromEntries(requestUrl.searchParams.entries());
+      return sendJson(response, handlePolicyChatRequest(payload, {
+        officeLabel: env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
+      }));
+    }
+
+    if (requestUrl.pathname === "/api/kakao/skill") {
+      if (request.method !== "POST") {
+        return sendJson(response, { error: "지원하지 않는 HTTP 메서드입니다." }, 405);
+      }
+
+      return sendJson(response, buildKakaoSkillResponse(await readJsonBody(request), {
+        detailUrl: env.PUBLIC_SITE_URL || "https://gyo6-law-info.web.app/"
+      }));
     }
 
     return serveStatic(requestUrl, response);
@@ -115,7 +143,34 @@ function sendJson(response, data, status = 200) {
   response.end(JSON.stringify(data));
 }
 
+function getResultStatus(data) {
+  const status = Number(data?.status || 200);
+  return Number.isInteger(status) && status >= 100 && status <= 599 ? status : 200;
+}
+
+function isLegacySearchEnabled(environment = {}) {
+  return /^true$/i.test(String(environment.LEGACY_SEARCH_ENABLED || "").trim());
+}
+
 function sendText(response, text, status = 200) {
   response.writeHead(status, { "content-type": "text/plain; charset=utf-8" });
   response.end(text);
+}
+
+async function readJsonBody(request) {
+  const chunks = [];
+  for await (const chunk of request) {
+    chunks.push(Buffer.from(chunk));
+  }
+
+  const text = Buffer.concat(chunks).toString("utf-8").trim();
+  if (!text) {
+    return {};
+  }
+
+  try {
+    return JSON.parse(text);
+  } catch {
+    return {};
+  }
 }

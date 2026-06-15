@@ -1,6 +1,21 @@
 let activeEnv = {};
 
 const MODEL_PRICE_DEFAULTS = {
+  "gpt-5.4-nano": {
+    inputUsdPer1M: 0.2,
+    cachedInputUsdPer1M: 0.02,
+    outputUsdPer1M: 1.25
+  },
+  "gpt-5.4-mini": {
+    inputUsdPer1M: 0.75,
+    cachedInputUsdPer1M: 0.075,
+    outputUsdPer1M: 4.5
+  },
+  "gpt-5.4": {
+    inputUsdPer1M: 2.5,
+    cachedInputUsdPer1M: 0.25,
+    outputUsdPer1M: 15
+  },
   "gpt-5.2": {
     inputUsdPer1M: 1.75,
     cachedInputUsdPer1M: 0.175,
@@ -16,9 +31,9 @@ const MODEL_PRICE_DEFAULTS = {
 const DEFAULT_COST_CONTROL = {
   krwPerUsd: 1500,
   monthlyWarnUsd: 10,
-  monthlyStopUsd: 50,
+  monthlyStopUsd: 20,
   dailyCallLimit: 30,
-  pricingDate: "2026-05-30"
+  pricingDate: "2026-06-13"
 };
 
 export function createApi(env = {}) {
@@ -128,6 +143,15 @@ async function handleAnalyze(requestUrl) {
 
   if (!question) {
     return { error: "질문이 비어 있습니다." };
+  }
+
+  if (!isLegacyAnalyzeEnabled(activeEnv)) {
+    return {
+      error: "레거시 AI 분석 API는 비활성화되어 있습니다. 법률정보 회원 권한을 확인하는 Worker API를 사용해 주세요.",
+      code: "LEGACY_ANALYZE_DISABLED",
+      status: 410,
+      fallback: true
+    };
   }
 
   if (!hasUsableValue(openAiKey)) {
@@ -2672,6 +2696,10 @@ function hasUsableValue(value) {
   }
 
   return !/(나중|대기|신청|준비|pending|todo|none|null)/i.test(text);
+}
+
+function isLegacyAnalyzeEnabled(env = {}) {
+  return /^true$/i.test(cleanText(env.LEGACY_ANALYZE_ENABLED || ""));
 }
 
 function cleanText(value) {
