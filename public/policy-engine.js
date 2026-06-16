@@ -1083,7 +1083,7 @@
     }
 
     if (domainCode === "staffAttendanceService") {
-      return buildStaffAttendanceLead(domainLabel, subjectLabel, slots);
+      return buildStaffAttendanceLead(domainLabel, subjectLabel, slots, frame);
     }
 
     if (domainCode === "bereavementLeave") {
@@ -1276,7 +1276,22 @@
     return domain.answerStrategy || `${domainLabel} 사안은 ${taskLabel}에 맞춰 필요한 조치와 증빙자료를 학교 내부 규정과 공식 지침에 따라 확인합니다.`;
   }
 
-  function buildStaffAttendanceLead(domainLabel, subjectLabel, slots) {
+  function getSickLeaveMedicalCertificateText(rule = {}) {
+    return rule.medicalCertificateRule
+      || "병가 일수가 연간 6일을 초과하면 의사·치과의사·한의사가 발급한 진단서를 첨부하는 기준을 우선 확인합니다.";
+  }
+
+  function isSickLeaveEvidenceQuestion(slots = {}, frame = {}) {
+    const text = `${frame.question || ""} ${frame.normalized || ""}`;
+    return Boolean(
+      slots.evidence?.detected
+      || frame.task?.code === "evidenceCheck"
+      || frame.task?.code === "evidence"
+      || /서류|증빙|진단서|확인서|입원확인|진료확인|처방전|뭐\s*필요|뭐필요/.test(text)
+    );
+  }
+
+  function buildStaffAttendanceLead(domainLabel, subjectLabel, slots, frame = {}) {
     const issueCode = getStaffIssueCode(slots);
     const issueLabel = slots.serviceIssue?.label || "복무·근태";
     const employmentLabel = getStaffEmploymentLabel(slots, subjectLabel);
@@ -1291,8 +1306,8 @@
       return `${domainLabel} 질문에서 ${subjectLabel}의 연가는 ${employmentLabel} 기준의 일수 산정과 나이스 근무상황 신청·학교장 승인 절차를 함께 확인합니다.`;
     }
     if (issueCode === "sickLeave") {
-      if (slots.evidence?.detected) {
-        return `${subjectLabel}의 병가 증빙은 병가 사용일수와 사유를 기준으로 보며, 연간 병가가 6일을 초과하면 의사의 진단서 등 증빙자료를 첨부하는 기준이 핵심입니다.`;
+      if (isSickLeaveEvidenceQuestion(slots, frame)) {
+        return `${subjectLabel}의 병가 서류는 병가 사용일수와 사유를 기준으로 보며, 연간 병가가 6일을 초과하면 의사·치과의사·한의사가 발급한 진단서를 첨부하는 기준이 핵심입니다.`;
       }
       if (getStaffEmploymentCode(slots) === "fixedTerm") {
         return `${subjectLabel}의 병가는 공립 교원 복무 기준을 준용하는 경우 일반 병가 60일, 공무상 병가 180일 범위가 기준 후보입니다.`;
@@ -1348,7 +1363,7 @@
       if (hasSeparateStaffRule) return buildOtherStaffAttendanceAnswers(subjectLabel, slots, frame, missingText);
       return isFixedTerm
         ? buildFixedTermSickLeaveAnswers(subjectLabel, slots, frame, missingText)
-        : buildPublicTeacherSickLeaveAnswers(subjectLabel, missingText);
+        : buildPublicTeacherSickLeaveAnswers(subjectLabel, slots, frame, missingText);
     }
 
     if (issueCode === "tardyEarlyLeave" || issueCode === "attendanceRecord") {
@@ -1395,11 +1410,13 @@
     const publicRule = STAFF_ATTENDANCE.publicTeacher?.sickLeave || {};
     const normalDays = rule.normalDays || publicRule.normalDays || 60;
     const officialDays = rule.officialInjuryDays || publicRule.officialInjuryDays || 180;
-    const evidenceFocused = slots.evidence?.detected || frame.task?.code === "evidenceCheck";
+    const evidenceFocused = isSickLeaveEvidenceQuestion(slots, frame);
     const coreAnswer = `${subjectLabel}의 병가는 사립학교에서는 학교법인 복무규정·취업규칙·근로계약이 직접 기준입니다. 다만 해당 학교가 교원휴가 기준을 준용하면 일반 질병·부상 병가는 연 ${normalDays}일, 공무상 질병·부상 병가는 연 ${officialDays}일이 기준 후보입니다.`;
-    const evidenceAnswer = rule.evidenceRule || "교원휴가 기준을 준용하는 경우 병가 일수가 연간 6일을 초과하면 의사의 진단서를 첨부하는 기준을 함께 봅니다.";
+    const certificateAnswer = getSickLeaveMedicalCertificateText(publicRule);
+    const evidenceAnswer = rule.evidenceRule || "교원휴가 기준을 준용하는 경우 병가 일수가 연간 6일을 초과하면 의사·치과의사·한의사가 발급한 진단서를 첨부하는 기준을 함께 봅니다.";
     return uniqueStrings([
       evidenceFocused ? evidenceAnswer : coreAnswer,
+      evidenceFocused ? certificateAnswer : "",
       evidenceFocused ? coreAnswer : evidenceAnswer,
       rule.hourlyConversion || "교원휴가 기준을 준용하는 경우 질병·부상으로 인한 지각·조퇴·외출은 누계 8시간을 병가 1일로 계산합니다.",
       rule.approval || "나이스 근무상황 또는 학교 내부 복무 신청으로 병가를 상신하고 학교법인 규정상 승인권자와 증빙 기준을 확인합니다.",
@@ -1537,14 +1554,19 @@
     return /결근없|결근없이|무결근|개근|빠짐없이|출근율100|출근율백/.test(normalized);
   }
 
-  function buildPublicTeacherSickLeaveAnswers(subjectLabel, missingText) {
+  function buildPublicTeacherSickLeaveAnswers(subjectLabel, slots, frame, missingText) {
     const rule = STAFF_ATTENDANCE.publicTeacher?.sickLeave || {};
     const normalDays = rule.normalDays || 60;
     const officialDays = rule.officialInjuryDays || 180;
+    const limitAnswer = `${subjectLabel}의 병가는 국가공무원 복무규정 제18조 기준으로 일반 질병·부상은 연 ${normalDays}일, 공무상 질병·부상은 연 ${officialDays}일 범위에서 승인할 수 있습니다.`;
+    const certificateAnswer = getSickLeaveMedicalCertificateText(rule);
+    const evidenceAnswer = rule.evidenceRule || "병가 일수가 연간 6일을 초과하면 의사·치과의사·한의사가 발급한 진단서를 첨부해야 합니다.";
+    const evidenceFocused = isSickLeaveEvidenceQuestion(slots, frame);
     return uniqueStrings([
-      `${subjectLabel}의 병가는 국가공무원 복무규정 제18조 기준으로 일반 질병·부상은 연 ${normalDays}일, 공무상 질병·부상은 연 ${officialDays}일 범위에서 승인할 수 있습니다.`,
+      evidenceFocused ? evidenceAnswer : limitAnswer,
+      evidenceFocused ? certificateAnswer : "",
+      evidenceFocused ? limitAnswer : evidenceAnswer,
       rule.hourlyConversion || "질병·부상으로 인한 지각·조퇴·외출은 누계 8시간을 병가 1일로 계산합니다.",
-      rule.evidenceRule || "병가 일수가 연간 6일을 초과하면 의사의 진단서를 첨부해야 합니다.",
       rule.approval || "나이스 근무상황에서 병가로 신청하고 진단서 등 증빙과 학교장 승인을 맞춰 처리합니다.",
       missingText ? `현재 질문에는 ${missingText}가 없어 실제 승인 가능 여부는 증빙과 학교장 승인 단계에서 확정합니다.` : ""
     ]);
@@ -1552,11 +1574,14 @@
 
   function buildFixedTermSickLeaveAnswers(subjectLabel, slots, frame, missingText) {
     const rule = STAFF_ATTENDANCE.fixedTermTeacher?.sickLeave || {};
+    const publicRule = STAFF_ATTENDANCE.publicTeacher?.sickLeave || {};
     const generalAnswer = `${subjectLabel}의 병가는 공립 교원 복무 기준을 준용하는 경우 일반 병가 60일, 공무상 병가 180일 범위가 기준 후보입니다. 실제 유급·무급과 사용 가능 일수는 소속 교육청 계약제교원 운영 지침과 근로계약을 함께 적용합니다.`;
-    const evidenceAnswer = rule.approval || "나이스 근무상황 또는 학교 내부 복무 신청으로 병가를 상신하고, 연간 병가가 6일을 초과하면 의사의 진단서 등 증빙자료를 첨부하는 기준을 우선 확인합니다.";
-    const evidenceFocused = slots.evidence?.detected || frame.task?.code === "evidence";
+    const certificateAnswer = getSickLeaveMedicalCertificateText(publicRule);
+    const evidenceAnswer = rule.approval || "나이스 근무상황 또는 학교 내부 복무 신청으로 병가를 상신하고, 연간 병가가 6일을 초과하면 의사·치과의사·한의사 진단서 등 증빙자료를 첨부하는 기준을 우선 확인합니다.";
+    const evidenceFocused = isSickLeaveEvidenceQuestion(slots, frame);
     return uniqueStrings([
       evidenceFocused ? evidenceAnswer : generalAnswer,
+      evidenceFocused ? certificateAnswer : "",
       evidenceFocused ? generalAnswer : evidenceAnswer,
       "진단서, 승인 이력, 병가 사용일수, 동일 사례 처리 기준은 복무평가·재계약 불이익 여부를 판단할 때도 중요한 증빙이 됩니다.",
       frame.task?.code === "disputeRisk" ? "병가 사용만으로 불이익을 주는지, 증빙 부족·무단결근·계약상 의무 위반처럼 별도 사유가 있는지를 구분해야 합니다." : "",
@@ -1606,8 +1631,8 @@
       return uniqueStrings([
         `${subjectLabel}의 병가 사유가 일반 질병·부상인지 공무상 질병·부상인지 구분`,
         "나이스 근무상황 또는 학교 내부 복무 신청으로 병가 상신",
-        "연간 병가 사용일수와 진단서 제출 기준 확인",
-        "승인 결재, 진단서·입원확인서 등 증빙, 처리 이력 보존",
+        "연간 병가 사용일수와 의사·치과의사·한의사 진단서 제출 기준 확인",
+        "승인 결재, 진단서·입원확인서·진료확인서 등 증빙, 처리 이력 보존",
         ...(frame.task?.code === "disputeRisk" ? ["복무평가·계약연장 불이익이 있으면 동일 사례와 서면 기준 확인"] : [])
       ]);
     }

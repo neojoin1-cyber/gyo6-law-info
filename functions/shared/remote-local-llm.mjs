@@ -43,8 +43,9 @@ export async function maybeApplyRemoteLocalPolicyLlm(payload = {}, baseResult = 
       });
     }
 
+    const guardedRemoteResult = applyRequiredPolicyAnchors(remoteResult, baseResult);
     return {
-      ...remoteResult,
+      ...guardedRemoteResult,
       remoteLocalLlm: {
         ok: true,
         skipped: false,
@@ -78,6 +79,123 @@ export function getRemoteLocalLlmConfig(env = {}) {
     token,
     timeoutMs: clampNumber(env.REMOTE_LOCAL_LLM_TIMEOUT_MS, 3000, 55000, DEFAULT_REMOTE_TIMEOUT_MS)
   };
+}
+
+function applyRequiredPolicyAnchors(remoteResult = {}, baseResult = {}) {
+  const requiredLines = getRequiredPolicyAnchorLines(baseResult);
+  if (!requiredLines.length) return remoteResult;
+
+  const remoteText = [
+    remoteResult.responseText,
+    remoteResult.policyResponse?.lead,
+    ...asArray(remoteResult.policyResponse?.answer),
+    ...asArray(remoteResult.policyResponse?.steps),
+    remoteResult.policyResponse?.caution
+  ].map(cleanLongText).filter(Boolean).join(" ");
+  const missingLines = requiredLines.filter((line) => {
+    if (/한의사/.test(line) && /진단서/.test(line)) {
+      return !/한의사/.test(remoteText) || !/진단서/.test(remoteText);
+    }
+    return !remoteText.includes(line);
+  });
+  const certificateLine = requiredLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
+  const shouldPromoteCertificateLead = certificateLine && !/한의사/.test(cleanLongText(remoteResult.policyResponse?.lead || ""));
+  const remoteAnswerLines = asArray(remoteResult.policyResponse?.answer)
+    .filter((line) => !isLessSpecificMedicalCertificateLine(line));
+  const remoteStepLines = asArray(remoteResult.policyResponse?.steps)
+    .filter((line) => !isLessSpecificMedicalCertificateLine(line));
+  const shouldFilterAnswer = remoteAnswerLines.length !== asArray(remoteResult.policyResponse?.answer).length;
+  const shouldFilterSteps = remoteStepLines.length !== asArray(remoteResult.policyResponse?.steps).length;
+  const shouldFilterResponseText = String(remoteResult.responseText || "").split(/\n+/).some((line) => isLessSpecificMedicalCertificateLine(line));
+  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldFilterAnswer && !shouldFilterSteps && !shouldFilterResponseText) return remoteResult;
+
+  const nextAnswer = uniqueLines([...missingLines, ...remoteAnswerLines]).slice(0, 8);
+  const nextLead = shouldPromoteCertificateLead ? certificateLine : remoteResult.policyResponse?.lead;
+  return {
+    ...remoteResult,
+    policyResponse: {
+      ...(remoteResult.policyResponse || {}),
+      lead: nextLead,
+      answer: nextAnswer,
+      steps: remoteStepLines
+    },
+    answerState: {
+      ...(remoteResult.answerState || {}),
+      primaryText: shouldPromoteCertificateLead ? certificateLine : remoteResult.answerState?.primaryText,
+      conditionalAnswers: uniqueLines([...missingLines, ...asArray(remoteResult.answerState?.conditionalAnswers)]).slice(0, 5)
+    },
+    responseText: prependRequiredLines(remoteResult.responseText, missingLines, shouldPromoteCertificateLead ? certificateLine : "")
+  };
+}
+
+function getRequiredPolicyAnchorLines(baseResult = {}) {
+  const frame = baseResult.semanticFrame || {};
+  const issueCode = cleanText(frame.slots?.serviceIssue?.code || "");
+  const issueLabel = cleanText(frame.slots?.serviceIssue?.label || "");
+  const question = cleanText(baseResult.question || frame.question || "");
+  const isSickLeave = frame.domainCode === "staffAttendanceService"
+    && (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question));
+  if (!isSickLeave) return [];
+
+  const sourceLines = [
+    baseResult.policyResponse?.lead,
+    ...asArray(baseResult.policyResponse?.answer),
+    ...asArray(baseResult.policyResponse?.steps),
+    baseResult.policyResponse?.caution
+  ].map(cleanLongText).filter(Boolean);
+  const certificateLine = sourceLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
+  const certificateDetailLine = sourceLines.find((line) => /(입원확인서|진료확인서)/.test(line) && /(보조자료|대체 가능|별도로 확인)/.test(line));
+  return uniqueLines([certificateLine, certificateDetailLine]);
+}
+
+function prependRequiredLines(responseText = "", missingLines = [], promotedLead = "") {
+  const lines = String(responseText || "").split(/\n+/).map(cleanLongText).filter(Boolean);
+  const requiredBullets = uniqueLines(missingLines)
+    .filter((line) => line !== promotedLead)
+    .map((line) => `- ${line}`);
+  if (!lines.length) return [promotedLead, ...requiredBullets].filter(Boolean).join("\n").slice(0, 1600);
+  if (promotedLead) {
+    return renumberOrderedSteps([
+      promotedLead,
+      ...requiredBullets,
+      ...lines.slice(1).filter((line) => !isLessSpecificMedicalCertificateLine(line))
+    ].join("\n")).slice(0, 1600);
+  }
+  return renumberOrderedSteps([
+    lines[0],
+    ...requiredBullets,
+    ...lines.slice(1).filter((line) => !isLessSpecificMedicalCertificateLine(line))
+  ].join("\n")).slice(0, 1600);
+}
+
+function uniqueLines(items = []) {
+  return [...new Set(asArray(items).map(cleanLongText).filter(Boolean))];
+}
+
+function renumberOrderedSteps(text = "") {
+  let stepIndex = 0;
+  let inStepBlock = false;
+  return String(text || "").split("\n").map((line) => {
+    const current = cleanLongText(line);
+    if (current === "확인 순서") {
+      stepIndex = 0;
+      inStepBlock = true;
+      return current;
+    }
+    if (inStepBlock && /^\d+\.\s+/.test(current)) {
+      stepIndex += 1;
+      return current.replace(/^\d+\./, `${stepIndex}.`);
+    }
+    if (inStepBlock && current && !/^\d+\.\s+/.test(current)) {
+      inStepBlock = false;
+    }
+    return current;
+  }).filter(Boolean).join("\n");
+}
+
+function isLessSpecificMedicalCertificateLine(line = "") {
+  const text = cleanLongText(line);
+  return /(의사.*진단서|진단서.*의사)/.test(text) && !/(한의사|치과의사)/.test(text);
 }
 
 async function fetchRemoteBridge(config = {}, body = {}) {

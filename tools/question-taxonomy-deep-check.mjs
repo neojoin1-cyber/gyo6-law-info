@@ -566,7 +566,7 @@ const guideCases = [
     question: "사립학교 교사의 최대 병가일수는?",
     domain: "staffAttendanceService",
     needsIntentConfirmation: false,
-    mustInclude: ["사립학교", "학교법인", "60일", "180일", "진단서"],
+    mustInclude: ["사립학교", "학교법인", "60일", "180일", "진단서", "한의사"],
     mustNotInclude: ["증빙자료가 없어 최종 일수", "질문 요지 확인 필요"]
   },
   {

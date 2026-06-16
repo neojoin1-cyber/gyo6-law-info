@@ -20,7 +20,8 @@ const SMART_INPUT_CASES = [
       "기간제쌤 병까 진단서 몇일 기준?",
       "나이스 근무상황 병가 상신할 때 증빙자료 뭐 봐야 함"
     ],
-    includes: ["병가"]
+    includes: ["병가"],
+    mustInclude: ["진단서", "한의사"]
   },
   {
     id: "spouse-childbirth",
@@ -277,6 +278,11 @@ for (const testCase of SMART_INPUT_CASES) {
     }
     if (!matchesAny(text, testCase.includes || [])) {
       addFailure(testCase.id, question, `answer text did not include any expected anchor: ${(testCase.includes || []).join(", ")}`, result);
+    }
+    for (const anchor of testCase.mustInclude || []) {
+      if (!text.includes(anchor)) {
+        addFailure(testCase.id, question, `answer text missed required anchor: ${anchor}`, result);
+      }
     }
     for (const leak of INTERNAL_LEAKS) {
       if (text.includes(leak)) {

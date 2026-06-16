@@ -599,15 +599,16 @@ export function scoreLocalPolicyResult(result = {}) {
 }
 
 function attachLocalPolicyDraft(result = {}, draft = {}, metadata = {}) {
+  const guardedDraft = applyRequiredPolicyAnchors(draft, result);
   const nextResponse = {
     ...(result.policyResponse || {}),
-    title: draft.title || result.policyResponse?.title || "",
-    lead: draft.lead || result.policyResponse?.lead || "",
-    answer: draft.answer.length ? draft.answer : result.policyResponse?.answer || [],
-    steps: draft.steps.length ? draft.steps : result.policyResponse?.steps || [],
-    caution: draft.caution || result.policyResponse?.caution || ""
+    title: guardedDraft.title || result.policyResponse?.title || "",
+    lead: guardedDraft.lead || result.policyResponse?.lead || "",
+    answer: guardedDraft.answer.length ? guardedDraft.answer : result.policyResponse?.answer || [],
+    steps: guardedDraft.steps.length ? guardedDraft.steps : result.policyResponse?.steps || [],
+    caution: guardedDraft.caution || result.policyResponse?.caution || ""
   };
-  const nextPrimaryText = draft.lead || draft.answer[0] || result.answerState?.primaryText || "";
+  const nextPrimaryText = guardedDraft.lead || guardedDraft.answer[0] || result.answerState?.primaryText || "";
 
   return {
     ...result,
@@ -615,18 +616,80 @@ function attachLocalPolicyDraft(result = {}, draft = {}, metadata = {}) {
     answerState: {
       ...(result.answerState || {}),
       primaryText: nextPrimaryText,
-      conditionalAnswers: draft.answer.slice(1, 5),
-      slotQuestions: draft.followupQuestions.length
-        ? draft.followupQuestions.map((question, index) => ({
+      conditionalAnswers: guardedDraft.answer.slice(1, 5),
+      slotQuestions: guardedDraft.followupQuestions.length
+        ? guardedDraft.followupQuestions.map((question, index) => ({
             slot: `local_llm_followup_${index + 1}`,
             label: "추가 확인",
             question
           }))
         : result.answerState?.slotQuestions || []
     },
-    responseText: formatLocalPolicyDraftText(draft, result),
+    responseText: formatLocalPolicyDraftText(guardedDraft, result),
     localLlmComposer: metadata
   };
+}
+
+function applyRequiredPolicyAnchors(draft = {}, result = {}) {
+  const requiredLines = getRequiredPolicyAnchorLines(result);
+  if (!requiredLines.length) return draft;
+
+  const draftText = [
+    draft.title,
+    draft.lead,
+    ...asArray(draft.answer),
+    ...asArray(draft.steps),
+    draft.caution
+  ].map(cleanLongText).filter(Boolean).join(" ");
+  const missingLines = requiredLines.filter((line) => {
+    if (/한의사/.test(line) && /진단서/.test(line)) {
+      return !/한의사/.test(draftText) || !/진단서/.test(draftText);
+    }
+    return !draftText.includes(line);
+  });
+  const certificateLine = requiredLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
+  const shouldPromoteCertificateLead = certificateLine && !/한의사/.test(cleanLongText(draft.lead || ""));
+  const filteredAnswer = asArray(draft.answer).filter((line) => !isLessSpecificMedicalCertificateLine(line));
+  const filteredSteps = asArray(draft.steps).filter((line) => !isLessSpecificMedicalCertificateLine(line));
+  const shouldFilterAnswer = filteredAnswer.length !== asArray(draft.answer).length;
+  const shouldFilterSteps = filteredSteps.length !== asArray(draft.steps).length;
+  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldFilterAnswer && !shouldFilterSteps) return draft;
+
+  return {
+    ...draft,
+    lead: shouldPromoteCertificateLead ? certificateLine : draft.lead,
+    answer: uniqueDraftLines([...missingLines, ...filteredAnswer]).slice(0, 5),
+    steps: filteredSteps
+  };
+}
+
+function getRequiredPolicyAnchorLines(result = {}) {
+  const frame = result.semanticFrame || {};
+  const issueCode = cleanText(frame.slots?.serviceIssue?.code || "");
+  const issueLabel = cleanText(frame.slots?.serviceIssue?.label || "");
+  const question = cleanText(result.question || frame.question || frame.normalized || "");
+  const isSickLeave = frame.domainCode === "staffAttendanceService"
+    && (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question));
+  if (!isSickLeave) return [];
+
+  const sourceLines = [
+    result.policyResponse?.lead,
+    ...asArray(result.policyResponse?.answer),
+    ...asArray(result.policyResponse?.steps),
+    result.policyResponse?.caution
+  ].map(cleanLongText).filter(Boolean);
+  const certificateLine = sourceLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
+  const certificateDetailLine = sourceLines.find((line) => /(입원확인서|진료확인서)/.test(line) && /(보조자료|대체 가능|별도로 확인)/.test(line));
+  return uniqueDraftLines([certificateLine, certificateDetailLine]);
+}
+
+function uniqueDraftLines(items = []) {
+  return [...new Set(asArray(items).map(cleanLongText).filter(Boolean))];
+}
+
+function isLessSpecificMedicalCertificateLine(line = "") {
+  const text = cleanLongText(line);
+  return /(의사.*진단서|진단서.*의사)/.test(text) && !/(한의사|치과의사)/.test(text);
 }
 
 function attachLocalLlmMetadata(result = {}, metadata = {}) {

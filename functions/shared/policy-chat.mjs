@@ -544,7 +544,15 @@ function getDomainSpecificKakaoSummary(result = {}, policyResponse = {}, frame =
     }
 
     if (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question)) {
-      const sickLeaveText = answerTexts.find((text) => /60일|180일|진단서|6일/.test(text)) || "";
+      const evidenceFocused = /서류|증빙|진단서|확인서|입원확인|진료확인|뭐\s*필요|뭐필요/.test(question);
+      if (evidenceFocused) {
+        const evidenceText = answerTexts.find((text) => /의사|치과의사|한의사|진단서|증빙자료|6일/.test(text)) || "";
+        return getCompactSentence(
+          evidenceText || `${roleLabel || "교직원"} 병가 서류는 병가 사용일수에 따라 달라지며, 연간 6일 초과 병가는 의사·치과의사·한의사가 발급한 진단서 기준을 먼저 확인합니다.`,
+          240
+        );
+      }
+      const sickLeaveText = answerTexts.find((text) => /60일|180일|진단서|한의사|6일/.test(text)) || "";
       return getCompactSentence(
         sickLeaveText || `${roleLabel || "교직원"} 병가는 일반 병가와 공무상 병가, 진단서 기준, 나이스 근무상황 신청 절차를 함께 확인합니다.`,
         220

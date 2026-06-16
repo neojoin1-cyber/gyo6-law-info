@@ -104,6 +104,7 @@ const sickLeaveEvidenceFollowUp = buildKakaoSkillResponse({
 const sickLeaveEvidenceFollowUpText = sickLeaveEvidenceFollowUp.template.outputs[0].simpleText.text;
 assert.doesNotMatch(sickLeaveEvidenceFollowUpText, /질문 요지를 아직 특정하지 못했습니다|이해하기 어려워요/);
 assert.match(sickLeaveEvidenceFollowUpText, /진단서|증빙자료|6일/);
+assert.match(sickLeaveEvidenceFollowUpText, /한의사|치과의사/);
 
 const schoolViolenceMoneyExtortion = buildKakaoSkillResponse({
   userRequest: {

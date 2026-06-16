@@ -134,7 +134,7 @@ assert(serviceFrame.domainCode === "staffAttendanceService", "engine: semantic f
 assert(serviceFrame.slots?.travelerRole?.subjectLabel === "기간제교사", "engine: service frame did not extract fixed-term teacher role");
 assert(serviceFrame.slots?.serviceIssue?.label === "병가", "engine: service frame did not extract sick leave issue");
 assert(regularAnnualLeaveFrame.slots?.travelerRole?.subjectLabel === "정규교사" && regularAnnualLeaveFrame.slots?.serviceIssue?.code === "annualLeave", "engine: regular teacher annual leave frame did not extract role and issue");
-assert(regularSickLeaveResponse?.answer?.[0]?.includes("연 60일") && regularSickLeaveResponse.answer[0].includes("연 180일") && regularSickLeaveResponse.answer.some((line) => line.includes("진단서")), "engine: regular teacher sick leave response did not use official limits");
+assert(regularSickLeaveResponse?.answer?.[0]?.includes("연 60일") && regularSickLeaveResponse.answer[0].includes("연 180일") && regularSickLeaveResponse.answer.some((line) => line.includes("진단서") && line.includes("한의사")), "engine: regular teacher sick leave response did not use official limits and medical certificate rule");
 assert(fixedTermSickLeaveResponse?.answer?.[0]?.includes("계약제교원") && fixedTermSickLeaveResponse.answer[0].includes("60일") && fixedTermSickLeaveResponse.answer[0].includes("180일"), "engine: fixed-term sick leave response did not separate contract guideline and public-teacher fallback");
 assert(budgetResponse?.answer?.some((line) => line.includes("학교회계 예산편성 기본지침")), "engine: budget response did not compose guideline-first answer");
 assert(serviceResponse?.answer?.some((line) => line.includes("복무평가") || line.includes("불이익")), "engine: service response did not compose dispute-aware answer");
