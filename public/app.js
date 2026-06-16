@@ -46,7 +46,9 @@ let currentQuestionFingerprint = "";
 let activeAiController = null;
 let activeSourceController = null;
 let activeLocalLlmController = null;
+let activeGuideLocalLlmController = null;
 let guideAutoRenderTimer = null;
+let currentGuideQuestionFingerprint = "";
 let userSelectedTool = false;
 
 const roleGuides = {
@@ -2025,12 +2027,22 @@ document.body?.addEventListener("gyo6-auth-state", (event) => {
 });
 
 resultState.addEventListener("submit", (event) => {
-  if (event.target?.id !== "clarifierForm") {
+  if (event.target?.id === "guideIntentConfirmForm") {
+    event.preventDefault();
+    applyLegalGuideIntentConfirmation(event.target);
     return;
   }
 
-  event.preventDefault();
-  applyClarifierAnswers(event.target);
+  if (event.target?.id === "guideClarifierForm") {
+    event.preventDefault();
+    applyLegalGuideClarifierAnswers(event.target);
+    return;
+  }
+
+  if (event.target?.id === "clarifierForm") {
+    event.preventDefault();
+    applyClarifierAnswers(event.target);
+  }
 });
 
 guideResult?.addEventListener("submit", (event) => {
@@ -2212,6 +2224,9 @@ function activateTool(tool = "legal", { updateHash = false, scroll = false } = {
 
 function showGuideEmptyState() {
   if (!guideResult) return;
+  activeGuideLocalLlmController?.abort();
+  activeGuideLocalLlmController = null;
+  currentGuideQuestionFingerprint = "";
   if (guideStatus) guideStatus.textContent = "질문 대기";
   if (guideResultTitle) guideResultTitle.textContent = "규정 답변 준비 화면";
   guideResult.className = "empty-state";
@@ -2225,6 +2240,7 @@ function showGuideEmptyState() {
 function renderPolicyGuideResult() {
   const question = (guideQuestionInput?.value || "").trim();
   if (!question) {
+    currentGuideQuestionFingerprint = "";
     if (!guideResult) return;
     if (guideStatus) guideStatus.textContent = "입력 필요";
     if (guideResultTitle) guideResultTitle.textContent = "규정 질문 입력 필요";
@@ -2237,17 +2253,31 @@ function renderPolicyGuideResult() {
     return;
   }
 
+  const officeCode = guideOfficeInput?.value || "gyeongbuk";
+  const roleCode = guideRoleInput?.value || "auto";
+  const categoryCode = guideCategoryInput?.value || "auto";
+  const guideFingerprint = buildGuideQuestionFingerprint({ question, officeCode, roleCode, categoryCode });
+  currentGuideQuestionFingerprint = guideFingerprint;
   const response = buildPolicyGuideResponse({
     question,
-    officeCode: guideOfficeInput?.value || "gyeongbuk",
-    roleCode: guideRoleInput?.value || "auto",
-    categoryCode: guideCategoryInput?.value || "auto"
+    officeCode,
+    roleCode,
+    categoryCode
   });
 
   if (guideStatus) guideStatus.textContent = "기본 답변";
   if (guideResultTitle) guideResultTitle.textContent = "규정·지침 답변";
   guideResult.className = "summary-box guideline-result";
   guideResult.innerHTML = renderPolicyGuideResponse(response);
+
+  loadGuideLocalLlmPolicyEnhancement({
+    question,
+    officeCode,
+    roleCode,
+    categoryCode,
+    baseResponse: response,
+    guideFingerprint
+  });
 }
 
 function schedulePolicyGuideAutoRender() {
@@ -4869,6 +4899,7 @@ function renderLawInfoAccessBlockedResult(message = "") {
   abortActiveRequests();
   currentCaseId = "";
   currentQuestionFingerprint = "";
+  currentGuideQuestionFingerprint = "";
   currentLiveSourceData = null;
   currentReportDraft = null;
 
@@ -5040,14 +5071,85 @@ async function loadLocalLlmPolicyEnhancement({
   }
 }
 
+async function loadGuideLocalLlmPolicyEnhancement({
+  question = "",
+  officeCode = "gyeongbuk",
+  roleCode = "auto",
+  categoryCode = "auto",
+  baseResponse = null,
+  guideFingerprint = ""
+} = {}) {
+  if (!question || window.location.protocol === "file:" || !isLocalLlmEnhancementHost()) return;
+
+  activeGuideLocalLlmController?.abort();
+  const controller = new AbortController();
+  activeGuideLocalLlmController = controller;
+  const office = getEducationOffice(officeCode);
+  const role = getPolicyRole(roleCode);
+  const category = getPolicyGuideCategory(categoryCode);
+
+  try {
+    const response = await fetch("/api/policy", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json"
+      },
+      signal: controller.signal,
+      body: JSON.stringify({
+        question,
+        originalQuestion: question,
+        officeLabel: office.code === "auto" ? "" : office.label,
+        roleLabel: role.code === "auto" ? "" : role.label,
+        categoryLabel: category.label,
+        topic: categoryCode,
+        answerMode: "guide",
+        userRole: role.code,
+        partyRole: role.code
+      })
+    });
+
+    if (!response.ok) return;
+    const data = await response.json();
+    if (
+      activeGuideLocalLlmController !== controller ||
+      guideFingerprint !== currentGuideQuestionFingerprint ||
+      (!data?.localLlmComposer?.ok && !data?.localLlmNormalizer?.used) ||
+      !data.policyResponse
+    ) {
+      return;
+    }
+
+    const enhancedResponse = buildPolicyGuideResponseFromPolicyChatResult(data, {
+      baseResponse,
+      policyContext: { officeCode, roleCode, categoryCode },
+      question,
+      office,
+      role,
+      category
+    });
+    if (guideStatus) guideStatus.textContent = data.localLlmComposer?.ok ? "로컬 AI 보강" : "질문 정리";
+    if (guideResultTitle) guideResultTitle.textContent = data.localLlmComposer?.ok ? "로컬 AI 보강 답변" : "로컬 AI 질문 정리 답변";
+    guideResult.className = "summary-box guideline-result local-llm-result";
+    guideResult.innerHTML = `
+      ${renderPolicyGuideResponse(enhancedResponse)}
+      ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer)}
+    `;
+  } catch (error) {
+    if (error.name !== "AbortError") {
+      console.warn("Guide local LLM policy enhancement skipped:", error);
+    }
+  } finally {
+    if (activeGuideLocalLlmController === controller) {
+      activeGuideLocalLlmController = null;
+    }
+  }
+}
+
 function isLocalLlmEnhancementHost() {
   const host = window.location.hostname || "";
-  return host === "localhost"
-    || host === "127.0.0.1"
-    || host === "::1"
-    || /^10\./.test(host)
-    || /^192\.168\./.test(host)
-    || /^172\.(1[6-9]|2\d|3[0-1])\./.test(host);
+  if (window.location.protocol === "file:") return false;
+  return Boolean(host);
 }
 
 function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
@@ -5212,9 +5314,11 @@ function abortActiveRequests() {
   activeAiController?.abort();
   activeSourceController?.abort();
   activeLocalLlmController?.abort();
+  activeGuideLocalLlmController?.abort();
   activeAiController = null;
   activeSourceController = null;
   activeLocalLlmController = null;
+  activeGuideLocalLlmController = null;
 }
 
 function buildQuestionFingerprint({ question, presetType, scopes, answerMode, userRole, partyRole, topicContext }) {
@@ -5231,6 +5335,15 @@ function buildQuestionFingerprint({ question, presetType, scopes, answerMode, us
       minor: String(topicContext?.minor || "auto"),
       presetType: String(topicContext?.presetType || "auto")
     }
+  });
+}
+
+function buildGuideQuestionFingerprint({ question, officeCode, roleCode, categoryCode }) {
+  return JSON.stringify({
+    question: String(question || "").trim(),
+    officeCode: String(officeCode || "auto"),
+    roleCode: String(roleCode || "auto"),
+    categoryCode: String(categoryCode || "auto")
   });
 }
 
@@ -9149,6 +9262,44 @@ function applyClarifierAnswers(formElement) {
   window.setTimeout(() => form.requestSubmit(), 0);
 }
 
+function applyLegalGuideClarifierAnswers(formElement) {
+  const count = Number(formElement.dataset.count || 0);
+  const answers = [];
+
+  for (let index = 0; index < count; index += 1) {
+    const question = formElement.elements[`question-${index}`]?.value.trim();
+    const status = formElement.elements[`status-${index}`]?.value || "answer";
+    const note = formElement.elements[`note-${index}`]?.value.trim() || "";
+
+    if (!question) {
+      continue;
+    }
+
+    if (status === "answer" && !note) {
+      continue;
+    }
+
+    answers.push({ question, status, note });
+  }
+
+  const feedback = formElement.querySelector("#guideClarifierFeedback");
+
+  if (!answers.length) {
+    if (feedback) {
+      feedback.textContent = "아직 반영할 내용이 없습니다. 필요한 항목만 적거나 모름·없음·생략을 선택해 주세요.";
+    }
+    return;
+  }
+
+  questionInput.value = buildRefinedQuestion(stripPreviousRefinement(questionInput.value), answers);
+  if (feedback) {
+    feedback.textContent = "추가 확인 내용을 반영해 다시 답변합니다.";
+  }
+  activateTool("legal");
+  skipNextAutoScroll = false;
+  window.setTimeout(() => form.requestSubmit(), 0);
+}
+
 function applyGuideClarifierAnswers(formElement) {
   const count = Number(formElement.dataset.count || 0);
   const answers = [];
@@ -9183,6 +9334,45 @@ function applyGuideClarifierAnswers(formElement) {
     feedback.textContent = "추가 확인 내용을 반영해 다시 답변합니다.";
   }
   window.setTimeout(() => renderPolicyGuideResult(), 0);
+}
+
+function applyLegalGuideIntentConfirmation(formElement) {
+  const selectedIndex = Number(formElement.elements["intent-index"]?.value ?? -1);
+  const feedback = formElement.querySelector("#guideIntentFeedback");
+
+  if (!Number.isInteger(selectedIndex) || selectedIndex < 0) {
+    if (feedback) {
+      feedback.textContent = "먼저 실제 질문 의도와 가장 가까운 항목을 선택해 주세요.";
+    }
+    return;
+  }
+
+  const label = formElement.elements[`intent-label-${selectedIndex}`]?.value.trim() || "질문 요지";
+  const code = formElement.elements[`intent-code-${selectedIndex}`]?.value.trim() || "";
+  const summary = formElement.elements[`intent-summary-${selectedIndex}`]?.value.trim() || label;
+  const note = formElement.elements["intent-note"]?.value.trim() || "";
+
+  if (code === "manualIntent" && !note) {
+    if (feedback) {
+      feedback.textContent = "직접 입력을 선택한 경우 실제 질문 요지를 추가 힌트에 적어 주세요.";
+    }
+    return;
+  }
+
+  const answerText = [label, summary, code ? `intent=${code}` : "", note].filter(Boolean).join(" - ");
+
+  questionInput.value = buildRefinedQuestion(stripPreviousRefinement(questionInput.value), [{
+    question: "질문 요지",
+    status: "answer",
+    note: answerText
+  }]);
+
+  if (feedback) {
+    feedback.textContent = "선택한 질문 요지를 반영해 다시 답변합니다.";
+  }
+  activateTool("legal");
+  skipNextAutoScroll = false;
+  window.setTimeout(() => form.requestSubmit(), 0);
 }
 
 function applyGuideIntentConfirmation(formElement) {

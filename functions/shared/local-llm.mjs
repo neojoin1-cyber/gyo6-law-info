@@ -680,11 +680,26 @@ function getRequiredPolicyAnchorLines(result = {}) {
   ].map(cleanLongText).filter(Boolean);
   const certificateLine = sourceLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
   const certificateDetailLine = sourceLines.find((line) => /(입원확인서|진료확인서)/.test(line) && /(보조자료|대체 가능|별도로 확인)/.test(line));
-  return uniqueDraftLines([certificateLine, certificateDetailLine]);
+  return uniqueDraftLines([
+    certificateLine,
+    certificateDetailLine,
+    ...getGenericCriticalPolicyAnchorLines(sourceLines)
+  ]).slice(0, 4);
 }
 
 function uniqueDraftLines(items = []) {
   return [...new Set(asArray(items).map(cleanLongText).filter(Boolean))];
+}
+
+function getGenericCriticalPolicyAnchorLines(sourceLines = []) {
+  return sourceLines.filter(isCriticalPolicyFactLine).slice(0, 3);
+}
+
+function isCriticalPolicyFactLine(line = "") {
+  const text = cleanLongText(line);
+  if (text.length < 8) return false;
+  if (/확인되지 않은 항목|현재 질문에는|정확도를 높이려면|추가 확인 필요|원문 기준 확인/.test(text)) return false;
+  return /의사·치과의사·한의사|진단서|입원확인서|진료확인서|계약서|취업규칙|학교법인|단체협약|나이스|학교장 승인|제\d+조|[0-9,]+\s*원|\d+\s*(?:일|시간|박|개월|년)|연\s*\d+\s*일|일비|식비|숙박비|운임|상한|한도|기한|초과|이상|이하/.test(text);
 }
 
 function isLessSpecificMedicalCertificateLine(line = "") {

@@ -17,8 +17,11 @@ const baseResult = {
   },
   policyResponse: {
     title: "병가 신청",
-    lead: "병가 신청 절차를 확인합니다.",
-    answer: ["병가 신청 절차와 증빙자료를 확인합니다."],
+    lead: "교원의 병가 서류는 병가 사용일수와 사유를 기준으로 확인합니다.",
+    answer: [
+      "연간 병가가 6일을 초과하면 의사·치과의사·한의사가 발급한 진단서를 제출해야 합니다.",
+      "일반 질병·부상은 연 60일, 공무상 질병·부상은 연 180일까지 병가를 승인할 수 있습니다."
+    ],
     caution: "원문 기준 확인이 필요합니다."
   },
   missingSlots: ["evidence"]
@@ -84,6 +87,9 @@ try {
   assert.equal(result.remoteLocalLlm.ok, true);
   assert.equal(result.remoteLocalLlm.localLlmUsed, true);
   assert.equal(result.remoteLocalLlm.bridgeElapsedMs, 123);
+  assert.match(result.policyResponse.lead, /의사·치과의사·한의사/);
+  assert.match(result.responseText, /의사·치과의사·한의사/);
+  assert.match(result.responseText, /60일|180일/);
 } finally {
   await new Promise((resolve) => server.close(resolve));
 }
