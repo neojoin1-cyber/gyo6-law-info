@@ -7,5 +7,7 @@ node_modules/
 dist/
 build/
 *.log
+*.err
+cloudflared-*.yml
 .DS_Store
 Thumbs.db
