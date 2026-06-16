@@ -5002,7 +5002,7 @@ async function loadLocalLlmPolicyEnhancement({
     if (
       activeLocalLlmController !== controller ||
       questionFingerprint !== currentQuestionFingerprint ||
-      !data?.localLlmComposer?.ok ||
+      (!data?.localLlmComposer?.ok && !data?.localLlmNormalizer?.used) ||
       !data.policyResponse
     ) {
       return;
@@ -5016,12 +5016,12 @@ async function loadLocalLlmPolicyEnhancement({
       role,
       category
     });
-    resultTitle.textContent = "로컬 AI 보강 답변";
-    statusDot.textContent = "로컬 AI 보강";
+    resultTitle.textContent = data.localLlmComposer?.ok ? "로컬 AI 보강 답변" : "로컬 AI 질문 정리 답변";
+    statusDot.textContent = data.localLlmComposer?.ok ? "로컬 AI 보강" : "질문 정리";
     resultState.className = "summary-box guideline-result free-policy-result local-llm-result";
     resultState.innerHTML = `
       ${renderPolicyGuideResponse(enhancedResponse)}
-      ${renderLocalLlmComposerNote(data.localLlmComposer)}
+      ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer)}
       ${accessMessage ? `
         <section class="free-access-note" aria-label="비로그인 기본 답변 안내">
           <strong>로그인 없이 기본 답변을 제공했습니다.</strong>
@@ -5089,7 +5089,8 @@ function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
     firstSteps: directRule.steps.length ? directRule.steps : answerItems.slice(1, 4),
     caution: directRule.caution,
     searchQueries: directRule.queries,
-    localLlmComposer: data.localLlmComposer
+    localLlmComposer: data.localLlmComposer,
+    localLlmNormalizer: data.localLlmNormalizer
   };
 }
 
@@ -5103,14 +5104,21 @@ function normalizePolicyChatAnswerTexts(answer) {
     .slice(0, 5);
 }
 
-function renderLocalLlmComposerNote(composer = {}) {
-  if (!composer?.ok) return "";
+function renderLocalLlmComposerNote(composer = {}, normalizer = {}) {
+  if (!composer?.ok && !normalizer?.used) return "";
   const elapsed = Number(composer.elapsedMs || 0);
   const elapsedLabel = elapsed >= 1000 ? `${(elapsed / 1000).toFixed(1)}초` : `${elapsed}ms`;
+  const normalizedText = normalizer?.used && normalizer.normalizedQuestion
+    ? `<p>질문 정리: ${escapeHtml(normalizer.normalizedQuestion)}</p>`
+    : "";
+  const composerText = composer?.ok
+    ? `<p>${escapeHtml(composer.model || "local model")} · ${escapeHtml(elapsedLabel)} · 규정 엔진 결과 안에서만 정리</p>`
+    : "";
   return `
     <section class="free-access-note local-llm-note" aria-label="로컬 AI 보강 안내">
-      <strong>Ollama 로컬 모델로 문장을 보강했습니다.</strong>
-      <p>${escapeHtml(composer.model || "local model")} · ${escapeHtml(elapsedLabel)} · 규정 엔진 결과 안에서만 정리</p>
+      <strong>Ollama 로컬 모델로 질문과 문장을 보강했습니다.</strong>
+      ${normalizedText}
+      ${composerText}
     </section>
   `;
 }

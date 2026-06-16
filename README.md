@@ -59,7 +59,7 @@ npm run check
 
 ### 로컬 Ollama 보강
 
-로컬 개발 서버는 무료 규정 엔진의 기본 답변을 먼저 보여준 뒤, PC에 Ollama가 있으면 같은 근거 안에서 문장만 더 읽기 좋게 보강합니다. 보강 모델은 기본값으로 `qwen3:4b-instruct`를 사용합니다.
+로컬 개발 서버는 무료 규정 엔진의 기본 답변을 먼저 보여준 뒤, PC에 Ollama가 있으면 질문 해석 후보를 한 번 더 만들고 같은 근거 안에서 문장을 읽기 좋게 보강합니다. 기본 모델은 한국어·다국어 분류 보조와 16GB VRAM 환경의 속도 균형을 고려해 `qwen3:4b-instruct`를 사용합니다.
 
 ```powershell
 ollama pull qwen3:4b-instruct
@@ -76,6 +76,12 @@ http://localhost:5173/api/local-llm/health
 
 ```env
 LOCAL_LLM_ENABLED=false
+```
+
+질문 해석 보조만 끄고 답변 문장 보강은 유지하려면 다음 값을 둡니다.
+
+```env
+LOCAL_LLM_NORMALIZER_ENABLED=false
 ```
 
 ## 다음 개발 순서

@@ -5,7 +5,11 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createApi } from "./functions/shared/api.mjs";
 import { buildKakaoSkillResponse, handlePolicyChatRequest } from "./functions/shared/policy-chat.mjs";
-import { getLocalLlmHealthStatus, maybeAttachLocalLlmPolicyComposer } from "./functions/shared/local-llm.mjs";
+import {
+  getLocalLlmHealthStatus,
+  maybeApplyLocalLlmPolicyNormalizer,
+  maybeAttachLocalLlmPolicyComposer
+} from "./functions/shared/local-llm.mjs";
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(rootDir, "public");
@@ -64,10 +68,13 @@ createServer(async (request, response) => {
       const payload = request.method === "POST"
         ? await readJsonBody(request)
         : Object.fromEntries(requestUrl.searchParams.entries());
-      const baseResult = handlePolicyChatRequest(payload, {
+      const policyOptions = {
         officeLabel: env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
-      });
-      return sendJson(response, await maybeAttachLocalLlmPolicyComposer(payload, baseResult, env));
+      };
+      const buildPolicyResult = (nextPayload) => handlePolicyChatRequest(nextPayload, policyOptions);
+      const baseResult = buildPolicyResult(payload);
+      const normalizedResult = await maybeApplyLocalLlmPolicyNormalizer(payload, baseResult, env, buildPolicyResult);
+      return sendJson(response, await maybeAttachLocalLlmPolicyComposer(payload, normalizedResult, env));
     }
 
     if (requestUrl.pathname === "/api/kakao/skill") {
