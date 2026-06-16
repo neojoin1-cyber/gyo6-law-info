@@ -43,6 +43,17 @@ export async function maybeApplyRemoteLocalPolicyLlm(payload = {}, baseResult = 
       });
     }
 
+    if (isRemotePolicyResultRegression(baseResult, remoteResult)) {
+      return attachRemoteLocalLlmMetadata(baseResult, {
+        ok: false,
+        skipped: true,
+        reason: "remote_local_llm_regressed_result",
+        provider: "office-ollama-bridge",
+        baseUrl: redactUrl(config.baseUrl),
+        elapsedMs
+      });
+    }
+
     const guardedRemoteResult = applyRequiredPolicyAnchors(remoteResult, baseResult);
     return {
       ...guardedRemoteResult,
@@ -133,23 +144,59 @@ function getRequiredPolicyAnchorLines(baseResult = {}) {
   const issueCode = cleanText(frame.slots?.serviceIssue?.code || "");
   const issueLabel = cleanText(frame.slots?.serviceIssue?.label || "");
   const question = cleanText(baseResult.question || frame.question || "");
-  const isSickLeave = frame.domainCode === "staffAttendanceService"
-    && (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question));
-  if (!isSickLeave) return [];
-
   const sourceLines = [
     baseResult.policyResponse?.lead,
     ...asArray(baseResult.policyResponse?.answer),
     ...asArray(baseResult.policyResponse?.steps),
     baseResult.policyResponse?.caution
   ].map(cleanLongText).filter(Boolean);
+  const genericLines = getGenericCriticalPolicyAnchorLines(sourceLines);
+  const isSickLeave = frame.domainCode === "staffAttendanceService"
+    && (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question));
+  if (!isSickLeave) return genericLines.slice(0, 3);
+
   const certificateLine = sourceLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
   const certificateDetailLine = sourceLines.find((line) => /(입원확인서|진료확인서)/.test(line) && /(보조자료|대체 가능|별도로 확인)/.test(line));
   return uniqueLines([
     certificateLine,
     certificateDetailLine,
-    ...getGenericCriticalPolicyAnchorLines(sourceLines)
+    ...genericLines
   ]).slice(0, 4);
+}
+
+function isRemotePolicyResultRegression(baseResult = {}, remoteResult = {}) {
+  const baseFrame = baseResult.semanticFrame || {};
+  const remoteFrame = remoteResult.semanticFrame || {};
+  const baseDomain = cleanText(baseFrame.domainCode || "");
+  const remoteDomain = cleanText(remoteFrame.domainCode || "");
+  if (baseDomain && remoteDomain && baseDomain !== remoteDomain) return true;
+
+  const baseIssue = cleanText(baseFrame.slots?.serviceIssue?.code || "");
+  const remoteIssue = cleanText(remoteFrame.slots?.serviceIssue?.code || "");
+  if (baseIssue && remoteIssue && baseIssue !== remoteIssue) return true;
+
+  const baseSubject = cleanText(baseFrame.slots?.travelerRole?.subjectLabel || "");
+  const remoteSubject = cleanText(remoteFrame.slots?.travelerRole?.subjectLabel || "");
+  if (/교원|교사|교장|교감/.test(baseSubject) && /학생/.test(remoteSubject)) return true;
+
+  const baseText = collectPolicyText(baseResult);
+  const remoteText = collectPolicyText(remoteResult);
+  if (/시간외근무|초과근무/.test(baseText) && /숙박비|여비|출장비|70,000원/.test(remoteText) && !/시간외근무|초과근무/.test(remoteText)) {
+    return true;
+  }
+  return false;
+}
+
+function collectPolicyText(result = {}) {
+  return [
+    result.responseText,
+    result.answerState?.primaryText,
+    result.policyResponse?.title,
+    result.policyResponse?.lead,
+    ...asArray(result.policyResponse?.answer),
+    ...asArray(result.policyResponse?.steps),
+    result.policyResponse?.caution
+  ].map(cleanLongText).filter(Boolean).join(" ");
 }
 
 function prependRequiredLines(responseText = "", missingLines = [], promotedLead = "") {

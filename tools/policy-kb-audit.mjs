@@ -88,6 +88,9 @@ const response = policyEngine.buildPolicyResponse({ question: "교사의 진해�
 const semanticFrame = policyEngine.buildPolicySemanticFrame("경주정보고 교사의 남해군 1박 2일 출장시 출장비는?");
 const budgetFrame = policyEngine.buildPolicySemanticFrame("학교 예산 편성과 지출 증빙은 소속 교육청 기준으로 무엇을 먼저 확인해야 하나요?");
 const serviceFrame = policyEngine.buildPolicySemanticFrame("기간제교사가 병가 사용 후 복무평가에서 불리해질까 걱정됩니다. 근태 증빙은?");
+const travelOvertimeQuestion = "교사가 경주에서 대전으로 1박2일 학생 인솔 출장시 시간외근무 신청을 할 수 있나요?";
+const travelOvertimeFrame = policyEngine.buildPolicySemanticFrame(travelOvertimeQuestion);
+const travelOvertimeResponse = policyEngine.buildPolicyResponse({ question: travelOvertimeQuestion });
 const regularAnnualLeaveFrame = policyEngine.buildPolicySemanticFrame("정규교사의 연가는 몇일 가능하며 언제 신청하나요?");
 const regularSickLeaveResponse = policyEngine.buildPolicyResponse({ question: "정규교사의 병가는 몇일 가능하며 어떻게 신청하나요?" });
 const fixedTermSickLeaveResponse = policyEngine.buildPolicyResponse({ question: "기간제교사의 병가는 몇일 가능하며 어떻게 신청하나요?" });
@@ -133,6 +136,11 @@ assert(budgetFrame.slots?.spendingType?.detected && budgetFrame.slots?.procedure
 assert(serviceFrame.domainCode === "staffAttendanceService", "engine: semantic frame did not classify staff attendance service domain");
 assert(serviceFrame.slots?.travelerRole?.subjectLabel === "기간제교사", "engine: service frame did not extract fixed-term teacher role");
 assert(serviceFrame.slots?.serviceIssue?.label === "병가", "engine: service frame did not extract sick leave issue");
+assert(travelOvertimeFrame.domainCode === "staffAttendanceService", "engine: travel + overtime question should classify as staff attendance, not travel expense");
+assert(travelOvertimeFrame.slots?.serviceIssue?.code === "overtime", "engine: travel + overtime question did not extract overtime issue");
+assert(travelOvertimeFrame.slots?.travelerRole?.subjectLabel === "교원", "engine: travel + overtime question should treat the teacher, not escorted students, as the staff subject");
+assert(travelOvertimeResponse?.lead?.includes("시간외근무") && travelOvertimeResponse.lead.includes("여비와 분리"), "engine: travel + overtime lead should separate overtime from travel expense");
+assert(travelOvertimeResponse?.answer?.some((line) => line.includes("자동 인정") && line.includes("근무명령")) && !travelOvertimeResponse.answer.join(" ").includes("70,000원"), "engine: travel + overtime response leaked lodging-cap answer");
 assert(regularAnnualLeaveFrame.slots?.travelerRole?.subjectLabel === "정규교사" && regularAnnualLeaveFrame.slots?.serviceIssue?.code === "annualLeave", "engine: regular teacher annual leave frame did not extract role and issue");
 assert(regularSickLeaveResponse?.answer?.[0]?.includes("연 60일") && regularSickLeaveResponse.answer[0].includes("연 180일") && regularSickLeaveResponse.answer.some((line) => line.includes("진단서") && line.includes("한의사")), "engine: regular teacher sick leave response did not use official limits and medical certificate rule");
 assert(fixedTermSickLeaveResponse?.answer?.[0]?.includes("계약제교원") && fixedTermSickLeaveResponse.answer[0].includes("60일") && fixedTermSickLeaveResponse.answer[0].includes("180일"), "engine: fixed-term sick leave response did not separate contract guideline and public-teacher fallback");

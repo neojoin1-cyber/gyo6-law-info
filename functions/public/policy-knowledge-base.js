@@ -228,7 +228,7 @@
         },
         staffAttendanceService: {
           audiences: ["teacher", "fixedTermTeacher", "privateSchool", "localOfficer", "educationWorker", "manager"],
-          subtopics: ["연가", "병가", "공가", "특별휴가", "출산휴가", "근무상황", "지각·조퇴·외출", "초과근무"],
+          subtopics: ["연가", "병가", "공가", "특별휴가", "출산휴가", "근무상황", "지각·조퇴·외출", "초과근무", "시간외근무"],
           questionPatterns: ["연가 일수는", "병가는 몇 일인가요", "증빙은 무엇인가요", "사립학교 교사는", "기간제교사는"],
           evidence: ["나이스 근무상황", "진단서", "복무 신청", "근로계약", "취업규칙", "단체협약"],
           sourceTargets: ["teacherLeave", "nationalService", "localService", "fixedTermTeacherGuideline", "privateSchoolWorkRules", "educationWorkerWorkRules"],
@@ -377,7 +377,7 @@
         categoryCode: "leaveAttendance",
         label: "교직원 복무·근태",
         sourcePriorityDefault: "roleFirst",
-        intentKeywords: ["복무", "근태", "근무상황", "나이스", "NEIS", "휴가", "휴가규정", "연가", "병가", "공가", "특별휴가", "출산휴가", "배우자출산휴가", "배우자 출산", "육아시간", "모성보호", "부성보호", "조퇴", "외출", "지각", "업무분장", "초과근무", "재택", "근무시간", "복무평가"],
+        intentKeywords: ["복무", "근태", "근무상황", "나이스", "NEIS", "휴가", "휴가규정", "연가", "병가", "공가", "특별휴가", "출산휴가", "배우자출산휴가", "배우자 출산", "육아시간", "모성보호", "부성보호", "조퇴", "외출", "지각", "업무분장", "초과근무", "시간외근무", "시간외", "야근", "휴일근무", "재택", "근무시간", "복무평가"],
         requiredSlots: ["travelerRole", "serviceIssue", "employmentType", "evidence"],
         sourceKeys: ["teacherLeave", "nationalService", "localService", "laborStandard", "fixedTermAct", "educationWorkerWorkRules", "fixedTermTeacherGuideline", "privateSchoolWorkRules"],
         slotExtractors: {

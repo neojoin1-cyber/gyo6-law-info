@@ -102,7 +102,7 @@
     const primaryDomain = domainCandidates[0] || null;
     let domainCode = primaryDomain?.score > 0 ? primaryDomain.code : "";
     const overrideText = scoringText || normalized;
-    if (isChildbirthLeaveContext(overrideText) || isGeneralStaffLeaveContext(overrideText)) {
+    if (isChildbirthLeaveContext(overrideText) || isGeneralStaffLeaveContext(overrideText) || isStaffOvertimeQuestion(overrideText)) {
       domainCode = "staffAttendanceService";
     }
     const beforeContextDomainCode = domainCode;
@@ -352,6 +352,10 @@
           && /지원|자격|증빙|모집요강|전형|입학|대학|졸업|재직/.test(normalized)
       },
       {
+        domainCode: "staffAttendanceService",
+        matches: () => isStaffOvertimeQuestion(normalized)
+      },
+      {
         domainCode: "domesticTravelExpense",
         matches: () => isDomesticTravelQuestion(normalized)
       },
@@ -458,10 +462,17 @@
   }
 
   function isDomesticTravelQuestion(normalized = "") {
+    if (isStaffOvertimeQuestion(normalized) && !/출장비|여비|일비|식비|숙박비|운임|교통비|정산/.test(normalized)) return false;
     const hasTravelAnchor = /출장|관외출장|관내출장|국내출장|출장비|여비|국내여비|숙박비|숙박|숙소|호텔|일비|식비|식대|운임|교통비/.test(normalized);
     const hasTravelTask = /얼마|한도|인정|계산|지급|정산|가능|기준|규정|몇일|며칠|1박|박당|출장명령|증빙|관외|관내|근무지/.test(normalized);
     return hasTravelAnchor && hasTravelTask
       && !/현장실습|실습기업|선도기업|표준협약|체험학습/.test(normalized);
+  }
+
+  function isStaffOvertimeQuestion(normalized = "") {
+    const hasOvertimeSignal = /초과근무|시간외근무|시간외|야근|휴일근무|휴일근로/.test(normalized);
+    const hasServiceTask = /신청|상신|승인|가능|인정|처리|수당|근무상황|나이스|근무명령|초과근무명령/.test(normalized);
+    return hasOvertimeSignal && hasServiceTask;
   }
 
   function isSchoolSafetyAccidentContext(normalized = "") {
@@ -1317,6 +1328,9 @@
     if (issueCode === "tardyEarlyLeave") {
       return `${domainLabel} 질문에서 ${subjectLabel}의 지각·조퇴·외출은 출근기록, 나이스 근무상황, 승인 여부, 증빙을 분리해 처리합니다.`;
     }
+    if (issueCode === "overtime") {
+      return `${domainLabel} 질문에서 ${subjectLabel}의 시간외근무는 출장 여부보다 실제 근무명령·사전승인·근무시간 증빙을 기준으로 판단합니다. 1박 2일 인솔출장이라는 사실만으로 자동 인정되는 사안은 아니며, 여비와 분리해 확인합니다.`;
+    }
     return `${domainLabel} 질문에서 ${subjectLabel}의 ${issueLabel} 사안은 ${employmentLabel} 기준으로 적용 규정, 승인 절차, 증빙자료를 함께 확인합니다.`;
   }
 
@@ -1371,6 +1385,10 @@
       return isFixedTerm
         ? buildFixedTermAttendanceTimeAnswers(subjectLabel, normalized, frame, missingText)
         : buildPublicTeacherAttendanceTimeAnswers(subjectLabel, normalized, frame, missingText);
+    }
+
+    if (issueCode === "overtime") {
+      return buildStaffOvertimeAnswers(subjectLabel, slots, frame, missingText);
     }
 
     const issueLabel = slots.serviceIssue?.label || "복무·근태";
@@ -1617,6 +1635,20 @@
     ]);
   }
 
+  function buildStaffOvertimeAnswers(subjectLabel, slots, frame, missingText) {
+    const normalized = frame.normalized || "";
+    const travelContext = /출장|인솔|수학여행|체험학습|1박|숙박/.test(normalized);
+    return uniqueStrings([
+      travelContext
+        ? `${subjectLabel}의 인솔 출장이 1박 2일이라도 시간외근무가 자동 인정되는 것은 아니고, 정규 근무시간 외에 학교장의 근무명령·사전승인에 따라 실제 학생 인솔·생활지도·안전관리 업무를 했는지가 핵심입니다.`
+        : `${subjectLabel}의 시간외근무는 학교장의 근무명령·사전승인, 실제 근무시간, 나이스 초과근무 신청·승인 이력을 기준으로 판단합니다.`,
+      "출장명령과 여비 지급은 별도 축입니다. 일비·식비·숙박비를 받는다는 사실만으로 시간외근무 수당이 당연히 인정되거나 배제되지는 않으므로, 출장 중 실제 근무시간과 이동·대기·취침 시간을 분리해야 합니다.",
+      "신청하려면 초과근무명령 또는 사전승인, 나이스 상신·승인 이력, 현장체험학습·인솔 계획, 야간 생활지도·안전관리 근무분장, 실제 근무시간 기록을 함께 확인합니다.",
+      "소속 교육청 복무·초과근무 지침과 학교 내부 결재 기준에서 출장 중 초과근무 인정 범위, 중복 지급 제한, 사후 승인 가능 여부를 확인한 뒤 최종 처리합니다.",
+      missingText ? `현재 질문에는 ${missingText}가 없어도, 질문의 핵심은 여비가 아니라 출장 중 시간외근무 신청 가능 여부로 보아 답변합니다.` : ""
+    ]);
+  }
+
   function buildStaffAttendanceSteps(subjectLabel, slots, frame) {
     const issueCode = getStaffIssueCode(slots);
     if (issueCode === "annualLeave") {
@@ -1642,6 +1674,14 @@
         "사전 승인 또는 사후 승인 가능 사유와 증빙 확인",
         "질병·부상 사유는 병가 누계 8시간 1일 계산 여부 확인",
         "무단 사안은 복무지도, 주의·경고, 징계·계약상 불이익 가능성을 분리"
+      ]);
+    }
+    if (issueCode === "overtime") {
+      return uniqueStrings([
+        "출장명령과 별도로 초과근무명령 또는 사전승인이 있었는지 확인",
+        "정규 근무시간 이후 실제 학생 인솔·생활지도·안전관리 근무시간 기록",
+        "이동·대기·취침시간과 실제 근무시간을 분리",
+        "나이스 초과근무 신청·승인 이력, 사후 확인, 여비와의 중복 제한 여부 확인"
       ]);
     }
     return uniqueStrings([
@@ -1700,6 +1740,14 @@
         "교원 복무 지각 조퇴 외출 나이스 근무상황",
         "국가공무원 복무규정 제18조 지각 조퇴 외출 병가 8시간",
         `${subjectLabel} 무단 지각 복무 처리`
+      ];
+    }
+    if (issueCode === "overtime") {
+      return [
+        "국가공무원 복무규정 시간외근무 명령 승인",
+        "공무원수당 등에 관한 규정 시간외근무수당 교원",
+        `${subjectLabel} 출장 중 시간외근무 나이스 신청`,
+        "현장체험학습 인솔교사 초과근무 시간외근무 교육청 지침"
       ];
     }
     return [];
@@ -1765,6 +1813,9 @@
     }
     if (employmentCode === "publicTeacher" && (issueCode === "annualLeave" || issueCode === "sickLeave" || issueCode === "tardyEarlyLeave")) {
       return `${missingPrefix}공립 정규교원 기준으로 우선 답변했습니다. 사립학교, 교육공무직, 지방공무원, 기간제교사는 취업규칙·단체협약·근로계약·소속 교육청 지침이 달라질 수 있습니다.`;
+    }
+    if (issueCode === "overtime") {
+      return `${missingPrefix}시간외근무는 출장여비와 별개로 근무명령, 사전승인, 실제 근무시간 증빙, 소속 교육청 초과근무 지침이 있어야 판단할 수 있습니다. 단순 이동·숙박·대기 시간만으로는 인정 여부를 단정하지 않습니다.`;
     }
     return `${missingPrefix}복무·근태는 신분과 고용 형태에 따라 적용 규정이 달라집니다. 공립 교원, 지방공무원, 교육공무직, 기간제, 사립학교 여부를 확정해야 최종 답을 낼 수 있습니다.`;
   }
@@ -2378,6 +2429,12 @@
       { code: "privateSchoolStaff", roleCode: "privateSchool", roleLabel: "사립학교 교직원", subjectLabel: "사립학교 교직원", patterns: [/사립|학교법인|법인/] },
       { code: "schoolStaff", roleCode: "staff", roleLabel: "교직원", subjectLabel: "교직원", patterns: [/교직원|직원/] }
     ];
+    if (isStaffOvertimeQuestion(normalized)) {
+      const staffFound = profiles
+        .filter((profile) => profile.code !== "student" && ["teacher", "localOfficer", "staff", "privateSchool"].includes(profile.roleCode))
+        .find((profile) => profile.patterns.some((pattern) => pattern.test(normalized)));
+      if (staffFound) return { ...staffFound, detected: true };
+    }
     const found = profiles.find((profile) => profile.patterns.some((pattern) => pattern.test(normalized)));
     if (found) return { ...found, detected: true };
     return { code: "unknown", roleCode: "auto", roleLabel: "신분 확인 필요", subjectLabel: "대상자", detected: false };
