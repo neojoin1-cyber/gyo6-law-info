@@ -333,7 +333,7 @@
       },
       {
         domainCode: "governanceCommitteeRule",
-        matches: () => /학교운영위원회|운영위원회|학칙개정|규정개정/.test(normalized)
+        matches: () => /학교운영위원회|운영위원회|학운위|학칙개정|규정개정|제척|회피/.test(normalized)
           && !/학교폭력|학폭|전담기구/.test(normalized)
       },
       {
@@ -381,6 +381,11 @@
       {
         domainCode: "healthInfectionCounseling",
         matches: () => isCounselingRecordDisclosureContext(normalized)
+      },
+      {
+        domainCode: "labEquipmentPracticeSafety",
+        matches: () => /실습실|실험실습실|실험실|실습장|위험기계|기자재|실습재료|보호구|msds|화학물질/i.test(normalized)
+          && /안전|사고|보고|점검|교육|기계|장비|보호구|관리|기록|다쳤|부상|위험/i.test(normalized)
       },
       {
         domainCode: "schoolSafetyHealth",
@@ -1110,7 +1115,7 @@
         `${officeText} ${fiscalYear} 학교회계 예산편성 기본지침을 먼저 조회해야 합니다.`,
         `${spendingType} 사안이면 ${stage} 단계에서 예산 과목, 집행 가능 범위, 결재권자, ${evidence}을 순서대로 대조합니다.`,
         "계약·검수·지출이 섞인 질문은 학교회계 규칙, 지방계약 법령, 공공기록물 보존 기준을 보조 근거로 붙입니다.",
-        missingText ? `현재 질문에서 ${missingText}가 명확하지 않으므로 답변에는 확인 필요 항목으로 표시하고, 확보되는 즉시 같은 조회 계획으로 재계산합니다.` : ""
+        missingText ? `현재 질문에서 ${missingText}가 명확하지 않으므로 확인 필요 항목으로 표시합니다. 해당 정보를 확인하면 답을 더 좁힐 수 있습니다.` : ""
       ]);
     }
 
@@ -1162,7 +1167,7 @@
         buildCorpusBasisText(lookup),
         buildOntologyEvidenceAnswer(domainCode, evidence, schoolLevel, frame),
         slots.riskSignal?.detected ? `${appendSubjectParticle(risk)} 보이므로 단순 안내, 긴급 보호, 위원회·심의, 법적 분쟁 가능성을 분리합니다.` : "위험 신호가 명확하지 않으면 단순 안내·민원 단계로 보되, 안전·인권·개인정보 단서는 계속 확인합니다.",
-        missingText ? `현재 질문에서 확인이 부족한 항목은 ${missingText}입니다. 확정 판단 대신 확인 슬롯으로 남기고, 확보되는 즉시 같은 조회 계획으로 답을 좁힙니다.` : ""
+        missingText ? `현재 질문에서 확인이 부족한 항목은 ${missingText}입니다. 해당 정보를 확인하면 답을 더 구체화할 수 있습니다.` : ""
       ]);
     }
 
@@ -1800,7 +1805,7 @@
   function buildCorpusBasisText(lookup = null) {
     const sourceMatches = (lookup?.corpusMatches || []).filter((match) => match.type === "officialSource").slice(0, 3);
     if (!sourceMatches.length) return "";
-    return `로컬 정책 코퍼스는 ${sourceMatches.map((match) => match.title).join(", ")}을 우선 조회 후보로 올립니다.`;
+    return `관련 공식자료로 ${sourceMatches.map((match) => match.title).join(", ")}을 먼저 확인합니다.`;
   }
 
   function getContextualEvidenceLabel(domainCode = "", slots = {}, frame = {}) {
@@ -3028,7 +3033,20 @@
   }
 
   function compactText(value) {
-    return String(value || "").replace(/\s+/g, "");
+    return normalizeCommonPolicyInput(value).replace(/\s+/g, "");
+  }
+
+  function normalizeCommonPolicyInput(value = "") {
+    return String(value || "")
+      .replace(/쌤/g, "선생님")
+      .replace(/츌장|춣장|출쟝/g, "출장")
+      .replace(/병까|병갸|뼝가/g, "병가")
+      .replace(/경조휴가/g, "경조사휴가")
+      .replace(/학운위/g, "학교운영위원회")
+      .replace(/학폭/g, "학교폭력")
+      .replace(/생기부/g, "생활기록부")
+      .replace(/씨씨티비/gi, "cctv")
+      .replace(/에스엔에스/gi, "sns");
   }
 
   function uniqueStrings(items = []) {
