@@ -2,17 +2,19 @@ import { onRequest } from "firebase-functions/v2/https";
 import { defineSecret } from "firebase-functions/params";
 import { createApi } from "./shared/api.mjs";
 import { handlePolicyChatRequest } from "./shared/policy-chat.mjs";
+import { maybeApplyRemoteLocalPolicyLlm } from "./shared/remote-local-llm.mjs";
 
 const lawOpenApiOc = defineSecret("LAW_OPEN_API_OC");
 const publicDataApiKey = defineSecret("PUBLIC_DATA_API_KEY");
 const nanetApiKey = defineSecret("NANET_API_KEY");
 const openAiApiKey = defineSecret("OPENAI_API_KEY");
+const remoteLocalLlmToken = defineSecret("REMOTE_LOCAL_LLM_TOKEN");
 
 export const api = onRequest({
   region: "asia-northeast3",
   timeoutSeconds: 30,
   memory: "256MiB",
-  secrets: [lawOpenApiOc, publicDataApiKey, nanetApiKey, openAiApiKey]
+  secrets: [lawOpenApiOc, publicDataApiKey, nanetApiKey, openAiApiKey, remoteLocalLlmToken]
 }, async (request, response) => {
   const apiClient = createApi(process.env);
 
@@ -51,7 +53,8 @@ export const api = onRequest({
       const result = handlePolicyChatRequest(payload, {
         officeLabel: process.env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
       });
-      return sendJson(response, result, getResultStatus(result));
+      const enrichedResult = await maybeApplyRemoteLocalPolicyLlm(payload, result, process.env);
+      return sendJson(response, enrichedResult, getResultStatus(enrichedResult));
     }
 
     return sendJson(response, { error: "지원하지 않는 API 경로입니다." }, 404);
