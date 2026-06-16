@@ -1,4 +1,4 @@
-import policyEngine from "../../public/policy-engine.js";
+import policyEngine from "../public/policy-engine.js";
 
 const DEFAULT_OFFICE_LABEL = "경상북도교육청";
 const DEFAULT_DETAIL_URL = "https://gyo6-law-info.web.app/";

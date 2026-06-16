@@ -1,6 +1,7 @@
 import { onRequest } from "firebase-functions/v2/https";
 import { defineSecret } from "firebase-functions/params";
 import { createApi } from "./shared/api.mjs";
+import { handlePolicyChatRequest } from "./shared/policy-chat.mjs";
 
 const lawOpenApiOc = defineSecret("LAW_OPEN_API_OC");
 const publicDataApiKey = defineSecret("PUBLIC_DATA_API_KEY");
@@ -39,6 +40,20 @@ export const api = onRequest({
       return sendJson(response, result, getResultStatus(result));
     }
 
+    if (apiPath === "/policy") {
+      if (request.method !== "GET" && request.method !== "POST") {
+        return sendJson(response, { error: "지원하지 않는 HTTP 메서드입니다." }, 405);
+      }
+
+      const payload = request.method === "POST"
+        ? readPolicyPayload(request)
+        : Object.fromEntries(requestUrl.searchParams.entries());
+      const result = handlePolicyChatRequest(payload, {
+        officeLabel: process.env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
+      });
+      return sendJson(response, result, getResultStatus(result));
+    }
+
     return sendJson(response, { error: "지원하지 않는 API 경로입니다." }, 404);
   } catch (error) {
     console.error(error);
@@ -73,6 +88,31 @@ function sendJson(response, data, status = 200) {
 function getResultStatus(data) {
   const status = Number(data?.status || 200);
   return Number.isInteger(status) && status >= 100 && status <= 599 ? status : 200;
+}
+
+function readPolicyPayload(request = {}) {
+  if (request.body && typeof request.body === "object" && !Buffer.isBuffer(request.body)) {
+    return request.body;
+  }
+  if (typeof request.body === "string") {
+    return parseJsonObject(request.body);
+  }
+  if (Buffer.isBuffer(request.body)) {
+    return parseJsonObject(request.body.toString("utf-8"));
+  }
+  if (Buffer.isBuffer(request.rawBody)) {
+    return parseJsonObject(request.rawBody.toString("utf-8"));
+  }
+  return {};
+}
+
+function parseJsonObject(value = "") {
+  try {
+    const parsed = JSON.parse(String(value || "{}"));
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch {
+    return {};
+  }
 }
 
 function isLegacySearchEnabled() {
