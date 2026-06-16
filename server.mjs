@@ -5,6 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createApi } from "./functions/shared/api.mjs";
 import { buildKakaoSkillResponse, handlePolicyChatRequest } from "./functions/shared/policy-chat.mjs";
+import { getLocalLlmHealthStatus, maybeAttachLocalLlmPolicyComposer } from "./functions/shared/local-llm.mjs";
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(rootDir, "public");
@@ -35,6 +36,14 @@ createServer(async (request, response) => {
       return sendJson(response, api.getHealthStatus());
     }
 
+    if (requestUrl.pathname === "/__/firebase/init.json") {
+      return sendJson(response, getFirebaseInitConfig(env));
+    }
+
+    if (requestUrl.pathname === "/api/local-llm/health") {
+      return sendJson(response, await getLocalLlmHealthStatus(env));
+    }
+
     if (requestUrl.pathname === "/api/search") {
       if (!isLegacySearchEnabled(env)) {
         return sendJson(response, {
@@ -55,9 +64,10 @@ createServer(async (request, response) => {
       const payload = request.method === "POST"
         ? await readJsonBody(request)
         : Object.fromEntries(requestUrl.searchParams.entries());
-      return sendJson(response, handlePolicyChatRequest(payload, {
+      const baseResult = handlePolicyChatRequest(payload, {
         officeLabel: env.DEFAULT_OFFICE_LABEL || "경상북도교육청"
-      }));
+      });
+      return sendJson(response, await maybeAttachLocalLlmPolicyComposer(payload, baseResult, env));
     }
 
     if (requestUrl.pathname === "/api/kakao/skill") {
@@ -150,6 +160,18 @@ function getResultStatus(data) {
 
 function isLegacySearchEnabled(environment = {}) {
   return /^true$/i.test(String(environment.LEGACY_SEARCH_ENABLED || "").trim());
+}
+
+function getFirebaseInitConfig(environment = {}) {
+  return {
+    apiKey: environment.FIREBASE_API_KEY || "",
+    appId: environment.FIREBASE_APP_ID || "",
+    authDomain: environment.FIREBASE_AUTH_DOMAIN || "",
+    messagingSenderId: environment.FIREBASE_MESSAGING_SENDER_ID || "",
+    projectId: environment.FIREBASE_PROJECT_ID || "",
+    storageBucket: environment.FIREBASE_STORAGE_BUCKET || "",
+    ...(environment.FIREBASE_MEASUREMENT_ID ? { measurementId: environment.FIREBASE_MEASUREMENT_ID } : {})
+  };
 }
 
 function sendText(response, text, status = 200) {

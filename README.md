@@ -57,6 +57,27 @@ http://localhost:5173
 npm run check
 ```
 
+### 로컬 Ollama 보강
+
+로컬 개발 서버는 무료 규정 엔진의 기본 답변을 먼저 보여준 뒤, PC에 Ollama가 있으면 같은 근거 안에서 문장만 더 읽기 좋게 보강합니다. 보강 모델은 기본값으로 `qwen3:4b-instruct`를 사용합니다.
+
+```powershell
+ollama pull qwen3:4b-instruct
+npm run dev
+```
+
+상태 확인:
+
+```text
+http://localhost:5173/api/local-llm/health
+```
+
+끄려면 `.env.local`에 다음 값을 둡니다.
+
+```env
+LOCAL_LLM_ENABLED=false
+```
+
 ## 다음 개발 순서
 
 1. Firebase 콘솔에서 Email/Password 로그인을 활성화하고 실제 회원가입 흐름을 검증
@@ -133,7 +154,7 @@ Worker는 `/api/analyze` 호출 전에 내부 공식자료 검색을 먼저 실�
 
 ## 보안 메모
 
-API 키와 Firebase 서버 비밀값은 `.env` 계열 파일에 두고 Git에 커밋하지 않습니다. 공개 프론트엔드에 비밀 키를 직접 넣지 않습니다. 배포 환경의 Firebase 웹 앱 공개 설정은 Firebase Hosting의 `/__/firebase/init.json`을 통해 자동 로딩합니다.
+API 키와 Firebase 서버 비밀값은 `.env` 계열 파일에 두고 Git에 커밋하지 않습니다. 공개 프론트엔드에 비밀 키를 직접 넣지 않습니다. 배포 환경의 Firebase 웹 앱 공개 설정은 Firebase Hosting의 `/__/firebase/init.json`을 통해 자동 로딩합니다. 로컬 개발 서버도 같은 경로를 `.env.local`의 `FIREBASE_*` 값으로 제공하므로, Firebase 설정값을 `public` 파일에 직접 적지 않습니다.
 
 로컬 개발에서는 다음 값을 사용합니다.
 

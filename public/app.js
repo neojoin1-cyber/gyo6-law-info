@@ -45,6 +45,7 @@ let skipNextAutoScroll = false;
 let currentQuestionFingerprint = "";
 let activeAiController = null;
 let activeSourceController = null;
+let activeLocalLlmController = null;
 let guideAutoRenderTimer = null;
 let userSelectedTool = false;
 
@@ -4903,6 +4904,16 @@ function renderFreeBasicPolicyResult({
   currentReportDraft = null;
 
   const policyContext = getPolicyEngineContext(topicContext, userRole, partyRole);
+  const questionFingerprint = buildQuestionFingerprint({
+    question,
+    presetType: preset.type,
+    scopes,
+    answerMode,
+    userRole,
+    partyRole,
+    topicContext
+  });
+  currentQuestionFingerprint = questionFingerprint;
   const response = buildPolicyGuideResponse({
     question,
     officeCode: policyContext.officeCode,
@@ -4925,6 +4936,182 @@ function renderFreeBasicPolicyResult({
         <p class="answer-warning">${escapeHtml(accessMessage)}</p>
       </section>
     ` : ""}
+  `;
+
+  loadLocalLlmPolicyEnhancement({
+    question,
+    preset,
+    scopes,
+    answerMode,
+    userRole,
+    partyRole,
+    topicContext,
+    policyContext,
+    baseResponse: response,
+    questionFingerprint,
+    accessMessage
+  });
+}
+
+async function loadLocalLlmPolicyEnhancement({
+  question = "",
+  preset = fallbackPreset,
+  scopes = [],
+  answerMode = "plain",
+  userRole = "auto",
+  partyRole = "auto",
+  topicContext = null,
+  policyContext = null,
+  baseResponse = null,
+  questionFingerprint = "",
+  accessMessage = ""
+} = {}) {
+  if (!question || window.location.protocol === "file:" || !isLocalLlmEnhancementHost()) return;
+
+  const controller = new AbortController();
+  activeLocalLlmController = controller;
+  const office = getEducationOffice(policyContext?.officeCode || "gyeongbuk");
+  const role = getPolicyRole(policyContext?.roleCode || "auto");
+  const category = getPolicyGuideCategory(policyContext?.categoryCode || "auto");
+
+  try {
+    const response = await fetch("/api/policy", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json"
+      },
+      signal: controller.signal,
+      body: JSON.stringify({
+        question,
+        originalQuestion: question,
+        officeLabel: office.code === "auto" ? "" : office.label,
+        roleLabel: role.code === "auto" ? "" : role.label,
+        categoryLabel: category.label,
+        topic: preset.type,
+        scopes,
+        answerMode,
+        userRole,
+        partyRole,
+        topicContext
+      })
+    });
+
+    if (!response.ok) return;
+    const data = await response.json();
+    if (
+      activeLocalLlmController !== controller ||
+      questionFingerprint !== currentQuestionFingerprint ||
+      !data?.localLlmComposer?.ok ||
+      !data.policyResponse
+    ) {
+      return;
+    }
+
+    const enhancedResponse = buildPolicyGuideResponseFromPolicyChatResult(data, {
+      baseResponse,
+      policyContext,
+      question,
+      office,
+      role,
+      category
+    });
+    resultTitle.textContent = "로컬 AI 보강 답변";
+    statusDot.textContent = "로컬 AI 보강";
+    resultState.className = "summary-box guideline-result free-policy-result local-llm-result";
+    resultState.innerHTML = `
+      ${renderPolicyGuideResponse(enhancedResponse)}
+      ${renderLocalLlmComposerNote(data.localLlmComposer)}
+      ${accessMessage ? `
+        <section class="free-access-note" aria-label="비로그인 기본 답변 안내">
+          <strong>로그인 없이 기본 답변을 제공했습니다.</strong>
+          <p class="answer-warning">${escapeHtml(accessMessage)}</p>
+        </section>
+      ` : ""}
+    `;
+  } catch (error) {
+    if (error.name !== "AbortError") {
+      console.warn("Local LLM policy enhancement skipped:", error);
+    }
+  } finally {
+    if (activeLocalLlmController === controller) {
+      activeLocalLlmController = null;
+    }
+  }
+}
+
+function isLocalLlmEnhancementHost() {
+  const host = window.location.hostname || "";
+  return host === "localhost"
+    || host === "127.0.0.1"
+    || host === "::1"
+    || /^10\./.test(host)
+    || /^192\.168\./.test(host)
+    || /^172\.(1[6-9]|2\d|3[0-1])\./.test(host);
+}
+
+function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
+  baseResponse = null,
+  policyContext = null,
+  question = "",
+  office = null,
+  role = null,
+  category = null
+} = {}) {
+  const policyResponse = data.policyResponse || {};
+  const answerItems = normalizePolicyChatAnswerTexts(policyResponse.answer);
+  const stepItems = (policyResponse.steps || []).map(cleanPolicyGuideUserText).filter(Boolean).slice(0, 4);
+  const directRule = {
+    ...(baseResponse?.directRule || {}),
+    title: policyResponse.title || baseResponse?.directRule?.title || baseResponse?.title || "",
+    lead: policyResponse.lead || baseResponse?.lead || "",
+    roleLabel: policyResponse.roleLabel || data.roleLabel || role?.label || "",
+    answer: answerItems.length ? answerItems : baseResponse?.directRule?.answer || [],
+    steps: stepItems.length ? stepItems : baseResponse?.firstSteps || [],
+    sourceKeys: policyResponse.sourceKeys || baseResponse?.directRule?.sourceKeys || [],
+    queries: policyResponse.queries || baseResponse?.searchQueries || [],
+    caution: policyResponse.caution || baseResponse?.caution || "",
+    sourcePriority: policyResponse.sourcePriority || baseResponse?.directRule?.sourcePriority || ""
+  };
+
+  return {
+    ...(baseResponse || {}),
+    question: data.question || question,
+    office: baseResponse?.office || office || getEducationOffice(policyContext?.officeCode || "gyeongbuk"),
+    effectiveOffice: baseResponse?.effectiveOffice || office || getEducationOffice(policyContext?.officeCode || "gyeongbuk"),
+    category: baseResponse?.category || category || getPolicyGuideCategory(policyContext?.categoryCode || "auto"),
+    role: baseResponse?.role || role || getPolicyRole(policyContext?.roleCode || "auto"),
+    needsQuestionCompletion: false,
+    needsIntentConfirmation: false,
+    title: policyResponse.title || baseResponse?.title || "규정·지침 답변",
+    lead: policyResponse.lead || baseResponse?.lead || "",
+    directRule,
+    firstSteps: directRule.steps.length ? directRule.steps : answerItems.slice(1, 4),
+    caution: directRule.caution,
+    searchQueries: directRule.queries,
+    localLlmComposer: data.localLlmComposer
+  };
+}
+
+function normalizePolicyChatAnswerTexts(answer) {
+  return (Array.isArray(answer) ? answer : [answer])
+    .map((item) => {
+      if (typeof item === "string") return cleanPolicyGuideUserText(item);
+      return cleanPolicyGuideUserText(item?.text || item?.summary || item?.answer || "");
+    })
+    .filter(Boolean)
+    .slice(0, 5);
+}
+
+function renderLocalLlmComposerNote(composer = {}) {
+  if (!composer?.ok) return "";
+  const elapsed = Number(composer.elapsedMs || 0);
+  const elapsedLabel = elapsed >= 1000 ? `${(elapsed / 1000).toFixed(1)}초` : `${elapsed}ms`;
+  return `
+    <section class="free-access-note local-llm-note" aria-label="로컬 AI 보강 안내">
+      <strong>Ollama 로컬 모델로 문장을 보강했습니다.</strong>
+      <p>${escapeHtml(composer.model || "local model")} · ${escapeHtml(elapsedLabel)} · 규정 엔진 결과 안에서만 정리</p>
+    </section>
   `;
 }
 
@@ -5016,8 +5203,10 @@ function resetTransientQuestionState({ keepFormValues = false, resetFormValues =
 function abortActiveRequests() {
   activeAiController?.abort();
   activeSourceController?.abort();
+  activeLocalLlmController?.abort();
   activeAiController = null;
   activeSourceController = null;
+  activeLocalLlmController = null;
 }
 
 function buildQuestionFingerprint({ question, presetType, scopes, answerMode, userRole, partyRole, topicContext }) {

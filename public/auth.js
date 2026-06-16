@@ -371,7 +371,7 @@ function renderAuth() {
           <div class="auth-card-head">
             <div>
               <strong>회원 시스템 준비중</strong>
-              <p><code>public/firebase-config.js</code>에 Firebase 웹 앱 설정을 넣으면 로그인과 권한관리를 시작할 수 있습니다.</p>
+              <p>Firebase 웹 앱 설정이 로드되면 로그인과 권한관리를 시작할 수 있습니다.</p>
             </div>
             <button type="button" data-auth-click="close-auth" aria-label="로그인 창 닫기">닫기</button>
           </div>
