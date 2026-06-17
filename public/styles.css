@@ -1934,16 +1934,72 @@ select:focus {
 }
 
 .guide-direct {
-  padding: 14px;
-  border: 1px solid #cfe4e2;
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 2px solid #8fc9c4;
   border-radius: 8px;
-  background: #fff;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(38, 127, 119, 0.11);
 }
 
 .guide-direct strong {
   display: block;
-  margin-bottom: 8px;
-  color: var(--navy);
+  color: #0f4f58;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.guide-direct ul {
+  display: grid;
+  gap: 8px;
+}
+
+.guide-answer-card .guide-direct li {
+  color: #1f3853;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.65;
+}
+
+.guide-answer-card .guide-direct li::marker {
+  color: var(--teal);
+}
+
+.guide-auto-verify {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid #b8d9ee;
+  border-left: 5px solid #2f7fb8;
+  border-radius: 8px;
+  background: #f0f8ff;
+}
+
+.guide-auto-verify strong {
+  color: #145079;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.guide-auto-verify p {
+  margin: 0;
+  color: #244960;
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.65;
+}
+
+.guide-auto-verify.is-complete {
+  border-color: #b9dcda;
+  border-left-color: var(--teal);
+  background: #f2fbfa;
+}
+
+.guide-auto-verify.is-deferred {
+  border-color: #d7e7e4;
+  border-left-color: #7aa39f;
+  background: #fbfefd;
 }
 
 .guide-expansion-card {

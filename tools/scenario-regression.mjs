@@ -1229,6 +1229,38 @@ if (!studentGuidanceDirectSourceHtml.includes("cntntsId=6600")
 if (/교육청 선택 필요|교육청 선택 후 공식 자료실 검색|생활교육위원회%20선도%20조치%20절차/.test(studentGuidanceDirectSourceHtml)) {
   failures.push("policy-guide-student-guidance-sources: should not render generic search prompts for Gyeongbuk student-guidance sources");
 }
+if (!studentGuidanceDirectSourceHtml.includes("핵심 확인 사항") || studentGuidanceDirectSourceHtml.includes("다음에 확인할 것")) {
+  failures.push("policy-guide-priority-checklist: expected prominent 핵심 확인 사항 title instead of 다음에 확인할 것");
+}
+
+const sourceGapCautionGuide = {
+  ...studentGuidanceDirectSourceGuide,
+  caution: "증빙자료가 부족합니다. 학교별 생활규정, 교육청 지침, 학생생활기록 관리지침 등 원문을 확인해야 하며, 교육부 및 경상북도교육청 공식 문서를 직접 확인하시기 바랍니다.",
+  sourceExpansion: {
+    required: true,
+    acquisitionTargets: [
+      { tier: "educationOfficeGuideline", label: "경상북도교육청 지침 원문" },
+      { tier: "schoolRule", label: "학교별 생활규정" }
+    ]
+  },
+  riskReview: {
+    required: true,
+    items: [
+      { code: "humanRights", label: "학생인권", status: "detected" }
+    ]
+  }
+};
+const sourceGapCautionHtml = context.renderPolicyGuideResponse(sourceGapCautionGuide);
+const sourceGapProgressHtml = context.renderPolicyGuideAutoVerificationNotice(sourceGapCautionGuide, { state: "active" });
+if (/증빙자료가 부족|직접 확인하시기 바랍니다/.test(sourceGapCautionHtml)) {
+  failures.push("policy-guide-source-gap-caution: source-gap caution should not tell users to check originals themselves");
+}
+if (!sourceGapCautionHtml.includes("자동 자료확충") || !sourceGapCautionHtml.includes("학생인권")) {
+  failures.push("policy-guide-source-gap-caution: expected automatic source expansion and risk separation message");
+}
+if (!sourceGapProgressHtml.includes("더 정확한 결과를 위해 새로운 자료를 추가로 확인중입니다. 조금만 더 기다려 주세요.")) {
+  failures.push("policy-guide-source-gap-progress: expected visible additional-source checking progress message");
+}
 
 for (const guideCase of broadSchoolPolicyGuideCases) {
   const guide = context.buildPolicyGuideResponse({

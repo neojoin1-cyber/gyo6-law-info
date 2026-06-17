@@ -2299,7 +2299,10 @@ function renderPolicyGuideResult() {
   if (guideStatus) guideStatus.textContent = "기본 답변";
   if (guideResultTitle) guideResultTitle.textContent = "규정·지침 답변";
   guideResult.className = "summary-box guideline-result";
-  guideResult.innerHTML = renderPolicyGuideResponse(response);
+  guideResult.innerHTML = `
+    ${renderPolicyGuideResponse(response)}
+    ${renderPolicyGuideAutoVerificationNotice(response, { state: isLocalLlmEnhancementHost() ? "active" : "deferred" })}
+  `;
 
   loadGuideLocalLlmPolicyEnhancement({
     question,
@@ -3259,7 +3262,7 @@ function renderPolicyGuideResponse(response) {
       ...supportingItems
     ]).slice(0, 5);
   }
-  const cautionText = cleanPolicyGuideUserText(buildPolicyGuideShortCaution(response, officeLabel, roleLabel));
+  const cautionText = cleanPolicyGuideUserText(buildPolicyGuideFinalCaution(response, officeLabel, roleLabel));
 
   return `
     <section class="guide-answer-card primary">
@@ -3268,7 +3271,7 @@ function renderPolicyGuideResponse(response) {
       ${userLead ? `<p class="guide-answer-lead">${escapeHtml(userLead)}</p>` : ""}
       ${supportingItems.length ? `
         <div class="guide-direct">
-          <strong>다음에 확인할 것</strong>
+          <strong>핵심 확인 사항</strong>
           <ul>${supportingItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
         </div>
       ` : ""}
@@ -3351,6 +3354,78 @@ function buildPolicyGuideShortCaution(response = {}, officeLabel = "", roleLabel
     return `${officeLabel} 기준입니다. ${response.caution || "학교 내부 규정과 최신 원문은 시스템이 추가 확보 대상으로 관리합니다."}`;
   }
   return response.caution || `${officeLabel} 기준으로 답변하되, 학교 내부 규정과 최신 원문은 시스템이 추가 확보 대상으로 관리합니다.`;
+}
+
+function buildPolicyGuideFinalCaution(response = {}, officeLabel = "", roleLabel = "") {
+  const rawCaution = buildPolicyGuideShortCaution(response, officeLabel, roleLabel);
+  return normalizePolicyGuideCautionText(rawCaution, response);
+}
+
+function normalizePolicyGuideCautionText(text = "", response = {}) {
+  const caution = cleanPolicyGuideUserText(text || "");
+  if (!caution) return "";
+  if (!isPolicySourceGapCaution(caution)) return caution;
+
+  const hasDirectSource = hasImmediateOfficialPolicySource(response);
+  const hasExpansion = Boolean(getPolicyGuideSourceExpansion(response)?.required);
+  const riskItems = getPolicyGuideRiskReview(response);
+  const riskLabel = riskItems.length
+    ? "안전·학생인권·개인정보·불복 쟁점은 별도로 분리해 점검합니다."
+    : "안전·학생인권·개인정보·불복 쟁점이 보이면 별도로 분리해 점검합니다.";
+
+  if (hasDirectSource && hasExpansion) {
+    return `확보 가능한 공식 원문은 이번 답변에 반영했고, 남은 학교별 생활규정·내부규정은 자동 자료확충·재검증 대상으로 처리합니다. ${riskLabel}`;
+  }
+
+  if (hasExpansion) {
+    return `부족한 원문은 사용자에게 다시 맡기지 않고 자동 자료확충·재검증 대상으로 처리합니다. ${riskLabel}`;
+  }
+
+  return `추가 원문 확인이 필요한 사안입니다. 시스템이 공식자료 후보를 우선 대조하고, 학교별 내부규정은 확인되는 즉시 같은 질문을 재판단합니다. ${riskLabel}`;
+}
+
+function isPolicySourceGapCaution(text = "") {
+  return /증빙자료가\s*부족|자료가\s*부족|근거가\s*부족|원문을\s*확인|공식\s*문서.*직접\s*확인|확인하시기\s*바랍니다|원문\s*기준\s*확인/.test(cleanPolicyGuideUserText(text));
+}
+
+function shouldShowPolicyGuideAutoVerification(response = {}) {
+  return Boolean(getPolicyGuideSourceExpansion(response)?.required)
+    || isPolicySourceGapCaution(response.caution || "")
+    || isPolicySourceGapCaution(response.directRule?.caution || "");
+}
+
+function renderPolicyGuideAutoVerificationNotice(response = {}, { state = "active" } = {}) {
+  if (!shouldShowPolicyGuideAutoVerification(response)) return "";
+  const isActive = state === "active";
+  const isComplete = state === "complete";
+  const title = isActive
+    ? "추가 자료 확인 중"
+    : isComplete ? "추가 자료 확인 반영" : "추가 자료 확인 대기";
+  const message = isActive
+    ? "더 정확한 결과를 위해 새로운 자료를 추가로 확인중입니다. 조금만 더 기다려 주세요."
+    : isComplete
+      ? "확보 가능한 공식 원문과 자동 자료확충 기준을 반영해 답변을 다시 정리했습니다."
+      : "현재 기본 답변을 먼저 표시했습니다. 추가 원문은 자동 자료확충·재검증 대상으로 계속 관리합니다.";
+
+  return `
+    <section class="guide-auto-verify ${isActive ? "is-active" : isComplete ? "is-complete" : "is-deferred"}" data-policy-auto-verify aria-live="polite">
+      <strong>${escapeHtml(title)}</strong>
+      <p>${escapeHtml(message)}</p>
+    </section>
+  `;
+}
+
+function markPolicyGuideAutoVerificationDeferred(container) {
+  const notice = container?.querySelector?.("[data-policy-auto-verify]");
+  if (!notice) return;
+  notice.classList.remove("is-active", "is-complete");
+  notice.classList.add("is-deferred");
+  const title = notice.querySelector?.("strong");
+  const message = notice.querySelector?.("p");
+  if (title) title.textContent = "추가 자료 확인 대기";
+  if (message) {
+    message.textContent = "현재 기본 답변을 먼저 표시했습니다. 추가 원문은 자동 자료확충·재검증 대상으로 계속 관리합니다.";
+  }
 }
 
 function renderPolicyGuideSourceExpansion(response = {}) {
@@ -5204,6 +5279,7 @@ function renderFreeBasicPolicyResult({
   resultState.className = "summary-box guideline-result free-policy-result";
   resultState.innerHTML = `
     ${renderPolicyGuideResponse(response)}
+    ${renderPolicyGuideAutoVerificationNotice(response, { state: isLocalLlmEnhancementHost() ? "active" : "deferred" })}
     ${accessMessage ? `
       <section class="free-access-note" aria-label="비로그인 기본 답변 안내">
         <strong>로그인 없이 기본 답변을 제공했습니다.</strong>
@@ -5244,6 +5320,7 @@ async function loadLocalLlmPolicyEnhancement({
 
   const controller = new AbortController();
   activeLocalLlmController = controller;
+  let appliedEnhancement = false;
   const office = getEducationOffice(policyContext?.officeCode || "gyeongbuk");
   const role = getPolicyRole(policyContext?.roleCode || "auto");
   const category = getPolicyGuideCategory(policyContext?.categoryCode || "auto");
@@ -5295,6 +5372,7 @@ async function loadLocalLlmPolicyEnhancement({
     resultState.className = "summary-box guideline-result free-policy-result local-llm-result";
     resultState.innerHTML = `
       ${renderPolicyGuideResponse(enhancedResponse)}
+      ${renderPolicyGuideAutoVerificationNotice(enhancedResponse, { state: "complete" })}
       ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer)}
       ${accessMessage ? `
         <section class="free-access-note" aria-label="비로그인 기본 답변 안내">
@@ -5303,12 +5381,16 @@ async function loadLocalLlmPolicyEnhancement({
         </section>
       ` : ""}
     `;
+    appliedEnhancement = true;
   } catch (error) {
     if (error.name !== "AbortError") {
       console.warn("Local LLM policy enhancement skipped:", error);
     }
   } finally {
     if (activeLocalLlmController === controller) {
+      if (!appliedEnhancement && questionFingerprint === currentQuestionFingerprint) {
+        markPolicyGuideAutoVerificationDeferred(resultState);
+      }
       activeLocalLlmController = null;
     }
   }
@@ -5327,6 +5409,7 @@ async function loadGuideLocalLlmPolicyEnhancement({
   activeGuideLocalLlmController?.abort();
   const controller = new AbortController();
   activeGuideLocalLlmController = controller;
+  let appliedEnhancement = false;
   const office = getEducationOffice(officeCode);
   const role = getPolicyRole(roleCode);
   const category = getPolicyGuideCategory(categoryCode);
@@ -5376,14 +5459,19 @@ async function loadGuideLocalLlmPolicyEnhancement({
     guideResult.className = "summary-box guideline-result local-llm-result";
     guideResult.innerHTML = `
       ${renderPolicyGuideResponse(enhancedResponse)}
+      ${renderPolicyGuideAutoVerificationNotice(enhancedResponse, { state: "complete" })}
       ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer)}
     `;
+    appliedEnhancement = true;
   } catch (error) {
     if (error.name !== "AbortError") {
       console.warn("Guide local LLM policy enhancement skipped:", error);
     }
   } finally {
     if (activeGuideLocalLlmController === controller) {
+      if (!appliedEnhancement && guideFingerprint === currentGuideQuestionFingerprint) {
+        markPolicyGuideAutoVerificationDeferred(guideResult);
+      }
       activeGuideLocalLlmController = null;
     }
   }
@@ -5415,7 +5503,7 @@ function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
     steps: stepItems.length ? stepItems : baseResponse?.firstSteps || [],
     sourceKeys: policyResponse.sourceKeys || baseResponse?.directRule?.sourceKeys || [],
     queries: policyResponse.queries || baseResponse?.searchQueries || [],
-    caution: policyResponse.caution || baseResponse?.caution || "",
+    caution: normalizePolicyGuideCautionText(policyResponse.caution || baseResponse?.caution || "", baseResponse || {}),
     sourcePriority: policyResponse.sourcePriority || baseResponse?.directRule?.sourcePriority || "",
     sourceExpansion: data.sourceExpansion || policyResponse.sourceExpansion || data.answerState?.sourceExpansion || baseResponse?.sourceExpansion || null,
     riskReview: data.riskReview || policyResponse.riskReview || data.answerState?.riskReview || baseResponse?.riskReview || null

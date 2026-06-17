@@ -405,6 +405,8 @@ function buildPolicyComposerSystemPrompt() {
     "Use only the provided rule-engine result. Do not invent laws, article numbers, case names, dates, rights, duties, or source URLs.",
     "This is information, not legal advice. Preserve uncertainty when the base result is conditional.",
     "If sourceExpansion is provided, describe it as a system-side source expansion and recheck path. Do not tell the user to check original school or education-office documents themselves.",
+    "Never end with phrases that push work back to the user, such as '증빙자료가 부족합니다', '원문을 확인하세요', '공식 문서를 직접 확인하시기 바랍니다'.",
+    "When evidence or source gaps remain, say that GYO6 is additionally checking official sources and will re-evaluate with sourceExpansion/riskReview. Keep the actionable answer useful while preserving uncertainty.",
     "Write concise Korean for teachers, students, parents, and school staff. Put the conclusion first.",
     "If source keys or official source priority are provided, say that the system keeps school, education-office, and national originals as recheck targets."
   ].join("\n");
@@ -635,15 +637,23 @@ export function scoreLocalPolicyResult(result = {}) {
 
 function attachLocalPolicyDraft(result = {}, draft = {}, metadata = {}) {
   const guardedDraft = applyRequiredPolicyAnchors(draft, result);
+  const guardedCaution = normalizeLocalPolicyDraftCaution(
+    guardedDraft.caution || result.policyResponse?.caution || "",
+    result
+  );
+  const finalDraft = {
+    ...guardedDraft,
+    caution: guardedCaution
+  };
   const nextResponse = {
     ...(result.policyResponse || {}),
-    title: guardedDraft.title || result.policyResponse?.title || "",
-    lead: guardedDraft.lead || result.policyResponse?.lead || "",
-    answer: guardedDraft.answer.length ? guardedDraft.answer : result.policyResponse?.answer || [],
-    steps: guardedDraft.steps.length ? guardedDraft.steps : result.policyResponse?.steps || [],
-    caution: guardedDraft.caution || result.policyResponse?.caution || ""
+    title: finalDraft.title || result.policyResponse?.title || "",
+    lead: finalDraft.lead || result.policyResponse?.lead || "",
+    answer: finalDraft.answer.length ? finalDraft.answer : result.policyResponse?.answer || [],
+    steps: finalDraft.steps.length ? finalDraft.steps : result.policyResponse?.steps || [],
+    caution: finalDraft.caution
   };
-  const nextPrimaryText = guardedDraft.lead || guardedDraft.answer[0] || result.answerState?.primaryText || "";
+  const nextPrimaryText = finalDraft.lead || finalDraft.answer[0] || result.answerState?.primaryText || "";
 
   return {
     ...result,
@@ -651,18 +661,40 @@ function attachLocalPolicyDraft(result = {}, draft = {}, metadata = {}) {
     answerState: {
       ...(result.answerState || {}),
       primaryText: nextPrimaryText,
-      conditionalAnswers: guardedDraft.answer.slice(1, 5),
-      slotQuestions: guardedDraft.followupQuestions.length
-        ? guardedDraft.followupQuestions.map((question, index) => ({
+      conditionalAnswers: finalDraft.answer.slice(1, 5),
+      slotQuestions: finalDraft.followupQuestions.length
+        ? finalDraft.followupQuestions.map((question, index) => ({
             slot: `local_llm_followup_${index + 1}`,
             label: "추가 확인",
             question
           }))
         : result.answerState?.slotQuestions || []
     },
-    responseText: formatLocalPolicyDraftText(guardedDraft, result),
+    responseText: formatLocalPolicyDraftText(finalDraft, result),
     localLlmComposer: metadata
   };
+}
+
+function normalizeLocalPolicyDraftCaution(caution = "", result = {}) {
+  const text = cleanLongText(caution || "");
+  if (!text) return "";
+  if (!isDelegatingSourceGapCaution(text)) return text;
+
+  const hasExpansion = Boolean(result.sourceExpansion?.required || result.policyResponse?.sourceExpansion?.required || result.answerState?.sourceExpansion?.required);
+  const hasRiskReview = Boolean(result.riskReview?.required || result.policyResponse?.riskReview?.required || result.answerState?.riskReview?.required);
+  const riskText = hasRiskReview
+    ? "안전·학생인권·개인정보·불복 쟁점은 일반 규정 답변과 분리해 점검합니다."
+    : "안전·학생인권·개인정보·불복 쟁점이 보이면 일반 규정 답변과 분리해 점검합니다.";
+
+  if (hasExpansion) {
+    return `부족한 원문은 사용자에게 다시 맡기지 않고 GYO6의 자동 자료확충·재검증 대상으로 처리합니다. ${riskText}`;
+  }
+
+  return `추가 원문 확인이 필요한 사안입니다. GYO6가 공식자료 후보를 우선 대조하고, 확인되는 원문을 기준으로 같은 질문을 재판단합니다. ${riskText}`;
+}
+
+function isDelegatingSourceGapCaution(text = "") {
+  return /증빙자료가\s*부족|자료가\s*부족|근거가\s*부족|원문을\s*확인|공식\s*문서.*직접\s*확인|확인하시기\s*바랍니다|원문\s*기준\s*확인/.test(cleanLongText(text));
 }
 
 function applyRequiredPolicyAnchors(draft = {}, result = {}) {
