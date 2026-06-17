@@ -1213,6 +1213,23 @@ if (/교육청 선택 필요|공식 도메인 검색|교육청 선택 후 공식
   failures.push("policy-guide-field-learning-sources: should not render generic education-office search prompts for Gyeongbuk default field learning");
 }
 
+const studentGuidanceDirectSourceGuide = context.buildPolicyGuideResponse({
+  question: "경상북도교육청 생활교육위원회 선도 조치 절차를 알려 주세요.\n\n관련 규정과 공식 출처를 자세히 보여 주세요.",
+  officeCode: "auto",
+  roleCode: "auto",
+  categoryCode: "auto"
+});
+const studentGuidanceDirectSourceHtml = context.renderPolicyGuideResponse(studentGuidanceDirectSourceGuide);
+if (!studentGuidanceDirectSourceHtml.includes("cntntsId=6600")
+  || !studentGuidanceDirectSourceHtml.includes("nttSn=1617362")
+  || !studentGuidanceDirectSourceHtml.includes("학생선도위원회 운영계획")
+  || !studentGuidanceDirectSourceHtml.includes("공식 자료 페이지 직접 연결")) {
+  failures.push("policy-guide-student-guidance-sources: expected Gyeongbuk direct student-guidance and student-life-rule source links");
+}
+if (/교육청 선택 필요|교육청 선택 후 공식 자료실 검색|생활교육위원회%20선도%20조치%20절차/.test(studentGuidanceDirectSourceHtml)) {
+  failures.push("policy-guide-student-guidance-sources: should not render generic search prompts for Gyeongbuk student-guidance sources");
+}
+
 for (const guideCase of broadSchoolPolicyGuideCases) {
   const guide = context.buildPolicyGuideResponse({
     question: guideCase.question,

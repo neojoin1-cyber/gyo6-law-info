@@ -255,6 +255,13 @@ const educationOfficeCatalog = [
       url: "https://www.gbe.kr/dep_stu/na/ntt/selectNttInfo.do?mi=8671&bbsId=2693&nttSn=1591411",
       status: "공식 게시글 직접 연결",
       supportUrl: "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14848&cntntsId=6404"
+    },
+    studentGuidanceGuide: {
+      title: "규칙과 질서가 있는 학교문화 개선",
+      url: "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14937&cntntsId=6600",
+      status: "공식 자료 페이지 직접 연결",
+      updateTitle: "교원의 학생생활지도에 관한 고시 개정에 따른 학생생활규정 개정 계획",
+      updateUrl: "https://www.gbe.kr/edupia/na/ntt/selectNttInfo.do?mi=22809&nttSn=1617362"
     }
   },
   {
@@ -391,13 +398,22 @@ const policySourceCatalog = {
     linkLabel: "학교·법인 공식자료 검색 후보"
   },
   studentGuidanceRule: {
-    title: "학생생활지도·학생생활규정",
-    source: "교육부·시도교육청·학교규정",
-    url: "",
-    query: "학생생활지도 고시 학생생활규정 학칙 휴대전화 생활지도",
-    note: "학급관리, 생활지도, 학생 인권, 학교생활규정 확인",
-    status: "학교·교육청 원문 자동확충 대상",
-    linkLabel: "학교·교육청 자료로 확인"
+    title: "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+    source: "경상북도교육청 학교지원종합자료실",
+    url: "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14937&cntntsId=6600",
+    query: "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정",
+    note: "학교규칙 제·개정 절차, 학생생활규정 자체점검표, 학생선도위원회 운영계획 서식으로 바로 연결됩니다.",
+    status: "공식 자료 페이지 직접 연결",
+    linkLabel: "학생선도·생활규정 자료 보기"
+  },
+  gyeongbukStudentGuidanceUpdate: {
+    title: "교원의 학생생활지도 고시 개정에 따른 학생생활규정 개정 계획",
+    source: "경상북도교육청 학교지원종합자료실",
+    url: "https://www.gbe.kr/edupia/na/ntt/selectNttInfo.do?mi=22809&nttSn=1617362",
+    query: "교원의 학생생활지도에 관한 고시 개정 학생생활규정 개정 계획",
+    note: "2026년 개정 고시에 맞춘 학생생활규정 개정 계획과 첨부 자료를 확인합니다.",
+    status: "공식 게시글 직접 연결",
+    linkLabel: "개정 계획 보기"
   },
   fieldExperienceGuide: {
     title: "2026학년도 학교장허가 교외체험학습 운영 지침",
@@ -2315,7 +2331,8 @@ function schedulePolicyGuideAutoRender() {
 
 function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode = "auto", categoryCode = "auto" } = {}) {
   const normalized = compactText(question);
-  const office = getEducationOffice(officeCode);
+  const inferredOfficeCode = officeCode === "auto" ? inferPolicyGuideOfficeCode(question) : "";
+  const office = getEducationOffice(inferredOfficeCode || officeCode);
   const analysis = analyzePolicyGuideQuestion(question, normalized);
   const category = getPolicyGuideCategory(categoryCode === "auto" ? analysis.categoryCode : categoryCode);
   const role = getPolicyRole(roleCode === "auto" ? analysis.roleCode : roleCode);
@@ -2440,6 +2457,11 @@ function getDefaultEducationOfficeFallback(office, analysis, category) {
     "schoolBudgetExecution",
     "schoolInstructorHonorarium",
     "afterSchoolChildcare",
+    "classManagementGuidance",
+    "dormitoryOperation",
+    "parentComplaintResponse",
+    "teacherRightsProtection",
+    "governanceCommitteeRule",
     "fieldExperienceLearning",
     "vocationalFieldTrainingOperation",
     "vocationalCurriculumNcs",
@@ -2451,6 +2473,7 @@ function getDefaultEducationOfficeFallback(office, analysis, category) {
   const officeFirstCategories = new Set([
     "budgetExecution",
     "studentAttendance",
+    "studentLifeGuidance",
     "fieldExperienceLearning",
     "vocationalFieldTraining",
     "careerEmployment",
@@ -3334,6 +3357,7 @@ function renderPolicyGuideSourceExpansion(response = {}) {
   const expansion = getPolicyGuideSourceExpansion(response);
   if (!expansion?.required && !expansion?.acquisitionTargets?.length) return "";
 
+  const message = buildPolicyGuideSourceExpansionMessage(response, expansion);
   const targets = (expansion.acquisitionTargets || []).slice(0, 4);
   const riskItems = getPolicyGuideRiskReview(response)
     .filter((item) => item.status === "detected" || ["safety", "humanRights", "privacy", "appeal"].includes(item.code))
@@ -3342,7 +3366,7 @@ function renderPolicyGuideSourceExpansion(response = {}) {
   return `
     <div class="guide-expansion-card" aria-label="자동 자료확충 계획">
       <strong>자동 자료확충·재검증</strong>
-      <p>현재 답변에서 부족한 원문은 시스템 확보 대상으로 등록하고, 확보되는 자료로 같은 사안을 다시 판단합니다.</p>
+      <p>${escapeHtml(message)}</p>
       ${targets.length ? `
         <ul>
           ${targets.map((target) => `<li><b>${escapeHtml(target.label || target.tier)}</b><span>${escapeHtml(target.reason || target.query || "원문 확보 대상")}</span></li>`).join("")}
@@ -3355,6 +3379,40 @@ function renderPolicyGuideSourceExpansion(response = {}) {
       ` : ""}
     </div>
   `;
+}
+
+function buildPolicyGuideSourceExpansionMessage(response = {}, expansion = {}) {
+  const hasDirectSource = hasImmediateOfficialPolicySource(response);
+  const targets = expansion.acquisitionTargets || [];
+  const needsSchoolRule = targets.some((target) => target.tier === "schoolRule" || /학교별|학교규정|학교생활규정|내부 규정/.test(`${target.label || ""} ${target.reason || ""}`));
+
+  if (hasDirectSource && needsSchoolRule) {
+    return "확보 가능한 공식 원문은 이번 답변의 출처 카드에 즉시 반영했습니다. 학교별 생활규정처럼 학교명·학교 URL이 필요한 원문은 학교 정보를 받으면 같은 질문을 다시 좁혀 재판단합니다.";
+  }
+
+  if (hasDirectSource) {
+    return "확보 가능한 공식 원문은 이번 답변의 출처 카드에 즉시 반영했습니다. 남은 원문은 확보 대상으로 관리해 후속 재답변에서 보강합니다.";
+  }
+
+  if (needsSchoolRule) {
+    return "교육청 지침과 학교별 규정 원문을 확보 대상으로 관리합니다. 학교명이나 학교 규정 URL이 들어오면 같은 질문을 다시 좁혀 재판단합니다.";
+  }
+
+  return "현재 답변에서 부족한 원문은 시스템 확보 대상으로 등록하고, 확보되는 자료로 같은 사안을 다시 판단합니다.";
+}
+
+function hasImmediateOfficialPolicySource(response = {}) {
+  const sources = [
+    ...(Array.isArray(response.officeSources) ? response.officeSources : []),
+    ...(Array.isArray(response.nationalSources) ? response.nationalSources : [])
+  ];
+
+  return sources.some((source) => {
+    const href = getRenderablePolicySourceUrl(source);
+    if (!href) return false;
+    if (/google\.com\/search|\/search\/search\.do/i.test(href)) return false;
+    return /공식|직접|경상북도교육청|국가법령정보센터|교육부/.test(`${source.source || ""} ${source.status || ""} ${source.note || ""}`);
+  });
 }
 
 function getPolicyGuideSourceExpansion(response = {}) {
@@ -3701,6 +3759,31 @@ function getPolicySourceDefaultDomain(value = "") {
   return "";
 }
 
+function inferPolicyGuideOfficeCode(text = "") {
+  const normalized = compactText(text);
+  const aliases = [
+    ["gyeongbuk", /경상북도교육청|경북교육청|경북\s*교육청/],
+    ["gyeongnam", /경상남도교육청|경남교육청|경남\s*교육청/],
+    ["busan", /부산광역시교육청|부산교육청|부산\s*교육청/],
+    ["daegu", /대구광역시교육청|대구교육청|대구\s*교육청/],
+    ["incheon", /인천광역시교육청|인천교육청|인천\s*교육청/],
+    ["gwangju", /광주광역시교육청|광주교육청|광주\s*교육청/],
+    ["daejeon", /대전광역시교육청|대전교육청|대전\s*교육청/],
+    ["ulsan", /울산광역시교육청|울산교육청|울산\s*교육청/],
+    ["sejong", /세종특별자치시교육청|세종교육청|세종\s*교육청/],
+    ["gyeonggi", /경기도교육청|경기교육청|경기\s*교육청/],
+    ["gangwon", /강원특별자치도교육청|강원도교육청|강원교육청|강원\s*교육청/],
+    ["chungbuk", /충청북도교육청|충북교육청|충북\s*교육청/],
+    ["chungnam", /충청남도교육청|충남교육청|충남\s*교육청/],
+    ["jeonbuk", /전북특별자치도교육청|전라북도교육청|전북교육청|전북\s*교육청/],
+    ["jeonnam", /전라남도교육청|전남교육청|전남\s*교육청/],
+    ["jeju", /제주특별자치도교육청|제주교육청|제주\s*교육청/],
+    ["seoul", /서울특별시교육청|서울교육청|서울\s*교육청/]
+  ];
+  const matched = aliases.find(([, pattern]) => pattern.test(normalized));
+  return matched?.[0] || "";
+}
+
 function getEducationOffice(code = "auto") {
   return educationOfficeCatalog.find((item) => item.code === code) || educationOfficeCatalog[0];
 }
@@ -3919,10 +4002,30 @@ function filterPolicySourceKeysForContext(sourceKeys = [], context = {}) {
   const roleCode = context.role?.code || context.analysis?.roleCode || "";
   const officeCode = context.office?.code || "";
   const hasFieldExperienceGuide = sourceKeys.includes("fieldExperienceGuide") || domainCode === "fieldExperienceLearning";
-  const officeScopedSourceKeys = officeCode && officeCode !== "gyeongbuk"
-    ? sourceKeys.filter((key) => !["fieldExperienceGuide", "gyeongbukFieldExperienceSupport"].includes(key))
-    : officeCode === "gyeongbuk" && hasFieldExperienceGuide
-      ? sourceKeys.filter((key) => !["fieldExperienceGuide", "gyeongbukFieldExperienceSupport"].includes(key))
+  const hasStudentGuidanceGuide = sourceKeys.includes("studentGuidanceRule")
+    || sourceKeys.includes("gyeongbukStudentGuidanceUpdate")
+    || domainCode === "classManagementGuidance"
+    || isStudentGuidanceSourceQuestion(normalized);
+  const officeBlockedSourceKeys = [];
+
+  if (officeCode && officeCode !== "gyeongbuk") {
+    officeBlockedSourceKeys.push(
+      "fieldExperienceGuide",
+      "gyeongbukFieldExperienceSupport",
+      "studentGuidanceRule",
+      "gyeongbukStudentGuidanceUpdate"
+    );
+  } else if (officeCode === "gyeongbuk") {
+    if (hasFieldExperienceGuide) {
+      officeBlockedSourceKeys.push("fieldExperienceGuide", "gyeongbukFieldExperienceSupport");
+    }
+    if (hasStudentGuidanceGuide) {
+      officeBlockedSourceKeys.push("studentGuidanceRule", "gyeongbukStudentGuidanceUpdate");
+    }
+  }
+
+  const officeScopedSourceKeys = officeBlockedSourceKeys.length
+    ? sourceKeys.filter((key) => !officeBlockedSourceKeys.includes(key))
     : sourceKeys;
 
   const domainScopedSourceKeys = {
@@ -3977,6 +4080,12 @@ function buildOfficePolicySources(office, category, context = {}) {
   const sources = [];
   const label = office.code === "auto" ? "소속 교육청" : office.label;
   const officeQueries = getOfficePolicyQueries(category, context);
+  const frame = context.analysis?.engineAnalysis?.semanticFrame || context.directRule?.ruleLookup?.semanticFrame || {};
+  const domainCode = context.directRule?.domain || frame.domainCode || "";
+  const normalized = compactText(context.question || context.analysis?.question || "");
+  const isStudentGuidanceCategory = category === policyGuideCategories.studentLifeGuidance
+    || domainCode === "classManagementGuidance"
+    || isStudentGuidanceSourceQuestion(normalized);
   const searchStatus = office.code === "auto"
     ? "교육청 선택 필요"
     : office.code === "gyeongbuk" ? "경상북도교육청 공식 검색" : "공식 도메인 검색";
@@ -4002,6 +4111,30 @@ function buildOfficePolicySources(office, category, context = {}) {
         note: "신청서, 결과보고서, 대리 인솔, 출석 인정, 서류 보관 기준을 바로 확인할 수 있는 공식 안내 페이지입니다.",
         status: "공식 자료 페이지 직접 연결",
         linkLabel: "안내·서식 바로 보기"
+      });
+    }
+
+    return dedupePolicySources(sources).slice(0, 5);
+  }
+
+  if (isStudentGuidanceCategory && office.studentGuidanceGuide?.url) {
+    sources.push({
+      title: office.studentGuidanceGuide.title,
+      source: `${label} 학교지원종합자료실`,
+      url: office.studentGuidanceGuide.url,
+      note: "학교규칙 제·개정 절차, 학생생활규정 자체점검표, 학생선도위원회 운영계획 서식으로 바로 연결되는 공식 자료 페이지입니다.",
+      status: office.studentGuidanceGuide.status || "공식 자료 페이지 직접 연결",
+      linkLabel: "학생선도·생활규정 자료 보기"
+    });
+
+    if (office.studentGuidanceGuide.updateUrl) {
+      sources.push({
+        title: office.studentGuidanceGuide.updateTitle || "학생생활규정 개정 계획",
+        source: `${label} 학교지원종합자료실`,
+        url: office.studentGuidanceGuide.updateUrl,
+        note: "교원의 학생생활지도에 관한 고시 개정에 맞춘 학생생활규정 개정 계획과 첨부 자료를 확인합니다.",
+        status: "공식 게시글 직접 연결",
+        linkLabel: "개정 계획 보기"
       });
     }
 
@@ -4043,6 +4176,10 @@ function buildOfficePolicySources(office, category, context = {}) {
   });
 
   return dedupePolicySources(sources).slice(0, 5);
+}
+
+function isStudentGuidanceSourceQuestion(text = "") {
+  return /생활교육위원회|학생선도위원회|선도위원회|학생선도|선도\s*조치|학생\s*징계|학생생활규정|학교생활규정|학생생활지도/.test(text);
 }
 
 function buildOfficialDomainSearchUrl(office, query) {

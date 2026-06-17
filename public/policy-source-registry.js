@@ -236,9 +236,11 @@
       },
       studentGuidanceRule: {
         tier: "schoolRule",
-        title: "학생생활지도·학생생활규정",
-        provider: "교육부·시도교육청·학교",
-        query: "학생생활지도 고시 학생생활규정 학칙 휴대전화 생활지도",
+        title: "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+        provider: "경상북도교육청 학교지원종합자료실",
+        query: "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정",
+        url: "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14937&cntntsId=6600",
+        supportUrl: "https://www.gbe.kr/edupia/na/ntt/selectNttInfo.do?mi=22809&nttSn=1617362",
         domains: ["classManagementGuidance", "dormitoryOperation", "parentComplaintResponse"]
       },
       fieldExperienceGuide: {
