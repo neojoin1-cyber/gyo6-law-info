@@ -1074,8 +1074,8 @@ const gyeongbukFixedTermSixMonthSourceGuide = context.buildPolicyGuideResponse({
   categoryCode: "auto"
 });
 const gyeongbukFixedTermSixMonthSourceHtml = context.renderPolicyGuideResponse(gyeongbukFixedTermSixMonthSourceGuide);
-if (!gyeongbukFixedTermSixMonthSourceHtml.includes("관련 규정·공식 출처") || !gyeongbukFixedTermSixMonthSourceHtml.includes("site%3Agbe.kr") || !gyeongbukFixedTermSixMonthSourceHtml.includes("공식 도메인 검색")) {
-  failures.push("policy-guide-source-links: source detail should appear only when explicitly requested and use official-domain search");
+if (!gyeongbukFixedTermSixMonthSourceHtml.includes("관련 규정·공식 출처") || !gyeongbukFixedTermSixMonthSourceHtml.includes("www.gbe.kr/search/search.do") || !gyeongbukFixedTermSixMonthSourceHtml.includes("경상북도교육청 공식 검색")) {
+  failures.push("policy-guide-source-links: source detail should appear only when explicitly requested and use Gyeongbuk official search");
 }
 
 const vocationalJobGuide = context.buildPolicyGuideResponse({
@@ -1195,6 +1195,23 @@ const broadSchoolPolicyGuideCases = [
     forbidden: ["안전·응급 위험", "출장비", "기숙사 운영·생활지도 확인 기준"]
   }
 ];
+
+const fieldLearningDirectSourceGuide = context.buildPolicyGuideResponse({
+  question: "교외체험학습 신청서와 보고서, 출결 처리는 어떻게 해야 하나요?\n\n관련 규정과 공식 출처를 자세히 보여 주세요.",
+  officeCode: "auto",
+  roleCode: "auto",
+  categoryCode: "auto"
+});
+const fieldLearningDirectSourceHtml = context.renderPolicyGuideResponse(fieldLearningDirectSourceGuide);
+if (!fieldLearningDirectSourceHtml.includes("nttSn=1591411")
+  || !fieldLearningDirectSourceHtml.includes("cntntsId=6404")
+  || !fieldLearningDirectSourceHtml.includes("2026학년도 학교장허가 교외체험학습 운영 지침")
+  || !fieldLearningDirectSourceHtml.includes("공식 게시글 직접 연결")) {
+  failures.push("policy-guide-field-learning-sources: expected Gyeongbuk direct field-learning guideline and support-material links");
+}
+if (/교육청 선택 필요|공식 도메인 검색|교육청 선택 후 공식 자료실 검색/.test(fieldLearningDirectSourceHtml)) {
+  failures.push("policy-guide-field-learning-sources: should not render generic education-office search prompts for Gyeongbuk default field learning");
+}
 
 for (const guideCase of broadSchoolPolicyGuideCases) {
   const guide = context.buildPolicyGuideResponse({

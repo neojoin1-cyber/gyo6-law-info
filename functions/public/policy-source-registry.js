@@ -243,9 +243,11 @@
       },
       fieldExperienceGuide: {
         tier: "educationOfficeGuideline",
-        title: "현장체험학습·교외체험학습 운영 지침",
-        provider: "시도교육청",
-        query: "교외체험학습 현장체험학습 운영 지침 신청서 보고서 출결",
+        title: "2026학년도 학교장허가 교외체험학습 운영 지침",
+        provider: "경상북도교육청 학생생활과",
+        query: "2026학년도 학교장허가 교외체험학습 운영 지침 신청서 보고서 출석 인정",
+        url: "https://www.gbe.kr/dep_stu/na/ntt/selectNttInfo.do?mi=8671&bbsId=2693&nttSn=1591411",
+        supportUrl: "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14848&cntntsId=6404",
         domains: ["fieldExperienceLearning"]
       },
       schoolMealAct: {

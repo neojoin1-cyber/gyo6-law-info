@@ -249,6 +249,12 @@ const educationOfficeCatalog = [
       title: "2026학년도 공립학교회계 예산편성 기본지침",
       url: "https://www.gbe.kr/main/na/ntt/selectNttInfo.do?mi=3372&bbsId=1852&nttSn=1564258",
       status: "공식 게시글 직접 연결"
+    },
+    fieldExperienceGuide: {
+      title: "2026학년도 학교장허가 교외체험학습 운영 지침",
+      url: "https://www.gbe.kr/dep_stu/na/ntt/selectNttInfo.do?mi=8671&bbsId=2693&nttSn=1591411",
+      status: "공식 게시글 직접 연결",
+      supportUrl: "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14848&cntntsId=6404"
     }
   },
   {
@@ -394,13 +400,22 @@ const policySourceCatalog = {
     linkLabel: "학교·교육청 자료로 확인"
   },
   fieldExperienceGuide: {
-    title: "현장체험학습·교외체험학습 운영 지침",
-    source: "시도교육청",
-    url: "",
-    query: "교외체험학습 현장체험학습 운영 지침 신청서 보고서 출결",
-    note: "체험학습 신청, 승인, 안전계획, 출결·학생부 처리 기준",
-    status: "교육청 선택 필요",
-    linkLabel: "교육청 선택 후 공식 자료실 검색"
+    title: "2026학년도 학교장허가 교외체험학습 운영 지침",
+    source: "경상북도교육청 학생생활과",
+    url: "https://www.gbe.kr/dep_stu/na/ntt/selectNttInfo.do?mi=8671&bbsId=2693&nttSn=1591411",
+    query: "2026학년도 학교장허가 교외체험학습 운영 지침",
+    note: "신청서·보고서·대리인솔·출석인정·서류 보관 기준이 첨부된 경북교육청 공식 게시글입니다.",
+    status: "공식 게시글 직접 연결",
+    linkLabel: "원문 게시글 보기"
+  },
+  gyeongbukFieldExperienceSupport: {
+    title: "학교장허가 교외체험학습 안내·서식",
+    source: "경상북도교육청 학교지원종합자료실",
+    url: "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14848&cntntsId=6404",
+    query: "학교장허가 교외체험학습 신청서 보고서 출석 인정",
+    note: "교외체험학습 절차, 출석 인정, 신청서·결과보고서·대리인솔 관련 서식으로 바로 연결됩니다.",
+    status: "공식 자료 페이지 직접 연결",
+    linkLabel: "안내·서식 바로 보기"
   },
   schoolMealAct: {
     title: "학교급식법 및 급식 운영 기준",
@@ -2376,7 +2391,7 @@ function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode
     ? engineDirectRule
     : localDirectRule || engineDirectRule;
   const directRule = refinePolicyGuideDirectRuleForUserAnswer(selectedDirectRule, { question, analysis, role, office: effectiveOffice });
-  const sourceContext = { question, analysis, directRule, role };
+  const sourceContext = { question, analysis, directRule, role, office: effectiveOffice };
   const officeSources = directRule?.sourcePriority === "national" ? [] : buildOfficePolicySources(effectiveOffice, category, sourceContext);
   const sourceKeys = filterPolicySourceKeysForContext(
     uniqueStrings([...(directRule?.sourceKeys || []), ...(category.sourceKeys || [])]),
@@ -3295,7 +3310,7 @@ function renderPolicyGuideOptionalClarifyingPanel(questions = []) {
 
 function getPolicyGuideDetailRequest(question = "") {
   const normalized = compactText(question);
-  const explicitDetail = /추가요청|자세히보기|상세보기|더자세히|구체적으로|상세히/.test(normalized);
+  const explicitDetail = /추가요청|자세히|자세히보기|상세보기|더자세히|구체적으로|상세히/.test(normalized);
   return {
     sources: explicitDetail && /관련규정|규정|지침|공식출처|출처|원문|법령|근거/.test(normalized),
     forms: explicitDetail && /서식|양식|체크리스트|신청서|보고서|서류|절차/.test(normalized)
@@ -3902,6 +3917,13 @@ function filterPolicySourceKeysForContext(sourceKeys = [], context = {}) {
   const domainCode = context.directRule?.domain || frame.domainCode || "";
   const employmentCode = frame.slots?.employmentType?.code || "";
   const roleCode = context.role?.code || context.analysis?.roleCode || "";
+  const officeCode = context.office?.code || "";
+  const hasFieldExperienceGuide = sourceKeys.includes("fieldExperienceGuide") || domainCode === "fieldExperienceLearning";
+  const officeScopedSourceKeys = officeCode && officeCode !== "gyeongbuk"
+    ? sourceKeys.filter((key) => !["fieldExperienceGuide", "gyeongbukFieldExperienceSupport"].includes(key))
+    : officeCode === "gyeongbuk" && hasFieldExperienceGuide
+      ? sourceKeys.filter((key) => !["fieldExperienceGuide", "gyeongbukFieldExperienceSupport"].includes(key))
+    : sourceKeys;
 
   const domainScopedSourceKeys = {
     domesticTravelExpense: ["travelExpense", "publicRecords"],
@@ -3919,14 +3941,14 @@ function filterPolicySourceKeysForContext(sourceKeys = [], context = {}) {
 
   if (domainScopedSourceKeys[domainCode]) {
     const allowed = new Set(domainScopedSourceKeys[domainCode]);
-    return sourceKeys.filter((key) => allowed.has(key));
+    return officeScopedSourceKeys.filter((key) => allowed.has(key));
   }
 
   if (!["staffAttendanceService", "bereavementLeave"].includes(domainCode)) {
-    return sourceKeys;
+    return officeScopedSourceKeys;
   }
 
-  const scopedSourceKeys = sourceKeys.filter((key) => key !== "travelExpense");
+  const scopedSourceKeys = officeScopedSourceKeys.filter((key) => key !== "travelExpense");
   const isPrivate = employmentCode === "privateSchool" || roleCode === "privateSchool" || /사립|학교법인/.test(normalized);
   const isFixedTerm = employmentCode === "fixedTerm" || roleCode === "fixedTermTeacher" || /기간제|계약제/.test(normalized);
   const isEducationWorker = employmentCode === "educationStaff" || roleCode === "educationWorker" || /교육공무직|공무직/.test(normalized);
@@ -3955,6 +3977,36 @@ function buildOfficePolicySources(office, category, context = {}) {
   const sources = [];
   const label = office.code === "auto" ? "소속 교육청" : office.label;
   const officeQueries = getOfficePolicyQueries(category, context);
+  const searchStatus = office.code === "auto"
+    ? "교육청 선택 필요"
+    : office.code === "gyeongbuk" ? "경상북도교육청 공식 검색" : "공식 도메인 검색";
+  const searchLabel = office.code === "auto"
+    ? "교육청 선택 후 공식 자료실 검색"
+    : office.code === "gyeongbuk" ? "경상북도교육청 공식 검색" : "공식 도메인 검색";
+
+  if (category === policyGuideCategories.fieldExperienceLearning && office.fieldExperienceGuide?.url) {
+    sources.push({
+      title: office.fieldExperienceGuide.title,
+      source: label,
+      url: office.fieldExperienceGuide.url,
+      note: `${label} 학생생활과 자료실의 2026.3.1. 시행 교외체험학습 운영 지침 게시글입니다.`,
+      status: office.fieldExperienceGuide.status || "공식 게시글 직접 연결",
+      linkLabel: "원문 게시글 보기"
+    });
+
+    if (office.fieldExperienceGuide.supportUrl) {
+      sources.push({
+        title: "학교장허가 교외체험학습 안내·서식",
+        source: `${label} 학교지원종합자료실`,
+        url: office.fieldExperienceGuide.supportUrl,
+        note: "신청서, 결과보고서, 대리 인솔, 출석 인정, 서류 보관 기준을 바로 확인할 수 있는 공식 안내 페이지입니다.",
+        status: "공식 자료 페이지 직접 연결",
+        linkLabel: "안내·서식 바로 보기"
+      });
+    }
+
+    return dedupePolicySources(sources).slice(0, 5);
+  }
 
   if (category === policyGuideCategories.budgetExecution) {
     if (office.budgetGuide?.url) {
@@ -3971,9 +4023,9 @@ function buildOfficePolicySources(office, category, context = {}) {
         source: label,
         url: buildOfficialDomainSearchUrl(office, "2026학년도 학교회계 예산편성 기본지침"),
         note: "교육청별 해당 학년도 학교회계 지침을 최우선으로 확인합니다.",
-        status: office.code === "auto" ? "교육청 선택 필요" : "공식 도메인 검색",
+        status: searchStatus,
         linkType: office.code === "auto" ? "none" : "search",
-        linkLabel: office.code === "auto" ? "교육청 선택 후 공식 자료실 검색" : "공식 도메인 검색"
+        linkLabel: searchLabel
       });
     }
   }
@@ -3984,9 +4036,9 @@ function buildOfficePolicySources(office, category, context = {}) {
       source: label,
       url: buildOfficialDomainSearchUrl(office, query),
       note: "홈페이지 메인이 아니라 소속 교육청 공식 도메인 안에서 해당 지침·자료명을 좁혀 확인합니다.",
-      status: office.code === "auto" ? "교육청 선택 필요" : "공식 도메인 검색",
+      status: searchStatus,
       linkType: office.code === "auto" ? "none" : "search",
-      linkLabel: office.code === "auto" ? "교육청 선택 후 공식 자료실 검색" : "공식 도메인 검색"
+      linkLabel: searchLabel
     });
   });
 
@@ -3995,6 +4047,10 @@ function buildOfficePolicySources(office, category, context = {}) {
 
 function buildOfficialDomainSearchUrl(office, query) {
   if (office.code === "auto" || !office.domain) return "";
+
+  if (office.code === "gyeongbuk") {
+    return `https://www.gbe.kr/search/search.do?searchType=total&query=${encodeURIComponent(query)}&sysid=main&sysnm=${encodeURIComponent("경상북도교육청")}`;
+  }
 
   return buildOfficialSiteSearchUrl(office.domain, query);
 }
