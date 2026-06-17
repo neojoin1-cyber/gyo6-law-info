@@ -161,8 +161,8 @@
         tier: "nationalLaw",
         title: "초·중등교육법 및 시행령",
         provider: "국가법령정보센터",
-        query: "초중등교육법 시행령 입학 전학 편입학 졸업 학교운영위원회",
-        domains: ["admissionsTransferGraduation", "governanceCommitteeRule", "vocationalCurriculumNcs"]
+        query: "초중등교육법 제18조 초중등교육법 시행령 제31조 학생 징계 의견진술",
+        domains: ["admissionsTransferGraduation", "governanceCommitteeRule", "vocationalCurriculumNcs", "classManagementGuidance"]
       },
       educationWelfareGuide: {
         tier: "educationOfficeGuideline",
@@ -198,6 +198,15 @@
         provider: "국가법령정보센터·교육부",
         query: "교원지위법 교육활동 침해 교권 보호 교원치유지원",
         domains: ["teacherRightsProtection", "classManagementGuidance"]
+      },
+      studentLifeGuidanceNotice: {
+        tier: "ministryGuideline",
+        title: "교원의 학생생활지도에 관한 고시",
+        provider: "국가법령정보센터·교육부",
+        query: "교원의 학생생활지도에 관한 고시 수업방해 생활지도 분리 제지 소지품",
+        url: "https://www.law.go.kr/LSW/admRulSc.do?menuId=5&subMenuId=41&query=%EA%B5%90%EC%9B%90%EC%9D%98%20%ED%95%99%EC%83%9D%EC%83%9D%ED%99%9C%EC%A7%80%EB%8F%84%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B3%A0%EC%8B%9C",
+        supportUrl: "https://www.moe.go.kr/boardCnts/listRenew.do?boardID=294&m=020402&s=moe&searchType=S&searchStr=%EA%B5%90%EC%9B%90%EC%9D%98%20%ED%95%99%EC%83%9D%EC%83%9D%ED%99%9C%EC%A7%80%EB%8F%84%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B3%A0%EC%8B%9C",
+        domains: ["classManagementGuidance", "teacherRightsProtection", "parentComplaintResponse"]
       },
       schoolFacilitySafetyGuide: {
         tier: "educationOfficeGuideline",

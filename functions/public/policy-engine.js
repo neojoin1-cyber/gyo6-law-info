@@ -1341,9 +1341,9 @@
     }
     if (domainCode === "classManagementGuidance") {
       if (/휴대전화|휴대폰|핸드폰|스마트폰|소지품/.test(normalized)) {
-        return "수업 중 휴대전화·소지품 보관은 학교생활규정의 근거, 사전 안내, 보관 방식, 반환 절차, 학생 인권과 개인정보 침해 여부를 함께 확인합니다.";
+        return "수업 중 휴대전화·소지품 지도는 먼저 교원의 학생생활지도에 관한 고시의 생활지도·분리·소지품 관리 기준을 보고, 학생 인권·개인정보 침해 위험과 학교생활규정의 세부 절차를 뒤따라 대조합니다.";
       }
-      return "수업 중 반복적인 지도 불응은 즉시 징계부터 정하기보다 학급 규칙 안내, 생활지도 기록, 보호자 상담, 학교 생활규정상 조치 가능 범위를 순서대로 확인합니다.";
+      return "수업 중 자리 미착석·반복 지도 불응은 먼저 교원의 학생생활지도에 관한 고시의 수업방해 생활지도 기준으로 사실을 기록하고, 선도·징계로 넘어갈 때 초·중등교육법 제18조와 시행령 제31조 절차 및 학교생활규정을 대조합니다.";
     }
     if (domainCode === "studentRecordsAttendance") {
       return "학생부·출결·정정 사안은 당해 학년도 기재요령, 증빙자료, 정정 권한과 결재 이력을 기준으로 처리합니다.";
@@ -1374,9 +1374,9 @@
     }
     if (domainCode === "classManagementGuidance") {
       if (/휴대전화|휴대폰|핸드폰|스마트폰|소지품/.test(normalized)) {
-        return "수업 중 휴대전화 보관은 학교생활규정에 보관 근거와 절차가 있을 때 학생에게 사전 안내하고, 보관·반환 기록과 민원 대응 자료를 남겨 학생 인권 침해 논란을 예방하는 방식으로 처리합니다.";
+        return "수업 중 휴대전화 보관은 교원의 학생생활지도에 관한 고시에 따른 생활지도·소지품 관리 가능 범위를 먼저 확인하고, 사전 안내, 보관·반환 기록, 학생 인권·개인정보 보호, 학교생활규정의 세부 절차를 함께 맞춥니다.";
       }
-      return "수업 중 반복적인 지시 불응은 수업방해 사실을 시간순으로 기록하고, 학급·학교 생활규정에 따른 생활지도, 상담, 보호자 안내, 필요한 경우 선도·징계 절차 가능성을 단계적으로 검토합니다.";
+      return "수업 중 반복적인 지시 불응은 교원의 학생생활지도에 관한 고시에 따라 수업방해 사실과 지도 과정을 시간순으로 기록하고, 훈계·상담·분리 등 생활지도 가능 범위와 학생 인권·아동학대 민원 위험을 먼저 분리합니다. 선도·징계가 필요할 때만 초·중등교육법 제18조, 시행령 제31조, 학교생활규정 절차를 최종 대조합니다.";
     }
     if (domainCode === "studentRecordsAttendance") {
       return "학생부·출결·정정은 당해 학년도 기재요령과 학교생활기록 작성·관리지침을 기준으로, 증빙자료와 결재 이력이 확인될 때 정정 또는 출결 처리를 진행합니다.";
@@ -1987,9 +1987,20 @@
   }
 
   function buildCorpusBasisText(lookup = null) {
-    const sourceMatches = (lookup?.corpusMatches || []).filter((match) => match.type === "officialSource").slice(0, 3);
+    const sourceOrder = lookup?.sourceKeys || [];
+    let sourceMatches = (lookup?.corpusMatches || []).filter((match) => match.type === "officialSource");
+    if (lookup?.domain === "classManagementGuidance") {
+      sourceMatches = sourceMatches.sort((a, b) => {
+        const aIndex = sourceOrder.indexOf(a.sourceKey);
+        const bIndex = sourceOrder.indexOf(b.sourceKey);
+        const aRank = aIndex >= 0 ? aIndex : Number.MAX_SAFE_INTEGER;
+        const bRank = bIndex >= 0 ? bIndex : Number.MAX_SAFE_INTEGER;
+        return aRank - bRank || Number(b.score || 0) - Number(a.score || 0);
+      });
+    }
+    sourceMatches = sourceMatches.slice(0, 3);
     if (!sourceMatches.length) return "";
-    return `관련 공식자료로 ${sourceMatches.map((match) => match.title).join(", ")}을 먼저 확인합니다.`;
+    return `관련 공식자료로 ${appendObjectParticle(sourceMatches.map((match) => match.title).join(", "))} 먼저 확인합니다.`;
   }
 
   function getContextualEvidenceLabel(domainCode = "", slots = {}, frame = {}) {
@@ -2057,6 +2068,15 @@
 
     if (isOntologySchoolDomain(domainCode)) {
       const domain = getEffectivePolicyDomain(domainCode);
+      if (domainCode === "classManagementGuidance") {
+        return uniqueStrings([
+          "교원의 학생생활지도에 관한 고시에서 수업방해·훈계·상담·분리·제지 가능 범위를 먼저 확인",
+          "수업방해 사실, 교사 지시, 학생 반응, 지도·상담·보호자 안내 과정을 시간순으로 기록",
+          "선도·징계 검토 단계로 넘어가면 초·중등교육법 제18조와 시행령 제31조의 절차·의견진술 기회를 대조",
+          "교육활동 침해, 학교폭력, 안전 위험, 학생 인권·아동학대 민원 가능성을 각각 분리",
+          "상위 기준으로 판단이 남는 세부 집행 부분만 학교생활규정·학칙·위원회 규정으로 최종 확인"
+        ]);
+      }
       return uniqueStrings([
         `${domain.label || "학교정책"} 질문을 대상, 학교급, 업무 단계, 증빙, 위험 신호로 분해`,
         "교육부·교육청 지침과 학교 내부 규정을 자동 확보 대상으로 등록",
@@ -2114,6 +2134,17 @@
       const expansionQueries = (lookup?.lookupPlan?.sourceExpansion?.acquisitionTargets || [])
         .map((target) => target.query)
         .filter(Boolean);
+      if (domainCode === "classManagementGuidance") {
+        return uniqueStrings([
+          ...corpusQueries,
+          ...expansionQueries,
+          "교원의 학생생활지도에 관한 고시 수업방해 훈계 상담 분리 제지",
+          "초중등교육법 제18조 초중등교육법 시행령 제31조 학생 징계 의견진술",
+          "교원지위법 교육활동 침해 수업방해 학생 지도",
+          `${getOfficeSlotLabel(slots, officeLabel)} 학생생활규정 학생선도위원회 생활지도`,
+          `${rule} ${stage} 증빙자료`
+        ]);
+      }
       return uniqueStrings([
         ...corpusQueries,
         ...expansionQueries,
@@ -2145,6 +2176,9 @@
     }
 
     if (isOntologySchoolDomain(domainCode)) {
+      if (domainCode === "classManagementGuidance") {
+        return `${missingPrefix}학생 생활지도 사안은 교원의 학생생활지도에 관한 고시와 초·중등교육법상 선도·징계 절차를 먼저 적용하고, 학교생활규정·학칙은 상위 기준으로도 남는 학교별 세부 집행 기준을 확정할 때 최종 대조합니다. 시스템이 부족한 상위 원문과 교육청 자료를 자동 자료확충 대상으로 등록하고, 안전·인권·개인정보·불복 쟁점을 분리해 재검증합니다.`;
+      }
       return `${missingPrefix}학교 현장 사안은 법령보다 교육부·교육청 지침, 학교생활규정·학칙·위원회 규정, 내부 결재와 증빙이 더 직접적인 기준이 될 수 있습니다. 시스템이 부족한 원문을 자동 자료확충 대상으로 등록하고, 안전·인권·개인정보·불복 쟁점을 분리해 재검증합니다.`;
     }
 

@@ -122,6 +122,107 @@ try {
   await new Promise((resolve) => server.close(resolve));
 }
 
+const classManagementBaseResult = {
+  ok: true,
+  question: "학교에서 수업 시간이 시작되어 선생님이 교실에 들어갔는데도 자리에 앉지 않는 학생에게 할 수 있는 조치는?",
+  confidence: 0.43,
+  semanticFrame: {
+    domainCode: "classManagementGuidance",
+    domainLabel: "학급관리·학생생활지도",
+    confidence: 0.43
+  },
+  answerState: {
+    status: "needs_slot",
+    primaryText: "수업 중 자리 미착석·반복 지도 불응은 먼저 교원의 학생생활지도에 관한 고시의 수업방해 생활지도 기준으로 사실을 기록하고, 선도·징계로 넘어갈 때 초·중등교육법 제18조와 시행령 제31조 절차 및 학교생활규정을 대조합니다."
+  },
+  policyResponse: {
+    title: "학급관리·학생생활지도 확인 기준",
+    lead: "수업 중 자리 미착석·반복 지도 불응은 먼저 교원의 학생생활지도에 관한 고시의 수업방해 생활지도 기준으로 사실을 기록하고, 선도·징계로 넘어갈 때 초·중등교육법 제18조와 시행령 제31조 절차 및 학교생활규정을 대조합니다.",
+    answer: [
+      "수업 중 반복적인 지시 불응은 교원의 학생생활지도에 관한 고시에 따라 수업방해 사실과 지도 과정을 시간순으로 기록하고, 훈계·상담·분리 등 생활지도 가능 범위와 학생 인권·아동학대 민원 위험을 먼저 분리합니다. 선도·징계가 필요할 때만 초·중등교육법 제18조, 시행령 제31조, 학교생활규정 절차를 최종 대조합니다.",
+      "교원의 학생생활지도에 관한 고시와 초·중등교육법상 선도·징계 절차를 먼저 확인하고, 학교생활규정은 학교별 세부 집행 기준을 확정하는 최종 대조 단계로 봅니다."
+    ],
+    steps: [
+      "교원의 학생생활지도에 관한 고시에서 수업방해·훈계·상담·분리·제지 가능 범위를 먼저 확인",
+      "선도·징계 검토 단계로 넘어가면 초·중등교육법 제18조와 시행령 제31조의 절차·의견진술 기회를 대조",
+      "상위 기준으로 판단이 남는 세부 집행 부분만 학교생활규정·학칙·위원회 규정으로 최종 확인"
+    ],
+    caution: "학생 생활지도 사안은 교원의 학생생활지도에 관한 고시와 초·중등교육법상 선도·징계 절차를 먼저 적용하고, 학교생활규정·학칙은 상위 기준으로도 남는 학교별 세부 집행 기준을 확정할 때 최종 대조합니다.",
+    sourceKeys: ["studentLifeGuidanceNotice", "elementarySecondaryEducationAct", "teacherRightsAct", "studentGuidanceRule"]
+  },
+  missingSlots: ["procedureStage", "evidence", "schoolRule", "riskSignal"],
+  sourceExpansion: {
+    required: true,
+    status: "queued",
+    trigger: "source_or_slot_gap_detected",
+    missingSlots: ["procedureStage", "evidence", "schoolRule", "riskSignal"],
+    acquisitionTargets: [
+      { tier: "ministryGuideline", label: "교원의 학생생활지도에 관한 고시", query: "교원의 학생생활지도에 관한 고시 수업방해" }
+    ]
+  }
+};
+
+const staleClassManagementRemoteResult = {
+  ...classManagementBaseResult,
+  answerState: {
+    status: "conditional",
+    primaryText: "수업 중 지도 불응은 학급 규칙 기반으로 생활지도를 먼저 실시합니다."
+  },
+  policyResponse: {
+    ...classManagementBaseResult.policyResponse,
+    lead: "수업 중 지도 불응은 학급 규칙 기반으로 생활지도를 먼저 실시하고, 위험 신호가 없으면 단순 안내로 처리합니다.",
+    answer: [
+      "학생생활규정이나 학급 운영 원칙에 따라 안내를 하며, 필요 시 보호자와 상담하고, 학교 내 규정에 따라 조치를 고려합니다."
+    ],
+    steps: [
+      "학생생활규정과 학급 운영 원칙을 먼저 확인",
+      "지도 불응 사실을 생활지도 기록에 기재"
+    ],
+    caution: "학교별 생활규정, 교육청 지침, 학급관리 절차를 직접 확인해야 합니다."
+  },
+  responseText: "수업 중 지도 불응은 학급 규칙 기반으로 생활지도를 먼저 실시합니다.\n확인 순서\n1. 학생생활규정과 학급 운영 원칙을 먼저 확인\n학교별 생활규정, 교육청 지침, 학급관리 절차를 직접 확인해야 합니다.",
+  localLlmComposer: {
+    ok: true,
+    provider: "ollama",
+    model: "qwen3:4b-instruct"
+  }
+};
+
+const staleClassManagementServer = createServer(async (request, response) => {
+  assert.equal(request.headers.authorization, `Bearer ${token}`);
+  assert.equal(request.url, "/api/policy/llm");
+  response.writeHead(200, { "content-type": "application/json" });
+  response.end(JSON.stringify({
+    ok: true,
+    result: staleClassManagementRemoteResult,
+    bridge: { elapsedMs: 88, localLlmUsed: true }
+  }));
+});
+
+await new Promise((resolve) => staleClassManagementServer.listen(0, "127.0.0.1", resolve));
+const staleClassManagementAddress = staleClassManagementServer.address();
+try {
+  const guarded = await maybeApplyRemoteLocalPolicyLlm({ question: classManagementBaseResult.question }, classManagementBaseResult, {
+    REMOTE_LOCAL_LLM_ENABLED: "true",
+    REMOTE_LOCAL_LLM_BASE_URL: `http://127.0.0.1:${staleClassManagementAddress.port}`,
+    REMOTE_LOCAL_LLM_TOKEN: token,
+    REMOTE_LOCAL_LLM_TIMEOUT_MS: "5000"
+  });
+  const guardedText = [
+    guarded.responseText,
+    guarded.policyResponse.lead,
+    ...guarded.policyResponse.answer,
+    ...guarded.policyResponse.steps,
+    guarded.policyResponse.caution
+  ].join(" ");
+  assert.match(guarded.policyResponse.lead, /교원의 학생생활지도.*초·중등교육법|초·중등교육법.*교원의 학생생활지도/);
+  assert.match(guardedText, /시행령 제31조/);
+  assert.doesNotMatch(guardedText, /학급 규칙 기반|학생생활규정과 학급 운영 원칙을 먼저|직접 확인해야/);
+  assert.equal(guarded.remoteLocalLlm.ok, true);
+} finally {
+  await new Promise((resolve) => staleClassManagementServer.close(resolve));
+}
+
 const overtimeBaseResult = {
   ok: true,
   question: "교사가 경주에서 대전으로 1박2일 학생 인솔 출장시 시간외근무 신청을 할 수 있나요?",

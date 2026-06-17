@@ -223,14 +223,14 @@ const domainCases = [
     id: "class-management-phone",
     domain: "classManagementGuidance",
     question: "수업 중 휴대전화 보관 생활지도 민원이 들어오면 어떻게 처리하나요?",
-    include: ["학급", "학생생활규정", "휴대전화"],
+    include: ["교원의 학생생활지도", "학교생활규정", "휴대전화"],
     exclude: ["출장비"]
   },
   {
     id: "class-management-repeated-instruction-refusal",
     domain: "classManagementGuidance",
     question: "교사의 수업시간 중 반복적인 지시를 따르지 않는 학생에게 내릴 수 있는 조치는?",
-    include: ["학급", "생활지도", "학생생활규정"],
+    include: ["교원의 학생생활지도", "초·중등교육법", "시행령 제31조"],
     exclude: ["근로기준법", "연가", "16일"]
   },
   {

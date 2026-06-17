@@ -365,7 +365,7 @@ assert.equal(
 );
 const classroomGuidancePolicy = handlePolicyChatRequest(classroomGuidanceQuestion);
 assert.equal(classroomGuidancePolicy.semanticFrame.domainCode, "classManagementGuidance");
-assert.match(classroomGuidancePolicy.responseText, /생활지도|학생생활규정|학급관리/);
+assert.match(classroomGuidancePolicy.responseText, /교원의 학생생활지도|생활지도 고시|초·중등교육법/);
 assert.doesNotMatch(classroomGuidancePolicy.responseText, /근로기준법|연가|16일/);
 const classroomGuidanceKakao = buildKakaoSkillResponse({
   userRequest: {
@@ -373,7 +373,7 @@ const classroomGuidanceKakao = buildKakaoSkillResponse({
   }
 });
 const classroomGuidanceKakaoText = classroomGuidanceKakao.template.outputs[0].simpleText.text;
-assert.match(classroomGuidanceKakaoText, /수업 지시불응|학생생활규정|생활지도/);
+assert.match(classroomGuidanceKakaoText, /교원의 학생생활지도|생활지도 고시|초·중등교육법|시행령 제31조/);
 assert.doesNotMatch(classroomGuidanceKakaoText, /근로기준법|연가|16일/);
 
 const committeeMinutesClarifier = buildKakaoSkillResponse({

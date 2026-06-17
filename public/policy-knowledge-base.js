@@ -140,9 +140,9 @@
           audiences: ["student", "parent", "teacher", "manager"],
           subtopics: ["수업방해", "휴대전화", "생활지도", "학생인권", "선도조치", "기숙사 생활지도", "학칙"],
           questionPatterns: ["수업 중 지시를 안 따르면", "휴대전화를 보관해도 되나요", "생활지도와 학폭을 어떻게 구분하나요", "학부모 민원이 들어오면"],
-          evidence: ["학교생활규정", "상담기록", "보호자 안내", "수업 기록", "학생 의견 청취 기록"],
-          sourceTargets: ["studentGuidanceRule", "schoolRecordRule", "schoolRule", "publicRecords", "infoDisclosure"],
-          dataGrowthTargets: ["생활지도 고시 해설", "학생생활규정 표준안", "휴대전화 지도 관련 학교 사례"],
+          evidence: ["수업방해·지도 과정 기록", "상담기록", "보호자 안내", "학생 의견 청취 기록", "학교생활규정 최종 대조표"],
+          sourceTargets: ["studentLifeGuidanceNotice", "elementarySecondaryEducationAct", "teacherRightsAct", "studentGuidanceRule", "schoolRecordRule", "publicRecords", "infoDisclosure"],
+          dataGrowthTargets: ["교원의 학생생활지도에 관한 고시 해설", "초·중등교육법 시행령 제31조 학생징계 절차", "학생선도위원회 운영 절차", "학생생활규정 표준안", "휴대전화 지도 관련 학교 사례"],
           clarificationSlots: ["schoolRule", "procedureStage", "evidence", "riskSignal"]
         },
         vocationalFieldTrainingOperation: {
@@ -488,8 +488,8 @@
         sourcePriorityDefault: "mixed",
         intentKeywords: ["학급관리", "생활지도", "수업방해", "수업시간", "수업태도", "지시불응", "지도불응", "교사지시", "지시", "따르지", "선도조치", "학생조치", "휴대전화", "휴대폰", "학생인권", "자리이동", "상담", "훈육", "학칙", "학생생활규정", "생활교육", "담임"],
         requiredSlots: ["targetSubject", "procedureStage", "evidence", "schoolRule", "riskSignal"],
-        sourceKeys: ["studentGuidanceRule", "schoolRecordRule", "publicRecords", "infoDisclosure"],
-        answerStrategy: "학생생활규정과 학급 운영 원칙을 먼저 확인하고, 학생 인권·개인정보·아동학대 민원 전환 가능성을 함께 분리합니다."
+        sourceKeys: ["studentLifeGuidanceNotice", "elementarySecondaryEducationAct", "teacherRightsAct", "studentGuidanceRule", "schoolRecordRule", "publicRecords", "infoDisclosure"],
+        answerStrategy: "교원의 학생생활지도에 관한 고시와 초·중등교육법상 선도·징계 절차를 먼저 확인하고, 학교생활규정은 학교별 세부 집행 기준을 확정하는 최종 대조 단계로 봅니다. 학생 인권·개인정보·아동학대 민원 전환 가능성은 별도로 분리합니다."
       },
       fieldExperienceLearning: {
         categoryCode: "studentRecords",

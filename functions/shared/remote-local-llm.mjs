@@ -132,6 +132,7 @@ export function getRemoteLocalLlmConfig(env = {}) {
 function applyRequiredPolicyAnchors(remoteResult = {}, baseResult = {}) {
   const requiredLines = getRequiredPolicyAnchorLines(baseResult);
   if (!requiredLines.length) return remoteResult;
+  const isClassManagement = baseResult.semanticFrame?.domainCode === "classManagementGuidance";
 
   const remoteText = [
     remoteResult.responseText,
@@ -148,31 +149,48 @@ function applyRequiredPolicyAnchors(remoteResult = {}, baseResult = {}) {
   });
   const certificateLine = requiredLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
   const shouldPromoteCertificateLead = certificateLine && !/한의사/.test(cleanLongText(remoteResult.policyResponse?.lead || ""));
+  const classManagementLead = requiredLines.find((line) => /교원의 학생생활지도/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
+  const remoteLead = cleanLongText(remoteResult.policyResponse?.lead || "");
+  const shouldPromoteClassManagementLead = Boolean(
+    isClassManagement &&
+    classManagementLead &&
+    (!/교원의 학생생활지도|초·중등교육법|시행령 제31조/.test(remoteLead) || isLessSpecificClassManagementFallbackLine(remoteLead))
+  );
   const remoteAnswerLines = asArray(remoteResult.policyResponse?.answer)
-    .filter((line) => !isLessSpecificMedicalCertificateLine(line));
+    .filter((line) => !isLessSpecificMedicalCertificateLine(line))
+    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)));
   const remoteStepLines = asArray(remoteResult.policyResponse?.steps)
-    .filter((line) => !isLessSpecificMedicalCertificateLine(line));
+    .filter((line) => !isLessSpecificMedicalCertificateLine(line))
+    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)));
   const shouldFilterAnswer = remoteAnswerLines.length !== asArray(remoteResult.policyResponse?.answer).length;
   const shouldFilterSteps = remoteStepLines.length !== asArray(remoteResult.policyResponse?.steps).length;
-  const shouldFilterResponseText = String(remoteResult.responseText || "").split(/\n+/).some((line) => isLessSpecificMedicalCertificateLine(line));
-  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldFilterAnswer && !shouldFilterSteps && !shouldFilterResponseText) return remoteResult;
+  const shouldFilterResponseText = String(remoteResult.responseText || "").split(/\n+/).some((line) => (
+    isLessSpecificMedicalCertificateLine(line) || (isClassManagement && isLessSpecificClassManagementFallbackLine(line))
+  ));
+  const remoteCaution = cleanLongText(remoteResult.policyResponse?.caution || "");
+  const shouldFilterCaution = Boolean(isClassManagement && isLessSpecificClassManagementFallbackLine(remoteCaution));
+  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldPromoteClassManagementLead && !shouldFilterAnswer && !shouldFilterSteps && !shouldFilterResponseText && !shouldFilterCaution) return remoteResult;
 
   const nextAnswer = uniqueLines([...missingLines, ...remoteAnswerLines]).slice(0, 8);
-  const nextLead = shouldPromoteCertificateLead ? certificateLine : remoteResult.policyResponse?.lead;
+  const nextLead = shouldPromoteCertificateLead ? certificateLine : (shouldPromoteClassManagementLead ? classManagementLead : remoteResult.policyResponse?.lead);
+  const nextCaution = shouldFilterCaution
+    ? (baseResult.policyResponse?.caution || remoteResult.policyResponse?.caution)
+    : remoteResult.policyResponse?.caution;
   return {
     ...remoteResult,
     policyResponse: {
       ...(remoteResult.policyResponse || {}),
       lead: nextLead,
       answer: nextAnswer,
-      steps: remoteStepLines
+      steps: remoteStepLines,
+      caution: nextCaution
     },
     answerState: {
       ...(remoteResult.answerState || {}),
-      primaryText: shouldPromoteCertificateLead ? certificateLine : remoteResult.answerState?.primaryText,
+      primaryText: (shouldPromoteCertificateLead || shouldPromoteClassManagementLead) ? nextLead : remoteResult.answerState?.primaryText,
       conditionalAnswers: uniqueLines([...missingLines, ...asArray(remoteResult.answerState?.conditionalAnswers)]).slice(0, 5)
     },
-    responseText: prependRequiredLines(remoteResult.responseText, missingLines, shouldPromoteCertificateLead ? certificateLine : "")
+    responseText: prependRequiredLines(remoteResult.responseText, missingLines, (shouldPromoteCertificateLead || shouldPromoteClassManagementLead) ? nextLead : "", isClassManagement)
   };
 }
 
@@ -188,6 +206,17 @@ function getRequiredPolicyAnchorLines(baseResult = {}) {
     baseResult.policyResponse?.caution
   ].map(cleanLongText).filter(Boolean);
   const genericLines = getGenericCriticalPolicyAnchorLines(sourceLines);
+  if (frame.domainCode === "classManagementGuidance") {
+    const hierarchyLine = sourceLines.find((line) => /교원의 학생생활지도/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
+    const procedureLine = sourceLines.find((line) => /선도·징계/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
+    const finalRuleLine = sourceLines.find((line) => /학교생활규정/.test(line) && /최종|세부 집행|상위 기준/.test(line));
+    return uniqueLines([
+      hierarchyLine,
+      procedureLine,
+      finalRuleLine,
+      ...genericLines
+    ]).slice(0, 4);
+  }
   const isSickLeave = frame.domainCode === "staffAttendanceService"
     && (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question));
   if (!isSickLeave) return genericLines.slice(0, 3);
@@ -236,8 +265,10 @@ function collectPolicyText(result = {}) {
   ].map(cleanLongText).filter(Boolean).join(" ");
 }
 
-function prependRequiredLines(responseText = "", missingLines = [], promotedLead = "") {
+function prependRequiredLines(responseText = "", missingLines = [], promotedLead = "", filterClassManagement = false) {
   const lines = String(responseText || "").split(/\n+/).map(cleanLongText).filter(Boolean);
+  const keepLine = (line) => !isLessSpecificMedicalCertificateLine(line)
+    && !(filterClassManagement && isLessSpecificClassManagementFallbackLine(line));
   const requiredBullets = uniqueLines(missingLines)
     .filter((line) => line !== promotedLead)
     .map((line) => `- ${line}`);
@@ -246,13 +277,13 @@ function prependRequiredLines(responseText = "", missingLines = [], promotedLead
     return renumberOrderedSteps([
       promotedLead,
       ...requiredBullets,
-      ...lines.slice(1).filter((line) => !isLessSpecificMedicalCertificateLine(line))
+      ...lines.slice(1).filter(keepLine)
     ].join("\n")).slice(0, 1600);
   }
   return renumberOrderedSteps([
     lines[0],
     ...requiredBullets,
-    ...lines.slice(1).filter((line) => !isLessSpecificMedicalCertificateLine(line))
+    ...lines.slice(1).filter(keepLine)
   ].join("\n")).slice(0, 1600);
 }
 
@@ -295,6 +326,16 @@ function renumberOrderedSteps(text = "") {
 function isLessSpecificMedicalCertificateLine(line = "") {
   const text = cleanLongText(line);
   return /(의사.*진단서|진단서.*의사)/.test(text) && !/(한의사|치과의사)/.test(text);
+}
+
+function isLessSpecificClassManagementFallbackLine(line = "") {
+  const text = cleanLongText(line);
+  if (!text) return false;
+  const schoolRuleFirst = /(학생생활규정|학교생활규정|학급\s*규칙|학급\s*운영\s*원칙).{0,18}(먼저|우선|기반|확인)/.test(text);
+  const schoolRuleOnly = /(학생생활규정|학교생활규정|학급\s*규칙|학급\s*운영\s*원칙)/.test(text)
+    && !/교원의 학생생활지도|초·중등교육법|시행령 제31조|최종|세부 집행|상위 기준/.test(text);
+  const delegatesToUser = /(학교별\s*생활규정|교육청\s*지침|학급관리\s*절차).{0,20}(직접\s*확인|확인해야)/.test(text);
+  return (schoolRuleFirst || schoolRuleOnly || delegatesToUser) && !/교원의 학생생활지도|초·중등교육법|시행령 제31조/.test(text);
 }
 
 async function fetchRemoteBridge(config = {}, body = {}) {
@@ -382,7 +423,10 @@ function compactPolicyResult(result = {}) {
       title: cleanText(result.policyResponse.title || ""),
       lead: cleanLongText(result.policyResponse.lead || "").slice(0, 800),
       answer: asArray(result.policyResponse.answer).map(cleanLongText).filter(Boolean).slice(0, 8),
+      steps: asArray(result.policyResponse.steps).map(cleanLongText).filter(Boolean).slice(0, 6),
       caution: cleanLongText(result.policyResponse.caution || "").slice(0, 800),
+      sourcePriority: cleanText(result.policyResponse.sourcePriority || ""),
+      sourceKeys: asArray(result.policyResponse.sourceKeys).map(cleanText).filter(Boolean).slice(0, 10),
       sourceExpansion: compactSourceExpansion(result.policyResponse.sourceExpansion),
       riskReview: compactRiskReview(result.policyResponse.riskReview)
     } : null

@@ -397,6 +397,15 @@ const policySourceCatalog = {
     status: "학교·법인 원문 자동확충 대상",
     linkLabel: "학교·법인 공식자료 검색 후보"
   },
+  studentLifeGuidanceNotice: {
+    title: "교원의 학생생활지도에 관한 고시",
+    source: "국가법령정보센터·교육부",
+    url: "https://www.law.go.kr/LSW/admRulSc.do?menuId=5&subMenuId=41&query=%EA%B5%90%EC%9B%90%EC%9D%98%20%ED%95%99%EC%83%9D%EC%83%9D%ED%99%9C%EC%A7%80%EB%8F%84%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B3%A0%EC%8B%9C",
+    query: "교원의 학생생활지도에 관한 고시 수업방해 생활지도 분리 제지 소지품",
+    note: "수업방해, 훈계·상담, 분리·제지, 소지품 지도처럼 학생에게 직접 적용되는 생활지도 상위 기준을 먼저 확인합니다.",
+    status: "상위 고시 공식 검색",
+    linkLabel: "고시 원문 검색"
+  },
   studentGuidanceRule: {
     title: "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
     source: "경상북도교육청 학교지원종합자료실",
@@ -636,13 +645,15 @@ const policyGuideCategories = {
   studentLifeGuidance: {
     label: "학생생활지도·학칙",
     aliases: ["학생생활지도", "생활지도", "학칙", "학교생활규정", "수업방해", "지시불응", "휴대전화", "휴대폰", "선도", "징계", "생활교육위원회", "학생인권", "기숙사"],
-    summary: "학생생활지도는 학교생활규정, 생활지도 고시, 학생 인권, 아동학대·민원 위험, 상담기록을 분리해 확인해야 합니다.",
+    summary: "학생생활지도는 교원의 학생생활지도에 관한 고시와 초·중등교육법상 절차를 먼저 보고, 학교생활규정은 학교별 세부 집행 기준으로 최종 대조합니다.",
     firstSteps: [
       "단순 생활지도인지, 학교폭력인지, 교육활동 침해인지 먼저 분리",
-      "학교생활규정·학칙·기숙사 운영규정에 근거가 있는지 확인",
+      "교원의 학생생활지도에 관한 고시의 생활지도·수업방해·분리·제지 가능 범위를 먼저 확인",
+      "선도·징계 가능성이 있으면 초·중등교육법 제18조와 시행령 제31조의 절차·의견진술 기회를 대조",
+      "학교생활규정·학칙·기숙사 운영규정은 학교별 세부 집행 기준으로 최종 확인",
       "학생 의견 청취, 상담기록, 보호자 안내, 개인정보·인권 침해 위험을 함께 점검"
     ],
-    sourceKeys: ["studentGuidanceRule", "schoolRecordRule", "publicRecords", "infoDisclosure"],
+    sourceKeys: ["studentLifeGuidanceNotice", "elementarySecondaryEducationAct", "teacherRightsAct", "studentGuidanceRule", "schoolRecordRule", "publicRecords", "infoDisclosure"],
     officeQueries: ["학생생활지도 고시 학교생활규정", "생활교육위원회 선도 조치 절차", "학생 휴대전화 생활지도 학교 규정"]
   },
   studentSafety: {
@@ -4165,7 +4176,8 @@ function filterPolicySourceKeysForContext(sourceKeys = [], context = {}) {
     admissionsTransferGraduation: ["elementarySecondaryEducationAct", "schoolRecordRule", "schoolRecordGuide", "publicRecords", "infoDisclosure"],
     scholarshipWelfareSupport: ["educationWelfareGuide", "schoolAccountingRule", "afterSchoolGuide", "publicRecords", "infoDisclosure"],
     healthInfectionCounseling: ["schoolHealthAct", "studentCounselingGuide", "schoolSafetyAct", "publicRecords", "infoDisclosure"],
-    teacherRightsProtection: ["teacherRightsAct", "studentGuidanceRule", "publicRecords", "infoDisclosure"],
+    classManagementGuidance: ["studentLifeGuidanceNotice", "elementarySecondaryEducationAct", "teacherRightsAct", "studentGuidanceRule", "schoolRecordRule", "publicRecords", "infoDisclosure"],
+    teacherRightsProtection: ["teacherRightsAct", "studentLifeGuidanceNotice", "studentGuidanceRule", "publicRecords", "infoDisclosure"],
     facilityDigitalSecurity: ["schoolFacilitySafetyGuide", "personalInfoAct", "infoDisclosure", "publicRecords", "localContract"],
     governanceCommitteeRule: ["elementarySecondaryEducationAct", "publicRecords", "infoDisclosure", "studentGuidanceRule"]
   };

@@ -1170,8 +1170,15 @@ const broadSchoolPolicyGuideCases = [
     id: "class-management-policy-engine",
     question: "수업 중 휴대전화를 보관했다가 학부모가 학생 인권 침해라고 민원을 냈습니다.",
     domain: "classManagementGuidance",
-    expected: ["휴대전화", "학교생활규정", "학생 인권"],
+    expected: ["휴대전화", "교원의 학생생활지도", "학교생활규정", "학생 인권"],
     forbidden: ["대전광역시교육청", "출장비", "학교폭력 사안처리 확인 기준"]
+  },
+  {
+    id: "class-management-refusal-policy-engine",
+    question: "학교에서 수업 시간이 시작되어 선생님이 교실에 들어갔는데도 자리에 앉지 않는 학생에게 할 수 있는 조치는?",
+    domain: "classManagementGuidance",
+    expected: ["교원의 학생생활지도", "초·중등교육법", "시행령 제31조", "학교생활규정"],
+    forbidden: ["먼저 학급", "출장비", "근로기준법"]
   },
   {
     id: "field-learning-policy-engine",

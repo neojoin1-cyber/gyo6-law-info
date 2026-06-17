@@ -407,6 +407,7 @@ function buildPolicyComposerSystemPrompt() {
     "If sourceExpansion is provided, describe it as a system-side source expansion and recheck path. Do not tell the user to check original school or education-office documents themselves.",
     "Never end with phrases that push work back to the user, such as '증빙자료가 부족합니다', '원문을 확인하세요', '공식 문서를 직접 확인하시기 바랍니다'.",
     "When evidence or source gaps remain, say that GYO6 is additionally checking official sources and will re-evaluate with sourceExpansion/riskReview. Keep the actionable answer useful while preserving uncertainty.",
+    "For classManagementGuidance/student life guidance, do not begin with '학급 및 학교 생활규정을 확인'. First use the hierarchy: 교원의 학생생활지도에 관한 고시, 초·중등교육법 제18조와 시행령 제31조 when 선도·징계 is considered, 교원지위법/교육활동 보호 when applicable, then 학교생활규정 only as the final school-level execution check.",
     "Write concise Korean for teachers, students, parents, and school staff. Put the conclusion first.",
     "If source keys or official source priority are provided, say that the system keeps school, education-office, and national originals as recheck targets."
   ].join("\n");
@@ -700,6 +701,7 @@ function isDelegatingSourceGapCaution(text = "") {
 function applyRequiredPolicyAnchors(draft = {}, result = {}) {
   const requiredLines = getRequiredPolicyAnchorLines(result);
   if (!requiredLines.length) return draft;
+  const isClassManagement = result.semanticFrame?.domainCode === "classManagementGuidance";
 
   const draftText = [
     draft.title,
@@ -716,15 +718,26 @@ function applyRequiredPolicyAnchors(draft = {}, result = {}) {
   });
   const certificateLine = requiredLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
   const shouldPromoteCertificateLead = certificateLine && !/한의사/.test(cleanLongText(draft.lead || ""));
-  const filteredAnswer = asArray(draft.answer).filter((line) => !isLessSpecificMedicalCertificateLine(line));
-  const filteredSteps = asArray(draft.steps).filter((line) => !isLessSpecificMedicalCertificateLine(line));
+  const classManagementLead = requiredLines.find((line) => /교원의 학생생활지도/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
+  const draftLead = cleanLongText(draft.lead || "");
+  const shouldPromoteClassManagementLead = Boolean(
+    isClassManagement &&
+    classManagementLead &&
+    (!/교원의 학생생활지도|초·중등교육법|시행령 제31조/.test(draftLead) || isLessSpecificClassManagementFallbackLine(draftLead))
+  );
+  const filteredAnswer = asArray(draft.answer)
+    .filter((line) => !isLessSpecificMedicalCertificateLine(line))
+    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)));
+  const filteredSteps = asArray(draft.steps)
+    .filter((line) => !isLessSpecificMedicalCertificateLine(line))
+    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)));
   const shouldFilterAnswer = filteredAnswer.length !== asArray(draft.answer).length;
   const shouldFilterSteps = filteredSteps.length !== asArray(draft.steps).length;
-  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldFilterAnswer && !shouldFilterSteps) return draft;
+  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldPromoteClassManagementLead && !shouldFilterAnswer && !shouldFilterSteps) return draft;
 
   return {
     ...draft,
-    lead: shouldPromoteCertificateLead ? certificateLine : draft.lead,
+    lead: shouldPromoteCertificateLead ? certificateLine : (shouldPromoteClassManagementLead ? classManagementLead : draft.lead),
     answer: uniqueDraftLines([...missingLines, ...filteredAnswer]).slice(0, 5),
     steps: filteredSteps
   };
@@ -737,14 +750,25 @@ function getRequiredPolicyAnchorLines(result = {}) {
   const question = cleanText(result.question || frame.question || frame.normalized || "");
   const isSickLeave = frame.domainCode === "staffAttendanceService"
     && (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question));
-  if (!isSickLeave) return [];
-
   const sourceLines = [
     result.policyResponse?.lead,
     ...asArray(result.policyResponse?.answer),
     ...asArray(result.policyResponse?.steps),
     result.policyResponse?.caution
   ].map(cleanLongText).filter(Boolean);
+  if (frame.domainCode === "classManagementGuidance") {
+    const hierarchyLine = sourceLines.find((line) => /교원의 학생생활지도/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
+    const procedureLine = sourceLines.find((line) => /선도·징계/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
+    const finalRuleLine = sourceLines.find((line) => /학교생활규정/.test(line) && /최종|세부 집행|상위 기준/.test(line));
+    return uniqueDraftLines([
+      hierarchyLine,
+      procedureLine,
+      finalRuleLine,
+      ...getGenericCriticalPolicyAnchorLines(sourceLines)
+    ]).slice(0, 4);
+  }
+  if (!isSickLeave) return [];
+
   const certificateLine = sourceLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
   const certificateDetailLine = sourceLines.find((line) => /(입원확인서|진료확인서)/.test(line) && /(보조자료|대체 가능|별도로 확인)/.test(line));
   return uniqueDraftLines([
@@ -772,6 +796,16 @@ function isCriticalPolicyFactLine(line = "") {
 function isLessSpecificMedicalCertificateLine(line = "") {
   const text = cleanLongText(line);
   return /(의사.*진단서|진단서.*의사)/.test(text) && !/(한의사|치과의사)/.test(text);
+}
+
+function isLessSpecificClassManagementFallbackLine(line = "") {
+  const text = cleanLongText(line);
+  if (!text) return false;
+  const schoolRuleFirst = /(학생생활규정|학교생활규정|학급\s*규칙|학급\s*운영\s*원칙).{0,18}(먼저|우선|기반|확인)/.test(text);
+  const schoolRuleOnly = /(학생생활규정|학교생활규정|학급\s*규칙|학급\s*운영\s*원칙)/.test(text)
+    && !/교원의 학생생활지도|초·중등교육법|시행령 제31조|최종|세부 집행|상위 기준/.test(text);
+  const delegatesToUser = /(학교별\s*생활규정|교육청\s*지침|학급관리\s*절차).{0,20}(직접\s*확인|확인해야)/.test(text);
+  return (schoolRuleFirst || schoolRuleOnly || delegatesToUser) && !/교원의 학생생활지도|초·중등교육법|시행령 제31조/.test(text);
 }
 
 function attachLocalLlmMetadata(result = {}, metadata = {}) {
