@@ -51,6 +51,7 @@ for (const [domainKey, domain] of Object.entries(knowledgeBase.domains || {})) {
   assert(domain.categoryCode, `domain:${domainKey}: missing categoryCode`);
   assert(Array.isArray(domain.intentKeywords) && domain.intentKeywords.length > 0, `domain:${domainKey}: missing intent keywords`);
   assert(Array.isArray(domain.requiredSlots) && domain.requiredSlots.length > 0, `domain:${domainKey}: missing required slots`);
+  assert(domain.sourcePriorityDefault !== "schoolRuleFirst", `domain:${domainKey}: school/internal rules must be final execution checks, not the default first source`);
   if (domainKey === "domesticTravelExpense") {
     assert(domain.slotExtractors?.travelerRole, "domain:domesticTravelExpense: missing travelerRole slot extractor");
     assert(domain.tasks?.totalAmount?.outputSlots?.includes("duration"), "domain:domesticTravelExpense: missing totalAmount task duration output slot");
@@ -118,6 +119,8 @@ const healthCounselingFrame = policyEngine.buildPolicySemanticFrame("감염병 �
 const teacherRightsFrame = policyEngine.buildPolicySemanticFrame("학부모 악성민원과 교권 침해가 있을 때 교육활동 보호 절차는?");
 const facilitySecurityFrame = policyEngine.buildPolicySemanticFrame("학교 CCTV 영상정보와 개인정보, 나이스 계정 권한은 어떻게 처리하나요?");
 const governanceFrame = policyEngine.buildPolicySemanticFrame("학교운영위원회 회의록 공개와 학칙개정 심의 절차는?");
+const assessmentResponse = policyEngine.buildPolicyResponse({ question: "수행평가 부정행위와 성적 이의신청은 어떻게 처리하나요?" });
+const governanceResponse = policyEngine.buildPolicyResponse({ question: "학교운영위원회 회의록 공개와 학칙개정 심의 절차는?" });
 const homeLearningFrame = policyEngine.buildPolicySemanticFrame("학생 가정체험학습 신청 방법과 보고서, 출석인정 처리는 어떻게 하나요?");
 const employedAdultPathwayFrame = policyEngine.buildPolicySemanticFrame("특성화고 졸업생 재직자전형 지원 자격과 필요한 증빙은 무엇인가요?");
 const graduateEmploymentGapFrame = policyEngine.buildPolicySemanticFrame("졸업생 취업처 문제가 있는데 상담 기준은?");
@@ -157,7 +160,9 @@ assert(classManagementFrame.lookupPlan?.sourceExpansion?.riskReview?.items?.some
 assert(classManagementResponse?.sourceExpansion?.required === true && classManagementResponse?.riskReview?.items?.some((item) => item.code === "privacy"), "engine: class management response did not expose source expansion and risk review");
 assert(classManagementResponse?.caution?.includes("자동 자료확충") && !classManagementResponse.caution.includes("먼저 분리해야 합니다"), "engine: class management caution still pushes source gap back to user");
 assert(fieldLearningFrame.domainCode === "fieldExperienceLearning" && fieldLearningFrame.slots?.evidence?.label?.includes("신청서"), "engine: field learning frame did not extract application/report evidence");
-assert(dormitoryFrame.domainCode === "dormitoryOperation" && dormitoryFrame.lookupPlan?.actions?.includes("get_school_rule"), "engine: dormitory frame did not prioritize school rule lookup");
+assert(dormitoryFrame.domainCode === "dormitoryOperation" && dormitoryFrame.lookupPlan?.actions?.includes("get_school_rule"), "engine: dormitory frame did not keep school rule as a final execution-check target");
+assert(dormitoryFrame.lookupPlan?.sourceExpansion?.acquisitionTargets?.[0]?.tier === "ministryGuideline", "engine: dormitory source expansion should check upper official rules before school rules");
+assert(dormitoryFrame.lookupPlan?.sourceExpansion?.acquisitionTargets?.findIndex((target) => target.tier === "schoolRule") > dormitoryFrame.lookupPlan?.sourceExpansion?.acquisitionTargets?.findIndex((target) => target.tier === "ministryGuideline"), "engine: dormitory school rule should be a later execution check");
 assert(mealFrame.domainCode === "schoolMealOperation" && !mealFrame.slots?.riskSignal?.label?.includes("안전·응급"), "engine: meal frame did not respect negated food poisoning risk");
 assert(instructorFrame.domainCode === "schoolInstructorHonorarium", "engine: instructor fee frame did not classify honorarium domain");
 assert(instructorFrame.slots?.instructorProfile?.subjectLabel === "전직 교감", "engine: instructor fee frame did not extract former vice-principal profile");
@@ -178,6 +183,8 @@ assert(healthCounselingFrame.domainCode === "healthInfectionCounseling" && healt
 assert(teacherRightsFrame.domainCode === "teacherRightsProtection" && teacherRightsFrame.slots?.riskSignal?.detected, "engine: teacher rights frame did not classify staff protection domain");
 assert(facilitySecurityFrame.domainCode === "facilityDigitalSecurity" && facilitySecurityFrame.slots?.dataSystem?.detected, "engine: facility digital security frame did not classify data system");
 assert(governanceFrame.domainCode === "governanceCommitteeRule" && governanceFrame.slots?.schoolRule?.code === "governanceRule", "engine: governance committee frame did not classify committee/rule domain");
+assert(assessmentResponse?.answer?.join(" ").includes("학교생활기록부 기재요령") && assessmentResponse.answer.join(" ").includes("최종 대조"), "engine: assessment response should put ministry record standards before school assessment rules");
+assert(governanceResponse?.answer?.join(" ").includes("초·중등교육법") && governanceResponse.answer.join(" ").includes("최종 대조"), "engine: governance response should put upper law and records standards before school committee rules");
 assert(homeLearningFrame.domainCode === "fieldExperienceLearning" && homeLearningFrame.lookupPlan?.dataCoverage?.indexedSubtopics?.includes("가정체험학습"), "engine: home-learning question did not use specialized data index");
 assert(employedAdultPathwayFrame.domainCode === "admissionsTransferGraduation" && employedAdultPathwayFrame.lookupPlan?.dataCoverage?.collectionTargets?.some((target) => target.includes("재직자전형")), "engine: employed-adult pathway did not preserve data-growth target");
 assert(graduateEmploymentGapFrame.domainCode === "careerEmploymentGuidance" && graduateEmploymentGapFrame.lookupPlan?.actions?.includes("record_unanswered_gap_candidates"), "engine: weak/slot-missing employment guidance should keep data-gap candidate action");

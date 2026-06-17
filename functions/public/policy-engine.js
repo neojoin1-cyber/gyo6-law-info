@@ -860,6 +860,7 @@
     if (!domainCode) return { status: "unclassified", actions: [] };
     const dataCoverage = buildDataCoverage(domainCode, domain, task, slots, missingSlots, requiredSlots);
     const sourceExpansion = buildSourceExpansionPlan(domainCode, domain, task, slots, missingSlots, requiredSlots, dataCoverage);
+    const required = requiredSlots || domain.requiredSlots || [];
     return {
       status: missingSlots.length ? "needsSlotConfirmation" : "ready",
       domainCode,
@@ -867,7 +868,7 @@
       sourcePriority: domain.sourcePriorityDefault || "national",
       dataCoverage,
       sourceExpansion,
-      requiredSlots: requiredSlots || domain.requiredSlots || [],
+      requiredSlots: required,
       presentSlots: Object.entries(slots)
         .filter(([, value]) => isSlotFilled(value))
         .map(([slotName]) => slotName),
@@ -878,7 +879,7 @@
         "search_policy_rules",
         "get_rule_table",
         missingSlots.includes("office") || domain.sourcePriorityDefault === "office" ? "get_office_guideline" : "",
-        missingSlots.includes("schoolRule") || domain.sourcePriorityDefault === "schoolRuleFirst" ? "get_school_rule" : "",
+        missingSlots.includes("schoolRule") || required.includes("schoolRule") || domain.sourcePriorityDefault === "schoolRuleFirst" ? "get_school_rule" : "",
         dataCoverage.gapCandidates.length ? "record_unanswered_gap_candidates" : "",
         sourceExpansion.required ? "queue_source_expansion" : "",
         sourceExpansion.required ? "fetch_office_guideline_originals" : "",
@@ -945,23 +946,23 @@
     );
 
     const acquisitionTargets = uniqueObjectsByKey([
+      isSchoolDomain ? {
+        tier: "ministryGuideline",
+        label: "상위 법령·고시·교육부 지침 원문",
+        query: `${domainLabel} ${taskLabel} 법령 고시 교육부 지침`,
+        reason: "학교·교육청 세부 기준보다 먼저 적용되는 상위 공식 기준 확인"
+      } : null,
       needsOfficeGuideline ? {
         tier: "educationOfficeGuideline",
         label: `${officeLabel} 지침 원문`,
         query: `${officeLabel} ${domainLabel} ${taskLabel} 지침 원문`,
-        reason: "시도교육청 지침이 학교 현장 처리의 직접 기준이 될 수 있음"
+        reason: "상위 기준을 소속 교육청 지침으로 구체화했는지 확인"
       } : null,
       needsSchoolRule ? {
         tier: "schoolRule",
         label: ruleLabel,
         query: `${domainLabel} ${ruleLabel} ${taskLabel} 원문`,
-        reason: "학교별 내부 규정과 학생생활규정이 실제 처분·지도 기준이 될 수 있음"
-      } : null,
-      isSchoolDomain ? {
-        tier: "ministryGuideline",
-        label: "교육부 지침·매뉴얼 원문",
-        query: `교육부 ${domainLabel} ${taskLabel} 지침 매뉴얼`,
-        reason: "교육청·학교 규정의 상위 지침과 충돌 여부 확인"
+        reason: "상위 법령·고시·교육청 지침으로도 남는 학교별 세부 집행 기준 최종 대조"
       } : null,
       missing.includes("evidence") || isSchoolDomain ? {
         tier: "evidenceTemplate",
@@ -981,7 +982,7 @@
       riskReview: buildRiskReviewPlan(domainCode, slots, task),
       recheckSteps: needsExpansion ? [
         "질문을 학교 현장 쟁점과 사용자 사실관계 슬롯으로 다시 분해",
-        "교육부·교육청 지침 원문과 학교생활규정·학칙·위원회 규정 원문 확보",
+        "상위 법령·고시·교육부 지침을 먼저 확보하고 교육청 지침과 학교생활규정·학칙·위원회 규정을 순서대로 대조",
         "시행일, 적용 대상, 학교급, 소속 교육청, 내부 결재·통지 이력을 대조",
         "안전·인권·개인정보·불복 쟁점을 분리해 긴급 조치와 일반 안내를 나눔",
         "확보한 원문과 증빙 기준으로 같은 질문의 결론을 재작성"
@@ -1355,7 +1356,7 @@
       return "교권 침해와 교육활동 보호 사안은 민원·상담 기록, 교육활동 침해 여부, 교원 보호조치, 아동학대 신고 위험, 법률·노무 상담 전환 필요성을 나누어 확인합니다.";
     }
     if (domainCode === "governanceCommitteeRule" && /학칙|규정개정|개정/.test(normalized)) {
-      return "학칙개정과 학교운영위원회 사안은 공고·의견수렴, 심의 또는 자문 절차, 회의록 작성·공개 범위, 학생·학부모 참여 절차를 함께 확인합니다.";
+      return "학칙개정과 학교운영위원회 사안은 먼저 초·중등교육법상 학칙·학교운영위원회 근거와 공공기록물·정보공개 기준을 확인하고, 학교별 위원회 규정은 세부 집행 기준으로 최종 대조합니다.";
     }
 
     const domain = getEffectivePolicyDomain(domainCode);
@@ -1388,7 +1389,7 @@
       return "교권 침해 또는 교육활동 보호 사안은 먼저 민원·상담·녹취·문자 등 사실자료를 보존하고, 교육활동 침해 여부와 교원 보호조치 필요성, 아동학대 신고나 법적 분쟁으로 번질 위험을 분리해 처리합니다.";
     }
     if (domainCode === "governanceCommitteeRule" && /학칙|규정개정|개정/.test(normalized)) {
-      return "학칙개정은 학교운영위원회 심의 또는 자문, 개정안 공고와 의견수렴, 회의록 작성·공개 범위, 학생·학부모 의견 반영 여부를 순서대로 확인해 진행합니다.";
+      return "학칙개정은 초·중등교육법상 학칙·학교운영위원회 근거와 공공기록물·정보공개 기준을 먼저 확인한 뒤, 학교운영위원회 심의 또는 자문, 개정안 공고와 의견수렴, 회의록 작성·공개 범위, 학생·학부모 의견 반영 여부를 학교별 위원회 규정으로 최종 대조합니다.";
     }
 
     const domain = getEffectivePolicyDomain(domainCode);
@@ -2079,7 +2080,7 @@
       }
       return uniqueStrings([
         `${domain.label || "학교정책"} 질문을 대상, 학교급, 업무 단계, 증빙, 위험 신호로 분해`,
-        "교육부·교육청 지침과 학교 내부 규정을 자동 확보 대상으로 등록",
+        "상위 법령·고시·교육부 지침을 먼저 자동 확보하고, 교육청·학교 내부 규정은 세부 집행 기준으로 순차 대조",
         "신청서, 동의서, 상담기록, 회의록, 사진, 공문, 통지 이력 등 증빙 흐름을 자료확충 후보로 분리",
         "안전·학교폭력·학생인권·개인정보·차별·불복 가능성을 긴급 조치와 일반 안내로 분리",
         "원문 시행일과 소속 교육청·학교별 세부 규정이 확보되면 같은 질문을 재검증해 답변 문장 갱신"
@@ -2179,7 +2180,7 @@
       if (domainCode === "classManagementGuidance") {
         return `${missingPrefix}학생 생활지도 사안은 교원의 학생생활지도에 관한 고시와 초·중등교육법상 선도·징계 절차를 먼저 적용하고, 학교생활규정·학칙은 상위 기준으로도 남는 학교별 세부 집행 기준을 확정할 때 최종 대조합니다. 시스템이 부족한 상위 원문과 교육청 자료를 자동 자료확충 대상으로 등록하고, 안전·인권·개인정보·불복 쟁점을 분리해 재검증합니다.`;
       }
-      return `${missingPrefix}학교 현장 사안은 법령보다 교육부·교육청 지침, 학교생활규정·학칙·위원회 규정, 내부 결재와 증빙이 더 직접적인 기준이 될 수 있습니다. 시스템이 부족한 원문을 자동 자료확충 대상으로 등록하고, 안전·인권·개인정보·불복 쟁점을 분리해 재검증합니다.`;
+      return `${missingPrefix}학교 현장 사안은 상위 법령·고시·교육부 지침을 먼저 적용하고, 교육청 지침과 학교생활규정·학칙·위원회 규정은 그 기준을 구체화하는 세부 집행 기준으로 순차 대조합니다. 시스템이 부족한 상위 원문과 교육청·학교 원문을 자동 자료확충 대상으로 등록하고, 안전·인권·개인정보·불복 쟁점을 분리해 재검증합니다.`;
     }
 
     return `${missingPrefix}${officeLabel} 지침과 내부 규정이 공통 법령보다 더 구체적일 수 있습니다.`;

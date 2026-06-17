@@ -223,6 +223,90 @@ try {
   await new Promise((resolve) => staleClassManagementServer.close(resolve));
 }
 
+const assessmentBaseResult = {
+  ok: true,
+  question: "수행평가 부정행위와 성적 이의신청은 어떻게 처리하나요?",
+  confidence: 0.5,
+  semanticFrame: {
+    domainCode: "assessmentAcademicManagement",
+    domainLabel: "평가·성적·학업성적관리",
+    confidence: 0.5
+  },
+  answerState: {
+    status: "needs_slot",
+    primaryText: "당해 학년도 학교생활기록부 기재요령과 학교생활기록 작성·관리지침을 먼저 확인하고, 학업성적관리규정·평가계획·이의신청 절차는 학교별 세부 집행 기준으로 최종 대조합니다."
+  },
+  policyResponse: {
+    title: "평가·성적·학업성적관리 확인 기준",
+    lead: "당해 학년도 학교생활기록부 기재요령과 학교생활기록 작성·관리지침을 먼저 확인하고, 학업성적관리규정·평가계획·이의신청 절차는 학교별 세부 집행 기준으로 최종 대조합니다.",
+    answer: [
+      "당해 학년도 학교생활기록부 기재요령과 학교생활기록 작성·관리지침을 먼저 확인하고, 학업성적관리규정·평가계획·이의신청 절차는 학교별 세부 집행 기준으로 최종 대조합니다."
+    ],
+    steps: [
+      "상위 법령·고시·교육부 지침을 먼저 자동 확보하고, 교육청·학교 내부 규정은 세부 집행 기준으로 순차 대조"
+    ],
+    caution: "학교 현장 사안은 상위 법령·고시·교육부 지침을 먼저 적용하고, 교육청 지침과 학교생활규정·학칙·위원회 규정은 그 기준을 구체화하는 세부 집행 기준으로 순차 대조합니다.",
+    sourceKeys: ["schoolRecordGuide", "schoolRecordRule", "publicRecords", "infoDisclosure"]
+  },
+  missingSlots: ["schoolLevel", "evidence"]
+};
+
+const staleAssessmentRemoteResult = {
+  ...assessmentBaseResult,
+  answerState: {
+    status: "conditional",
+    primaryText: "학생의 수행평가 부정행위와 성적 이의신청은 학교 내부 규정과 증빙 기준을 우선 확인해야 합니다."
+  },
+  policyResponse: {
+    ...assessmentBaseResult.policyResponse,
+    lead: "학생의 수행평가 부정행위와 성적 이의신청은 학교 내부 규정과 증빙 기준을 우선 확인해야 합니다.",
+    answer: ["학업성적관리규정과 내부 결재 기준을 먼저 확인합니다."],
+    steps: ["학교 내부 규정과 증빙자료를 우선 확인"],
+    caution: "법령보다 학교 자체 규정이 더 직접적인 기준이 될 수 있습니다."
+  },
+  responseText: "학생의 수행평가 부정행위와 성적 이의신청은 학교 내부 규정과 증빙 기준을 우선 확인해야 합니다.\n확인 순서\n1. 학교 내부 규정과 증빙자료를 우선 확인\n법령보다 학교 자체 규정이 더 직접적인 기준이 될 수 있습니다.",
+  localLlmComposer: {
+    ok: true,
+    provider: "ollama",
+    model: "qwen3:4b-instruct"
+  }
+};
+
+const staleAssessmentServer = createServer(async (request, response) => {
+  assert.equal(request.headers.authorization, `Bearer ${token}`);
+  assert.equal(request.url, "/api/policy/llm");
+  response.writeHead(200, { "content-type": "application/json" });
+  response.end(JSON.stringify({
+    ok: true,
+    result: staleAssessmentRemoteResult,
+    bridge: { elapsedMs: 77, localLlmUsed: true }
+  }));
+});
+
+await new Promise((resolve) => staleAssessmentServer.listen(0, "127.0.0.1", resolve));
+const staleAssessmentAddress = staleAssessmentServer.address();
+try {
+  const guarded = await maybeApplyRemoteLocalPolicyLlm({ question: assessmentBaseResult.question }, assessmentBaseResult, {
+    REMOTE_LOCAL_LLM_ENABLED: "true",
+    REMOTE_LOCAL_LLM_BASE_URL: `http://127.0.0.1:${staleAssessmentAddress.port}`,
+    REMOTE_LOCAL_LLM_TOKEN: token,
+    REMOTE_LOCAL_LLM_TIMEOUT_MS: "5000"
+  });
+  const guardedText = [
+    guarded.responseText,
+    guarded.policyResponse.lead,
+    ...guarded.policyResponse.answer,
+    ...guarded.policyResponse.steps,
+    guarded.policyResponse.caution
+  ].join(" ");
+  assert.match(guarded.policyResponse.lead, /학교생활기록부 기재요령|학교생활기록 작성/);
+  assert.match(guardedText, /최종 대조|세부 집행 기준|순차 대조/);
+  assert.doesNotMatch(guardedText, /학교 내부 규정.*우선|학교 자체 규정.*직접적인 기준|내부 결재 기준을 먼저|직접 확인해야|교육청 지침.*우선 적용|확인하시기 바랍니다/);
+  assert.equal(guarded.remoteLocalLlm.ok, true);
+} finally {
+  await new Promise((resolve) => staleAssessmentServer.close(resolve));
+}
+
 const overtimeBaseResult = {
   ok: true,
   question: "교사가 경주에서 대전으로 1박2일 학생 인솔 출장시 시간외근무 신청을 할 수 있나요?",

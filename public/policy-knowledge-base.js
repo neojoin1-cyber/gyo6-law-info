@@ -505,11 +505,11 @@
         categoryCode: "documentDisclosure",
         label: "기숙사 운영·생활지도",
         ontologyGroup: "studentWelfare",
-        sourcePriorityDefault: "schoolRuleFirst",
+        sourcePriorityDefault: "mixed",
         intentKeywords: ["기숙사", "생활관", "입사", "퇴사", "배정", "호실", "벌점", "외박", "점호", "생활관규정", "기숙사규정", "차별"],
         requiredSlots: ["targetSubject", "schoolRule", "procedureStage", "evidence", "riskSignal"],
-        sourceKeys: ["studentGuidanceRule", "publicRecords", "infoDisclosure", "schoolRecordRule"],
-        answerStrategy: "기숙사 운영규정과 선발·배정 기준을 우선 확인하고, 차별·생활지도·개인정보·안전 위험을 별도 슬롯으로 분리합니다."
+        sourceKeys: ["studentLifeGuidanceNotice", "studentGuidanceRule", "schoolSafetyAct", "personalInfoAct", "publicRecords", "infoDisclosure", "schoolRecordRule"],
+        answerStrategy: "기숙사 운영은 생활지도 고시, 학생 안전·인권·개인정보 기준과 교육청 자료를 먼저 보고, 기숙사 운영규정과 선발·배정 기준은 학교별 세부 집행 기준으로 최종 대조합니다."
       },
       schoolMealOperation: {
         categoryCode: "documentDisclosure",
@@ -565,11 +565,11 @@
         categoryCode: "studentRecords",
         label: "평가·성적·학업성적관리",
         ontologyGroup: "academicManagement",
-        sourcePriorityDefault: "schoolRuleFirst",
+        sourcePriorityDefault: "ministry",
         intentKeywords: ["평가", "시험", "성적", "부정행위", "이의신청", "학업성적관리", "수행평가", "재시험", "채점", "답안지"],
         requiredSlots: ["targetSubject", "schoolLevel", "schoolRule", "procedureStage", "evidence", "riskSignal"],
         sourceKeys: ["schoolRecordGuide", "schoolRecordRule", "publicRecords", "infoDisclosure"],
-        answerStrategy: "학업성적관리규정, 평가계획, 이의신청 절차, 부정행위 사실확인과 학생 의견청취를 우선 확인합니다."
+        answerStrategy: "당해 학년도 학교생활기록부 기재요령과 학교생활기록 작성·관리지침을 먼저 확인하고, 학업성적관리규정·평가계획·이의신청 절차는 학교별 세부 집행 기준으로 최종 대조합니다."
       },
       afterSchoolChildcare: {
         categoryCode: "budgetExecution",
@@ -675,11 +675,11 @@
         categoryCode: "governanceRecords",
         label: "학교운영위원회·규정개정·위원회",
         ontologyGroup: "schoolGovernance",
-        sourcePriorityDefault: "schoolRuleFirst",
+        sourcePriorityDefault: "mixed",
         intentKeywords: ["학교운영위원회", "운영위원회", "규정개정", "학칙개정", "위원회", "회의록", "심의", "자문", "의결", "학생자치", "학부모회", "교무위원회"],
         requiredSlots: ["targetSubject", "schoolRule", "procedureStage", "evidence"],
         sourceKeys: ["elementarySecondaryEducationAct", "publicRecords", "infoDisclosure", "studentGuidanceRule"],
-        answerStrategy: "위원회 권한, 심의·자문 구분, 회의록 공개·비공개, 규정개정 공고·의견수렴, 학생·학부모 참여 절차를 확인합니다."
+        answerStrategy: "초·중등교육법상 학교운영위원회·학칙 근거와 공공기록물·정보공개 기준을 먼저 확인하고, 위원회 규정·학칙은 회의 운영과 개정 절차의 학교별 세부 기준으로 최종 대조합니다."
       }
     },
     sources: {

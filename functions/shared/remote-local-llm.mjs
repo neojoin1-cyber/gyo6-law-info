@@ -133,6 +133,7 @@ function applyRequiredPolicyAnchors(remoteResult = {}, baseResult = {}) {
   const requiredLines = getRequiredPolicyAnchorLines(baseResult);
   if (!requiredLines.length) return remoteResult;
   const isClassManagement = baseResult.semanticFrame?.domainCode === "classManagementGuidance";
+  const isSchoolPolicy = isSchoolPolicyDomainCode(baseResult.semanticFrame?.domainCode || "");
 
   const remoteText = [
     remoteResult.responseText,
@@ -150,29 +151,43 @@ function applyRequiredPolicyAnchors(remoteResult = {}, baseResult = {}) {
   const certificateLine = requiredLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
   const shouldPromoteCertificateLead = certificateLine && !/한의사/.test(cleanLongText(remoteResult.policyResponse?.lead || ""));
   const classManagementLead = requiredLines.find((line) => /교원의 학생생활지도/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
+  const hierarchyLead = classManagementLead || requiredLines.find(isHierarchyAnchorLine);
   const remoteLead = cleanLongText(remoteResult.policyResponse?.lead || "");
   const shouldPromoteClassManagementLead = Boolean(
     isClassManagement &&
     classManagementLead &&
     (!/교원의 학생생활지도|초·중등교육법|시행령 제31조/.test(remoteLead) || isLessSpecificClassManagementFallbackLine(remoteLead))
   );
+  const shouldPromoteHierarchyLead = Boolean(
+    isSchoolPolicy &&
+    hierarchyLead &&
+    !shouldPromoteClassManagementLead &&
+    (!containsHierarchySignal(remoteLead) || isLessSpecificInternalRuleFallbackLine(remoteLead))
+  );
   const remoteAnswerLines = asArray(remoteResult.policyResponse?.answer)
     .filter((line) => !isLessSpecificMedicalCertificateLine(line))
-    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)));
+    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)))
+    .filter((line) => !(isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line)));
   const remoteStepLines = asArray(remoteResult.policyResponse?.steps)
     .filter((line) => !isLessSpecificMedicalCertificateLine(line))
-    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)));
+    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)))
+    .filter((line) => !(isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line)));
   const shouldFilterAnswer = remoteAnswerLines.length !== asArray(remoteResult.policyResponse?.answer).length;
   const shouldFilterSteps = remoteStepLines.length !== asArray(remoteResult.policyResponse?.steps).length;
   const shouldFilterResponseText = String(remoteResult.responseText || "").split(/\n+/).some((line) => (
-    isLessSpecificMedicalCertificateLine(line) || (isClassManagement && isLessSpecificClassManagementFallbackLine(line))
+    isLessSpecificMedicalCertificateLine(line)
+    || (isClassManagement && isLessSpecificClassManagementFallbackLine(line))
+    || (isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line))
   ));
   const remoteCaution = cleanLongText(remoteResult.policyResponse?.caution || "");
-  const shouldFilterCaution = Boolean(isClassManagement && isLessSpecificClassManagementFallbackLine(remoteCaution));
-  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldPromoteClassManagementLead && !shouldFilterAnswer && !shouldFilterSteps && !shouldFilterResponseText && !shouldFilterCaution) return remoteResult;
+  const shouldFilterCaution = Boolean(
+    (isClassManagement && isLessSpecificClassManagementFallbackLine(remoteCaution))
+    || (isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(remoteCaution))
+  );
+  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldPromoteClassManagementLead && !shouldPromoteHierarchyLead && !shouldFilterAnswer && !shouldFilterSteps && !shouldFilterResponseText && !shouldFilterCaution) return remoteResult;
 
   const nextAnswer = uniqueLines([...missingLines, ...remoteAnswerLines]).slice(0, 8);
-  const nextLead = shouldPromoteCertificateLead ? certificateLine : (shouldPromoteClassManagementLead ? classManagementLead : remoteResult.policyResponse?.lead);
+  const nextLead = shouldPromoteCertificateLead ? certificateLine : (shouldPromoteClassManagementLead ? classManagementLead : (shouldPromoteHierarchyLead ? hierarchyLead : remoteResult.policyResponse?.lead));
   const nextCaution = shouldFilterCaution
     ? (baseResult.policyResponse?.caution || remoteResult.policyResponse?.caution)
     : remoteResult.policyResponse?.caution;
@@ -187,10 +202,10 @@ function applyRequiredPolicyAnchors(remoteResult = {}, baseResult = {}) {
     },
     answerState: {
       ...(remoteResult.answerState || {}),
-      primaryText: (shouldPromoteCertificateLead || shouldPromoteClassManagementLead) ? nextLead : remoteResult.answerState?.primaryText,
+      primaryText: (shouldPromoteCertificateLead || shouldPromoteClassManagementLead || shouldPromoteHierarchyLead) ? nextLead : remoteResult.answerState?.primaryText,
       conditionalAnswers: uniqueLines([...missingLines, ...asArray(remoteResult.answerState?.conditionalAnswers)]).slice(0, 5)
     },
-    responseText: prependRequiredLines(remoteResult.responseText, missingLines, (shouldPromoteCertificateLead || shouldPromoteClassManagementLead) ? nextLead : "", isClassManagement)
+    responseText: prependRequiredLines(remoteResult.responseText, missingLines, (shouldPromoteCertificateLead || shouldPromoteClassManagementLead || shouldPromoteHierarchyLead) ? nextLead : "", isClassManagement, isSchoolPolicy)
   };
 }
 
@@ -214,6 +229,15 @@ function getRequiredPolicyAnchorLines(baseResult = {}) {
       hierarchyLine,
       procedureLine,
       finalRuleLine,
+      ...genericLines
+    ]).slice(0, 4);
+  }
+  if (isSchoolPolicyDomainCode(frame.domainCode)) {
+    const hierarchyLine = sourceLines.find(isHierarchyAnchorLine);
+    const cautionLine = sourceLines.find((line) => /상위 법령|상위 기준|세부 집행 기준|최종 대조/.test(line));
+    return uniqueLines([
+      hierarchyLine,
+      cautionLine,
       ...genericLines
     ]).slice(0, 4);
   }
@@ -265,10 +289,11 @@ function collectPolicyText(result = {}) {
   ].map(cleanLongText).filter(Boolean).join(" ");
 }
 
-function prependRequiredLines(responseText = "", missingLines = [], promotedLead = "", filterClassManagement = false) {
+function prependRequiredLines(responseText = "", missingLines = [], promotedLead = "", filterClassManagement = false, filterInternalRuleFallback = false) {
   const lines = String(responseText || "").split(/\n+/).map(cleanLongText).filter(Boolean);
   const keepLine = (line) => !isLessSpecificMedicalCertificateLine(line)
-    && !(filterClassManagement && isLessSpecificClassManagementFallbackLine(line));
+    && !(filterClassManagement && isLessSpecificClassManagementFallbackLine(line))
+    && !(filterInternalRuleFallback && isLessSpecificInternalRuleFallbackLine(line));
   const requiredBullets = uniqueLines(missingLines)
     .filter((line) => line !== promotedLead)
     .map((line) => `- ${line}`);
@@ -336,6 +361,53 @@ function isLessSpecificClassManagementFallbackLine(line = "") {
     && !/교원의 학생생활지도|초·중등교육법|시행령 제31조|최종|세부 집행|상위 기준/.test(text);
   const delegatesToUser = /(학교별\s*생활규정|교육청\s*지침|학급관리\s*절차).{0,20}(직접\s*확인|확인해야)/.test(text);
   return (schoolRuleFirst || schoolRuleOnly || delegatesToUser) && !/교원의 학생생활지도|초·중등교육법|시행령 제31조/.test(text);
+}
+
+function isLessSpecificInternalRuleFallbackLine(line = "") {
+  const text = cleanLongText(line);
+  if (!text) return false;
+  if (/법령보다.{0,20}(학교|내부|자체).{0,35}(직접적인 기준|우선|먼저)/.test(text)) return true;
+  if (/(직접\s*확인해야|직접\s*확인)/.test(text) && /(학교|교육청|원문|규정|지침|기재요령|관리지침|증빙자료)/.test(text)) return true;
+  if (/(학교\s*내부\s*규정|학교\s*자체\s*규정|내부\s*규정|내부\s*결재|학교생활규정|학생생활규정|학칙|위원회\s*규정|학업성적관리규정|기숙사\s*운영규정|교육청\s*지침).{0,60}(우선\s*적용|우선|먼저)/.test(text)) return true;
+  if (/확인하시기\s*바랍니다/.test(text) && /(해당\s*사항|원문|규정|지침|증빙|학교|교육청)/.test(text)) return true;
+  if (containsHierarchySignal(text) || /최종|세부 집행|순차 대조|대조합니다/.test(text)) return false;
+  return /(학교\s*내부\s*규정|학교\s*자체\s*규정|내부\s*규정|내부\s*결재|학교생활규정|학생생활규정|학칙|위원회\s*규정|학업성적관리규정|기숙사\s*운영규정).{0,35}(우선|먼저|직접적인 기준|확인해야|확인|기반)/.test(text)
+    ;
+}
+
+function isHierarchyAnchorLine(line = "") {
+  const text = cleanLongText(line);
+  if (!text) return false;
+  return containsHierarchySignal(text) && /(먼저|우선|최종|세부|대조|순차)/.test(text);
+}
+
+function containsHierarchySignal(text = "") {
+  return /(상위\s*(?:법령|기준)|법령|고시|교육부\s*지침|교육청\s*지침|국가법령정보센터|학교생활기록부\s*기재요령|학교생활기록\s*작성|초·중등교육법|공공기록물|정보공개|개인정보\s*보호법|학교안전|학교급식법|특수교육법|직업교육훈련|교원지위법)/.test(cleanLongText(text));
+}
+
+function isSchoolPolicyDomainCode(domainCode = "") {
+  return [
+    "schoolViolenceProcedure",
+    "classManagementGuidance",
+    "fieldExperienceLearning",
+    "dormitoryOperation",
+    "schoolMealOperation",
+    "studentRecordsAttendance",
+    "schoolSafetyHealth",
+    "parentComplaintResponse",
+    "specialEducationSupport",
+    "assessmentAcademicManagement",
+    "afterSchoolChildcare",
+    "vocationalFieldTrainingOperation",
+    "vocationalCurriculumNcs",
+    "labEquipmentPracticeSafety",
+    "admissionsTransferGraduation",
+    "scholarshipWelfareSupport",
+    "healthInfectionCounseling",
+    "teacherRightsProtection",
+    "facilityDigitalSecurity",
+    "governanceCommitteeRule"
+  ].includes(cleanText(domainCode));
 }
 
 async function fetchRemoteBridge(config = {}, body = {}) {

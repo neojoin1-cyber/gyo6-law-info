@@ -407,9 +407,10 @@ function buildPolicyComposerSystemPrompt() {
     "If sourceExpansion is provided, describe it as a system-side source expansion and recheck path. Do not tell the user to check original school or education-office documents themselves.",
     "Never end with phrases that push work back to the user, such as '증빙자료가 부족합니다', '원문을 확인하세요', '공식 문서를 직접 확인하시기 바랍니다'.",
     "When evidence or source gaps remain, say that GYO6 is additionally checking official sources and will re-evaluate with sourceExpansion/riskReview. Keep the actionable answer useful while preserving uncertainty.",
+    "Across all domains, treat local school rules, school bylaws, internal committee rules, employment rules, and school-specific plans as final execution checks unless the rule-engine explicitly says they are the primary legal source. First preserve the provided higher hierarchy: national law, ministry notice/guideline, education-office guideline, then local/internal rule.",
     "For classManagementGuidance/student life guidance, do not begin with '학급 및 학교 생활규정을 확인'. First use the hierarchy: 교원의 학생생활지도에 관한 고시, 초·중등교육법 제18조와 시행령 제31조 when 선도·징계 is considered, 교원지위법/교육활동 보호 when applicable, then 학교생활규정 only as the final school-level execution check.",
     "Write concise Korean for teachers, students, parents, and school staff. Put the conclusion first.",
-    "If source keys or official source priority are provided, say that the system keeps school, education-office, and national originals as recheck targets."
+    "If source keys or official source priority are provided, say that the system keeps national, ministry, education-office, and school originals as recheck targets in that order."
   ].join("\n");
 }
 
@@ -695,13 +696,14 @@ function normalizeLocalPolicyDraftCaution(caution = "", result = {}) {
 }
 
 function isDelegatingSourceGapCaution(text = "") {
-  return /증빙자료가\s*부족|자료가\s*부족|근거가\s*부족|원문을\s*확인|공식\s*문서.*직접\s*확인|확인하시기\s*바랍니다|원문\s*기준\s*확인/.test(cleanLongText(text));
+  return /증빙자료가\s*부족|자료가\s*부족|근거가\s*부족|원문을\s*확인|직접\s*확인해야|직접\s*확인|공식\s*문서.*직접\s*확인|확인하시기\s*바랍니다|원문\s*기준\s*확인/.test(cleanLongText(text));
 }
 
 function applyRequiredPolicyAnchors(draft = {}, result = {}) {
   const requiredLines = getRequiredPolicyAnchorLines(result);
   if (!requiredLines.length) return draft;
   const isClassManagement = result.semanticFrame?.domainCode === "classManagementGuidance";
+  const isSchoolPolicy = isSchoolPolicyDomainCode(result.semanticFrame?.domainCode || "");
 
   const draftText = [
     draft.title,
@@ -719,25 +721,34 @@ function applyRequiredPolicyAnchors(draft = {}, result = {}) {
   const certificateLine = requiredLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
   const shouldPromoteCertificateLead = certificateLine && !/한의사/.test(cleanLongText(draft.lead || ""));
   const classManagementLead = requiredLines.find((line) => /교원의 학생생활지도/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
+  const hierarchyLead = classManagementLead || requiredLines.find(isHierarchyAnchorLine);
   const draftLead = cleanLongText(draft.lead || "");
   const shouldPromoteClassManagementLead = Boolean(
     isClassManagement &&
     classManagementLead &&
     (!/교원의 학생생활지도|초·중등교육법|시행령 제31조/.test(draftLead) || isLessSpecificClassManagementFallbackLine(draftLead))
   );
+  const shouldPromoteHierarchyLead = Boolean(
+    isSchoolPolicy &&
+    hierarchyLead &&
+    !shouldPromoteClassManagementLead &&
+    (!containsHierarchySignal(draftLead) || isLessSpecificInternalRuleFallbackLine(draftLead))
+  );
   const filteredAnswer = asArray(draft.answer)
     .filter((line) => !isLessSpecificMedicalCertificateLine(line))
-    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)));
+    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)))
+    .filter((line) => !(isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line)));
   const filteredSteps = asArray(draft.steps)
     .filter((line) => !isLessSpecificMedicalCertificateLine(line))
-    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)));
+    .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)))
+    .filter((line) => !(isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line)));
   const shouldFilterAnswer = filteredAnswer.length !== asArray(draft.answer).length;
   const shouldFilterSteps = filteredSteps.length !== asArray(draft.steps).length;
-  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldPromoteClassManagementLead && !shouldFilterAnswer && !shouldFilterSteps) return draft;
+  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldPromoteClassManagementLead && !shouldPromoteHierarchyLead && !shouldFilterAnswer && !shouldFilterSteps) return draft;
 
   return {
     ...draft,
-    lead: shouldPromoteCertificateLead ? certificateLine : (shouldPromoteClassManagementLead ? classManagementLead : draft.lead),
+    lead: shouldPromoteCertificateLead ? certificateLine : (shouldPromoteClassManagementLead ? classManagementLead : (shouldPromoteHierarchyLead ? hierarchyLead : draft.lead)),
     answer: uniqueDraftLines([...missingLines, ...filteredAnswer]).slice(0, 5),
     steps: filteredSteps
   };
@@ -764,6 +775,15 @@ function getRequiredPolicyAnchorLines(result = {}) {
       hierarchyLine,
       procedureLine,
       finalRuleLine,
+      ...getGenericCriticalPolicyAnchorLines(sourceLines)
+    ]).slice(0, 4);
+  }
+  if (isSchoolPolicyDomainCode(frame.domainCode)) {
+    const hierarchyLine = sourceLines.find(isHierarchyAnchorLine);
+    const cautionLine = sourceLines.find((line) => /상위 법령|상위 기준|세부 집행 기준|최종 대조/.test(line));
+    return uniqueDraftLines([
+      hierarchyLine,
+      cautionLine,
       ...getGenericCriticalPolicyAnchorLines(sourceLines)
     ]).slice(0, 4);
   }
@@ -806,6 +826,53 @@ function isLessSpecificClassManagementFallbackLine(line = "") {
     && !/교원의 학생생활지도|초·중등교육법|시행령 제31조|최종|세부 집행|상위 기준/.test(text);
   const delegatesToUser = /(학교별\s*생활규정|교육청\s*지침|학급관리\s*절차).{0,20}(직접\s*확인|확인해야)/.test(text);
   return (schoolRuleFirst || schoolRuleOnly || delegatesToUser) && !/교원의 학생생활지도|초·중등교육법|시행령 제31조/.test(text);
+}
+
+function isLessSpecificInternalRuleFallbackLine(line = "") {
+  const text = cleanLongText(line);
+  if (!text) return false;
+  if (/법령보다.{0,20}(학교|내부|자체).{0,35}(직접적인 기준|우선|먼저)/.test(text)) return true;
+  if (/(직접\s*확인해야|직접\s*확인)/.test(text) && /(학교|교육청|원문|규정|지침|기재요령|관리지침|증빙자료)/.test(text)) return true;
+  if (/(학교\s*내부\s*규정|학교\s*자체\s*규정|내부\s*규정|내부\s*결재|학교생활규정|학생생활규정|학칙|위원회\s*규정|학업성적관리규정|기숙사\s*운영규정|교육청\s*지침).{0,60}(우선\s*적용|우선|먼저)/.test(text)) return true;
+  if (/확인하시기\s*바랍니다/.test(text) && /(해당\s*사항|원문|규정|지침|증빙|학교|교육청)/.test(text)) return true;
+  if (containsHierarchySignal(text) || /최종|세부 집행|순차 대조|대조합니다/.test(text)) return false;
+  return /(학교\s*내부\s*규정|학교\s*자체\s*규정|내부\s*규정|내부\s*결재|학교생활규정|학생생활규정|학칙|위원회\s*규정|학업성적관리규정|기숙사\s*운영규정).{0,35}(우선|먼저|직접적인 기준|확인해야|확인|기반)/.test(text)
+    ;
+}
+
+function isHierarchyAnchorLine(line = "") {
+  const text = cleanLongText(line);
+  if (!text) return false;
+  return containsHierarchySignal(text) && /(먼저|우선|최종|세부|대조|순차)/.test(text);
+}
+
+function containsHierarchySignal(text = "") {
+  return /(상위\s*(?:법령|기준)|법령|고시|교육부\s*지침|교육청\s*지침|국가법령정보센터|학교생활기록부\s*기재요령|학교생활기록\s*작성|초·중등교육법|공공기록물|정보공개|개인정보\s*보호법|학교안전|학교급식법|특수교육법|직업교육훈련|교원지위법)/.test(cleanLongText(text));
+}
+
+function isSchoolPolicyDomainCode(domainCode = "") {
+  return [
+    "schoolViolenceProcedure",
+    "classManagementGuidance",
+    "fieldExperienceLearning",
+    "dormitoryOperation",
+    "schoolMealOperation",
+    "studentRecordsAttendance",
+    "schoolSafetyHealth",
+    "parentComplaintResponse",
+    "specialEducationSupport",
+    "assessmentAcademicManagement",
+    "afterSchoolChildcare",
+    "vocationalFieldTrainingOperation",
+    "vocationalCurriculumNcs",
+    "labEquipmentPracticeSafety",
+    "admissionsTransferGraduation",
+    "scholarshipWelfareSupport",
+    "healthInfectionCounseling",
+    "teacherRightsProtection",
+    "facilityDigitalSecurity",
+    "governanceCommitteeRule"
+  ].includes(cleanText(domainCode));
 }
 
 function attachLocalLlmMetadata(result = {}, metadata = {}) {
