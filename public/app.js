@@ -362,9 +362,9 @@ const policySourceCatalog = {
     source: "시도교육청",
     url: "",
     query: "교육공무직원 취업규칙 단체협약 복무 휴가 연차",
-    note: "교육공무직 복무·휴가·연차는 교육청별 취업규칙과 단체협약 원문을 확인해야 합니다.",
-    status: "교육청 선택 필요",
-    linkLabel: "교육청 선택 후 공식 자료실 검색"
+    note: "교육공무직 복무·휴가·연차는 교육청별 취업규칙과 단체협약 원문을 자동 자료확충 대상으로 둡니다.",
+    status: "자동 자료확충 대상",
+    linkLabel: "교육청 공식 자료실 검색 후보"
   },
   fixedTermTeacherGuideline: {
     title: "소속 교육청 계약제교원 운영 지침",
@@ -381,8 +381,8 @@ const policySourceCatalog = {
     url: "",
     query: "사립학교 교직원 교원 취업규칙 복무규정 근로계약 병가 휴가 연차",
     note: "사립학교는 학교법인 취업규칙, 복무규정, 단체협약, 근로계약이 직접 적용 기준이 될 수 있습니다.",
-    status: "학교·법인 원문 확인 필요",
-    linkLabel: "학교·법인 자료로 확인"
+    status: "학교·법인 원문 자동확충 대상",
+    linkLabel: "학교·법인 공식자료 검색 후보"
   },
   studentGuidanceRule: {
     title: "학생생활지도·학생생활규정",
@@ -390,7 +390,7 @@ const policySourceCatalog = {
     url: "",
     query: "학생생활지도 고시 학생생활규정 학칙 휴대전화 생활지도",
     note: "학급관리, 생활지도, 학생 인권, 학교생활규정 확인",
-    status: "학교·교육청 원문 확인 필요",
+    status: "학교·교육청 원문 자동확충 대상",
     linkLabel: "학교·교육청 자료로 확인"
   },
   fieldExperienceGuide: {
@@ -1837,7 +1837,7 @@ const topicPresets = [
     summary: "취업 단계에서는 근로계약, 임금, 근로시간, 휴게, 퇴직급여, 해고 절차를 함께 확인하는 것이 좋습니다.",
     laws: ["근로기준법", "근로자퇴직급여 보장법", "직업교육훈련 촉진법"],
     tags: ["취업", "근로계약", "임금", "근로시간"],
-    checklist: ["근로계약서와 채용 조건을 모읍니다.", "근로시간, 임금, 휴게 조건을 분리해 적습니다.", "원문 검색으로 관련 법령명을 확인합니다."]
+    checklist: ["근로계약서와 채용 조건을 자료 후보로 둡니다.", "근로시간, 임금, 휴게 조건을 분리합니다.", "관련 법령명과 공식자료 후보를 자동 검색 대상으로 둡니다."]
   },
   {
     type: "apprenticeship",
@@ -1846,7 +1846,7 @@ const topicPresets = [
     summary: "도제학교는 학교 교육과 기업훈련이 함께 이루어지므로 학생 보호, 훈련계약, 근로시간, 안전관리 기준을 나누어 확인해야 합니다.",
     laws: ["산업현장 일학습병행 지원에 관한 법률", "직업교육훈련 촉진법", "근로기준법"],
     tags: ["도제학교", "일학습병행", "학생 보호", "기업훈련"],
-    checklist: ["훈련계약과 학교 안내문을 확인합니다.", "학생 신분과 근로자성 판단이 필요한 지점을 표시합니다.", "안전관리와 근로시간 관련 원문을 함께 확인합니다."]
+    checklist: ["훈련계약과 학교 안내문을 자료확충 후보로 둡니다.", "학생 신분과 근로자성 판단이 필요한 지점을 표시합니다.", "안전관리와 근로시간 관련 원문을 자동 자료확충 대상으로 둡니다."]
   },
   {
     type: "fieldTraining",
@@ -1855,7 +1855,7 @@ const topicPresets = [
     summary: "현장실습은 실습 협약, 업무 범위, 학생 권익, 산업체 책임, 학교의 지도·점검 절차를 함께 확인해야 합니다.",
     laws: ["직업교육훈련 촉진법", "근로기준법", "산업안전보건법"],
     tags: ["현장실습", "업무범위", "실습 협약", "학생 권익"],
-    checklist: ["실습 협약서와 운영 계획을 준비합니다.", "문제 발생 일시, 장소, 지시 내용과 반복 여부를 시간순으로 정리합니다.", "학교와 산업체의 지도·점검 및 권익보호 기준 관련 원문을 확인합니다."]
+    checklist: ["실습 협약서와 운영 계획을 자료확충 후보로 둡니다.", "문제 발생 일시, 장소, 지시 내용과 반복 여부를 시간순으로 정리합니다.", "학교와 산업체의 지도·점검 및 권익보호 기준 원문을 자동 자료확충 대상으로 둡니다."]
   },
   {
     type: "overseasTraining",
@@ -1864,7 +1864,7 @@ const topicPresets = [
     summary: "해외 현장실습은 국내 법령뿐 아니라 파견 전 동의, 안전관리, 보험, 현지 기관 안내, 비상 대응 절차를 함께 확인해야 합니다.",
     laws: ["직업교육훈련 촉진법", "초중등교육법", "청소년복지 지원법"],
     tags: ["해외 현장실습", "호주", "안전관리", "보호자 동의"],
-    checklist: ["파견 계획서, 동의서, 보험 자료를 모읍니다.", "현지 기관과 학교의 역할을 나눠 적습니다.", "국내 법령과 공식 안내 자료를 함께 확인합니다."]
+    checklist: ["파견 계획서, 동의서, 보험 자료를 자료확충 후보로 둡니다.", "현지 기관과 학교의 역할을 나눠 정리합니다.", "국내 법령과 공식 안내 자료를 자동 자료확충 대상으로 둡니다."]
   },
   {
     type: "schoolSafety",
@@ -1873,7 +1873,7 @@ const topicPresets = [
     summary: "학교 현장의 안전 문제는 학교장, 교육청, 실습 기관의 역할과 안전보건 관리체계를 나누어 확인하는 흐름이 필요합니다.",
     laws: ["중대재해 처벌 등에 관한 법률", "산업안전보건법", "학교안전사고 예방 및 보상에 관한 법률"],
     tags: ["중대재해", "안전보건", "학교 안전", "관리체계"],
-    checklist: ["사고 유형과 장소를 구분합니다.", "학교, 교육청, 외부 기관의 책임 범위를 정리합니다.", "안전보건 관리체계 관련 원문을 확인합니다."]
+    checklist: ["사고 유형과 장소를 구분합니다.", "학교, 교육청, 외부 기관의 책임 범위를 정리합니다.", "안전보건 관리체계 관련 원문을 자동 자료확충 대상으로 둡니다."]
   },
   {
     type: "schoolViolence",
@@ -1882,7 +1882,7 @@ const topicPresets = [
     summary: "학교폭력 사안은 신고, 조사, 전담기구 확인, 심의, 조치 결정, 불복 절차가 구분됩니다. 관할 교육청 안내도 함께 확인해야 합니다.",
     laws: ["학교폭력예방 및 대책에 관한 법률", "초중등교육법"],
     tags: ["학교폭력", "심의 절차", "학생 보호", "교육청"],
-    checklist: ["발생 일시와 관련 자료를 시간순으로 정리합니다.", "학교와 교육청의 공식 절차 안내를 확인합니다.", "법령 원문과 관할 기관 안내를 함께 확인합니다."]
+    checklist: ["발생 일시와 관련 자료를 시간순으로 정리합니다.", "학교와 교육청의 공식 절차 안내를 자료확충 후보로 둡니다.", "법령 원문과 관할 기관 안내를 자동 자료확충 대상으로 둡니다."]
   },
   {
     type: "schoolAdministration",
@@ -1891,7 +1891,7 @@ const topicPresets = [
     summary: "학교 행정 질문은 신분·업무 단계와 관할 교육청 지침을 먼저 나누고, 법령·훈령·예규·교육청 기준을 함께 확인해야 합니다.",
     laws: ["학교생활기록 작성 및 관리지침", "국립 유치원 및 초·중등학교 회계규칙", "초중등교육법", "지방자치단체를 당사자로 하는 계약에 관한 법률"],
     tags: ["교육행정", "학교회계", "학생생활기록", "지출 증빙"],
-    checklist: ["업무 단계를 예산 편성, 품의, 계약, 검수, 지출, 정산 중 하나로 구분합니다.", "관할 시도교육청 지침과 학교 내부 결재·보존 기준을 확인합니다.", "학생부·출결 사안은 당해 학년도 기재요령과 증빙자료를 함께 대조합니다."]
+    checklist: ["업무 단계를 예산 편성, 품의, 계약, 검수, 지출, 정산 중 하나로 구분합니다.", "관할 시도교육청 지침과 학교 내부 결재·보존 기준을 자동 자료확충 대상으로 둡니다.", "학생부·출결 사안은 당해 학년도 기재요령과 증빙자료를 함께 재검증합니다."]
   },
   {
     type: "staffLabor",
@@ -1900,7 +1900,7 @@ const topicPresets = [
     summary: "교직원과 행정직 사안은 신분, 계약 형태, 휴가·출장·근태 기준, 징계 절차, 근로관계 여부를 먼저 나누어 확인해야 합니다.",
     laws: ["교원휴가에 관한 예규", "국가공무원 복무규정", "지방공무원 복무규정", "공무원 여비 규정", "근로기준법"],
     tags: ["교직원", "기간제", "행정직", "근태·휴가"],
-    checklist: ["교원, 지방공무원, 교육공무직, 기간제 등 신분을 먼저 구분합니다.", "휴가·출장·근태라면 신청일, 승인권자, 나이스 기록, 증빙을 확인합니다.", "교육공무원 규정, 복무규정, 근로관계 법령, 교육청 기준을 함께 확인합니다."]
+    checklist: ["교원, 지방공무원, 교육공무직, 기간제 등 신분을 먼저 구분합니다.", "휴가·출장·근태라면 신청일, 승인권자, 나이스 기록, 증빙을 분리합니다.", "교육공무원 규정, 복무규정, 근로관계 법령, 교육청 기준을 자동 자료확충 대상으로 둡니다."]
   },
   {
     type: "civilComplaint",
@@ -1909,17 +1909,17 @@ const topicPresets = [
     summary: "학생관리와 민원은 사실관계 기록, 학교 규정, 학생 권리 보호, 학부모 안내 절차를 함께 정리하는 것이 중요합니다.",
     laws: ["초중등교육법", "학교생활기록 작성 및 관리지침", "행정절차법"],
     tags: ["학생관리", "민원", "생활지도", "기록"],
-    checklist: ["사실관계와 상담 기록을 시간순으로 정리합니다.", "학교 규정과 교육청 안내를 확인합니다.", "학생 권리와 학교의 조치 절차 관련 원문을 확인합니다."]
+    checklist: ["사실관계와 상담 기록을 시간순으로 정리합니다.", "학교 규정과 교육청 안내를 자동 자료확충 대상으로 둡니다.", "학생 권리와 학교의 조치 절차 원문을 재검증 대상으로 둡니다."]
   }
 ];
 
 const fallbackPreset = {
   type: "general",
   title: "질문과 관련된 법령 검색",
-  summary: "입력한 질문의 핵심 단어를 기준으로 법령 원문 검색부터 확인하세요. 실제 API 연결 후에는 관련 조문, 판례, 행정자료 후보를 함께 정렬합니다.",
+  summary: "입력한 질문의 핵심 단어를 기준으로 법령 원문, 판례, 행정자료 후보를 함께 정렬합니다.",
   laws: ["대한민국 현행 법령", "관련 판례", "공식 행정자료"],
   tags: ["법령 검색", "판례 확인", "행정자료", "원문 근거"],
-  checklist: ["질문에서 대상, 장소, 날짜, 기관을 분리합니다.", "관련 키워드로 법령 원문을 검색합니다.", "결과를 실제 사안에 적용하기 전 전문가에게 확인합니다."]
+  checklist: ["질문에서 대상, 장소, 날짜, 기관을 분리합니다.", "관련 키워드로 법령 원문과 행정자료 후보를 자동 검색 대상으로 둡니다.", "실제 사안 적용 전 위험도와 전문가 검토 필요 여부를 표시합니다."]
 };
 
 initializeTopicControls();
@@ -2233,7 +2233,7 @@ function showGuideEmptyState() {
   guideResult.innerHTML = `
     <div class="empty-icon" aria-hidden="true">¶</div>
     <h3>규정·지침 질문을 입력하면 오른쪽 답변 공간에 결론부터 표시됩니다.</h3>
-    <p>경상북도교육청을 기본값으로 하며, 다른 교육청 사안은 선택값을 바꿔 확인하세요.</p>
+    <p>경상북도교육청을 기본값으로 하며, 다른 교육청 사안은 선택값과 함께 자동 재검증 대상으로 처리됩니다.</p>
   `;
 }
 
@@ -2409,7 +2409,9 @@ function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode
     officeSources,
     nationalSources,
     searchQueries,
-    caution
+    caution,
+    sourceExpansion: directRule?.sourceExpansion || directRule?.ruleLookup?.lookupPlan?.sourceExpansion || analysis.engineAnalysis?.semanticFrame?.lookupPlan?.sourceExpansion || null,
+    riskReview: directRule?.riskReview || directRule?.sourceExpansion?.riskReview || directRule?.ruleLookup?.lookupPlan?.sourceExpansion?.riskReview || analysis.engineAnalysis?.semanticFrame?.lookupPlan?.sourceExpansion?.riskReview || null
   };
 }
 
@@ -2459,7 +2461,7 @@ function getDefaultEducationOfficeFallback(office, analysis, category) {
   return {
     office: fallbackOffice,
     label: `${fallbackOffice.label} 기준`,
-    notice: "교육청을 선택하지 않아 경상북도교육청 기준으로 우선 답변합니다. 실제 적용은 소속 교육청을 선택해야 더 정확합니다."
+    notice: "교육청을 선택하지 않아 경상북도교육청 기준으로 우선 답변합니다. 소속 교육청별 차이는 자동 자료확충·재검증 대상으로 남깁니다."
   };
 }
 
@@ -2699,6 +2701,8 @@ function getPolicyEngineDirectRule(question, office, role) {
       queries: response.queries || [],
       caution: response.caution,
       sourcePriority: response.sourcePriority,
+      sourceExpansion: response.sourceExpansion || response.ruleLookup?.lookupPlan?.sourceExpansion || null,
+      riskReview: response.riskReview || response.sourceExpansion?.riskReview || response.ruleLookup?.lookupPlan?.sourceExpansion?.riskReview || null,
       ruleLookup: response.ruleLookup || null
     };
   } catch (error) {
@@ -3231,6 +3235,7 @@ function renderPolicyGuideResponse(response) {
         </div>
       ` : ""}
       ${cautionText ? `<p class="answer-warning">${escapeHtml(cautionText)}</p>` : ""}
+      ${renderPolicyGuideSourceExpansion(response)}
     </section>
 
     ${renderPolicyGuideOptionalClarifyingPanel(response.clarifyingQuestions || [])}
@@ -3299,15 +3304,60 @@ function getPolicyGuideDetailRequest(question = "") {
 
 function buildPolicyGuideShortCaution(response = {}, officeLabel = "", roleLabel = "") {
   if (response.officeDefault) {
-    return response.officeDefault.notice || "교육청을 선택하지 않아 경상북도교육청 기준으로 우선 답변합니다. 실제 적용은 소속 교육청을 선택해야 더 정확합니다.";
+    return response.officeDefault.notice || "교육청을 선택하지 않아 경상북도교육청 기준으로 우선 답변합니다. 소속 교육청별 차이는 자동 자료확충·재검증 대상으로 남깁니다.";
   }
   if (/사립학교|학교법인/.test(roleLabel)) {
-    return "사립학교는 학교법인 복무규정, 취업규칙, 단체협약, 근로계약의 실제 문구를 함께 확인해야 합니다.";
+    return "사립학교는 학교법인 복무규정, 취업규칙, 단체협약, 근로계약의 실제 문구를 자동 자료확충·재검증 대상으로 함께 남깁니다.";
   }
   if (officeLabel && !/미선택/.test(officeLabel)) {
-    return `${officeLabel} 기준입니다. ${response.caution || "학교 내부 규정과 최신 원문은 필요하면 추가로 확인하세요."}`;
+    return `${officeLabel} 기준입니다. ${response.caution || "학교 내부 규정과 최신 원문은 시스템이 추가 확보 대상으로 관리합니다."}`;
   }
-  return response.caution || `${officeLabel} 기준으로 답변하되, 학교 내부 규정과 최신 원문은 필요하면 추가로 확인하세요.`;
+  return response.caution || `${officeLabel} 기준으로 답변하되, 학교 내부 규정과 최신 원문은 시스템이 추가 확보 대상으로 관리합니다.`;
+}
+
+function renderPolicyGuideSourceExpansion(response = {}) {
+  const expansion = getPolicyGuideSourceExpansion(response);
+  if (!expansion?.required && !expansion?.acquisitionTargets?.length) return "";
+
+  const targets = (expansion.acquisitionTargets || []).slice(0, 4);
+  const riskItems = getPolicyGuideRiskReview(response)
+    .filter((item) => item.status === "detected" || ["safety", "humanRights", "privacy", "appeal"].includes(item.code))
+    .slice(0, 4);
+
+  return `
+    <div class="guide-expansion-card" aria-label="자동 자료확충 계획">
+      <strong>자동 자료확충·재검증</strong>
+      <p>현재 답변에서 부족한 원문은 시스템 확보 대상으로 등록하고, 확보되는 자료로 같은 사안을 다시 판단합니다.</p>
+      ${targets.length ? `
+        <ul>
+          ${targets.map((target) => `<li><b>${escapeHtml(target.label || target.tier)}</b><span>${escapeHtml(target.reason || target.query || "원문 확보 대상")}</span></li>`).join("")}
+        </ul>
+      ` : ""}
+      ${riskItems.length ? `
+        <div class="guide-risk-chips" aria-label="분리 판단 쟁점">
+          ${riskItems.map((item) => `<span>${escapeHtml(item.label)} · ${item.status === "detected" ? "감지" : "점검"}</span>`).join("")}
+        </div>
+      ` : ""}
+    </div>
+  `;
+}
+
+function getPolicyGuideSourceExpansion(response = {}) {
+  return response.sourceExpansion
+    || response.directRule?.sourceExpansion
+    || response.directRule?.ruleLookup?.lookupPlan?.sourceExpansion
+    || response.analysis?.engineAnalysis?.semanticFrame?.lookupPlan?.sourceExpansion
+    || null;
+}
+
+function getPolicyGuideRiskReview(response = {}) {
+  const expansion = getPolicyGuideSourceExpansion(response);
+  const riskReview = response.riskReview
+    || response.directRule?.riskReview
+    || response.directRule?.ruleLookup?.lookupPlan?.sourceExpansion?.riskReview
+    || expansion?.riskReview
+    || null;
+  return Array.isArray(riskReview?.items) ? riskReview.items : [];
 }
 
 function renderPolicyGuideDetailSections(response, detailRequest = {}) {
@@ -3536,7 +3586,7 @@ function renderPolicySourceCard(source = {}) {
     <article>
       <span>${escapeHtml(source.source || "공식자료")}</span>
       <h4>${escapeHtml(source.title || "공식자료 확인")}</h4>
-      <p>${escapeHtml(source.note || source.query || "원문을 확인합니다.")}</p>
+      <p>${escapeHtml(source.note || source.query || "공식 원문을 자동 자료확충 대상으로 둡니다.")}</p>
       ${source.status ? `<em>${escapeHtml(source.status)}</em>` : ""}
       ${href
         ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(linkLabel)}</a>`
@@ -5173,7 +5223,9 @@ function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
     sourceKeys: policyResponse.sourceKeys || baseResponse?.directRule?.sourceKeys || [],
     queries: policyResponse.queries || baseResponse?.searchQueries || [],
     caution: policyResponse.caution || baseResponse?.caution || "",
-    sourcePriority: policyResponse.sourcePriority || baseResponse?.directRule?.sourcePriority || ""
+    sourcePriority: policyResponse.sourcePriority || baseResponse?.directRule?.sourcePriority || "",
+    sourceExpansion: data.sourceExpansion || policyResponse.sourceExpansion || data.answerState?.sourceExpansion || baseResponse?.sourceExpansion || null,
+    riskReview: data.riskReview || policyResponse.riskReview || data.answerState?.riskReview || baseResponse?.riskReview || null
   };
 
   return {
@@ -5191,6 +5243,8 @@ function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
     firstSteps: directRule.steps.length ? directRule.steps : answerItems.slice(1, 4),
     caution: directRule.caution,
     searchQueries: directRule.queries,
+    sourceExpansion: directRule.sourceExpansion || data.sourceExpansion || policyResponse.sourceExpansion || data.answerState?.sourceExpansion || null,
+    riskReview: directRule.riskReview || data.riskReview || policyResponse.riskReview || data.answerState?.riskReview || null,
     localLlmComposer: data.localLlmComposer,
     localLlmNormalizer: data.localLlmNormalizer
   };

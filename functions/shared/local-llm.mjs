@@ -403,9 +403,10 @@ function buildPolicyComposerSystemPrompt() {
     "You are a Korean school policy information editor for GYO6 Law Info.",
     "Return only JSON that matches the given schema. Do not include markdown, reasoning, or chain-of-thought.",
     "Use only the provided rule-engine result. Do not invent laws, article numbers, case names, dates, rights, duties, or source URLs.",
-    "This is information, not legal advice. Preserve uncertainty and tell the user what to confirm when the base result is conditional.",
+    "This is information, not legal advice. Preserve uncertainty when the base result is conditional.",
+    "If sourceExpansion is provided, describe it as a system-side source expansion and recheck path. Do not tell the user to check original school or education-office documents themselves.",
     "Write concise Korean for teachers, students, parents, and school staff. Put the conclusion first.",
-    "If source keys or official source priority are provided, say that original school/education-office/national sources still need confirmation."
+    "If source keys or official source priority are provided, say that the system keeps school, education-office, and national originals as recheck targets."
   ].join("\n");
 }
 
@@ -454,14 +455,16 @@ function buildPolicyComposerInput(payload = {}, result = {}) {
       caution: cleanLongText(response.caution || ""),
       sourcePriority: cleanText(response.sourcePriority || ""),
       sourceKeys: asArray(response.sourceKeys || response.ruleLookup?.sourceKeys).map(cleanText).filter(Boolean).slice(0, 10),
-      queries: asArray(response.queries).map(cleanText).filter(Boolean).slice(0, 8)
+      queries: asArray(response.queries).map(cleanText).filter(Boolean).slice(0, 8),
+      sourceExpansion: compactSourceExpansion(result.sourceExpansion || response.sourceExpansion || state.sourceExpansion),
+      riskReview: compactRiskReview(result.riskReview || response.riskReview || state.riskReview)
     },
     outputRules: {
       title: "짧은 답변 제목",
       lead: "한 문장 결론",
       answer: "근거 엔진 답변을 쉬운 말로 정리한 2-5개 항목",
       steps: "사용자가 바로 확인할 순서 0-4개",
-      caution: "정보 제공 고지와 원문 확인 안내",
+      caution: "정보 제공 고지와 시스템의 자동 자료확충·재검증 안내",
       followupQuestions: "부족한 정보가 있을 때만 0-3개"
     }
   };
@@ -476,11 +479,43 @@ function compactPolicyBaseResult(result = {}) {
     confidence: Number(result.confidence || result.semanticFrame?.confidence || 0),
     answerState: cleanText(result.answerState?.status || ""),
     missingSlots: asArray(result.missingSlots).map(cleanText).filter(Boolean).slice(0, 8),
+    sourceExpansion: compactSourceExpansion(result.sourceExpansion || result.policyResponse?.sourceExpansion || result.answerState?.sourceExpansion),
+    riskReview: compactRiskReview(result.riskReview || result.policyResponse?.riskReview || result.answerState?.riskReview),
     candidates: asArray(result.semanticFrame?.candidates).slice(0, 5).map((candidate) => ({
       code: cleanText(candidate.code || candidate.domainCode || ""),
       label: cleanText(candidate.label || candidate.domainLabel || ""),
       confidence: Number(candidate.confidence || candidate.score || 0)
     }))
+  };
+}
+
+function compactSourceExpansion(sourceExpansion = null) {
+  if (!sourceExpansion || typeof sourceExpansion !== "object") return null;
+  return {
+    required: Boolean(sourceExpansion.required),
+    status: cleanText(sourceExpansion.status || ""),
+    trigger: cleanText(sourceExpansion.trigger || ""),
+    missingSlots: asArray(sourceExpansion.missingSlots).map(cleanText).filter(Boolean).slice(0, 8),
+    acquisitionTargets: asArray(sourceExpansion.acquisitionTargets).map((target) => ({
+      tier: cleanText(target?.tier || ""),
+      label: cleanText(target?.label || ""),
+      query: cleanText(target?.query || ""),
+      reason: cleanText(target?.reason || "")
+    })).filter((target) => target.tier || target.label || target.query).slice(0, 6),
+    recheckSteps: asArray(sourceExpansion.recheckSteps).map(cleanText).filter(Boolean).slice(0, 5)
+  };
+}
+
+function compactRiskReview(riskReview = null) {
+  if (!riskReview || typeof riskReview !== "object") return null;
+  return {
+    required: Boolean(riskReview.required),
+    items: asArray(riskReview.items).map((item) => ({
+      code: cleanText(item?.code || ""),
+      label: cleanText(item?.label || ""),
+      status: cleanText(item?.status || ""),
+      check: cleanText(item?.check || "")
+    })).filter((item) => item.code || item.label).slice(0, 8)
   };
 }
 

@@ -24,7 +24,29 @@ const baseResult = {
     ],
     caution: "원문 기준 확인이 필요합니다."
   },
-  missingSlots: ["evidence"]
+  missingSlots: ["evidence"],
+  sourceExpansion: {
+    required: true,
+    status: "queued",
+    trigger: "source_or_slot_gap_detected",
+    missingSlots: ["evidence"],
+    acquisitionTargets: [
+      { tier: "educationOfficeGuideline", label: "경상북도교육청 지침 원문", query: "경상북도교육청 병가 증빙 지침 원문" },
+      { tier: "schoolRule", label: "학교 내부 복무 규정", query: "학교 내부 복무 규정 병가 증빙" }
+    ],
+    riskReview: {
+      required: true,
+      items: [
+        { code: "records", label: "기록·증빙 보존", status: "detected" }
+      ]
+    }
+  },
+  riskReview: {
+    required: true,
+    items: [
+      { code: "records", label: "기록·증빙 보존", status: "detected" }
+    ]
+  }
 };
 
 assert.equal(
@@ -44,6 +66,8 @@ assert.equal(missingConfig.remoteLocalLlm?.reason, "remote_local_llm_base_url_mi
 const token = "test-bridge-token";
 const remoteResult = {
   ...baseResult,
+  sourceExpansion: null,
+  riskReview: null,
   answerState: {
     status: "conditional",
     primaryText: "교사의 병가 신청은 나이스 신청과 증빙자료 확인이 핵심입니다."
@@ -90,6 +114,10 @@ try {
   assert.match(result.policyResponse.lead, /의사·치과의사·한의사/);
   assert.match(result.responseText, /의사·치과의사·한의사/);
   assert.match(result.responseText, /60일|180일/);
+  assert.equal(result.sourceExpansion?.status, "queued");
+  assert.equal(result.policyResponse?.sourceExpansion?.status, "queued");
+  assert.equal(result.answerState?.sourceExpansion?.status, "queued");
+  assert.equal(result.riskReview?.items?.[0]?.code, "records");
 } finally {
   await new Promise((resolve) => server.close(resolve));
 }

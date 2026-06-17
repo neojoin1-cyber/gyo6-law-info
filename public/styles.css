@@ -1946,6 +1946,70 @@ select:focus {
   color: var(--navy);
 }
 
+.guide-expansion-card {
+  display: grid;
+  gap: 8px;
+  padding: 13px;
+  border: 1px solid #d7e7e4;
+  border-radius: 8px;
+  background: #fbfefd;
+}
+
+.guide-expansion-card > strong {
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.guide-expansion-card p {
+  margin: 0;
+  color: #40556a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.guide-expansion-card ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-expansion-card li {
+  display: grid;
+  gap: 3px;
+  padding-top: 7px;
+  border-top: 1px solid #e3eeeb;
+}
+
+.guide-expansion-card li b {
+  color: var(--navy);
+  font-size: 13px;
+}
+
+.guide-expansion-card li span {
+  color: #66788a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.guide-risk-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.guide-risk-chips span {
+  width: fit-content;
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: #edf7f6;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
 .guide-answer-actions {
   display: flex;
   flex-wrap: wrap;

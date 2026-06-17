@@ -859,12 +859,14 @@
   function buildLookupPlan(domainCode, domain = {}, task = {}, slots = {}, missingSlots = [], requiredSlots = null) {
     if (!domainCode) return { status: "unclassified", actions: [] };
     const dataCoverage = buildDataCoverage(domainCode, domain, task, slots, missingSlots, requiredSlots);
+    const sourceExpansion = buildSourceExpansionPlan(domainCode, domain, task, slots, missingSlots, requiredSlots, dataCoverage);
     return {
       status: missingSlots.length ? "needsSlotConfirmation" : "ready",
       domainCode,
       taskCode: task.code || "unknown",
       sourcePriority: domain.sourcePriorityDefault || "national",
       dataCoverage,
+      sourceExpansion,
       requiredSlots: requiredSlots || domain.requiredSlots || [],
       presentSlots: Object.entries(slots)
         .filter(([, value]) => isSlotFilled(value))
@@ -878,7 +880,11 @@
         missingSlots.includes("office") || domain.sourcePriorityDefault === "office" ? "get_office_guideline" : "",
         missingSlots.includes("schoolRule") || domain.sourcePriorityDefault === "schoolRuleFirst" ? "get_school_rule" : "",
         dataCoverage.gapCandidates.length ? "record_unanswered_gap_candidates" : "",
+        sourceExpansion.required ? "queue_source_expansion" : "",
+        sourceExpansion.required ? "fetch_office_guideline_originals" : "",
+        sourceExpansion.required ? "fetch_school_rule_originals" : "",
         "verify_source_currentness",
+        sourceExpansion.required ? "recheck_policy_answer_with_expanded_sources" : "",
         "compose_policy_answer"
       ])
     };
@@ -909,12 +915,112 @@
       missingSlots: missing,
       collectionTargets,
       gapCandidates,
+      autoExpansionRequired: Boolean(gapCandidates.length),
       coverageLevel: dataIndex && sourceTargets.length >= 3 && indexedSubtopics.length >= 4
         ? "structured"
         : dataIndex
           ? "partial"
           : "basic"
     };
+  }
+
+  function buildSourceExpansionPlan(domainCode, domain = {}, task = {}, slots = {}, missingSlots = [], requiredSlots = null, dataCoverage = {}) {
+    const required = requiredSlots || domain.requiredSlots || [];
+    const missing = uniqueStrings([...(missingSlots || []), ...required.filter((slotName) => !isSlotFilled(slots[slotName]))]);
+    const sourceTargets = uniqueStrings(dataCoverage.sourceTargets || domain.sourceKeys || []);
+    const collectionTargets = uniqueStrings(dataCoverage.collectionTargets || []);
+    const domainLabel = domain.label || domainCode || "학교정책";
+    const taskLabel = getTaskLabel(domainCode, task?.code || "");
+    const officeLabel = slots.office?.label || "경상북도교육청";
+    const ruleLabel = slots.schoolRule?.label || "학교생활규정·학칙·위원회 규정";
+    const hasGap = Boolean((dataCoverage.gapCandidates || []).length);
+    const isSchoolDomain = isOntologySchoolDomain(domainCode);
+    const needsSchoolRule = isSchoolDomain || missing.includes("schoolRule") || domain.sourcePriorityDefault === "schoolRuleFirst";
+    const needsOfficeGuideline = isSchoolDomain || missing.includes("office") || domain.sourcePriorityDefault === "office";
+    const needsExpansion = Boolean(
+      hasGap
+      || dataCoverage.coverageLevel === "basic"
+      || missing.some((slotName) => ["office", "schoolRule", "evidence", "riskSignal"].includes(slotName))
+      || (isSchoolDomain && sourceTargets.length < 3)
+    );
+
+    const acquisitionTargets = uniqueObjectsByKey([
+      needsOfficeGuideline ? {
+        tier: "educationOfficeGuideline",
+        label: `${officeLabel} 지침 원문`,
+        query: `${officeLabel} ${domainLabel} ${taskLabel} 지침 원문`,
+        reason: "시도교육청 지침이 학교 현장 처리의 직접 기준이 될 수 있음"
+      } : null,
+      needsSchoolRule ? {
+        tier: "schoolRule",
+        label: ruleLabel,
+        query: `${domainLabel} ${ruleLabel} ${taskLabel} 원문`,
+        reason: "학교별 내부 규정과 학생생활규정이 실제 처분·지도 기준이 될 수 있음"
+      } : null,
+      isSchoolDomain ? {
+        tier: "ministryGuideline",
+        label: "교육부 지침·매뉴얼 원문",
+        query: `교육부 ${domainLabel} ${taskLabel} 지침 매뉴얼`,
+        reason: "교육청·학교 규정의 상위 지침과 충돌 여부 확인"
+      } : null,
+      missing.includes("evidence") || isSchoolDomain ? {
+        tier: "evidenceTemplate",
+        label: "신청서·동의서·회의록·상담기록·통지서 서식",
+        query: `${domainLabel} ${taskLabel} 증빙자료 서식 기록 보존`,
+        reason: "답변에 필요한 증빙 흐름을 사용자에게 떠넘기지 않고 보강"
+      } : null
+    ].filter(Boolean), "tier");
+
+    return {
+      required: needsExpansion,
+      status: needsExpansion ? "queued" : "sufficient",
+      trigger: needsExpansion ? "source_or_slot_gap_detected" : "covered_by_current_index",
+      missingSlots: missing,
+      collectionTargets,
+      acquisitionTargets,
+      riskReview: buildRiskReviewPlan(domainCode, slots, task),
+      recheckSteps: needsExpansion ? [
+        "질문을 학교 현장 쟁점과 사용자 사실관계 슬롯으로 다시 분해",
+        "교육부·교육청 지침 원문과 학교생활규정·학칙·위원회 규정 원문 확보",
+        "시행일, 적용 대상, 학교급, 소속 교육청, 내부 결재·통지 이력을 대조",
+        "안전·인권·개인정보·불복 쟁점을 분리해 긴급 조치와 일반 안내를 나눔",
+        "확보한 원문과 증빙 기준으로 같은 질문의 결론을 재작성"
+      ] : []
+    };
+  }
+
+  function buildRiskReviewPlan(domainCode = "", slots = {}, task = {}) {
+    const riskLabel = slots.riskSignal?.label || "";
+    const domainLabel = getEffectivePolicyDomain(domainCode)?.label || domainCode || "학교 현장";
+    const text = `${domainLabel} ${task?.code || ""} ${riskLabel}`;
+    const items = [
+      ["safety", "안전·응급", /안전|응급|사고|위험|감염|식중독|보호|긴급/],
+      ["humanRights", "학생인권·차별", /인권|차별|부당|모욕|강압|체벌|학생지도/],
+      ["privacy", "개인정보·민감정보", /개인정보|영상|사진|CCTV|민감정보|기록|학생부|상담기록/],
+      ["appeal", "불복·이의신청", /불복|이의|재심|행정심판|민원|소명|통지/],
+      ["schoolViolence", "학교폭력·보복", /학교폭력|학폭|보복|가해|피해|괴롭힘|협박/],
+      ["records", "기록·증빙 보존", /증빙|기록|회의록|공문|통지|결재|서식|신청서/]
+    ];
+
+    return {
+      required: isOntologySchoolDomain(domainCode) || Boolean(riskLabel),
+      items: items.map(([code, label, pattern]) => ({
+        code,
+        label,
+        status: pattern.test(text) ? "detected" : "screen",
+        check: `${label} 쟁점을 일반 규정 답변과 분리해 판단`
+      }))
+    };
+  }
+
+  function uniqueObjectsByKey(items = [], keyName = "key") {
+    const seen = new Set();
+    return items.filter((item) => {
+      const key = item?.[keyName];
+      if (!key || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
   }
 
   function getDomainDataIndexProfile(domainCode = "", domain = {}) {
@@ -1079,6 +1185,8 @@
       sourcePriority: lookup?.sourcePriority || domain.sourcePriorityDefault || "national",
       sourceKeys: lookup?.sourceKeys || domain.sourceKeys || [],
       ruleLookup: lookup,
+      sourceExpansion: frame.lookupPlan?.sourceExpansion || lookup?.lookupPlan?.sourceExpansion || null,
+      riskReview: frame.lookupPlan?.sourceExpansion?.riskReview || lookup?.lookupPlan?.sourceExpansion?.riskReview || null,
       answer: buildGenericDomainAnswers(domainCode, domainLabel, taskLabel, subjectLabel, slots, officeLabel, frame, lookup),
       steps: buildGenericDomainSteps(domainCode, subjectLabel, slots, officeLabel, frame),
       queries: buildGenericDomainQueries(domainCode, domainLabel, taskLabel, subjectLabel, slots, officeLabel, lookup),
@@ -1126,7 +1234,7 @@
         `${officeText} ${fiscalYear} 학교회계 예산편성 기본지침을 먼저 조회해야 합니다.`,
         `${spendingType} 사안이면 ${stage} 단계에서 예산 과목, 집행 가능 범위, 결재권자, ${evidence}을 순서대로 대조합니다.`,
         "계약·검수·지출이 섞인 질문은 학교회계 규칙, 지방계약 법령, 공공기록물 보존 기준을 보조 근거로 붙입니다.",
-        missingText ? `현재 질문에서 ${missingText}가 명확하지 않으므로 확인 필요 항목으로 표시합니다. 해당 정보를 확인하면 답을 더 좁힐 수 있습니다.` : ""
+        missingText ? `현재 질문에서 ${missingText}가 명확하지 않으므로 자동 자료확충·사실보완 후보로 등록합니다. 확보되는 즉시 답을 더 좁힙니다.` : ""
       ]);
     }
 
@@ -1178,7 +1286,7 @@
         buildCorpusBasisText(lookup),
         buildOntologyEvidenceAnswer(domainCode, evidence, schoolLevel, frame),
         slots.riskSignal?.detected ? `${appendSubjectParticle(risk)} 보이므로 단순 안내, 긴급 보호, 위원회·심의, 법적 분쟁 가능성을 분리합니다.` : "위험 신호가 명확하지 않으면 단순 안내·민원 단계로 보되, 안전·인권·개인정보 단서는 계속 확인합니다.",
-        missingText ? `현재 질문에서 확인이 부족한 항목은 ${missingText}입니다. 해당 정보를 확인하면 답을 더 구체화할 수 있습니다.` : ""
+        missingText ? `현재 질문에서 확인이 부족한 항목은 ${missingText}입니다. 시스템이 자료확충·사실보완 후보로 등록하고, 확보되는 즉시 같은 사안을 재검증합니다.` : ""
       ]);
     }
 
@@ -1476,9 +1584,9 @@
       continuousServiceCheck,
       laborAnnualLeaveFormula,
       privateSchool
-        ? "사립학교는 소속 교육청 지침이 참고가 될 수 있어도 최종 적용은 학교법인 취업규칙, 단체협약, 복무규정, 근로계약의 휴가 조항을 직접 확인해야 합니다."
+        ? "사립학교는 소속 교육청 지침이 참고가 될 수 있어도 최종 적용은 학교법인 취업규칙, 단체협약, 복무규정, 근로계약의 휴가 조항을 자동 자료확충·재검증 대상으로 둡니다."
         : "소속 교육청이 확인되면 계약제교원 운영 지침과 근로계약서의 휴가 조항을 우선 조회하고, 근로기준법상 연차유급휴가 기준을 보조로 대조합니다.",
-      missingText ? `현재 질문에는 ${missingText}가 없어 최종 일수는 계약서·교육청 지침 확인 항목으로 남깁니다.` : ""
+      missingText ? `현재 질문에는 ${missingText}가 없어 최종 일수는 계약서·교육청 지침 자동 자료확충 항목으로 남깁니다.` : ""
     ]);
   }
 
@@ -1806,10 +1914,10 @@
     const employmentCode = getStaffEmploymentCode(slots);
     const issueCode = getStaffIssueCode(slots);
     if (employmentCode === "fixedTerm") {
-      return `${missingPrefix}기간제교사는 소속 교육청 계약제교원 운영 지침과 근로계약이 실제 일수·유급 여부를 좌우할 수 있습니다. 공립 교원 기준을 준용하는지 먼저 확인해야 합니다.`;
+      return `${missingPrefix}기간제교사는 소속 교육청 계약제교원 운영 지침과 근로계약이 실제 일수·유급 여부를 좌우할 수 있습니다. 공립 교원 기준 준용 여부를 자동 자료확충·재검증 대상으로 남깁니다.`;
     }
     if (employmentCode === "privateSchool" && (issueCode === "annualLeave" || issueCode === "sickLeave" || issueCode === "tardyEarlyLeave")) {
-      return `${missingPrefix}사립학교 교직원은 학교법인 복무규정·취업규칙·근로계약이 직접 기준입니다. 교원휴가 기준 준용 여부를 확인해 공립 교원 기준과 다른 별도 조항이 있는지 대조해야 합니다.`;
+      return `${missingPrefix}사립학교 교직원은 학교법인 복무규정·취업규칙·근로계약이 직접 기준입니다. 교원휴가 기준 준용 여부와 별도 조항은 자동 자료확충·재검증 대상으로 둡니다.`;
     }
     if (employmentCode === "publicTeacher" && (issueCode === "annualLeave" || issueCode === "sickLeave" || issueCode === "tardyEarlyLeave")) {
       return `${missingPrefix}공립 정규교원 기준으로 우선 답변했습니다. 사립학교, 교육공무직, 지방공무원, 기간제교사는 취업규칙·단체협약·근로계약·소속 교육청 지침이 달라질 수 있습니다.`;
@@ -1951,10 +2059,10 @@
       const domain = getEffectivePolicyDomain(domainCode);
       return uniqueStrings([
         `${domain.label || "학교정책"} 질문을 대상, 학교급, 업무 단계, 증빙, 위험 신호로 분해`,
-        "교육부·교육청 지침과 학교 내부 규정 중 어느 자료가 직접 기준인지 결정",
-        "신청서, 동의서, 상담기록, 회의록, 사진, 공문, 통지 이력 등 증빙자료 확인",
-        "안전·학교폭력·학생인권·개인정보·차별·불복 가능성이 있으면 긴급 조치와 일반 안내를 분리",
-        "원문 시행일과 소속 교육청·학교별 세부 규정을 재검증한 뒤 답변 문장 구성"
+        "교육부·교육청 지침과 학교 내부 규정을 자동 확보 대상으로 등록",
+        "신청서, 동의서, 상담기록, 회의록, 사진, 공문, 통지 이력 등 증빙 흐름을 자료확충 후보로 분리",
+        "안전·학교폭력·학생인권·개인정보·차별·불복 가능성을 긴급 조치와 일반 안내로 분리",
+        "원문 시행일과 소속 교육청·학교별 세부 규정이 확보되면 같은 질문을 재검증해 답변 문장 갱신"
       ]);
     }
 
@@ -2003,8 +2111,12 @@
       const domain = getEffectivePolicyDomain(domainCode);
       const stage = slots.procedureStage?.label || taskLabel;
       const rule = slots.schoolRule?.label || "학교 규정";
+      const expansionQueries = (lookup?.lookupPlan?.sourceExpansion?.acquisitionTargets || [])
+        .map((target) => target.query)
+        .filter(Boolean);
       return uniqueStrings([
         ...corpusQueries,
+        ...expansionQueries,
         `${domain.label || domainLabel} ${stage} ${rule}`,
         `${domain.label || domainLabel} 교육부 지침`,
         `${domain.label || domainLabel} 시도교육청 지침`,
@@ -2033,7 +2145,7 @@
     }
 
     if (isOntologySchoolDomain(domainCode)) {
-      return `${missingPrefix}학교 현장 사안은 법령보다 교육부·교육청 지침, 학교생활규정·학칙·위원회 규정, 내부 결재와 증빙이 더 직접적인 기준이 될 수 있습니다. 단순 안내인지, 안전·인권·개인정보·불복처럼 별도 절차가 필요한 사안인지 먼저 분리해야 합니다.`;
+      return `${missingPrefix}학교 현장 사안은 법령보다 교육부·교육청 지침, 학교생활규정·학칙·위원회 규정, 내부 결재와 증빙이 더 직접적인 기준이 될 수 있습니다. 시스템이 부족한 원문을 자동 자료확충 대상으로 등록하고, 안전·인권·개인정보·불복 쟁점을 분리해 재검증합니다.`;
     }
 
     return `${missingPrefix}${officeLabel} 지침과 내부 규정이 공통 법령보다 더 구체적일 수 있습니다.`;
@@ -2169,7 +2281,7 @@
         hasDaily && hasMeal ? `근무지 외 국내출장이면 1일 기준 일비는 ${formatWon(TRAVEL.dailyRate)}, 식비는 ${formatWon(TRAVEL.mealRate)}이며 두 항목 합계는 ${formatWon(TRAVEL.dailyRate + TRAVEL.mealRate)}입니다.` : "",
         travelScope.status === "outsideConfirmed" ? "" : "근무지 내 국내출장이면 제16조의 일비·식비·숙박비 계산이 아니라 제18조에 따라 4시간 이상 20,000원, 4시간 미만 10,000원을 봅니다.",
         travelScope.status === "outsideConfirmed" ? "" : "공용차량을 이용하는 등 인사혁신처장이 정하는 감액 사유가 있으면 근무지 내 출장 여비에서 10,000원을 감액할 수 있습니다.",
-        profile.localRuleFirst ? `${profile.subjectLabel}은 소속 교육청 취업규칙·단체협약·여비 지침이 직접 지급 근거가 될 수 있으므로, 공무원 여비 규정 준용 여부를 먼저 확인해야 합니다.` : "",
+        profile.localRuleFirst ? `${profile.subjectLabel}은 소속 교육청 취업규칙·단체협약·여비 지침이 직접 지급 근거가 될 수 있으므로, 공무원 여비 규정 준용 여부를 자동 자료확충·재검증 대상으로 둡니다.` : "",
         hasLodging ? "공무원 여비 규정 별표 2에서 제1호의 국내 숙박비는 실비이고, 제2호는 지역별 상한이 붙습니다." : "",
         hasLodging ? getLodgingCapText(destination) : "",
         hasTransport ? "운임은 철도·선박·항공·자동차 운임 모두 실제 필요한 금액을 증빙으로 정산하는 실비 항목입니다." : "",

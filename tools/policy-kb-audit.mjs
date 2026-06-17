@@ -98,6 +98,7 @@ const budgetResponse = policyEngine.buildPolicyResponse({ question: "학교 예�
 const serviceResponse = policyEngine.buildPolicyResponse({ question: "기간제교사가 병가 사용 후 복무평가에서 불리해질까 걱정됩니다. 근태 증빙은?" });
 const schoolViolenceFrame = policyEngine.buildPolicySemanticFrame("학교폭력 신고 후 가해학생 친구들이 보복성 메시지를 보내는데 피해학생 보호 조치는?");
 const classManagementFrame = policyEngine.buildPolicySemanticFrame("수업 중 휴대전화를 보관했다가 학부모가 학생 인권 침해라고 민원을 냈습니다.");
+const classManagementResponse = policyEngine.buildPolicyResponse({ question: "수업 중 휴대전화를 보관했다가 학부모가 학생 인권 침해라고 민원을 냈습니다." });
 const fieldLearningFrame = policyEngine.buildPolicySemanticFrame("교외체험학습 신청서와 보고서, 출결 처리는 어떻게 해야 하나요?");
 const dormitoryFrame = policyEngine.buildPolicySemanticFrame("기숙사 배정에서 특정 학과 학생이 불리하다는 민원이 들어왔습니다.");
 const mealFrame = policyEngine.buildPolicySemanticFrame("학부모가 급식 반찬이 마음에 들지 않는다며 학교장 면담을 요구했습니다. 식중독은 없습니다.");
@@ -149,6 +150,12 @@ assert(serviceResponse?.answer?.some((line) => line.includes("복무평가") || 
 assert(schoolViolenceFrame.domainCode === "schoolViolenceProcedure" && schoolViolenceFrame.slots?.riskSignal?.label?.includes("학교폭력"), "engine: school violence frame did not classify violence risk");
 assert(classManagementFrame.domainCode === "classManagementGuidance" && classManagementFrame.slots?.schoolRule?.label?.includes("학교생활규정"), "engine: class management frame did not extract school rule");
 assert(classManagementFrame.slots?.office?.detected !== true, "engine: class management frame falsely detected education office from 휴대전화");
+assert(classManagementFrame.lookupPlan?.sourceExpansion?.required === true, "engine: class management source gap should trigger automatic source expansion");
+assert(classManagementFrame.lookupPlan?.actions?.includes("queue_source_expansion") && classManagementFrame.lookupPlan?.actions?.includes("recheck_policy_answer_with_expanded_sources"), "engine: class management lookup did not queue source expansion and recheck");
+assert(classManagementFrame.lookupPlan?.sourceExpansion?.acquisitionTargets?.some((target) => target.tier === "educationOfficeGuideline") && classManagementFrame.lookupPlan?.sourceExpansion?.acquisitionTargets?.some((target) => target.tier === "schoolRule"), "engine: class management source expansion did not target office guideline and school rule originals");
+assert(classManagementFrame.lookupPlan?.sourceExpansion?.riskReview?.items?.some((item) => item.code === "humanRights" && item.status === "detected"), "engine: class management risk review did not detect human-rights issue");
+assert(classManagementResponse?.sourceExpansion?.required === true && classManagementResponse?.riskReview?.items?.some((item) => item.code === "privacy"), "engine: class management response did not expose source expansion and risk review");
+assert(classManagementResponse?.caution?.includes("자동 자료확충") && !classManagementResponse.caution.includes("먼저 분리해야 합니다"), "engine: class management caution still pushes source gap back to user");
 assert(fieldLearningFrame.domainCode === "fieldExperienceLearning" && fieldLearningFrame.slots?.evidence?.label?.includes("신청서"), "engine: field learning frame did not extract application/report evidence");
 assert(dormitoryFrame.domainCode === "dormitoryOperation" && dormitoryFrame.lookupPlan?.actions?.includes("get_school_rule"), "engine: dormitory frame did not prioritize school rule lookup");
 assert(mealFrame.domainCode === "schoolMealOperation" && !mealFrame.slots?.riskSignal?.label?.includes("안전·응급"), "engine: meal frame did not respect negated food poisoning risk");

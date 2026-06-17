@@ -253,6 +253,8 @@ export function handlePolicyChatRequest(payload = {}, options = {}) {
   const needsClarification = shouldAskForClarification(semanticFrame, policyResponse);
   const missingSlots = semanticFrame.missingSlots || [];
   const missingSlotQuestions = buildMissingSlotQuestions(missingSlots, semanticFrame, question);
+  const sourceExpansion = policyResponse?.sourceExpansion || semanticFrame.lookupPlan?.sourceExpansion || null;
+  const riskReview = policyResponse?.riskReview || sourceExpansion?.riskReview || null;
   const answerState = buildAnswerState({
     question,
     officeLabel,
@@ -273,6 +275,8 @@ export function handlePolicyChatRequest(payload = {}, options = {}) {
     semanticFrame: compactSemanticFrame(semanticFrame),
     missingSlots,
     missingSlotQuestions,
+    sourceExpansion,
+    riskReview,
     answerState,
     completionFlow: buildConsultationCompletionFlow({
       question,
@@ -424,7 +428,7 @@ function buildChatText({ question, originalQuestion, officeLabel, semanticFrame,
 
   if (officeLabel === DEFAULT_OFFICE_LABEL && !hasOfficeSignal(question)) {
     lines.push("");
-    lines.push("교육청을 고르지 않아 경상북도교육청 기준으로 먼저 안내합니다. 실제 적용은 소속 교육청 지침 확인이 필요합니다.");
+    lines.push("교육청을 고르지 않아 경상북도교육청 기준으로 먼저 안내합니다. 소속 교육청이 달라질 수 있는 부분은 자동 자료확충·재검증 대상으로 남깁니다.");
   }
 
   if (policyResponse.caution) {
@@ -478,12 +482,12 @@ function buildKakaoSimpleText(result = {}) {
   }
 
   if (result.officeLabel === DEFAULT_OFFICE_LABEL && !hasOfficeSignal(result.question)) {
-    lines.push("소속 교육청이 다르면 교육청 지정 버튼으로 바꿔 확인하세요.");
+    lines.push("소속 교육청이 다르면 교육청 지정값과 함께 자동 재검증 대상으로 처리합니다.");
   }
 
   lines.push(isDetailCriticalResult(result)
-    ? "서류·절차는 아래 자세히 보기에서 확인하세요."
-    : "아래 자세히 보기에서 확인하세요.");
+    ? "서류·절차는 아래 자세히 보기에서 함께 정리합니다."
+    : "아래 자세히 보기에서 함께 정리합니다.");
   return clipKakaoText(lines.join("\n"));
 }
 
@@ -716,7 +720,7 @@ function buildAnswerState({
   const caveats = uniqueStrings([
     policyResponse.caution,
     officeLabel === DEFAULT_OFFICE_LABEL && !hasOfficeSignal(question)
-      ? "경상북도교육청 기준으로 우선 안내하며, 실제 적용은 소속 교육청 지침 확인이 필요합니다."
+      ? "경상북도교육청 기준으로 우선 안내하며, 소속 교육청별 차이는 자동 자료확충·재검증 대상으로 남깁니다."
       : ""
   ]);
   const conditional = isConditionalAnswerContext({
@@ -743,6 +747,8 @@ function buildAnswerState({
     conditionalAnswers: status === "definitive" ? [] : userFacingTexts,
     slotQuestions: missingSlotQuestions,
     caveats,
+    sourceExpansion: policyResponse?.sourceExpansion || semanticFrame.lookupPlan?.sourceExpansion || null,
+    riskReview: policyResponse?.riskReview || policyResponse?.sourceExpansion?.riskReview || semanticFrame.lookupPlan?.sourceExpansion?.riskReview || null,
     primaryText,
     basis: buildAnswerBasis({ question, officeLabel, semanticFrame, policyResponse })
   };
@@ -806,6 +812,7 @@ function buildAnswerBasis({ question = "", officeLabel = "", semanticFrame = {},
     officeLabel: officeLabel || "",
     sourcePriority: policyResponse?.sourcePriority || "",
     sourceKeys: policyResponse?.sourceKeys || [],
+    sourceExpansionStatus: policyResponse?.sourceExpansion?.status || semanticFrame.lookupPlan?.sourceExpansion?.status || "",
     defaultOfficeApplied: officeLabel === DEFAULT_OFFICE_LABEL && !hasOfficeSignal(question)
   };
 }
@@ -932,6 +939,7 @@ function compactSemanticFrame(frame = {}) {
     slots: compactSemanticSlots(frame.slots || {}),
     missingSlots: frame.missingSlots || [],
     lookupStatus: frame.lookupPlan?.status || "",
+    sourceExpansion: frame.lookupPlan?.sourceExpansion || null,
     intentClarification: compactIntentClarification(frame.intentClarification),
     candidates: (frame.domainCandidates || []).slice(0, 3).map((candidate) => ({
       code: candidate.code,

@@ -54,7 +54,7 @@ export async function maybeApplyRemoteLocalPolicyLlm(payload = {}, baseResult = 
       });
     }
 
-    const guardedRemoteResult = applyRequiredPolicyAnchors(remoteResult, baseResult);
+    const guardedRemoteResult = preservePolicyMetadata(applyRequiredPolicyAnchors(remoteResult, baseResult), baseResult);
     return {
       ...guardedRemoteResult,
       remoteLocalLlm: {
@@ -77,6 +77,43 @@ export async function maybeApplyRemoteLocalPolicyLlm(payload = {}, baseResult = 
       elapsedMs: Date.now() - startedAt
     });
   }
+}
+
+function preservePolicyMetadata(remoteResult = {}, baseResult = {}) {
+  const sourceExpansion = remoteResult.sourceExpansion
+    || remoteResult.policyResponse?.sourceExpansion
+    || remoteResult.answerState?.sourceExpansion
+    || baseResult.sourceExpansion
+    || baseResult.policyResponse?.sourceExpansion
+    || baseResult.answerState?.sourceExpansion
+    || baseResult.semanticFrame?.lookupPlan?.sourceExpansion
+    || null;
+  const riskReview = remoteResult.riskReview
+    || remoteResult.policyResponse?.riskReview
+    || remoteResult.answerState?.riskReview
+    || sourceExpansion?.riskReview
+    || baseResult.riskReview
+    || baseResult.policyResponse?.riskReview
+    || baseResult.answerState?.riskReview
+    || null;
+
+  if (!sourceExpansion && !riskReview) return remoteResult;
+
+  return {
+    ...remoteResult,
+    sourceExpansion,
+    riskReview,
+    policyResponse: {
+      ...(remoteResult.policyResponse || {}),
+      sourceExpansion: remoteResult.policyResponse?.sourceExpansion || sourceExpansion,
+      riskReview: remoteResult.policyResponse?.riskReview || riskReview
+    },
+    answerState: {
+      ...(remoteResult.answerState || {}),
+      sourceExpansion: remoteResult.answerState?.sourceExpansion || sourceExpansion,
+      riskReview: remoteResult.answerState?.riskReview || riskReview
+    }
+  };
 }
 
 export function getRemoteLocalLlmConfig(env = {}) {
@@ -335,15 +372,50 @@ function compactPolicyResult(result = {}) {
     },
     answerState: {
       status: cleanText(result.answerState?.status || ""),
-      primaryText: cleanLongText(result.answerState?.primaryText || "").slice(0, 800)
+      primaryText: cleanLongText(result.answerState?.primaryText || "").slice(0, 800),
+      sourceExpansion: compactSourceExpansion(result.answerState?.sourceExpansion)
     },
     missingSlots: asArray(result.missingSlots).map(cleanText).filter(Boolean).slice(0, 8),
+    sourceExpansion: compactSourceExpansion(result.sourceExpansion || result.policyResponse?.sourceExpansion || result.answerState?.sourceExpansion),
+    riskReview: compactRiskReview(result.riskReview || result.policyResponse?.riskReview || result.answerState?.riskReview),
     policyResponse: result.policyResponse ? {
       title: cleanText(result.policyResponse.title || ""),
       lead: cleanLongText(result.policyResponse.lead || "").slice(0, 800),
       answer: asArray(result.policyResponse.answer).map(cleanLongText).filter(Boolean).slice(0, 8),
-      caution: cleanLongText(result.policyResponse.caution || "").slice(0, 800)
+      caution: cleanLongText(result.policyResponse.caution || "").slice(0, 800),
+      sourceExpansion: compactSourceExpansion(result.policyResponse.sourceExpansion),
+      riskReview: compactRiskReview(result.policyResponse.riskReview)
     } : null
+  };
+}
+
+function compactSourceExpansion(sourceExpansion = null) {
+  if (!sourceExpansion || typeof sourceExpansion !== "object") return null;
+  return {
+    required: Boolean(sourceExpansion.required),
+    status: cleanText(sourceExpansion.status || ""),
+    trigger: cleanText(sourceExpansion.trigger || ""),
+    missingSlots: asArray(sourceExpansion.missingSlots).map(cleanText).filter(Boolean).slice(0, 8),
+    acquisitionTargets: asArray(sourceExpansion.acquisitionTargets).map((target) => ({
+      tier: cleanText(target?.tier || ""),
+      label: cleanText(target?.label || ""),
+      query: cleanText(target?.query || ""),
+      reason: cleanText(target?.reason || "")
+    })).filter((target) => target.tier || target.label || target.query).slice(0, 6),
+    recheckSteps: asArray(sourceExpansion.recheckSteps).map(cleanText).filter(Boolean).slice(0, 5)
+  };
+}
+
+function compactRiskReview(riskReview = null) {
+  if (!riskReview || typeof riskReview !== "object") return null;
+  return {
+    required: Boolean(riskReview.required),
+    items: asArray(riskReview.items).map((item) => ({
+      code: cleanText(item?.code || ""),
+      label: cleanText(item?.label || ""),
+      status: cleanText(item?.status || ""),
+      check: cleanText(item?.check || "")
+    })).filter((item) => item.code || item.label).slice(0, 8)
   };
 }
 
