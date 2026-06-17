@@ -1252,6 +1252,7 @@ const sourceGapCautionGuide = {
 };
 const sourceGapCautionHtml = context.renderPolicyGuideResponse(sourceGapCautionGuide);
 const sourceGapProgressHtml = context.renderPolicyGuideAutoVerificationNotice(sourceGapCautionGuide, { state: "active" });
+const localLlmWorkingHtml = context.renderLocalLlmWorkingNotice(sourceGapCautionGuide, { state: "active" });
 if (/증빙자료가 부족|직접 확인하시기 바랍니다/.test(sourceGapCautionHtml)) {
   failures.push("policy-guide-source-gap-caution: source-gap caution should not tell users to check originals themselves");
 }
@@ -1260,6 +1261,13 @@ if (!sourceGapCautionHtml.includes("자동 자료확충") || !sourceGapCautionHt
 }
 if (!sourceGapProgressHtml.includes("더 정확한 결과를 위해 새로운 자료를 추가로 확인중입니다. 조금만 더 기다려 주세요.")) {
   failures.push("policy-guide-source-gap-progress: expected visible additional-source checking progress message");
+}
+if (!localLlmWorkingHtml.includes("로컬 AI 보강 생성 중")
+  || !localLlmWorkingHtml.includes("기본 답변을 먼저 보여드렸고")
+  || !localLlmWorkingHtml.includes("보강 답변으로 자동 교체")
+  || !localLlmWorkingHtml.includes("질문 재정리")
+  || !localLlmWorkingHtml.includes("답변 재작성")) {
+  failures.push("policy-guide-local-llm-working: expected prominent local LLM working notice with progress stages");
 }
 
 for (const guideCase of broadSchoolPolicyGuideCases) {

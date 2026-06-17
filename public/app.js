@@ -2296,12 +2296,14 @@ function renderPolicyGuideResult() {
     categoryCode
   });
 
-  if (guideStatus) guideStatus.textContent = "기본 답변";
-  if (guideResultTitle) guideResultTitle.textContent = "규정·지침 답변";
+  const canEnhanceWithLocalLlm = isLocalLlmEnhancementHost();
+  if (guideStatus) guideStatus.textContent = canEnhanceWithLocalLlm ? "로컬 AI 보강 중" : "기본 답변";
+  if (guideResultTitle) guideResultTitle.textContent = canEnhanceWithLocalLlm ? "기본 답변 · 로컬 AI 보강 중" : "규정·지침 답변";
   guideResult.className = "summary-box guideline-result";
   guideResult.innerHTML = `
     ${renderPolicyGuideResponse(response)}
-    ${renderPolicyGuideAutoVerificationNotice(response, { state: isLocalLlmEnhancementHost() ? "active" : "deferred" })}
+    ${renderLocalLlmWorkingNotice(response, { state: canEnhanceWithLocalLlm ? "active" : "deferred" })}
+    ${renderPolicyGuideAutoVerificationNotice(response, { state: canEnhanceWithLocalLlm ? "active" : "deferred" })}
   `;
 
   loadGuideLocalLlmPolicyEnhancement({
@@ -3426,6 +3428,57 @@ function markPolicyGuideAutoVerificationDeferred(container) {
   if (message) {
     message.textContent = "현재 기본 답변을 먼저 표시했습니다. 추가 원문은 자동 자료확충·재검증 대상으로 계속 관리합니다.";
   }
+}
+
+function renderLocalLlmWorkingNotice(response = {}, { state = "active" } = {}) {
+  const isActive = state === "active";
+  const isComplete = state === "complete";
+  const title = isActive
+    ? "로컬 AI 보강 생성 중"
+    : isComplete ? "로컬 AI 보강 완료" : "로컬 AI 보강 대기";
+  const questionHint = compactText(response.question || "").slice(0, 42);
+  const message = isActive
+    ? "기본 답변을 먼저 보여드렸고, 사무실 Ollama가 질문 표현·공식자료 후보·위험 쟁점을 다시 대조하고 있습니다. 보통 5~20초 걸리며, 완료되면 보강 답변으로 자동 교체됩니다."
+    : isComplete
+      ? "로컬 AI가 질문을 다시 정리하고 답변 문장을 보강했습니다."
+      : "현재는 기본 답변을 유지합니다. 사무실 PC, Ollama, 보안 터널 상태가 회복되면 보강 답변이 다시 붙습니다.";
+
+  return `
+    <section class="local-llm-working ${isActive ? "is-active" : isComplete ? "is-complete" : "is-deferred"}" data-local-llm-working aria-live="polite">
+      <div class="local-llm-working-head">
+        <span class="local-llm-spinner" aria-hidden="true"></span>
+        <div>
+          <strong>${escapeHtml(title)}</strong>
+          ${questionHint ? `<small>${escapeHtml(questionHint)}</small>` : ""}
+        </div>
+      </div>
+      <p>${escapeHtml(message)}</p>
+      ${isActive ? `
+        <div class="local-llm-progress" aria-label="로컬 AI 보강 단계">
+          <span>질문 재정리</span>
+          <span>원문 후보 대조</span>
+          <span>답변 재작성</span>
+        </div>
+      ` : ""}
+    </section>
+  `;
+}
+
+function markLocalLlmWorkingNoticeDeferred(container) {
+  const notice = container?.querySelector?.("[data-local-llm-working]");
+  if (!notice) return;
+  notice.classList.remove("is-active", "is-complete");
+  notice.classList.add("is-deferred");
+  const title = notice.querySelector?.("strong");
+  const message = notice.querySelector?.("p");
+  const spinner = notice.querySelector?.(".local-llm-spinner");
+  const progress = notice.querySelector?.(".local-llm-progress");
+  if (title) title.textContent = "로컬 AI 보강 대기";
+  if (message) {
+    message.textContent = "현재는 기본 답변을 유지합니다. 사무실 PC, Ollama, 보안 터널 상태가 회복되면 보강 답변이 다시 붙습니다.";
+  }
+  if (spinner) spinner.setAttribute("aria-hidden", "true");
+  progress?.remove?.();
 }
 
 function renderPolicyGuideSourceExpansion(response = {}) {
@@ -5274,12 +5327,14 @@ function renderFreeBasicPolicyResult({
     workspace.insertBefore(resultPanel, queryPanel);
   }
 
-  resultTitle.textContent = "기본 답변";
-  statusDot.textContent = "기본 답변";
+  const canEnhanceWithLocalLlm = isLocalLlmEnhancementHost();
+  resultTitle.textContent = canEnhanceWithLocalLlm ? "기본 답변 · 로컬 AI 보강 중" : "기본 답변";
+  statusDot.textContent = canEnhanceWithLocalLlm ? "로컬 AI 보강 중" : "기본 답변";
   resultState.className = "summary-box guideline-result free-policy-result";
   resultState.innerHTML = `
     ${renderPolicyGuideResponse(response)}
-    ${renderPolicyGuideAutoVerificationNotice(response, { state: isLocalLlmEnhancementHost() ? "active" : "deferred" })}
+    ${renderLocalLlmWorkingNotice(response, { state: canEnhanceWithLocalLlm ? "active" : "deferred" })}
+    ${renderPolicyGuideAutoVerificationNotice(response, { state: canEnhanceWithLocalLlm ? "active" : "deferred" })}
     ${accessMessage ? `
       <section class="free-access-note" aria-label="비로그인 기본 답변 안내">
         <strong>로그인 없이 기본 답변을 제공했습니다.</strong>
@@ -5389,7 +5444,10 @@ async function loadLocalLlmPolicyEnhancement({
   } finally {
     if (activeLocalLlmController === controller) {
       if (!appliedEnhancement && questionFingerprint === currentQuestionFingerprint) {
+        markLocalLlmWorkingNoticeDeferred(resultState);
         markPolicyGuideAutoVerificationDeferred(resultState);
+        statusDot.textContent = "기본 답변";
+        if (resultTitle) resultTitle.textContent = "기본 답변";
       }
       activeLocalLlmController = null;
     }
@@ -5470,7 +5528,10 @@ async function loadGuideLocalLlmPolicyEnhancement({
   } finally {
     if (activeGuideLocalLlmController === controller) {
       if (!appliedEnhancement && guideFingerprint === currentGuideQuestionFingerprint) {
+        markLocalLlmWorkingNoticeDeferred(guideResult);
         markPolicyGuideAutoVerificationDeferred(guideResult);
+        if (guideStatus) guideStatus.textContent = "기본 답변";
+        if (guideResultTitle) guideResultTitle.textContent = "규정·지침 답변";
       }
       activeGuideLocalLlmController = null;
     }
