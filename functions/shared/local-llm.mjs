@@ -408,6 +408,7 @@ function buildPolicyComposerSystemPrompt() {
     "Never end with phrases that push work back to the user, such as '증빙자료가 부족합니다', '원문을 확인하세요', '공식 문서를 직접 확인하시기 바랍니다'.",
     "When evidence or source gaps remain, say that GYO6 is additionally checking official sources and will re-evaluate with sourceExpansion/riskReview. Keep the actionable answer useful while preserving uncertainty.",
     "Across all domains, treat local school rules, school bylaws, internal committee rules, employment rules, and school-specific plans as final execution checks unless the rule-engine explicitly says they are the primary legal source. First preserve the provided higher hierarchy: national law, ministry notice/guideline, education-office guideline, then local/internal rule.",
+    "For staff leave and attendance, preserve the rule-engine hierarchy: common law/regulation and teacher leave rules first, education-office operating guideline next, employment contract/work rules only as final execution details. Do not imply that statutory leave can be reduced by contract.",
     "For classManagementGuidance/student life guidance, do not begin with '학급 및 학교 생활규정을 확인'. First use the hierarchy: 교원의 학생생활지도에 관한 고시, 초·중등교육법 제18조와 시행령 제31조 when 선도·징계 is considered, 교원지위법/교육활동 보호 when applicable, then 학교생활규정 only as the final school-level execution check.",
     "Write concise Korean for teachers, students, parents, and school staff. Put the conclusion first.",
     "If source keys or official source priority are provided, say that the system keeps national, ministry, education-office, and school originals as recheck targets in that order."
@@ -704,6 +705,7 @@ function applyRequiredPolicyAnchors(draft = {}, result = {}) {
   if (!requiredLines.length) return draft;
   const isClassManagement = result.semanticFrame?.domainCode === "classManagementGuidance";
   const isSchoolPolicy = isSchoolPolicyDomainCode(result.semanticFrame?.domainCode || "");
+  const isStaffAttendancePolicy = isStaffAttendancePolicyDomainCode(result.semanticFrame?.domainCode || "");
 
   const draftText = [
     draft.title,
@@ -720,9 +722,16 @@ function applyRequiredPolicyAnchors(draft = {}, result = {}) {
   });
   const certificateLine = requiredLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
   const shouldPromoteCertificateLead = certificateLine && !/한의사/.test(cleanLongText(draft.lead || ""));
+  const staffAttendanceLead = requiredLines.find((line) => /90일|120일|20일|근로기준법\s*제74조|법정\s*기준|임의\s*축소/.test(line));
   const classManagementLead = requiredLines.find((line) => /교원의 학생생활지도/.test(line) && /초·중등교육법|시행령 제31조/.test(line));
   const hierarchyLead = classManagementLead || requiredLines.find(isHierarchyAnchorLine);
   const draftLead = cleanLongText(draft.lead || "");
+  const shouldPromoteStaffAttendanceLead = Boolean(
+    isStaffAttendancePolicy &&
+    staffAttendanceLead &&
+    !shouldPromoteCertificateLead &&
+    (isLessSpecificStaffAttendanceFallbackLine(draftLead) || !/(90일|120일|20일|근로기준법\s*제74조|법정\s*기준|임의\s*축소)/.test(draftLead))
+  );
   const shouldPromoteClassManagementLead = Boolean(
     isClassManagement &&
     classManagementLead &&
@@ -737,18 +746,22 @@ function applyRequiredPolicyAnchors(draft = {}, result = {}) {
   const filteredAnswer = asArray(draft.answer)
     .filter((line) => !isLessSpecificMedicalCertificateLine(line))
     .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)))
-    .filter((line) => !(isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line)));
+    .filter((line) => !(isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line)))
+    .filter((line) => !(isStaffAttendancePolicy && isLessSpecificStaffAttendanceFallbackLine(line)));
   const filteredSteps = asArray(draft.steps)
     .filter((line) => !isLessSpecificMedicalCertificateLine(line))
     .filter((line) => !(isClassManagement && isLessSpecificClassManagementFallbackLine(line)))
-    .filter((line) => !(isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line)));
+    .filter((line) => !(isSchoolPolicy && isLessSpecificInternalRuleFallbackLine(line)))
+    .filter((line) => !(isStaffAttendancePolicy && isLessSpecificStaffAttendanceFallbackLine(line)));
   const shouldFilterAnswer = filteredAnswer.length !== asArray(draft.answer).length;
   const shouldFilterSteps = filteredSteps.length !== asArray(draft.steps).length;
-  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldPromoteClassManagementLead && !shouldPromoteHierarchyLead && !shouldFilterAnswer && !shouldFilterSteps) return draft;
+  if (!missingLines.length && !shouldPromoteCertificateLead && !shouldPromoteStaffAttendanceLead && !shouldPromoteClassManagementLead && !shouldPromoteHierarchyLead && !shouldFilterAnswer && !shouldFilterSteps) return draft;
 
   return {
     ...draft,
-    lead: shouldPromoteCertificateLead ? certificateLine : (shouldPromoteClassManagementLead ? classManagementLead : (shouldPromoteHierarchyLead ? hierarchyLead : draft.lead)),
+    lead: shouldPromoteCertificateLead
+      ? certificateLine
+      : (shouldPromoteStaffAttendanceLead ? staffAttendanceLead : (shouldPromoteClassManagementLead ? classManagementLead : (shouldPromoteHierarchyLead ? hierarchyLead : draft.lead))),
     answer: uniqueDraftLines([...missingLines, ...filteredAnswer]).slice(0, 5),
     steps: filteredSteps
   };
@@ -759,8 +772,6 @@ function getRequiredPolicyAnchorLines(result = {}) {
   const issueCode = cleanText(frame.slots?.serviceIssue?.code || "");
   const issueLabel = cleanText(frame.slots?.serviceIssue?.label || "");
   const question = cleanText(result.question || frame.question || frame.normalized || "");
-  const isSickLeave = frame.domainCode === "staffAttendanceService"
-    && (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question));
   const sourceLines = [
     result.policyResponse?.lead,
     ...asArray(result.policyResponse?.answer),
@@ -787,6 +798,34 @@ function getRequiredPolicyAnchorLines(result = {}) {
       ...getGenericCriticalPolicyAnchorLines(sourceLines)
     ]).slice(0, 4);
   }
+
+  const isChildbirthLeave = frame.domainCode === "staffAttendanceService"
+    && (issueCode === "childbirthLeave" || /출산휴가/.test(issueLabel) || /출산휴가/.test(question))
+    && issueCode !== "spouseChildbirthLeave";
+  if (isChildbirthLeave) {
+    const daysLine = sourceLines.find((line) => /90일/.test(line) && /120일|다태아|둘 이상/.test(line));
+    const legalFloorLine = sourceLines.find((line) => /근로기준법 제74조|임의 축소|법정 기준/.test(line));
+    const postpartumLine = sourceLines.find((line) => /출산 후/.test(line) && /45일|60일/.test(line));
+    return uniqueDraftLines([
+      daysLine,
+      legalFloorLine,
+      postpartumLine,
+      ...getGenericCriticalPolicyAnchorLines(sourceLines)
+    ]).slice(0, 4);
+  }
+
+  const isSpouseChildbirthLeave = frame.domainCode === "staffAttendanceService"
+    && (issueCode === "spouseChildbirthLeave" || /배우자 출산휴가/.test(issueLabel) || /배우자 출산휴가/.test(question));
+  if (isSpouseChildbirthLeave) {
+    const spouseDaysLine = sourceLines.find((line) => /배우자 출산휴가/.test(line) && /20일/.test(line));
+    return uniqueDraftLines([
+      spouseDaysLine,
+      ...getGenericCriticalPolicyAnchorLines(sourceLines)
+    ]).slice(0, 4);
+  }
+
+  const isSickLeave = frame.domainCode === "staffAttendanceService"
+    && (issueCode === "sickLeave" || /병가/.test(issueLabel) || /병가/.test(question));
   if (!isSickLeave) return [];
 
   const certificateLine = sourceLines.find((line) => /한의사/.test(line) && /진단서/.test(line));
@@ -840,6 +879,17 @@ function isLessSpecificInternalRuleFallbackLine(line = "") {
     ;
 }
 
+function isLessSpecificStaffAttendanceFallbackLine(line = "") {
+  const text = cleanLongText(line);
+  if (!text) return false;
+  if (/(90일|120일|20일|45일|60일|근로기준법\s*제74조|국가공무원\s*복무규정|교원휴가에\s*관한\s*예규|법정\s*기준|임의\s*축소)/.test(text)) return false;
+  if (/(사유를\s*알아야|사유별\s*일수표|사유가\s*달라지면|최종\s*일수는\s*사유\s*확인)/.test(text)) return true;
+  if (/(근로계약|임용계약|취업규칙|단체협약|소속\s*교육청|학교\s*내부|공립\s*교원\s*기준|준용).{0,60}(달라질\s*수|우선적으로\s*확인|먼저\s*확인|확인해야|확인합니다|확정합니다)/.test(text)) return true;
+  if (/나이스\s*근무상황\s*신청\s*종별,\s*증빙자료,\s*학교장\s*승인\s*절차를\s*함께\s*확인/.test(text)) return true;
+  if (/확인하시기\s*바랍니다/.test(text) && /(복무|휴가|근태|교육청|근로계약|임용계약|취업규칙|증빙)/.test(text)) return true;
+  return false;
+}
+
 function isHierarchyAnchorLine(line = "") {
   const text = cleanLongText(line);
   if (!text) return false;
@@ -873,6 +923,10 @@ function isSchoolPolicyDomainCode(domainCode = "") {
     "facilityDigitalSecurity",
     "governanceCommitteeRule"
   ].includes(cleanText(domainCode));
+}
+
+function isStaffAttendancePolicyDomainCode(domainCode = "") {
+  return ["staffAttendanceService", "bereavementLeave"].includes(cleanText(domainCode));
 }
 
 function attachLocalLlmMetadata(result = {}, metadata = {}) {

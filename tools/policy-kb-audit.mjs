@@ -81,6 +81,8 @@ assert(Array.isArray(travel.subjectProfiles) && travel.subjectProfiles.length >=
 assert(Array.isArray(travel.legalBasis) && travel.legalBasis.includes("공무원 여비 규정 별표 2"), "domesticTravel: missing legal basis table");
 assert(Array.isArray(staffAttendance.publicTeacher?.annualLeave?.daysByService) && staffAttendance.publicTeacher.annualLeave.daysByService.some((item) => item.days === 21), "staffAttendance: missing public teacher annual leave table");
 assert(staffAttendance.publicTeacher?.sickLeave?.normalDays === 60 && staffAttendance.publicTeacher?.sickLeave?.officialInjuryDays === 180, "staffAttendance: missing public teacher sick leave limits");
+assert(staffAttendance.publicTeacher?.childbirthLeave?.normalDays === 90 && staffAttendance.publicTeacher?.childbirthLeave?.multipleBirthDays === 120, "staffAttendance: missing public teacher childbirth leave limits");
+assert(staffAttendance.fixedTermTeacher?.childbirthLeave?.answer?.includes("근로기준법 제74조"), "staffAttendance: fixed-term teacher childbirth leave must preserve statutory floor");
 assert(staffAttendance.fixedTermTeacher?.sickLeave?.answer?.includes("계약제교원"), "staffAttendance: missing fixed-term teacher sick leave rule");
 
 const analysis = policyEngine.analyzePolicyQuestion("교사의 진해시 출장시 일비와 식비는?");
@@ -95,6 +97,8 @@ const travelOvertimeResponse = policyEngine.buildPolicyResponse({ question: trav
 const regularAnnualLeaveFrame = policyEngine.buildPolicySemanticFrame("정규교사의 연가는 몇일 가능하며 언제 신청하나요?");
 const regularSickLeaveResponse = policyEngine.buildPolicyResponse({ question: "정규교사의 병가는 몇일 가능하며 어떻게 신청하나요?" });
 const fixedTermSickLeaveResponse = policyEngine.buildPolicyResponse({ question: "기간제교사의 병가는 몇일 가능하며 어떻게 신청하나요?" });
+const fixedTermChildbirthFrame = policyEngine.buildPolicySemanticFrame("기간제교사의 출산휴가 규정은?");
+const fixedTermChildbirthResponse = policyEngine.buildPolicyResponse({ question: "기간제교사의 출산휴가 규정은?" });
 const budgetResponse = policyEngine.buildPolicyResponse({ question: "학교 예산 편성과 지출 증빙은 소속 교육청 기준으로 무엇을 먼저 확인해야 하나요?", officeLabel: "강원특별자치도교육청" });
 const serviceResponse = policyEngine.buildPolicyResponse({ question: "기간제교사가 병가 사용 후 복무평가에서 불리해질까 걱정됩니다. 근태 증빙은?" });
 const schoolViolenceFrame = policyEngine.buildPolicySemanticFrame("학교폭력 신고 후 가해학생 친구들이 보복성 메시지를 보내는데 피해학생 보호 조치는?");
@@ -148,6 +152,10 @@ assert(travelOvertimeResponse?.answer?.some((line) => line.includes("자동 인�
 assert(regularAnnualLeaveFrame.slots?.travelerRole?.subjectLabel === "정규교사" && regularAnnualLeaveFrame.slots?.serviceIssue?.code === "annualLeave", "engine: regular teacher annual leave frame did not extract role and issue");
 assert(regularSickLeaveResponse?.answer?.[0]?.includes("연 60일") && regularSickLeaveResponse.answer[0].includes("연 180일") && regularSickLeaveResponse.answer.some((line) => line.includes("진단서") && line.includes("한의사")), "engine: regular teacher sick leave response did not use official limits and medical certificate rule");
 assert(fixedTermSickLeaveResponse?.answer?.[0]?.includes("계약제교원") && fixedTermSickLeaveResponse.answer[0].includes("60일") && fixedTermSickLeaveResponse.answer[0].includes("180일"), "engine: fixed-term sick leave response did not separate contract guideline and public-teacher fallback");
+assert(fixedTermChildbirthFrame.slots?.serviceIssue?.code === "childbirthLeave", "engine: fixed-term childbirth leave should not fall back to generic special leave");
+assert(fixedTermChildbirthResponse?.answer?.[0]?.includes("90일") && fixedTermChildbirthResponse.answer[0].includes("근로계약으로 임의 축소") && fixedTermChildbirthResponse.answer.some((line) => line.includes("120일")), "engine: fixed-term childbirth leave response did not answer statutory day counts first");
+assert(!fixedTermChildbirthResponse?.answer?.join(" ").includes("사유별 일수표"), "engine: childbirth leave response fell back to generic reason-check text");
+assert(fixedTermChildbirthResponse?.sourceExpansion?.acquisitionTargets?.[0]?.tier === "officialRule", "engine: staff attendance source expansion should check common official rules before employment documents");
 assert(budgetResponse?.answer?.some((line) => line.includes("학교회계 예산편성 기본지침")), "engine: budget response did not compose guideline-first answer");
 assert(serviceResponse?.answer?.some((line) => line.includes("복무평가") || line.includes("불이익")), "engine: service response did not compose dispute-aware answer");
 assert(schoolViolenceFrame.domainCode === "schoolViolenceProcedure" && schoolViolenceFrame.slots?.riskSignal?.label?.includes("학교폭력"), "engine: school violence frame did not classify violence risk");

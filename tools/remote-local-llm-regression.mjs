@@ -307,6 +307,113 @@ try {
   await new Promise((resolve) => staleAssessmentServer.close(resolve));
 }
 
+const childbirthBaseResult = {
+  ok: true,
+  question: "기간제교사의 출산휴가 규정은?",
+  confidence: 0.56,
+  semanticFrame: {
+    domainCode: "staffAttendanceService",
+    domainLabel: "교직원 복무·근태",
+    confidence: 0.56,
+    slots: {
+      travelerRole: { subjectLabel: "기간제교사" },
+      serviceIssue: { code: "childbirthLeave", label: "출산휴가" },
+      employmentType: { code: "fixedTerm", label: "기간제교사" }
+    }
+  },
+  answerState: {
+    status: "conditional",
+    primaryText: "기간제교사의 본인 출산휴가는 근로계약으로 임의 축소할 수 있는 사항이 아니며, 근로기준법 제74조의 출산전후휴가 기준인 90일을 기본 법정 기준으로 봅니다."
+  },
+  policyResponse: {
+    title: "기간제교사 출산휴가",
+    lead: "교직원 복무·근태 질문에서 기간제교사의 출산휴가는 사유가 이미 확인된 사안으로 보고, 공통 출산전후휴가 기준과 기간제교사 적용 절차를 먼저 답합니다.",
+    answer: [
+      "기간제교사의 본인 출산휴가는 근로계약으로 임의 축소할 수 있는 사항이 아니며, 근로기준법 제74조의 출산전후휴가 기준인 90일을 기본 법정 기준으로 봅니다. 한 번에 둘 이상 자녀를 임신한 경우에는 120일 기준입니다.",
+      "출산 후 휴가 기간은 최소 45일 이상, 다태아는 최소 60일 이상 확보되도록 배치합니다.",
+      "공립학교 기간제교사는 계약제교원 운영 지침과 교원휴가 예규 준용 여부를 대조하되, 그 문서는 법정 기준을 낮추는 근거가 아니라 신청 절차, 보수·대체교원 처리, 증빙 방식을 정리하는 집행 기준입니다."
+    ],
+    steps: [
+      "본인 출산휴가 사유로 분류하고 출산예정일·출산일 기준 기간 확정",
+      "공통 출산전후휴가 기준을 먼저 적용한 뒤 기간제·사립·교육공무직 등 신분별 지침을 대조"
+    ],
+    caution: "복무·근태는 공통 법령·예규를 먼저 적용하고 교육청 운영 지침과 계약·취업규칙 등 하위 집행문서는 세부 집행 기준으로 순차 대조합니다.",
+    sourceKeys: ["teacherLeave", "nationalService", "laborStandard", "fixedTermTeacherGuideline"]
+  },
+  sourceExpansion: {
+    required: true,
+    status: "queued",
+    trigger: "source_or_slot_gap_detected",
+    acquisitionTargets: [
+      { tier: "officialRule", label: "공통 법령·예규 원문", query: "출산휴가 국가공무원 복무규정 교원휴가 예규 근로기준법" },
+      { tier: "educationOfficeGuideline", label: "경상북도교육청 지침 원문", query: "경상북도교육청 기간제교사 출산휴가 계약제교원 운영 지침" },
+      { tier: "employmentExecutionRule", label: "임용계약서·취업규칙·복무규정", query: "기간제교사 출산휴가 임용계약서 복무규정" }
+    ]
+  },
+  missingSlots: []
+};
+
+const staleChildbirthRemoteResult = {
+  ...childbirthBaseResult,
+  answerState: {
+    status: "conditional",
+    primaryText: "기간제교사의 출산휴가는 사유별 일수표를 먼저 확인해야 합니다."
+  },
+  policyResponse: {
+    ...childbirthBaseResult.policyResponse,
+    lead: "나이스 근무상황 신청 종별, 증빙자료, 학교장 승인 절차를 함께 확인합니다.",
+    answer: [
+      "기간제교사의 출산휴가 규정은 사유별 일수표에 따라 다르며, 본인 또는 배우자의 출산 등 구체 사유에 따라 적용됩니다.",
+      "출산휴가의 일수와 신청 절차는 교육청의 계약제교원 운영 지침과 근로계약에 따라 달라질 수 있습니다.",
+      "공립 교원 기준을 준용하는지 확인하고, 소속 교육청의 복무 지침을 우선적으로 확인해야 합니다."
+    ],
+    steps: ["나이스 근무상황 신청 종별, 증빙자료, 학교장 승인 절차를 함께 확인"],
+    caution: "소속 교육청 지침과 근로계약을 직접 확인해야 합니다."
+  },
+  responseText: "나이스 근무상황 신청 종별, 증빙자료, 학교장 승인 절차를 함께 확인합니다.\n출산휴가의 일수와 신청 절차는 교육청의 계약제교원 운영 지침과 근로계약에 따라 달라질 수 있습니다.\n공립 교원 기준을 준용하는지 확인하고, 소속 교육청의 복무 지침을 우선적으로 확인해야 합니다.",
+  localLlmComposer: {
+    ok: true,
+    provider: "ollama",
+    model: "qwen3:4b-instruct"
+  }
+};
+
+const staleChildbirthServer = createServer(async (request, response) => {
+  assert.equal(request.headers.authorization, `Bearer ${token}`);
+  assert.equal(request.url, "/api/policy/llm");
+  response.writeHead(200, { "content-type": "application/json" });
+  response.end(JSON.stringify({
+    ok: true,
+    result: staleChildbirthRemoteResult,
+    bridge: { elapsedMs: 66, localLlmUsed: true }
+  }));
+});
+
+await new Promise((resolve) => staleChildbirthServer.listen(0, "127.0.0.1", resolve));
+const staleChildbirthAddress = staleChildbirthServer.address();
+try {
+  const guarded = await maybeApplyRemoteLocalPolicyLlm({ question: childbirthBaseResult.question }, childbirthBaseResult, {
+    REMOTE_LOCAL_LLM_ENABLED: "true",
+    REMOTE_LOCAL_LLM_BASE_URL: `http://127.0.0.1:${staleChildbirthAddress.port}`,
+    REMOTE_LOCAL_LLM_TOKEN: token,
+    REMOTE_LOCAL_LLM_TIMEOUT_MS: "5000"
+  });
+  const guardedText = [
+    guarded.responseText,
+    guarded.policyResponse.lead,
+    ...guarded.policyResponse.answer,
+    ...guarded.policyResponse.steps,
+    guarded.policyResponse.caution
+  ].join(" ");
+  assert.match(guardedText, /90일/);
+  assert.match(guardedText, /120일/);
+  assert.match(guardedText, /근로기준법 제74조|법정 기준|임의 축소/);
+  assert.doesNotMatch(guardedText, /사유별 일수표|달라질 수 있습니다|우선적으로 확인해야|직접 확인해야|나이스 근무상황 신청 종별/);
+  assert.equal(guarded.remoteLocalLlm.ok, true);
+} finally {
+  await new Promise((resolve) => staleChildbirthServer.close(resolve));
+}
+
 const overtimeBaseResult = {
   ok: true,
   question: "교사가 경주에서 대전으로 1박2일 학생 인솔 출장시 시간외근무 신청을 할 수 있나요?",

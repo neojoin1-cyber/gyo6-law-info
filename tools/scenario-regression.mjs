@@ -772,8 +772,8 @@ if (!policyEngine?.analyzePolicyQuestion || !policyEngine?.lookupPolicyRules || 
   if (maleTeacherChildbirthSemanticFrame?.domainCode !== "staffAttendanceService" || maleTeacherChildbirthSemanticFrame?.slots?.serviceIssue?.code !== "spouseChildbirthLeave") {
     failures.push("policy-engine-pipeline: expected male teacher childbirth leave wording to classify as spouse childbirth leave");
   }
-  if (genericChildbirthLeaveSemanticFrame?.domainCode !== "staffAttendanceService" || genericChildbirthLeaveSemanticFrame?.slots?.serviceIssue?.code !== "specialLeave") {
-    failures.push("policy-engine-pipeline: expected generic childbirth leave wording to stay in staff attendance special-leave flow");
+  if (genericChildbirthLeaveSemanticFrame?.domainCode !== "staffAttendanceService" || genericChildbirthLeaveSemanticFrame?.slots?.serviceIssue?.code !== "childbirthLeave") {
+    failures.push("policy-engine-pipeline: expected generic childbirth leave wording to classify as childbirth leave, not generic special leave");
   }
   if (schoolViolenceSemanticFrame?.domainCode !== "schoolViolenceProcedure" || !schoolViolenceSemanticFrame?.slots?.riskSignal?.label?.includes("학교폭력")) {
     failures.push("policy-engine-pipeline: expected school violence questions to classify violence procedure and risk signal");

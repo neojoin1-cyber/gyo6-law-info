@@ -21,14 +21,14 @@
         tier: "nationalLaw",
         title: "교원휴가에 관한 예규",
         provider: "교육부·국가법령정보센터",
-        query: "교원휴가에 관한 예규 연가 병가 공가 특별휴가",
+        query: "교원휴가에 관한 예규 연가 병가 공가 특별휴가 출산휴가 배우자 출산휴가",
         domains: ["bereavementLeave", "staffAttendanceService"]
       },
       nationalService: {
         tier: "nationalLaw",
         title: "국가공무원 복무규정",
         provider: "국가법령정보센터",
-        query: "국가공무원 복무규정 복무 휴가 경조사",
+        query: "국가공무원 복무규정 복무 휴가 경조사 출산휴가 배우자 출산휴가",
         domains: ["bereavementLeave", "staffAttendanceService"]
       },
       localService: {
@@ -42,7 +42,7 @@
         tier: "nationalLaw",
         title: "근로기준법",
         provider: "국가법령정보센터",
-        query: "근로기준법 제60조 연차유급휴가 취업규칙",
+        query: "근로기준법 제60조 연차유급휴가 제74조 출산전후휴가 취업규칙",
         domains: ["staffAttendanceService", "staffContract"]
       },
       fixedTermAct: {
@@ -63,7 +63,7 @@
         tier: "educationOfficeGuideline",
         title: "소속 교육청 계약제교원 운영 지침",
         provider: "17개 시도교육청",
-        query: "계약제교원 운영 지침 기간제교사 연가 병가 복무",
+        query: "계약제교원 운영 지침 기간제교사 연가 병가 출산휴가 복무",
         domains: ["staffAttendanceService", "staffContract", "bereavementLeave"]
       },
       privateSchoolWorkRules: {

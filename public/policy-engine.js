@@ -932,16 +932,20 @@
     const collectionTargets = uniqueStrings(dataCoverage.collectionTargets || []);
     const domainLabel = domain.label || domainCode || "학교정책";
     const taskLabel = getTaskLabel(domainCode, task?.code || "");
+    const issueLabel = slots.serviceIssue?.label || taskLabel;
     const officeLabel = slots.office?.label || "경상북도교육청";
     const ruleLabel = slots.schoolRule?.label || "학교생활규정·학칙·위원회 규정";
     const hasGap = Boolean((dataCoverage.gapCandidates || []).length);
     const isSchoolDomain = isOntologySchoolDomain(domainCode);
+    const isRoleBasedStaffDomain = ["staffAttendanceService", "bereavementLeave"].includes(domainCode);
     const needsSchoolRule = isSchoolDomain || missing.includes("schoolRule") || domain.sourcePriorityDefault === "schoolRuleFirst";
-    const needsOfficeGuideline = isSchoolDomain || missing.includes("office") || domain.sourcePriorityDefault === "office";
+    const needsOfficeGuideline = isSchoolDomain || isRoleBasedStaffDomain || missing.includes("office") || domain.sourcePriorityDefault === "office";
+    const needsOfficialRule = !isSchoolDomain && Boolean(domain.sourcePriorityDefault === "roleFirst" || domain.sourcePriorityDefault === "national" || sourceTargets.length);
     const needsExpansion = Boolean(
       hasGap
       || dataCoverage.coverageLevel === "basic"
       || missing.some((slotName) => ["office", "schoolRule", "evidence", "riskSignal"].includes(slotName))
+      || (isRoleBasedStaffDomain && dataCoverage.coverageLevel !== "structured")
       || (isSchoolDomain && sourceTargets.length < 3)
     );
 
@@ -952,11 +956,23 @@
         query: `${domainLabel} ${taskLabel} 법령 고시 교육부 지침`,
         reason: "학교·교육청 세부 기준보다 먼저 적용되는 상위 공식 기준 확인"
       } : null,
+      needsOfficialRule ? {
+        tier: "officialRule",
+        label: "공통 법령·예규 원문",
+        query: `${domainLabel} ${issueLabel} 국가공무원 복무규정 교원휴가 예규 근로기준법`,
+        reason: "교육청 지침·계약·내부 기준보다 먼저 적용되는 공통 공식 기준 확인"
+      } : null,
       needsOfficeGuideline ? {
         tier: "educationOfficeGuideline",
         label: `${officeLabel} 지침 원문`,
-        query: `${officeLabel} ${domainLabel} ${taskLabel} 지침 원문`,
-        reason: "상위 기준을 소속 교육청 지침으로 구체화했는지 확인"
+        query: `${officeLabel} ${domainLabel} ${issueLabel} 지침 원문`,
+        reason: isRoleBasedStaffDomain ? "공통 법령·예규를 소속 교육청 운영 지침으로 어떻게 구체화했는지 확인" : "상위 기준을 소속 교육청 지침으로 구체화했는지 확인"
+      } : null,
+      isRoleBasedStaffDomain ? {
+        tier: "employmentExecutionRule",
+        label: "임용계약서·취업규칙·복무규정",
+        query: `${domainLabel} ${issueLabel} 임용계약서 취업규칙 복무규정`,
+        reason: "법령·예규·교육청 지침으로도 남는 기관별 집행 기준 최종 대조"
       } : null,
       needsSchoolRule ? {
         tier: "schoolRule",
@@ -982,7 +998,9 @@
       riskReview: buildRiskReviewPlan(domainCode, slots, task),
       recheckSteps: needsExpansion ? [
         "질문을 학교 현장 쟁점과 사용자 사실관계 슬롯으로 다시 분해",
-        "상위 법령·고시·교육부 지침을 먼저 확보하고 교육청 지침과 학교생활규정·학칙·위원회 규정을 순서대로 대조",
+        isRoleBasedStaffDomain
+          ? "공통 법령·예규를 먼저 확보하고 교육청 운영 지침과 계약·취업규칙 등 하위 집행문서를 순서대로 대조"
+          : "상위 법령·고시·교육부 지침을 먼저 확보하고 교육청 지침과 학교생활규정·학칙·위원회 규정을 순서대로 대조",
         "시행일, 적용 대상, 학교급, 소속 교육청, 내부 결재·통지 이력을 대조",
         "안전·인권·개인정보·불복 쟁점을 분리해 긴급 조치와 일반 안내를 나눔",
         "확보한 원문과 증빙 기준으로 같은 질문의 결론을 재작성"
@@ -1419,6 +1437,9 @@
     if (issueCode === "spouseChildbirthLeave") {
       return `${domainLabel} 질문에서 ${subjectLabel}의 배우자 출산휴가는 특별휴가 사안으로 보고, ${employmentLabel} 기준의 일수와 나이스 근무상황 신청 절차를 함께 확인합니다.`;
     }
+    if (issueCode === "childbirthLeave") {
+      return `${domainLabel} 질문에서 ${subjectLabel}의 출산휴가는 사유가 이미 확인된 사안으로 보고, 공통 출산전후휴가 기준과 ${employmentLabel} 적용 절차를 먼저 답합니다.`;
+    }
     if (issueCode === "specialLeave") {
       return `${domainLabel} 질문에서 ${subjectLabel}의 특별휴가는 사유별 일수표와 ${employmentLabel} 기준의 신청·증빙 절차를 함께 확인합니다.`;
     }
@@ -1451,6 +1472,13 @@
     const isFixedTerm = employmentCode === "fixedTerm";
     const isPublicTeacher = employmentCode === "publicTeacher" || employmentCode === "unknown";
     const hasSeparateStaffRule = !isFixedTerm && !isPublicTeacher;
+
+    if (issueCode === "childbirthLeave") {
+      if (hasSeparateStaffRule) return buildOtherStaffChildbirthLeaveAnswers(subjectLabel, slots, frame, missingText);
+      return isFixedTerm
+        ? buildFixedTermChildbirthLeaveAnswers(subjectLabel, slots, frame, missingText)
+        : buildPublicTeacherChildbirthLeaveAnswers(subjectLabel, slots, frame, missingText);
+    }
 
     if (issueCode === "spouseChildbirthLeave") {
       if (hasSeparateStaffRule) return buildOtherStaffAttendanceAnswers(subjectLabel, slots, frame, missingText);
@@ -1519,6 +1547,9 @@
     const issueCode = getStaffIssueCode(slots);
     const employmentCode = getStaffEmploymentCode(slots);
     const employmentLabel = getStaffEmploymentLabel(slots, subjectLabel);
+    if (issueCode === "childbirthLeave") {
+      return buildOtherStaffChildbirthLeaveAnswers(subjectLabel, slots, frame, missingText);
+    }
     if (issueCode === "sickLeave" && employmentCode === "privateSchool") {
       return buildPrivateSchoolSickLeaveAnswers(subjectLabel, slots, frame, missingText);
     }
@@ -1529,6 +1560,50 @@
       "나이스 근무상황, 내부 결재, 근로계약서, 취업규칙·단체협약, 증빙자료를 대조해 일수·유급 여부·승인권자를 확정합니다.",
       frame.task?.code === "disputeRisk" ? "불이익·평가·재계약 문제가 있으면 동일 사례 처리와 서면 기준을 별도로 확인합니다." : "",
       missingText ? `현재 질문에는 ${missingText}가 없어 최종 일수나 유급 여부는 해당 기관 규정 확인 항목으로 남깁니다.` : ""
+    ]);
+  }
+
+  function buildPublicTeacherChildbirthLeaveAnswers(subjectLabel, slots, frame, missingText) {
+    const rule = STAFF_ATTENDANCE.publicTeacher?.childbirthLeave || {};
+    const normalDays = rule.normalDays || 90;
+    const multipleDays = rule.multipleBirthDays || 120;
+    const postpartumDays = rule.postpartumMinDays || 45;
+    const multiplePostpartumDays = rule.multipleBirthPostpartumMinDays || 60;
+    return uniqueStrings([
+      `${subjectLabel}의 본인 출산휴가는 공립 교원·국가공무원 기준으로 출산 전후 ${normalDays}일입니다. 한 번에 둘 이상 자녀를 임신한 경우에는 ${multipleDays}일 기준입니다.`,
+      `출산 후 휴가 기간은 최소 ${postpartumDays}일 이상, 다태아는 최소 ${multiplePostpartumDays}일 이상 확보되도록 배치합니다.`,
+      "질문에 이미 출산휴가 사유가 드러나 있으므로 사유를 다시 묻지 않고, 출산예정일·실제 출산일·분할 사용 여부·나이스 신청 일자를 대조합니다.",
+      rule.approval || "나이스 근무상황에서 출산휴가 또는 특별휴가로 신청하고, 출산예정일·출산일 확인 자료와 학교장 승인 절차를 맞춥니다.",
+      missingText ? `현재 질문에는 ${missingText}가 없어도 출산휴가의 기본 일수와 신청 축은 먼저 답변합니다.` : ""
+    ]);
+  }
+
+  function buildFixedTermChildbirthLeaveAnswers(subjectLabel, slots, frame, missingText) {
+    const publicRule = STAFF_ATTENDANCE.publicTeacher?.childbirthLeave || {};
+    const fixedRule = STAFF_ATTENDANCE.fixedTermTeacher?.childbirthLeave || {};
+    const normalDays = publicRule.normalDays || 90;
+    const multipleDays = publicRule.multipleBirthDays || 120;
+    const postpartumDays = publicRule.postpartumMinDays || 45;
+    const multiplePostpartumDays = publicRule.multipleBirthPostpartumMinDays || 60;
+    return uniqueStrings([
+      `${subjectLabel}의 본인 출산휴가는 근로계약으로 임의 축소할 수 있는 사항이 아니며, 근로기준법 제74조의 출산전후휴가 기준인 ${normalDays}일을 기본 법정 기준으로 봅니다. 한 번에 둘 이상 자녀를 임신한 경우에는 ${multipleDays}일 기준입니다.`,
+      `출산 후 휴가 기간은 최소 ${postpartumDays}일 이상, 다태아는 최소 ${multiplePostpartumDays}일 이상 확보되도록 배치합니다.`,
+      "공립학교 기간제교사는 계약제교원 운영 지침과 교원휴가 예규 준용 여부를 대조하되, 그 문서는 법정 기준을 낮추는 근거가 아니라 신청 절차, 보수·대체교원 처리, 증빙 방식을 정리하는 집행 기준입니다.",
+      fixedRule.approval || "나이스 근무상황 또는 학교 복무 신청에서 출산휴가로 상신하고, 출산예정일·출산일 확인 자료와 학교장 승인 이력을 맞춥니다.",
+      missingText ? `현재 질문에는 ${missingText}가 없어도 출산휴가 사유는 확정되어 있으므로 기본 법정 기준과 자동 재검증 경로를 먼저 답합니다.` : ""
+    ]);
+  }
+
+  function buildOtherStaffChildbirthLeaveAnswers(subjectLabel, slots, frame, missingText) {
+    const publicRule = STAFF_ATTENDANCE.publicTeacher?.childbirthLeave || {};
+    const employmentLabel = getStaffEmploymentLabel(slots, subjectLabel);
+    const normalDays = publicRule.normalDays || 90;
+    const multipleDays = publicRule.multipleBirthDays || 120;
+    return uniqueStrings([
+      `${subjectLabel}의 본인 출산휴가는 ${employmentLabel}이라도 근로기준법 제74조의 출산전후휴가 법정 기준을 먼저 봅니다. 기본은 ${normalDays}일, 다태아는 ${multipleDays}일입니다.`,
+      "취업규칙·단체협약·학교법인 복무규정·근로계약은 법정 기준을 낮추는 근거가 아니라, 유급 처리, 신청 서식, 승인권자, 대체인력 처리 등 세부 집행 기준으로 최종 대조합니다.",
+      "출산예정일·출산일 확인 자료, 신청 기간, 나이스 또는 내부 복무 신청 이력, 학교장 또는 사용자 승인 절차를 맞춥니다.",
+      missingText ? `현재 질문에는 ${missingText}가 없어도 출산휴가 사유와 기본 법정 기준은 먼저 답변합니다.` : ""
     ]);
   }
 
@@ -1760,6 +1835,22 @@
 
   function buildStaffAttendanceSteps(subjectLabel, slots, frame) {
     const issueCode = getStaffIssueCode(slots);
+    if (issueCode === "childbirthLeave") {
+      return uniqueStrings([
+        "본인 출산휴가 사유로 분류하고 출산예정일·출산일 기준 기간 확정",
+        "공통 출산전후휴가 기준을 먼저 적용한 뒤 기간제·사립·교육공무직 등 신분별 지침을 대조",
+        "나이스 근무상황 또는 내부 복무 신청에서 출산휴가 종별로 상신",
+        "출산예정일·출산일 확인 자료, 승인 이력, 대체교원·보수 처리 자료 보존"
+      ]);
+    }
+    if (issueCode === "spouseChildbirthLeave") {
+      return uniqueStrings([
+        "배우자 출산휴가 사유로 분류하고 출산일 기준 사용 가능 기간 확인",
+        "공립 교원·국가공무원 기준 20일 특별휴가를 먼저 적용",
+        "나이스 근무상황에서 배우자 출산휴가 또는 특별휴가로 신청",
+        "출산 사실 확인 자료와 학교장 승인 이력 보존"
+      ]);
+    }
     if (issueCode === "annualLeave") {
       return uniqueStrings([
         `${subjectLabel}의 재직기간 또는 계약기간과 올해 사용한 연가·연차 확인`,
@@ -1915,18 +2006,18 @@
     const employmentCode = getStaffEmploymentCode(slots);
     const issueCode = getStaffIssueCode(slots);
     if (employmentCode === "fixedTerm") {
-      return `${missingPrefix}기간제교사는 소속 교육청 계약제교원 운영 지침과 근로계약이 실제 일수·유급 여부를 좌우할 수 있습니다. 공립 교원 기준 준용 여부를 자동 자료확충·재검증 대상으로 남깁니다.`;
+      return `${missingPrefix}기간제교사는 공통 법령·예규와 근로기준법상 최저 기준을 먼저 적용하고, 계약제교원 운영 지침·임용계약서는 보수·절차·증빙 등 하위 집행 기준으로 자동 자료확충·재검증합니다.`;
     }
     if (employmentCode === "privateSchool" && (issueCode === "annualLeave" || issueCode === "sickLeave" || issueCode === "tardyEarlyLeave")) {
       return `${missingPrefix}사립학교 교직원은 학교법인 복무규정·취업규칙·근로계약이 직접 기준입니다. 교원휴가 기준 준용 여부와 별도 조항은 자동 자료확충·재검증 대상으로 둡니다.`;
     }
     if (employmentCode === "publicTeacher" && (issueCode === "annualLeave" || issueCode === "sickLeave" || issueCode === "tardyEarlyLeave")) {
-      return `${missingPrefix}공립 정규교원 기준으로 우선 답변했습니다. 사립학교, 교육공무직, 지방공무원, 기간제교사는 취업규칙·단체협약·근로계약·소속 교육청 지침이 달라질 수 있습니다.`;
+      return `${missingPrefix}공립 정규교원 기준으로 우선 답변했습니다. 사립학교, 교육공무직, 지방공무원, 기간제교사는 해당 신분별 상위 법령과 지침을 먼저 대조하고, 취업규칙·단체협약·근로계약은 세부 집행 기준으로 자동 재검증합니다.`;
     }
     if (issueCode === "overtime") {
       return `${missingPrefix}시간외근무는 출장여비와 별개로 근무명령, 사전승인, 실제 근무시간 증빙, 소속 교육청 초과근무 지침이 있어야 판단할 수 있습니다. 단순 이동·숙박·대기 시간만으로는 인정 여부를 단정하지 않습니다.`;
     }
-    return `${missingPrefix}복무·근태는 신분과 고용 형태에 따라 적용 규정이 달라집니다. 공립 교원, 지방공무원, 교육공무직, 기간제, 사립학교 여부를 확정해야 최종 답을 낼 수 있습니다.`;
+    return `${missingPrefix}복무·근태는 공통 법령·예규를 먼저 적용하고, 신분별 교육청 지침과 임용계약서·취업규칙은 세부 집행 기준으로 순차 대조합니다. 부족한 원문은 자동 자료확충·재검증 대상으로 처리합니다.`;
   }
 
   function getStaffIssueCode(slots = {}) {
@@ -2739,6 +2830,9 @@
   function inferServiceIssue(normalized = "") {
     if (isSpouseChildbirthLeaveContext(normalized)) {
       return { code: "spouseChildbirthLeave", label: "배우자 출산휴가", detected: true };
+    }
+    if (isChildbirthLeaveContext(normalized)) {
+      return { code: "childbirthLeave", label: "출산휴가", detected: true };
     }
     const issues = [
       { code: "sickLeave", label: "병가", patterns: [/병가|질병|진단서|요양|입원|통원/] },
