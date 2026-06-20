@@ -111,11 +111,11 @@
       specializedDataIndex: {
         studentRecordsAttendance: {
           audiences: ["student", "parent", "teacher", "manager"],
-          subtopics: ["출결", "인정결석", "질병결석", "미인정결석", "지각·조퇴·결과", "등교중지", "학생부 기재"],
-          questionPatterns: ["출석인정이 되나요", "인정결석 증빙은 무엇인가요", "결석계를 어떻게 처리하나요", "등교중지는 출결이 어떻게 되나요"],
-          evidence: ["결석계", "진단서", "보호자 확인서", "학교장 승인", "나이스 출결 이력"],
+          subtopics: ["출결", "출석인정결석", "경조사로 인한 출석인정결석", "인정결석", "질병결석", "미인정결석", "지각·조퇴·결과", "등교중지", "학생부 기재"],
+          questionPatterns: ["출석인정이 되나요", "인정결석 증빙은 무엇인가요", "결석계를 어떻게 처리하나요", "등교중지는 출결이 어떻게 되나요", "학생 부모 사망은 출석인정결석인가요", "부모상 결석은 며칠 인정되나요"],
+          evidence: ["결석계", "진단서", "보호자 확인서", "사망 사실 확인 자료", "가족관계 확인 자료", "학교장 승인", "나이스 출결 이력"],
           sourceTargets: ["schoolRecordGuide", "schoolRecordRule", "schoolHealthAct", "educationOfficeGuideline", "schoolRule"],
-          dataGrowthTargets: ["시도교육청 출결 Q&A", "감염병 등교중지 출결 안내", "학교별 결석계 양식"],
+          dataGrowthTargets: ["시도교육청 출결 Q&A", "감염병 등교중지 출결 안내", "경조사 출석인정결석 일수표", "학교별 결석계 양식"],
           clarificationSlots: ["schoolLevel", "dateRange", "evidence", "procedureStage"]
         },
         fieldExperienceLearning: {
@@ -526,7 +526,7 @@
         label: "학생부·출결·정정",
         ontologyGroup: "studentRecords",
         sourcePriorityDefault: "ministry",
-        intentKeywords: ["생활기록부", "학교생활기록", "생기부", "학생부", "출결", "인정결석", "결석", "지각", "조퇴", "결과", "정정", "기재요령", "누가기록"],
+        intentKeywords: ["생활기록부", "학교생활기록", "생기부", "학생부", "출결", "출석인정결석", "인정결석", "경조사결석", "상고결석", "학생부모사망", "학생부모상", "결석", "지각", "조퇴", "결과", "정정", "기재요령", "누가기록"],
         requiredSlots: ["targetSubject", "schoolLevel", "procedureStage", "evidence", "fiscalYear"],
         sourceKeys: ["schoolRecordGuide", "schoolRecordRule", "publicRecords", "infoDisclosure"],
         answerStrategy: "당해 학년도 기재요령, 학교생활기록 작성·관리지침, 출결 증빙, 정정 권한과 결재 이력을 함께 확인합니다."

@@ -608,7 +608,7 @@ const policyGuideCategories = {
   },
   studentRecords: {
     label: "학생생활기록·출결",
-    aliases: ["생활기록부", "학교생활기록", "생기부", "학생부", "출결", "인정결석", "정정", "증빙", "기재요령", "누가기록"],
+    aliases: ["생활기록부", "학교생활기록", "생기부", "학생부", "출결", "출석인정결석", "인정결석", "경조사 결석", "상고결석", "정정", "증빙", "기재요령", "누가기록"],
     summary: "학생부·출결은 당해 학년도 기재요령과 학교생활기록 작성 및 관리지침을 먼저 보며, 학교급과 처리일자가 중요합니다.",
     firstSteps: [
       "학교급, 학년도, 항목, 처리일자를 먼저 확정",
@@ -620,7 +620,7 @@ const policyGuideCategories = {
   },
   studentAttendance: {
     label: "출결·인정결석",
-    aliases: ["출결", "인정결석", "질병결석", "미인정결석", "결석계", "출석인정", "지각", "조퇴", "결과", "등교중지"],
+    aliases: ["출결", "출석인정결석", "인정결석", "질병결석", "미인정결석", "결석계", "출석인정", "경조사 결석", "부모상 결석", "상고결석", "지각", "조퇴", "결과", "등교중지"],
     summary: "출결은 학교급, 사유, 기간, 증빙자료, 당해 학년도 학생부 기재요령을 먼저 확인해야 합니다.",
     firstSteps: [
       "결석·지각·조퇴·결과 중 어떤 출결인지 구분",
@@ -4394,12 +4394,16 @@ function filterPolicySearchQueriesForContext(queries = [], context = {}) {
 function getDirectPolicyRule(analysis, category, role, office) {
   const normalized = typeof analysis === "string" ? analysis : analysis?.normalized || "";
 
+  if (isStudentAttendanceBereavementGuideContext(normalized, role)) {
+    return buildStudentBereavementAttendanceRule(normalized, office);
+  }
+
   if (category === policyGuideCategories.leaveAttendance) {
     const childbirthRule = buildSpouseChildbirthLeaveRule(normalized, role, office);
     if (childbirthRule) return childbirthRule;
   }
 
-  if (category === policyGuideCategories.leaveAttendance && hasBereavementIntentSignal(normalized)) {
+  if (category === policyGuideCategories.leaveAttendance && hasBereavementIntentSignal(normalized) && !isStudentAttendanceBereavementGuideContext(normalized, role)) {
     const bereavementRule = buildBereavementLeaveRule(normalized);
     if (bereavementRule) return bereavementRule;
   }
@@ -4450,6 +4454,54 @@ function getDirectPolicyRule(analysis, category, role, office) {
   }
 
   return null;
+}
+
+function isStudentAttendanceBereavementGuideContext(normalized, role = {}) {
+  const hasStudentSubject = role?.code === "student" || /학생|재학생|고등학생|중학생|초등학생|특성화고생/.test(normalized);
+  const hasDeath = hasBereavementIntentSignal(normalized) || /가족상|상고|상례/.test(normalized);
+  const hasAttendanceTask = /휴가|결석|출결|출석인정|인정결석|결석계|학교생활기록|생활기록부|생기부|학생부|등교|수업|학교/.test(normalized);
+  if (!hasStudentSubject || !hasDeath || !hasAttendanceTask) return false;
+
+  const hasExplicitStudentFamilyDeath = /학생.{0,12}(?:부모|부모님|부친|모친|아버지|어머니|보호자|조부모|형제|자매).{0,12}(?:사망|별세|장례|부고|돌아가|부모상|가족상)|학생.{0,12}부모상/.test(normalized);
+  const hasStaffBereavementSubject = /(?:교사|교원|선생님|선생|교직원|직원|교장|교감|학교장|공무원|행정직|주무관|교육공무직|공무직|기간제|계약제|정규직).{0,14}(?:부모상|부모|부친|모친|배우자|장인|장모|시부|시모|조부모|형제|자매).{0,14}(?:사망|별세|장례|부고|휴가|경조사)|(?:교사|교원|선생님|교직원|직원|공무원).{0,12}경조사휴가/.test(normalized);
+  return hasExplicitStudentFamilyDeath || !hasStaffBereavementSubject;
+}
+
+function buildStudentBereavementAttendanceRule(normalized, office = {}) {
+  const relation = inferBereavementRelation(normalized);
+  const relationLabel = (relation?.label || "부모 등 가족").replace(/^본인\s*/, "");
+  const dayText = Number.isFinite(relation?.leaveDays) && relation.leaveDays > 0
+    ? `${relation.leaveDays}일`
+    : "학교생활기록부 기재요령의 경조사별 출석인정 일수";
+  const officeLabel = office?.code && office.code !== "auto" ? office.label : "소속 교육청";
+
+  return {
+    domain: "studentRecordsAttendance",
+    categoryCode: "studentRecords",
+    title: "경조사 출석인정결석 확인 기준",
+    lead: "학생 가족 사망은 교직원 복무상 특별휴가 기준이 아니라 학교생활기록부 기재요령의 경조사로 인한 출석인정결석 기준으로 처리합니다.",
+    answer: [
+      `학생의 ${relationLabel} 사망은 경조사로 인한 출석인정결석 사안이며, ${dayText} 기준으로 확인합니다.`,
+      "실제 출결 처리는 수업일·등교일 기준으로 결석일수를 산정하고, 토요일·공휴일·재량휴업일처럼 출석 의무가 없는 날은 결석일수에 넣지 않습니다.",
+      "결석계, 사망 사실 확인 자료, 가족관계 확인 자료, 보호자 연락·담임 확인, 나이스 출결 처리 이력을 함께 정리합니다.",
+      "학교생활기록부 기재요령과 학교생활기록 작성 및 관리지침을 먼저 적용하고, 학교별 결석계 양식은 제출 방식의 세부 기준으로 대조합니다."
+    ],
+    steps: [
+      "당해 학년도 학교생활기록부 기재요령의 경조사로 인한 출석인정결석 기준 확인",
+      "학생과 사망 가족의 관계를 경조사별 일수표에 맞춰 확정",
+      "실제 수업일·등교일 기준으로 결석일수 산정",
+      "결석계와 사망·가족관계 증빙, 보호자 연락, 나이스 출결 처리 이력 정리",
+      `${officeLabel} 출결 Q&A나 학교 양식은 증빙 제출 방식의 세부 기준으로만 대조`
+    ],
+    sourceKeys: ["schoolRecordGuide", "schoolRecordRule", "publicRecords", "infoDisclosure"],
+    queries: [
+      "2026학년도 학교생활기록부 기재요령 경조사로 인한 출석인정결석 부모 사망 5일",
+      "학교생활기록 작성 및 관리지침 출결상황 경조사 결석",
+      `${officeLabel} 경조사 출석인정결석 결석계 증빙`
+    ],
+    caution: "이 사안은 교직원 복무·특별휴가 신청 기준이 아니라 학생 출결 기준으로 처리합니다.",
+    sourcePriority: "ministry"
+  };
 }
 
 function buildSpouseChildbirthLeaveRule(normalized, role = {}, office = {}) {

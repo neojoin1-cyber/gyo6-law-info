@@ -185,6 +185,20 @@ const domainCases = [
     exclude: ["질문 요지 확인 필요", "기간을 먼저 확인", "가족관계를 먼저 확정"]
   },
   {
+    id: "student-parent-death-attendance",
+    domain: "studentRecordsAttendance",
+    question: "학생의 부모 사망시 휴가는?",
+    include: ["출석인정결석", "학교생활기록부 기재요령", "5일"],
+    exclude: ["공립 교원", "국가공무원", "교원휴가", "나이스 근무상황", "경조사휴가"]
+  },
+  {
+    id: "student-parent-death-attendance-holiday",
+    domain: "studentRecordsAttendance",
+    question: "학생 부모상 출석인정결석 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+    include: ["출석인정결석", "수업일", "공휴일", "결석일수"],
+    exclude: ["공립 교원", "국가공무원", "교원휴가", "나이스 근무상황", "경조사휴가"]
+  },
+  {
     id: "staff-sick-leave",
     domain: "staffAttendanceService",
     question: "정규교사의 병가는 며칠 가능하며 진단서는 언제 필요한가요?",

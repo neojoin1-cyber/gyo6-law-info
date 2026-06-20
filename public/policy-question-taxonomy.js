@@ -164,7 +164,7 @@
     intent("contractCheck", "계약·검수", "학교회계 > 계약·검수", "budgetExecution", "schoolBudgetExecution", ["수의계약", "입찰", "견적", "계약", "검수", "물품", "용역", "공사"], ["office", "fiscalYear", "spendingType", "procedureStage", "evidence"], ["지방계약", "검수조서"], "계약·검수·지출 절차 확인"),
     intent("businessPromotion", "업무추진비·협의회비", "학교회계 > 업무추진비", "budgetExecution", "schoolBudgetExecution", ["업무추진비", "협의회비", "간담회", "접대", "식대", "회의 식비"], ["office", "fiscalYear", "spendingType", "procedureStage", "evidence"], ["참석자", "목적", "영수증"], "업무추진비 집행 가능 범위와 증빙"),
     intent("instructorHonorarium", "강사수당·강사료", "학교회계 > 강사수당", "budgetExecution", "schoolInstructorHonorarium", ["강사수당", "강사료", "강사비", "강의비", "교육강사수당", "외부강사", "전직교장", "전임강사"], ["office", "fiscalYear", "instructorProfile", "lectureDuration", "evidence"], ["강사등급", "초과시간"], "강사 등급과 기본·초과시간 단가 산정"),
-    intent("studentAttendanceAbsence", "출결·인정결석", "학생부·출결 > 출결 처리", "studentRecords", "studentRecordsAttendance", ["출결", "인정결석", "질병결석", "미인정결석", "결석계", "출석인정"], ["schoolLevel", "procedureStage", "evidence", "dateRange"], ["기재요령", "증빙"], "출결 인정 여부와 증빙"),
+    intent("studentAttendanceAbsence", "출결·인정결석", "학생부·출결 > 출결 처리", "studentRecords", "studentRecordsAttendance", ["출결", "인정결석", "출석인정결석", "질병결석", "미인정결석", "결석계", "출석인정", "경조사 결석", "경조사 출석인정", "경조사로 인한 결석", "학생 부모 사망", "부모 사망", "부모상 결석", "상고결석"], ["schoolLevel", "procedureStage", "evidence", "dateRange"], ["기재요령", "증빙", "경조사"], "출결 인정 여부와 증빙"),
     intent("studentRecordCorrection", "생활기록부 정정", "학생부·출결 > 생활기록부 정정", "studentRecords", "studentRecordsAttendance", ["생활기록부 정정", "학생부 정정", "생기부 수정", "기재오류", "삭제 요청"], ["schoolLevel", "procedureStage", "evidence", "riskSignal"], ["기재요령", "정정대장"], "학교생활기록부 정정 절차와 증빙"),
     intent("schoolViolenceIntake", "학교폭력 신고·접수", "학교폭력 > 신고·접수", "studentDiscipline", "schoolViolenceProcedure", ["학교폭력", "학폭", "폭행", "따돌림", "욕설", "사이버폭력", "단체채팅방", "보복"], ["targetSubject", "schoolLevel", "procedureStage", "evidence", "riskSignal"], ["피해학생", "가해학생", "전담기구"], "학교폭력 신고·접수·조사 흐름"),
     intent("victimProtection", "피해학생 보호조치", "학교폭력 > 피해학생 보호", "studentDiscipline", "schoolViolenceProcedure", ["피해학생 보호", "분리조치", "접촉금지", "보복", "긴급보호", "상담지원"], ["targetSubject", "procedureStage", "evidence", "riskSignal"], ["보호조치", "안전"], "피해학생 보호조치와 긴급 대응"),
@@ -302,6 +302,10 @@
     if (code === "spouseChildbirthLeave" && !/출산|배우자출산휴가/.test(normalized)) return true;
     if (code === "childbirthSpecialLeave" && /(?:배우자|남편|아내|남자|남성|아빠|아버지|부친).{0,24}출산|출산.{0,24}(?:배우자|남편|아내|남자|남성|아빠|아버지|부친)/.test(normalized)) return true;
     if (code === "bereavementLeave" && /출산/.test(normalized) && !/사망|상례|장례|부고|별세|부모상|배우자상|자녀상|조부모상|형제상|자매상/.test(normalized)) return true;
+    if (code === "bereavementLeave"
+      && /학생|재학생|고등학생|중학생|초등학생|특성화고생/.test(normalized)
+      && /사망|상례|장례|부고|별세|부모상|가족상/.test(normalized)
+      && /휴가|결석|출결|출석인정|인정결석|결석계|상고결석/.test(normalized)) return true;
     if (code === "attendanceTime") {
       const travelDominant = /출장|관외출장|관내출장|여비|일비|식비|숙박비|운임/.test(normalized);
       const attendanceSpecific = /무단외출|외출신청|외출처리|근무상황외출|지각|조퇴/.test(normalized);

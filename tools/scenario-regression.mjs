@@ -748,6 +748,7 @@ if (!policyEngine?.analyzePolicyQuestion || !policyEngine?.lookupPolicyRules || 
   const ramblingFieldLearningSemanticFrame = policyEngine.buildPolicySemanticFrame("앞부분은 좀 장황한데, 학교 행사 얘기와 학생부 얘기도 섞였습니다. 다시 말하면 학생 가정체험학습 신청 방법과 보고서 처리가 궁금합니다.");
   const dormitorySemanticFrame = policyEngine.buildPolicySemanticFrame("기숙사 배정에서 특정 학과 학생이 불리하다는 민원이 들어왔습니다.");
   const mealSemanticFrame = policyEngine.buildPolicySemanticFrame("학부모가 급식 반찬이 마음에 들지 않는다며 학교장 면담을 요구했습니다. 식중독은 없습니다.");
+  const studentParentDeathSemanticFrame = policyEngine.buildPolicySemanticFrame("학생의 부모 사망시 휴가는?");
   if (pipelineAnalysis.intents?.domesticTravel?.type !== "domesticTravelExpense") {
     failures.push("policy-engine-pipeline: expected analyzer to classify domestic travel expense");
   }
@@ -792,6 +793,9 @@ if (!policyEngine?.analyzePolicyQuestion || !policyEngine?.lookupPolicyRules || 
   }
   if (mealSemanticFrame?.domainCode !== "schoolMealOperation" || mealSemanticFrame?.slots?.riskSignal?.label?.includes("안전·응급")) {
     failures.push("policy-engine-pipeline: expected meal complaint to classify meal domain and respect negated food-poisoning risk");
+  }
+  if (studentParentDeathSemanticFrame?.domainCode !== "studentRecordsAttendance" || studentParentDeathSemanticFrame?.slots?.targetSubject?.roleCode !== "student" || studentParentDeathSemanticFrame?.missingSlots?.length) {
+    failures.push("policy-engine-pipeline: expected student parent death wording to route to student attendance without staff bereavement slots");
   }
 }
 
@@ -838,6 +842,34 @@ if (!parentLeaveHolidayGuideHtml.includes("토요일·공휴일") || !parentLeav
 }
 if (parentLeaveHolidayGuideHtml.includes("기간을 먼저 확인") || parentLeaveHolidayGuideHtml.includes("질문 요지 확인 필요") || parentLeaveHolidayGuideHtml.includes("가족관계를 먼저 확정")) {
   failures.push("policy-guide-parent-leave-holiday: should not defer holiday calculation when relation and leave days are clear");
+}
+
+const studentParentDeathGuide = context.buildPolicyGuideResponse({
+  question: "학생의 부모 사망시 휴가는?",
+  officeCode: "gyeongbuk",
+  roleCode: "auto",
+  categoryCode: "auto"
+});
+const studentParentDeathGuideHtml = context.renderPolicyGuideResponse(studentParentDeathGuide);
+if (!studentParentDeathGuideHtml.includes("출석인정결석") || !studentParentDeathGuideHtml.includes("학교생활기록부 기재요령") || !studentParentDeathGuideHtml.includes("5일")) {
+  failures.push("policy-guide-student-parent-death: expected student attendance bereavement answer with school-record guide and 5-day standard");
+}
+if (studentParentDeathGuideHtml.includes("공립 교원") || studentParentDeathGuideHtml.includes("국가공무원") || studentParentDeathGuideHtml.includes("교원휴가") || studentParentDeathGuideHtml.includes("나이스 근무상황") || studentParentDeathGuideHtml.includes("경조사휴가")) {
+  failures.push("policy-guide-student-parent-death: student attendance answer must not leak staff bereavement leave wording");
+}
+
+const studentParentDeathHolidayGuide = context.buildPolicyGuideResponse({
+  question: "학생 부모상 출석인정결석 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+  officeCode: "gyeongbuk",
+  roleCode: "auto",
+  categoryCode: "auto"
+});
+const studentParentDeathHolidayGuideHtml = context.renderPolicyGuideResponse(studentParentDeathHolidayGuide);
+if (!studentParentDeathHolidayGuideHtml.includes("출석인정결석") || !studentParentDeathHolidayGuideHtml.includes("수업일") || !studentParentDeathHolidayGuideHtml.includes("공휴일") || !studentParentDeathHolidayGuideHtml.includes("결석일수")) {
+  failures.push("policy-guide-student-parent-death-holiday: expected school-day attendance calculation for student bereavement");
+}
+if (studentParentDeathHolidayGuideHtml.includes("공립 교원") || studentParentDeathHolidayGuideHtml.includes("국가공무원") || studentParentDeathHolidayGuideHtml.includes("교원휴가") || studentParentDeathHolidayGuideHtml.includes("나이스 근무상황") || studentParentDeathHolidayGuideHtml.includes("경조사휴가")) {
+  failures.push("policy-guide-student-parent-death-holiday: holiday attendance answer must not leak staff bereavement leave wording");
 }
 
 const spouseUncleLeaveGuide = context.buildPolicyGuideResponse({

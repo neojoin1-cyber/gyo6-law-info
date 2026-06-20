@@ -25,6 +25,19 @@ assert.equal(functionPolicyParentLeaveHoliday.needsClarification, false);
 assert.match(functionPolicyParentLeaveHoliday.responseText, /토요일·공휴일.*산입하지|토요일.*공휴일.*제외/);
 assert.doesNotMatch(functionPolicyParentLeaveHoliday.responseText, /질문 요지 확인 필요|기간을 먼저 확인|가족관계를 먼저 확정/);
 
+const functionPolicyStudentParentDeath = handlePolicyChatRequest({
+  question: "학생의 부모 사망시 휴가는?",
+  officeLabel: "경상북도교육청",
+  roleLabel: "학생"
+});
+assert.equal(functionPolicyStudentParentDeath.ok, true);
+assert.equal(functionPolicyStudentParentDeath.semanticFrame.domainCode, "studentRecordsAttendance");
+assert.equal(functionPolicyStudentParentDeath.needsClarification, false);
+assert.match(functionPolicyStudentParentDeath.responseText, /출석인정결석/);
+assert.match(functionPolicyStudentParentDeath.responseText, /학교생활기록부 기재요령/);
+assert.match(functionPolicyStudentParentDeath.responseText, /5일/);
+assert.doesNotMatch(functionPolicyStudentParentDeath.responseText, /공립 교원|국가공무원|교원휴가|나이스 근무상황|경조사휴가/);
+
 const baseResult = {
   ok: true,
   question: "교사의 병가 신청 서류는?",
@@ -534,6 +547,106 @@ try {
   assert.equal(guarded.remoteLocalLlm.ok, true);
 } finally {
   await new Promise((resolve) => staleBereavementServer.close(resolve));
+}
+
+const studentAttendanceBaseResult = {
+  ok: true,
+  question: "학생의 부모 사망시 휴가는?",
+  needsClarification: false,
+  semanticFrame: {
+    domainCode: "studentRecordsAttendance",
+    domainLabel: "학생부·출결·정정",
+    slots: {
+      targetSubject: { roleCode: "student", subjectLabel: "학생" },
+      familyRelation: { code: "parent", label: "본인 부모", leaveDays: 5 }
+    }
+  },
+  answerState: {
+    status: "definitive",
+    primaryText: "학생 가족 사망은 교직원 경조사휴가가 아니라 학교생활기록부 기재요령의 경조사로 인한 출석인정결석 기준으로 처리합니다."
+  },
+  policyResponse: {
+    title: "경조사 출석인정결석 확인 기준",
+    lead: "학생 가족 사망은 교직원 경조사휴가가 아니라 학교생활기록부 기재요령의 경조사로 인한 출석인정결석 기준으로 처리합니다.",
+    answer: [
+      "학생의 부모 사망은 경조사로 인한 출석인정결석 사안이며, 5일 기준으로 확인합니다.",
+      "실제 출결 처리는 수업일·등교일 기준으로 결석일수를 산정하고, 토요일·공휴일·재량휴업일처럼 출석 의무가 없는 날은 결석일수에 넣지 않습니다.",
+      "결석계, 사망 사실 확인 자료, 가족관계 확인 자료, 보호자 연락·담임 확인, 나이스 출결 처리 이력을 함께 정리합니다."
+    ],
+    steps: [
+      "당해 학년도 학교생활기록부 기재요령의 경조사로 인한 출석인정결석 기준 확인"
+    ],
+    caution: "이 사안에는 공립 교원·국가공무원 경조사휴가, 교원휴가에 관한 예규, 교직원 나이스 근무상황 신청 기준을 적용하지 않습니다."
+  },
+  missingSlots: []
+};
+
+const wrongStudentAttendanceRemoteResult = {
+  ...studentAttendanceBaseResult,
+  semanticFrame: {
+    domainCode: "bereavementLeave",
+    domainLabel: "경조사휴가",
+    slots: {
+      travelerRole: { subjectLabel: "교원" }
+    }
+  },
+  answerState: {
+    status: "definitive",
+    primaryText: "공립 교원·국가공무원 기준으로 본인 부모 사망 경조사휴가는 5일입니다."
+  },
+  policyResponse: {
+    ...studentAttendanceBaseResult.policyResponse,
+    lead: "공립 교원·국가공무원 기준으로 본인 부모 사망 경조사휴가는 5일입니다.",
+    answer: [
+      "근거는 국가공무원 복무규정 제20조와 교원휴가에 관한 예규입니다.",
+      "나이스 근무상황에서 경조사휴가로 신청합니다."
+    ],
+    steps: ["나이스 근무상황 신청 종별 확인"],
+    caution: "교직원 복무 기준을 확인합니다."
+  },
+  responseText: "공립 교원·국가공무원 기준으로 본인 부모 사망 경조사휴가는 5일입니다.\n나이스 근무상황에서 신청합니다.",
+  localLlmComposer: {
+    ok: true,
+    provider: "ollama",
+    model: "qwen3:4b-instruct"
+  }
+};
+
+const wrongStudentAttendanceServer = createServer(async (request, response) => {
+  assert.equal(request.headers.authorization, `Bearer ${token}`);
+  assert.equal(request.url, "/api/policy/llm");
+  response.writeHead(200, { "content-type": "application/json" });
+  response.end(JSON.stringify({
+    ok: true,
+    result: wrongStudentAttendanceRemoteResult,
+    bridge: { elapsedMs: 61, localLlmUsed: true }
+  }));
+});
+
+await new Promise((resolve) => wrongStudentAttendanceServer.listen(0, "127.0.0.1", resolve));
+const wrongStudentAttendanceAddress = wrongStudentAttendanceServer.address();
+try {
+  const guarded = await maybeApplyRemoteLocalPolicyLlm({ question: studentAttendanceBaseResult.question }, studentAttendanceBaseResult, {
+    REMOTE_LOCAL_LLM_ENABLED: "true",
+    REMOTE_LOCAL_LLM_BASE_URL: `http://127.0.0.1:${wrongStudentAttendanceAddress.port}`,
+    REMOTE_LOCAL_LLM_TOKEN: token,
+    REMOTE_LOCAL_LLM_TIMEOUT_MS: "5000"
+  });
+  const guardedText = [
+    guarded.responseText,
+    guarded.policyResponse.lead,
+    ...guarded.policyResponse.answer,
+    ...guarded.policyResponse.steps,
+    guarded.policyResponse.caution
+  ].join(" ");
+  assert.equal(guarded.semanticFrame.domainCode, "studentRecordsAttendance");
+  assert.match(guardedText, /출석인정결석/);
+  assert.match(guardedText, /학교생활기록부 기재요령/);
+  assert.doesNotMatch(guardedText, /공립 교원·국가공무원 기준으로|국가공무원 복무규정|나이스 근무상황에서 경조사휴가/);
+  assert.equal(guarded.remoteLocalLlm.ok, false);
+  assert.equal(guarded.remoteLocalLlm.reason, "remote_local_llm_regressed_result");
+} finally {
+  await new Promise((resolve) => wrongStudentAttendanceServer.close(resolve));
 }
 
 const overtimeBaseResult = {

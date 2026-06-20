@@ -419,6 +419,18 @@ const taxonomyCases = [
     forbidIntents: ["spouseChildbirthLeave"]
   },
   {
+    id: "taxonomy-student-parent-death-attendance",
+    question: "학생의 부모 사망시 휴가는?",
+    intent: "studentAttendanceAbsence",
+    forbidIntents: ["bereavementLeave", "sickLeave"]
+  },
+  {
+    id: "taxonomy-student-parent-death-holiday-attendance",
+    question: "학생 부모상 출석인정결석 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+    intent: "studentAttendanceAbsence",
+    forbidIntents: ["bereavementLeave", "attendanceTime"]
+  },
+  {
     id: "taxonomy-travel-not-attendance",
     question: "관외출장 중 일비와 식비를 계산하려고 합니다. 외출 처리가 아니라 출장입니다.",
     intent: "domesticTravelExpense",
@@ -564,6 +576,22 @@ const guideCases = [
     needsIntentConfirmation: false,
     mustInclude: ["토요일·공휴일", "산입하지", "5일"],
     mustNotInclude: ["질문 요지 확인 필요", "기간을 먼저 확인", "가족관계를 먼저 확정"]
+  },
+  {
+    id: "guide-student-parent-bereavement-attendance",
+    question: "학생의 부모 사망시 휴가는?",
+    domain: "studentRecordsAttendance",
+    needsIntentConfirmation: false,
+    mustInclude: ["출석인정결석", "학교생활기록부 기재요령", "5일"],
+    mustNotInclude: ["공립 교원", "국가공무원", "교원휴가", "나이스 근무상황", "경조사휴가"]
+  },
+  {
+    id: "guide-student-parent-bereavement-attendance-holiday",
+    question: "학생 부모상 출석인정결석 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+    domain: "studentRecordsAttendance",
+    needsIntentConfirmation: false,
+    mustInclude: ["출석인정결석", "수업일", "공휴일", "결석일수"],
+    mustNotInclude: ["공립 교원", "국가공무원", "교원휴가", "나이스 근무상황", "경조사휴가"]
   },
   {
     id: "guide-travel-not-attendance",

@@ -226,14 +226,14 @@
         tier: "ministryGuideline",
         title: "학교생활기록부 기재요령",
         provider: "교육부·학교생활기록부 종합지원포털",
-        query: "학교생활기록부 기재요령 출결 정정 체험학습",
+        query: "학교생활기록부 기재요령 출결 정정 체험학습 경조사 출석인정결석",
         domains: ["studentRecordsAttendance", "fieldExperienceLearning", "specialEducationSupport", "assessmentAcademicManagement"]
       },
       schoolRecordRule: {
         tier: "ministryGuideline",
         title: "학교생활기록 작성 및 관리지침",
         provider: "교육부·국가법령정보센터",
-        query: "학교생활기록 작성 및 관리지침 출결 정정 보존",
+        query: "학교생활기록 작성 및 관리지침 출결 정정 경조사 보존",
         domains: ["studentRecordsAttendance", "classManagementGuidance", "assessmentAcademicManagement"]
       },
       schoolViolenceGuide2025: {

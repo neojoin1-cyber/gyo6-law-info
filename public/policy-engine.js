@@ -325,6 +325,10 @@
     const hasCandidate = (code) => domainCandidates.some((candidate) => candidate.code === code && candidate.score > 0);
     const rules = [
       {
+        domainCode: "studentRecordsAttendance",
+        matches: () => isStudentAttendanceBereavementContext(normalized)
+      },
+      {
         domainCode: "schoolViolenceProcedure",
         matches: () => /학교폭력|학폭|전담기구/.test(normalized)
           || (/학생|친구|동급생|선배|후배|피해학생|가해학생/.test(normalized)
@@ -419,7 +423,8 @@
       {
         domainCode: "bereavementLeave",
         matches: () => hasDeathLeaveSignal(normalized)
-          && /휴가|경조사|특별휴가|일수|며칠|몇일|사용|가능|증빙|신청/.test(normalized)
+          && !isStudentAttendanceBereavementContext(normalized)
+          && /휴가|경조사|특별휴가|일수|며칠|몇일|사용|가능|증빙|신청|공휴일|토요일|일요일|주말|휴일|계산|산입|제외|끼면/.test(normalized)
       },
       {
         domainCode: "staffAttendanceService",
@@ -735,6 +740,17 @@
       && subject.isStaff;
   }
 
+  function isStudentAttendanceBereavementContext(normalized = "") {
+    const hasStudentSubject = /학생|재학생|고등학생|중학생|초등학생|특성화고생/.test(normalized);
+    const hasDeath = hasDeathLeaveSignal(normalized) || /가족상|상고|상례/.test(normalized);
+    const hasAttendanceTask = /휴가|결석|출결|출석인정|인정결석|결석계|학교생활기록|생활기록부|생기부|학생부|등교|수업|학교/.test(normalized);
+    if (!hasStudentSubject || !hasDeath || !hasAttendanceTask) return false;
+
+    const hasExplicitStudentFamilyDeath = /학생.{0,12}(?:부모|부모님|부친|모친|아버지|어머니|보호자|조부모|형제|자매).{0,12}(?:사망|별세|장례|부고|돌아가|부모상|가족상)|학생.{0,12}부모상/.test(normalized);
+    const hasStaffBereavementSubject = /(?:교사|교원|선생님|선생|교직원|직원|교장|교감|학교장|공무원|행정직|주무관|교육공무직|공무직|기간제|계약제|정규직).{0,14}(?:부모상|부모|부친|모친|배우자|장인|장모|시부|시모|조부모|형제|자매).{0,14}(?:사망|별세|장례|부고|휴가|경조사)|(?:교사|교원|선생님|교직원|직원|공무원).{0,12}경조사휴가/.test(normalized);
+    return hasExplicitStudentFamilyDeath || !hasStaffBereavementSubject;
+  }
+
   function hasDeathLeaveSignal(normalized = "") {
     return /사망|상례|장례|부고|별세|부모상|배우자상|자녀상|조부모상|형제상|자매상|삼촌상|숙부상|백부상|고모상|이모상|장인상|장모상|시부상|시모상/.test(normalized);
   }
@@ -772,6 +788,9 @@
       slots.travelerRole ||= inferDomesticTravelProfile(normalized);
       slots.workplaceTravel ??= (TRAVEL.workplaceTravelPattern || /근무지내|근무지안|관내출장|같은시|같은군|동일시|동일군|12km|12킬로|4시간|네시간|당일관내/).test(normalized);
       slots.institution ||= inferInstitutionName(question, normalized);
+    }
+    if (domainCode === "studentRecordsAttendance" && isStudentAttendanceBereavementContext(normalized)) {
+      slots.familyRelation ||= inferFamilyRelation(normalized);
     }
     return slots;
   }
@@ -822,6 +841,9 @@
 
   function getEffectiveRequiredSlots(domainCode = "", domain = {}, task = {}, slots = {}, normalized = "") {
     const requiredSlots = domain.requiredSlots || [];
+    if (domainCode === "studentRecordsAttendance" && isStudentAttendanceBereavementContext(normalized)) {
+      return requiredSlots.filter((slotName) => !["schoolLevel", "procedureStage", "evidence", "fiscalYear"].includes(slotName));
+    }
     if (domainCode === "bereavementLeave") {
       const familyRelation = slots.familyRelation || {};
       const taskCode = task?.code || "";
@@ -1308,6 +1330,14 @@
     }
 
     if (isOntologySchoolDomain(domainCode)) {
+      if (domainCode === "studentRecordsAttendance" && isStudentAttendanceBereavementContext(frame.normalized || "")) {
+        return uniqueStrings([
+          buildOntologyPrimaryAnswer(domainCode, domainLabel, taskLabel, slots, officeLabel, frame),
+          "근거 자료는 당해 학년도 학교생활기록부 기재요령과 학교생활기록 작성 및 관리지침입니다.",
+          "결석계, 사망 사실 확인 자료, 가족관계 확인 자료, 보호자 연락·담임 확인, 나이스 출결 처리 이력을 함께 정리합니다.",
+          "학교별 결석계 양식과 세부 제출 방식은 증빙 제출 방식의 세부 집행 기준으로만 대조합니다."
+        ]);
+      }
       const domain = getEffectivePolicyDomain(domainCode);
       const stage = slots.procedureStage?.label || "업무 단계";
       const evidence = getContextualEvidenceLabel(domainCode, slots, frame);
@@ -1380,6 +1410,9 @@
       return "수업 중 자리 미착석·반복 지도 불응은 먼저 교원의 학생생활지도에 관한 고시의 수업방해 생활지도 기준으로 사실을 기록하고, 선도·징계로 넘어갈 때 초·중등교육법 제18조와 시행령 제31조 절차 및 학교생활규정을 대조합니다.";
     }
     if (domainCode === "studentRecordsAttendance") {
+      if (isStudentAttendanceBereavementContext(normalized)) {
+        return "학생 가족 사망은 교직원 복무상 특별휴가 기준이 아니라 학교생활기록부 기재요령의 경조사로 인한 출석인정결석 기준으로 처리합니다.";
+      }
       return "학생부·출결·정정 사안은 당해 학년도 기재요령, 증빙자료, 정정 권한과 결재 이력을 기준으로 처리합니다.";
     }
     if (domainCode === "schoolSafetyHealth") {
@@ -1413,6 +1446,13 @@
       return "수업 중 반복적인 지시 불응은 교원의 학생생활지도에 관한 고시에 따라 수업방해 사실과 지도 과정을 시간순으로 기록하고, 훈계·상담·분리 등 생활지도 가능 범위와 학생 인권·아동학대 민원 위험을 먼저 분리합니다. 선도·징계가 필요할 때만 초·중등교육법 제18조, 시행령 제31조, 학교생활규정 절차를 최종 대조합니다.";
     }
     if (domainCode === "studentRecordsAttendance") {
+      if (isStudentAttendanceBereavementContext(normalized)) {
+        const relation = (slots.familyRelation?.label || "부모 등 가족").replace(/^본인\s*/, "");
+        const relationDays = Number.isFinite(slots.familyRelation?.leaveDays) && slots.familyRelation.leaveDays > 0
+          ? `${slots.familyRelation.leaveDays}일`
+          : "학교생활기록부 기재요령의 경조사별 출석인정 일수";
+        return `학생의 ${relation} 사망은 경조사로 인한 출석인정결석 사안입니다. ${relationDays} 기준으로 보되, 실제 출결 처리는 수업일·등교일 기준으로 결석일수를 산정하고 토요일·공휴일·재량휴업일처럼 출석 의무가 없는 날은 결석일수에 넣지 않습니다.`;
+      }
       return "학생부·출결·정정은 당해 학년도 기재요령과 학교생활기록 작성·관리지침을 기준으로, 증빙자료와 결재 이력이 확인될 때 정정 또는 출결 처리를 진행합니다.";
     }
     if (domainCode === "schoolSafetyHealth") {
@@ -2187,6 +2227,15 @@
           "상위 기준으로 판단이 남는 세부 집행 부분만 학교생활규정·학칙·위원회 규정으로 최종 확인"
         ]);
       }
+      if (domainCode === "studentRecordsAttendance" && isStudentAttendanceBereavementContext(frame.normalized || "")) {
+        return uniqueStrings([
+          "당해 학년도 학교생활기록부 기재요령의 경조사로 인한 출석인정결석 기준 확인",
+          "학생과 사망 가족의 관계를 부모, 조부모, 형제자매 등 경조사별 일수표에 맞춰 확정",
+          "실제 수업일·등교일 기준으로 결석일수를 산정하고 토요일·공휴일·재량휴업일은 결석일수에서 제외",
+          "결석계, 사망 사실 및 가족관계 확인 자료, 보호자 연락·담임 확인, 나이스 출결 처리 이력 정리",
+          "학교생활기록부 기재요령과 학교생활기록 작성·관리지침 원문으로 최종 대조"
+        ]);
+      }
       return uniqueStrings([
         `${domain.label || "학교정책"} 질문을 대상, 학교급, 업무 단계, 증빙, 위험 신호로 분해`,
         "상위 법령·고시·교육부 지침을 먼저 자동 확보하고, 교육청·학교 내부 규정은 세부 집행 기준으로 순차 대조",
@@ -2200,6 +2249,7 @@
   }
 
   function buildGenericDomainQueries(domainCode, domainLabel, taskLabel, subjectLabel, slots, officeLabel, lookup = null) {
+    const frame = lookup?.semanticFrame || {};
     let corpusQueries = uniqueStrings((lookup?.corpusMatches || [])
       .map((match) => match.query || match.title)
       .filter(Boolean));
@@ -2256,6 +2306,16 @@
           `${rule} ${stage} 증빙자료`
         ]);
       }
+      if (domainCode === "studentRecordsAttendance" && isStudentAttendanceBereavementContext(frame.normalized || "")) {
+        return uniqueStrings([
+          ...corpusQueries,
+          ...expansionQueries,
+          "2026학년도 학교생활기록부 기재요령 경조사로 인한 출석인정결석 부모 사망 5일",
+          "학교생활기록 작성 및 관리지침 출결상황 경조사 결석",
+          `${getOfficeSlotLabel(slots, officeLabel)} 경조사 출석인정결석 결석계 증빙`,
+          "학생 부모 사망 출석인정결석 수업일 공휴일 제외"
+        ]);
+      }
       return uniqueStrings([
         ...corpusQueries,
         ...expansionQueries,
@@ -2291,6 +2351,9 @@
     }
 
     if (isOntologySchoolDomain(domainCode)) {
+      if (domainCode === "studentRecordsAttendance" && isStudentAttendanceBereavementContext(frame.normalized || "")) {
+        return `${missingPrefix}학생 가족 사망은 교직원 복무상 특별휴가 기준이 아니라 학생 출결의 경조사로 인한 출석인정결석으로 처리합니다. 학교생활기록부 기재요령과 학교생활기록 작성·관리지침을 먼저 적용하고, 학교별 결석계 양식은 증빙 제출 방식의 세부 집행 기준으로만 대조합니다.`;
+      }
       if (domainCode === "classManagementGuidance") {
         return `${missingPrefix}학생 생활지도 사안은 교원의 학생생활지도에 관한 고시와 초·중등교육법상 선도·징계 절차를 먼저 적용하고, 학교생활규정·학칙은 상위 기준으로도 남는 학교별 세부 집행 기준을 확정할 때 최종 대조합니다. 시스템이 부족한 상위 원문과 교육청 자료를 자동 자료확충 대상으로 등록하고, 안전·인권·개인정보·불복 쟁점을 분리해 재검증합니다.`;
       }
