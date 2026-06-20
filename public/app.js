@@ -5420,7 +5420,7 @@ async function loadLocalLlmPolicyEnhancement({
     if (
       activeLocalLlmController !== controller ||
       questionFingerprint !== currentQuestionFingerprint ||
-      (!data?.localLlmComposer?.ok && !data?.localLlmNormalizer?.used) ||
+      !hasPolicyLlmEnhancement(data) ||
       !data.policyResponse
     ) {
       return;
@@ -5434,13 +5434,14 @@ async function loadLocalLlmPolicyEnhancement({
       role,
       category
     });
-    resultTitle.textContent = data.localLlmComposer?.ok ? "로컬 AI 보강 답변" : "로컬 AI 질문 정리 답변";
-    statusDot.textContent = data.localLlmComposer?.ok ? "로컬 AI 보강" : "질문 정리";
+    const enhancementLabel = getPolicyLlmEnhancementLabel(data);
+    resultTitle.textContent = enhancementLabel.title;
+    statusDot.textContent = enhancementLabel.status;
     resultState.className = "summary-box guideline-result free-policy-result local-llm-result";
     resultState.innerHTML = `
       ${renderPolicyGuideResponse(enhancedResponse)}
       ${renderPolicyGuideAutoVerificationNotice(enhancedResponse, { state: "complete" })}
-      ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer)}
+      ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer, data.remoteLocalLlm)}
       ${accessMessage ? `
         <section class="free-access-note" aria-label="비로그인 기본 답변 안내">
           <strong>로그인 없이 기본 답변을 제공했습니다.</strong>
@@ -5510,7 +5511,7 @@ async function loadGuideLocalLlmPolicyEnhancement({
     if (
       activeGuideLocalLlmController !== controller ||
       guideFingerprint !== currentGuideQuestionFingerprint ||
-      (!data?.localLlmComposer?.ok && !data?.localLlmNormalizer?.used) ||
+      !hasPolicyLlmEnhancement(data) ||
       !data.policyResponse
     ) {
       return;
@@ -5524,13 +5525,14 @@ async function loadGuideLocalLlmPolicyEnhancement({
       role,
       category
     });
-    if (guideStatus) guideStatus.textContent = data.localLlmComposer?.ok ? "로컬 AI 보강" : "질문 정리";
-    if (guideResultTitle) guideResultTitle.textContent = data.localLlmComposer?.ok ? "로컬 AI 보강 답변" : "로컬 AI 질문 정리 답변";
+    const enhancementLabel = getPolicyLlmEnhancementLabel(data);
+    if (guideStatus) guideStatus.textContent = enhancementLabel.status;
+    if (guideResultTitle) guideResultTitle.textContent = enhancementLabel.title;
     guideResult.className = "summary-box guideline-result local-llm-result";
     guideResult.innerHTML = `
       ${renderPolicyGuideResponse(enhancedResponse)}
       ${renderPolicyGuideAutoVerificationNotice(enhancedResponse, { state: "complete" })}
-      ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer)}
+      ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer, data.remoteLocalLlm)}
     `;
     appliedEnhancement = true;
   } catch (error) {
@@ -5600,7 +5602,8 @@ function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
     sourceExpansion: directRule.sourceExpansion || data.sourceExpansion || policyResponse.sourceExpansion || data.answerState?.sourceExpansion || null,
     riskReview: directRule.riskReview || data.riskReview || policyResponse.riskReview || data.answerState?.riskReview || null,
     localLlmComposer: data.localLlmComposer,
-    localLlmNormalizer: data.localLlmNormalizer
+    localLlmNormalizer: data.localLlmNormalizer,
+    remoteLocalLlm: data.remoteLocalLlm
   };
 }
 
@@ -5614,12 +5617,29 @@ function normalizePolicyChatAnswerTexts(answer) {
     .slice(0, 5);
 }
 
-function renderLocalLlmComposerNote(composer = {}, normalizer = {}) {
-  if (!composer?.ok && !normalizer?.used) return "";
-  const elapsed = Number(composer.elapsedMs || 0);
+function hasPolicyLlmEnhancement(data = {}) {
+  return Boolean(data?.remoteLocalLlm?.ok || data?.localLlmComposer?.ok || data?.localLlmNormalizer?.used);
+}
+
+function getPolicyLlmEnhancementLabel(data = {}) {
+  if (data?.remoteLocalLlm?.ok) {
+    return { title: "로컬 AI 보강 답변", status: "로컬 AI 보강" };
+  }
+  if (data?.localLlmComposer?.ok) {
+    return { title: "로컬 AI 보강 답변", status: "로컬 AI 보강" };
+  }
+  return { title: "로컬 AI 질문 정리 답변", status: "질문 정리" };
+}
+
+function renderLocalLlmComposerNote(composer = {}, normalizer = {}, remoteLocalLlm = {}) {
+  if (!composer?.ok && !normalizer?.used && !remoteLocalLlm?.ok) return "";
+  const elapsed = Number(remoteLocalLlm?.elapsedMs || composer.elapsedMs || 0);
   const elapsedLabel = elapsed >= 1000 ? `${(elapsed / 1000).toFixed(1)}초` : `${elapsed}ms`;
   const normalizedText = normalizer?.used && normalizer.normalizedQuestion
     ? `<p>질문 정리: ${escapeHtml(normalizer.normalizedQuestion)}</p>`
+    : "";
+  const remoteText = remoteLocalLlm?.ok
+    ? `<p>사무실 Ollama 브리지 · ${escapeHtml(elapsedLabel)} · 규정 엔진 결과 안에서만 정리</p>`
     : "";
   const composerText = composer?.ok
     ? `<p>${escapeHtml(composer.model || "local model")} · ${escapeHtml(elapsedLabel)} · 규정 엔진 결과 안에서만 정리</p>`
@@ -5628,6 +5648,7 @@ function renderLocalLlmComposerNote(composer = {}, normalizer = {}) {
     <section class="free-access-note local-llm-note" aria-label="로컬 AI 보강 안내">
       <strong>Ollama 로컬 모델로 질문과 문장을 보강했습니다.</strong>
       ${normalizedText}
+      ${remoteText}
       ${composerText}
     </section>
   `;

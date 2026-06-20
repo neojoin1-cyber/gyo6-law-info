@@ -1260,6 +1260,11 @@ const sourceGapCautionGuide = {
 const sourceGapCautionHtml = context.renderPolicyGuideResponse(sourceGapCautionGuide);
 const sourceGapProgressHtml = context.renderPolicyGuideAutoVerificationNotice(sourceGapCautionGuide, { state: "active" });
 const localLlmWorkingHtml = context.renderLocalLlmWorkingNotice(sourceGapCautionGuide, { state: "active" });
+const remoteLocalLlmNoteHtml = context.renderLocalLlmComposerNote(
+  { ok: false },
+  { used: false },
+  { ok: true, elapsedMs: 458, provider: "office-ollama-bridge" }
+);
 if (/증빙자료가 부족|직접 확인하시기 바랍니다/.test(sourceGapCautionHtml)) {
   failures.push("policy-guide-source-gap-caution: source-gap caution should not tell users to check originals themselves");
 }
@@ -1275,6 +1280,12 @@ if (!localLlmWorkingHtml.includes("로컬 AI 보강 생성 중")
   || !localLlmWorkingHtml.includes("질문 재정리")
   || !localLlmWorkingHtml.includes("답변 재작성")) {
   failures.push("policy-guide-local-llm-working: expected prominent local LLM working notice with progress stages");
+}
+if (!context.hasPolicyLlmEnhancement({ remoteLocalLlm: { ok: true }, localLlmComposer: { ok: false }, localLlmNormalizer: { used: false } })) {
+  failures.push("policy-guide-local-llm-remote-success: remoteLocalLlm.ok should count as a completed local AI enhancement");
+}
+if (!remoteLocalLlmNoteHtml.includes("사무실 Ollama 브리지") || !remoteLocalLlmNoteHtml.includes("458ms")) {
+  failures.push("policy-guide-local-llm-remote-note: expected remote Ollama bridge completion note");
 }
 
 for (const guideCase of broadSchoolPolicyGuideCases) {
