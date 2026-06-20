@@ -33,6 +33,9 @@ const functionPolicyStudentParentDeath = handlePolicyChatRequest({
 assert.equal(functionPolicyStudentParentDeath.ok, true);
 assert.equal(functionPolicyStudentParentDeath.semanticFrame.domainCode, "studentRecordsAttendance");
 assert.equal(functionPolicyStudentParentDeath.needsClarification, false);
+assert.equal(functionPolicyStudentParentDeath.semanticFrame.caseFrame?.subject?.group, "student");
+assert.equal(functionPolicyStudentParentDeath.semanticFrame.caseFrame?.event?.code, "bereavement");
+assert.equal(functionPolicyStudentParentDeath.policyResponse.qualityGate?.status, "pass");
 assert.match(functionPolicyStudentParentDeath.responseText, /출석인정결석/);
 assert.match(functionPolicyStudentParentDeath.responseText, /학교생활기록부 기재요령/);
 assert.match(functionPolicyStudentParentDeath.responseText, /5일/);
@@ -58,6 +61,18 @@ const baseResult = {
       "연간 병가가 6일을 초과하면 의사·치과의사·한의사가 발급한 진단서를 제출해야 합니다.",
       "일반 질병·부상은 연 60일, 공무상 질병·부상은 연 180일까지 병가를 승인할 수 있습니다."
     ],
+    caseFrame: {
+      subject: { group: "staff", label: "교원" },
+      event: { code: "illness", label: "질병·진단·병가" },
+      action: { code: "evidence", label: "증빙·서류" },
+      schoolRulePolicy: { position: "finalExecutionCheck" },
+      authorityPath: [
+        { tier: "officialRule", position: "primary" },
+        { tier: "educationOfficeGuideline", position: "secondary" },
+        { tier: "employmentExecutionRule", position: "finalExecutionCheck" }
+      ]
+    },
+    qualityGate: { status: "pass", violations: [] },
     caution: "원문 기준 확인이 필요합니다."
   },
   missingSlots: ["evidence"],
@@ -111,7 +126,9 @@ const remoteResult = {
   policyResponse: {
     ...baseResult.policyResponse,
     lead: "교사의 병가 신청은 나이스 신청과 증빙자료 확인이 핵심입니다.",
-    answer: ["나이스 근무상황 신청과 진단서 등 증빙자료 기준을 함께 확인합니다."]
+    answer: ["나이스 근무상황 신청과 진단서 등 증빙자료 기준을 함께 확인합니다."],
+    caseFrame: undefined,
+    qualityGate: undefined
   },
   localLlmComposer: {
     ok: true,
@@ -154,6 +171,9 @@ try {
   assert.equal(result.policyResponse?.sourceExpansion?.status, "queued");
   assert.equal(result.answerState?.sourceExpansion?.status, "queued");
   assert.equal(result.riskReview?.items?.[0]?.code, "records");
+  assert.equal(result.semanticFrame?.caseFrame?.subject?.group, "staff");
+  assert.equal(result.policyResponse?.caseFrame?.event?.code, "illness");
+  assert.equal(result.policyResponse?.qualityGate?.status, "pass");
 } finally {
   await new Promise((resolve) => server.close(resolve));
 }

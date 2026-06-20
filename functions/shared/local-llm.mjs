@@ -463,7 +463,9 @@ function buildPolicyComposerInput(payload = {}, result = {}) {
       sourceKeys: asArray(response.sourceKeys || response.ruleLookup?.sourceKeys).map(cleanText).filter(Boolean).slice(0, 10),
       queries: asArray(response.queries).map(cleanText).filter(Boolean).slice(0, 8),
       sourceExpansion: compactSourceExpansion(result.sourceExpansion || response.sourceExpansion || state.sourceExpansion),
-      riskReview: compactRiskReview(result.riskReview || response.riskReview || state.riskReview)
+      riskReview: compactRiskReview(result.riskReview || response.riskReview || state.riskReview),
+      caseFrame: compactCaseFrame(response.caseFrame || frame.caseFrame),
+      qualityGate: compactQualityGate(response.qualityGate)
     },
     outputRules: {
       title: "짧은 답변 제목",
@@ -487,6 +489,8 @@ function compactPolicyBaseResult(result = {}) {
     missingSlots: asArray(result.missingSlots).map(cleanText).filter(Boolean).slice(0, 8),
     sourceExpansion: compactSourceExpansion(result.sourceExpansion || result.policyResponse?.sourceExpansion || result.answerState?.sourceExpansion),
     riskReview: compactRiskReview(result.riskReview || result.policyResponse?.riskReview || result.answerState?.riskReview),
+    caseFrame: compactCaseFrame(result.policyResponse?.caseFrame || result.semanticFrame?.caseFrame),
+    qualityGate: compactQualityGate(result.policyResponse?.qualityGate),
     candidates: asArray(result.semanticFrame?.candidates).slice(0, 5).map((candidate) => ({
       code: cleanText(candidate.code || candidate.domainCode || ""),
       label: cleanText(candidate.label || candidate.domainLabel || ""),
@@ -522,6 +526,59 @@ function compactRiskReview(riskReview = null) {
       status: cleanText(item?.status || ""),
       check: cleanText(item?.check || "")
     })).filter((item) => item.code || item.label).slice(0, 8)
+  };
+}
+
+function compactCaseFrame(caseFrame = null) {
+  if (!caseFrame || typeof caseFrame !== "object") return null;
+  return {
+    version: cleanText(caseFrame.version || ""),
+    domainCode: cleanText(caseFrame.domainCode || ""),
+    subject: {
+      group: cleanText(caseFrame.subject?.group || ""),
+      roleCode: cleanText(caseFrame.subject?.roleCode || ""),
+      label: cleanText(caseFrame.subject?.label || "")
+    },
+    event: {
+      code: cleanText(caseFrame.event?.code || ""),
+      label: cleanText(caseFrame.event?.label || "")
+    },
+    action: {
+      code: cleanText(caseFrame.action?.code || ""),
+      label: cleanText(caseFrame.action?.label || "")
+    },
+    criticalMissingSlots: asArray(caseFrame.criticalMissingSlots).map(cleanText).filter(Boolean).slice(0, 8),
+    authorityPath: asArray(caseFrame.authorityPath).map((item) => ({
+      tier: cleanText(item?.tier || ""),
+      label: cleanText(item?.label || ""),
+      position: cleanText(item?.position || ""),
+      reason: cleanText(item?.reason || "")
+    })).filter((item) => item.tier || item.label).slice(0, 6),
+    schoolRulePolicy: {
+      position: cleanText(caseFrame.schoolRulePolicy?.position || ""),
+      label: cleanText(caseFrame.schoolRulePolicy?.label || ""),
+      mustNotLead: Boolean(caseFrame.schoolRulePolicy?.mustNotLead)
+    },
+    expectations: {
+      expectedAuthorityTiers: asArray(caseFrame.expectations?.expectedAuthorityTiers).map(cleanText).filter(Boolean).slice(0, 8),
+      forbiddenPatterns: asArray(caseFrame.expectations?.forbiddenPatterns).map(cleanText).filter(Boolean).slice(0, 8),
+      schoolRulePosition: cleanText(caseFrame.expectations?.schoolRulePosition || "")
+    },
+    strategy: cleanLongText(caseFrame.strategy || "").slice(0, 360)
+  };
+}
+
+function compactQualityGate(qualityGate = null) {
+  if (!qualityGate || typeof qualityGate !== "object") return null;
+  return {
+    status: cleanText(qualityGate.status || ""),
+    schoolRulePosition: cleanText(qualityGate.schoolRulePosition || ""),
+    expectedAuthorityTiers: asArray(qualityGate.expectedAuthorityTiers).map(cleanText).filter(Boolean).slice(0, 8),
+    forbiddenPatterns: asArray(qualityGate.forbiddenPatterns).map(cleanText).filter(Boolean).slice(0, 8),
+    violations: asArray(qualityGate.violations).map((item) => ({
+      code: cleanText(item?.code || ""),
+      message: cleanLongText(item?.message || "").slice(0, 220)
+    })).filter((item) => item.code || item.message).slice(0, 8)
   };
 }
 

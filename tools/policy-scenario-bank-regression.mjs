@@ -53,6 +53,20 @@ for (const scenario of bank.regressionSample) {
       }))
     });
   }
+  if (!frame.caseFrame || frame.caseFrame.domainCode !== frame.domainCode) {
+    addFailure(scenario.id, "missing or mismatched policy caseFrame", {
+      question: scenario.question,
+      domain: frame.domainCode,
+      caseFrame: frame.caseFrame
+    });
+  }
+  if (!frame.lookupPlan?.sourceHierarchy?.length) {
+    addFailure(scenario.id, "lookup plan missing sourceHierarchy", {
+      question: scenario.question,
+      domain: frame.domainCode,
+      lookupPlan: frame.lookupPlan
+    });
+  }
 }
 
 for (const scenario of bank.counterexamples) {

@@ -96,6 +96,16 @@ function preservePolicyMetadata(remoteResult = {}, baseResult = {}) {
     || baseResult.policyResponse?.riskReview
     || baseResult.answerState?.riskReview
     || null;
+  const caseFrame = remoteResult.policyResponse?.caseFrame
+    || remoteResult.semanticFrame?.caseFrame
+    || remoteResult.semanticFrame?.lookupPlan?.caseFrame
+    || baseResult.policyResponse?.caseFrame
+    || baseResult.semanticFrame?.caseFrame
+    || baseResult.semanticFrame?.lookupPlan?.caseFrame
+    || null;
+  const qualityGate = remoteResult.policyResponse?.qualityGate
+    || baseResult.policyResponse?.qualityGate
+    || null;
 
   const preservedResult = {
     ...remoteResult,
@@ -103,16 +113,22 @@ function preservePolicyMetadata(remoteResult = {}, baseResult = {}) {
     missingSlots: baseResult.needsClarification === false ? (baseResult.missingSlots || []) : remoteResult.missingSlots
   };
 
-  if (!sourceExpansion && !riskReview) return preservedResult;
+  if (!sourceExpansion && !riskReview && !caseFrame && !qualityGate) return preservedResult;
 
   return {
     ...preservedResult,
+    semanticFrame: preservedResult.semanticFrame ? {
+      ...preservedResult.semanticFrame,
+      caseFrame: preservedResult.semanticFrame.caseFrame || caseFrame
+    } : preservedResult.semanticFrame,
     sourceExpansion,
     riskReview,
     policyResponse: {
       ...(preservedResult.policyResponse || {}),
       sourceExpansion: remoteResult.policyResponse?.sourceExpansion || sourceExpansion,
-      riskReview: remoteResult.policyResponse?.riskReview || riskReview
+      riskReview: remoteResult.policyResponse?.riskReview || riskReview,
+      caseFrame: remoteResult.policyResponse?.caseFrame || caseFrame,
+      qualityGate: remoteResult.policyResponse?.qualityGate || qualityGate
     },
     answerState: {
       ...(preservedResult.answerState || {}),
@@ -381,6 +397,9 @@ function isRemotePolicyResultRegression(baseResult = {}, remoteResult = {}) {
   if (/시간외근무|초과근무/.test(baseText) && /숙박비|여비|출장비|70,000원/.test(remoteText) && !/시간외근무|초과근무/.test(remoteText)) {
     return true;
   }
+  if (violatesPolicyCaseFrame(baseResult.policyResponse?.caseFrame || baseFrame.caseFrame || null, remoteResult)) {
+    return true;
+  }
   return false;
 }
 
@@ -516,6 +535,23 @@ function isWrongStaffLeaveForStudentAttendanceLine(line = "") {
   return /공립\s*교원|국가공무원\s*복무규정|교원휴가|나이스\s*근무상황|경조사휴가/.test(text);
 }
 
+function violatesPolicyCaseFrame(caseFrame = null, remoteResult = {}) {
+  if (!caseFrame || typeof caseFrame !== "object") return false;
+  const text = collectPolicyText(remoteResult);
+  const lead = cleanLongText(remoteResult.policyResponse?.lead || remoteResult.answerState?.primaryText || "");
+  if (caseFrame.subject?.group === "student" && isWrongStaffLeaveForStudentAttendanceLine(text)) return true;
+  if (caseFrame.subject?.group === "staff" && /학생\s*출석인정결석|학교생활기록부\s*기재요령으로\s*처리/.test(text)) return true;
+  if (caseFrame.schoolRulePolicy?.mustNotLead && isLessSpecificInternalRuleFallbackLine(lead) && !containsHierarchySignal(text)) return true;
+  if (isDelegatingPolicyWorkToUser(text)) return true;
+  return false;
+}
+
+function isDelegatingPolicyWorkToUser(text = "") {
+  const value = cleanLongText(text);
+  if (/시스템이|GYO6|자동\s*자료확충|재검증|확보되는\s*즉시/.test(value)) return false;
+  return /증빙자료가\s*부족|자료가\s*부족|근거가\s*부족|원문을\s*확인|직접\s*확인해야|직접\s*확인|공식\s*문서.*직접\s*확인|확인하시기\s*바랍니다/.test(value);
+}
+
 function isHierarchyAnchorLine(line = "") {
   const text = cleanLongText(line);
   if (!text) return false;
@@ -626,7 +662,8 @@ function compactPolicyResult(result = {}) {
     semanticFrame: {
       domainCode: cleanText(result.semanticFrame?.domainCode || ""),
       domainLabel: cleanText(result.semanticFrame?.domainLabel || ""),
-      confidence: Number(result.semanticFrame?.confidence || 0) || 0
+      confidence: Number(result.semanticFrame?.confidence || 0) || 0,
+      caseFrame: compactCaseFrame(result.semanticFrame?.caseFrame || result.policyResponse?.caseFrame)
     },
     answerState: {
       status: cleanText(result.answerState?.status || ""),
@@ -645,8 +682,63 @@ function compactPolicyResult(result = {}) {
       sourcePriority: cleanText(result.policyResponse.sourcePriority || ""),
       sourceKeys: asArray(result.policyResponse.sourceKeys).map(cleanText).filter(Boolean).slice(0, 10),
       sourceExpansion: compactSourceExpansion(result.policyResponse.sourceExpansion),
-      riskReview: compactRiskReview(result.policyResponse.riskReview)
+      riskReview: compactRiskReview(result.policyResponse.riskReview),
+      caseFrame: compactCaseFrame(result.policyResponse.caseFrame || result.semanticFrame?.caseFrame),
+      qualityGate: compactQualityGate(result.policyResponse.qualityGate)
     } : null
+  };
+}
+
+function compactCaseFrame(caseFrame = null) {
+  if (!caseFrame || typeof caseFrame !== "object") return null;
+  return {
+    version: cleanText(caseFrame.version || ""),
+    domainCode: cleanText(caseFrame.domainCode || ""),
+    subject: {
+      group: cleanText(caseFrame.subject?.group || ""),
+      roleCode: cleanText(caseFrame.subject?.roleCode || ""),
+      label: cleanText(caseFrame.subject?.label || "")
+    },
+    event: {
+      code: cleanText(caseFrame.event?.code || ""),
+      label: cleanText(caseFrame.event?.label || "")
+    },
+    action: {
+      code: cleanText(caseFrame.action?.code || ""),
+      label: cleanText(caseFrame.action?.label || "")
+    },
+    criticalMissingSlots: asArray(caseFrame.criticalMissingSlots).map(cleanText).filter(Boolean).slice(0, 8),
+    authorityPath: asArray(caseFrame.authorityPath).map((item) => ({
+      tier: cleanText(item?.tier || ""),
+      label: cleanText(item?.label || ""),
+      position: cleanText(item?.position || ""),
+      reason: cleanText(item?.reason || "")
+    })).filter((item) => item.tier || item.label).slice(0, 6),
+    schoolRulePolicy: {
+      position: cleanText(caseFrame.schoolRulePolicy?.position || ""),
+      label: cleanText(caseFrame.schoolRulePolicy?.label || ""),
+      mustNotLead: Boolean(caseFrame.schoolRulePolicy?.mustNotLead)
+    },
+    expectations: {
+      expectedAuthorityTiers: asArray(caseFrame.expectations?.expectedAuthorityTiers).map(cleanText).filter(Boolean).slice(0, 8),
+      forbiddenPatterns: asArray(caseFrame.expectations?.forbiddenPatterns).map(cleanText).filter(Boolean).slice(0, 8),
+      schoolRulePosition: cleanText(caseFrame.expectations?.schoolRulePosition || "")
+    },
+    strategy: cleanLongText(caseFrame.strategy || "").slice(0, 360)
+  };
+}
+
+function compactQualityGate(qualityGate = null) {
+  if (!qualityGate || typeof qualityGate !== "object") return null;
+  return {
+    status: cleanText(qualityGate.status || ""),
+    schoolRulePosition: cleanText(qualityGate.schoolRulePosition || ""),
+    expectedAuthorityTiers: asArray(qualityGate.expectedAuthorityTiers).map(cleanText).filter(Boolean).slice(0, 8),
+    forbiddenPatterns: asArray(qualityGate.forbiddenPatterns).map(cleanText).filter(Boolean).slice(0, 8),
+    violations: asArray(qualityGate.violations).map((item) => ({
+      code: cleanText(item?.code || ""),
+      message: cleanLongText(item?.message || "").slice(0, 220)
+    })).filter((item) => item.code || item.message).slice(0, 8)
   };
 }
 

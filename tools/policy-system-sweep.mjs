@@ -590,6 +590,58 @@ const subjectEventCases = [
   }
 ];
 
+const caseFrameCases = [
+  {
+    id: "case-frame-student-bereavement-attendance",
+    question: "학생의 부모 사망시 휴가는?",
+    domain: "studentRecordsAttendance",
+    subjectGroup: "student",
+    eventCode: "bereavement",
+    authorityTiers: ["ministryGuideline", "educationOfficeGuideline", "schoolRule"],
+    schoolRulePosition: "finalExecutionCheck",
+    qualityStatus: "pass",
+    forbiddenPatterns: ["공립 교원", "국가공무원 복무규정", "교원휴가"]
+  },
+  {
+    id: "case-frame-class-management-guidance",
+    question: "수업 중 선생님 지시를 계속 따르지 않는 학생에게 할 수 있는 조치는?",
+    domain: "classManagementGuidance",
+    subjectGroup: "student",
+    eventCode: "studentGuidance",
+    authorityTiers: ["ministryGuideline", "educationOfficeGuideline", "schoolRule"],
+    schoolRulePosition: "finalExecutionCheck",
+    qualityStatus: "pass"
+  },
+  {
+    id: "case-frame-staff-bereavement-leave",
+    question: "교원의 부모상 5일 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+    domain: "bereavementLeave",
+    subjectGroup: "staff",
+    eventCode: "bereavement",
+    authorityTiers: ["officialRule", "educationOfficeGuideline", "employmentExecutionRule"],
+    schoolRulePosition: "finalExecutionCheck",
+    qualityStatus: "pass"
+  },
+  {
+    id: "case-frame-budget-evidence",
+    question: "행정실에서 물품을 샀는데 어떤 서류가 필요해?",
+    domain: "schoolBudgetExecution",
+    subjectGroup: "unknown",
+    eventCode: "budgetContract",
+    authorityTiers: ["educationOfficeGuideline", "nationalLaw", "schoolExecutionRule"],
+    schoolRulePosition: "finalExecutionCheck"
+  },
+  {
+    id: "case-frame-field-training-safety",
+    question: "실습생이 회사에서 다쳤는데 학교가 뭘 해야 해?",
+    domain: "vocationalFieldTrainingOperation",
+    subjectGroup: "student",
+    eventCode: "safety",
+    authorityTiers: ["ministryGuideline", "educationOfficeGuideline", "schoolRule"],
+    schoolRulePosition: "finalExecutionCheck"
+  }
+];
+
 function makeVariants(question = "") {
   return [
     question,
@@ -670,6 +722,51 @@ function checkSubjectEventCase(testCase) {
       addFailure(testCase.id, `subject-event inference leaked excluded service issue "${code}"`, {
         serviceIssue: semanticFrame.slots?.serviceIssue
       });
+    }
+  }
+}
+
+function checkCaseFrameCase(testCase) {
+  const frame = policyEngine.buildPolicySemanticFrame(testCase.question);
+  const response = policyEngine.buildPolicyResponse({
+    question: testCase.question,
+    officeLabel: testCase.options?.officeLabel || "경상북도교육청"
+  }) || {};
+  const caseFrame = response.caseFrame || frame.caseFrame || frame.lookupPlan?.caseFrame || null;
+  const qualityGate = response.qualityGate || {};
+  const domain = response.domain || frame.domainCode || "";
+
+  if (domain !== testCase.domain) {
+    addFailure(testCase.id, `case frame expected domain ${testCase.domain}, got ${domain || "none"}`, {
+      question: testCase.question,
+      frame
+    });
+  }
+  if (!caseFrame) {
+    addFailure(testCase.id, "missing policy caseFrame", { question: testCase.question, frame });
+    return;
+  }
+  if (caseFrame.subject?.group !== testCase.subjectGroup) {
+    addFailure(testCase.id, `expected subject group ${testCase.subjectGroup}, got ${caseFrame.subject?.group || "none"}`, { caseFrame });
+  }
+  if (caseFrame.event?.code !== testCase.eventCode) {
+    addFailure(testCase.id, `expected event code ${testCase.eventCode}, got ${caseFrame.event?.code || "none"}`, { caseFrame });
+  }
+  const tiers = (caseFrame.authorityPath || []).map((item) => item.tier);
+  for (const tier of testCase.authorityTiers || []) {
+    if (!tiers.includes(tier)) {
+      addFailure(testCase.id, `missing authority tier ${tier}`, { tiers, caseFrame });
+    }
+  }
+  if (testCase.schoolRulePosition && caseFrame.schoolRulePolicy?.position !== testCase.schoolRulePosition) {
+    addFailure(testCase.id, `expected schoolRulePosition ${testCase.schoolRulePosition}, got ${caseFrame.schoolRulePolicy?.position || "none"}`, { caseFrame });
+  }
+  if (testCase.qualityStatus && qualityGate.status !== testCase.qualityStatus) {
+    addFailure(testCase.id, `expected qualityGate ${testCase.qualityStatus}, got ${qualityGate.status || "none"}`, { qualityGate, response });
+  }
+  for (const pattern of testCase.forbiddenPatterns || []) {
+    if (!(caseFrame.expectations?.forbiddenPatterns || []).includes(pattern)) {
+      addFailure(testCase.id, `case frame missing forbidden pattern "${pattern}"`, { caseFrame });
     }
   }
 }
@@ -874,6 +971,9 @@ for (const testCase of semanticBridgeCases) {
 for (const testCase of subjectEventCases) {
   checkSubjectEventCase(testCase);
 }
+for (const testCase of caseFrameCases) {
+  checkCaseFrameCase(testCase);
+}
 checkAmbiguityGuards();
 checkPerformance();
 
@@ -887,5 +987,5 @@ if (failures.length) {
 
 const performanceInfo = diagnostics.find((item) => item.id === "performance");
 console.log(
-  `Policy system sweep passed: ${domainCases.length} domains + ${adversarialCases.length} adversarial cases + ${semanticBridgeCases.length} semantic bridges + ${subjectEventCases.length} subject-event cases + ${domainCases.length * 5} variants; ${performanceInfo.operations} render ops at ${performanceInfo.perOperationMs}ms/op`
+  `Policy system sweep passed: ${domainCases.length} domains + ${adversarialCases.length} adversarial cases + ${semanticBridgeCases.length} semantic bridges + ${subjectEventCases.length} subject-event cases + ${caseFrameCases.length} case-frame cases + ${domainCases.length * 5} variants; ${performanceInfo.operations} render ops at ${performanceInfo.perOperationMs}ms/op`
 );

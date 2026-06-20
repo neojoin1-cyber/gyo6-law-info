@@ -112,6 +112,16 @@
     const task = inferDomainTask(domain, normalized, slots);
     const requiredSlots = getEffectiveRequiredSlots(domainCode, domain, task, slots, normalized);
     const missingSlots = requiredSlots.filter((slotName) => !isSlotFilled(slots[slotName]));
+    const caseFrame = buildPolicyCaseFrame({
+      question,
+      normalized,
+      domainCode,
+      domain,
+      task,
+      slots,
+      requiredSlots,
+      missingSlots
+    });
     const clarificationText = explicitFocus.detected ? scoringText : normalized;
     const intentClarification = inferIntentClarification({
       normalized: clarificationText,
@@ -124,7 +134,7 @@
     const selectedDomain = domainCandidates.find((candidate) => candidate.code === domainCode);
     const semanticBridgeConfidence = domainCode && domainCode !== primaryDomain?.code && domainCode !== beforeContextDomainCode ? 0.55 : 0;
     const confidence = Math.max(primaryDomain?.confidence || 0, selectedDomain?.confidence || 0, semanticBridgeConfidence);
-    const lookupPlan = buildLookupPlan(domainCode, domain, task, slots, missingSlots, requiredSlots);
+    const lookupPlan = buildLookupPlan(domainCode, domain, task, slots, missingSlots, requiredSlots, caseFrame);
     if (intentClarification.needsConfirmation) {
       lookupPlan.status = "needsIntentConfirmation";
       lookupPlan.intentClarification = intentClarification;
@@ -142,6 +152,7 @@
       understandingAttempts: summarizeQuestionUnderstandingAttempts(understandingAttempts, selectedUnderstandingAttempt),
       task,
       slots,
+      caseFrame,
       requiredSlots,
       missingSlots,
       intentClarification,
@@ -887,16 +898,251 @@
     return null;
   }
 
-  function buildLookupPlan(domainCode, domain = {}, task = {}, slots = {}, missingSlots = [], requiredSlots = null) {
+  function buildPolicyCaseFrame({
+    question = "",
+    normalized = "",
+    domainCode = "",
+    domain = {},
+    task = {},
+    slots = {},
+    requiredSlots = [],
+    missingSlots = []
+  } = {}) {
+    if (!domainCode) return null;
+    const subject = inferCaseSubject(domainCode, slots, normalized);
+    const event = inferCaseEvent(domainCode, task, slots, normalized);
+    const action = inferCaseAction(task, slots, normalized);
+    const authorityPath = buildAuthorityPath(domainCode, domain, task, slots, subject, event);
+    const schoolRulePolicy = buildSchoolRulePolicy(domainCode, domain, authorityPath);
+    const criticalMissingSlots = inferCriticalMissingSlots(missingSlots, subject, event, action);
+    const expectations = buildCaseAnswerExpectations(domainCode, subject, event, action, authorityPath, schoolRulePolicy);
+    return {
+      version: "20260620-policy-case-frame-v1",
+      question: cleanLongText(question).slice(0, 240),
+      domainCode,
+      domainLabel: domain.label || domainCode,
+      subject,
+      event,
+      action,
+      requiredSlots: requiredSlots || [],
+      criticalMissingSlots,
+      authorityPath,
+      schoolRulePolicy,
+      expectations,
+      strategy: buildCaseStrategy(domainCode, domain, subject, event, action, schoolRulePolicy)
+    };
+  }
+
+  function inferCaseSubject(domainCode = "", slots = {}, normalized = "") {
+    const candidate = slots.targetSubject || slots.travelerRole || slots.instructorProfile || {};
+    const label = candidate.subjectLabel || candidate.roleLabel || candidate.label || "";
+    const roleCode = candidate.roleCode || candidate.code || "";
+    const text = compactText([normalized, label, roleCode].join(" "));
+    let group = "unknown";
+    if (/학생|재학생|졸업생|실습생|현장실습생|도제학생|학습근로자/.test(text) || /^student/.test(roleCode)) group = "student";
+    else if (/교사|교원|선생님|교직원|직원|교장|교감|공무원|행정직|주무관|교육공무직|공무직|기간제|계약제|사립학교|학교법인/.test(text)
+      || ["staffAttendanceService", "bereavementLeave", "domesticTravelExpense"].includes(domainCode)) group = "staff";
+    else if (/학부모|보호자|부모/.test(text)) group = "parent";
+    else if (/학교|기관|교육청|위원회|운영위원회/.test(text)) group = "institution";
+    return {
+      group,
+      roleCode: roleCode || group,
+      label: label || getCaseSubjectFallbackLabel(group),
+      detected: Boolean(label || roleCode || group !== "unknown")
+    };
+  }
+
+  function getCaseSubjectFallbackLabel(group = "") {
+    const labels = {
+      student: "학생",
+      parent: "학부모·보호자",
+      staff: "교직원",
+      institution: "학교·기관"
+    };
+    return labels[group] || "대상자";
+  }
+
+  function inferCaseEvent(domainCode = "", task = {}, slots = {}, normalized = "") {
+    const text = compactText([
+      normalized,
+      task?.code || "",
+      slots.serviceIssue?.label || "",
+      slots.procedureStage?.label || "",
+      slots.evidence?.label || "",
+      slots.schoolRule?.label || "",
+      slots.riskSignal?.label || ""
+    ].join(" "));
+    const domainEvent = {
+      schoolBudgetExecution: ["budgetContract", "예산·계약·지출"],
+      schoolInstructorHonorarium: ["budgetContract", "예산·계약·지출"],
+      classManagementGuidance: ["studentGuidance", "생활지도·선도·징계"],
+      schoolViolenceProcedure: ["studentGuidance", "생활지도·선도·징계"],
+      fieldExperienceLearning: ["fieldExperience", "체험학습·현장실습"],
+      vocationalFieldTrainingOperation: /안전|사고|다쳤|부상|응급|병원/.test(text)
+        ? ["safety", "안전·보건·응급"]
+        : ["fieldExperience", "체험학습·현장실습"]
+    }[domainCode];
+
+    const patterns = [
+      ["bereavement", "가족 사망·경조사", /사망|부모상|배우자상|조부모상|장인상|장모상|시부상|시모상|형제상|상고|경조사/],
+      ["illness", "질병·진단·병가", /질병|병가|진단서|입원|통원|요양|의사|한의사|치과의사/],
+      ["attendance", "출결·근태·시간 산정", /출결|출석|결석|인정결석|지각|조퇴|외출|근태|근무상황|초과근무|시간외|공휴일|토요일|휴일|산입|제외|계산/],
+      ["studentGuidance", "생활지도·선도·징계", /생활지도|수업방해|지시불응|지시.{0,12}따르지|따르지않|앉지않|선도|징계|훈육|상담|자리|휴대전화|핸드폰|소지품/],
+      ["safety", "안전·보건·응급", /안전|응급|119|사고|다쳤|골절|보건|감염병|식중독|위험|중대재해/],
+      ["privacyRecords", "개인정보·기록·공개", /개인정보|정보공개|비공개|CCTV|영상|사진|녹음|상담기록|학생부|생활기록부|기록|공개/],
+      ["budgetContract", "예산·계약·지출", /예산|품의|계약|검수|지출|정산|영수증|세금계산서|강사료|강사수당/],
+      ["fieldExperience", "체험학습·현장실습", /체험학습|교외체험|현장체험|수학여행|수련활동|현장실습|도제|표준협약|실습기업/],
+      ["admissionAcademic", "학적·평가·교육과정", /입학|전입학|자퇴|퇴학|졸업|학적|평가|성적|부정행위|교육과정|NCS|학점/],
+      ["complaintDispute", "민원·불복·분쟁", /민원|항의|이의|불복|재심|소명|학부모|국민신문고|분쟁|소송|고소|아동학대/]
+    ];
+    const found = patterns.find(([, , pattern]) => pattern.test(text));
+    const selected = found || (domainEvent ? [...domainEvent, /./] : null);
+    return {
+      code: selected?.[0] || "generalPolicy",
+      label: selected?.[1] || "일반 규정 사안",
+      detected: Boolean(selected),
+      signals: patterns.filter(([, , pattern]) => pattern.test(text)).map(([code]) => code).slice(0, 6)
+    };
+  }
+
+  function inferCaseAction(task = {}, slots = {}, normalized = "") {
+    const text = compactText([
+      normalized,
+      task?.code || "",
+      slots.procedureStage?.label || "",
+      slots.evidence?.label || ""
+    ].join(" "));
+    const actions = [
+      ["amountOrDays", "일수·금액·시간 산정", /며칠|몇일|몇\s*일|일수|금액|얼마|상한|한도|시간|계산|산정|공휴일|토요일|산입|제외/],
+      ["evidence", "증빙·서류", /서류|증빙|첨부|진단서|확인서|동의서|신청서|보고서|회의록|기록/],
+      ["procedure", "신청·승인·처리 절차", /절차|신청|승인|상신|보고|처리|어떻게|뭐\s*해야|할\s*수|조치/],
+      ["eligibility", "가능 여부·적용 대상", /가능|되나|되나요|할\s*수|인정|대상|적용|해당/],
+      ["risk", "위험·분쟁·불복", /위험|안전|인권|개인정보|불복|이의|민원|분쟁|아동학대|교권|책임/],
+      ["source", "근거·원문", /근거|규정|조문|법령|지침|원문|출처/]
+    ];
+    const found = actions.find(([, , pattern]) => pattern.test(text));
+    return {
+      code: found?.[0] || task?.code || "procedure",
+      label: found?.[1] || getTaskLabel("", task?.code || "") || "처리 기준",
+      detected: Boolean(found || task?.code)
+    };
+  }
+
+  function buildAuthorityPath(domainCode = "", domain = {}, task = {}, slots = {}, subject = {}, event = {}) {
+    const domainLabel = domain.label || domainCode || "학교 규정";
+    const taskLabel = getTaskLabel(domainCode, task?.code || "");
+    const officeLabel = slots.office?.label || "경상북도교육청";
+    const sourceKeys = domain.sourceKeys || [];
+    const tier = (code, label, query, reason, position = "primary", keys = []) => ({
+      tier: code,
+      label,
+      query,
+      reason,
+      position,
+      sourceKeys: uniqueStrings(keys).slice(0, 8)
+    });
+
+    if (["staffAttendanceService", "bereavementLeave", "domesticTravelExpense"].includes(domainCode)) {
+      return [
+        tier("officialRule", "공통 법령·예규·일수표", `${domainLabel} ${event.label} ${taskLabel} 국가공무원 복무규정 교원휴가 예규 근로기준법`, "신분별 세부 문서보다 먼저 적용되는 공통 기준", "primary", sourceKeys),
+        tier("educationOfficeGuideline", `${officeLabel} 운영 지침`, `${officeLabel} ${domainLabel} ${event.label} 지침`, "공통 기준을 교육청이 어떻게 집행하는지 확인", "secondary", sourceKeys),
+        tier("employmentExecutionRule", "임용계약·취업규칙·학교법인 복무규정", `${domainLabel} ${event.label} 임용계약 취업규칙 복무규정`, "법령·예규로 남는 기관별 집행 방식 최종 대조", "finalExecutionCheck", sourceKeys)
+      ];
+    }
+
+    if (domainCode === "schoolBudgetExecution" || domainCode === "schoolInstructorHonorarium") {
+      return [
+        tier("educationOfficeGuideline", `${officeLabel} 학교회계·수당 지침`, `${officeLabel} ${domainLabel} ${taskLabel} 지침`, "학교 회계·수당은 해당 학년도 교육청 지침이 직접 집행 기준이 되는 경우가 많음", "primary", sourceKeys),
+        tier("nationalLaw", "지방계약·회계·공공기록 상위 기준", `${domainLabel} ${taskLabel} 지방계약 회계 공공기록`, "교육청 지침을 뒷받침하는 상위 법령 확인", "secondary", sourceKeys),
+        tier("schoolExecutionRule", "학교 내부 결재·품의·검수 기준", `${domainLabel} ${taskLabel} 내부 결재 품의 검수`, "학교별 결재선과 증빙 제출 방식 최종 대조", "finalExecutionCheck", sourceKeys)
+      ];
+    }
+
+    if (isOntologySchoolDomain(domainCode)) {
+      if (domain.sourcePriorityDefault === "office") {
+        return [
+          tier("educationOfficeGuideline", `${officeLabel} 공식 지침`, `${officeLabel} ${domainLabel} ${taskLabel} 공식 지침 원문`, "시도교육청 지침이 직접 운영 기준인 영역", "primary", sourceKeys),
+          tier("ministryGuideline", "상위 법령·고시·교육부 지침", `${domainLabel} ${taskLabel} 법령 고시 교육부 지침`, "교육청 지침보다 상위의 공통 기준 확인", "secondary", sourceKeys),
+          tier("schoolRule", "학교생활규정·학칙·위원회 규정", `${domainLabel} ${taskLabel} 학교생활규정 학칙 원문`, "상위 기준으로도 남는 학교별 세부 집행 기준 최종 대조", "finalExecutionCheck", sourceKeys)
+        ];
+      }
+      return [
+        tier("ministryGuideline", "상위 법령·고시·교육부 지침", `${domainLabel} ${taskLabel} 법령 고시 교육부 지침`, "학교·교육청 세부 기준보다 먼저 적용되는 상위 기준", "primary", sourceKeys),
+        tier("educationOfficeGuideline", `${officeLabel} 공식 지침`, `${officeLabel} ${domainLabel} ${taskLabel} 공식 지침 원문`, "상위 기준을 교육청이 어떻게 구체화했는지 확인", "secondary", sourceKeys),
+        tier("schoolRule", "학교생활규정·학칙·위원회 규정", `${domainLabel} ${taskLabel} 학교생활규정 학칙 원문`, "상위 기준으로도 남는 학교별 세부 집행 기준 최종 대조", "finalExecutionCheck", sourceKeys)
+      ];
+    }
+
+    return [
+      tier("nationalLaw", "상위 법령·공통 기준", `${domainLabel} ${taskLabel} 법령 원문`, "먼저 적용할 공통 공식 기준 확인", "primary", sourceKeys),
+      tier("educationOfficeGuideline", `${officeLabel} 지침`, `${officeLabel} ${domainLabel} ${taskLabel} 지침`, "소속 교육청 집행 기준 확인", "secondary", sourceKeys),
+      tier("localExecutionRule", "기관별 세부 집행 기준", `${domainLabel} ${taskLabel} 내부 규정`, "남는 세부 집행 방식 최종 대조", "finalExecutionCheck", sourceKeys)
+    ];
+  }
+
+  function buildSchoolRulePolicy(domainCode = "", domain = {}, authorityPath = []) {
+    const schoolRule = authorityPath.find((item) => /schoolRule|schoolExecutionRule|localExecutionRule|employmentExecutionRule/.test(item.tier));
+    const isFinal = Boolean(schoolRule?.position === "finalExecutionCheck");
+    return {
+      position: isFinal ? "finalExecutionCheck" : "notPrimary",
+      label: schoolRule?.label || "학교별 세부 집행 기준",
+      mustNotLead: isFinal && isOntologySchoolDomain(domainCode),
+      instruction: isFinal
+        ? "학교·내부 규정은 상위 법령·고시·교육청 지침으로도 남는 세부 집행 기준을 최종 대조할 때 사용합니다."
+        : "내부 규정은 공통 기준과 함께 대조합니다."
+    };
+  }
+
+  function inferCriticalMissingSlots(missingSlots = [], subject = {}, event = {}, action = {}) {
+    const criticalByAction = {
+      amountOrDays: new Set(["targetSubject", "travelerRole", "familyRelation", "dateRange", "expenseItems", "destination", "lectureDuration"]),
+      evidence: new Set(["targetSubject", "travelerRole", "serviceIssue", "procedureStage"]),
+      procedure: new Set(["targetSubject", "travelerRole", "procedureStage", "riskSignal"]),
+      eligibility: new Set(["targetSubject", "travelerRole", "familyRelation", "schoolLevel", "employmentType"]),
+      risk: new Set(["targetSubject", "riskSignal", "evidence", "procedureStage"])
+    };
+    const critical = criticalByAction[action.code] || new Set(["targetSubject", "travelerRole", "procedureStage", "riskSignal"]);
+    return (missingSlots || []).filter((slot) => critical.has(slot));
+  }
+
+  function buildCaseAnswerExpectations(domainCode = "", subject = {}, event = {}, action = {}, authorityPath = [], schoolRulePolicy = {}) {
+    const expectedAuthorityTiers = authorityPath.map((item) => item.tier);
+    const forbiddenPatterns = [];
+    if (subject.group === "student" && isOntologySchoolDomain(domainCode)) {
+      forbiddenPatterns.push("공립 교원", "국가공무원 복무규정", "교원휴가", "나이스 근무상황", "경조사휴가");
+    }
+    if (subject.group === "staff" && ["staffAttendanceService", "bereavementLeave"].includes(domainCode)) {
+      forbiddenPatterns.push("학생 출석인정결석", "학교생활기록부 기재요령으로 처리");
+    }
+    return {
+      conclusionFirst: true,
+      expectedAuthorityTiers,
+      forbiddenPatterns,
+      schoolRulePosition: schoolRulePolicy.position,
+      userDelegationPolicy: "자료 부족·원문 확인 책임을 사용자에게 넘기기 전에 시스템 자동 자료확충·재검증 경로를 제시합니다.",
+      askUserOnlyWhen: "대상자, 사건, 기간, 가족관계처럼 결론 자체가 달라지는 핵심 사실이 질문에 없고 자동 추론도 불가능할 때만 묻습니다."
+    };
+  }
+
+  function buildCaseStrategy(domainCode = "", domain = {}, subject = {}, event = {}, action = {}, schoolRulePolicy = {}) {
+    const authorityText = schoolRulePolicy.position === "finalExecutionCheck"
+      ? "상위 공식 기준을 먼저 적용하고 학교·내부 규정은 최종 세부 집행 기준으로만 대조"
+      : "공식 기준과 기관별 집행 기준을 순차 대조";
+    return `${subject.label || "대상자"}의 ${event.label || "사안"}은 ${action.label || "처리 기준"} 관점에서 ${authorityText}합니다.`;
+  }
+
+  function buildLookupPlan(domainCode, domain = {}, task = {}, slots = {}, missingSlots = [], requiredSlots = null, caseFrame = null) {
     if (!domainCode) return { status: "unclassified", actions: [] };
     const dataCoverage = buildDataCoverage(domainCode, domain, task, slots, missingSlots, requiredSlots);
-    const sourceExpansion = buildSourceExpansionPlan(domainCode, domain, task, slots, missingSlots, requiredSlots, dataCoverage);
+    const sourceExpansion = buildSourceExpansionPlan(domainCode, domain, task, slots, missingSlots, requiredSlots, dataCoverage, caseFrame);
     const required = requiredSlots || domain.requiredSlots || [];
     return {
       status: missingSlots.length ? "needsSlotConfirmation" : "ready",
       domainCode,
       taskCode: task.code || "unknown",
       sourcePriority: domain.sourcePriorityDefault || "national",
+      caseFrame,
+      sourceHierarchy: caseFrame?.authorityPath || [],
       dataCoverage,
       sourceExpansion,
       requiredSlots: required,
@@ -956,7 +1202,7 @@
     };
   }
 
-  function buildSourceExpansionPlan(domainCode, domain = {}, task = {}, slots = {}, missingSlots = [], requiredSlots = null, dataCoverage = {}) {
+  function buildSourceExpansionPlan(domainCode, domain = {}, task = {}, slots = {}, missingSlots = [], requiredSlots = null, dataCoverage = {}, caseFrame = null) {
     const required = requiredSlots || domain.requiredSlots || [];
     const missing = uniqueStrings([...(missingSlots || []), ...required.filter((slotName) => !isSlotFilled(slots[slotName]))]);
     const sourceTargets = uniqueStrings(dataCoverage.sourceTargets || domain.sourceKeys || []);
@@ -980,7 +1226,15 @@
       || (isSchoolDomain && sourceTargets.length < 3)
     );
 
+    const hierarchyTargets = (caseFrame?.authorityPath || []).map((item) => ({
+      tier: item.tier,
+      label: item.label,
+      query: item.query,
+      reason: item.reason
+    }));
+
     const acquisitionTargets = uniqueObjectsByKey([
+      ...hierarchyTargets,
       isSchoolDomain ? {
         tier: "ministryGuideline",
         label: "상위 법령·고시·교육부 지침 원문",
@@ -1223,8 +1477,9 @@
     const subjectLabel = getSubjectLabelFromSlots(slots, roleLabel);
     const domainLabel = domain.label || frame.domainLabel || "규정·지침";
     const taskLabel = getTaskLabel(domainCode, frame.task?.code);
+    const caseFrame = frame.caseFrame || lookup?.lookupPlan?.caseFrame || null;
 
-    return {
+    const response = {
       engineVersion: VERSION,
       domain: domainCode,
       categoryCode: domain.categoryCode || frame.categoryCode || "",
@@ -1232,6 +1487,7 @@
       roleLabel: subjectLabel,
       title: `${domainLabel} 확인 기준`,
       lead: buildGenericDomainLead(domainCode, domainLabel, taskLabel, subjectLabel, slots, officeLabel, frame),
+      caseFrame,
       sourcePriority: lookup?.sourcePriority || domain.sourcePriorityDefault || "national",
       sourceKeys: lookup?.sourceKeys || domain.sourceKeys || [],
       ruleLookup: lookup,
@@ -1242,6 +1498,100 @@
       queries: buildGenericDomainQueries(domainCode, domainLabel, taskLabel, subjectLabel, slots, officeLabel, lookup),
       caution: buildGenericDomainCaution(domainCode, frame, officeLabel)
     };
+    response.qualityGate = buildPolicyAnswerQualityGate(response, frame, caseFrame);
+    return response;
+  }
+
+  function buildPolicyAnswerQualityGate(response = {}, frame = {}, caseFrame = null) {
+    const text = collectPolicyResponseText(response);
+    const violations = [];
+    if (!caseFrame) {
+      return {
+        status: "unchecked",
+        violations,
+        checkedAt: "engine"
+      };
+    }
+
+    if (caseFrame.subject?.group === "student" && hasWrongStaffAuthorityForStudentText(text)) {
+      violations.push({
+        code: "subject_authority_mismatch",
+        message: "학생 사안에 교직원 복무·경조사휴가 기준이 답변 근거로 섞였습니다."
+      });
+    }
+
+    if (caseFrame.subject?.group === "staff" && /학생\s*출석인정결석|학교생활기록부\s*기재요령으로\s*처리/.test(text)) {
+      violations.push({
+        code: "subject_authority_mismatch",
+        message: "교직원 복무 사안에 학생 출결 기준이 답변 근거로 섞였습니다."
+      });
+    }
+
+    if (caseFrame.schoolRulePolicy?.mustNotLead && hasPrematureSchoolRuleLead(response.lead || "", text)) {
+      violations.push({
+        code: "premature_school_rule",
+        message: "학교 규정이 상위 법령·고시·교육청 지침보다 앞선 1차 근거처럼 제시되었습니다."
+      });
+    }
+
+    if (isUserDelegationText(text)) {
+      violations.push({
+        code: "delegates_source_work_to_user",
+        message: "자료 부족 또는 원문 확인 책임을 사용자에게 돌리는 문장이 감지되었습니다."
+      });
+    }
+
+    if (isOntologySchoolDomain(frame.domainCode || response.domain || "") && !hasAuthorityHierarchySignal(text)) {
+      violations.push({
+        code: "missing_authority_hierarchy",
+        message: "학교 현장 사안인데 상위 기준→교육청 지침→학교 규정 순서가 답변에 드러나지 않습니다."
+      });
+    }
+
+    return {
+      status: violations.length ? "needsRecheck" : "pass",
+      violations,
+      expectedAuthorityTiers: caseFrame.expectations?.expectedAuthorityTiers || [],
+      forbiddenPatterns: caseFrame.expectations?.forbiddenPatterns || [],
+      schoolRulePosition: caseFrame.schoolRulePolicy?.position || "",
+      checkedAt: "engine"
+    };
+  }
+
+  function collectPolicyResponseText(response = {}) {
+    return [
+      response.title,
+      response.lead,
+      ...asArray(response.answer),
+      ...asArray(response.steps),
+      response.caution
+    ].map((value) => cleanLongText(typeof value === "string" ? value : value?.text || value?.summary || "")).filter(Boolean).join(" ");
+  }
+
+  function hasWrongStaffAuthorityForStudentText(text = "") {
+    const normalized = cleanLongText(text);
+    if (/교직원|교원|국가공무원|교원휴가|나이스\s*근무상황|경조사휴가/.test(normalized) && /아니라|적용하지/.test(normalized)) {
+      return false;
+    }
+    return /공립\s*교원|국가공무원\s*복무규정|교원휴가|나이스\s*근무상황|경조사휴가/.test(normalized);
+  }
+
+  function hasPrematureSchoolRuleLead(lead = "", fullText = "") {
+    const leadText = cleanLongText(lead);
+    const text = cleanLongText(fullText);
+    const schoolRuleFirst = /(학교생활규정|학생생활규정|학칙|학급\s*규칙|위원회\s*규정|기숙사\s*운영규정|학업성적관리규정).{0,28}(먼저|우선|직접적인 기준|기반)/.test(leadText);
+    if (!schoolRuleFirst) return false;
+    return !hasAuthorityHierarchySignal(text);
+  }
+
+  function isUserDelegationText(text = "") {
+    const normalized = cleanLongText(text);
+    if (/시스템이|GYO6|자동\s*자료확충|재검증|확보되는\s*즉시/.test(normalized)) return false;
+    return /증빙자료가\s*부족|자료가\s*부족|근거가\s*부족|원문을\s*확인|직접\s*확인해야|직접\s*확인|공식\s*문서.*직접\s*확인|확인하시기\s*바랍니다/.test(normalized);
+  }
+
+  function hasAuthorityHierarchySignal(text = "") {
+    return /(상위\s*(?:법령|기준)|법령|고시|교육부\s*지침|교육청\s*지침|국가법령정보센터|학교생활기록부\s*기재요령|학교생활기록\s*작성|초·중등교육법|교원의\s*학생생활지도|공공기록물|정보공개|개인정보\s*보호법|학교안전|학교급식법|특수교육법|직업교육훈련|교원지위법|최종\s*대조|세부\s*집행\s*기준|순차\s*대조)/.test(cleanLongText(text));
   }
 
   function buildGenericDomainLead(domainCode, domainLabel, taskLabel, subjectLabel, slots, officeLabel, frame = {}) {
@@ -3443,6 +3793,15 @@
 
   function compactText(value) {
     return normalizeCommonPolicyInput(value).replace(/\s+/g, "");
+  }
+
+  function cleanLongText(value = "") {
+    return String(value || "").replace(/\s+/g, " ").trim();
+  }
+
+  function asArray(value) {
+    if (!value) return [];
+    return Array.isArray(value) ? value : [value];
   }
 
   function normalizeCommonPolicyInput(value = "") {

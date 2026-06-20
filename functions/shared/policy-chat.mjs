@@ -940,6 +940,7 @@ function compactSemanticFrame(frame = {}) {
     missingSlots: frame.missingSlots || [],
     lookupStatus: frame.lookupPlan?.status || "",
     sourceExpansion: frame.lookupPlan?.sourceExpansion || null,
+    caseFrame: compactPolicyCaseFrame(frame.caseFrame || frame.lookupPlan?.caseFrame),
     intentClarification: compactIntentClarification(frame.intentClarification),
     candidates: (frame.domainCandidates || []).slice(0, 3).map((candidate) => ({
       code: candidate.code,
@@ -947,6 +948,45 @@ function compactSemanticFrame(frame = {}) {
       confidence: candidate.confidence,
       matchedKeywords: candidate.matchedKeywords || []
     }))
+  };
+}
+
+function compactPolicyCaseFrame(caseFrame = null) {
+  if (!caseFrame || typeof caseFrame !== "object") return null;
+  return {
+    version: cleanText(caseFrame.version || ""),
+    domainCode: cleanText(caseFrame.domainCode || ""),
+    subject: {
+      group: cleanText(caseFrame.subject?.group || ""),
+      roleCode: cleanText(caseFrame.subject?.roleCode || ""),
+      label: cleanText(caseFrame.subject?.label || "")
+    },
+    event: {
+      code: cleanText(caseFrame.event?.code || ""),
+      label: cleanText(caseFrame.event?.label || "")
+    },
+    action: {
+      code: cleanText(caseFrame.action?.code || ""),
+      label: cleanText(caseFrame.action?.label || "")
+    },
+    criticalMissingSlots: (caseFrame.criticalMissingSlots || []).map(cleanText).filter(Boolean).slice(0, 8),
+    authorityPath: (caseFrame.authorityPath || []).map((item) => ({
+      tier: cleanText(item?.tier || ""),
+      label: cleanText(item?.label || ""),
+      position: cleanText(item?.position || ""),
+      reason: cleanText(item?.reason || "")
+    })).filter((item) => item.tier || item.label).slice(0, 6),
+    schoolRulePolicy: {
+      position: cleanText(caseFrame.schoolRulePolicy?.position || ""),
+      label: cleanText(caseFrame.schoolRulePolicy?.label || ""),
+      mustNotLead: Boolean(caseFrame.schoolRulePolicy?.mustNotLead)
+    },
+    expectations: {
+      expectedAuthorityTiers: (caseFrame.expectations?.expectedAuthorityTiers || []).map(cleanText).filter(Boolean).slice(0, 8),
+      forbiddenPatterns: (caseFrame.expectations?.forbiddenPatterns || []).map(cleanText).filter(Boolean).slice(0, 8),
+      schoolRulePosition: cleanText(caseFrame.expectations?.schoolRulePosition || "")
+    },
+    strategy: cleanText(caseFrame.strategy || "")
   };
 }
 
