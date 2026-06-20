@@ -14,6 +14,17 @@ assert.equal(functionPolicyParentLeave.needsClarification, false);
 assert.match(functionPolicyParentLeave.answerState.primaryText, /본인 부모 사망 경조사휴가는 5일/);
 assert.doesNotMatch(functionPolicyParentLeave.responseText, /질문 요지 확인 필요|가족관계를 먼저 확정|확정해야 최종 답/);
 
+const functionPolicyParentLeaveHoliday = handlePolicyChatRequest({
+  question: "교원의 부모상 5일 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+  officeLabel: "경상북도교육청",
+  roleLabel: "교원"
+});
+assert.equal(functionPolicyParentLeaveHoliday.ok, true);
+assert.equal(functionPolicyParentLeaveHoliday.semanticFrame.domainCode, "bereavementLeave");
+assert.equal(functionPolicyParentLeaveHoliday.needsClarification, false);
+assert.match(functionPolicyParentLeaveHoliday.responseText, /토요일·공휴일.*산입하지|토요일.*공휴일.*제외/);
+assert.doesNotMatch(functionPolicyParentLeaveHoliday.responseText, /질문 요지 확인 필요|기간을 먼저 확인|가족관계를 먼저 확정/);
+
 const baseResult = {
   ok: true,
   question: "교사의 병가 신청 서류는?",
@@ -449,6 +460,7 @@ const bereavementBaseResult = {
     answer: [
       "공립 교원·국가공무원 기준으로 본인 부모 사망 경조사휴가는 5일입니다.",
       "근거는 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표이며, 공립 교원은 교원휴가에 관한 예규와 나이스 근무상황 신청 절차를 함께 확인합니다.",
+      "경조사휴가 기간 중 토요일·공휴일은 휴가일수에 산입하지 않습니다. 따라서 중간에 공휴일이 끼면 그 날은 5일 같은 경조사휴가 일수에서 제외해 계산합니다.",
       "사립학교 교원·교육공무직은 학교법인 복무규정, 취업규칙, 단체협약에서 같은 경조사휴가를 어떻게 정했는지 대조하되, 이미 확정된 공립 교원 기준 일수 자체를 흐리지 않습니다."
     ],
     steps: [
@@ -472,7 +484,8 @@ const staleBereavementRemoteResult = {
     lead: "공립 교원의 경조사휴가는 가족관계와 대상 신분을 먼저 확정해야 일수와 신청 절차를 판단할 수 있습니다.",
     answer: [
       "복무·근태는 신분과 고용 형태에 따라 적용 규정이 달라집니다.",
-      "공립 교원, 지방공무원, 교육공무직, 기간제, 사립학교 여부를 확정해야 최종 답을 낼 수 있습니다."
+      "공립 교원, 지방공무원, 교육공무직, 기간제, 사립학교 여부를 확정해야 최종 답을 낼 수 있습니다.",
+      "공휴일이 끼면 소속기관 복무 지침을 먼저 확인해야 합니다."
     ],
     steps: ["가족관계와 대상 신분을 먼저 확정"],
     caution: "소속 교육청 지침과 학교법인 규정을 직접 확인해야 합니다."
@@ -514,7 +527,8 @@ try {
   ].join(" ");
   assert.match(guardedText, /본인 부모 사망 경조사휴가는 5일/);
   assert.match(guardedText, /국가공무원 복무규정|교원휴가에 관한 예규/);
-  assert.doesNotMatch(guardedText, /가족관계와 대상 신분을 먼저 확정|확정해야 최종 답|직접 확인해야/);
+  assert.match(guardedText, /토요일·공휴일.*산입하지|토요일.*공휴일.*제외/);
+  assert.doesNotMatch(guardedText, /가족관계와 대상 신분을 먼저 확정|확정해야 최종 답|직접 확인해야|공휴일이 끼면 소속기관/);
   assert.equal(guarded.needsClarification, false);
   assert.deepEqual(guarded.missingSlots, []);
   assert.equal(guarded.remoteLocalLlm.ok, true);

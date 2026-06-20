@@ -826,6 +826,20 @@ if (parentLeaveGuideHtml.includes("가족관계를 먼저 확정") || parentLeav
   failures.push("policy-guide-parent-leave: should not defer already-specific parent bereavement question");
 }
 
+const parentLeaveHolidayGuide = context.buildPolicyGuideResponse({
+  question: "교원의 부모상 5일 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+  officeCode: "gyeongbuk",
+  roleCode: "teacher",
+  categoryCode: "leaveAttendance"
+});
+const parentLeaveHolidayGuideHtml = context.renderPolicyGuideResponse(parentLeaveHolidayGuide);
+if (!parentLeaveHolidayGuideHtml.includes("토요일·공휴일") || !parentLeaveHolidayGuideHtml.includes("산입하지") || !parentLeaveHolidayGuideHtml.includes("5일")) {
+  failures.push("policy-guide-parent-leave-holiday: expected holiday exclusion rule for bereavement leave day count");
+}
+if (parentLeaveHolidayGuideHtml.includes("기간을 먼저 확인") || parentLeaveHolidayGuideHtml.includes("질문 요지 확인 필요") || parentLeaveHolidayGuideHtml.includes("가족관계를 먼저 확정")) {
+  failures.push("policy-guide-parent-leave-holiday: should not defer holiday calculation when relation and leave days are clear");
+}
+
 const spouseUncleLeaveGuide = context.buildPolicyGuideResponse({
   question: "교사의 배우자의 삼촌상은 휴가 몇일인가요?",
   officeCode: "auto",

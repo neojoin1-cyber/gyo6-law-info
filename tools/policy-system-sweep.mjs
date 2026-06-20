@@ -178,6 +178,13 @@ const domainCases = [
     exclude: ["질문 요지 확인 필요", "가족관계를 먼저 확정", "최종 답을 낼 수 있습니다"]
   },
   {
+    id: "bereavement-teacher-parent-holiday",
+    domain: "bereavementLeave",
+    question: "교원의 부모상 5일 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+    include: ["토요일", "공휴일", "산입하지"],
+    exclude: ["질문 요지 확인 필요", "기간을 먼저 확인", "가족관계를 먼저 확정"]
+  },
+  {
     id: "staff-sick-leave",
     domain: "staffAttendanceService",
     question: "정규교사의 병가는 며칠 가능하며 진단서는 언제 필요한가요?",

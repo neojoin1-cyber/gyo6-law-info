@@ -4508,7 +4508,8 @@ function buildBereavementLeaveRule(normalized) {
     relation.code
       ? `${relation.label} 관계는 이미 질문에서 확인되었으므로 같은 관계의 경조사휴가 일수표를 우선 적용`
       : "경조사 대상과 본인·배우자 기준의 가족관계를 정확히 구분",
-    "휴가 시작일, 휴일 포함 방식, 나이스 신청 종별, 증빙자료 제출 기준 확인"
+    "휴가 시작일을 정한 뒤 토요일·공휴일은 경조사휴가 일수에서 제외하여 종료일 계산",
+    "나이스 신청 종별, 사망 사실과 가족관계 증빙자료 제출 기준 확인"
   ];
 
   if (relation.listed === false) {
@@ -4539,6 +4540,7 @@ function buildBereavementLeaveRule(normalized) {
     answer: [
       `공립 교원·국가공무원 기준으로 ${relation.label} 사망 경조사휴가는${conditionText} ${relation.leaveDays}일입니다.`,
       "근거는 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표입니다.",
+      "경조사휴가 기간 중 토요일·공휴일은 휴가일수에 산입하지 않습니다. 따라서 중간에 공휴일이 끼면 그 날은 5일 같은 경조사휴가 일수에서 제외해 계산합니다.",
       "공립 교원은 교원휴가에 관한 예규와 나이스 근무상황 신청, 학교장 승인 절차를 함께 확인합니다.",
       "지방공무원·행정직은 지방공무원 복무규정과 관할 교육청 복무 조례·예규를 대조합니다.",
       "기간제교사는 공립학교 계약제교원 운영 지침에서 신청·보수 처리 절차를 함께 확인합니다.",
@@ -4548,10 +4550,11 @@ function buildBereavementLeaveRule(normalized) {
     sourceKeys,
     queries: [
       `국가공무원 복무규정 제20조 별표2 ${relation.label} 사망 ${relation.leaveDays}일`,
+      "국가공무원 복무규정 경조사휴가 토요일 공휴일 산입하지 아니한다",
       `교원휴가에 관한 예규 ${relation.label} 경조사휴가`,
       `교육공무직 경조사휴가 ${relation.label}`
     ],
-    caution: relation.legalCondition || "실제 신청 전에는 사망 사실과 가족관계 증빙, 휴가 시작일, 나이스 또는 소속기관 신청 절차를 확인합니다."
+    caution: relation.legalCondition || "실제 신청 전에는 사망 사실과 가족관계 증빙, 휴가 시작일, 토요일·공휴일 제외 산정, 나이스 또는 소속기관 신청 절차를 확인합니다."
   };
 }
 

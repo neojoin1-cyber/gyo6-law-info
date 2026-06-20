@@ -826,7 +826,8 @@
       const familyRelation = slots.familyRelation || {};
       const taskCode = task?.code || "";
       const asksLeaveDays = taskCode === "leaveDays" || /며칠|몇일|일수|휴가일수|기간|몇일간|몇일쓸|몇일사용/.test(normalized);
-      if (familyRelation.detected && (asksLeaveDays || taskCode === "eligibility")) {
+      const asksCalendarTreatment = /공휴일|토요일|일요일|주말|휴일|빨간날|연휴|끼면|포함|산입|제외|계산/.test(normalized);
+      if (familyRelation.detected && (asksLeaveDays || asksCalendarTreatment || taskCode === "eligibility")) {
         return requiredSlots.filter((slotName) => slotName !== "dateRange");
       }
     }
@@ -1289,6 +1290,7 @@
         return uniqueStrings([
           `공립 교원·국가공무원 기준으로 ${relation} 사망 경조사휴가는${condition} ${relationRule.leaveDays}일입니다.`,
           "근거는 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표이며, 공립 교원은 교원휴가에 관한 예규와 나이스 근무상황 신청 절차를 함께 확인합니다.",
+          "경조사휴가 기간 중 토요일·공휴일은 휴가일수에 산입하지 않습니다. 따라서 중간에 공휴일이 끼면 그 날은 5일 같은 경조사휴가 일수에서 제외해 계산합니다.",
           "지방공무원은 지방공무원 복무규정과 관할 교육청 복무 기준을 대조하고, 기간제교사는 공립학교 계약제교원 운영 지침의 신청·보수 처리 절차를 함께 확인합니다.",
           "사립학교 교원·교육공무직은 학교법인 복무규정, 취업규칙, 단체협약에서 같은 경조사휴가를 어떻게 정했는지 대조하되, 이미 확정된 공립 교원 기준 일수 자체를 흐리지 않습니다."
         ]);
@@ -2168,7 +2170,8 @@
         slots.familyRelation?.detected
           ? `${slots.familyRelation.label} 관계는 이미 질문에서 확인되었으므로 같은 관계의 경조사휴가 일수표를 우선 적용`
           : "본인 부모, 배우자 부모, 배우자, 자녀, 조부모 등 가족관계 확정",
-        "휴가 시작일, 휴일 포함 방식, 증빙서류, 나이스 신청 종별 확인",
+        "휴가 시작일을 정한 뒤 토요일·공휴일은 경조사휴가 일수에서 제외하여 종료일 계산",
+        "사망 사실과 가족관계 증빙서류, 나이스 신청 종별 확인",
         "교육공무직·기간제·사립학교는 취업규칙·단체협약·학교법인 규정 우선 대조"
       ]);
     }
@@ -2228,6 +2231,7 @@
       return uniqueStrings([
         ...corpusQueries,
         `국가공무원 복무규정 별표2 ${relation} 경조사휴가`,
+        "국가공무원 복무규정 경조사휴가 토요일 공휴일 산입하지 아니한다",
         `교원휴가에 관한 예규 ${relation} 경조사휴가`,
         `지방공무원 복무규정 ${relation} 특별휴가`,
         `교육공무직 취업규칙 ${relation} 경조사휴가`
@@ -2281,7 +2285,7 @@
     if (domainCode === "bereavementLeave") {
       const relationRule = frame.slots?.familyRelation || {};
       if (relationRule.detected && Number.isFinite(relationRule.leaveDays) && relationRule.leaveDays > 0) {
-        return `${missingPrefix}공립 교원·국가공무원 기준 일수는 ${relationRule.leaveDays}일로 먼저 답하고, 기간제·사립학교·교육공무직 등은 신청 절차, 보수 처리, 소속기관 경조사휴가표를 세부 집행 기준으로 대조합니다.`;
+        return `${missingPrefix}공립 교원·국가공무원 기준 일수는 ${relationRule.leaveDays}일로 먼저 답하고, 토요일·공휴일은 경조사휴가 일수에 산입하지 않는 산정 규칙을 함께 적용합니다. 기간제·사립학교·교육공무직 등은 신청 절차, 보수 처리, 소속기관 경조사휴가표를 세부 집행 기준으로 대조합니다.`;
       }
       return `${missingPrefix}경조사휴가는 가족관계별 일수표에 열거된 관계만 먼저 적용합니다. 열거되지 않은 방계친족은 일반 부모상·배우자 부모상 일수를 확대 적용하지 않고, 소속기관 별도 규정을 세부 집행 기준으로 대조합니다.`;
     }

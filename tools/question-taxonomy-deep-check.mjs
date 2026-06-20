@@ -413,6 +413,12 @@ const taxonomyCases = [
     forbidIntents: ["spouseChildbirthLeave"]
   },
   {
+    id: "taxonomy-teacher-parent-holiday",
+    question: "교원의 부모상 5일 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+    intent: "bereavementLeave",
+    forbidIntents: ["spouseChildbirthLeave"]
+  },
+  {
     id: "taxonomy-travel-not-attendance",
     question: "관외출장 중 일비와 식비를 계산하려고 합니다. 외출 처리가 아니라 출장입니다.",
     intent: "domesticTravelExpense",
@@ -550,6 +556,14 @@ const guideCases = [
     needsIntentConfirmation: false,
     mustInclude: ["본인 부모", "경조사휴가는 5일", "국가공무원 복무규정"],
     mustNotInclude: ["질문 요지 확인 필요", "가족관계를 먼저 확정", "최종 답을 낼 수 있습니다"]
+  },
+  {
+    id: "guide-teacher-parent-bereavement-holiday",
+    question: "교원의 부모상 5일 중 중간에 공휴일이 있으면 어떻게 계산하나요?",
+    domain: "bereavementLeave",
+    needsIntentConfirmation: false,
+    mustInclude: ["토요일·공휴일", "산입하지", "5일"],
+    mustNotInclude: ["질문 요지 확인 필요", "기간을 먼저 확인", "가족관계를 먼저 확정"]
   },
   {
     id: "guide-travel-not-attendance",

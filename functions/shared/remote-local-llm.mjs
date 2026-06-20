@@ -304,9 +304,11 @@ function getRequiredPolicyAnchorLines(baseResult = {}) {
   if (frame.domainCode === "bereavementLeave") {
     const leaveDaysLine = sourceLines.find((line) => /경조사휴가/.test(line) && /(\d+\s*일|별도\s*일수|열거되어\s*있지)/.test(line));
     const basisLine = sourceLines.find((line) => /국가공무원\s*복무규정|교원휴가에\s*관한\s*예규|별표\s*2/.test(line));
+    const calendarLine = sourceLines.find((line) => /토요일|공휴일/.test(line) && /산입하지|제외/.test(line));
     return uniqueLines([
       leaveDaysLine,
       basisLine,
+      calendarLine,
       ...genericLines
     ]).slice(0, 4);
   }
@@ -464,6 +466,7 @@ function isLessSpecificBereavementFallbackLine(line = "") {
   if (/(가족관계|대상\s*신분|신분과\s*가족관계).{0,40}(먼저\s*확정|확정해야|알아야|판단할\s*수|최종\s*답)/.test(text)) return true;
   if (/(신분|고용\s*형태).{0,50}(확정해야|달라집니다).{0,30}최종\s*답/.test(text)) return true;
   if (/공립\s*교원,\s*지방공무원,\s*교육공무직,\s*기간제,\s*사립학교\s*여부를\s*확정해야/.test(text)) return true;
+  if (/(공휴일|토요일|주말|휴일).{0,40}(먼저\s*확인|확인해야|달라질\s*수|소속기관\s*확인)/.test(text) && !/산입하지|제외/.test(text)) return true;
   if (/(달라질\s*수|우선적으로\s*확인|직접\s*확인해야|확인하시기\s*바랍니다)/.test(text) && /(경조사|휴가|가족관계|신분|복무규정|교육청|학교법인)/.test(text)) return true;
   return false;
 }
