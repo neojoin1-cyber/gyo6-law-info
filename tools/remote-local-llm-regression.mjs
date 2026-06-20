@@ -1,6 +1,18 @@
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
+import { handlePolicyChatRequest } from "../functions/shared/policy-chat.mjs";
 import { maybeApplyRemoteLocalPolicyLlm } from "../functions/shared/remote-local-llm.mjs";
+
+const functionPolicyParentLeave = handlePolicyChatRequest({
+  question: "교원의 부모 사망시 경조사휴가는 며칠인가요?",
+  officeLabel: "경상북도교육청",
+  roleLabel: "교원"
+});
+assert.equal(functionPolicyParentLeave.ok, true);
+assert.equal(functionPolicyParentLeave.semanticFrame.domainCode, "bereavementLeave");
+assert.equal(functionPolicyParentLeave.needsClarification, false);
+assert.match(functionPolicyParentLeave.answerState.primaryText, /본인 부모 사망 경조사휴가는 5일/);
+assert.doesNotMatch(functionPolicyParentLeave.responseText, /질문 요지 확인 필요|가족관계를 먼저 확정|확정해야 최종 답/);
 
 const baseResult = {
   ok: true,
@@ -412,6 +424,102 @@ try {
   assert.equal(guarded.remoteLocalLlm.ok, true);
 } finally {
   await new Promise((resolve) => staleChildbirthServer.close(resolve));
+}
+
+const bereavementBaseResult = {
+  ok: true,
+  question: "교원의 부모 사망시 경조사휴가는 며칠인가요?",
+  needsClarification: false,
+  semanticFrame: {
+    domainCode: "bereavementLeave",
+    domainLabel: "경조사휴가",
+    slots: {
+      travelerRole: { subjectLabel: "교원" },
+      familyRelation: { code: "parent", label: "본인 부모", leaveDays: 5 },
+      employmentType: { code: "publicTeacher", label: "공립 교원" }
+    }
+  },
+  answerState: {
+    status: "definitive",
+    primaryText: "공립 교원·국가공무원 기준으로 본인 부모 사망 경조사휴가는 5일입니다."
+  },
+  policyResponse: {
+    title: "본인 부모 경조사휴가 확인 기준",
+    lead: "교원의 본인 부모 경조사휴가는 공립 교원·국가공무원 기준 일수를 먼저 확정하고, 비공립·비정규 신분은 적용 절차만 별도 대조합니다.",
+    answer: [
+      "공립 교원·국가공무원 기준으로 본인 부모 사망 경조사휴가는 5일입니다.",
+      "근거는 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표이며, 공립 교원은 교원휴가에 관한 예규와 나이스 근무상황 신청 절차를 함께 확인합니다.",
+      "사립학교 교원·교육공무직은 학교법인 복무규정, 취업규칙, 단체협약에서 같은 경조사휴가를 어떻게 정했는지 대조하되, 이미 확정된 공립 교원 기준 일수 자체를 흐리지 않습니다."
+    ],
+    steps: [
+      "본인 부모 관계는 이미 질문에서 확인되었으므로 같은 관계의 경조사휴가 일수표를 우선 적용"
+    ],
+    caution: "공립 교원·국가공무원 기준 일수는 5일로 먼저 답하고, 기간제·사립학교·교육공무직 등은 신청 절차, 보수 처리, 소속기관 경조사휴가표를 세부 집행 기준으로 대조합니다."
+  },
+  missingSlots: []
+};
+
+const staleBereavementRemoteResult = {
+  ...bereavementBaseResult,
+  needsClarification: true,
+  missingSlots: ["familyRelation", "dateRange"],
+  answerState: {
+    status: "conditional",
+    primaryText: "공립 교원의 경조사휴가는 가족관계와 대상 신분을 먼저 확정해야 일수와 신청 절차를 판단할 수 있습니다."
+  },
+  policyResponse: {
+    ...bereavementBaseResult.policyResponse,
+    lead: "공립 교원의 경조사휴가는 가족관계와 대상 신분을 먼저 확정해야 일수와 신청 절차를 판단할 수 있습니다.",
+    answer: [
+      "복무·근태는 신분과 고용 형태에 따라 적용 규정이 달라집니다.",
+      "공립 교원, 지방공무원, 교육공무직, 기간제, 사립학교 여부를 확정해야 최종 답을 낼 수 있습니다."
+    ],
+    steps: ["가족관계와 대상 신분을 먼저 확정"],
+    caution: "소속 교육청 지침과 학교법인 규정을 직접 확인해야 합니다."
+  },
+  responseText: "공립 교원의 경조사휴가는 가족관계와 대상 신분을 먼저 확정해야 일수와 신청 절차를 판단할 수 있습니다.\n공립 교원, 지방공무원, 교육공무직, 기간제, 사립학교 여부를 확정해야 최종 답을 낼 수 있습니다.",
+  localLlmComposer: {
+    ok: true,
+    provider: "ollama",
+    model: "qwen3:4b-instruct"
+  }
+};
+
+const staleBereavementServer = createServer(async (request, response) => {
+  assert.equal(request.headers.authorization, `Bearer ${token}`);
+  assert.equal(request.url, "/api/policy/llm");
+  response.writeHead(200, { "content-type": "application/json" });
+  response.end(JSON.stringify({
+    ok: true,
+    result: staleBereavementRemoteResult,
+    bridge: { elapsedMs: 64, localLlmUsed: true }
+  }));
+});
+
+await new Promise((resolve) => staleBereavementServer.listen(0, "127.0.0.1", resolve));
+const staleBereavementAddress = staleBereavementServer.address();
+try {
+  const guarded = await maybeApplyRemoteLocalPolicyLlm({ question: bereavementBaseResult.question }, bereavementBaseResult, {
+    REMOTE_LOCAL_LLM_ENABLED: "true",
+    REMOTE_LOCAL_LLM_BASE_URL: `http://127.0.0.1:${staleBereavementAddress.port}`,
+    REMOTE_LOCAL_LLM_TOKEN: token,
+    REMOTE_LOCAL_LLM_TIMEOUT_MS: "5000"
+  });
+  const guardedText = [
+    guarded.responseText,
+    guarded.policyResponse.lead,
+    ...guarded.policyResponse.answer,
+    ...guarded.policyResponse.steps,
+    guarded.policyResponse.caution
+  ].join(" ");
+  assert.match(guardedText, /본인 부모 사망 경조사휴가는 5일/);
+  assert.match(guardedText, /국가공무원 복무규정|교원휴가에 관한 예규/);
+  assert.doesNotMatch(guardedText, /가족관계와 대상 신분을 먼저 확정|확정해야 최종 답|직접 확인해야/);
+  assert.equal(guarded.needsClarification, false);
+  assert.deepEqual(guarded.missingSlots, []);
+  assert.equal(guarded.remoteLocalLlm.ok, true);
+} finally {
+  await new Promise((resolve) => staleBereavementServer.close(resolve));
 }
 
 const overtimeBaseResult = {

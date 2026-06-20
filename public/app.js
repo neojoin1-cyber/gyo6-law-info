@@ -4505,7 +4505,9 @@ function buildBereavementLeaveRule(normalized) {
   const sourceKeys = ["nationalService", "teacherLeave", "localService", "laborStandard"];
   const commonSteps = [
     "신분이 공립 교원인지, 지방공무원인지, 교육공무직인지, 기간제인지, 사립학교 교직원인지 확정",
-    "경조사 대상과 본인·배우자 기준의 가족관계를 정확히 구분",
+    relation.code
+      ? `${relation.label} 관계는 이미 질문에서 확인되었으므로 같은 관계의 경조사휴가 일수표를 우선 적용`
+      : "경조사 대상과 본인·배우자 기준의 가족관계를 정확히 구분",
     "휴가 시작일, 휴일 포함 방식, 나이스 신청 종별, 증빙자료 제출 기준 확인"
   ];
 
@@ -4533,14 +4535,14 @@ function buildBereavementLeaveRule(normalized) {
   const conditionText = relation.legalCondition ? ` ${relation.legalCondition}에는` : "";
   return {
     title: `${relation.label} 경조사휴가 확인 기준`,
-    lead: "공립 교원·국가공무원 기준은 공통 법령에서 일수를 먼저 확인할 수 있지만, 교육공무직·사립학교·기간제 직원은 소속 교육청이나 법인 규정이 더 구체적일 수 있습니다.",
+    lead: "공립 교원·국가공무원 기준은 공통 법령에서 일수를 먼저 확정하고, 교육공무직·사립학교·기간제는 같은 사유의 신청·보수 처리와 소속기관 절차를 별도로 대조합니다.",
     answer: [
       `공립 교원·국가공무원 기준으로 ${relation.label} 사망 경조사휴가는${conditionText} ${relation.leaveDays}일입니다.`,
       "근거는 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표입니다.",
       "공립 교원은 교원휴가에 관한 예규와 나이스 근무상황 신청, 학교장 승인 절차를 함께 확인합니다.",
       "지방공무원·행정직은 지방공무원 복무규정과 관할 교육청 복무 조례·예규를 대조합니다.",
-      "교육공무직·특수운영직군은 소속 교육청 취업규칙, 단체협약, 근로계약서의 경조사휴가표를 우선 확인합니다.",
-      "사립학교 교직원은 학교법인 취업규칙, 복무규정, 단체협약에서 같은 경조사휴가가 어떻게 정해졌는지 확인합니다."
+      "기간제교사는 공립학교 계약제교원 운영 지침에서 신청·보수 처리 절차를 함께 확인합니다.",
+      "사립학교 교원·교육공무직은 학교법인 복무규정, 취업규칙, 단체협약에서 같은 경조사휴가를 어떻게 정했는지 대조하되, 이미 확정된 공립 교원 기준 일수 자체를 흐리지 않습니다."
     ],
     steps: commonSteps,
     sourceKeys,
@@ -4549,7 +4551,7 @@ function buildBereavementLeaveRule(normalized) {
       `교원휴가에 관한 예규 ${relation.label} 경조사휴가`,
       `교육공무직 경조사휴가 ${relation.label}`
     ],
-    caution: relation.legalCondition || "실제 신청 전에는 신분, 가족관계 증빙, 휴가 시작일과 소속기관 세부 기준을 확인해야 합니다."
+    caution: relation.legalCondition || "실제 신청 전에는 사망 사실과 가족관계 증빙, 휴가 시작일, 나이스 또는 소속기관 신청 절차를 확인합니다."
   };
 }
 
@@ -4560,7 +4562,7 @@ function inferBereavementRelation(normalized) {
     { code: "spouseGrandParent", label: "배우자의 조부모·외조부모", leaveDays: 3, listed: true, patterns: [/배우자.*(?:조부모|외조부모|할아버지|할머니|외조부|외조모)/] },
     { code: "spouseSibling", label: "배우자의 형제자매", leaveDays: 1, listed: true, patterns: [/배우자.*(?:형제|자매|오빠|언니|누나|동생|형|누이)/] },
     { code: "spouseChild", label: "배우자의 자녀", leaveDays: 3, listed: true, legalCondition: "법적으로 본인의 자녀 관계가 확인되는 경우", patterns: [/배우자.*(?:자녀|아들|딸)/] },
-    { code: "parent", label: "본인 부모", leaveDays: 5, listed: true, patterns: [/부모상|본인부모|부친|모친|아버지|어머니/] },
+    { code: "parent", label: "본인 부모", leaveDays: 5, listed: true, patterns: [/부모상|부모님상|본인부모|부친|모친|아버지|어머니|부모.*(?:사망|별세|장례|부고|돌아가)|(?:사망|별세|장례|부고).{0,8}부모/] },
     { code: "spouse", label: "배우자", leaveDays: 5, listed: true, patterns: [/배우자상|배우자사망|배우자가사망|남편상|아내상|남편.*사망|아내.*사망/] },
     { code: "childSpouse", label: "자녀의 배우자", leaveDays: 3, listed: true, patterns: [/자녀.*배우자|아들.*배우자|딸.*배우자|사위|며느리/] },
     { code: "child", label: "자녀", leaveDays: 3, listed: true, patterns: [/자녀|아들|딸/] },

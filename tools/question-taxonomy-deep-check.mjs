@@ -407,6 +407,12 @@ const taxonomyCases = [
     forbidIntents: ["spouseChildbirthLeave"]
   },
   {
+    id: "taxonomy-teacher-parent-death",
+    question: "교원의 부모 사망시 경조사휴가는 며칠인가요?",
+    intent: "bereavementLeave",
+    forbidIntents: ["spouseChildbirthLeave"]
+  },
+  {
     id: "taxonomy-travel-not-attendance",
     question: "관외출장 중 일비와 식비를 계산하려고 합니다. 외출 처리가 아니라 출장입니다.",
     intent: "domesticTravelExpense",
@@ -536,6 +542,14 @@ const guideCases = [
     needsIntentConfirmation: false,
     mustInclude: ["별도 일수로 열거되어 있지 않습니다"],
     mustNotInclude: ["배우자의 부모 사망 경조사휴가 5일"]
+  },
+  {
+    id: "guide-teacher-parent-bereavement-direct",
+    question: "교원의 부모 사망시 경조사휴가는 며칠인가요?",
+    domain: "bereavementLeave",
+    needsIntentConfirmation: false,
+    mustInclude: ["본인 부모", "경조사휴가는 5일", "국가공무원 복무규정"],
+    mustNotInclude: ["질문 요지 확인 필요", "가족관계를 먼저 확정", "최종 답을 낼 수 있습니다"]
   },
   {
     id: "guide-travel-not-attendance",

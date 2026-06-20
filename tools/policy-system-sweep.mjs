@@ -171,6 +171,13 @@ const domainCases = [
     exclude: ["배우자 출산휴가"]
   },
   {
+    id: "bereavement-teacher-parent",
+    domain: "bereavementLeave",
+    question: "교원의 부모 사망시 경조사휴가는 며칠인가요?",
+    include: ["본인 부모", "경조사휴가", "5일"],
+    exclude: ["질문 요지 확인 필요", "가족관계를 먼저 확정", "최종 답을 낼 수 있습니다"]
+  },
+  {
     id: "staff-sick-leave",
     domain: "staffAttendanceService",
     question: "정규교사의 병가는 며칠 가능하며 진단서는 언제 필요한가요?",

@@ -812,6 +812,20 @@ if (!leaveGuideHtml.includes("인천광역시교육청") || !leaveGuideHtml.incl
   failures.push("policy-guide-leave: expected office-priority and non-teacher caveat");
 }
 
+const parentLeaveGuide = context.buildPolicyGuideResponse({
+  question: "교원의 부모 사망시 경조사휴가는 며칠인가요?",
+  officeCode: "gyeongbuk",
+  roleCode: "teacher",
+  categoryCode: "leaveAttendance"
+});
+const parentLeaveGuideHtml = context.renderPolicyGuideResponse(parentLeaveGuide);
+if (!parentLeaveGuideHtml.includes("본인 부모") || !parentLeaveGuideHtml.includes("5일") || !parentLeaveGuideHtml.includes("국가공무원 복무규정")) {
+  failures.push("policy-guide-parent-leave: expected direct 5-day answer for teacher parent bereavement");
+}
+if (parentLeaveGuideHtml.includes("가족관계를 먼저 확정") || parentLeaveGuideHtml.includes("최종 답을 낼 수 있습니다") || parentLeaveGuideHtml.includes("질문 요지 확인 필요")) {
+  failures.push("policy-guide-parent-leave: should not defer already-specific parent bereavement question");
+}
+
 const spouseUncleLeaveGuide = context.buildPolicyGuideResponse({
   question: "교사의 배우자의 삼촌상은 휴가 몇일인가요?",
   officeCode: "auto",
