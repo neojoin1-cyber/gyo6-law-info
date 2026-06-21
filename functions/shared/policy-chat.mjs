@@ -255,6 +255,7 @@ export function handlePolicyChatRequest(payload = {}, options = {}) {
   const missingSlotQuestions = buildMissingSlotQuestions(missingSlots, semanticFrame, question);
   const sourceExpansion = policyResponse?.sourceExpansion || semanticFrame.lookupPlan?.sourceExpansion || null;
   const riskReview = policyResponse?.riskReview || sourceExpansion?.riskReview || null;
+  const qualityRecovery = buildQualityRecoveryState(policyResponse, sourceExpansion);
   const answerState = buildAnswerState({
     question,
     officeLabel,
@@ -277,6 +278,7 @@ export function handlePolicyChatRequest(payload = {}, options = {}) {
     missingSlotQuestions,
     sourceExpansion,
     riskReview,
+    qualityRecovery,
     answerState,
     completionFlow: buildConsultationCompletionFlow({
       question,
@@ -747,10 +749,30 @@ function buildAnswerState({
     conditionalAnswers: status === "definitive" ? [] : userFacingTexts,
     slotQuestions: missingSlotQuestions,
     caveats,
-    sourceExpansion: policyResponse?.sourceExpansion || semanticFrame.lookupPlan?.sourceExpansion || null,
-    riskReview: policyResponse?.riskReview || policyResponse?.sourceExpansion?.riskReview || semanticFrame.lookupPlan?.sourceExpansion?.riskReview || null,
-    primaryText,
-    basis: buildAnswerBasis({ question, officeLabel, semanticFrame, policyResponse })
+      sourceExpansion: policyResponse?.sourceExpansion || semanticFrame.lookupPlan?.sourceExpansion || null,
+      riskReview: policyResponse?.riskReview || policyResponse?.sourceExpansion?.riskReview || semanticFrame.lookupPlan?.sourceExpansion?.riskReview || null,
+      qualityGate: policyResponse?.qualityGate || null,
+      qualityRecovery: buildQualityRecoveryState(policyResponse, policyResponse?.sourceExpansion || semanticFrame.lookupPlan?.sourceExpansion || null),
+      primaryText,
+      basis: buildAnswerBasis({ question, officeLabel, semanticFrame, policyResponse })
+    };
+  }
+
+function buildQualityRecoveryState(policyResponse = null, sourceExpansion = null) {
+  const qualityGate = policyResponse?.qualityGate || null;
+  const violations = Array.isArray(qualityGate?.violations) ? qualityGate.violations : [];
+  const needsRecheck = qualityGate?.status === "needsRecheck" || violations.length > 0;
+  const sourceExpansionRequired = Boolean(sourceExpansion?.required);
+  return {
+    needed: Boolean(needsRecheck || sourceExpansionRequired),
+    status: needsRecheck ? "quality_gate_recheck" : sourceExpansionRequired ? "source_expansion" : "ready",
+    message: needsRecheck
+      ? "품질 경고가 감지되어 공식자료 후보와 답변 근거를 다시 대조합니다."
+      : sourceExpansionRequired
+        ? "추가 원문 확보가 필요한 사안으로 자동 자료확충·재검증 대상입니다."
+        : "",
+    qualityGate,
+    sourceExpansion
   };
 }
 

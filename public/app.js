@@ -1027,6 +1027,29 @@ function getPolicyCategoryOptionsForRole(roleCode = "auto") {
     }));
 }
 
+function getRequiredPolicyCategoryOptionsForRole(roleCode = "auto") {
+  const roleOrder = rolePolicyCategoryMatrix[roleCode] || rolePolicyCategoryMatrix.auto;
+  const values = roleCode === "auto"
+    ? [...roleOrder, ...Object.keys(policyGuideCategories)]
+    : roleOrder;
+  const seen = new Set();
+  return [
+    { value: "", label: "1차 업무영역 선택" },
+    ...values
+      .filter((value) => {
+        if (!value || value === "auto") return false;
+        if (seen.has(value)) return false;
+        if (!policyGuideCategories[value]) return false;
+        seen.add(value);
+        return true;
+      })
+      .map((value) => ({
+        value,
+        label: policyGuideCategories[value].label
+      }))
+  ];
+}
+
 function updatePolicyCategoryOptionsForRole({ keepValue = true } = {}) {
   updatePolicyCategorySelectForRole(policyCategoryInput, getEffectivePolicyCategoryRole(), { keepValue });
 }
@@ -1037,12 +1060,15 @@ function updateGuideCategoryOptionsForRole({ keepValue = true } = {}) {
 
 function updatePolicyCategorySelectForRole(select, roleCode = "auto", { keepValue = true } = {}) {
   if (!select) return;
-  const previousValue = keepValue ? select.value : "auto";
-  const options = getPolicyCategoryOptionsForRole(roleCode);
+  const isRequiredPolicyCategory = select === policyCategoryInput;
+  const previousValue = keepValue ? select.value : (isRequiredPolicyCategory ? "" : "auto");
+  const options = isRequiredPolicyCategory
+    ? getRequiredPolicyCategoryOptionsForRole(roleCode)
+    : getPolicyCategoryOptionsForRole(roleCode);
   replaceOptions(select, options);
   setSelectValue(select, previousValue);
   if (!select.value) {
-    select.value = "auto";
+    select.value = isRequiredPolicyCategory ? "" : "auto";
   }
 }
 
@@ -1970,6 +1996,15 @@ initializePolicyCategoryControls();
 document.querySelectorAll("[data-example]").forEach((button) => {
   button.addEventListener("click", () => {
     resetTransientQuestionState({ keepFormValues: true });
+    if (button.dataset.policyRole && policyRoleInput) {
+      policyRoleInput.value = button.dataset.policyRole;
+      updatePolicyCategoryOptionsForRole({ keepValue: false });
+      updateTopicMajorOptionsForCurrentRole({ keepValue: false });
+    }
+    if (button.dataset.policyCategory && policyCategoryInput) {
+      policyCategoryInput.value = button.dataset.policyCategory;
+      syncTopicSelectionFromPolicyCategory({ force: true });
+    }
     questionInput.value = button.dataset.example;
     setTopicSelection(button.dataset.topicMajor || "auto", button.dataset.topicMiddle || "auto", button.dataset.topicMinor || "auto");
     questionInput.focus();
@@ -2024,10 +2059,24 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   activateTool("legal");
 
+  if (!policyRoleInput?.value) {
+    resetTransientQuestionState({ keepFormValues: true });
+    showEmptyMessage("대상 신분을 먼저 선택해 주세요.", "학생, 공립 교원, 기간제 교원, 학교 관리자처럼 적용 규정이 달라지는 기준을 먼저 정합니다.");
+    policyRoleInput?.focus();
+    return;
+  }
+
+  if (!policyCategoryInput?.value) {
+    resetTransientQuestionState({ keepFormValues: true });
+    showEmptyMessage("1차 업무영역을 선택해 주세요.", "출결, 현장실습, 교원 휴가, 학교회계처럼 큰 영역을 먼저 정하면 질문 분석이 더 안정적으로 작동합니다.");
+    policyCategoryInput?.focus();
+    return;
+  }
+
   const question = questionInput.value.trim();
   if (!question) {
     resetTransientQuestionState({ keepFormValues: true });
-    showEmptyMessage("질문을 입력해 주세요.", "취업, 현장실습, 학교 민원처럼 궁금한 상황을 한 문장으로 적어도 괜찮습니다.");
+    showEmptyMessage("질문을 입력해 주세요.", "대상 신분과 1차 업무영역은 선택되었습니다. 이제 궁금한 사안을 한 문장으로 적어 주세요.");
     questionInput.focus();
     return;
   }
@@ -2184,17 +2233,15 @@ activateToolFromHash();
 hydrateFromUrl();
 
 function activateToolFromHash() {
-  if (!syncLawWindowMode()) {
-    return;
-  }
+  syncLawWindowMode();
 
   const requestedTool = getRequestedToolFromUrl() || getToolFromHash(window.location?.hash || "");
   activateTool(requestedTool);
 }
 
 function syncLawWindowMode() {
-  const requestedTool = getRequestedToolParam();
-  const isToolWindow = Boolean(requestedTool);
+  const requestedTool = getRequestedToolParam() || "legal";
+  const isToolWindow = true;
   document.body?.classList.toggle("law-tool-mode", isToolWindow);
   document.body?.classList.toggle("law-landing", !isToolWindow);
   document.body?.classList.toggle("law-tool-legal", isToolWindow && requestedTool === "legal");
@@ -2308,11 +2355,13 @@ function renderPolicyGuideResult() {
   });
 
   const canEnhanceWithLocalLlm = isLocalLlmEnhancementHost();
-  if (guideStatus) guideStatus.textContent = canEnhanceWithLocalLlm ? "로컬 AI 보강 중" : "기본 답변";
-  if (guideResultTitle) guideResultTitle.textContent = canEnhanceWithLocalLlm ? "기본 답변 · 로컬 AI 보강 중" : "규정·지침 답변";
+  const needsQualityRecovery = shouldTriggerPolicyQualityRecovery(response);
+  const qualityRecoveryState = needsQualityRecovery ? (canEnhanceWithLocalLlm ? "active" : "deferred") : "";
+  if (guideStatus) guideStatus.textContent = needsQualityRecovery ? "고품질 답변 생성 중" : canEnhanceWithLocalLlm ? "로컬 AI 보강 중" : "기본 답변";
+  if (guideResultTitle) guideResultTitle.textContent = needsQualityRecovery ? "고품질 답변 생성 중" : canEnhanceWithLocalLlm ? "기본 답변 · 로컬 AI 보강 중" : "규정·지침 답변";
   guideResult.className = "summary-box guideline-result";
   guideResult.innerHTML = `
-    ${renderPolicyGuideResponse(response)}
+    ${renderPolicyGuideResponse({ ...response, qualityRecoveryState })}
     ${renderLocalLlmWorkingNotice(response, { state: canEnhanceWithLocalLlm ? "active" : "deferred" })}
     ${renderPolicyGuideAutoVerificationNotice(response, { state: canEnhanceWithLocalLlm ? "active" : "deferred" })}
   `;
@@ -2459,7 +2508,8 @@ function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode
     searchQueries,
     caution,
     sourceExpansion: directRule?.sourceExpansion || directRule?.ruleLookup?.lookupPlan?.sourceExpansion || analysis.engineAnalysis?.semanticFrame?.lookupPlan?.sourceExpansion || null,
-    riskReview: directRule?.riskReview || directRule?.sourceExpansion?.riskReview || directRule?.ruleLookup?.lookupPlan?.sourceExpansion?.riskReview || analysis.engineAnalysis?.semanticFrame?.lookupPlan?.sourceExpansion?.riskReview || null
+    riskReview: directRule?.riskReview || directRule?.sourceExpansion?.riskReview || directRule?.ruleLookup?.lookupPlan?.sourceExpansion?.riskReview || analysis.engineAnalysis?.semanticFrame?.lookupPlan?.sourceExpansion?.riskReview || null,
+    qualityGate: directRule?.qualityGate || null
   };
 }
 
@@ -2757,6 +2807,7 @@ function getPolicyEngineDirectRule(question, office, role) {
       sourcePriority: response.sourcePriority,
       sourceExpansion: response.sourceExpansion || response.ruleLookup?.lookupPlan?.sourceExpansion || null,
       riskReview: response.riskReview || response.sourceExpansion?.riskReview || response.ruleLookup?.lookupPlan?.sourceExpansion?.riskReview || null,
+      qualityGate: response.qualityGate || null,
       ruleLookup: response.ruleLookup || null
     };
   } catch (error) {
@@ -3275,17 +3326,32 @@ function renderPolicyGuideResponse(response) {
       ...supportingItems
     ]).slice(0, 5);
   }
-  const cautionText = cleanPolicyGuideUserText(buildPolicyGuideFinalCaution(response, officeLabel, roleLabel));
+  const qualityState = response.qualityRecoveryState || "";
+  const qualityRecoveryActive = qualityState === "active" && shouldTriggerPolicyQualityRecovery(response);
+  const displayPrimaryAnswer = qualityRecoveryActive
+    ? "양질의 답변을 생성하기 위해 정보를 추가로 수집·분석하고 있습니다."
+    : primaryAnswer;
+  const displaySupportingItems = qualityRecoveryActive
+    ? [
+      "질문을 대상 신분·업무영역·사실관계로 다시 분리합니다.",
+      "공식 법령·교육부·교육청 자료와 기존 규정 엔진 근거를 순차 대조합니다.",
+      "품질 경고가 해소된 답변이 준비되면 자동으로 보강 답변으로 교체합니다."
+    ]
+    : supportingItems;
+  const cautionText = qualityRecoveryActive
+    ? ""
+    : cleanPolicyGuideUserText(buildPolicyGuideFinalCaution(response, officeLabel, roleLabel));
 
   return `
+    ${renderPolicyQualityRecoveryNotice(response, { state: qualityState })}
     <section class="guide-answer-card primary">
       <div class="answer-label">답변</div>
-      <h3>${escapeHtml(primaryAnswer)}</h3>
-      ${userLead ? `<p class="guide-answer-lead">${escapeHtml(userLead)}</p>` : ""}
-      ${supportingItems.length ? `
+      <h3>${escapeHtml(displayPrimaryAnswer)}</h3>
+      ${!qualityRecoveryActive && userLead ? `<p class="guide-answer-lead">${escapeHtml(userLead)}</p>` : ""}
+      ${displaySupportingItems.length ? `
         <div class="guide-direct">
           <strong>핵심 확인 사항</strong>
-          <ul>${supportingItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+          <ul>${displaySupportingItems.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
         </div>
       ` : ""}
       ${cautionText ? `<p class="answer-warning">${escapeHtml(cautionText)}</p>` : ""}
@@ -3405,6 +3471,72 @@ function shouldShowPolicyGuideAutoVerification(response = {}) {
   return Boolean(getPolicyGuideSourceExpansion(response)?.required)
     || isPolicySourceGapCaution(response.caution || "")
     || isPolicySourceGapCaution(response.directRule?.caution || "");
+}
+
+function getPolicyGuideQualityGate(response = {}) {
+  return response.qualityGate
+    || response.directRule?.qualityGate
+    || response.policyResponse?.qualityGate
+    || null;
+}
+
+function isPolicyQualityGateWarning(response = {}) {
+  const gate = getPolicyGuideQualityGate(response);
+  if (!gate || typeof gate !== "object") return false;
+  return gate.status === "needsRecheck" || Boolean(gate.violations?.length);
+}
+
+function shouldTriggerPolicyQualityRecovery(response = {}) {
+  return isPolicyQualityGateWarning(response)
+    || isPolicySourceGapCaution(response.caution || "")
+    || isPolicySourceGapCaution(response.directRule?.caution || "");
+}
+
+function renderPolicyQualityRecoveryNotice(response = {}, { state = "" } = {}) {
+  if (!state || !shouldTriggerPolicyQualityRecovery(response)) return "";
+  const isActive = state === "active";
+  const isComplete = state === "complete";
+  const gate = getPolicyGuideQualityGate(response);
+  const violationLabels = (gate?.violations || [])
+    .map((item) => item.message || item.code)
+    .filter(Boolean)
+    .slice(0, 3);
+  const title = isActive
+    ? "고품질 답변 생성 중"
+    : isComplete ? "고품질 답변 재검토 완료" : "고품질 답변 보강 대기";
+  const message = isActive
+    ? "양질의 답변을 생성하기 위해 정보를 추가로 수집 및 분석이 필요하니 조금 더 기다려 주세요. 시스템이 공식자료 후보, 품질 경고, 로컬 AI 보강 결과를 다시 대조하고 있습니다."
+    : isComplete
+      ? "품질 경고와 공식자료 후보를 다시 대조해 보강 답변을 표시했습니다."
+      : "현재 연결 가능한 보강 경로가 부족해 이 사안을 자동 자료확충·재검증 큐에 남겼습니다. 사무실 PC와 Ollama 경로가 회복되면 같은 기준으로 다시 보강됩니다.";
+
+  return `
+    <section class="policy-quality-recovery ${isActive ? "is-active" : isComplete ? "is-complete" : "is-deferred"}" data-policy-quality-recovery aria-live="polite">
+      <div class="policy-quality-recovery-head">
+        <span class="local-llm-spinner" aria-hidden="true"></span>
+        <strong>${escapeHtml(title)}</strong>
+      </div>
+      <p>${escapeHtml(message)}</p>
+      ${violationLabels.length ? `
+        <ul>${violationLabels.map((label) => `<li>${escapeHtml(label)}</li>`).join("")}</ul>
+      ` : ""}
+    </section>
+  `;
+}
+
+function markPolicyQualityRecoveryDeferred(container) {
+  const notice = container?.querySelector?.("[data-policy-quality-recovery]");
+  if (!notice) return;
+  notice.classList.remove("is-active", "is-complete");
+  notice.classList.add("is-deferred");
+  const title = notice.querySelector?.("strong");
+  const message = notice.querySelector?.("p");
+  const spinner = notice.querySelector?.(".local-llm-spinner");
+  if (title) title.textContent = "고품질 답변 보강 대기";
+  if (message) {
+    message.textContent = "현재 연결 가능한 보강 경로가 부족해 이 사안을 자동 자료확충·재검증 큐에 남겼습니다. 사무실 PC와 Ollama 경로가 회복되면 같은 기준으로 다시 보강됩니다.";
+  }
+  if (spinner) spinner.setAttribute("aria-hidden", "true");
 }
 
 function renderPolicyGuideAutoVerificationNotice(response = {}, { state = "active" } = {}) {
@@ -5397,11 +5529,13 @@ function renderFreeBasicPolicyResult({
   }
 
   const canEnhanceWithLocalLlm = isLocalLlmEnhancementHost();
-  resultTitle.textContent = canEnhanceWithLocalLlm ? "기본 답변 · 로컬 AI 보강 중" : "기본 답변";
-  statusDot.textContent = canEnhanceWithLocalLlm ? "로컬 AI 보강 중" : "기본 답변";
+  const needsQualityRecovery = shouldTriggerPolicyQualityRecovery(response);
+  const qualityRecoveryState = needsQualityRecovery ? (canEnhanceWithLocalLlm ? "active" : "deferred") : "";
+  resultTitle.textContent = needsQualityRecovery ? "고품질 답변 생성 중" : canEnhanceWithLocalLlm ? "기본 답변 · 로컬 AI 보강 중" : "기본 답변";
+  statusDot.textContent = needsQualityRecovery ? "자료 분석 중" : canEnhanceWithLocalLlm ? "로컬 AI 보강 중" : "기본 답변";
   resultState.className = "summary-box guideline-result free-policy-result";
   resultState.innerHTML = `
-    ${renderPolicyGuideResponse(response)}
+    ${renderPolicyGuideResponse({ ...response, qualityRecoveryState })}
     ${renderLocalLlmWorkingNotice(response, { state: canEnhanceWithLocalLlm ? "active" : "deferred" })}
     ${renderPolicyGuideAutoVerificationNotice(response, { state: canEnhanceWithLocalLlm ? "active" : "deferred" })}
     ${accessMessage ? `
@@ -5492,12 +5626,17 @@ async function loadLocalLlmPolicyEnhancement({
       category
     });
     const enhancementLabel = getPolicyLlmEnhancementLabel(data);
-    resultTitle.textContent = enhancementLabel.title;
-    statusDot.textContent = enhancementLabel.status;
+    const baseNeedsQualityRecovery = shouldTriggerPolicyQualityRecovery(baseResponse);
+    const enhancedNeedsQualityRecovery = shouldTriggerPolicyQualityRecovery(enhancedResponse);
+    const qualityRecoveryState = enhancedNeedsQualityRecovery
+      ? "active"
+      : baseNeedsQualityRecovery ? "complete" : "";
+    resultTitle.textContent = enhancedNeedsQualityRecovery ? "고품질 답변 재검토 중" : enhancementLabel.title;
+    statusDot.textContent = enhancedNeedsQualityRecovery ? "자료 보강 대기" : enhancementLabel.status;
     resultState.className = "summary-box guideline-result free-policy-result local-llm-result";
     resultState.innerHTML = `
-      ${renderPolicyGuideResponse(enhancedResponse)}
-      ${renderPolicyGuideAutoVerificationNotice(enhancedResponse, { state: "complete" })}
+      ${renderPolicyGuideResponse({ ...enhancedResponse, qualityRecoveryState })}
+      ${renderPolicyGuideAutoVerificationNotice(enhancedResponse, { state: enhancedNeedsQualityRecovery ? "active" : "complete" })}
       ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer, data.remoteLocalLlm)}
       ${accessMessage ? `
         <section class="free-access-note" aria-label="비로그인 기본 답변 안내">
@@ -5516,8 +5655,14 @@ async function loadLocalLlmPolicyEnhancement({
       if (!appliedEnhancement && questionFingerprint === currentQuestionFingerprint) {
         markLocalLlmWorkingNoticeDeferred(resultState);
         markPolicyGuideAutoVerificationDeferred(resultState);
-        statusDot.textContent = "기본 답변";
-        if (resultTitle) resultTitle.textContent = "기본 답변";
+        markPolicyQualityRecoveryDeferred(resultState);
+        if (shouldTriggerPolicyQualityRecovery(baseResponse)) {
+          statusDot.textContent = "자료 보강 대기";
+          if (resultTitle) resultTitle.textContent = "고품질 답변 보강 대기";
+        } else {
+          statusDot.textContent = "기본 답변";
+          if (resultTitle) resultTitle.textContent = "기본 답변";
+        }
       }
       activeLocalLlmController = null;
     }
@@ -5583,12 +5728,17 @@ async function loadGuideLocalLlmPolicyEnhancement({
       category
     });
     const enhancementLabel = getPolicyLlmEnhancementLabel(data);
-    if (guideStatus) guideStatus.textContent = enhancementLabel.status;
-    if (guideResultTitle) guideResultTitle.textContent = enhancementLabel.title;
+    const baseNeedsQualityRecovery = shouldTriggerPolicyQualityRecovery(baseResponse);
+    const enhancedNeedsQualityRecovery = shouldTriggerPolicyQualityRecovery(enhancedResponse);
+    const qualityRecoveryState = enhancedNeedsQualityRecovery
+      ? "active"
+      : baseNeedsQualityRecovery ? "complete" : "";
+    if (guideStatus) guideStatus.textContent = enhancedNeedsQualityRecovery ? "자료 보강 대기" : enhancementLabel.status;
+    if (guideResultTitle) guideResultTitle.textContent = enhancedNeedsQualityRecovery ? "고품질 답변 재검토 중" : enhancementLabel.title;
     guideResult.className = "summary-box guideline-result local-llm-result";
     guideResult.innerHTML = `
-      ${renderPolicyGuideResponse(enhancedResponse)}
-      ${renderPolicyGuideAutoVerificationNotice(enhancedResponse, { state: "complete" })}
+      ${renderPolicyGuideResponse({ ...enhancedResponse, qualityRecoveryState })}
+      ${renderPolicyGuideAutoVerificationNotice(enhancedResponse, { state: enhancedNeedsQualityRecovery ? "active" : "complete" })}
       ${renderLocalLlmComposerNote(data.localLlmComposer, data.localLlmNormalizer, data.remoteLocalLlm)}
     `;
     appliedEnhancement = true;
@@ -5601,8 +5751,14 @@ async function loadGuideLocalLlmPolicyEnhancement({
       if (!appliedEnhancement && guideFingerprint === currentGuideQuestionFingerprint) {
         markLocalLlmWorkingNoticeDeferred(guideResult);
         markPolicyGuideAutoVerificationDeferred(guideResult);
-        if (guideStatus) guideStatus.textContent = "기본 답변";
-        if (guideResultTitle) guideResultTitle.textContent = "규정·지침 답변";
+        markPolicyQualityRecoveryDeferred(guideResult);
+        if (shouldTriggerPolicyQualityRecovery(baseResponse)) {
+          if (guideStatus) guideStatus.textContent = "자료 보강 대기";
+          if (guideResultTitle) guideResultTitle.textContent = "고품질 답변 보강 대기";
+        } else {
+          if (guideStatus) guideStatus.textContent = "기본 답변";
+          if (guideResultTitle) guideResultTitle.textContent = "규정·지침 답변";
+        }
       }
       activeGuideLocalLlmController = null;
     }
@@ -5638,7 +5794,8 @@ function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
     caution: normalizePolicyGuideCautionText(policyResponse.caution || baseResponse?.caution || "", baseResponse || {}),
     sourcePriority: policyResponse.sourcePriority || baseResponse?.directRule?.sourcePriority || "",
     sourceExpansion: data.sourceExpansion || policyResponse.sourceExpansion || data.answerState?.sourceExpansion || baseResponse?.sourceExpansion || null,
-    riskReview: data.riskReview || policyResponse.riskReview || data.answerState?.riskReview || baseResponse?.riskReview || null
+    riskReview: data.riskReview || policyResponse.riskReview || data.answerState?.riskReview || baseResponse?.riskReview || null,
+    qualityGate: policyResponse.qualityGate || data.answerState?.qualityGate || baseResponse?.qualityGate || baseResponse?.directRule?.qualityGate || null
   };
 
   return {
@@ -5658,6 +5815,7 @@ function buildPolicyGuideResponseFromPolicyChatResult(data = {}, {
     searchQueries: directRule.queries,
     sourceExpansion: directRule.sourceExpansion || data.sourceExpansion || policyResponse.sourceExpansion || data.answerState?.sourceExpansion || null,
     riskReview: directRule.riskReview || data.riskReview || policyResponse.riskReview || data.answerState?.riskReview || null,
+    qualityGate: directRule.qualityGate || policyResponse.qualityGate || data.answerState?.qualityGate || baseResponse?.qualityGate || null,
     localLlmComposer: data.localLlmComposer,
     localLlmNormalizer: data.localLlmNormalizer,
     remoteLocalLlm: data.remoteLocalLlm
@@ -5768,8 +5926,8 @@ function resetTransientQuestionState({ keepFormValues = false, resetFormValues =
   if (resetFormValues && form) {
     form.reset();
     if (policyOfficeInput) policyOfficeInput.value = "gyeongbuk";
-    if (policyRoleInput) policyRoleInput.value = "auto";
-    if (policyCategoryInput) policyCategoryInput.value = "auto";
+    if (policyRoleInput) policyRoleInput.value = "";
+    if (policyCategoryInput) policyCategoryInput.value = "";
     updatePolicyCategoryOptionsForRole({ keepValue: false });
     setTopicSelection("auto", "auto", "auto");
     if (window.history?.replaceState) {
@@ -5792,7 +5950,7 @@ function resetTransientQuestionState({ keepFormValues = false, resetFormValues =
   resultState.innerHTML = `
     <div class="empty-icon" aria-hidden="true">§</div>
     <h3>질문을 입력하면 결론부터 확인할 수 있습니다.</h3>
-    <p>경상북도교육청 기본값, 대상자, 업무영역을 함께 반영합니다.</p>
+    <p>대상 신분과 1차 업무영역을 먼저 고르면 질문 분석이 더 안정적으로 작동합니다.</p>
   `;
 }
 
@@ -10259,11 +10417,7 @@ function detectRiskSignals(question) {
 }
 
 function hydrateFromUrl() {
-  const requestedTool = getRequestedToolParam();
-  if (!requestedTool) {
-    syncLawWindowMode();
-    return;
-  }
+  const requestedTool = getRequestedToolParam() || "legal";
 
   const params = new URLSearchParams(window.location.search);
   const question = params.get("q") || params.get("question");
@@ -10287,9 +10441,12 @@ function hydrateFromUrl() {
   }
 
   questionInput.value = question;
+  setSelectValue(policyRoleInput, params.get("policyRole") || params.get("targetRole") || params.get("subjectRole") || params.get("role"));
   setSelectValue(userRoleInput, params.get("role"));
   setSelectValue(partyRoleInput, params.get("party") || params.get("partyRole"));
   updatePolicyCategoryOptionsForRole({ keepValue: true });
+  setSelectValue(policyCategoryInput, params.get("policyCategory") || params.get("category") || params.get("guideCategory"));
+  syncTopicSelectionFromPolicyCategory({ force: false });
   updateTopicMajorOptionsForCurrentRole({ keepValue: true });
   setTopicSelectionFromUrl(params);
   setSelectValue(answerModeInput, params.get("answerMode") || params.get("answer") || params.get("mode"));

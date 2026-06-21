@@ -1,6 +1,7 @@
 node_modules/
 .firebase/
 .wrangler/
+.npm-cache/
 .env
 .env.*
 !.env.example
@@ -9,5 +10,8 @@ build/
 *.log
 *.err
 cloudflared-*.yml
+output/
+data/policy-quality/*
+!data/policy-quality/README.md
 .DS_Store
 Thumbs.db

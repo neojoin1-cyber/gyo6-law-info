@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>경북직업교육연구회 법률정보 | 무료 규정·지침 Q&A</title>
   <meta name="description" content="특성화고 취업, 교육행정, 학교회계, 학생생활기록, 학교폭력 절차의 규정·지침 확인 순서를 무료 로컬 지식베이스로 정리하는 법률정보 도우미">
-  <link rel="stylesheet" href="styles.css?v=20260620-case-frame-v1">
+  <link rel="stylesheet" href="styles.css?v=20260621-simple-law-v1">
 </head>
-<body class="auth-law-blocked law-landing">
+<body class="auth-law-blocked law-tool-mode law-tool-legal">
   <header class="topbar">
     <a class="brand portal-brand" href="https://gyo6.kr/" aria-label="경북직업교육연구회 포털 홈">
       <span class="brand-mark" aria-hidden="true">G</span>
@@ -29,23 +29,19 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="page-title">
+    <section class="legal-intro" aria-labelledby="page-title">
       <div>
         <p class="eyebrow">특성화고 취업 · 교육행정 · 학교 현장 법률정보</p>
-        <h1 id="page-title">학교에서 묻는 규정과<br>법령 근거를 함께 찾습니다.</h1>
-        <p class="lead">현장실습과 취업지도는 물론 근태·출장·휴가, 학교회계, 학생생활기록, 학교폭력 사안처리까지 공식 원문과 확인 순서를 정리합니다.</p>
+        <h1 id="page-title">법률정보 질문창</h1>
+        <p class="lead">대상 신분과 1차 업무영역을 먼저 정한 뒤 질문을 적으면, 공식 규정·지침 근거와 Ollama 보강 답변을 함께 정리합니다.</p>
       </div>
-      <div class="hero-panel launch-panel" aria-label="법률정보 사용 시작">
-        <div class="hero-panel-head">
-          <span>사용 시작</span>
-          <strong>과금 없이 먼저 답변합니다</strong>
-        </div>
-        <p class="launch-copy">경북교육청을 기본값으로 두고, 대상자와 업무영역을 먼저 잡은 뒤 미리 구축한 규정 사전·반례·슬롯질문으로 답변합니다.</p>
-        <div class="law-launch-actions">
-          <a class="law-launch-action primary" href="./?tool=legal#legalTool" target="_blank" rel="noopener">무료 법률정보 질문하기</a>
-          <a class="law-launch-action" href="#legalTool">웹 법률정보 이용</a>
-        </div>
-        <p class="launch-note">기본 답변은 OpenAI API와 공식자료 조회 API를 호출하지 않습니다. 질문이 모호하면 필요한 정보만 되물어 답변 품질을 높입니다.</p>
+      <div class="legal-intro-steps" aria-label="사용 방법">
+        <span>사용 방법</span>
+        <ol>
+          <li>대상 신분을 고릅니다.</li>
+          <li>1차 업무영역을 고릅니다.</li>
+          <li>세부 분류는 필요할 때만 열고, 질문을 적습니다.</li>
+        </ol>
       </div>
     </section>
 
@@ -135,7 +131,7 @@
           <div class="intake-guide intake-guide-compact">
             <div>
               <span>질문 조건·분류</span>
-              <p>교육청·대상자·업무영역을 한 번에 정리합니다. 선택한 대상자에 맞춰 업무영역 후보가 재배열되고, 필요할 때만 세부 분류를 더 좁힙니다.</p>
+              <p>대상 신분과 1차 업무영역은 필수입니다. 세부 분류는 필요할 때만 열고, 나머지는 질문 내용으로 자동 보완합니다.</p>
             </div>
             <button class="ghost-action" id="resetQuestionButton" type="button">새 질문</button>
           </div>
@@ -165,9 +161,9 @@
           </label>
 
           <label class="field-stack" for="policyRole">
-            <span>대상자</span>
-            <select id="policyRole" name="policyRole">
-              <option value="auto">질문에서 자동 판단</option>
+            <span>대상 신분 <small>필수</small></span>
+            <select id="policyRole" name="policyRole" required>
+              <option value="" selected disabled>대상 신분 선택</option>
               <option value="student">학생</option>
               <option value="teacher">공립 교원</option>
               <option value="fixedTermTeacher">기간제 교원</option>
@@ -180,9 +176,9 @@
           </label>
 
           <label class="field-stack" for="policyCategory">
-            <span>업무영역</span>
-            <select id="policyCategory" name="policyCategory">
-              <option value="auto">질문에서 자동 분류</option>
+            <span>1차 업무영역 <small>필수</small></span>
+            <select id="policyCategory" name="policyCategory" required>
+              <option value="" selected disabled>1차 업무영역 선택</option>
               <option value="studentAttendance">출결·인정결석</option>
               <option value="fieldExperienceLearning">교외·가정체험학습</option>
               <option value="vocationalFieldTraining">현장실습·도제·산학협력</option>
@@ -202,7 +198,7 @@
         <details class="intake-assist">
           <summary>
             <span>세부 분류·답변 방식</span>
-            <strong>업무영역을 더 좁힐 때만 열기</strong>
+            <strong>선택 사항: 필요할 때만 열기</strong>
           </summary>
           <div class="field-grid intake-grid" aria-label="질문 맥락 선택">
             <label class="field-stack" for="userRole">
@@ -285,19 +281,19 @@
 
         <div class="question-head">
           <label class="field-label" for="question">질문</label>
-          <p>이 칸에는 지금 묻는 사안만 적어 주세요. 이전 질문은 새 질문 버튼으로 끊을 수 있습니다.</p>
+          <p>지금 묻는 사안만 적어 주세요. 대상 신분과 1차 업무영역은 위 선택값을 우선 반영합니다.</p>
         </div>
         <textarea id="question" name="question" rows="6" placeholder="예: 현장실습 시간 종료 후 자꾸 청소를 시키는 경우 어떻게 대처해야 하나요?"></textarea>
 
         <div class="examples" aria-label="예시 질문">
-          <button type="button" data-topic-major="fieldTraining" data-topic-middle="scope" data-topic-minor="safety" data-example="현장실습 중 안전사고가 나면 학교와 업체는 어떤 법령을 확인해야 하나요?">현장실습 안전</button>
-          <button type="button" data-topic-major="fieldTraining" data-topic-middle="apprenticeship" data-example="도제학교 학생의 근로시간과 보호 기준은 무엇을 봐야 하나요?">도제학교</button>
-          <button type="button" data-topic-major="schoolViolence" data-topic-middle="procedure" data-example="학교폭력 민원에서 학교가 확인해야 할 절차와 법령은 무엇인가요?">학교폭력 민원</button>
-          <button type="button" data-topic-major="staffLabor" data-topic-middle="attendanceLeave" data-topic-minor="teacherLeave" data-example="교원이 수업일 중 연가나 병가를 신청할 때 어떤 예규와 복무규정을 확인해야 하나요?">교원 휴가</button>
-          <button type="button" data-topic-major="schoolAdministration" data-topic-middle="budgetAccount" data-topic-minor="spendingEvidence" data-example="학교 예산을 집행할 때 지출 증빙과 품의·검수 자료는 어떤 기준으로 확인해야 하나요?">지출 증빙</button>
-          <button type="button" data-topic-major="studentPathway" data-topic-middle="records" data-topic-minor="schoolRecord" data-example="학생 생활기록부 내용을 정정하거나 증빙을 보관할 때 어떤 지침과 기재요령을 확인해야 하나요?">학생부 기록</button>
-          <button type="button" data-topic-major="studentPathway" data-topic-middle="fieldExperience" data-topic-minor="application" data-example="학생 가정체험학습 신청은 언제까지 하고 출결 처리는 어떻게 하나요?">가정체험학습</button>
-          <button type="button" data-topic-major="studentPathway" data-topic-middle="admissions" data-topic-minor="employedAdult" data-example="특성화고 졸업생이 재직자전형을 준비할 때 학교에서 확인할 규정과 서류는 무엇인가요?">재직자전형</button>
+          <button type="button" data-policy-role="student" data-policy-category="vocationalFieldTraining" data-topic-major="fieldTraining" data-topic-middle="scope" data-topic-minor="safety" data-example="현장실습 중 안전사고가 나면 학교와 업체는 어떤 법령을 확인해야 하나요?">현장실습 안전</button>
+          <button type="button" data-policy-role="student" data-policy-category="vocationalFieldTraining" data-topic-major="fieldTraining" data-topic-middle="apprenticeship" data-example="도제학교 학생의 근로시간과 보호 기준은 무엇을 봐야 하나요?">도제학교</button>
+          <button type="button" data-policy-role="student" data-policy-category="schoolViolenceGuide" data-topic-major="schoolViolence" data-topic-middle="procedure" data-example="학교폭력 민원에서 학교가 확인해야 할 절차와 법령은 무엇인가요?">학교폭력 민원</button>
+          <button type="button" data-policy-role="teacher" data-policy-category="leaveAttendance" data-topic-major="staffLabor" data-topic-middle="attendanceLeave" data-topic-minor="teacherLeave" data-example="교원이 수업일 중 연가나 병가를 신청할 때 어떤 예규와 복무규정을 확인해야 하나요?">교원 휴가</button>
+          <button type="button" data-policy-role="manager" data-policy-category="budgetExecution" data-topic-major="schoolAdministration" data-topic-middle="budgetAccount" data-topic-minor="spendingEvidence" data-example="학교 예산을 집행할 때 지출 증빙과 품의·검수 자료는 어떤 기준으로 확인해야 하나요?">지출 증빙</button>
+          <button type="button" data-policy-role="student" data-policy-category="studentRecords" data-topic-major="studentPathway" data-topic-middle="records" data-topic-minor="schoolRecord" data-example="학생 생활기록부 내용을 정정하거나 증빙을 보관할 때 어떤 지침과 기재요령을 확인해야 하나요?">학생부 기록</button>
+          <button type="button" data-policy-role="student" data-policy-category="fieldExperienceLearning" data-topic-major="studentPathway" data-topic-middle="fieldExperience" data-topic-minor="application" data-example="학생 가정체험학습 신청은 언제까지 하고 출결 처리는 어떻게 하나요?">가정체험학습</button>
+          <button type="button" data-policy-role="student" data-policy-category="admissionsPathways" data-topic-major="studentPathway" data-topic-middle="admissions" data-topic-minor="employedAdult" data-example="특성화고 졸업생이 재직자전형을 준비할 때 학교에서 확인할 규정과 서류는 무엇인가요?">재직자전형</button>
         </div>
 
         <button class="primary-action" type="submit">
@@ -318,7 +314,7 @@
         <div id="resultState" class="empty-state">
           <div class="empty-icon" aria-hidden="true">§</div>
           <h3>질문을 입력하면 결론부터 확인할 수 있습니다.</h3>
-          <p>경상북도교육청을 기본값으로 두고, 대상자와 업무영역을 함께 반영합니다.</p>
+          <p>대상 신분과 1차 업무영역을 먼저 고르면 질문 분석이 더 안정적으로 작동합니다.</p>
         </div>
       </section>
     </section>
@@ -447,14 +443,14 @@
     <p>GYO6 Law Info · 무료 규정·지침 Q&amp;A</p>
   </footer>
 
-  <script src="ai-config.js?v=20260620-case-frame-v1"></script>
-  <script src="firebase-config.js?v=20260620-case-frame-v1"></script>
-  <script type="module" src="auth.js?v=20260620-case-frame-v1"></script>
-  <script src="policy-knowledge-base.js?v=20260620-case-frame-v1"></script>
-  <script src="policy-source-registry.js?v=20260620-case-frame-v1"></script>
-  <script src="policy-corpus.js?v=20260620-case-frame-v1"></script>
-  <script src="policy-question-taxonomy.js?v=20260620-case-frame-v1"></script>
-  <script src="policy-engine.js?v=20260620-case-frame-v1"></script>
-  <script src="app.js?v=20260620-case-frame-v1"></script>
+  <script src="ai-config.js?v=20260621-simple-law-v1"></script>
+  <script src="firebase-config.js?v=20260621-simple-law-v1"></script>
+  <script type="module" src="auth.js?v=20260621-simple-law-v1"></script>
+  <script src="policy-knowledge-base.js?v=20260621-simple-law-v1"></script>
+  <script src="policy-source-registry.js?v=20260621-simple-law-v1"></script>
+  <script src="policy-corpus.js?v=20260621-simple-law-v1"></script>
+  <script src="policy-question-taxonomy.js?v=20260621-simple-law-v1"></script>
+  <script src="policy-engine.js?v=20260621-simple-law-v1"></script>
+  <script src="app.js?v=20260621-simple-law-v1"></script>
 </body>
 </html>

@@ -68,3 +68,32 @@
 - 로컬 정책 코퍼스는 도메인 프로필, 공식자료, 공통 슬롯, 수집 작업을 검색해 `lookupPolicyRules.corpusMatches`로 반환한다.
 - 회귀 테스트는 51개 수기 시나리오, 10개 학교 전반 정책 매트릭스, 550개 국내출장 생성형 조합, 330개 1박 2일 출장 조합을 검사한다.
 - `tools/policy-kb-audit.mjs`는 지식베이스의 도메인, 커넥터, 로컬 코퍼스, 금액표, 엔진 조회 결과를 감사한다.
+
+## 무료 야간 품질 루프
+
+`tools/policy-quality-nightly.mjs`는 유료 API 호출 없이 법률정보 품질을 매일 끌어올리기 위한 로컬 작업이다. 답변 문장을 대량 저장하지 않고 다음 자료만 누적한다.
+
+| 산출물 | 역할 |
+| --- | --- |
+| `data/policy-quality/source-expansion-queue.json` | 공식 원문·교육청 지침·학교규정 직접 URL 보강 후보 |
+| `data/policy-quality/regression-candidates.json` | 약한 답변이 다시 나오지 않도록 회귀테스트로 승격할 질문 후보 |
+| `data/policy-quality/training-cases.jsonl` | 질문 분류·슬롯 추출·금지 문구 개선용 무료 시뮬레이션 케이스 |
+| `data/policy-quality/latest.json` | 최신 실행 요약, 약점 수, 도메인 불일치, Ollama 로컬 검토 여부 |
+
+실행 명령:
+
+```powershell
+npm run policy:quality
+npm run policy:quality:sources
+npm run policy:quality:simulate
+npm run policy:quality:evaluate
+```
+
+Windows 작업 스케줄러 등록:
+
+```powershell
+npm run policy:quality:install-schedule
+npm run policy:quality:schedule
+```
+
+기본 심야 일정은 한국 시간 기준 `00:40` 출처 확충 큐, `02:40` 질문 시뮬레이션, `04:40` 답변 품질 평가다. Ollama가 켜져 있으면 평가 단계에서 일부 약한 사례를 로컬 모델로 재검토하고, 꺼져 있으면 규칙 엔진 평가만 수행한다.
