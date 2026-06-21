@@ -26,13 +26,46 @@ LOCAL_LLM_BRIDGE_PORT=8789
 LOCAL_LLM_BRIDGE_TOKEN=<long-random-shared-token>
 ```
 
-Start the bridge:
+Start or repair the whole office-PC Ollama path:
+
+```powershell
+npm run ollama:stack:start
+```
+
+This checks or starts, in order:
+
+1. local Ollama at `127.0.0.1:11434`
+2. the GYO6 local bridge at `127.0.0.1:8789`
+3. the Cloudflare Tunnel for `https://ollama-bridge.gyo6.kr`
+4. a short warm-up request for `qwen3:4b-instruct`
+
+Status only:
+
+```powershell
+npm run ollama:stack
+```
+
+Full external verification:
+
+```powershell
+npm run ollama:stack:verify
+```
+
+Register the stack to start after Windows login:
+
+```powershell
+npm run ollama:stack:install-startup
+```
+
+The installer first tries Windows Task Scheduler. If `schtasks` is unavailable or broken, it falls back to the current user's Startup folder with `GYO6-Ollama-Stack.cmd`.
+
+The older bridge-only command is still available when you intentionally want only the local bridge without the Cloudflare tunnel:
 
 ```powershell
 npm run ollama:bridge
 ```
 
-Local health check:
+Local authenticated health check:
 
 ```powershell
 Invoke-RestMethod -Uri http://127.0.0.1:8789/api/health -Headers @{ Authorization = "Bearer <long-random-shared-token>" }
@@ -47,6 +80,20 @@ https://ollama-bridge.gyo6.kr -> http://127.0.0.1:8789
 ```
 
 Keep the bridge bound to `127.0.0.1` on the office PC. The tunnel should be the only public path.
+
+For this deployment the named tunnel is:
+
+```text
+gyo6-ollama-bridge
+```
+
+If the PC was rebooted and public answers are stuck at "local AI pending", run:
+
+```powershell
+npm run ollama:stack:verify
+```
+
+The response should report `remoteBridge.ok=true` and `externalPolicy.remoteLocalLlm.ok=true`.
 
 ## Firebase Functions
 
