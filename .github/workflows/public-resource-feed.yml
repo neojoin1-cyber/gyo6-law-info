@@ -1,0 +1,67 @@
+name: Update public resource library
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 09:20, 17:20, 01:20 KST
+    - cron: "20 0,8,16 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-resource-library
+  cancel-in-progress: false
+
+jobs:
+  update-public-resources:
+    runs-on: ubuntu-latest
+    env:
+      RESOURCE_AUTOMATION_EXPECT_FRESH: "1"
+      PUBLIC_RESOURCE_INDEX_LIMIT: "3000"
+      FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh public resource library
+        run: npm run policy:resources:scheduled
+
+      - name: Run resource regression gate
+        run: npm run test:kakao-skill
+
+      - name: Commit refreshed resources
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "gyo6-resource-bot"
+          git config user.email "actions@github.com"
+          git add \
+            public/policy-source-expansion-generated.js \
+            public/public-resource-acquisition-generated.js \
+            public/public-resource-index-generated.js \
+            functions/public/policy-source-expansion-generated.js \
+            functions/public/public-resource-acquisition-generated.js \
+            functions/public/public-resource-index-generated.js
+          if git diff --cached --quiet; then
+            echo "No public resource changes to commit."
+            exit 0
+          fi
+          git commit -m "Update public resource library"
+          git push
+
+      - name: Deploy Firebase Hosting when token is configured
+        if: env.FIREBASE_TOKEN != ''
+        run: npx --yes firebase-tools@latest deploy --only hosting --project gyo6-law-info --token "$FIREBASE_TOKEN"

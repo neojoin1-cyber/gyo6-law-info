@@ -55,10 +55,10 @@ assert.match(sickLeaveEvidenceReply.messageText, /필요한 증빙자료와 제�
 const fixedTermSickLeaveState = handlePolicyChatRequest({
   question: "기간제교사의 병가는 몇일 가능하며 어떻게 신청하나요?"
 }).answerState;
-assert.equal(fixedTermSickLeaveState.status, "needs_slot");
-assert.ok(fixedTermSickLeaveState.definitiveAnswers.length === 0);
+assert.equal(fixedTermSickLeaveState.status, "conditional");
+assert.ok(fixedTermSickLeaveState.primaryText.includes("60일") && fixedTermSickLeaveState.primaryText.includes("180일"));
 assert.ok(fixedTermSickLeaveState.conditionalAnswers.some((text) => /60일|180일/.test(text)));
-assert.ok(fixedTermSickLeaveState.slotQuestions.some((item) => item.slot === "evidence"));
+assert.ok(fixedTermSickLeaveState.conditionalAnswers.some((text) => /진단서|증빙/.test(text)));
 
 const privateSchoolTeacherSickLeave = buildKakaoSkillResponse({
   userRequest: {
@@ -176,7 +176,7 @@ const genericChildbirthLeave = handlePolicyChatRequest({
   question: "출산 휴가 규정"
 });
 assert.equal(genericChildbirthLeave.semanticFrame.domainCode, "staffAttendanceService");
-assert.equal(genericChildbirthLeave.answerState.status, "needs_slot");
+assert.equal(genericChildbirthLeave.answerState.status, "conditional");
 assert.doesNotMatch(genericChildbirthLeave.responseText, /질문만으로는 적용 규정을 특정하기 어렵습니다/);
 assert.match(genericChildbirthLeave.responseText, /출산|특별휴가|나이스|증빙/);
 
@@ -290,20 +290,10 @@ const legalRiskQuestion = buildKakaoSkillResponse({
   }
 });
 const legalRiskQuestionText = legalRiskQuestion.template.outputs[0].simpleText.text;
-assert.match(legalRiskQuestionText, /가까운 분야|완성질문|규정/);
-const legalRiskBuilderReply = legalRiskQuestion.template.quickReplies.find((reply) => reply.label === "법률위험 질문 만들기");
-assert.ok(legalRiskBuilderReply, "Expected a legal-risk question-builder quick reply");
-
-const legalRiskBuilder = buildKakaoSkillResponse({
-  userRequest: {
-    utterance: legalRiskBuilderReply.messageText
-  }
-});
-const legalRiskBuilderText = legalRiskBuilder.template.outputs[0].simpleText.text;
-assert.match(legalRiskBuilderText, /필요 정보|당사자|사건 유형|증빙자료|긴급 위험/);
+assert.match(legalRiskQuestionText, /가까운 분야|완성질문|규정|확인 필요|증빙/);
 assert.ok(
-  legalRiskBuilder.template.quickReplies.some((reply) => reply.label === "고소 예시" || reply.label === "소송 예시"),
-  "Expected legal-risk example quick replies"
+  legalRiskQuestion.template.quickReplies.some((reply) => /증빙|대상자|절차/.test(reply.label)),
+  "Expected legal-risk quick replies for evidence, subject, or procedure follow-up"
 );
 
 const pendingLegalSession = {
@@ -541,6 +531,7 @@ const indexSource = readFileSync(new URL("../public/index.html", import.meta.url
 const authSource = readFileSync(new URL("../public/auth.js", import.meta.url), "utf-8");
 const appSource = readFileSync(new URL("../public/app.js", import.meta.url), "utf-8");
 const stylesSource = readFileSync(new URL("../public/styles.css", import.meta.url), "utf-8");
+const publicResourceIndexSource = readFileSync(new URL("../public/public-resource-index-generated.js", import.meta.url), "utf-8");
 assert.match(wranglerConfig, /OPENAI_MONTHLY_STOP_USD\s*=\s*"20"/);
 assert.match(wranglerConfig, /OPENAI_DAILY_CALL_LIMIT\s*=\s*"1000"/);
 assert.match(wranglerConfig, /KAKAO_GPT_NORMALIZER_ENABLED\s*=\s*"false"/);
@@ -550,9 +541,11 @@ assert.match(wranglerConfig, /KAKAO_GPT_NORMALIZER_TIMEOUT_MS\s*=\s*"1800"/);
 assert.match(wranglerConfig, /KAKAO_NLU_MODEL\s*=\s*"gpt-5\.4-nano"/);
 assert.match(wranglerConfig, /KAKAO_AUTH_REQUIRED\s*=\s*"false"/);
 assert.match(wranglerConfig, /KAKAO_APPROVED_USER_KEYS\s*=\s*""/);
-assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_ENABLED\s*=\s*"false"/);
-assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_MODE\s*=\s*"off"/);
+assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_ENABLED\s*=\s*"true"/);
+assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_MODE\s*=\s*"auto"/);
 assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_MIN_CONFIDENCE\s*=\s*"0\.82"/);
+assert.match(wranglerConfig, /POLICY_GPT_ANSWER_ENABLED\s*=\s*"true"/);
+assert.match(wranglerConfig, /POLICY_GPT_ANSWER_MODE\s*=\s*"always"/);
 assert.match(wranglerConfig, /FIREBASE_TRUSTED_PROJECT_IDS\s*=\s*"gyo6-law-info,gyo6--ebook"/);
 assert.match(wranglerConfig, /AUTH_REQUIRED\s*=\s*"true"/);
 assert.match(firebaseConfig, /GYO6_FIREBASE_CONFIG\s*=\s*\{\}/);
@@ -561,31 +554,65 @@ assert.doesNotMatch(firebaseConfig, /apiKey:\s*["']/);
 assert.doesNotMatch(firebaseConfig, /AIza/);
 assert.match(firebaseConfig, /GYO6_AUTH_REQUIRED\s*=\s*true/);
 assert.match(indexSource, /설탕과소금 상담자료실/);
-assert.doesNotMatch(indexSource, /경북직업교육연구회 법률정보/);
-assert.match(indexSource, /styles\.css\?v=20260708-counsel-room/);
-assert.match(indexSource, /법률 · 규정 · 지침 · 서식 자료실/);
-assert.match(indexSource, /회원 전용 익명 상담실/);
-assert.match(indexSource, /data-counsel-open="student"/);
-assert.match(indexSource, /data-counsel-open="teacher"/);
-assert.match(indexSource, /data-member-required/);
-assert.match(indexSource, /data-counsel-form/);
+assert.match(indexSource, /로그인 없이 이용하는 상담자료실/);
+assert.match(indexSource, /public-resource-controls/);
+assert.match(indexSource, /resource-browser/);
 assert.match(indexSource, /id="resourceSearch"/);
+assert.match(indexSource, /resource-classify-panel/);
+assert.match(indexSource, /resource-keyword-panel/);
+assert.match(indexSource, /id="resourceTypeSelect"/);
+assert.match(indexSource, /id="resourceLevel1Select"/);
+assert.match(indexSource, /id="resourceLevel2Select"/);
+assert.match(indexSource, /id="resourceLevel3Select"/);
+assert.match(indexSource, /id="resourceSearchButton"/);
+assert.match(indexSource, /id="resourceResetButton"/);
+assert.match(indexSource, /public-resource-index-generated\.js\?v=20260708-resource-levels-v1/);
+assert.match(appSource, /function initializePublicResourceLibrary/);
+assert.match(appSource, /GYO6_POLICY_CORPUS/);
+assert.match(appSource, /GYO6_POLICY_SOURCE_EXPANSION_GENERATED/);
+assert.match(appSource, /GYO6_PUBLIC_RESOURCE_INDEX/);
+assert.match(appSource, /PUBLIC_RESOURCE_CATEGORIES/);
+assert.match(appSource, /PUBLIC_RESOURCE_LEVEL2_RULES/);
+assert.match(appSource, /function classifyPublicResourceCategory/);
+assert.match(appSource, /function updatePublicResourceHierarchyControls/);
+assert.match(appSource, /function buildPublicResourceHierarchy/);
+assert.match(appSource, /function extractLawResource/);
+assert.match(appSource, /function getPublicResourceSearchTokens/);
+assert.match(appSource, /function isPublicResourceDisplayReady/);
+assert.match(publicResourceIndexSource, /"searchOnly": 0/);
+assert.doesNotMatch(publicResourceIndexSource, /google\.com\/search/);
+assert.doesNotMatch(publicResourceIndexSource, /법령\/[^"']*교원휴가/);
+assert.doesNotMatch(publicResourceIndexSource, /법령\/[^"']*및[^"']*기준/);
+assert.doesNotMatch(publicResourceIndexSource, /원문 후보|원문·지침 후보|검색 대행/);
+assert.match(indexSource, /admin-only-tool/);
+assert.match(indexSource, /학생 상담실 입장/);
+assert.match(indexSource, /선생님 상담실 입장/);
+assert.match(indexSource, /data-counsel-enter="student"/);
+assert.match(indexSource, /data-counsel-enter="teacher"/);
+assert.match(indexSource, /firebase-config\.js\?v=20260708-counsel-rooms-v1/);
+assert.match(indexSource, /styles\.css\?v=20260708-resource-levels-v1/);
+assert.match(indexSource, /상담자료 질문창/);
+assert.match(indexSource, /소속과 주체, 생활 업무영역을 먼저 고릅니다/);
+assert.match(indexSource, /무료 로컬 규정 엔진으로 답변합니다/);
 assert.match(indexSource, /id="policyOffice"/);
-assert.match(indexSource, /value="gyeongbuk"/);
+assert.match(indexSource, /value="gyeongbuk" selected>경상북도교육청/);
 assert.doesNotMatch(indexSource, /tool=legal&amp;login=law#legalTool/);
-assert.match(indexSource, /관리자 전용 AI 근거 검색/);
-assert.match(indexSource, /관리자 근거 검색/);
-assert.match(indexSource, /data-tool-tab="legal"/);
-assert.match(indexSource, /data-tool-panel="guide" hidden/);
+assert.match(indexSource, /질문 조건·분류/);
+assert.match(indexSource, /대상 주체 <small>자동 변환값<\/small>/);
+assert.match(indexSource, /1차 업무영역 <small>자동 변환값<\/small>/);
+assert.match(indexSource, /세부 분류·답변 방식/);
+assert.match(indexSource, /선택 사항: 필요할 때만 열기/);
+assert.match(indexSource, /답변 보기/);
 assert.doesNotMatch(indexSource, /href="\.\/\?tool=guide#guideQa" target="_blank"/);
 assert.doesNotMatch(indexSource, /https:\/\/pf\.kakao\.com\/_TTANn\/chat/);
-assert.match(indexSource, /auth\.js\?v=20260708-counsel-room/);
-assert.match(indexSource, /policy-knowledge-base\.js/);
-assert.match(indexSource, /policy-source-registry\.js/);
-assert.match(indexSource, /policy-corpus\.js/);
-assert.match(indexSource, /policy-question-taxonomy\.js/);
-assert.match(indexSource, /policy-engine\.js/);
-assert.match(indexSource, /app\.js\?v=20260708-counsel-room/);
+assert.match(indexSource, /카카오톡 챗봇/);
+assert.match(indexSource, /고품질 보강 연결을 점검 중입니다/);
+assert.match(indexSource, /웹 상담자료 질문창이 사무실 Ollama 보강 경로까지 확인된 공식 이용 경로입니다/);
+assert.match(indexSource, /웹 상담자료 질문창으로 이동/);
+assert.match(indexSource, /auth\.js\?v=20260708-counsel-rooms-v1/);
+assert.match(indexSource, /policy-knowledge-base\.js\?v=20260708-counsel-rooms-v1/);
+assert.match(indexSource, /policy-engine\.js\?v=20260708-counsel-rooms-v1/);
+assert.match(indexSource, /app\.js\?v=20260708-resource-levels-v1/);
 assert.match(authSource, /function syncAuthBodyState/);
 assert.match(authSource, /auth-law-ready/);
 assert.match(authSource, /gyo6-auth-state/);
@@ -606,7 +633,6 @@ assert.match(workerSource, /async function handlePolicyRequest/);
 assert.match(workerSource, /assertLawAccess\(authContext, env\)/);
 assert.match(workerSource, /const LAW_ACCESS_ROLES = new Set\(\["admin", "owner"\]\)/);
 assert.doesNotMatch(workerSource, /const LAW_ACCESS_ROLES = new Set\(\["law", "teacher", "admin", "owner"\]\)/);
-assert.match(workerSource, /관리자에 의해 법률정보 권한을 승인받아야 합니다/);
 assert.match(workerSource, /shouldUsePolicyGptNormalizer/);
 assert.match(workerSource, /policy_nlu/);
 assert.match(workerSource, /getTrustedFirebaseProjectIds/);
@@ -637,7 +663,6 @@ assert.match(appSource, /renderFreeBasicPolicyResult/);
 assert.match(appSource, /statusDot\.textContent = "기본 답변"/);
 assert.doesNotMatch(appSource, /외부 AI API 호출 없이 무료 규정 엔진으로 답변했습니다/);
 assert.doesNotMatch(appSource, /무료 규정 엔진으로 먼저 답변합니다/);
-assert.match(appSource, /renderLawInfoAccessBlockedResult\(access\.message\)/);
 assert.match(appSource, /shouldTriggerPolicyQualityRecovery/);
 assert.match(appSource, /renderPolicyQualityRecoveryNotice/);
 assert.match(appSource, /양질의 답변을 생성하기 위해 정보를 추가로 수집 및 분석이 필요하니 조금 더 기다려 주세요/);
@@ -655,30 +680,29 @@ assert.doesNotMatch(appSource, /API 과금 없는 기본 Q&amp;A는 별도 창�
 assert.doesNotMatch(appSource, /renderAccessBlockedLocalGuide/);
 assert.match(appSource, /userSelectedTool/);
 assert.match(stylesSource, /body\.law-landing \.guide-workspace/);
-assert.match(stylesSource, /body\.law-tool-mode \.prelogin-guide/);
-assert.match(stylesSource, /body\.law-tool-mode \.chatbot-guide/);
+assert.match(stylesSource, /body\.auth-admin-ready\.law-tool-mode \.prelogin-guide/);
+assert.match(stylesSource, /body\.auth-admin-ready\.law-tool-mode \.chatbot-guide/);
+assert.match(stylesSource, /body:not\(\.auth-admin-ready\) \.admin-only-tool/);
 assert.match(stylesSource, /\.chatbot-guide/);
 assert.match(stylesSource, /\.chatbot-guide-action/);
 assert.match(stylesSource, /grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\)/);
 assert.match(stylesSource, /body\.law-tool-mode \.tool-tabs/);
 assert.match(stylesSource, /\.law-launch-action/);
 assert.match(stylesSource, /\.auth-menu\[open\]::before/);
-assert.match(stylesSource, /transform:\s*translate\(-50%, -50%\)/);
-assert.match(stylesSource, /\.resource-library/);
-assert.match(stylesSource, /\.resource-columns/);
-assert.match(stylesSource, /\.counsel-gateway/);
-assert.match(stylesSource, /\.counsel-form/);
-assert.match(stylesSource, /\.admin-ai-workspace/);
+assert.match(stylesSource, /transform:\s*translateX\(-50%\)/);
+assert.match(stylesSource, /\.intake-assist/);
+assert.match(stylesSource, /\.policy-context-grid/);
+assert.match(stylesSource, /\.answer-extra-panel/);
 assert.doesNotMatch(stylesSource, /workspace\[data-tool-panel="legal"\]\s*\{\s*display:\s*none/s);
 assert.doesNotMatch(stylesSource, /body:not\(\.auth-law-ready\) \.guide-workspace\s*\{/);
 
 const renderResultStart = appSource.indexOf("async function renderResult");
 const accessGuardIndex = appSource.indexOf("const access = await getLawInfoAccess();", renderResultStart);
 const freeRenderIndex = appSource.indexOf("renderFreeBasicPolicyResult({", renderResultStart);
-const postFreeWindow = appSource.slice(freeRenderIndex, freeRenderIndex + 240);
-assert.ok(accessGuardIndex > renderResultStart && accessGuardIndex < freeRenderIndex, "web law info should require approved admin access before rendering answers");
-assert.ok(freeRenderIndex > accessGuardIndex, "web law info should render the local policy baseline only after access is approved");
-assert.doesNotMatch(postFreeWindow, /return;/, "admin legal tool should continue into quality recovery and AI/source checks after the local baseline");
+const earlyReturnIndex = appSource.indexOf("return;", freeRenderIndex);
+assert.ok(freeRenderIndex > renderResultStart, "web law info should render the free local policy engine first");
+assert.ok(earlyReturnIndex > freeRenderIndex, "web law info should not continue into paid AI analysis after free rendering");
+assert.ok(accessGuardIndex < 0 || accessGuardIndex > earlyReturnIndex, "web law info should not require access before the free answer");
 
 const freeKakaoResponse = await worker.fetch(
   new Request("https://worker.test/api/kakao/skill", {

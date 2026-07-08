@@ -5,7 +5,7 @@ const resultPanel = document.querySelector(".result-panel");
 const queryPanel = document.querySelector(".query-panel");
 const workspace = document.querySelector(".workspace");
 const resultTitle = document.querySelector(".result-head h2");
-const statusDot = document.querySelector(".status-dot");
+const statusDot = document.querySelector(".result-panel .status-dot");
 const toolTabs = document.querySelectorAll("[data-tool-tab]");
 const toolPanels = document.querySelectorAll("[data-tool-panel]");
 const toolLinks = document.querySelectorAll("[data-tool-link]");
@@ -19,6 +19,11 @@ const partyRoleInput = document.querySelector("#partyRole");
 const policyOfficeInput = document.querySelector("#policyOffice");
 const policyRoleInput = document.querySelector("#policyRole");
 const policyCategoryInput = document.querySelector("#policyCategory");
+const policyAffiliationCards = document.querySelector("#policyAffiliationCards");
+const policySubjectCards = document.querySelector("#policySubjectCards");
+const policyWorkAreaCards = document.querySelector("#policyWorkAreaCards");
+const policySubjectPreview = document.querySelector("#policySubjectPreview");
+const policyWorkPreview = document.querySelector("#policyWorkPreview");
 const resetQuestionButton = document.querySelector("#resetQuestionButton");
 const guideForm = document.querySelector("#guideForm");
 const guideQuestionInput = document.querySelector("#guideQuestion");
@@ -29,17 +34,100 @@ const guideResult = document.querySelector("#guideResult");
 const guideStatus = document.querySelector(".guide-status");
 const guideResultTitle = document.querySelector(".guide-result-panel .result-head h2");
 const resetGuideButton = document.querySelector("#resetGuideButton");
-const adminLegalTool = document.querySelector("#adminLegalTool");
-const adminToolLock = document.querySelector("#adminToolLock");
-const adminConsultationPanel = document.querySelector("#adminConsultationPanel");
-const adminConsultationList = document.querySelector("#adminConsultationList");
-const refreshAdminConsultationsButton = document.querySelector("#refreshAdminConsultations");
+const counselForm = document.querySelector("#counselForm");
+const counselEntry = document.querySelector("#counselEntry");
+const counselWorkspace = document.querySelector("#counselWorkspace");
+const counselRoomButtons = Array.from(document.querySelectorAll("[data-counsel-enter]"));
+const backToCounselEntryButton = document.querySelector("#backToCounselEntryButton");
+const counselRoomKicker = document.querySelector("#counselRoomKicker");
+const counselRoomTitle = document.querySelector("#counselRoomTitle");
+const counselFormTitle = document.querySelector("#counselFormTitle");
+const counselFormHelp = document.querySelector("#counselFormHelp");
+const counselAudienceInput = document.querySelector("#counselAudience");
+const refreshCounselButton = document.querySelector("#refreshCounselButton");
+const counselStatus = document.querySelector("#counselStatus");
+const counselListTitle = document.querySelector("#counselListTitle");
+const counselCaseList = document.querySelector("#counselCaseList");
+const counselCaseDetail = document.querySelector("#counselCaseDetail");
 const resourceSearchInput = document.querySelector("#resourceSearch");
-const counselGateway = document.querySelector("#counselGateway");
-const counselRooms = [...document.querySelectorAll("[data-counsel-room-panel]")];
-let activeCounselRoom = "";
+const resourceKeywordInputs = [...document.querySelectorAll("[data-resource-keyword]")];
+const resourceSearchButton = document.querySelector("#resourceSearchButton");
+const resourceResetButton = document.querySelector("#resourceResetButton");
+const resourceTypeSelect = document.querySelector("#resourceTypeSelect");
+const resourceLevel1Select = document.querySelector("#resourceLevel1Select");
+const resourceLevel2Select = document.querySelector("#resourceLevel2Select");
+const resourceLevel3Select = document.querySelector("#resourceLevel3Select");
+const resourceListMount = document.querySelector("#resourceList");
+const resourcePreviewMount = document.querySelector("#resourcePreview");
+const resourceSummaryMount = document.querySelector("#resourceSummary");
+const resourceMoreButton = document.querySelector("#resourceMoreButton");
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
 const AI_USAGE_LEDGER_KEY = "gyo6LawInfoAiUsageLedger";
+const PENDING_LAW_QUESTION_KEY = "gyo6LawInfoPendingQuestion";
+const PUBLIC_RESOURCE_PAGE_SIZE = 60;
+const PUBLIC_RESOURCE_CATEGORIES = [
+  { code: "all", label: "전체" },
+  { code: "fieldTraining", label: "현장실습·직업교육", pattern: /현장실습|직업계고|특성화고|마이스터고|직업교육|직업교육훈련|도제|일학습병행|산학협력|ncs|선도기업|표준협약|기업현장교사|실습|하이파이브|hifive|취업역량/i },
+  { code: "studentLife", label: "학생생활·학적", pattern: /학생부|생활기록|생활기록부|출결|출석|결석|학적|전입|전출|졸업|성적|평가|체험학습|교외체험|학생생활|생활지도|학생선도|선도위원회|학칙|기재요령/ },
+  { code: "schoolViolenceSafety", label: "학교폭력·안전", pattern: /학교폭력|학폭|폭력|안전|사고|중대재해|산업안전|안전보건|보건|감염병|급식|학교안전|위험성평가|아동학대|성폭력|보호조치/ },
+  { code: "staffLabor", label: "교직원 복무·노무", pattern: /교원|교사|교직원|교육공무직|공무직|기간제|계약제|복무|휴가|병가|연가|출장|여비|근로|노무|임금|퇴직|해고|근로계약|취업규칙|징계/ },
+  { code: "schoolAdmin", label: "학교회계·행정", pattern: /학교회계|예산|결산|계약|수의계약|검수|지출|품의|강사수당|강사료|수익자부담|물품|시설|공사|행정|민원|공문|위원회/ },
+  { code: "privacyRecords", label: "개인정보·기록", pattern: /개인정보|정보공개|기록물|공공기록|cctv|영상정보|정보보안|저작권|공문서|기록|공개|나이스|neis/i },
+  { code: "careerEmployment", label: "취업·진로", pattern: /취업|채용|공채|고졸|잡알리오|진로|졸업생|현장형|면접|자격|직무|직업능력|국가기술자격/ },
+  { code: "general", label: "공통·기타" }
+];
+const PUBLIC_RESOURCE_CATEGORY_MAP = new Map(PUBLIC_RESOURCE_CATEGORIES.map((category) => [category.code, category]));
+const PUBLIC_RESOURCE_LEVEL2_RULES = {
+  fieldTraining: [
+    ["현장실습 운영", /현장실습|표준협약|순회지도|선도기업|기업현장교사/],
+    ["도제·NCS·교육과정", /도제|일학습|ncs|전문교과|교육과정|학점제/i],
+    ["실습실 안전", /실습실|기자재|보호구|msds|위험성|안전교육/i],
+    ["취업지원", /취업|채용|고졸|추천채용|졸업생/]
+  ],
+  studentLife: [
+    ["학생부·출결", /학생부|생활기록|출결|출석|결석|기재요령/],
+    ["학적·전출입·졸업", /학적|전입|전출|졸업|입학/],
+    ["평가·성적", /평가|성적|학업성적|이의신청|인정점/],
+    ["체험학습", /체험학습|교외체험|보고서|신청서/],
+    ["생활지도", /생활지도|선도|학칙|학생생활/]
+  ],
+  schoolViolenceSafety: [
+    ["학교폭력", /학교폭력|학폭|전담기구|피해학생|보호조치/],
+    ["학교안전", /학교안전|안전사고|안전공제|사고보고/],
+    ["산업안전·실습안전", /산업안전|안전보건|위험성|보호구|msds|실습실/i],
+    ["보건·급식", /보건|감염병|급식|식중독|알레르기/]
+  ],
+  staffLabor: [
+    ["교직원 휴가·복무", /휴가|복무|연가|병가|공가|출장|여비|근무상황/],
+    ["노동·계약", /근로|노무|임금|계약|해고|퇴직|취업규칙|공무직/],
+    ["교권·민원", /교권|교육활동|침해|민원|학부모/],
+    ["기간제·사립학교", /기간제|계약제|사립학교/]
+  ],
+  schoolAdmin: [
+    ["학교회계·예산", /학교회계|예산|결산|수익자부담/],
+    ["계약·지출", /계약|수의계약|검수|지출|품의|증빙/],
+    ["위원회·규정", /위원회|학칙|규정|회의록|개정/],
+    ["시설·디지털", /시설|공사|석면|소방|정보화|기기/]
+  ],
+  privacyRecords: [
+    ["개인정보", /개인정보|동의|파기|처리/],
+    ["정보공개", /정보공개|비공개|부분공개/],
+    ["기록물·공문서", /기록물|공공기록|회의록|공문서|보존/],
+    ["CCTV·정보보안", /cctv|영상정보|정보보안|나이스|neis/i]
+  ],
+  careerEmployment: [
+    ["고졸채용", /고졸|공채|공공기관|잡알리오|채용/],
+    ["취업지원", /취업지원|추천채용|채용연계|졸업생/],
+    ["진로·자격", /진로|자격|국가기술자격|직무/],
+    ["노동상담", /근로계약|노동|임금|산재/]
+  ],
+  general: [
+    ["공통 법령", /초중등|초·중등|교육법|법령/],
+    ["특수교육", /특수교육|통합교육|개별화/],
+    ["복지·장학", /교육급여|교육비|장학|복지/],
+    ["상담·지원", /상담|위기|wee|지원/i]
+  ]
+};
 const LOCAL_COST_CONTROL = {
   monthlyWarnUsd: 10,
   monthlyStopUsd: 20,
@@ -59,6 +147,42 @@ let activeGuideLocalLlmController = null;
 let guideAutoRenderTimer = null;
 let currentGuideQuestionFingerprint = "";
 let userSelectedTool = false;
+let activeCounselRoom = "student";
+let publicResourceState = {
+  filter: "all",
+  category: "all",
+  level2: "all",
+  level3: "all",
+  query: "",
+  visible: PUBLIC_RESOURCE_PAGE_SIZE,
+  selectedId: "",
+  resources: []
+};
+
+const COUNSEL_ROOM_CONFIG = {
+  student: {
+    code: "student",
+    label: "학생 상담실",
+    kicker: "Student Room",
+    formTitle: "학생 상담실에 익명 상담 남기기",
+    help: "학생 본인의 취업·진로, 학교생활, 현장실습, 권리보호 상담을 남길 수 있습니다.",
+    loginMessage: "학생 상담실은 로그인 후 관리자 승인을 받은 회원만 이용할 수 있습니다.",
+    emptyMessage: "아직 학생 상담실에 등록된 상담이 없습니다. 왼쪽에서 익명 상담을 남겨 주세요.",
+    listTitle: "내 학생 상담 목록",
+    listStatus: "학생 상담"
+  },
+  teacher: {
+    code: "teacher",
+    label: "선생님 상담실",
+    kicker: "Teacher Room",
+    formTitle: "선생님 상담실에 익명 상담 남기기",
+    help: "선생님과 행정직을 포함한 교직원의 취업지도, 교육행정, 학교업무, 민원·규정 상담을 남길 수 있습니다.",
+    loginMessage: "선생님 상담실은 로그인 후 관리자 승인을 받은 회원만 이용할 수 있습니다.",
+    emptyMessage: "아직 선생님 상담실에 등록된 상담이 없습니다. 왼쪽에서 익명 상담을 남겨 주세요.",
+    listTitle: "내 선생님 상담 목록",
+    listStatus: "선생님 상담"
+  }
+};
 
 const roleGuides = {
   auto: {
@@ -890,6 +1014,61 @@ const operatingPolicyCategoryOrder = [
   "facilityDigital",
   "governanceRecords"
 ];
+const staffIdentityPolicyCategoryOrder = [
+  "leaveAttendance",
+  "staffContract",
+  "staffProtection",
+  "budgetExecution",
+  "documentDisclosure",
+  "facilityDigital",
+  "governanceRecords"
+];
+const roleClassificationProfiles = {
+  auto: { categoryScopes: ["studentCase", "staffCase", "institutionCase"] },
+  student: { categoryScopes: ["studentCase"] },
+  parent: { categoryScopes: ["studentCase", "institutionCase"] },
+  teacher: { categoryScopes: ["studentCase", "staffCase", "institutionCase"] },
+  fixedTermTeacher: { categoryScopes: ["staffCase", "institutionCase"] },
+  privateSchool: { categoryScopes: ["staffCase", "institutionCase"] },
+  localOfficer: { categoryScopes: ["staffCase", "institutionCase"] },
+  educationWorker: { categoryScopes: ["staffCase", "institutionCase"] },
+  manager: { categoryScopes: ["studentCase", "staffCase", "institutionCase"] }
+};
+const policyCategoryClassificationProfiles = {
+  studentAttendance: { scope: "studentCase" },
+  fieldExperienceLearning: { scope: "studentCase" },
+  studentRecords: { scope: "studentCase" },
+  schoolViolenceGuide: { scope: "studentCase" },
+  studentLifeGuidance: { scope: "studentCase" },
+  studentWelfare: { scope: "studentCase" },
+  studentHealthCounseling: { scope: "studentCase" },
+  studentSafety: { scope: "studentCase" },
+  vocationalFieldTraining: { scope: "studentCase" },
+  careerEmployment: { scope: "studentCase" },
+  admissionsPathways: { scope: "studentCase" },
+  vocationalCurriculum: { scope: "studentCase" },
+  vocationalEducation: { scope: "studentCase" },
+  curriculumAcademic: { scope: "studentCase" },
+  studentWelfareSafety: { scope: "studentCase" },
+  leaveAttendance: { scope: "staffCase" },
+  staffContract: { scope: "staffCase" },
+  staffProtection: { scope: "staffCase" },
+  budgetExecution: { scope: "institutionCase" },
+  documentDisclosure: { scope: "institutionCase" },
+  facilityDigital: { scope: "institutionCase" },
+  governanceRecords: { scope: "institutionCase" }
+};
+
+function getPolicyCompatibilityScopes(profile = {}) {
+  if (Array.isArray(profile.scopes)) return profile.scopes;
+  return profile.scope ? [profile.scope] : ["institutionCase"];
+}
+
+function doesRoleAllowCompatibilityProfile(roleCode = "auto", profile = {}) {
+  const roleProfile = roleClassificationProfiles[roleCode] || roleClassificationProfiles.auto;
+  const scopes = getPolicyCompatibilityScopes(profile);
+  return scopes.some((scope) => roleProfile.categoryScopes?.includes(scope));
+}
 const rolePolicyCategoryMatrix = {
   auto: [...studentPolicyCategoryOrder, ...operatingPolicyCategoryOrder],
   student: studentPolicyCategoryOrder,
@@ -926,29 +1105,10 @@ const rolePolicyCategoryMatrix = {
     "governanceRecords"
   ],
   fixedTermTeacher: [
-    "leaveAttendance",
-    "studentAttendance",
-    "fieldExperienceLearning",
-    "studentRecords",
-    "schoolViolenceGuide",
-    "studentLifeGuidance",
-    "vocationalFieldTraining",
-    "careerEmployment",
-    "staffContract",
-    "staffProtection",
-    "documentDisclosure"
+    ...staffIdentityPolicyCategoryOrder
   ],
   privateSchool: [
-    "leaveAttendance",
-    "studentAttendance",
-    "fieldExperienceLearning",
-    "studentRecords",
-    "schoolViolenceGuide",
-    "vocationalFieldTraining",
-    "careerEmployment",
-    "staffContract",
-    "staffProtection",
-    "governanceRecords"
+    ...staffIdentityPolicyCategoryOrder
   ],
   localOfficer: [
     "leaveAttendance",
@@ -957,19 +1117,10 @@ const rolePolicyCategoryMatrix = {
     "documentDisclosure",
     "facilityDigital",
     "governanceRecords",
-    "staffProtection",
-    "studentSafety"
+    "staffProtection"
   ],
   educationWorker: [
-    "leaveAttendance",
-    "staffContract",
-    "staffProtection",
-    "studentSafety",
-    "studentHealthCounseling",
-    "budgetExecution",
-    "documentDisclosure",
-    "facilityDigital",
-    "studentWelfare"
+    ...staffIdentityPolicyCategoryOrder
   ],
   manager: [
     "studentAttendance",
@@ -992,9 +1143,29 @@ const rolePolicyCategoryMatrix = {
   ]
 };
 
+function isPolicyCategoryCompatibleWithRole(roleCode = "auto", categoryCode = "auto") {
+  if (!roleCode || roleCode === "auto" || !categoryCode || categoryCode === "auto") return true;
+  if (!policyGuideCategories[categoryCode]) return false;
+  const categoryProfile = policyCategoryClassificationProfiles[categoryCode] || { scope: "institutionCase" };
+  if (!doesRoleAllowCompatibilityProfile(roleCode, categoryProfile)) return false;
+  const roleOrder = rolePolicyCategoryMatrix[roleCode];
+  return !roleOrder || roleOrder.includes(categoryCode);
+}
+
+function getDefaultPolicyCategoryCodeForRole(roleCode = "auto") {
+  const roleOrder = rolePolicyCategoryMatrix[roleCode] || rolePolicyCategoryMatrix.auto;
+  return roleOrder.find((value) => value && value !== "auto" && policyGuideCategories[value]) || "leaveAttendance";
+}
+
+function coercePolicyCategoryForRole(roleCode = "auto", categoryCode = "auto", fallbackCategoryCode = "") {
+  if (isPolicyCategoryCompatibleWithRole(roleCode, categoryCode)) return categoryCode;
+  if (fallbackCategoryCode && isPolicyCategoryCompatibleWithRole(roleCode, fallbackCategoryCode)) return fallbackCategoryCode;
+  return getDefaultPolicyCategoryCodeForRole(roleCode);
+}
+
 const policyCategoryTopicMap = {
-  studentAttendance: { major: "studentPathway", middle: "attendance", minor: "recognizedAbsence" },
-  fieldExperienceLearning: { major: "studentPathway", middle: "fieldExperience", minor: "application" },
+  studentAttendance: { major: "studentPathway", middle: "attendance", minor: "auto" },
+  fieldExperienceLearning: { major: "studentPathway", middle: "fieldExperience", minor: "auto" },
   admissionsPathways: { major: "studentPathway", middle: "admissions", minor: "auto" },
   studentRecords: { major: "studentPathway", middle: "records", minor: "schoolRecord" },
   schoolViolenceGuide: { major: "schoolViolence", middle: "procedure", minor: "reporting" },
@@ -1005,9 +1176,9 @@ const policyCategoryTopicMap = {
   vocationalFieldTraining: { major: "fieldTraining", middle: "scope", minor: "auto" },
   careerEmployment: { major: "employment", middle: "hiring", minor: "highSchoolHiring" },
   vocationalCurriculum: { major: "vocationalLearning", middle: "curriculum", minor: "auto" },
-  budgetExecution: { major: "schoolAdministration", middle: "budgetAccount", minor: "spendingEvidence" },
+  budgetExecution: { major: "schoolAdministration", middle: "budgetAccount", minor: "auto" },
   documentDisclosure: { major: "schoolAdministration", middle: "adminProcedure", minor: "infoDisclosure" },
-  leaveAttendance: { major: "staffLabor", middle: "attendanceLeave", minor: "teacherLeave" },
+  leaveAttendance: { major: "staffLabor", middle: "attendanceLeave", minor: "auto" },
   staffContract: { major: "staffLabor", middle: "employmentStatus", minor: "auto" },
   staffProtection: { major: "staffLabor", middle: "workplaceIssue", minor: "workplaceComplaint" },
   facilityDigital: { major: "schoolAdministration", middle: "adminProcedure", minor: "document" },
@@ -1016,6 +1187,78 @@ const policyCategoryTopicMap = {
   curriculumAcademic: { major: "vocationalLearning", middle: "curriculum", minor: "auto" },
   studentWelfareSafety: { major: "studentSupport", middle: "health", minor: "auto" }
 };
+
+const policyCategoryDetailRequirements = {
+  leaveAttendance: {
+    level: "minor",
+    title: "휴가·근태·출장의 세부 영역을 선택해 주세요.",
+    message: "휴가·근태·출장은 병가, 연가, 경조사휴가, 출장·여비, 지각·조퇴·외출처럼 하부 기준이 서로 달라 넓은 질문만으로는 답변 품질이 떨어질 수 있습니다.",
+    specificPattern: /병가|연가|연차|공가|특별휴가|경조사|상고|부모상|부모님상|부친상|모친상|배우자상|자녀상|조부상|조모상|조부모상|외조부상|외조모상|외조부모상|장인상|장모상|시부상|시모상|형제상|자매상|사망|별세|부고|장례|배우자|출산|육아|출장|여비|일비|식비|숙박|운임|지각|조퇴|외출|초과근무|근무상황|나이스/
+  },
+  studentAttendance: {
+    level: "minor",
+    title: "출결의 세부 사유를 선택해 주세요.",
+    message: "출결은 출석인정결석, 질병결석, 미인정결석, 등교중지, 지각·조퇴·결과처럼 처리 기준과 증빙이 갈립니다.",
+    specificPattern: /출석인정|인정결석|질병|미인정|결석계|등교중지|지각|조퇴|결과|경조사|상고|부모상|부모님상|부친상|모친상|조부상|조모상|조부모상|외조부상|외조모상|형제상|자매상|사망|별세|부고|장례|감염병|진단서/
+  },
+  budgetExecution: {
+    level: "minor",
+    title: "학교회계의 세부 업무 단계를 선택해 주세요.",
+    message: "학교회계는 예산편성, 품의, 계약, 검수, 지출, 정산, 강사수당, 업무추진비처럼 확인할 지침과 증빙 흐름이 다릅니다.",
+    specificPattern: /예산편성|본예산|추경|품의|계약|수의계약|검수|지출|정산|영수증|세금계산서|업무추진비|강사수당|강사료|물품|용역|공사/
+  },
+  staffContract: {
+    level: "minor",
+    title: "교직원 계약·신분의 세부 대상을 선택해 주세요.",
+    message: "교육공무직, 기간제교원, 사립학교 교직원, 단시간근로자, 재계약 사안은 적용 기준이 달라 하부 대상을 좁혀야 합니다.",
+    specificPattern: /교육공무직|공무직|특수운영|기간제|계약제|단시간|시간강사|사립|학교법인|재계약|근로계약|취업규칙|단체협약/
+  },
+  fieldExperienceLearning: {
+    level: "minor",
+    title: "체험학습의 처리 단계를 선택해 주세요.",
+    message: "교외·가정체험학습은 신청·승인, 결과보고서, 출결 처리, 수학여행·수련활동 안전계획이 서로 다른 절차입니다.",
+    specificPattern: /신청|승인|보고서|결과보고|출결|가정학습|교외체험|현장체험|수학여행|수련활동|안전계획|동의서/
+  },
+  studentLifeGuidance: {
+    level: "middle",
+    title: "학생생활지도 사안의 하부 영역을 선택해 주세요.",
+    message: "학생생활지도는 휴대전화, 수업방해, 선도·징계, 기숙사, 학칙·생활규정처럼 절차와 권한이 달라 세부 영역을 좁히면 답변이 안정됩니다.",
+    specificPattern: /휴대전화|휴대폰|수업방해|지시불응|생활지도|선도|징계|생활교육위원회|기숙사|학칙|학교생활규정|학생인권/
+  }
+};
+
+function getPolicyCategoryDetailRequirement(categoryCode = "auto", question = "", topicContext = null) {
+  const rule = policyCategoryDetailRequirements[categoryCode];
+  if (!rule) return null;
+  const normalized = compactText(question);
+  if (rule.specificPattern?.test(normalized)) return null;
+
+  const context = topicContext || getSelectedTopicContext();
+  const hasMiddle = context.middle && context.middle !== "auto";
+  const hasMinor = context.minor && context.minor !== "auto";
+  const satisfied = rule.level === "minor" ? hasMinor : hasMiddle;
+  return satisfied ? null : {
+    ...rule,
+    categoryCode,
+    categoryLabel: policyGuideCategories[categoryCode]?.label || "선택한 업무영역"
+  };
+}
+
+function validateRequiredPolicyTopicDetail(question = "") {
+  const categoryCode = policyCategoryInput?.value || "auto";
+  if (!categoryCode || categoryCode === "auto") return true;
+  const topicContext = getSelectedTopicContext();
+  const requirement = getPolicyCategoryDetailRequirement(categoryCode, question, topicContext);
+  if (!requirement) return true;
+
+  resetTransientQuestionState({ keepFormValues: true });
+  const assist = document.querySelector(".intake-assist");
+  if (assist) assist.open = true;
+  showEmptyMessage(requirement.title, requirement.message);
+  const focusTarget = requirement.level === "minor" ? topicMinorInput : topicMiddleInput;
+  focusTarget?.focus();
+  return false;
+}
 
 function getPolicyCategoryOptionsForRole(roleCode = "auto") {
   const roleOrder = rolePolicyCategoryMatrix[roleCode] || rolePolicyCategoryMatrix.auto;
@@ -1027,6 +1270,7 @@ function getPolicyCategoryOptionsForRole(roleCode = "auto") {
     .filter((value) => {
       if (seen.has(value)) return false;
       if (value !== "auto" && !policyGuideCategories[value]) return false;
+      if (!isPolicyCategoryCompatibleWithRole(roleCode, value)) return false;
       seen.add(value);
       return true;
     })
@@ -1049,6 +1293,7 @@ function getRequiredPolicyCategoryOptionsForRole(roleCode = "auto") {
         if (!value || value === "auto") return false;
         if (seen.has(value)) return false;
         if (!policyGuideCategories[value]) return false;
+        if (!isPolicyCategoryCompatibleWithRole(roleCode, value)) return false;
         seen.add(value);
         return true;
       })
@@ -1129,6 +1374,184 @@ const policyRoleProfiles = {
     priority: "학부모 안내는 학교가 적용하는 지침명, 처리 절차, 제출 가능한 증빙자료를 명확히 설명하는 방식이 좋습니다."
   }
 };
+
+const policyAffiliationOptions = [
+  {
+    code: "publicSchool",
+    label: "공립학교",
+    summary: "공립 유·초·중·고·특수학교 사안",
+    defaultSubject: "teacher"
+  },
+  {
+    code: "privateSchool",
+    label: "사립학교",
+    summary: "학교법인·사립학교 내부 규정이 함께 적용되는 사안",
+    defaultSubject: "teacher"
+  },
+  {
+    code: "educationOffice",
+    label: "교육청·직속기관",
+    summary: "교육청, 교육지원청, 직속기관 소속 직원·전문직 사안",
+    defaultSubject: "professional"
+  },
+  {
+    code: "other",
+    label: "기타",
+    summary: "외부강사, 업체, 학부모, 복수 주체처럼 소속을 특정하기 어려운 사안",
+    defaultSubject: "other"
+  }
+];
+
+const policySubjectOptions = [
+  {
+    code: "principal",
+    label: "학교장·기관장",
+    summary: "학교장 승인, 기관장 권한, 결재·책임 기준",
+    roleByAffiliation: {
+      publicSchool: "manager",
+      privateSchool: "privateSchool",
+      educationOffice: "manager",
+      other: "manager"
+    }
+  },
+  {
+    code: "teacher",
+    label: "교사",
+    summary: "교원 복무, 수업, 생활지도, 출장·휴가 사안",
+    roleByAffiliation: {
+      publicSchool: "teacher",
+      privateSchool: "privateSchool",
+      educationOffice: "teacher",
+      other: "teacher"
+    }
+  },
+  {
+    code: "student",
+    label: "학생·보호자",
+    summary: "출결, 학생부, 생활지도, 학교폭력, 복지·안전 사안",
+    roleByAffiliation: {
+      publicSchool: "student",
+      privateSchool: "student",
+      educationOffice: "student",
+      other: "parent"
+    }
+  },
+  {
+    code: "professional",
+    label: "교육전문직",
+    summary: "장학사·교육연구사 등 교육전문직 업무와 출장·복무",
+    roleByAffiliation: {
+      publicSchool: "teacher",
+      privateSchool: "privateSchool",
+      educationOffice: "teacher",
+      other: "teacher"
+    }
+  },
+  {
+    code: "generalStaff",
+    label: "일반직",
+    summary: "행정실, 지방공무원, 교육행정직 사안",
+    roleByAffiliation: {
+      publicSchool: "localOfficer",
+      privateSchool: "privateSchool",
+      educationOffice: "localOfficer",
+      other: "localOfficer"
+    }
+  },
+  {
+    code: "educationWorker",
+    label: "교육공무직·근로자",
+    summary: "교육공무직, 특수운영직군, 근로계약·취업규칙 사안",
+    roleByAffiliation: {
+      publicSchool: "educationWorker",
+      privateSchool: "privateSchool",
+      educationOffice: "educationWorker",
+      other: "educationWorker"
+    }
+  },
+  {
+    code: "other",
+    label: "외부·기타",
+    summary: "외부강사, 업체, 실습기업, 여러 주체가 얽힌 사안",
+    roleByAffiliation: {
+      publicSchool: "manager",
+      privateSchool: "privateSchool",
+      educationOffice: "localOfficer",
+      other: "auto"
+    }
+  }
+];
+
+const policyWorkAreaOptions = [
+  {
+    code: "staffWork",
+    label: "복무·인사·여비",
+    summary: "휴가, 병가, 경조사, 출산휴가, 근태, 초과근무, 출장비, 계약제교원, 교육공무직 복무",
+    categoryCode: "leaveAttendance",
+    topic: { major: "staffLabor", middle: "attendanceLeave", minor: "auto" },
+    fallbackCategories: ["staffContract", "staffProtection"]
+  },
+  {
+    code: "budgetContract",
+    label: "학교회계·계약·수당",
+    summary: "예산편성, 품의, 지출, 검수, 수의계약, 강사수당, 업무추진비, 수익자부담 정산",
+    categoryCode: "budgetExecution",
+    topic: { major: "schoolAdministration", middle: "budgetAccount", minor: "auto" },
+    fallbackCategories: ["staffContract", "documentDisclosure"]
+  },
+  {
+    code: "recordsAcademic",
+    label: "학생 출결·학적·평가",
+    summary: "출결, 인정결석, 체험학습, 생활기록부, 전입학, 졸업, 평가, 성적, 부정행위",
+    categoryCode: "studentAttendance",
+    topic: { major: "studentPathway", middle: "attendance", minor: "auto" },
+    fallbackCategories: ["studentRecords", "fieldExperienceLearning", "admissionsPathways", "curriculumAcademic"]
+  },
+  {
+    code: "studentDisciplineComplaint",
+    label: "학생 생활·학교폭력·민원",
+    summary: "학교폭력, 생활지도, 휴대전화, 학부모 민원, 교권침해, 아동학대 신고, 보호조치",
+    categoryCode: "schoolViolenceGuide",
+    topic: { major: "schoolViolence", middle: "procedure", minor: "reporting" },
+    fallbackCategories: ["studentLifeGuidance", "staffProtection"]
+  },
+  {
+    code: "safetyHealthMeal",
+    label: "안전·보건·급식",
+    summary: "학교안전사고, 감염병, 보건실, 급식 민원, 식중독, 중대재해, 안전보건",
+    categoryCode: "studentSafety",
+    topic: { major: "schoolSafety", middle: "accident", minor: "injury" },
+    fallbackCategories: ["studentHealthCounseling", "studentWelfareSafety"]
+  },
+  {
+    code: "privacyRecordsDisclosure",
+    label: "개인정보·기록·정보공개",
+    summary: "개인정보, CCTV, 녹음·사진, 정보공개, 회의록, 상담기록, 나이스·K-에듀파인 권한",
+    categoryCode: "documentDisclosure",
+    topic: { major: "schoolAdministration", middle: "adminProcedure", minor: "infoDisclosure" },
+    fallbackCategories: ["facilityDigital", "studentRecords"]
+  },
+  {
+    code: "vocationalEducation",
+    label: "특성화고·직업교육",
+    summary: "현장실습, 도제학교, NCS, 실습실 안전, 기자재, 취업지도, 고졸채용, 산업체 협약",
+    categoryCode: "vocationalFieldTraining",
+    topic: { major: "fieldTraining", middle: "scope", minor: "auto" },
+    fallbackCategories: ["vocationalCurriculum", "careerEmployment", "vocationalEducation"]
+  },
+  {
+    code: "governanceRule",
+    label: "학교운영·규정·위원회",
+    summary: "학교운영위원회, 학칙, 학교생활규정, 기숙사규정, 위원회 회의록, 규정 개정",
+    categoryCode: "governanceRecords",
+    topic: { major: "schoolAdministration", middle: "adminProcedure", minor: "committee" },
+    fallbackCategories: ["studentLifeGuidance", "documentDisclosure"]
+  }
+];
+
+let selectedPolicyAffiliationCode = "publicSchool";
+let selectedPolicySubjectCode = "teacher";
+let selectedPolicyWorkAreaCode = "staffWork";
 
 const topicTaxonomy = {
   auto: {
@@ -1448,6 +1871,19 @@ const topicTaxonomy = {
   }
 };
 
+const topicMajorClassificationProfiles = {
+  studentPathway: { scope: "studentCase" },
+  studentSupport: { scope: "studentCase" },
+  vocationalLearning: { scope: "studentCase" },
+  employment: { scope: "studentCase" },
+  fieldTraining: { scope: "studentCase" },
+  schoolViolence: { scope: "studentCase" },
+  schoolSafety: { scopes: ["studentCase", "institutionCase"] },
+  schoolAdministration: { scope: "institutionCase" },
+  staffLabor: { scope: "staffCase" },
+  civilComplaint: { scopes: ["studentCase", "institutionCase"] }
+};
+
 const topicMajorRoleMatrix = {
   auto: [
     "studentPathway",
@@ -1494,24 +1930,12 @@ const topicMajorRoleMatrix = {
   ],
   fixedTermTeacher: [
     "staffLabor",
-    "studentPathway",
-    "studentSupport",
-    "vocationalLearning",
-    "fieldTraining",
-    "schoolViolence",
-    "schoolSafety",
     "civilComplaint",
     "schoolAdministration"
   ],
   privateSchool: [
     "staffLabor",
     "schoolAdministration",
-    "studentPathway",
-    "studentSupport",
-    "vocationalLearning",
-    "fieldTraining",
-    "schoolViolence",
-    "schoolSafety",
     "civilComplaint"
   ],
   localOfficer: [
@@ -1540,6 +1964,13 @@ const topicMajorRoleMatrix = {
   ]
 };
 
+function isTopicMajorCompatibleWithRole(roleCode = "auto", topicMajorCode = "auto") {
+  if (!roleCode || roleCode === "auto" || !topicMajorCode || topicMajorCode === "auto") return true;
+  if (!topicTaxonomy[topicMajorCode]) return false;
+  const profile = topicMajorClassificationProfiles[topicMajorCode] || { scope: "institutionCase" };
+  return doesRoleAllowCompatibilityProfile(roleCode, profile);
+}
+
 function getTopicMajorOptionsForRole(roleCode = "auto") {
   const roleOrder = topicMajorRoleMatrix[roleCode] || topicMajorRoleMatrix.auto;
   const values = ["auto", ...roleOrder];
@@ -1548,6 +1979,7 @@ function getTopicMajorOptionsForRole(roleCode = "auto") {
     .filter((value) => {
       if (seen.has(value)) return false;
       if (value !== "auto" && !topicTaxonomy[value]) return false;
+      if (!isTopicMajorCompatibleWithRole(roleCode, value)) return false;
       seen.add(value);
       return true;
     })
@@ -1999,27 +2431,27 @@ const fallbackPreset = {
   checklist: ["질문에서 대상, 장소, 날짜, 기관을 분리합니다.", "관련 키워드로 법령 원문과 행정자료 후보를 자동 검색 대상으로 둡니다.", "실제 사안 적용 전 위험도와 전문가 검토 필요 여부를 표시합니다."]
 };
 
-initializePublicResourceLibrary();
-initializeCounselRooms();
-syncAccessControlledViews();
-
 initializeTopicControls();
 initializePolicyCategoryControls();
+initializePublicResourceLibrary();
 
 document.querySelectorAll("[data-example]").forEach((button) => {
   button.addEventListener("click", () => {
     resetTransientQuestionState({ keepFormValues: true });
     if (button.dataset.policyRole && policyRoleInput) {
       policyRoleInput.value = button.dataset.policyRole;
+      syncPolicyCardStateFromSelects();
       updatePolicyCategoryOptionsForRole({ keepValue: false });
       updateTopicMajorOptionsForCurrentRole({ keepValue: false });
     }
     if (button.dataset.policyCategory && policyCategoryInput) {
       policyCategoryInput.value = button.dataset.policyCategory;
+      syncPolicyCardStateFromSelects();
       syncTopicSelectionFromPolicyCategory({ force: true });
     }
     questionInput.value = button.dataset.example;
     setTopicSelection(button.dataset.topicMajor || "auto", button.dataset.topicMiddle || "auto", button.dataset.topicMinor || "auto");
+    syncPolicyCardStateFromSelects();
     questionInput.focus();
   });
 });
@@ -2072,12 +2504,6 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   activateTool("legal");
 
-  const access = await getLawInfoAccess();
-  if (!access.ok) {
-    renderLawInfoAccessBlockedResult(access.message);
-    return;
-  }
-
   if (!policyRoleInput?.value) {
     resetTransientQuestionState({ keepFormValues: true });
     showEmptyMessage("대상 신분을 먼저 선택해 주세요.", "학생, 공립 교원, 기간제 교원, 학교 관리자처럼 적용 규정이 달라지는 기준을 먼저 정합니다.");
@@ -2101,6 +2527,15 @@ form.addEventListener("submit", async (event) => {
   }
 
   syncTopicTypeInput();
+
+  if (!(await ensureLawQuestionAccessBeforeSubmit(question))) {
+    return;
+  }
+
+  if (!validateRequiredPolicyTopicDetail(question)) {
+    return;
+  }
+
   const scopes = [...form.querySelectorAll("input[name='scope']:checked")].map((input) => input.value);
   const manualTopicContext = getSelectedTopicContext();
   const preset = findPreset(question, manualTopicContext.presetType);
@@ -2122,6 +2557,21 @@ guideForm?.addEventListener("submit", (event) => {
   renderPolicyGuideResult();
 });
 
+counselRoomButtons.forEach((button) => {
+  button.addEventListener("click", () => enterCounselRoom(button.dataset.counselEnter || "student"));
+});
+backToCounselEntryButton?.addEventListener("click", showCounselEntry);
+counselForm?.addEventListener("submit", submitCounselCase);
+refreshCounselButton?.addEventListener("click", () => loadCounselCases());
+counselCaseList?.addEventListener("click", (event) => {
+  const button = event.target instanceof Element ? event.target.closest("[data-counsel-case-id]") : null;
+  if (!button) {
+    return;
+  }
+  loadCounselCaseDetail(button.getAttribute("data-counsel-case-id") || "");
+});
+counselCaseDetail?.addEventListener("submit", submitCounselReply);
+
 guideQuestionInput?.addEventListener("input", schedulePolicyGuideAutoRender);
 [guideOfficeInput, guideRoleInput, guideCategoryInput].forEach((input) => {
   input?.addEventListener("change", schedulePolicyGuideAutoRender);
@@ -2129,13 +2579,18 @@ guideQuestionInput?.addEventListener("input", schedulePolicyGuideAutoRender);
 
 window.addEventListener("hashchange", activateToolFromHash);
 document.body?.addEventListener("gyo6-auth-state", (event) => {
-  syncAccessControlledViews();
+  resumePendingLawQuestionAfterLogin(event.detail || {});
+  if (isCounselWorkspaceOpen()) {
+    loadCounselCases({ silent: true });
+  }
   if (!syncLawWindowMode() || userSelectedTool || window.location?.hash || getRequestedToolParam()) {
     return;
   }
 
   activateTool("legal");
 });
+
+syncCounselRoomUi();
 
 resultState.addEventListener("submit", (event) => {
   if (event.target?.id === "guideIntentConfirmForm") {
@@ -2155,6 +2610,1392 @@ resultState.addEventListener("submit", (event) => {
     applyClarifierAnswers(event.target);
   }
 });
+
+async function ensureLawQuestionAccessBeforeSubmit(question = "") {
+  const access = await getLawInfoAccess();
+  if (access.ok) {
+    return true;
+  }
+
+  cachePendingLawQuestion(question);
+  resetTransientQuestionState({ keepFormValues: true });
+  renderLawInfoAccessBlockedResult("법률정보 AI는 관리자 답변 작성용입니다. 상담이 필요하면 상담실에 글을 남겨 주세요.");
+  scrollToResultPanel();
+  window.GYO6_AUTH?.requestLogin?.("법률정보 AI는 관리자 답변 작성용입니다. 상담은 상담실에 남겨 주세요.");
+  return false;
+}
+
+function initializePublicResourceLibrary() {
+  if (!resourceListMount || !resourcePreviewMount) {
+    return;
+  }
+
+  publicResourceState.resources = buildPublicResourceIndex();
+  publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+  publicResourceState.selectedId = publicResourceState.resources[0]?.id || "";
+  updatePublicResourceCounts();
+  updatePublicResourceHierarchyControls();
+  renderPublicResourceLibrary();
+
+  resourceTypeSelect?.addEventListener("change", () => {
+    publicResourceState.filter = resourceTypeSelect.value || "all";
+    publicResourceState.category = "all";
+    publicResourceState.level2 = "all";
+    publicResourceState.level3 = "all";
+    publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+    updatePublicResourceHierarchyControls();
+    renderPublicResourceLibrary();
+  });
+
+  resourceLevel1Select?.addEventListener("change", () => {
+    publicResourceState.category = normalizePublicResourceCategory(resourceLevel1Select.value || "all", "all");
+    publicResourceState.level2 = "all";
+    publicResourceState.level3 = "all";
+    publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+    updatePublicResourceHierarchyControls();
+    renderPublicResourceLibrary();
+  });
+
+  resourceLevel2Select?.addEventListener("change", () => {
+    publicResourceState.level2 = resourceLevel2Select.value || "all";
+    publicResourceState.level3 = "all";
+    publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+    updatePublicResourceHierarchyControls();
+    renderPublicResourceLibrary();
+  });
+
+  resourceLevel3Select?.addEventListener("change", () => {
+    publicResourceState.level3 = resourceLevel3Select.value || "all";
+    publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+    renderPublicResourceLibrary();
+  });
+
+  resourceSearchButton?.addEventListener("click", () => {
+    publicResourceState.query = collectPublicResourceKeywordQuery();
+    publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+    renderPublicResourceLibrary();
+  });
+
+  resourceKeywordInputs.forEach((input) => {
+    input.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter") {
+        return;
+      }
+      event.preventDefault();
+      publicResourceState.query = collectPublicResourceKeywordQuery();
+      publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+      renderPublicResourceLibrary();
+    });
+  });
+
+  resourceResetButton?.addEventListener("click", () => {
+    publicResourceState.filter = "all";
+    publicResourceState.category = "all";
+    publicResourceState.level2 = "all";
+    publicResourceState.level3 = "all";
+    publicResourceState.query = "";
+    publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+    resourceKeywordInputs.forEach((input) => {
+      input.value = "";
+    });
+    updatePublicResourceHierarchyControls();
+    renderPublicResourceLibrary();
+  });
+
+  resourceMoreButton?.addEventListener("click", () => {
+    publicResourceState.visible += PUBLIC_RESOURCE_PAGE_SIZE;
+    renderPublicResourceLibrary();
+  });
+
+  resourceListMount.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target || target.closest("[data-resource-open]")) {
+      return;
+    }
+    const row = target.closest("[data-resource-id]");
+    if (!row) {
+      return;
+    }
+    openPublicResourcePreview(row.getAttribute("data-resource-id") || "", { focus: true });
+  });
+}
+
+function buildPublicResourceIndex() {
+  const items = [];
+
+  getGeneratedPublicResourceIndex().resources?.forEach((resource, index) => {
+    items.push(normalizePublicResource({
+      ...resource,
+      id: `generated:${resource.id || index}`,
+      provider: resource.provider || resource.source,
+      description: resource.description || resource.summary || resource.query,
+      sourceTier: resource.sourceTier || resource.tier || "generatedPublicResource"
+    }));
+  });
+
+  Object.entries(policySourceCatalog || {}).forEach(([key, source]) => {
+    items.push(normalizePublicResource({
+      ...source,
+      id: `catalog:${key}`,
+      provider: source.source || source.provider,
+      description: source.use || source.note || source.query,
+      sourceTier: source.tier || source.type || ""
+    }));
+  });
+
+  Object.entries(getPublicResourceRegistry().officialSources || {}).forEach(([key, source]) => {
+    items.push(normalizePublicResource({
+      ...source,
+      id: `registry:${key}`,
+      provider: source.provider,
+      sourceTier: source.tier,
+      description: source.summary || source.query || source.provider,
+      domains: source.domains || []
+    }));
+  });
+
+  Object.entries(officialMaterialsByTopic || {}).forEach(([topic, materials]) => {
+    (materials || []).forEach((material, index) => {
+      items.push(normalizePublicResource({
+        ...material,
+        id: `material:${topic}:${index}`,
+        provider: material.source || material.provider,
+        description: material.use || material.note || material.query,
+        topic
+      }));
+    });
+  });
+
+  (educationOfficeCatalog || []).forEach((office) => {
+    ["budgetGuide", "fieldExperienceGuide", "studentGuidanceGuide"].forEach((key) => {
+      const guide = office[key];
+      if (!guide?.title) {
+        return;
+      }
+      items.push(normalizePublicResource({
+        ...guide,
+        id: `office:${office.code}:${key}`,
+        type: key === "budgetGuide" ? "rule" : "guide",
+        provider: office.label,
+        source: office.label,
+        description: guide.note || guide.status || `${office.label} 공식자료`,
+        searchDomain: office.domain
+      }));
+    });
+  });
+
+  getPublicResourceCorpus().entries
+    ?.filter((entry) => ["officialSource", "sourceExpansionResult"].includes(entry.type))
+    .forEach((entry, index) => {
+      if (entry.type === "sourceExpansionResult" && entry.matchedSources?.length) {
+        entry.matchedSources.forEach((source, sourceIndex) => {
+          items.push(normalizePublicResource({
+            ...source,
+            id: `corpus:${entry.id}:${sourceIndex}`,
+            title: source.title || entry.title,
+            provider: source.provider || source.source || entry.sourceTier,
+            sourceTier: source.tier || entry.sourceTier,
+            query: source.query || entry.query,
+            description: source.summary || entry.summary,
+            domainCode: entry.domainCode
+          }));
+        });
+        return;
+      }
+
+      items.push(normalizePublicResource({
+        ...entry,
+        id: `corpus:${entry.id || index}`,
+        provider: entry.provider || entry.sourceTier,
+        sourceTier: entry.sourceTier,
+        description: entry.summary || entry.query
+      }));
+    });
+
+  (getPublicResourceExpansion().results || []).forEach((item, index) => {
+    (item.matchedSources?.length ? item.matchedSources : [item]).forEach((source, sourceIndex) => {
+      items.push(normalizePublicResource({
+        ...source,
+        id: `expansion:${item.key || index}:${sourceIndex}`,
+        title: source.title || item.title,
+        provider: source.provider || item.provider,
+        sourceTier: source.tier || item.sourceTier,
+        query: source.query || item.query,
+        description: source.summary || item.answerIntegration?.summary || item.reason
+      }));
+    });
+  });
+
+  return dedupePublicResources([...items, ...buildCuratedPublicResources()])
+    .filter((item) => item.title && item.type)
+    .filter(isPublicResourceDisplayReady)
+    .sort(comparePublicResources);
+}
+
+function getPublicResourceRegistry() {
+  return window.GYO6_POLICY_SOURCE_REGISTRY || globalThis.GYO6_POLICY_SOURCE_REGISTRY || { officialSources: {} };
+}
+
+function getPublicResourceCorpus() {
+  return window.GYO6_POLICY_CORPUS || globalThis.GYO6_POLICY_CORPUS || { entries: [] };
+}
+
+function getPublicResourceExpansion() {
+  return window.GYO6_POLICY_SOURCE_EXPANSION_GENERATED || globalThis.GYO6_POLICY_SOURCE_EXPANSION_GENERATED || { results: [] };
+}
+
+function getGeneratedPublicResourceIndex() {
+  return window.GYO6_PUBLIC_RESOURCE_INDEX || globalThis.GYO6_PUBLIC_RESOURCE_INDEX || { resources: [] };
+}
+
+function buildCuratedPublicResources() {
+  return [
+    {
+      id: "curated:law:vocational-training",
+      type: "law",
+      title: "직업교육훈련 촉진법",
+      provider: "국가법령정보센터",
+      description: "현장실습, 직업교육훈련, 산업체 협약 관련 기본 법령",
+      url: "https://www.law.go.kr/법령/직업교육훈련촉진법"
+    },
+    {
+      id: "curated:law:elementary-secondary",
+      type: "law",
+      title: "초·중등교육법",
+      provider: "국가법령정보센터",
+      description: "학교 운영, 학생 지도, 학칙과 교육활동 기본 근거",
+      url: "https://www.law.go.kr/법령/초·중등교육법"
+    },
+    {
+      id: "curated:law:labor-standard",
+      type: "law",
+      title: "근로기준법",
+      provider: "국가법령정보센터",
+      description: "근로계약, 임금, 근로시간, 휴게, 연소자 보호 기준",
+      url: "https://www.law.go.kr/법령/근로기준법"
+    },
+    {
+      id: "curated:law:school-violence",
+      type: "law",
+      title: "학교폭력예방 및 대책에 관한 법률",
+      provider: "국가법령정보센터",
+      description: "학교폭력 사안 처리와 학생 보호 절차의 기본 법령",
+      url: "https://www.law.go.kr/법령/학교폭력예방및대책에관한법률"
+    },
+    {
+      id: "curated:rule:school-record-rule",
+      type: "rule",
+      title: "학교생활기록 작성 및 관리지침",
+      provider: "국가법령정보센터",
+      description: "출결, 행동특성, 생활기록부 기재 기준 확인",
+      url: "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000188164"
+    },
+    {
+      id: "curated:guide:school-record-guide",
+      type: "guide",
+      title: "학교생활기록부 기재요령",
+      provider: "교육부 학생평가지원포털",
+      description: "생활기록부 기재, 정정, 출결 처리 실무 자료",
+      url: "https://star.moe.go.kr/web/contents/m21100.do"
+    },
+    {
+      id: "curated:guide:field-training-manual",
+      type: "guide",
+      title: "직업계고 현장실습 운영 자료",
+      provider: "교육부·하이파이브",
+      description: "현장실습 운영, 안전, 순회지도, 기업 점검 자료 확인",
+      query: "직업계고 현장실습 운영 매뉴얼 표준협약서 순회지도",
+      searchDomain: "hifive.go.kr"
+    },
+    {
+      id: "curated:form:field-training-agreement",
+      type: "form",
+      title: "현장실습 표준협약서",
+      provider: "교육부·하이파이브",
+      description: "학생, 학교, 산업체 협약과 보호 조항 확인",
+      query: "현장실습 표준협약서 서식",
+      searchDomain: "hifive.go.kr"
+    },
+    {
+      id: "curated:form:field-training-visit",
+      type: "form",
+      title: "순회지도·상담 기록 서식",
+      provider: "교육부·시도교육청",
+      description: "현장실습 순회지도, 상담 기록, 기업 방문 점검 서식",
+      query: "현장실습 순회지도 상담 기록 서식",
+      searchDomain: "hifive.go.kr"
+    },
+    {
+      id: "curated:form:safety-check",
+      type: "form",
+      title: "안전사고 보고·점검 서식",
+      provider: "교육부·안전보건공단",
+      description: "안전 점검, 사고 보고, 예방교육 관련 서식 확인",
+      query: "학교 안전사고 보고 점검 서식",
+      searchDomain: "moe.go.kr"
+    }
+  ].map(normalizePublicResource);
+}
+
+function normalizePublicResource(item = {}) {
+  const rawTitle = String(item.title || item.name || "").trim();
+  const provider = String(item.provider || item.source || item.sourceTier || "공식자료").trim();
+  const query = String(item.query || rawTitle).trim();
+  const sourceTier = String(item.sourceTier || item.tier || item.type || "").trim();
+  const rawDescription = String(item.description || item.use || item.note || item.summary || query || "").trim();
+  const rawType = String(item.type || "").trim();
+  const initialType = ["law", "rule", "guide", "form"].includes(rawType)
+    ? rawType
+    : classifyPublicResourceType({ title: rawTitle, provider, query, sourceTier, description: rawDescription });
+  const legalResource = extractLawResource(`${rawTitle} ${query}`);
+  const type = legalResource.path === "행정규칙" ? "rule" : legalResource.path === "법령" ? "law" : initialType;
+  const title = legalResource.name || rawTitle;
+  const description = cleanPublicResourceDescription(rawDescription, type, title, provider);
+  const url = buildPublicResourceDirectUrl({ ...item, title, provider, query, sourceTier, type });
+  const searchUrl = buildPublicResourceSearchUrl({ ...item, title, provider, query, sourceTier });
+  const linkKind = getPublicResourceLinkKind(url);
+  const actionLabel = getPublicResourceActionLabel({ type, url, linkKind });
+  const declaredCategory = normalizePublicResourceCategory(item.category || item.resourceCategory || item.categoryCode);
+  const category = declaredCategory && declaredCategory !== "all"
+    ? declaredCategory
+    : classifyPublicResourceCategory({ title, provider, query, sourceTier, description, type, terms: item.terms });
+  const hierarchy = buildPublicResourceHierarchy({ title, provider, query, sourceTier, description, type, category, terms: item.terms });
+
+  return {
+    id: createPublicResourceId(item.id || `${type}:${provider}:${title}:${url || query}`),
+    type,
+    category,
+    hierarchy,
+    title,
+    provider,
+    query,
+    sourceTier,
+    description,
+    url,
+    searchUrl,
+    actionLabel,
+    linkKind,
+    terms: uniqueStrings([
+      title,
+      provider,
+      query,
+      sourceTier,
+      description,
+      item.domainCode,
+      item.categoryCode,
+      ...(item.domains || []),
+      ...(item.terms || [])
+    ])
+  };
+}
+
+function classifyPublicResourceType(item = {}) {
+  const titleText = normalizePublicResourceText(item.title);
+  const tierText = normalizePublicResourceText(item.sourceTier);
+  const text = normalizePublicResourceText([item.title, item.provider, item.query, item.sourceTier, item.description].join(" "));
+  const legalResource = extractLawResource(text);
+  if (legalResource.path === "행정규칙") {
+    return "rule";
+  }
+  if (legalResource.path === "법령") {
+    return "law";
+  }
+  if (/법률|법령|시행령|시행규칙/.test(titleText) || /nationalLaw/i.test(tierText)) {
+    return "law";
+  }
+  if (/고시|훈령|예규|행정규칙|관리지침|규정|규칙|학칙|취업규칙|단체협약/.test(titleText) || /schoolRule|officialRule/i.test(tierText)) {
+    return "rule";
+  }
+  if (/표준협약서|협약서|신청서|보고서|동의서|기록서|점검표|체크리스트|서식|양식|template|form/.test(text)) {
+    return "form";
+  }
+  return "guide";
+}
+
+function classifyPublicResourceCategory(item = {}) {
+  const text = normalizePublicResourceText([
+    item.title,
+    item.provider,
+    item.query,
+    item.sourceTier,
+    item.description,
+    item.type,
+    ...(item.terms || [])
+  ].join(" "));
+
+  const matched = PUBLIC_RESOURCE_CATEGORIES
+    .filter((category) => category.code !== "all" && category.code !== "general" && category.pattern)
+    .find((category) => category.pattern.test(text));
+  return matched?.code || "general";
+}
+
+function buildPublicResourceHierarchy(item = {}) {
+  const category = normalizePublicResourceCategory(item.category, "general") || "general";
+  const text = [
+    item.title,
+    item.provider,
+    item.query,
+    item.sourceTier,
+    item.description,
+    ...(item.terms || [])
+  ].join(" ");
+  const normalized = normalizePublicResourceText(text);
+  const level2 = (PUBLIC_RESOURCE_LEVEL2_RULES[category] || [])
+    .find(([, pattern]) => pattern.test(normalized))?.[0] || getPublicResourceCategoryLabel(category);
+  return {
+    type: item.type || "guide",
+    category,
+    level2,
+    level3: buildPublicResourceDetailLabel(item)
+  };
+}
+
+function buildPublicResourceDetailLabel(item = {}) {
+  const title = String(item.title || "").replace(/\s+/g, " ").trim();
+  if (!title) {
+    return getPublicResourceTypeLabel(item.type);
+  }
+  if (title.length <= 28) {
+    return title;
+  }
+  return `${title.slice(0, 27)}...`;
+}
+
+function buildPublicResourceDirectUrl(item = {}) {
+  const rawUrl = String(item.url || item.href || item.downloadUrl || "").trim();
+  if (rawUrl && !isGenericBoardListUrl(rawUrl) && !isBrokenPublicLawUrl(rawUrl)) {
+    return rawUrl;
+  }
+
+  if (item.type === "law" || item.type === "rule") {
+    const legalResource = extractLawResource(`${item.title || ""} ${item.query || ""}`);
+    return legalResource.name && legalResource.path
+      ? `https://www.law.go.kr/${legalResource.path}/${encodeURIComponent(legalResource.name)}`
+      : "";
+  }
+
+  return "";
+}
+
+function buildPublicResourceSearchUrl(item = {}) {
+  return "";
+}
+
+function extractLawResource(value = "") {
+  const source = String(value || "");
+  const normalized = source.replace(/\s+/g, "");
+  const adminRuleNames = [
+    "교원휴가에관한예규",
+    "교원의학생생활지도에관한고시",
+    "학교생활기록작성및관리지침",
+    "학교생활기록부기재요령",
+    "교육공무원인사관리규정"
+  ];
+  const knownLawNames = [
+    "학교폭력예방및대책에관한법률",
+    "학교안전사고예방및보상에관한법률",
+    "교원의지위향상및교육활동보호를위한특별법",
+    "지방자치단체를당사자로하는계약에관한법률",
+    "장애인등에대한특수교육법",
+    "공공기관의정보공개에관한법률",
+    "공공기록물관리에관한법률",
+    "중대재해처벌등에관한법률",
+    "직업교육훈련촉진법",
+    "산업안전보건법",
+    "개인정보보호법",
+    "국가공무원복무규정",
+    "지방공무원복무규정",
+    "근로기준법",
+    "초·중등교육법시행령",
+    "초중등교육법시행령",
+    "초·중등교육법",
+    "초중등교육법",
+    "학교급식법",
+    "학교보건법"
+  ];
+  const adminMatch = adminRuleNames.find((ruleName) => normalized.includes(ruleName.replace(/\s+/g, "")));
+  if (adminMatch) {
+    return { name: adminMatch, path: "행정규칙" };
+  }
+  const lawMatch = knownLawNames.find((lawName) => normalized.includes(lawName.replace(/\s+/g, "")));
+  if (lawMatch) {
+    return { name: lawMatch, path: "법령" };
+  }
+  return { name: "", path: "" };
+}
+
+function isGenericBoardListUrl(url = "") {
+  const parsed = parsePolicyUrl(url);
+  if (!parsed) {
+    return false;
+  }
+  if (/law\.go\.kr$/i.test(parsed.hostname.replace(/^www\./, "")) && /\/LSW\/admRulSc\.do$/i.test(parsed.pathname)) {
+    return true;
+  }
+  if (isDocumentDownloadUrl(url)) {
+    return false;
+  }
+  const path = normalizePolicyPath(parsed.pathname);
+  const genericPaths = ["/", "/main", "/main.do", "/index", "/index.do", "/home", "/kosha", "/kosha/index.do"];
+  if (genericPaths.includes(path)) {
+    return true;
+  }
+  return /\/bbs\/?$|\/board\/?$|\/notice\/?$|\/data\/?$|\/archive\/?$/i.test(path);
+}
+
+function extractLawResourceName(value = "") {
+  return extractLawResource(value).name;
+}
+
+function getPublicResourceLinkKind(url = "") {
+  if (!url) {
+    return "none";
+  }
+  if (isDocumentDownloadUrl(url)) {
+    return "file";
+  }
+  if (/law\.go\.kr/i.test(url)) {
+    return "law";
+  }
+  if (/google\.com\/search/i.test(url)) {
+    return "search";
+  }
+  return "page";
+}
+
+function isPublicResourceDisplayReady(item = {}) {
+  if (!item.url || !["file", "law", "page"].includes(item.linkKind)) {
+    return false;
+  }
+  if (/google\.com\/search/i.test([item.url, item.searchUrl].join(" "))) {
+    return false;
+  }
+  if (isGenericBoardListUrl(item.url)) {
+    return false;
+  }
+  if (isBrokenPublicLawUrl(item.url)) {
+    return false;
+  }
+  return true;
+}
+
+function isBrokenPublicLawUrl(url = "") {
+  if (!/law\.go\.kr\/(법령|행정규칙)\//i.test(url)) {
+    return false;
+  }
+  try {
+    const parsed = new URL(url);
+    const parts = parsed.pathname.split("/").map((part) => decodeURIComponent(part));
+    const lawName = parts.pop() || "";
+    const pathType = parts.pop() || "";
+    const legalResource = extractLawResource(lawName);
+    if (!legalResource.name || /및.+기준|자료|검색|확인|후보/.test(lawName)) {
+      return true;
+    }
+    if (pathType && pathType !== legalResource.path) {
+      return true;
+    }
+    return lawName !== legalResource.name && lawName.length > legalResource.name.length + 5;
+  } catch {
+    return true;
+  }
+}
+
+function getPublicResourceActionLabel(item = {}) {
+  if (!item.url) {
+    return "검색 준비";
+  }
+  if (item.linkKind === "file") {
+    return "파일 열기";
+  }
+  if (item.linkKind === "law") {
+    return "원문 열기";
+  }
+  if (item.linkKind === "search") {
+    return "공식자료 검색";
+  }
+  return item.type === "form" ? "서식 보기" : "원문·자료 보기";
+}
+
+function isDocumentDownloadUrl(url = "") {
+  return /\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx)(\?|#|$)/i.test(String(url || ""));
+}
+
+function createPublicResourceId(value = "") {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9가-힣]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 120) || `resource-${Math.random().toString(36).slice(2)}`;
+}
+
+function dedupePublicResources(items = []) {
+  const merged = new Map();
+  items.filter(Boolean).forEach((item) => {
+    const key = normalizePublicResourceText(`${item.type}|${item.title}|${item.provider}`);
+    const existing = merged.get(key);
+    if (!existing) {
+      merged.set(key, item);
+      return;
+    }
+    const url = existing.linkKind === "search" && item.linkKind !== "search" ? item.url : existing.url;
+    const searchUrl = existing.searchUrl || item.searchUrl;
+    merged.set(key, {
+      ...existing,
+      ...item,
+      description: existing.description.length >= item.description.length ? existing.description : item.description,
+      terms: uniqueStrings([...(existing.terms || []), ...(item.terms || [])]),
+      url,
+      searchUrl,
+      linkKind: getPublicResourceLinkKind(url),
+      actionLabel: getPublicResourceActionLabel({ ...item, url, linkKind: getPublicResourceLinkKind(url) })
+    });
+  });
+  return [...merged.values()];
+}
+
+function comparePublicResources(a, b) {
+  const typeOrder = { law: 0, rule: 1, guide: 2, form: 3 };
+  const directScore = (item) => item.linkKind === "file" ? -2 : item.linkKind === "law" || item.linkKind === "page" ? -1 : 0;
+  return (typeOrder[a.type] ?? 9) - (typeOrder[b.type] ?? 9)
+    || directScore(a) - directScore(b)
+    || a.title.localeCompare(b.title, "ko");
+}
+
+function getFilteredPublicResources() {
+  const tokens = getPublicResourceSearchTokens(publicResourceState.query);
+  return publicResourceState.resources.filter((item) => {
+    if (publicResourceState.filter !== "all" && item.type !== publicResourceState.filter) {
+      return false;
+    }
+    if (publicResourceState.category !== "all" && item.category !== publicResourceState.category) {
+      return false;
+    }
+    if (publicResourceState.level2 !== "all" && item.hierarchy?.level2 !== publicResourceState.level2) {
+      return false;
+    }
+    if (publicResourceState.level3 !== "all" && item.hierarchy?.level3 !== publicResourceState.level3) {
+      return false;
+    }
+    if (!tokens.length) {
+      return true;
+    }
+    const searchText = buildPublicResourceSearchText(item);
+    return tokens.every((token) => searchText.includes(token));
+  });
+}
+
+function renderPublicResourceLibrary() {
+  const filtered = getFilteredPublicResources();
+  if (!publicResourceState.selectedId || !filtered.some((item) => item.id === publicResourceState.selectedId)) {
+    publicResourceState.selectedId = filtered[0]?.id || "";
+  }
+
+  updatePublicResourceSummary(filtered);
+
+  const visibleItems = filtered.slice(0, publicResourceState.visible);
+  resourceListMount.innerHTML = visibleItems.length
+    ? visibleItems.map(renderPublicResourceRow).join("")
+    : `<div class="resource-empty">검색 조건에 맞는 자료가 없습니다. 검색어를 줄이거나 전체 탭에서 다시 확인해 주세요.</div>`;
+
+  if (resourceMoreButton) {
+    resourceMoreButton.hidden = filtered.length <= publicResourceState.visible;
+    resourceMoreButton.textContent = `자료 더 보기 (${formatNumber(Math.min(PUBLIC_RESOURCE_PAGE_SIZE, filtered.length - publicResourceState.visible))}건)`;
+  }
+
+  const selected = publicResourceState.resources.find((item) => item.id === publicResourceState.selectedId) || filtered[0] || null;
+  renderPublicResourcePreview(selected);
+  markSelectedPublicResource();
+}
+
+function updatePublicResourceCounts() {
+  const typeCounts = publicResourceState.resources.reduce((acc, item) => {
+    acc.all += 1;
+    acc[item.type] = (acc[item.type] || 0) + 1;
+    return acc;
+  }, { all: 0, law: 0, rule: 0, guide: 0, form: 0 });
+  const categoryCounts = publicResourceState.resources.reduce((acc, item) => {
+    const category = normalizePublicResourceCategory(item.category, "general");
+    acc.all += 1;
+    acc[category] = (acc[category] || 0) + 1;
+    return acc;
+  }, Object.fromEntries(PUBLIC_RESOURCE_CATEGORIES.map((category) => [category.code, 0])));
+
+  Object.entries(typeCounts).forEach(([type, count]) => {
+    document.querySelectorAll(`[data-resource-count="${type}"]`).forEach((node) => {
+      node.textContent = formatNumber(count);
+    });
+  });
+
+  Object.entries(categoryCounts).forEach(([category, count]) => {
+    document.querySelectorAll(`[data-resource-category-count="${category}"]`).forEach((node) => {
+      node.textContent = formatNumber(count);
+    });
+  });
+}
+
+function collectPublicResourceKeywordQuery() {
+  return resourceKeywordInputs
+    .map((input) => input.value.trim())
+    .filter(Boolean)
+    .join(" ");
+}
+
+function updatePublicResourceHierarchyControls() {
+  if (!resourceTypeSelect || !resourceLevel1Select || !resourceLevel2Select || !resourceLevel3Select) {
+    return;
+  }
+
+  const resources = publicResourceState.resources;
+  setResourceSelectOptions(resourceTypeSelect, [
+    { value: "all", label: `전체 자료유형 (${formatNumber(resources.length)})` },
+    ...["law", "rule", "guide", "form"].map((type) => ({
+      value: type,
+      label: `${getPublicResourceTypeLabel(type)} (${formatNumber(resources.filter((item) => item.type === type).length)})`
+    }))
+  ], publicResourceState.filter);
+
+  const typeFiltered = resources.filter((item) => publicResourceState.filter === "all" || item.type === publicResourceState.filter);
+  const categoryOptions = PUBLIC_RESOURCE_CATEGORIES
+    .filter((category) => category.code !== "all")
+    .map((category) => ({
+      value: category.code,
+      label: `${category.label} (${formatNumber(typeFiltered.filter((item) => item.category === category.code).length)})`
+    }))
+    .filter((option) => !option.label.endsWith("(0)"));
+  setResourceSelectOptions(resourceLevel1Select, [
+    { value: "all", label: `전체 대분류 (${formatNumber(typeFiltered.length)})` },
+    ...categoryOptions
+  ], publicResourceState.category);
+
+  const categoryFiltered = typeFiltered.filter((item) => publicResourceState.category === "all" || item.category === publicResourceState.category);
+  const level2Options = buildResourceLevelOptions(categoryFiltered, (item) => item.hierarchy?.level2 || getPublicResourceCategoryLabel(item.category));
+  setResourceSelectOptions(resourceLevel2Select, [
+    { value: "all", label: `전체 중분류 (${formatNumber(categoryFiltered.length)})` },
+    ...level2Options
+  ], publicResourceState.level2);
+
+  const level2Filtered = categoryFiltered.filter((item) => publicResourceState.level2 === "all" || item.hierarchy?.level2 === publicResourceState.level2);
+  const level3Options = buildResourceLevelOptions(level2Filtered, (item) => item.hierarchy?.level3 || item.title);
+  setResourceSelectOptions(resourceLevel3Select, [
+    { value: "all", label: `전체 세부자료 (${formatNumber(level2Filtered.length)})` },
+    ...level3Options
+  ], publicResourceState.level3);
+}
+
+function buildResourceLevelOptions(resources = [], getter) {
+  const counts = new Map();
+  resources.forEach((item) => {
+    const value = String(getter(item) || "").trim();
+    if (!value) {
+      return;
+    }
+    counts.set(value, (counts.get(value) || 0) + 1);
+  });
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "ko"))
+    .map(([value, count]) => ({ value, label: `${value} (${formatNumber(count)})` }));
+}
+
+function setResourceSelectOptions(select, options, selectedValue) {
+  const safeSelected = options.some((option) => option.value === selectedValue) ? selectedValue : "all";
+  select.innerHTML = options
+    .map((option) => `<option value="${escapeHtml(option.value)}">${escapeHtml(option.label)}</option>`)
+    .join("");
+  select.value = safeSelected;
+  if (select === resourceTypeSelect) {
+    publicResourceState.filter = safeSelected;
+  }
+  if (select === resourceLevel1Select) {
+    publicResourceState.category = safeSelected;
+  }
+  if (select === resourceLevel2Select) {
+    publicResourceState.level2 = safeSelected;
+  }
+  if (select === resourceLevel3Select) {
+    publicResourceState.level3 = safeSelected;
+  }
+}
+
+function updatePublicResourceSummary(filtered = []) {
+  if (!resourceSummaryMount) {
+    return;
+  }
+  const typeLabel = publicResourceState.filter === "all" ? "전체" : getPublicResourceTypeLabel(publicResourceState.filter);
+  const categoryLabel = publicResourceState.category === "all" ? "전체 주제" : getPublicResourceCategoryLabel(publicResourceState.category);
+  const levelLabels = [
+    publicResourceState.level2 !== "all" ? publicResourceState.level2 : "",
+    publicResourceState.level3 !== "all" ? publicResourceState.level3 : ""
+  ].filter(Boolean).join(" / ");
+  const pathLabel = [categoryLabel, typeLabel, levelLabels].filter(Boolean).join(" / ");
+  const directCount = filtered.filter((item) => ["file", "law", "page"].includes(item.linkKind)).length;
+  const searchCount = filtered.length - directCount;
+  const tokens = getPublicResourceSearchTokens(publicResourceState.query);
+  const queryLabel = tokens.length ? `, 포함 단어 ${tokens.map((token) => `"${token}"`).join(" + ")}` : "";
+  resourceSummaryMount.textContent = `${pathLabel} 자료 ${formatNumber(filtered.length)}건${queryLabel}을 표시합니다. 바로 열 수 있는 원문·파일 ${formatNumber(directCount)}건, 공식자료 검색 연결 ${formatNumber(searchCount)}건입니다.`;
+}
+
+function renderPublicResourceRow(item = {}) {
+  const level2Label = item.hierarchy?.level2 || getPublicResourceCategoryLabel(item.category);
+  const showLevel2 = level2Label && level2Label !== getPublicResourceCategoryLabel(item.category);
+  return `
+    <article class="resource-row" data-resource-id="${escapeHtml(item.id)}" tabindex="0">
+      <div>
+        <div class="resource-chip-row">
+          <span class="resource-type">${escapeHtml(getPublicResourceTypeLabel(item.type))}</span>
+          <span class="resource-category-chip">${escapeHtml(getPublicResourceCategoryLabel(item.category))}</span>
+          ${showLevel2 ? `<span class="resource-category-chip">${escapeHtml(level2Label)}</span>` : ""}
+        </div>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.description || item.query || "공식자료 원문을 확인합니다.")}</p>
+        <small>${escapeHtml(item.provider || "공식자료")}</small>
+      </div>
+      <div class="resource-row-actions">
+        ${item.url ? `<a data-resource-open href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.actionLabel)}</a>` : ""}
+        ${item.searchUrl && item.searchUrl !== item.url ? `<a data-resource-open class="secondary" href="${escapeHtml(item.searchUrl)}" target="_blank" rel="noopener noreferrer">자료명 검색</a>` : ""}
+      </div>
+    </article>
+  `;
+}
+
+function openPublicResourcePreview(id = "", options = {}) {
+  if (!id) {
+    return;
+  }
+  publicResourceState.selectedId = id;
+  const selected = publicResourceState.resources.find((item) => item.id === id) || null;
+  renderPublicResourcePreview(selected);
+  markSelectedPublicResource();
+  if (options.focus) {
+    resourcePreviewMount?.focus?.();
+  }
+}
+
+function markSelectedPublicResource() {
+  resourceListMount?.querySelectorAll("[data-resource-id]").forEach((row) => {
+    row.classList.toggle("selected", row.getAttribute("data-resource-id") === publicResourceState.selectedId);
+  });
+}
+
+function renderPublicResourcePreview(item = null) {
+  if (!resourcePreviewMount) {
+    return;
+  }
+  if (!item) {
+    resourcePreviewMount.innerHTML = `
+      <span class="resource-preview-kicker">Preview</span>
+      <h3>자료를 선택하세요</h3>
+      <p>왼쪽 목록에서 자료를 누르면 요약, 출처, 원문·파일 링크가 이곳에 나타납니다.</p>
+    `;
+    return;
+  }
+
+  resourcePreviewMount.innerHTML = `
+    <span class="resource-preview-kicker">${escapeHtml(getPublicResourceTypeLabel(item.type))} · ${escapeHtml(getPublicResourceCategoryLabel(item.category))}</span>
+    <h3>${escapeHtml(item.title)}</h3>
+    <p>${escapeHtml(item.description || item.query || "공식자료 원문을 확인합니다.")}</p>
+    <dl class="resource-preview-facts">
+      <div><dt>출처</dt><dd>${escapeHtml(item.provider || "공식자료")}</dd></div>
+      <div><dt>경로</dt><dd>${escapeHtml(formatPublicResourcePath(item))}</dd></div>
+      <div><dt>연결</dt><dd>${escapeHtml(item.actionLabel || "자료 확인")}</dd></div>
+      <div><dt>검색어</dt><dd>${escapeHtml(item.query || item.title)}</dd></div>
+    </dl>
+    <div class="resource-preview-actions">
+      ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.actionLabel)}</a>` : ""}
+      ${item.searchUrl && item.searchUrl !== item.url ? `<a class="secondary" href="${escapeHtml(item.searchUrl)}" target="_blank" rel="noopener noreferrer">공식 도메인에서 다시 검색</a>` : ""}
+    </div>
+  `;
+}
+
+function formatPublicResourcePath(item = {}) {
+  return [
+    getPublicResourceTypeLabel(item.type),
+    getPublicResourceCategoryLabel(item.category),
+    item.hierarchy?.level2,
+    item.hierarchy?.level3
+  ].filter(Boolean).join(" > ");
+}
+
+function getPublicResourceTypeLabel(type = "") {
+  return {
+    all: "전체",
+    law: "법률",
+    rule: "규정",
+    guide: "지침",
+    form: "서식"
+  }[type] || "자료";
+}
+
+function cleanPublicResourceDescription(description = "", type = "", title = "", provider = "") {
+  const text = String(description || "").trim();
+  if (type === "law") {
+    return `${provider || "국가법령정보센터"}에서 제공하는 ${title} 원문`;
+  }
+  if (!text || /후보|검색|확인 필요/.test(text)) {
+    return `${provider || "공식자료"} 공식 원문·자료`;
+  }
+  return text.replace(/원문·지침 후보/g, "공식 원문·지침").replace(/원문 후보/g, "공식 원문");
+}
+
+function getPublicResourceCategoryLabel(category = "") {
+  return PUBLIC_RESOURCE_CATEGORY_MAP.get(category)?.label || "공통·기타";
+}
+
+function normalizePublicResourceCategory(category = "", fallback = "") {
+  const code = String(category || "").trim();
+  return PUBLIC_RESOURCE_CATEGORY_MAP.has(code) ? code : fallback;
+}
+
+function getPublicResourceSearchTokens(query = "") {
+  return uniqueStrings(
+    String(query || "")
+      .split(/[\s,，、/|+]+/)
+      .map((token) => normalizePublicResourceText(token))
+      .filter(Boolean)
+  ).slice(0, 10);
+}
+
+function buildPublicResourceSearchText(item = {}) {
+  return normalizePublicResourceText([
+    item.title,
+    item.provider,
+    item.description,
+    item.query,
+    item.sourceTier,
+    item.category,
+    getPublicResourceCategoryLabel(item.category),
+    getPublicResourceTypeLabel(item.type),
+    ...(item.terms || [])
+  ].join(" "));
+}
+
+function normalizePublicResourceText(value = "") {
+  return compactText(value).toLowerCase();
+}
+
+function normalizeCounselRoom(room = "") {
+  return COUNSEL_ROOM_CONFIG[room] ? room : "student";
+}
+
+function getActiveCounselRoomConfig() {
+  return COUNSEL_ROOM_CONFIG[normalizeCounselRoom(activeCounselRoom)] || COUNSEL_ROOM_CONFIG.student;
+}
+
+function isCounselWorkspaceOpen() {
+  return Boolean(counselWorkspace && !counselWorkspace.hidden);
+}
+
+function syncCounselRoomUi() {
+  const config = getActiveCounselRoomConfig();
+  if (counselAudienceInput) {
+    counselAudienceInput.value = config.code;
+  }
+  if (counselRoomKicker) {
+    counselRoomKicker.textContent = config.kicker;
+  }
+  if (counselRoomTitle) {
+    counselRoomTitle.textContent = config.label;
+  }
+  if (counselFormTitle) {
+    counselFormTitle.textContent = config.formTitle;
+  }
+  if (counselFormHelp) {
+    counselFormHelp.textContent = config.help;
+  }
+  if (counselListTitle) {
+    counselListTitle.textContent = config.listTitle;
+  }
+}
+
+function enterCounselRoom(room = "student") {
+  activeCounselRoom = normalizeCounselRoom(room);
+  syncCounselRoomUi();
+  if (counselEntry) {
+    counselEntry.hidden = true;
+  }
+  if (counselWorkspace) {
+    counselWorkspace.hidden = false;
+  }
+  loadCounselCases();
+  counselWorkspace?.scrollIntoView?.({ behavior: "smooth", block: "start" });
+}
+
+function showCounselEntry() {
+  if (counselWorkspace) {
+    counselWorkspace.hidden = true;
+  }
+  if (counselEntry) {
+    counselEntry.hidden = false;
+  }
+  if (counselCaseList) {
+    counselCaseList.innerHTML = "";
+  }
+  if (counselCaseDetail) {
+    counselCaseDetail.innerHTML = "";
+  }
+  setCounselStatus("상담실 선택");
+}
+
+async function submitCounselCase(event) {
+  event.preventDefault();
+  const formData = new FormData(counselForm);
+  const roomConfig = getActiveCounselRoomConfig();
+  const payload = {
+    anonymousName: String(formData.get("anonymousName") || "").trim() || "익명",
+    audience: roomConfig.code,
+    topic: String(formData.get("topic") || "other"),
+    title: String(formData.get("title") || "").trim(),
+    body: String(formData.get("body") || "").trim()
+  };
+
+  if (!payload.title || !payload.body) {
+    renderCounselNotice("제목과 상담 내용을 입력해 주세요.", true);
+    return;
+  }
+
+  try {
+    setCounselStatus("등록 중");
+    const data = await counselApi("/api/counsel/cases", {
+      method: "POST",
+      body: payload
+    });
+    counselForm.reset();
+    syncCounselRoomUi();
+    renderCounselNotice("상담 글을 등록했습니다. 작성자와 상담자만 확인할 수 있습니다.");
+    await loadCounselCases({ silent: true });
+    if (data.case?.id) {
+      await loadCounselCaseDetail(data.case.id);
+    }
+  } catch (error) {
+    renderCounselNotice(error.message, true);
+  }
+}
+
+async function submitCounselReply(event) {
+  event.preventDefault();
+  const form = event.target;
+  if (!(form instanceof HTMLFormElement) || form.dataset.counselAction !== "reply") {
+    return;
+  }
+
+  const formData = new FormData(form);
+  const payload = {
+    caseId: String(formData.get("caseId") || ""),
+    body: String(formData.get("body") || "").trim(),
+    status: String(formData.get("status") || "")
+  };
+
+  if (!payload.caseId || !payload.body) {
+    renderCounselNotice("추가 내용을 입력해 주세요.", true);
+    return;
+  }
+
+  try {
+    setCounselStatus("저장 중");
+    await counselApi("/api/counsel/case", {
+      method: "POST",
+      body: payload
+    });
+    await loadCounselCaseDetail(payload.caseId);
+    await loadCounselCases({ silent: true });
+    renderCounselNotice("상담 내용을 추가했습니다.");
+  } catch (error) {
+    renderCounselNotice(error.message, true);
+  }
+}
+
+async function loadCounselCases(options = {}) {
+  if (!counselCaseList) {
+    return;
+  }
+
+  const roomConfig = getActiveCounselRoomConfig();
+  syncCounselRoomUi();
+
+  const state = window.GYO6_AUTH?.getState?.();
+  if (!state?.user) {
+    if (!options.silent) {
+      window.GYO6_AUTH?.requestLogin?.(roomConfig.loginMessage);
+    }
+    setCounselStatus("로그인 필요");
+    counselCaseList.innerHTML = `<p class="counsel-empty">${escapeHtml(roomConfig.loginMessage)} 로그인 후 승인되면 익명 상담을 남기고 내 상담을 확인할 수 있습니다.</p>`;
+    counselCaseDetail.innerHTML = "";
+    return;
+  }
+
+  try {
+    setCounselStatus("불러오는 중");
+    const data = await counselApi(`/api/counsel/cases?audience=${encodeURIComponent(roomConfig.code)}`);
+    const cases = Array.isArray(data.cases) ? data.cases : [];
+    setCounselStatus(data.counselor ? `${roomConfig.label} 관리` : roomConfig.listStatus);
+    counselCaseList.innerHTML = cases.length
+      ? cases.map((item) => renderCounselCaseButton(item, data.counselor)).join("")
+      : `<p class="counsel-empty">${escapeHtml(roomConfig.emptyMessage)}</p>`;
+  } catch (error) {
+    setCounselStatus("확인 필요");
+    counselCaseList.innerHTML = `<p class="counsel-error">${escapeHtml(error.message)}</p>`;
+    if (!options.silent) {
+      window.GYO6_AUTH?.requestLogin?.(error.message);
+    }
+  }
+}
+
+async function loadCounselCaseDetail(id) {
+  if (!id || !counselCaseDetail) {
+    return;
+  }
+
+  try {
+    setCounselStatus("상세 확인");
+    const data = await counselApi(`/api/counsel/case?id=${encodeURIComponent(id)}`);
+    counselCaseDetail.innerHTML = renderCounselCaseDetail(data.case, data.replies || [], Boolean(data.counselor));
+    setCounselStatus("상담 열람");
+  } catch (error) {
+    counselCaseDetail.innerHTML = `<p class="counsel-error">${escapeHtml(error.message)}</p>`;
+    setCounselStatus("확인 필요");
+  }
+}
+
+async function counselApi(path, options = {}) {
+  const access = await getCounselAccess();
+  if (!access.ok) {
+    throw new Error(access.message || "상담실은 로그인 후 이용할 수 있습니다.");
+  }
+
+  const response = await fetch(getCounselUrl(path), {
+    method: options.method || "GET",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      ...(access.token ? { authorization: `Bearer ${access.token}` } : {})
+    },
+    body: options.body ? JSON.stringify(options.body) : undefined
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || data.error) {
+    throw new Error(data.error || `HTTP ${response.status}`);
+  }
+  return data;
+}
+
+async function getCounselAccess() {
+  if (!window.GYO6_AUTH?.getAccessTokenFor) {
+    return {
+      ok: false,
+      token: "",
+      message: "로그인 기능을 확인한 뒤 상담실을 이용할 수 있습니다."
+    };
+  }
+
+  const state = window.GYO6_AUTH.getState?.();
+  if (!state?.user) {
+    return {
+      ok: false,
+      token: "",
+      message: "상담실은 로그인 후 이용할 수 있습니다."
+    };
+  }
+
+  return window.GYO6_AUTH.getAccessTokenFor("public");
+}
+
+function renderCounselCaseButton(item = {}, counselor = false) {
+  return `
+    <button class="counsel-case-item" type="button" data-counsel-case-id="${escapeHtml(item.id)}">
+      <strong>${escapeHtml(item.title || "제목 없음")}</strong>
+      <span class="counsel-meta">
+        <span>${escapeHtml(counselStatusLabel(item.status))}</span>
+        <span>${escapeHtml(counselAudienceLabel(item.audience))}</span>
+        <span>${escapeHtml(counselTopicLabel(item.topic))}</span>
+        <span>${escapeHtml(formatCounselDate(item.updatedAt || item.createdAt))}</span>
+        ${counselor && item.author?.email ? `<span>${escapeHtml(item.author.email)}</span>` : ""}
+      </span>
+    </button>
+  `;
+}
+
+function renderCounselCaseDetail(item = {}, replies = [], counselor = false) {
+  if (!item) {
+    return `<p class="counsel-empty">상담 글을 선택해 주세요.</p>`;
+  }
+
+  return `
+    <section class="counsel-detail">
+      <div class="counsel-detail-head">
+        <h3>${escapeHtml(item.title || "제목 없음")}</h3>
+        <span class="status-dot">${escapeHtml(counselStatusLabel(item.status))}</span>
+      </div>
+      <div class="counsel-detail-body">
+        <div class="counsel-meta">
+          <span>${escapeHtml(item.anonymousName || "익명")}</span>
+          <span>${escapeHtml(counselAudienceLabel(item.audience))}</span>
+          <span>${escapeHtml(counselTopicLabel(item.topic))}</span>
+          <span>${escapeHtml(formatCounselDate(item.createdAt))}</span>
+        </div>
+        <p>${escapeHtml(item.body || "")}</p>
+      </div>
+      <div class="counsel-replies">
+        ${replies.length ? replies.map(renderCounselReply).join("") : `<p class="counsel-empty">아직 답변이 없습니다. 관리자가 확인하면 이곳에 답변이 표시됩니다.</p>`}
+      </div>
+      ${counselor ? `
+        <form class="counsel-reply-form" data-counsel-action="reply">
+          <input type="hidden" name="caseId" value="${escapeHtml(item.id)}">
+          <label class="field-stack">
+            <span>관리자 답변</span>
+            <textarea name="body" rows="4" required placeholder="작성자에게 보낼 답변을 작성해 주세요. 필요한 경우 관리자 법률정보 도구로 원문 근거를 먼저 확인하세요."></textarea>
+          </label>
+          <label class="field-stack">
+            <span>처리 상태</span>
+            <select name="status">
+              <option value="">자동</option>
+              <option value="open">상담 접수</option>
+              <option value="answered">답변 완료</option>
+              <option value="closed">상담 종료</option>
+            </select>
+          </label>
+          <button class="primary-action" type="submit">관리자 답변 등록</button>
+        </form>
+      ` : `<p class="counsel-empty">답변 작성은 관리자만 가능합니다. 추가 설명이 필요하면 새 상담으로 남겨 주세요.</p>`}
+    </section>
+  `;
+}
+
+function renderCounselReply(reply = {}) {
+  const role = reply.authorRole === "counselor" ? "관리자" : "작성자";
+  return `
+    <article class="counsel-reply">
+      <div class="counsel-reply-meta">
+        <strong>${escapeHtml(role)}</strong>
+        <span>${escapeHtml(formatCounselDate(reply.createdAt))}</span>
+      </div>
+      <p>${escapeHtml(reply.body || "")}</p>
+    </article>
+  `;
+}
+
+function renderCounselNotice(message = "", isError = false) {
+  if (!counselCaseDetail) {
+    return;
+  }
+  counselCaseDetail.innerHTML = `<p class="${isError ? "counsel-error" : "counsel-empty"}">${escapeHtml(message)}</p>`;
+  setCounselStatus(isError ? "확인 필요" : "처리 완료");
+}
+
+function setCounselStatus(label = "") {
+  if (counselStatus) {
+    counselStatus.textContent = label || "상담실";
+  }
+}
+
+function counselStatusLabel(value = "") {
+  return {
+    open: "상담 접수",
+    answered: "답변 완료",
+    closed: "상담 종료"
+  }[value] || "상태 확인";
+}
+
+function counselAudienceLabel(value = "") {
+  return {
+    student: "학생 상담",
+    teacher: "선생님 상담",
+    staff: "교직원 상담",
+    common: "공통 상담"
+  }[value] || "공통 상담";
+}
+
+function counselTopicLabel(value = "") {
+  return {
+    career: "취업·진로",
+    "field-training": "현장실습·도제",
+    "school-life": "학교생활·상담",
+    admin: "교육행정·학교업무",
+    rights: "권리보호·민원",
+    other: "기타"
+  }[value] || "기타";
+}
+
+function formatCounselDate(value = "") {
+  if (!value) {
+    return "날짜 확인";
+  }
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return "날짜 확인";
+  }
+
+  return date.toLocaleString("ko-KR", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+function scrollToResultPanel() {
+  if (typeof window.scrollTo !== "function") {
+    return;
+  }
+  window.setTimeout(() => {
+    const targetTop = Math.max(0, (resultPanel?.offsetTop || 0) - 88);
+    window.scrollTo(0, targetTop);
+  }, 0);
+}
+
+function cachePendingLawQuestion(question = "") {
+  try {
+    sessionStorage.setItem(PENDING_LAW_QUESTION_KEY, JSON.stringify({
+      question,
+      policyOffice: policyOfficeInput?.value || "",
+      policyRole: policyRoleInput?.value || "",
+      policyCategory: policyCategoryInput?.value || "",
+      userRole: userRoleInput?.value || "",
+      partyRole: partyRoleInput?.value || "",
+      answerMode: answerModeInput?.value || "",
+      topicType: topicTypeInput?.value || "",
+      topicMajor: topicMajorInput?.value || "",
+      topicMiddle: topicMiddleInput?.value || "",
+      topicMinor: topicMinorInput?.value || "",
+      savedAt: new Date().toISOString()
+    }));
+  } catch {
+    // Session storage can be unavailable in private or restricted contexts.
+  }
+}
+
+function resumePendingLawQuestionAfterLogin(authDetail = {}) {
+  if (!authDetail.signedIn || !authDetail.capabilities?.canUseLawInfo) {
+    return;
+  }
+  let pending = null;
+  try {
+    pending = JSON.parse(sessionStorage.getItem(PENDING_LAW_QUESTION_KEY) || "null");
+  } catch {
+    pending = null;
+  }
+  if (!pending?.question) {
+    return;
+  }
+  try {
+    sessionStorage.removeItem(PENDING_LAW_QUESTION_KEY);
+  } catch {
+    // Ignore storage cleanup failures.
+  }
+  questionInput.value = pending.question;
+  setSelectValue(policyOfficeInput, pending.policyOffice);
+  setSelectValue(policyRoleInput, pending.policyRole);
+  setSelectValue(policyCategoryInput, pending.policyCategory);
+  setSelectValue(userRoleInput, pending.userRole);
+  setSelectValue(partyRoleInput, pending.partyRole);
+  setSelectValue(answerModeInput, pending.answerMode);
+  setSelectValue(topicTypeInput, pending.topicType);
+  setSelectValue(topicMajorInput, pending.topicMajor);
+  setSelectValue(topicMiddleInput, pending.topicMiddle);
+  setSelectValue(topicMinorInput, pending.topicMinor);
+  syncPolicyCardStateFromSelects();
+  window.setTimeout(() => form?.requestSubmit(), 0);
+}
 
 guideResult?.addEventListener("submit", (event) => {
   if (event.target?.id === "guideIntentConfirmForm") {
@@ -2251,327 +4092,6 @@ window.addEventListener("afterprint", () => {
 
 activateToolFromHash();
 hydrateFromUrl();
-
-function initializePublicResourceLibrary() {
-  const filterButtons = [...document.querySelectorAll("[data-resource-filter]")];
-  const applyFilter = () => {
-    const activeFilter = document.querySelector("[data-resource-filter].active")?.dataset.resourceFilter || "all";
-    const query = normalizeSearchText(resourceSearchInput?.value || "");
-    document.querySelectorAll("[data-resource-card]").forEach((card) => {
-      const typeMatched = activeFilter === "all" || card.dataset.resourceType === activeFilter;
-      const textMatched = !query || normalizeSearchText(card.textContent).includes(query);
-      card.classList.toggle("is-filtered-out", !typeMatched || !textMatched);
-    });
-  };
-
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      filterButtons.forEach((item) => item.classList.toggle("active", item === button));
-      applyFilter();
-    });
-  });
-
-  resourceSearchInput?.addEventListener("input", applyFilter);
-  applyFilter();
-}
-
-function initializeCounselRooms() {
-  document.querySelectorAll("[data-counsel-open]").forEach((button) => {
-    button.addEventListener("click", () => openCounselRoom(button.dataset.counselOpen || ""));
-  });
-
-  document.querySelectorAll("[data-counsel-close]").forEach((button) => {
-    button.addEventListener("click", () => {
-      activeCounselRoom = "";
-      counselRooms.forEach((room) => room.classList.add("is-hidden"));
-      document.querySelectorAll("[data-counsel-open]").forEach((item) => item.classList.remove("active"));
-      counselGateway?.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-
-  document.querySelectorAll("[data-counsel-form]").forEach((counselForm) => {
-    counselForm.addEventListener("submit", handleCounselSubmit);
-  });
-
-  document.querySelectorAll("[data-refresh-consultations]").forEach((button) => {
-    button.addEventListener("click", () => loadCounselRoomList(button.dataset.refreshConsultations || ""));
-  });
-
-  refreshAdminConsultationsButton?.addEventListener("click", loadAdminConsultations);
-  adminConsultationPanel?.addEventListener("submit", handleAdminReplySubmit);
-}
-
-function syncAccessControlledViews() {
-  const authState = getAuthSnapshot();
-  const canUseAdminTool = isAdminState(authState);
-  const canUseCounsel = isApprovedMemberState(authState);
-
-  if (adminLegalTool) {
-    adminLegalTool.hidden = !canUseAdminTool;
-  }
-  if (adminToolLock) {
-    adminToolLock.hidden = canUseAdminTool;
-  }
-  if (adminConsultationPanel) {
-    adminConsultationPanel.hidden = !canUseAdminTool;
-  }
-
-  document.body.classList.toggle("is-admin-user", canUseAdminTool);
-  document.body.classList.toggle("is-approved-member", canUseCounsel);
-
-  document.querySelectorAll("[data-member-required]").forEach((lock) => {
-    lock.hidden = canUseCounsel;
-  });
-
-  document.querySelectorAll("[data-counsel-form]").forEach((counselForm) => {
-    counselForm.querySelectorAll("input, textarea, button").forEach((field) => {
-      field.disabled = !canUseCounsel;
-    });
-  });
-
-  if (activeCounselRoom && canUseCounsel) {
-    loadCounselRoomList(activeCounselRoom);
-  }
-  if (canUseAdminTool) {
-    loadAdminConsultations();
-  }
-}
-
-function openCounselRoom(room) {
-  if (!["student", "teacher"].includes(room)) {
-    return;
-  }
-
-  activeCounselRoom = room;
-  counselRooms.forEach((panel) => {
-    panel.classList.toggle("is-hidden", panel.dataset.counselRoomPanel !== room);
-  });
-  document.querySelectorAll("[data-counsel-open]").forEach((button) => {
-    button.classList.toggle("active", button.dataset.counselOpen === room);
-  });
-
-  const panel = document.querySelector(`[data-counsel-room-panel="${room}"]`);
-  panel?.focus({ preventScroll: true });
-  panel?.scrollIntoView({ behavior: "smooth", block: "start" });
-
-  if (isApprovedMemberState(getAuthSnapshot())) {
-    loadCounselRoomList(room);
-  }
-}
-
-async function handleCounselSubmit(event) {
-  event.preventDefault();
-  const counselForm = event.currentTarget;
-  const room = counselForm.dataset.room || "";
-  const feedback = counselForm.querySelector("[data-counsel-feedback]");
-
-  if (!isApprovedMemberState(getAuthSnapshot())) {
-    setFeedback(feedback, "관리자 승인 후 상담글을 등록할 수 있습니다.");
-    return;
-  }
-
-  const payload = {
-    room,
-    anonymousName: getLocalFormValue(counselForm, "anonymousName"),
-    title: getLocalFormValue(counselForm, "title"),
-    body: getLocalFormValue(counselForm, "body")
-  };
-
-  try {
-    setFeedback(feedback, "상담글을 등록하는 중입니다.");
-    await fetchConsultationApi("/api/consultations", {
-      method: "POST",
-      body: payload
-    });
-    counselForm.reset();
-    setFeedback(feedback, "상담글을 등록했습니다. 관리자가 답변하면 내 상담글에 표시됩니다.");
-    await loadCounselRoomList(room);
-  } catch (error) {
-    setFeedback(feedback, error.message || "상담글 등록 중 오류가 발생했습니다.");
-  }
-}
-
-async function loadCounselRoomList(room) {
-  if (!["student", "teacher"].includes(room) || !isApprovedMemberState(getAuthSnapshot())) {
-    return;
-  }
-
-  const mount = document.querySelector(`[data-counsel-list="${room}"]`);
-  if (!mount) {
-    return;
-  }
-
-  mount.innerHTML = `<p class="consultation-meta">내 상담글을 불러오는 중입니다.</p>`;
-
-  try {
-    const data = await fetchConsultationApi(`/api/consultations?room=${encodeURIComponent(room)}`);
-    const items = data.consultations || [];
-    mount.innerHTML = items.length
-      ? items.map(renderConsultationItem).join("")
-      : `<p class="consultation-meta">아직 등록한 상담글이 없습니다.</p>`;
-  } catch (error) {
-    mount.innerHTML = `<p class="consultation-meta">${escapeHtml(error.message || "상담글을 불러오지 못했습니다.")}</p>`;
-  }
-}
-
-async function loadAdminConsultations() {
-  if (!adminConsultationList || !isAdminState(getAuthSnapshot())) {
-    return;
-  }
-
-  adminConsultationList.innerHTML = `<p class="consultation-meta">상담 목록을 불러오는 중입니다.</p>`;
-
-  try {
-    const data = await fetchConsultationApi("/api/consultations");
-    const items = data.consultations || [];
-    adminConsultationList.innerHTML = items.length
-      ? items.map(renderAdminConsultationItem).join("")
-      : `<p class="consultation-meta">접수된 상담글이 없습니다.</p>`;
-  } catch (error) {
-    adminConsultationList.innerHTML = `<p class="consultation-meta">${escapeHtml(error.message || "상담 목록을 불러오지 못했습니다.")}</p>`;
-  }
-}
-
-async function handleAdminReplySubmit(event) {
-  const formElement = event.target;
-  if (!(formElement instanceof HTMLFormElement) || !formElement.matches("[data-admin-reply-form]")) {
-    return;
-  }
-
-  event.preventDefault();
-
-  try {
-    await fetchConsultationApi("/api/admin/consultation/reply", {
-      method: "POST",
-      body: {
-        id: getLocalFormValue(formElement, "id"),
-        reply: getLocalFormValue(formElement, "reply"),
-        status: getLocalFormValue(formElement, "status") || "answered"
-      }
-    });
-    await loadAdminConsultations();
-  } catch (error) {
-    window.alert(error.message || "답변 저장 중 오류가 발생했습니다.");
-  }
-}
-
-function renderConsultationItem(item) {
-  return `
-    <article class="consultation-item">
-      <header>
-        <h4>${escapeHtml(item.title || "제목 없음")}</h4>
-        <span class="consultation-status">${escapeHtml(getConsultationStatusLabel(item.status))}</span>
-      </header>
-      <p class="consultation-meta">${escapeHtml(getCounselRoomLabel(item.room))} · 접수 ${escapeHtml(formatDateTime(item.createdAt))}</p>
-      <p class="consultation-body">${escapeHtml(item.body || "")}</p>
-      ${item.adminReply ? `<div class="consultation-reply"><strong>관리자 답변</strong><p>${escapeHtml(item.adminReply)}</p><small>답변 ${escapeHtml(formatDateTime(item.adminRepliedAt))}</small></div>` : `<p class="consultation-meta">아직 관리자 답변이 등록되지 않았습니다.</p>`}
-    </article>
-  `;
-}
-
-function renderAdminConsultationItem(item) {
-  return `
-    <article class="admin-consultation-item">
-      <header>
-        <h4>${escapeHtml(item.title || "제목 없음")}</h4>
-        <span class="consultation-status">${escapeHtml(getConsultationStatusLabel(item.status))}</span>
-      </header>
-      <p class="consultation-meta">
-        ${escapeHtml(getCounselRoomLabel(item.room))} · ${escapeHtml(item.author?.anonymousName || "익명")} · ${escapeHtml(item.author?.email || "이메일 없음")} · 접수 ${escapeHtml(formatDateTime(item.createdAt))}
-      </p>
-      <p class="consultation-body">${escapeHtml(item.body || "")}</p>
-      <form class="admin-reply-form" data-admin-reply-form>
-        <input type="hidden" name="id" value="${escapeHtml(item.id)}">
-        <label>관리자 답변
-          <textarea name="reply" rows="3" required>${escapeHtml(item.adminReply || "")}</textarea>
-        </label>
-        <label>상태
-          <select name="status">
-            <option value="answered" ${item.status === "answered" ? "selected" : ""}>답변 완료</option>
-            <option value="open" ${item.status === "open" ? "selected" : ""}>접수</option>
-            <option value="closed" ${item.status === "closed" ? "selected" : ""}>종결</option>
-          </select>
-        </label>
-        <button type="submit">답변 저장</button>
-      </form>
-    </article>
-  `;
-}
-
-async function fetchConsultationApi(path, options = {}) {
-  const auth = window.GYO6_AUTH;
-  if (!auth?.getAccessTokenFor) {
-    throw new Error("로그인 모듈을 아직 불러오지 못했습니다. 새로고침 후 다시 시도해 주세요.");
-  }
-
-  const access = await auth.getAccessTokenFor("public");
-  if (!access.ok) {
-    throw new Error(access.message || "로그인 후 이용할 수 있습니다.");
-  }
-
-  const response = await fetch(getConsultationApiUrl(path), {
-    method: options.method || "GET",
-    headers: {
-      accept: "application/json",
-      "content-type": "application/json",
-      ...(access.token ? { authorization: `Bearer ${access.token}` } : {})
-    },
-    body: options.body ? JSON.stringify(options.body) : undefined
-  });
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok || data.error) {
-    throw new Error(data.error || `HTTP ${response.status}`);
-  }
-  return data;
-}
-
-function getConsultationApiUrl(path) {
-  const configuredBase = getConfiguredAiWorkerBaseUrl();
-  return configuredBase ? `${configuredBase.replace(/\/+$/, "")}${path}` : path;
-}
-
-function getAuthSnapshot() {
-  return window.GYO6_AUTH?.getState?.() || {
-    ready: false,
-    user: null,
-    member: null,
-    capabilities: {}
-  };
-}
-
-function isApprovedMemberState(authState) {
-  return Boolean(authState?.user && authState?.member?.status === "approved");
-}
-
-function isAdminState(authState) {
-  return Boolean(authState?.capabilities?.canManageMembers || (authState?.member?.status === "approved" && ["admin", "owner"].includes(authState?.member?.role)));
-}
-
-function normalizeSearchText(value) {
-  return String(value || "").replace(/\s+/g, "").toLowerCase();
-}
-
-function getLocalFormValue(formElement, name) {
-  return String(formElement.elements[name]?.value || "").trim();
-}
-
-function setFeedback(mount, message) {
-  if (mount) {
-    mount.textContent = message || "";
-  }
-}
-
-function getCounselRoomLabel(room) {
-  return room === "student" ? "학생 상담실" : room === "teacher" ? "선생님 상담실" : "상담실";
-}
-
-function getConsultationStatusLabel(status) {
-  return {
-    open: "접수",
-    answered: "답변 완료",
-    closed: "종결"
-  }[status] || "접수";
-}
 
 function activateToolFromHash() {
   syncLawWindowMode();
@@ -2695,7 +4215,7 @@ function renderPolicyGuideResult() {
     categoryCode
   });
 
-  const canEnhanceWithLocalLlm = isLocalLlmEnhancementHost();
+  const canEnhanceWithLocalLlm = isLocalLlmEnhancementHost() && hasCurrentLawInfoAccess();
   const needsQualityRecovery = shouldTriggerPolicyQualityRecovery(response);
   const qualityRecoveryState = needsQualityRecovery ? (canEnhanceWithLocalLlm ? "active" : "deferred") : "";
   if (guideStatus) guideStatus.textContent = needsQualityRecovery ? "고품질 답변 생성 중" : canEnhanceWithLocalLlm ? "로컬 AI 보강 중" : "기본 답변";
@@ -2740,12 +4260,18 @@ function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode
   const inferredOfficeCode = officeCode === "auto" ? inferPolicyGuideOfficeCode(question) : "";
   const office = getEducationOffice(inferredOfficeCode || officeCode);
   const analysis = analyzePolicyGuideQuestion(question, normalized);
-  const category = getPolicyGuideCategory(categoryCode === "auto" ? analysis.categoryCode : categoryCode);
-  const role = getPolicyRole(roleCode === "auto" ? analysis.roleCode : roleCode);
+  const requestedRoleCode = roleCode === "auto" ? analysis.roleCode : roleCode;
+  const requestedCategoryCode = categoryCode === "auto"
+    ? analysis.categoryCode
+    : coercePolicyCategoryForRole(requestedRoleCode, categoryCode, analysis.categoryCode);
+  const category = getPolicyGuideCategory(requestedCategoryCode);
+  const role = getPolicyRole(requestedRoleCode);
   const officeDefault = getDefaultEducationOfficeFallback(office, analysis, category);
   const effectiveOffice = officeDefault?.office || office;
   const intentResolution = buildPolicyGuideIntentResolution({ question, normalized, analysis, category, role });
   const localDirectRule = getDirectPolicyRule(analysis, category, role, effectiveOffice);
+  const legalRiskCompletion = buildLegalRiskQuestionCompletion({ question, normalized, analysis, category, role, office, effectiveOffice, officeDefault });
+  if (legalRiskCompletion) return legalRiskCompletion;
 
   const engineDomainCode = analysis.engineAnalysis?.semanticFrame?.domainCode || "";
   if (intentResolution.status === "notDetected" && !engineDomainCode && !analysis.intents?.domesticTravel) {
@@ -2810,9 +4336,11 @@ function buildPolicyGuideResponse({ question = "", officeCode = "auto", roleCode
   }
 
   const engineDirectRule = getPolicyEngineDirectRule(question, effectiveOffice, role);
-  const selectedDirectRule = shouldPreferPolicyEngineRule(engineDirectRule, localDirectRule)
-    ? engineDirectRule
-    : localDirectRule || engineDirectRule;
+  const selectedDirectRule = localDirectRule?.domain === "bereavementLeave"
+    ? localDirectRule
+    : (shouldPreferPolicyEngineRule(engineDirectRule, localDirectRule)
+      ? engineDirectRule
+      : localDirectRule || engineDirectRule);
   const directRule = refinePolicyGuideDirectRuleForUserAnswer(selectedDirectRule, { question, analysis, role, office: effectiveOffice });
   const sourceContext = { question, analysis, directRule, role, office: effectiveOffice };
   const officeSources = directRule?.sourcePriority === "national" ? [] : buildOfficePolicySources(effectiveOffice, category, sourceContext);
@@ -2913,6 +4441,56 @@ function getDefaultEducationOfficeFallback(office, analysis, category) {
 function appendOfficeDefaultCaution(caution, officeDefault) {
   if (!officeDefault?.notice) return caution;
   return uniqueStrings([officeDefault.notice, caution]).join(" ");
+}
+
+function buildLegalRiskQuestionCompletion({ question = "", normalized = "", analysis = {}, category, role, office, effectiveOffice, officeDefault } = {}) {
+  const hasLegalActionSignal = /고소|고발|민사소송|소송|형사|진정|신고/.test(normalized);
+  const hasConcreteActor = /학생|학부모|보호자|교사|교원|교직원|학교|업체|사업주|기업|피해자|가해자|상대방|민원인|관리자/.test(normalized);
+  const hasConcreteIncident = /폭행|협박|모욕|명예훼손|성희롱|성폭력|아동학대|교권|임금|체불|해고|계약|개인정보|유출|학교폭력|학폭|민원|업무방해|손해|파손|사고|다침|부상|녹취|문자|사진|자료/.test(normalized);
+  if (!hasLegalActionSignal || (hasConcreteActor && hasConcreteIncident)) return null;
+
+  const actionLabel = /고소|고발|형사/.test(normalized) ? "고소·고발" : "민사소송";
+  return {
+    question,
+    office,
+    effectiveOffice,
+    officeDefault,
+    category,
+    role,
+    analysis,
+    directRule: null,
+    intentResolution: { status: "notDetected", candidates: [] },
+    needsQuestionCompletion: true,
+    clarifyingQuestions: [
+      {
+        question: "누가 관련된 사안인지 먼저 특정합니다.",
+        reason: "학생, 학부모, 교사, 학교, 업체 등 주체에 따라 적용 법령과 처리 절차가 달라집니다.",
+        placeholder: "예: 학생 간 사안, 학부모 민원, 업체 계약 분쟁"
+      },
+      {
+        question: "어떤 사건인지 사실관계를 시간순으로 정리합니다.",
+        reason: `${actionLabel} 가능성은 행위 유형, 피해, 진행 단계가 있어야 판단 후보를 좁힐 수 있습니다.`,
+        placeholder: "예: 문자 협박, 개인정보 유출, 임금체불, 계약 불이행"
+      },
+      {
+        question: "증빙자료를 무엇까지 확보했는지 확인합니다.",
+        reason: "문자, 녹취, 공문, 상담기록, 회의록, 사진, 진술서 등 원본성과 일시가 중요합니다.",
+        placeholder: "예: 문자 캡처, 녹취 파일, 공문, 회의록"
+      }
+    ],
+    title: "질문 완성 필요",
+    lead: `${actionLabel} 여부는 바로 단정하지 않습니다. 누가 관련된 어떤 사건인지, 증빙자료가 무엇인지 먼저 확정한 뒤 보호·기록·보고 절차와 외부 절차 가능성을 분리해 판단합니다.`,
+    firstSteps: [
+      "누가 관련된 사안인지 주체를 확정",
+      "사건 유형과 이미 진행된 조치를 시간순으로 정리",
+      "증빙자료의 원본성, 작성자, 수신자, 일시를 보존",
+      "긴급 위해나 권리구제 기한이 있으면 보호조치와 외부 절차를 병행 검토"
+    ],
+    officeSources: [],
+    nationalSources: [],
+    searchQueries: uniqueStrings([`${role?.label || "학교"} ${actionLabel} 사안 증빙자료`, `${category?.label || "법률정보"} ${actionLabel} 질문 완성`, question]).slice(0, 10),
+    caution: "이 단계는 사용자에게 책임을 넘기는 것이 아니라, 고위험 법률·노무 사안을 오판하지 않도록 시스템이 질문을 완성하고 자동 자료확충·재검증으로 넘기는 안전장치입니다."
+  };
 }
 
 function shouldPreferPolicyEngineRule(engineRule, localRule) {
@@ -3447,9 +5025,9 @@ function getConfirmedGuideIntentText(normalized = "") {
 }
 
 function hasAmbiguousFamilyLeaveQuestion(normalized = "") {
-  const hasFamily = /배우자|남편|아내|부모|자녀|아들|딸|장인|장모|시부|시모|조부모|형제|자매/.test(normalized);
+  const hasFamily = /배우자|남편|아내|부모|자녀|아들|딸|장인|장모|시부|시모|조부|조모|조부모|외조부|외조모|외조부모|형제|자매/.test(normalized);
   const hasLeaveOrDays = /휴가|일수|며칠|몇일|얼마|가능/.test(normalized);
-  const hasSpecificEvent = /출산|사망|상례|장례|부고|별세|부모상|배우자상|자녀상|조부모상|형제상|자매상|삼촌상|숙부상|백부상|고모상|이모상|장인상|장모상|시부상|시모상|병가|연가|연차|지각|조퇴|외출/.test(normalized);
+  const hasSpecificEvent = /출산|사망|상례|장례|부고|별세|부모상|부친상|모친상|배우자상|자녀상|조부상|조모상|조부모상|외조부상|외조모상|외조부모상|형제상|자매상|삼촌상|숙부상|백부상|고모상|이모상|장인상|장모상|시부상|시모상|병가|연가|연차|지각|조퇴|외출/.test(normalized);
   return hasFamily && hasLeaveOrDays && !hasSpecificEvent;
 }
 
@@ -3464,7 +5042,7 @@ function hasBereavementIntentSignal(normalized = "") {
     return false;
   }
 
-  return /사망|상례|장례|부고|별세|부모상|배우자상|자녀상|조부모상|형제상|자매상|삼촌상|숙부상|백부상|고모상|이모상|장인상|장모상|시부상|시모상|경조사휴가|상휴가|상일수/.test(normalized);
+  return /사망|상례|장례|부고|별세|부모상|부친상|모친상|배우자상|자녀상|조부상|조모상|조부모상|외조부상|외조모상|외조부모상|형제상|자매상|삼촌상|숙부상|백부상|고모상|이모상|장인상|장모상|시부상|시모상|경조사휴가|상휴가|상일수/.test(normalized);
 }
 
 function buildPolicyGuideClarifyingQuestions(context = {}) {
@@ -3722,6 +5300,8 @@ function cleanPolicyGuideUserText(value = "") {
   text = text.replace(/를 우선 조회 후보로 올립니다\.?$/u, "입니다.");
   text = text.replace(/[^.。]*(?:확인 필요 항목|확인 슬롯|같은 조회 계획|재계산|확보되는 즉시 같은 조회 계획)[^.。]*[.。]?\s*/g, "");
   text = text.replace(/현재 질문(?:에서|에는)?[^.。]*(?:명확하지|부족|없어|없어도)[^.。]*[.。]?\s*/g, "");
+  text = text.replace(/(?:대상\s*신분|고용\s*형태|기간|사망일자|자녀\s*관계)[^.。]*(?:명확하지|부족|없어)[^.。]*(?:정확한\s*적용이\s*어렵습니다|적용이\s*어렵습니다)[.。]?\s*/g, "");
+  text = text.replace(/정확한\s*적용이\s*어렵습니다[.。]?\s*/g, "");
   text = text.replace(/확인되지 않은 항목:[^.。]+[.。]?\s*/g, "");
   text = text.replace(/확인이 부족한 항목은 [^.。]+[.。]?\s*/g, "");
   text = text.replace(/확정 판단 대신[^.。]+[.。]?\s*/g, "");
@@ -3738,6 +5318,7 @@ function isInternalPolicyGuideText(value = "") {
   if (!text) return true;
   return /파악한 질문|일치 표현|질문 속 도메인|분류[:：]|질문 문장만 기준|기본 조건:/.test(text)
     || /로컬 정책 코퍼스|확정 판단 대신|확인 슬롯|확인되지 않은 항목|확인이 부족한 항목/.test(text)
+    || /대상\s*신분[^.。]*(?:명확하지|정확한\s*적용이\s*어렵)/.test(text)
     || /후보입니다\.?\s*(?:일치 표현|질문 속 도메인)/.test(text);
 }
 
@@ -3746,8 +5327,8 @@ function renderPolicyGuideOptionalClarifyingPanel(questions = []) {
   return `
     <details class="answer-extra-panel">
       <summary>
-        <span>더 정확히 하려면</span>
-        <strong>부족한 정보 ${questions.length}개 보태기</strong>
+        <span>자동 보강 후보</span>
+        <strong>선택 정보 ${questions.length}개</strong>
       </summary>
       ${renderPolicyGuideClarifyingPanel(questions)}
     </details>
@@ -3805,7 +5386,7 @@ function normalizePolicyGuideCautionText(text = "", response = {}) {
 }
 
 function isPolicySourceGapCaution(text = "") {
-  return /증빙자료가\s*부족|자료가\s*부족|근거가\s*부족|원문을\s*확인|공식\s*문서.*직접\s*확인|확인하시기\s*바랍니다|원문\s*기준\s*확인/.test(cleanPolicyGuideUserText(text));
+  return /증빙자료가\s*부족|자료가\s*부족|근거가\s*부족|원문을\s*확인|원문\s*확인\s*필요|직접\s*확인|공식\s*문서.*확인|확인하시기\s*바랍니다|원문\s*기준\s*확인|정확한\s*적용이\s*어렵|명확하지\s*않아/.test(cleanPolicyGuideUserText(text) || normalizeReportText(text));
 }
 
 function shouldShowPolicyGuideAutoVerification(response = {}) {
@@ -4229,11 +5810,11 @@ function renderPolicyGuideClarifyingPanel(questions = []) {
   const visibleQuestions = questions.slice(0, 4);
 
   return `
-    <section class="clarifier-panel guide-clarifier-panel" aria-label="정확한 규정 답변을 위한 추가 확인">
+    <section class="clarifier-panel guide-clarifier-panel" aria-label="자동 보강 후보와 선택 입력">
       <div class="clarifier-head">
         <div>
-          <span>추가 확인</span>
-          <h3>부족한 정보만 알려주세요.</h3>
+          <span>자동 보강 후보</span>
+          <h3>시스템이 자동으로 보강할 항목입니다.</h3>
         </div>
       </div>
       <form id="guideClarifierForm" data-count="${visibleQuestions.length}">
@@ -4244,7 +5825,7 @@ function renderPolicyGuideClarifyingPanel(questions = []) {
               <input type="hidden" name="question-${index}" value="${escapeHtml(item.question)}">
               <div class="clarifier-grid">
                 <select name="status-${index}" aria-label="${escapeHtml(item.question)} 답변 상태">
-                  <option value="answer">답변 입력</option>
+                  <option value="answer">알고 있으면 입력</option>
                   <option value="unknown">모름</option>
                   <option value="none">없음/해당 없음</option>
                   <option value="sensitive">민감해서 생략</option>
@@ -4254,9 +5835,9 @@ function renderPolicyGuideClarifyingPanel(questions = []) {
             </article>
           `).join("")}
         </div>
-        <p class="clarifier-note">실명, 주민번호, 전화번호, 주소 같은 민감한 정보는 쓰지 않아도 됩니다.</p>
+        <p class="clarifier-note">입력하지 않아도 답변은 유지됩니다. 시스템은 공식자료와 기존 코퍼스로 먼저 보강하며, 실명·주민번호·전화번호·주소 같은 민감한 정보는 쓰지 않아도 됩니다.</p>
         <div class="clarifier-actions">
-          <button class="primary-action clarifier-submit" type="submit">추가 정보 반영해서 다시 답변</button>
+          <button class="primary-action clarifier-submit" type="submit">선택 정보 반영해서 다시 답변</button>
           <span id="guideClarifierFeedback" class="clarifier-feedback" role="status"></span>
         </div>
       </form>
@@ -4405,7 +5986,11 @@ function getPolicyGuideCategory(code = "leaveAttendance") {
 }
 
 function getPolicyRole(code = "auto") {
-  return policyRoleProfiles[code] || policyRoleProfiles.auto;
+  const resolvedCode = policyRoleProfiles[code] ? code : "auto";
+  return {
+    code: resolvedCode,
+    ...policyRoleProfiles[resolvedCode]
+  };
 }
 
 function analyzePolicyGuideQuestion(question = "", normalized = compactText(question)) {
@@ -4877,7 +6462,7 @@ function getDirectPolicyRule(analysis, category, role, office) {
   }
 
   if (category === policyGuideCategories.leaveAttendance && hasBereavementIntentSignal(normalized) && !isStudentAttendanceBereavementGuideContext(normalized, role)) {
-    const bereavementRule = buildBereavementLeaveRule(normalized);
+    const bereavementRule = buildBereavementLeaveRule(normalized, role);
     if (bereavementRule) return bereavementRule;
   }
 
@@ -4988,18 +6573,21 @@ function buildSpouseChildbirthLeaveRule(normalized, role = {}, office = {}) {
         ? "사립학교 교직원"
         : "공립 정규교원";
   const needsOfficeCheck = ["fixedTermTeacher", "educationWorker", "privateSchool"].includes(role?.code);
+  const commonBasisPreface = getCommonStaffLeavePublicTeacherBasisPreface(role);
   const officeText = office?.code && office.code !== "auto" ? `${office.label} ` : "";
   const caution = needsOfficeCheck
-    ? `${subjectLabel}은 공립 정규교원 기준을 참고하되 ${officeText}계약제교원 지침, 취업규칙, 단체협약, 근로계약, 학교법인 규정에서 배우자 출산휴가 적용 일수와 유급 여부를 직접 확인해야 합니다.`
-    : "교육공무직·기간제·사립학교 교직원은 공립 정규교원 기준을 바로 적용하지 말고 소속 교육청 지침, 취업규칙, 단체협약, 근로계약의 특별휴가 조항을 다시 확인해야 합니다.";
+    ? `${subjectLabel}은 공립 정규교원 기준을 참고하되 ${officeText}계약제교원 지침, 취업규칙, 단체협약, 근로계약, 학교법인 규정의 배우자 출산휴가 적용 일수와 유급 여부를 시스템 자동 자료확충·재검증 대상으로 함께 대조합니다.`
+    : "교육공무직·기간제·사립학교 교직원은 공립 정규교원 기준을 바로 적용하지 않고, 소속 교육청 지침, 취업규칙, 단체협약, 근로계약의 특별휴가 조항을 시스템 자동 자료확충·재검증 대상으로 함께 대조합니다.";
 
   return {
     title: "배우자 출산휴가 확인 기준",
     lead: "질문 요지는 가족 사망 경조사휴가가 아니라 배우자 출산에 따른 특별휴가 일수입니다.",
     answer: [
+      commonBasisPreface,
       `${subjectLabel} 기준으로 배우자 출산휴가는 20일입니다.`,
       "근거 갈래는 국가공무원 복무규정 제20조의 특별휴가 체계와 교원휴가에 관한 예규의 교원 휴가 처리 기준입니다.",
       "나이스 근무상황에서 배우자 출산휴가 또는 특별휴가로 신청하고, 출산 사실 확인 자료와 학교장 승인 절차를 맞춰 처리합니다.",
+      "출산 사실 확인 자료는 출생증명서, 가족관계증명서 또는 소속기관 서식상 요구 자료를 기준으로 하고, 긴급 사용으로 사전 첨부가 어려우면 복귀 직후 보완 제출하도록 안내합니다.",
       "배우자, 출산, 휴가 일수가 함께 나오면 상례휴가·부모상 규정을 적용하지 않습니다."
     ],
     steps: [
@@ -5023,10 +6611,11 @@ function buildSpouseChildbirthLeaveRule(normalized, role = {}, office = {}) {
   };
 }
 
-function buildBereavementLeaveRule(normalized) {
+function buildBereavementLeaveRule(normalized, role = {}) {
   const relation = inferBereavementRelation(normalized);
   if (!relation) return null;
 
+  const commonBasisPreface = getCommonStaffLeavePublicTeacherBasisPreface(role);
   const sourceKeys = ["nationalService", "teacherLeave", "localService", "laborStandard"];
   const commonSteps = [
     "신분이 공립 교원인지, 지방공무원인지, 교육공무직인지, 기간제인지, 사립학교 교직원인지 확정",
@@ -5039,9 +6628,11 @@ function buildBereavementLeaveRule(normalized) {
 
   if (relation.listed === false) {
     return {
+      domain: "bereavementLeave",
       title: `${relation.label} 경조사휴가 확인 기준`,
       lead: "경조사휴가는 사망 사실만으로 판단하지 않고, 국가공무원 복무규정 별표 2의 가족관계별 일수표에 해당 관계가 열거되어 있는지 먼저 확인해야 합니다.",
       answer: [
+        commonBasisPreface,
         `공립 교원·국가공무원 기준으로 ${relation.label} 사망은 국가공무원 복무규정 별표 2의 경조사별 휴가 일수표에 별도 일수로 열거되어 있지 않습니다.`,
         "따라서 배우자의 부모 사망 5일 규정을 적용하면 안 됩니다.",
         "필요하면 연가 등 일반 복무 처리 가능성과 소속 교육청·학교 내부 규정의 별도 경조사휴가 여부를 확인합니다.",
@@ -5060,9 +6651,11 @@ function buildBereavementLeaveRule(normalized) {
 
   const conditionText = relation.legalCondition ? ` ${relation.legalCondition}에는` : "";
   return {
+    domain: "bereavementLeave",
     title: `${relation.label} 경조사휴가 확인 기준`,
     lead: "공립 교원·국가공무원 기준은 공통 법령에서 일수를 먼저 확정하고, 교육공무직·사립학교·기간제는 같은 사유의 신청·보수 처리와 소속기관 절차를 별도로 대조합니다.",
     answer: [
+      commonBasisPreface,
       `공립 교원·국가공무원 기준으로 ${relation.label} 사망 경조사휴가는${conditionText} ${relation.leaveDays}일입니다.`,
       "근거는 국가공무원 복무규정 제20조와 별표 2의 경조사별 휴가 일수표입니다.",
       "경조사휴가 기간 중 토요일·공휴일은 휴가일수에 산입하지 않습니다. 따라서 중간에 공휴일이 끼면 그 날은 5일 같은 경조사휴가 일수에서 제외해 계산합니다.",
@@ -5083,18 +6676,23 @@ function buildBereavementLeaveRule(normalized) {
   };
 }
 
+function getCommonStaffLeavePublicTeacherBasisPreface(role = {}) {
+  if (!["fixedTermTeacher", "privateSchool"].includes(role?.code)) return "";
+  return "이 휴가 일수는 공립과 사립, 정규직과 기간제의 차이가 없는 공통 법령·예규 기준이므로, 공립학교 교원 기준으로 먼저 답변합니다.";
+}
+
 function inferBereavementRelation(normalized) {
   const relations = [
     { code: "spouseUncleAunt", label: "배우자의 삼촌·숙부·이모 등 방계친족", listed: false, patterns: [/배우자.*(?:삼촌|숙부|백부|외삼촌|고모|이모|큰아버지|작은아버지|큰어머니|작은어머니|외숙모)/] },
     { code: "spouseParent", label: "배우자의 부모", leaveDays: 5, listed: true, patterns: [/배우자.*(?:부모|부친|모친|아버지|어머니)|장인|장모|시부|시모/] },
-    { code: "spouseGrandParent", label: "배우자의 조부모·외조부모", leaveDays: 3, listed: true, patterns: [/배우자.*(?:조부모|외조부모|할아버지|할머니|외조부|외조모)/] },
+    { code: "spouseGrandParent", label: "배우자의 조부모·외조부모", leaveDays: 3, listed: true, patterns: [/배우자.*(?:조부모|조부상|조모상|외조부모|외조부상|외조모상|할아버지|할머니|외조부|외조모)/] },
     { code: "spouseSibling", label: "배우자의 형제자매", leaveDays: 1, listed: true, patterns: [/배우자.*(?:형제|자매|오빠|언니|누나|동생|형|누이)/] },
     { code: "spouseChild", label: "배우자의 자녀", leaveDays: 3, listed: true, legalCondition: "법적으로 본인의 자녀 관계가 확인되는 경우", patterns: [/배우자.*(?:자녀|아들|딸)/] },
     { code: "parent", label: "본인 부모", leaveDays: 5, listed: true, patterns: [/부모상|부모님상|본인부모|부친|모친|아버지|어머니|부모.*(?:사망|별세|장례|부고|돌아가)|(?:사망|별세|장례|부고).{0,8}부모/] },
     { code: "spouse", label: "배우자", leaveDays: 5, listed: true, patterns: [/배우자상|배우자사망|배우자가사망|남편상|아내상|남편.*사망|아내.*사망/] },
     { code: "childSpouse", label: "자녀의 배우자", leaveDays: 3, listed: true, patterns: [/자녀.*배우자|아들.*배우자|딸.*배우자|사위|며느리/] },
     { code: "child", label: "자녀", leaveDays: 3, listed: true, patterns: [/자녀|아들|딸/] },
-    { code: "grandParent", label: "조부모·외조부모", leaveDays: 3, listed: true, patterns: [/조부모|할아버지|할머니|외조부|외조모/] },
+    { code: "grandParent", label: "조부모·외조부모", leaveDays: 3, listed: true, patterns: [/조부모|조부상|조모상|외조부모|외조부상|외조모상|할아버지|할머니|외조부|외조모/] },
     { code: "sibling", label: "형제자매", leaveDays: 1, listed: true, patterns: [/형제|자매|오빠|언니|누나|동생|형|누이/] },
     { code: "uncleAunt", label: "삼촌·숙부·이모 등 방계친족", listed: false, patterns: [/삼촌|숙부|백부|외삼촌|고모|이모|큰아버지|작은아버지|큰어머니|작은어머니|외숙모/] }
   ];
@@ -5542,15 +7140,6 @@ function getFieldTrainingInstructorLabel(value = "") {
 async function renderResult(question, preset, scopes, answerMode, userRole, partyRole = "auto", topicContext = null) {
   abortActiveRequests();
   workspace?.classList.add("has-result");
-  if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== resultPanel) {
-    workspace.insertBefore(resultPanel, queryPanel);
-  }
-
-  const access = await getLawInfoAccess();
-  if (!access.ok) {
-    renderLawInfoAccessBlockedResult(access.message);
-    return;
-  }
 
   renderFreeBasicPolicyResult({
     question,
@@ -5561,6 +7150,7 @@ async function renderResult(question, preset, scopes, answerMode, userRole, part
     partyRole,
     topicContext
   });
+  return;
 
   const encodedQuestion = encodeURIComponent(question);
   const modeMessage = getModeMessage(answerMode);
@@ -5637,14 +7227,16 @@ function getPolicyEngineContext(topicContext = null, userRole = "auto", partyRol
   const selectedTopic = topicContext || getSelectedTopicContext();
   const categoryFromTopic = mapTopicContextToPolicyCategory(selectedTopic);
   const roleFromContext = mapPartyToPolicyRole(partyRole) || mapUserToPolicyRole(userRole);
+  const roleCode = policyRoleInput?.value && policyRoleInput.value !== "auto"
+    ? policyRoleInput.value
+    : roleFromContext || "auto";
+  const selectedCategoryCode = policyCategoryInput?.value && policyCategoryInput.value !== "auto"
+    ? policyCategoryInput.value
+    : categoryFromTopic || "auto";
   return {
     officeCode: policyOfficeInput?.value || "gyeongbuk",
-    roleCode: policyRoleInput?.value && policyRoleInput.value !== "auto"
-      ? policyRoleInput.value
-      : roleFromContext || "auto",
-    categoryCode: policyCategoryInput?.value && policyCategoryInput.value !== "auto"
-      ? policyCategoryInput.value
-      : categoryFromTopic || "auto"
+    roleCode,
+    categoryCode: coercePolicyCategoryForRole(roleCode, selectedCategoryCode, categoryFromTopic || "auto")
   };
 }
 
@@ -5813,6 +7405,10 @@ async function getLawInfoAccess() {
   return window.GYO6_AUTH.getAccessTokenFor("law");
 }
 
+function hasCurrentLawInfoAccess() {
+  return Boolean(window.GYO6_AUTH?.getState?.().capabilities?.canUseLawInfo);
+}
+
 function renderLawInfoAccessBlockedResult(message = "") {
   abortActiveRequests();
   currentCaseId = "";
@@ -5822,9 +7418,6 @@ function renderLawInfoAccessBlockedResult(message = "") {
   currentReportDraft = null;
 
   workspace?.classList.add("has-result");
-  if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== resultPanel) {
-    workspace.insertBefore(resultPanel, queryPanel);
-  }
 
   resultTitle.textContent = "답변 먼저";
   statusDot.textContent = "권한 필요";
@@ -5870,11 +7463,8 @@ function renderFreeBasicPolicyResult({
     categoryCode: policyContext.categoryCode
   });
   workspace?.classList.add("has-result");
-  if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== resultPanel) {
-    workspace.insertBefore(resultPanel, queryPanel);
-  }
 
-  const canEnhanceWithLocalLlm = isLocalLlmEnhancementHost();
+  const canEnhanceWithLocalLlm = isLocalLlmEnhancementHost() && hasCurrentLawInfoAccess();
   const needsQualityRecovery = shouldTriggerPolicyQualityRecovery(response);
   const qualityRecoveryState = needsQualityRecovery ? (canEnhanceWithLocalLlm ? "active" : "deferred") : "";
   resultTitle.textContent = needsQualityRecovery ? "고품질 답변 생성 중" : canEnhanceWithLocalLlm ? "기본 답변 · 로컬 AI 보강 중" : "기본 답변";
@@ -5930,11 +7520,15 @@ async function loadLocalLlmPolicyEnhancement({
   const category = getPolicyGuideCategory(policyContext?.categoryCode || "auto");
 
   try {
-    const response = await fetch("/api/policy", {
+    const access = await getLawInfoAccess();
+    if (!access.ok) return;
+
+    const response = await fetch(getAiPolicyUrl(), {
       method: "POST",
       headers: {
         accept: "application/json",
-        "content-type": "application/json"
+        "content-type": "application/json",
+        ...(access.token ? { authorization: `Bearer ${access.token}` } : {})
       },
       signal: controller.signal,
       body: JSON.stringify({
@@ -6034,11 +7628,15 @@ async function loadGuideLocalLlmPolicyEnhancement({
   const category = getPolicyGuideCategory(categoryCode);
 
   try {
-    const response = await fetch("/api/policy", {
+    const access = await getLawInfoAccess();
+    if (!access.ok) return;
+
+    const response = await fetch(getAiPolicyUrl(), {
       method: "POST",
       headers: {
         accept: "application/json",
-        "content-type": "application/json"
+        "content-type": "application/json",
+        ...(access.token ? { authorization: `Bearer ${access.token}` } : {})
       },
       signal: controller.signal,
       body: JSON.stringify({
@@ -6216,11 +7814,15 @@ function renderLocalLlmComposerNote(composer = {}, normalizer = {}, remoteLocalL
 }
 
 function renderAiAccessBlocked(message = "") {
+  const signedIn = Boolean(window.GYO6_AUTH?.getState?.().user);
+  const heading = signedIn
+    ? "법률정보 AI는 관리자 답변 작성용입니다."
+    : "상담은 로그인 후 상담실에 남겨 주세요.";
   return `
-    <div class="answer-label">로그인·권한 확인</div>
-    <h3>기본 답변을 먼저 확인할 수 있습니다.</h3>
-    <p>${escapeHtml(message || "로그인하지 않아도 기본 규정·지침 Q&A는 이용할 수 있습니다.")}</p>
-    <p>로그인이 필요한 기능은 공식자료 조회, 저장, 관리자 승인 같은 별도 기능입니다.</p>
+    <div class="answer-label">로그인 전용 권한</div>
+    <h3>${escapeHtml(heading)}</h3>
+    <p>${escapeHtml(message || "질문 제출은 승인된 회원에게 제공됩니다. 작성한 질문은 이 브라우저에 임시 저장되어 로그인 후 이어서 제출할 수 있습니다.")}</p>
+    <p>회원 로그인 창 아래의 상담 완료 예시를 확인한 뒤 로그인하면, 작성한 질문과 선택 조건을 이어서 제출할 수 있습니다.</p>
   `;
 }
 
@@ -6234,6 +7836,16 @@ function getAiAnalyzeUrl(params = null) {
   return params ? `${baseUrl}?${params.toString()}` : baseUrl;
 }
 
+function getAiPolicyUrl(params = null) {
+  const configuredBase = getConfiguredAiWorkerBaseUrl();
+  if (!configuredBase) {
+    return params ? `/api/policy?${params.toString()}` : "/api/policy";
+  }
+
+  const baseUrl = `${configuredBase.replace(/\/+$/, "")}/api/policy`;
+  return params ? `${baseUrl}?${params.toString()}` : baseUrl;
+}
+
 function getOfficialSearchUrl(params) {
   const configuredBase = getConfiguredAiWorkerBaseUrl();
   if (!configuredBase) {
@@ -6241,6 +7853,16 @@ function getOfficialSearchUrl(params) {
   }
 
   return `${configuredBase.replace(/\/+$/, "")}/api/search?${params.toString()}`;
+}
+
+function getCounselUrl(path = "") {
+  const cleanPath = String(path || "").startsWith("/") ? String(path || "") : `/${path}`;
+  const configuredBase = getConfiguredAiWorkerBaseUrl();
+  if (!configuredBase) {
+    return cleanPath;
+  }
+
+  return `${configuredBase.replace(/\/+$/, "")}${cleanPath}`;
 }
 
 function getConfiguredAiWorkerBaseUrl() {
@@ -6272,10 +7894,10 @@ function resetTransientQuestionState({ keepFormValues = false, resetFormValues =
   if (resetFormValues && form) {
     form.reset();
     if (policyOfficeInput) policyOfficeInput.value = "gyeongbuk";
-    if (policyRoleInput) policyRoleInput.value = "";
-    if (policyCategoryInput) policyCategoryInput.value = "";
-    updatePolicyCategoryOptionsForRole({ keepValue: false });
-    setTopicSelection("auto", "auto", "auto");
+    selectedPolicyAffiliationCode = "publicSchool";
+    selectedPolicySubjectCode = "teacher";
+    selectedPolicyWorkAreaCode = "staffWork";
+    syncPolicySelectsFromCards({ keepCategory: false, forceTopic: true });
     if (window.history?.replaceState) {
       window.history.replaceState(null, "", window.location.pathname);
     }
@@ -6283,10 +7905,6 @@ function resetTransientQuestionState({ keepFormValues = false, resetFormValues =
 
   if (!keepFormValues && !resetFormValues && questionInput) {
     questionInput.value = "";
-  }
-
-  if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== queryPanel) {
-    workspace.insertBefore(queryPanel, resultPanel);
   }
 
   workspace?.classList.remove("has-result");
@@ -7025,9 +8643,6 @@ function formatDateTime(value) {
 
 function showEmptyMessage(title, message) {
   workspace?.classList.remove("has-result");
-  if (workspace && resultPanel && queryPanel && workspace.firstElementChild !== queryPanel) {
-    workspace.insertBefore(queryPanel, resultPanel);
-  }
 
   resultTitle.textContent = "입력 필요";
   statusDot.textContent = "대기중";
@@ -10246,7 +11861,7 @@ function applyClarifierAnswers(formElement) {
 
   questionInput.value = buildRefinedQuestion(stripPreviousRefinement(questionInput.value), answers);
   if (feedback) {
-    feedback.textContent = "추가 확인 내용을 반영해 다시 찾습니다.";
+    feedback.textContent = "선택 입력과 자동 보강 후보를 반영해 다시 찾습니다.";
   }
   skipNextAutoScroll = false;
   window.setTimeout(() => form.requestSubmit(), 0);
@@ -10283,7 +11898,7 @@ function applyLegalGuideClarifierAnswers(formElement) {
 
   questionInput.value = buildRefinedQuestion(stripPreviousRefinement(questionInput.value), answers);
   if (feedback) {
-    feedback.textContent = "추가 확인 내용을 반영해 다시 답변합니다.";
+    feedback.textContent = "선택 입력과 자동 보강 후보를 반영해 다시 답변합니다.";
   }
   activateTool("legal");
   skipNextAutoScroll = false;
@@ -10321,7 +11936,7 @@ function applyGuideClarifierAnswers(formElement) {
 
   guideQuestionInput.value = buildRefinedQuestion(stripPreviousRefinement(guideQuestionInput.value), answers);
   if (feedback) {
-    feedback.textContent = "추가 확인 내용을 반영해 다시 답변합니다.";
+    feedback.textContent = "선택 입력과 자동 보강 후보를 반영해 다시 답변합니다.";
   }
   window.setTimeout(() => renderPolicyGuideResult(), 0);
 }
@@ -10790,8 +12405,10 @@ function hydrateFromUrl() {
   setSelectValue(policyRoleInput, params.get("policyRole") || params.get("targetRole") || params.get("subjectRole") || params.get("role"));
   setSelectValue(userRoleInput, params.get("role"));
   setSelectValue(partyRoleInput, params.get("party") || params.get("partyRole"));
+  syncPolicyCardStateFromSelects();
   updatePolicyCategoryOptionsForRole({ keepValue: true });
   setSelectValue(policyCategoryInput, params.get("policyCategory") || params.get("category") || params.get("guideCategory"));
+  syncPolicyCardStateFromSelects();
   syncTopicSelectionFromPolicyCategory({ force: false });
   updateTopicMajorOptionsForCurrentRole({ keepValue: true });
   setTopicSelectionFromUrl(params);
@@ -10839,13 +12456,16 @@ function initializeTopicControls() {
 }
 
 function initializePolicyCategoryControls() {
+  initializePolicyCardSelectors();
   updatePolicyCategoryOptionsForRole({ keepValue: true });
   updateGuideCategoryOptionsForRole({ keepValue: true });
   policyRoleInput?.addEventListener("change", () => {
+    syncPolicyCardStateFromSelects();
     updatePolicyCategoryOptionsForRole({ keepValue: false });
     updateTopicMajorOptionsForCurrentRole({ keepValue: false });
   });
   policyCategoryInput?.addEventListener("change", () => {
+    syncPolicyCardStateFromSelects();
     syncTopicSelectionFromPolicyCategory({ force: true });
   });
   userRoleInput?.addEventListener("change", () => {
@@ -10859,6 +12479,154 @@ function initializePolicyCategoryControls() {
   guideRoleInput?.addEventListener("change", () => {
     updateGuideCategoryOptionsForRole({ keepValue: false });
   });
+}
+
+function initializePolicyCardSelectors() {
+  renderPolicyAffiliationCards();
+  renderPolicySubjectCards();
+  renderPolicyWorkAreaCards();
+  syncPolicySelectsFromCards({ keepCategory: true });
+}
+
+function renderPolicyAffiliationCards() {
+  renderSelectorCards(policyAffiliationCards, policyAffiliationOptions, selectedPolicyAffiliationCode, (option) => {
+    selectedPolicyAffiliationCode = option.code;
+    const allowedSubject = policySubjectOptions.some((subject) => subject.code === selectedPolicySubjectCode);
+    if (!allowedSubject) {
+      selectedPolicySubjectCode = option.defaultSubject || "teacher";
+    }
+    syncPolicySelectsFromCards({ keepCategory: true });
+  });
+}
+
+function renderPolicySubjectCards() {
+  renderSelectorCards(policySubjectCards, policySubjectOptions, selectedPolicySubjectCode, (option) => {
+    selectedPolicySubjectCode = option.code;
+    syncPolicySelectsFromCards({ keepCategory: true });
+  });
+}
+
+function renderPolicyWorkAreaCards() {
+  renderSelectorCards(policyWorkAreaCards, policyWorkAreaOptions, selectedPolicyWorkAreaCode, (option) => {
+    selectedPolicyWorkAreaCode = option.code;
+    syncPolicySelectsFromCards({ keepCategory: false, forceTopic: true });
+  });
+}
+
+function renderSelectorCards(container, options, selectedCode, onSelect) {
+  if (!container) return;
+  container.innerHTML = "";
+  options.forEach((option) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `selector-card${option.code === selectedCode ? " selected" : ""}`;
+    button.setAttribute("aria-pressed", option.code === selectedCode ? "true" : "false");
+    button.innerHTML = `
+      <strong>${escapeHtml(option.label)}</strong>
+      <span>${escapeHtml(option.summary || "")}</span>
+    `;
+    button.addEventListener("click", () => onSelect(option));
+    container.appendChild(button);
+  });
+}
+
+function syncPolicySelectsFromCards({ keepCategory = true, forceTopic = false } = {}) {
+  const roleCode = getPolicyRoleFromAffiliationSubject(selectedPolicyAffiliationCode, selectedPolicySubjectCode);
+  if (policyRoleInput && roleCode) {
+    setSelectValue(policyRoleInput, roleCode);
+  }
+  updatePolicyCategoryOptionsForRole({ keepValue: keepCategory });
+
+  const workArea = getSelectedPolicyWorkArea();
+  const categoryCode = coercePolicyCategoryForRole(
+    policyRoleInput?.value || "auto",
+    workArea.categoryCode,
+    workArea.fallbackCategories?.find((code) => isPolicyCategoryCompatibleWithRole(policyRoleInput?.value || "auto", code)) || ""
+  );
+  if (policyCategoryInput && categoryCode) {
+    setSelectValue(policyCategoryInput, categoryCode);
+  }
+  syncPolicyPreviewText();
+  renderPolicyAffiliationCards();
+  renderPolicySubjectCards();
+  renderPolicyWorkAreaCards();
+
+  if (forceTopic && workArea.topic) {
+    setTopicSelection(workArea.topic.major, workArea.topic.middle, workArea.topic.minor);
+  } else {
+    syncTopicSelectionFromPolicyCategory({ force: false });
+  }
+}
+
+function syncPolicyCardStateFromSelects() {
+  const roleCode = policyRoleInput?.value || "";
+  const categoryCode = policyCategoryInput?.value || "";
+  const inferredSubject = inferPolicySubjectCodeFromRole(roleCode);
+  if (inferredSubject) {
+    selectedPolicySubjectCode = inferredSubject;
+  }
+  const inferredAffiliation = inferPolicyAffiliationCodeFromRole(roleCode, selectedPolicyAffiliationCode);
+  if (inferredAffiliation) {
+    selectedPolicyAffiliationCode = inferredAffiliation;
+  }
+  const inferredWorkArea = inferPolicyWorkAreaCodeFromCategory(categoryCode);
+  if (inferredWorkArea) {
+    selectedPolicyWorkAreaCode = inferredWorkArea;
+  }
+  syncPolicyPreviewText();
+  renderPolicyAffiliationCards();
+  renderPolicySubjectCards();
+  renderPolicyWorkAreaCards();
+}
+
+function getPolicyRoleFromAffiliationSubject(affiliationCode = "publicSchool", subjectCode = "teacher") {
+  const subject = policySubjectOptions.find((item) => item.code === subjectCode) || policySubjectOptions[1];
+  return subject.roleByAffiliation?.[affiliationCode] || subject.roleByAffiliation?.publicSchool || "auto";
+}
+
+function inferPolicySubjectCodeFromRole(roleCode = "") {
+  const mapping = {
+    student: "student",
+    parent: "student",
+    teacher: "teacher",
+    fixedTermTeacher: "teacher",
+    privateSchool: "teacher",
+    localOfficer: "generalStaff",
+    educationWorker: "educationWorker",
+    manager: "principal"
+  };
+  return mapping[roleCode] || "";
+}
+
+function inferPolicyAffiliationCodeFromRole(roleCode = "", fallback = "publicSchool") {
+  if (roleCode === "privateSchool") return "privateSchool";
+  if (roleCode === "localOfficer") return fallback === "publicSchool" ? "educationOffice" : fallback;
+  if (roleCode === "educationWorker") return fallback || "publicSchool";
+  if (roleCode === "auto") return "other";
+  return fallback || "publicSchool";
+}
+
+function inferPolicyWorkAreaCodeFromCategory(categoryCode = "") {
+  if (!categoryCode) return "";
+  return policyWorkAreaOptions.find((option) => option.categoryCode === categoryCode || option.fallbackCategories?.includes(categoryCode))?.code || "";
+}
+
+function getSelectedPolicyWorkArea() {
+  return policyWorkAreaOptions.find((item) => item.code === selectedPolicyWorkAreaCode) || policyWorkAreaOptions[0];
+}
+
+function syncPolicyPreviewText() {
+  if (policySubjectPreview) {
+    const affiliation = policyAffiliationOptions.find((item) => item.code === selectedPolicyAffiliationCode);
+    const subject = policySubjectOptions.find((item) => item.code === selectedPolicySubjectCode);
+    const role = getPolicyRole(policyRoleInput?.value || "auto");
+    policySubjectPreview.textContent = `${affiliation?.label || "소속"} · ${subject?.label || "주체"} 기준으로 ${role.label} 적용값을 사용합니다.`;
+  }
+  if (policyWorkPreview) {
+    const workArea = getSelectedPolicyWorkArea();
+    const category = getPolicyGuideCategory(policyCategoryInput?.value || "auto");
+    policyWorkPreview.textContent = `${workArea.label}: ${workArea.summary} 현재 엔진 분류값은 ${category.label}입니다.`;
+  }
 }
 
 function getEffectiveTopicFilterRole() {
