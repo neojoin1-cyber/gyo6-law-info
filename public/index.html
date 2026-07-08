@@ -3,302 +3,383 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>경북직업교육연구회 법률정보 | 무료 규정·지침 Q&A</title>
-  <meta name="description" content="특성화고 취업, 교육행정, 학교회계, 학생생활기록, 학교폭력 절차의 규정·지침 확인 순서를 무료 로컬 지식베이스로 정리하는 법률정보 도우미">
-  <link rel="stylesheet" href="styles.css?v=20260621-simple-law-v1">
+  <title>설탕과소금 상담자료실</title>
+  <meta name="description" content="특성화고 학생과 선생님을 위한 공개 자료실과 회원 전용 익명 상담실">
+  <link rel="stylesheet" href="styles.css?v=20260708-counsel-room">
 </head>
-<body class="auth-law-blocked law-tool-mode law-tool-legal">
+<body>
   <header class="topbar">
-    <a class="brand portal-brand" href="https://gyo6.kr/" aria-label="경북직업교육연구회 포털 홈">
-      <span class="brand-mark" aria-hidden="true">G</span>
+    <a class="brand" href="./" aria-label="설탕과소금 상담자료실 홈">
+      <span class="brand-mark" aria-hidden="true">S</span>
       <span>
-        <strong>경북직업교육연구회</strong>
-        <small>특성화고 교사지원 플랫폼</small>
+        <strong>설탕과소금</strong>
+        <small>상담자료실</small>
       </span>
     </a>
-    <nav class="portal-menu" aria-label="경북직업교육연구회 주요 메뉴">
-      <a class="portal-link" href="https://gyo6.kr/">홈</a>
-      <a class="portal-link" href="https://gyo6.kr/#job-hub-home">공채정보</a>
-      <a class="portal-link" href="https://gyo6--ebook.web.app/#publicPreviewShelf">전자책</a>
-      <a class="portal-link active" href="./">법률정보</a>
-    </nav>
     <div class="topbar-actions">
+      <a class="portal-link" href="https://gyo6.kr" rel="noopener noreferrer">포털 홈</a>
+      <span class="phase-badge">자료 공개 · 상담 회원제</span>
       <div id="authMount" class="auth-mount" aria-live="polite"></div>
-      <a class="portal-link owner-link" href="https://gyo6.kr/#owner-top">특성화고 32년</a>
     </div>
   </header>
 
   <main>
-    <section class="legal-intro" aria-labelledby="page-title">
+    <section class="hero" aria-labelledby="page-title">
       <div>
-        <p class="eyebrow">특성화고 취업 · 교육행정 · 학교 현장 법률정보</p>
-        <h1 id="page-title">법률정보 질문창</h1>
-        <p class="lead">대상 신분과 1차 업무영역을 먼저 정한 뒤 질문을 적으면, 공식 규정·지침 근거와 Ollama 보강 답변을 함께 정리합니다.</p>
+        <p class="eyebrow">특성화고 취업 · 학교 현장 상담자료실</p>
+        <h1 id="page-title">자료는 바로 찾고,<br>상담은 안전하게 남깁니다.</h1>
+        <p class="lead">법률, 규정, 지침, 서식은 로그인 없이 확인하고, 학생과 선생님 상담은 회원 로그인 후 익명으로 남길 수 있습니다.</p>
+        <div class="hero-actions">
+          <a class="hero-jump" href="#resourceLibrary">자료실 보기</a>
+          <a class="hero-jump secondary" href="#counselGateway">상담실 입장</a>
+        </div>
       </div>
-      <div class="legal-intro-steps" aria-label="사용 방법">
-        <span>사용 방법</span>
-        <ol>
-          <li>대상 신분을 고릅니다.</li>
-          <li>1차 업무영역을 고릅니다.</li>
-          <li>세부 분류는 필요할 때만 열고, 질문을 적습니다.</li>
+      <div class="hero-panel" aria-label="상담자료실 사용 흐름">
+        <div class="hero-panel-head">
+          <span>이용 순서</span>
+          <strong>자료 먼저 · 상담은 회원제</strong>
+        </div>
+        <ol class="hero-steps">
+          <li><span>1</span><p>공개 자료실에서 원문 확인</p></li>
+          <li><span>2</span><p>학생/선생님 상담실 선택</p></li>
+          <li><span>3</span><p>관리자가 답변 등록</p></li>
         </ol>
       </div>
     </section>
 
-    <section class="prelogin-guide" aria-labelledby="prelogin-title">
-      <div class="prelogin-head">
-        <p class="panel-kicker">Free Policy Engine</p>
-        <h2 id="prelogin-title">누구나 부담 없이 쓰는 특성화고 규정·지침 Q&amp;A로 전환합니다.</h2>
-        <p>경북직업교육연구회 법률정보는 유료 API 호출보다 먼저, 지금까지 쌓은 규정 지식베이스·반례·시나리오 은행·슬롯 질문으로 답변합니다. 질문은 자연스럽게 쓰되, 화면에서 소속 교육청과 대상자, 업무영역을 먼저 잡아 주면 시스템이 더 정확하게 요지를 파악합니다.</p>
+    <section class="trust-rules" aria-label="운영 기준">
+      <article>
+        <span>공개 자료</span>
+        <p>법률, 규정, 지침, 서식은 로그인 없이 먼저 확인할 수 있게 제공합니다.</p>
+      </article>
+      <article>
+        <span>익명 상담</span>
+        <p>상담글은 회원 로그인 후 남기며, 작성자와 관리자만 확인하는 구조로 운영합니다.</p>
+      </article>
+      <article>
+        <span>관리자 답변</span>
+        <p>AI 법률정보 도구는 관리자에게만 열어 상담 답변의 근거 확인용으로 사용합니다.</p>
+      </article>
+    </section>
+
+    <section class="resource-library" id="resourceLibrary" aria-labelledby="resource-title">
+      <div class="section-head split-head">
+        <div>
+          <p class="panel-kicker">Open Library</p>
+          <h2 id="resource-title">법률 · 규정 · 지침 · 서식 자료실</h2>
+          <p>자주 쓰는 공식자료와 검색 입구를 네 칸으로 나누었습니다. 로그인 없이 바로 열람할 수 있습니다.</p>
+        </div>
+        <label class="resource-search">
+          <span>자료 검색</span>
+          <input id="resourceSearch" type="search" placeholder="예: 현장실습, 학교폭력, 근로계약, 서식">
+        </label>
       </div>
-      <div class="prelogin-grid">
-        <article class="prelogin-card">
-          <span>기본값</span>
-          <h3>경상북도교육청 기준으로 먼저 봅니다.</h3>
-          <p>교육청을 따로 고르지 않아도 경상북도교육청 기준으로 우선 답변합니다. 실제 소속 교육청이 다르면 질문창에서 바꿔 적용할 수 있습니다.</p>
+
+      <div class="resource-filter" aria-label="자료 분류 필터">
+        <button type="button" class="active" data-resource-filter="all">전체</button>
+        <button type="button" data-resource-filter="law">법률</button>
+        <button type="button" data-resource-filter="rule">규정</button>
+        <button type="button" data-resource-filter="guide">지침</button>
+        <button type="button" data-resource-filter="form">서식</button>
+      </div>
+
+      <div class="resource-columns" id="resourceColumns">
+        <article class="resource-column" data-resource-group="law">
+          <h3>법률</h3>
+          <a class="resource-card" data-resource-card data-resource-type="law" href="https://www.law.go.kr/LSW/lsSc.do?query=%EC%A7%81%EC%97%85%EA%B5%90%EC%9C%A1%ED%9B%88%EB%A0%A8%20%EC%B4%89%EC%A7%84%EB%B2%95" target="_blank" rel="noopener noreferrer">
+            <strong>직업교육훈련 촉진법</strong>
+            <span>현장실습, 직업교육훈련, 산업체 협약 관련 기본 법령</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="law" href="https://www.law.go.kr/LSW/lsSc.do?query=%EC%B4%88%C2%B7%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95" target="_blank" rel="noopener noreferrer">
+            <strong>초·중등교육법</strong>
+            <span>학교 운영, 학생 지도, 학칙과 교육활동 기본 근거</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="law" href="https://www.law.go.kr/LSW/lsSc.do?query=%EA%B7%BC%EB%A1%9C%EA%B8%B0%EC%A4%80%EB%B2%95" target="_blank" rel="noopener noreferrer">
+            <strong>근로기준법</strong>
+            <span>근로계약, 임금, 근로시간, 휴게, 연소자 보호 확인</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="law" href="https://www.law.go.kr/LSW/lsSc.do?query=%ED%95%99%EA%B5%90%ED%8F%AD%EB%A0%A5%EC%98%88%EB%B0%A9%20%EB%B0%8F%20%EB%8C%80%EC%B1%85%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0" target="_blank" rel="noopener noreferrer">
+            <strong>학교폭력예방법</strong>
+            <span>학교폭력 사안 처리와 학생 보호 절차 확인</span>
+          </a>
         </article>
-        <article class="prelogin-card">
-          <span>질문 이해</span>
-          <h3>대상자와 업무영역을 먼저 분리합니다.</h3>
-          <p>학생, 교사, 기간제교원, 행정직, 교육공무직, 사립학교 교직원처럼 적용 규정이 달라지는 기준을 먼저 잡고 답변합니다.</p>
+
+        <article class="resource-column" data-resource-group="rule">
+          <h3>규정</h3>
+          <a class="resource-card" data-resource-card data-resource-type="rule" href="https://www.law.go.kr/admRulLsInfoP.do?admRulSeq=2100000239319" target="_blank" rel="noopener noreferrer">
+            <strong>학교생활기록 작성 및 관리지침</strong>
+            <span>출결, 행동특성, 생활기록부 기재 기준 확인</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="rule" href="https://www.moe.go.kr" target="_blank" rel="noopener noreferrer">
+            <strong>교육부 고시·훈령 검색</strong>
+            <span>교육과정, 학업성적관리, 학교 운영 관련 공식 고시 확인</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="rule" href="https://www.law.go.kr/LSW/admRulLsSc.do?menuId=5&subMenuId=41&query=%ED%95%99%EC%97%85%EC%84%B1%EC%A0%81%EA%B4%80%EB%A6%AC" target="_blank" rel="noopener noreferrer">
+            <strong>학업성적관리 관련 행정규칙</strong>
+            <span>평가, 성적, 이의신청 등 학교 규정 점검</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="rule" href="https://www.law.go.kr/LSW/admRulLsSc.do?menuId=5&subMenuId=41&query=%EA%B5%90%EC%9C%A1%EA%B3%B5%EB%AC%B4%EC%A7%81" target="_blank" rel="noopener noreferrer">
+            <strong>교육공무직 복무 관련 기준</strong>
+            <span>복무, 휴가, 근무조건 관련 행정규칙 검색</span>
+          </a>
         </article>
-        <article class="prelogin-card">
-          <span>답변 방식</span>
-          <h3>두괄식 답변을 먼저 보여줍니다.</h3>
-          <p>처음 화면에는 결론과 핵심 확인만 간단히 보여주고, 절차·서식·관련 규정은 사용자가 원할 때 아래 버튼으로 더 볼 수 있게 나눕니다.</p>
+
+        <article class="resource-column" data-resource-group="guide">
+          <h3>지침</h3>
+          <a class="resource-card" data-resource-card data-resource-type="guide" href="https://www.moe.go.kr/boardCnts/listRenew.do?boardID=316&m=0302&s=moe" target="_blank" rel="noopener noreferrer">
+            <strong>직업계고 현장실습 운영 자료</strong>
+            <span>현장실습 운영, 안전, 순회지도, 기업 점검 자료 확인</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="guide" href="https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=316&boardSeq=98297&lev=0&m=0302&opType=N&s=moe&statusYN=W" target="_blank" rel="noopener noreferrer">
+            <strong>학교폭력 사안처리 가이드북</strong>
+            <span>접수, 조사, 전담기구, 보호조치 흐름 확인</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="guide" href="https://www.kosha.or.kr" target="_blank" rel="noopener noreferrer">
+            <strong>안전보건공단 교육자료</strong>
+            <span>산업안전, 위험성평가, 현장실습 안전교육 자료</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="guide" href="https://www.hrdkorea.or.kr" target="_blank" rel="noopener noreferrer">
+            <strong>도제학교·일학습병행 자료</strong>
+            <span>도제, 일학습병행, 현장훈련 운영 자료 검색</span>
+          </a>
         </article>
-        <article class="prelogin-card">
-          <span>추가 질문</span>
-          <h3>모호하면 필요한 정보만 다시 묻습니다.</h3>
-          <p>질문 요지가 부족하면 바로 대충 답하지 않고, 신분·기간·장소·업무단계·증빙자료처럼 답변에 꼭 필요한 슬롯만 되묻습니다.</p>
+
+        <article class="resource-column" data-resource-group="form">
+          <h3>서식</h3>
+          <a class="resource-card" data-resource-card data-resource-type="form" href="https://www.moe.go.kr/boardCnts/listRenew.do?boardID=316&m=0302&s=moe" target="_blank" rel="noopener noreferrer">
+            <strong>현장실습 표준협약서</strong>
+            <span>학생, 학교, 산업체 협약과 보호 조항 확인</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="form" href="https://www.moe.go.kr/boardCnts/listRenew.do?boardID=316&m=0302&s=moe" target="_blank" rel="noopener noreferrer">
+            <strong>순회지도·상담 기록 서식</strong>
+            <span>상담 기록, 순회지도, 기업 방문 점검 서식 찾기</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="form" href="https://www.kosha.or.kr" target="_blank" rel="noopener noreferrer">
+            <strong>안전사고 보고·점검 서식</strong>
+            <span>안전 점검, 사고 보고, 예방교육 관련 서식 검색</span>
+          </a>
+          <a class="resource-card" data-resource-card data-resource-type="form" href="https://www.law.go.kr/LSW/lsSc.do?query=%ED%91%9C%EC%A4%80%EA%B7%BC%EB%A1%9C%EA%B3%84%EC%95%BD%EC%84%9C" target="_blank" rel="noopener noreferrer">
+            <strong>표준근로계약서</strong>
+            <span>근로조건, 임금, 근로시간 등 계약서 기본 항목 확인</span>
+          </a>
         </article>
       </div>
     </section>
 
-    <section class="prelogin-guide compact-guide" aria-labelledby="system-guide-title">
-      <div class="prelogin-head">
-        <p class="panel-kicker">How It Helps</p>
-        <h2 id="system-guide-title">특성화고 현장에서 바로 쓰기 쉽게 정리합니다.</h2>
+    <section class="counsel-gateway" id="counselGateway" aria-labelledby="counsel-title">
+      <div>
+        <p class="panel-kicker">Anonymous Counsel</p>
+        <h2 id="counsel-title">회원 전용 익명 상담실</h2>
+        <p>학생 상담실과 선생님 상담실은 출입구를 분리했습니다. 상담 내용은 작성자와 관리자만 확인하고, 관리자가 답변을 등록합니다.</p>
       </div>
-      <div class="prelogin-grid">
-        <article class="prelogin-card">
-          <span>공식 근거</span>
-          <h3>현장 질문을 공식 자료 확인 순서로 연결합니다.</h3>
-          <p>현장실습, 취업지도, 출장·휴가·복무, 학교회계, 학생생활기록, 학교폭력 사안처리처럼 학교에서 바로 판단하기 어려운 질문을 공식 자료 확인 순서로 정리합니다.</p>
-        </article>
-        <article class="prelogin-card">
-          <span>사용 방법</span>
-          <h3>조건을 고르고 질문을 적으면 됩니다.</h3>
-          <ol class="prelogin-steps">
-            <li>소속 교육청은 기본적으로 경상북도교육청으로 둡니다.</li>
-            <li>대상자와 업무영역을 가능하면 선택합니다.</li>
-            <li>질문은 한 문장이어도 괜찮습니다.</li>
-            <li>답변 후 필요한 경우에만 관련 규정·절차·서식을 추가로 봅니다.</li>
-          </ol>
-        </article>
+      <ol class="usage-list">
+        <li>로그인 후 승인된 회원만 상담글을 등록할 수 있습니다.</li>
+        <li>학생 상담과 선생님 상담은 처음 입장할 때 방이 나뉘므로, 작성 화면에는 별도 구분 칸이 없습니다.</li>
+        <li>급한 안전·범죄·자해 위험은 학교 담당자, 보호자, 112·119 등 즉시 대응 체계가 우선입니다.</li>
+      </ol>
+      <div class="counsel-entry-actions">
+        <button type="button" data-counsel-open="student">학생 상담실</button>
+        <button type="button" data-counsel-open="teacher">선생님 상담실</button>
       </div>
     </section>
 
-    <section class="chatbot-guide" id="preloginChatbot" aria-labelledby="chatbot-guide-title">
-      <div class="chatbot-guide-copy">
-        <p class="panel-kicker">KakaoTalk Chatbot</p>
-        <h2 id="chatbot-guide-title">카카오톡 챗봇은 고품질 보강 연결을 점검 중입니다.</h2>
-        <p>현재 외부 PC와 스마트폰에서는 웹 법률정보 질문창이 사무실 Ollama 보강 경로까지 확인된 공식 이용 경로입니다. 카카오톡 챗봇은 같은 품질의 보강 답변이 확인될 때까지 직접 진입을 잠시 막고 웹 질문창으로 안내합니다.</p>
+    <section class="counsel-room is-hidden" id="studentCounselRoom" data-counsel-room-panel="student" tabindex="-1" aria-labelledby="student-counsel-title">
+      <div class="room-head">
+        <div>
+          <p class="panel-kicker">Student Room</p>
+          <h2 id="student-counsel-title">학생 상담실</h2>
+          <p>취업, 현장실습, 학교생활, 진로와 관련해 편하게 남기는 공간입니다.</p>
+        </div>
+        <button type="button" class="ghost-action" data-counsel-close>상담실 안내로</button>
       </div>
-      <div class="chatbot-guide-panel">
-        <strong>임시 운영 기준</strong>
-        <p>선생님들에게는 웹 법률정보 질문창을 우선 안내해 주세요. 이 경로는 외부 접속에서도 `/api/policy`를 통해 사무실 Ollama 보강을 사용합니다.</p>
-        <p class="chatbot-privacy-note">카카오톡 챗봇은 같은 보강 품질과 권한·비용 가드가 확인된 뒤 다시 열겠습니다. 학생 이름, 주민번호, 연락처 같은 민감정보는 웹 질문창에도 입력하지 않는 것이 원칙입니다.</p>
-        <a class="chatbot-guide-action" href="#legalTool">웹 법률정보 질문창으로 이동</a>
+      <div class="member-lock" data-member-required>
+        <strong>로그인과 회원 승인이 필요합니다.</strong>
+        <p>상담글은 승인된 회원만 작성할 수 있습니다. 우측 상단 로그인에서 회원가입 신청 또는 로그인을 진행해 주세요.</p>
+      </div>
+      <form class="counsel-form" data-counsel-form data-room="student">
+        <label>익명 표시 이름
+          <input name="anonymousName" type="text" maxlength="40" placeholder="예: 익명 학생">
+        </label>
+        <label>상담 제목
+          <input name="title" type="text" maxlength="120" required placeholder="예: 현장실습 중 퇴근 후 청소 지시가 걱정됩니다">
+        </label>
+        <label>상담 내용
+          <textarea name="body" rows="7" maxlength="4000" required placeholder="개인정보는 최소한으로 적고, 날짜·장소·상황·궁금한 점을 차분히 적어 주세요."></textarea>
+        </label>
+        <button class="primary-action" type="submit">익명 상담 등록</button>
+        <p class="form-feedback" data-counsel-feedback></p>
+      </form>
+      <div class="consultation-list-wrap">
+        <div class="list-head">
+          <h3>내 상담글</h3>
+          <button type="button" class="ghost-action" data-refresh-consultations="student">새로고침</button>
+        </div>
+        <div class="consultation-list" data-counsel-list="student"></div>
       </div>
     </section>
 
-    <nav class="tool-tabs" aria-label="법률정보 도구 선택">
-      <a class="tool-tab active" href="#legalTool" data-tool-tab="legal" aria-selected="true">
-        <span>법률정보 질문창</span>
-        <strong>무료 로컬 규정 엔진으로 답변합니다</strong>
-      </a>
+    <section class="counsel-room is-hidden" id="teacherCounselRoom" data-counsel-room-panel="teacher" tabindex="-1" aria-labelledby="teacher-counsel-title">
+      <div class="room-head">
+        <div>
+          <p class="panel-kicker">Teacher Room</p>
+          <h2 id="teacher-counsel-title">선생님 상담실</h2>
+          <p>취업지도, 현장실습, 학생 사안, 민원 대응, 행정 업무를 상담하는 공간입니다.</p>
+        </div>
+        <button type="button" class="ghost-action" data-counsel-close>상담실 안내로</button>
+      </div>
+      <div class="member-lock" data-member-required>
+        <strong>로그인과 회원 승인이 필요합니다.</strong>
+        <p>상담글은 승인된 회원만 작성할 수 있습니다. 우측 상단 로그인에서 회원가입 신청 또는 로그인을 진행해 주세요.</p>
+      </div>
+      <form class="counsel-form" data-counsel-form data-room="teacher">
+        <label>익명 표시 이름
+          <input name="anonymousName" type="text" maxlength="40" placeholder="예: 익명 선생님">
+        </label>
+        <label>상담 제목
+          <input name="title" type="text" maxlength="120" required placeholder="예: 현장실습 민원 답변 근거를 확인하고 싶습니다">
+        </label>
+        <label>상담 내용
+          <textarea name="body" rows="7" maxlength="4000" required placeholder="개인정보는 최소한으로 적고, 사실관계·이미 확인한 자료·궁금한 쟁점을 적어 주세요."></textarea>
+        </label>
+        <button class="primary-action" type="submit">익명 상담 등록</button>
+        <p class="form-feedback" data-counsel-feedback></p>
+      </form>
+      <div class="consultation-list-wrap">
+        <div class="list-head">
+          <h3>내 상담글</h3>
+          <button type="button" class="ghost-action" data-refresh-consultations="teacher">새로고침</button>
+        </div>
+        <div class="consultation-list" data-counsel-list="teacher"></div>
+      </div>
+    </section>
+
+    <section class="admin-consultation-panel" id="adminConsultationPanel" hidden aria-labelledby="admin-consult-title">
+      <div class="section-head split-head">
+        <div>
+          <p class="panel-kicker">Admin Counsel Desk</p>
+          <h2 id="admin-consult-title">관리자 상담 답변함</h2>
+          <p>학생·선생님 상담글을 확인하고 답변을 등록합니다.</p>
+        </div>
+        <button type="button" class="ghost-action" id="refreshAdminConsultations">상담 목록 새로고침</button>
+      </div>
+      <div id="adminConsultationList" class="admin-consultation-list"></div>
+    </section>
+
+    <section class="admin-tool-lock" id="adminToolLock" role="note">
+      <strong>관리자 전용 AI 근거 검색</strong>
+      <p>상담 답변 작성에 필요한 AI 법률정보 검색 도구는 관리자 로그인 후에만 열립니다.</p>
+    </section>
+
+    <nav class="tool-tabs compatibility-only" aria-label="관리자 도구 전환" hidden>
+      <a href="#legalTool" data-tool-tab="legal" class="tool-tab active">법률 질문</a>
     </nav>
 
-    <section class="workspace active-tool" id="legalTool" data-tool-panel="legal" aria-label="법률정보 검색 도구">
+    <section class="workspace admin-ai-workspace" id="adminLegalTool" data-admin-only hidden aria-label="관리자 AI 법률정보 검색 도구">
       <form class="query-panel" id="queryForm">
         <div class="panel-head">
-          <p class="panel-kicker">Question</p>
-          <h2>무엇을 찾아볼까요?</h2>
+          <p class="panel-kicker">Admin Question</p>
+          <h2>관리자 근거 검색</h2>
         </div>
 
-        <section class="condition-builder" aria-label="질문 조건과 분류">
-          <div class="intake-guide intake-guide-compact">
-            <div>
-              <span>질문 조건·분류</span>
-              <p>대상 신분과 1차 업무영역은 필수입니다. 세부 분류는 필요할 때만 열고, 나머지는 질문 내용으로 자동 보완합니다.</p>
-            </div>
-            <button class="ghost-action" id="resetQuestionButton" type="button">새 질문</button>
+        <div class="intake-guide">
+          <div>
+            <span>상담 답변 보조 도구</span>
+            <p>상담글 답변에 필요한 법령, 지침, 원문 근거를 관리자만 확인합니다.</p>
           </div>
+          <button class="ghost-action" id="resetQuestionButton" type="button">새 질문</button>
+        </div>
 
-        <div class="field-grid policy-context-grid" aria-label="법률정보 질문 조건">
-          <label class="field-stack" for="policyOffice">
-            <span>소속 교육청</span>
-            <select id="policyOffice" name="policyOffice">
-              <option value="gyeongbuk" selected>경상북도교육청</option>
-              <option value="seoul">서울특별시교육청</option>
-              <option value="busan">부산광역시교육청</option>
-              <option value="daegu">대구광역시교육청</option>
-              <option value="incheon">인천광역시교육청</option>
-              <option value="gwangju">광주광역시교육청</option>
-              <option value="daejeon">대전광역시교육청</option>
-              <option value="ulsan">울산광역시교육청</option>
-              <option value="sejong">세종특별자치시교육청</option>
-              <option value="gyeonggi">경기도교육청</option>
-              <option value="gangwon">강원특별자치도교육청</option>
-              <option value="chungbuk">충청북도교육청</option>
-              <option value="chungnam">충청남도교육청</option>
-              <option value="jeonbuk">전북특별자치도교육청</option>
-              <option value="jeonnam">전라남도교육청</option>
-              <option value="gyeongnam">경상남도교육청</option>
-              <option value="jeju">제주특별자치도교육청</option>
-            </select>
-          </label>
-
-          <label class="field-stack" for="policyRole">
-            <span>대상 신분 <small>필수</small></span>
-            <select id="policyRole" name="policyRole" required>
-              <option value="" selected disabled>대상 신분 선택</option>
-              <option value="student">학생</option>
-              <option value="teacher">공립 교원</option>
-              <option value="fixedTermTeacher">기간제 교원</option>
-              <option value="localOfficer">지방공무원·행정직</option>
-              <option value="educationWorker">교육공무직·특수운영직군</option>
-              <option value="privateSchool">사립학교 교직원</option>
-              <option value="manager">학교 관리자</option>
+        <div class="field-grid intake-grid" aria-label="질문 맥락 선택">
+          <label class="field-stack" for="userRole">
+            <span>질문자 <small>답변을 요구하는 주체</small></span>
+            <select id="userRole" name="userRole">
+              <option value="auto">상황에 맞게</option>
+              <option value="student">학생 본인</option>
+              <option value="teacher">교사·담당자</option>
               <option value="parent">학부모</option>
+              <option value="principal">학교 관리자</option>
+              <option value="staff">교직원·행정직원</option>
             </select>
           </label>
 
-          <label class="field-stack" for="policyCategory">
-            <span>1차 업무영역 <small>필수</small></span>
-            <select id="policyCategory" name="policyCategory" required>
-              <option value="" selected disabled>1차 업무영역 선택</option>
-              <option value="studentAttendance">출결·인정결석</option>
-              <option value="fieldExperienceLearning">교외·가정체험학습</option>
-              <option value="vocationalFieldTraining">현장실습·도제·산학협력</option>
-              <option value="careerEmployment">취업지원·고졸채용</option>
-              <option value="admissionsPathways">입학·특별전형·재직자전형</option>
-              <option value="studentRecords">학생생활기록·정정</option>
-              <option value="schoolViolenceGuide">학교폭력 절차</option>
-              <option value="studentLifeGuidance">학생생활지도·학칙</option>
-              <option value="studentWelfare">장학·교육복지·수익자부담</option>
-              <option value="studentHealthCounseling">보건·감염병·상담</option>
-              <option value="studentSafety">학교안전·실습실 안전</option>
-              <option value="vocationalCurriculum">직업계고 교육과정·NCS</option>
+          <label class="field-stack" for="partyRole">
+            <span>당사자 <small>해당 사건의 주인공</small></span>
+            <select id="partyRole" name="partyRole">
+              <option value="auto">상황에 맞게</option>
+              <option value="student">학생</option>
+              <option value="teacher">교사</option>
+              <option value="parent">학부모</option>
+              <option value="principal">학교 관리자</option>
+              <option value="staff">교직원·행정직원</option>
+              <option value="company">실습기업·사업장</option>
+              <option value="multiple">여러 주체</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="topicMajor">
+            <span>질문유형 대분류</span>
+            <select id="topicMajor" name="topicMajor">
+              <option value="auto">자동 분류</option>
+              <option value="employment">취업·근로계약</option>
+              <option value="fieldTraining">현장실습·도제</option>
+              <option value="schoolSafety">안전·중대재해</option>
+              <option value="schoolViolence">학교폭력·학생사안</option>
+              <option value="staffLabor">교직원·행정직</option>
+              <option value="civilComplaint">민원·생활지도</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="topicMiddle">
+            <span>중분류 <small>선택 사항</small></span>
+            <select id="topicMiddle" name="topicMiddle">
+              <option value="auto">대분류만 사용</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="topicMinor">
+            <span>소분류 <small>선택 사항</small></span>
+            <select id="topicMinor" name="topicMinor">
+              <option value="auto">중분류만 사용</option>
+            </select>
+          </label>
+
+          <label class="field-stack" for="answerMode">
+            <span>정리 방식</span>
+            <select id="answerMode" name="answerMode">
+              <option value="plain">쉬운 말 요약</option>
+              <option value="source">원문 먼저 보기</option>
+              <option value="checklist">확인 순서 중심</option>
             </select>
           </label>
         </div>
-
-        <details class="intake-assist">
-          <summary>
-            <span>세부 분류·답변 방식</span>
-            <strong>선택 사항: 필요할 때만 열기</strong>
-          </summary>
-          <div class="field-grid intake-grid" aria-label="질문 맥락 선택">
-            <label class="field-stack" for="userRole">
-              <span>질문자 <small>누가 묻나요?</small></span>
-              <select id="userRole" name="userRole">
-                <option value="auto">질문에서 자동 판단</option>
-                <option value="student">학생 본인</option>
-                <option value="teacher">교사·담당자</option>
-                <option value="parent">학부모</option>
-                <option value="principal">학교 관리자</option>
-                <option value="staff">교직원·행정직원</option>
-              </select>
-            </label>
-
-            <label class="field-stack" for="partyRole">
-              <span>실제 당사자 <small>누구 일인가요?</small></span>
-              <select id="partyRole" name="partyRole">
-                <option value="auto">질문에서 자동 판단</option>
-                <option value="student">학생</option>
-                <option value="teacher">교사</option>
-                <option value="parent">학부모</option>
-                <option value="principal">학교 관리자</option>
-                <option value="staff">교직원·행정직원</option>
-                <option value="company">실습기업·사업장</option>
-                <option value="multiple">여러 주체</option>
-              </select>
-            </label>
-
-            <label class="field-stack" for="topicMajor">
-              <span>상위 분야 <small>복수 영역 힌트</small></span>
-              <select id="topicMajor" name="topicMajor">
-                <option value="auto">자동 분류</option>
-                <option value="studentPathway">학생 출결·학적·진학</option>
-                <option value="studentSupport">학생생활·보건·복지</option>
-                <option value="vocationalLearning">직업교육과정·NCS</option>
-                <option value="employment">취업·근로계약</option>
-                <option value="fieldTraining">현장실습·도제</option>
-                <option value="schoolSafety">안전·중대재해</option>
-                <option value="schoolViolence">학교폭력·학생사안</option>
-                <option value="schoolAdministration">교육행정·학교회계</option>
-                <option value="staffLabor">교직원·행정직</option>
-                <option value="civilComplaint">민원·생활지도</option>
-              </select>
-            </label>
-
-            <label class="field-stack" for="topicMiddle">
-              <span>중분류 <small>선택 사항</small></span>
-              <select id="topicMiddle" name="topicMiddle">
-                <option value="auto">대분류만 사용</option>
-              </select>
-            </label>
-
-            <label class="field-stack" for="topicMinor">
-              <span>세부 분야 <small>선택 사항</small></span>
-              <select id="topicMinor" name="topicMinor">
-                <option value="auto">중분류만 사용</option>
-              </select>
-            </label>
-
-            <label class="field-stack" for="answerMode">
-              <span>답변 방식</span>
-              <select id="answerMode" name="answerMode">
-                <option value="plain">쉬운 말 요약</option>
-                <option value="source">원문 먼저 보기</option>
-                <option value="checklist">확인 순서 중심</option>
-              </select>
-            </label>
-          </div>
-
-          <fieldset class="scope-group">
-            <legend>추가로 보고 싶은 자료</legend>
-            <label><input type="checkbox" name="scope" value="law" checked> 법령</label>
-            <label><input type="checkbox" name="scope" value="case" checked> 판례</label>
-            <label><input type="checkbox" name="scope" value="admin" checked> 행정자료</label>
-            <label><input type="checkbox" name="scope" value="source" checked> 원문 근거</label>
-          </fieldset>
-        </details>
-        </section>
         <input type="hidden" id="topicType" name="topicType" value="auto">
+        <input type="hidden" id="policyOffice" name="policyOffice" value="gyeongbuk">
+        <input type="hidden" id="policyRole" name="policyRole" value="teacher_public">
+        <input type="hidden" id="policyCategory" name="policyCategory" value="vocational">
 
         <div class="question-head">
           <label class="field-label" for="question">질문</label>
-          <p>지금 묻는 사안만 적어 주세요. 대상 신분과 1차 업무영역은 위 선택값을 우선 반영합니다.</p>
+          <p>상담 답변에 필요한 현재 사안만 적어 주세요.</p>
         </div>
         <textarea id="question" name="question" rows="6" placeholder="예: 현장실습 시간 종료 후 자꾸 청소를 시키는 경우 어떻게 대처해야 하나요?"></textarea>
 
         <div class="examples" aria-label="예시 질문">
-          <button type="button" data-policy-role="student" data-policy-category="vocationalFieldTraining" data-topic-major="fieldTraining" data-topic-middle="scope" data-topic-minor="safety" data-example="현장실습 중 안전사고가 나면 학교와 업체는 어떤 법령을 확인해야 하나요?">현장실습 안전</button>
-          <button type="button" data-policy-role="student" data-policy-category="vocationalFieldTraining" data-topic-major="fieldTraining" data-topic-middle="apprenticeship" data-example="도제학교 학생의 근로시간과 보호 기준은 무엇을 봐야 하나요?">도제학교</button>
-          <button type="button" data-policy-role="student" data-policy-category="schoolViolenceGuide" data-topic-major="schoolViolence" data-topic-middle="procedure" data-example="학교폭력 민원에서 학교가 확인해야 할 절차와 법령은 무엇인가요?">학교폭력 민원</button>
-          <button type="button" data-policy-role="teacher" data-policy-category="leaveAttendance" data-topic-major="staffLabor" data-topic-middle="attendanceLeave" data-topic-minor="teacherLeave" data-example="교원이 수업일 중 연가나 병가를 신청할 때 어떤 예규와 복무규정을 확인해야 하나요?">교원 휴가</button>
-          <button type="button" data-policy-role="manager" data-policy-category="budgetExecution" data-topic-major="schoolAdministration" data-topic-middle="budgetAccount" data-topic-minor="spendingEvidence" data-example="학교 예산을 집행할 때 지출 증빙과 품의·검수 자료는 어떤 기준으로 확인해야 하나요?">지출 증빙</button>
-          <button type="button" data-policy-role="student" data-policy-category="studentRecords" data-topic-major="studentPathway" data-topic-middle="records" data-topic-minor="schoolRecord" data-example="학생 생활기록부 내용을 정정하거나 증빙을 보관할 때 어떤 지침과 기재요령을 확인해야 하나요?">학생부 기록</button>
-          <button type="button" data-policy-role="student" data-policy-category="fieldExperienceLearning" data-topic-major="studentPathway" data-topic-middle="fieldExperience" data-topic-minor="application" data-example="학생 가정체험학습 신청은 언제까지 하고 출결 처리는 어떻게 하나요?">가정체험학습</button>
-          <button type="button" data-policy-role="student" data-policy-category="admissionsPathways" data-topic-major="studentPathway" data-topic-middle="admissions" data-topic-minor="employedAdult" data-example="특성화고 졸업생이 재직자전형을 준비할 때 학교에서 확인할 규정과 서류는 무엇인가요?">재직자전형</button>
+          <button type="button" data-topic-major="fieldTraining" data-topic-middle="scope" data-topic-minor="safety" data-example="현장실습 중 안전사고가 나면 학교와 업체는 어떤 법령을 확인해야 하나요?">현장실습 안전</button>
+          <button type="button" data-topic-major="fieldTraining" data-topic-middle="apprenticeship" data-example="도제학교 학생의 근로시간과 보호 기준은 무엇을 봐야 하나요?">도제학교</button>
+          <button type="button" data-topic-major="schoolViolence" data-topic-middle="procedure" data-example="학교폭력 민원에서 학교가 확인해야 할 절차와 법령은 무엇인가요?">학교폭력 민원</button>
         </div>
+
+        <fieldset class="scope-group">
+          <legend>찾을 정보</legend>
+          <label><input type="checkbox" name="scope" value="law" checked> 법령</label>
+          <label><input type="checkbox" name="scope" value="case" checked> 판례</label>
+          <label><input type="checkbox" name="scope" value="admin" checked> 행정자료</label>
+          <label><input type="checkbox" name="scope" value="source" checked> 원문 근거</label>
+        </fieldset>
 
         <button class="primary-action" type="submit">
           <span aria-hidden="true">⌕</span>
-          답변 보기
+          관리자 근거 검색
         </button>
       </form>
 
@@ -308,149 +389,58 @@
             <p class="panel-kicker">Result</p>
             <h2>검색 준비 화면</h2>
           </div>
-          <span class="status-dot">질문 대기</span>
+          <span class="status-dot">관리자 전용</span>
         </div>
 
         <div id="resultState" class="empty-state">
           <div class="empty-icon" aria-hidden="true">§</div>
-          <h3>질문을 입력하면 결론부터 확인할 수 있습니다.</h3>
-          <p>대상 신분과 1차 업무영역을 먼저 고르면 질문 분석이 더 안정적으로 작동합니다.</p>
+          <h3>관리자가 질문을 입력하면 관련 법령 검색 링크와 API 후보가 표시됩니다.</h3>
+          <p>상담자에게 직접 노출되지 않는 답변 근거 확인용 도구입니다.</p>
         </div>
       </section>
     </section>
 
-    <section class="guide-workspace" id="guideQa" data-tool-panel="guide" aria-label="규정 및 지침 Q&A" hidden>
-      <form class="guide-panel" id="guideForm">
-        <div class="panel-head">
-          <p class="panel-kicker">Rules &amp; Guidelines</p>
-          <h2>규정·지침 Q&amp;A</h2>
-        </div>
-
-        <div class="intake-guide">
-          <div>
-            <span>로컬 지침 사전</span>
-            <p>소속 교육청 자료를 먼저 올리고, 신분별 공통 규정과 학교 내부 규정 확인 순서를 함께 정리합니다.</p>
-          </div>
-          <button class="ghost-action" id="resetGuideButton" type="button">새 규정 질문</button>
-        </div>
-
-        <div class="field-grid guide-grid" aria-label="규정 질문 맥락 선택">
-          <label class="field-stack" for="guideOffice">
-            <span>소속 교육청</span>
-            <select id="guideOffice" name="guideOffice">
-              <option value="gyeongbuk" selected>경상북도교육청</option>
-              <option value="auto">교육청 선택 안 함</option>
-              <option value="seoul">서울특별시교육청</option>
-              <option value="busan">부산광역시교육청</option>
-              <option value="daegu">대구광역시교육청</option>
-              <option value="incheon">인천광역시교육청</option>
-              <option value="gwangju">광주광역시교육청</option>
-              <option value="daejeon">대전광역시교육청</option>
-              <option value="ulsan">울산광역시교육청</option>
-              <option value="sejong">세종특별자치시교육청</option>
-              <option value="gyeonggi">경기도교육청</option>
-              <option value="gangwon">강원특별자치도교육청</option>
-              <option value="chungbuk">충청북도교육청</option>
-              <option value="chungnam">충청남도교육청</option>
-              <option value="jeonbuk">전북특별자치도교육청</option>
-              <option value="jeonnam">전라남도교육청</option>
-              <option value="gyeongbuk">경상북도교육청</option>
-              <option value="gyeongnam">경상남도교육청</option>
-              <option value="jeju">제주특별자치도교육청</option>
-            </select>
-          </label>
-
-          <label class="field-stack" for="guideRole">
-            <span>대상 신분</span>
-            <select id="guideRole" name="guideRole">
-              <option value="auto">상황에서 판단</option>
-              <option value="student">학생</option>
-              <option value="teacher">공립 교원</option>
-              <option value="fixedTermTeacher">기간제 교원</option>
-              <option value="localOfficer">지방공무원·행정직</option>
-              <option value="educationWorker">교육공무직·특수운영직군</option>
-              <option value="privateSchool">사립학교 교직원</option>
-              <option value="manager">학교 관리자</option>
-              <option value="parent">학부모</option>
-            </select>
-          </label>
-
-          <label class="field-stack" for="guideCategory">
-            <span>업무영역</span>
-            <select id="guideCategory" name="guideCategory">
-              <option value="auto">질문에서 자동 분류</option>
-              <option value="studentAttendance">출결·인정결석</option>
-              <option value="fieldExperienceLearning">교외·가정체험학습</option>
-              <option value="vocationalFieldTraining">현장실습·도제·산학협력</option>
-              <option value="careerEmployment">취업지원·고졸채용</option>
-              <option value="admissionsPathways">입학·특별전형·재직자전형</option>
-              <option value="studentRecords">학생생활기록·정정</option>
-              <option value="schoolViolenceGuide">학교폭력 절차</option>
-              <option value="studentLifeGuidance">학생생활지도·학칙</option>
-              <option value="studentWelfare">장학·교육복지·수익자부담</option>
-              <option value="studentHealthCounseling">보건·감염병·상담</option>
-              <option value="studentSafety">학교안전·실습실 안전</option>
-              <option value="vocationalCurriculum">직업계고 교육과정·NCS</option>
-            </select>
-          </label>
-        </div>
-
-        <div class="question-head">
-          <label class="field-label" for="guideQuestion">규정 질문</label>
-          <p>법적 분쟁 판단보다 적용할 규정, 지침, 교육청 기준을 찾는 질문을 적어 주세요.</p>
-        </div>
-        <textarea id="guideQuestion" name="guideQuestion" rows="5" placeholder="예: 공립 교원의 배우자 부모상 경조사휴가는 며칠인가요?"></textarea>
-
-        <div class="examples guide-examples" aria-label="규정 예시 질문">
-          <button type="button" data-guide-category="leaveAttendance" data-guide-role="teacher" data-guide-question="공립 교원의 배우자 부모상 경조사휴가는 며칠이고 어떤 규정을 확인해야 하나요?">경조사휴가</button>
-          <button type="button" data-guide-category="leaveAttendance" data-guide-role="localOfficer" data-guide-question="행정직 공무원이 출장 후 여비와 근무상황 처리를 할 때 어떤 규정을 확인해야 하나요?">출장·여비</button>
-          <button type="button" data-guide-category="budgetExecution" data-guide-role="manager" data-guide-question="학교 예산을 편성하고 지출 증빙을 확인할 때 소속 교육청 지침은 무엇을 우선 봐야 하나요?">예산편성</button>
-          <button type="button" data-guide-category="studentRecords" data-guide-role="teacher" data-guide-question="학생 생활기록부 정정과 출결 증빙은 어떤 지침과 기재요령을 봐야 하나요?">학생부 정정</button>
-          <button type="button" data-guide-category="staffContract" data-guide-role="educationWorker" data-guide-question="교육공무직 휴가와 복무는 법령보다 교육청 취업규칙이나 단체협약을 먼저 봐야 하나요?">교육공무직 복무</button>
-        </div>
-
-        <button class="primary-action" type="submit">
-          <span aria-hidden="true">⌕</span>
-          규정·지침 답변 보기
-        </button>
+    <section class="compatibility-only" data-tool-panel="guide" hidden aria-hidden="true">
+      <form id="guideForm">
+        <textarea id="guideQuestion"></textarea>
+        <select id="guideOffice">
+          <option value="gyeongbuk">경북</option>
+        </select>
+        <select id="guideRole">
+          <option value="auto">자동</option>
+        </select>
+        <select id="guideCategory">
+          <option value="auto">자동</option>
+        </select>
+        <button type="button" id="resetGuideButton">초기화</button>
       </form>
-
-      <section class="result-panel guide-result-panel" aria-live="polite" aria-label="규정 및 지침 답변">
-        <div class="panel-head result-head">
-          <div>
-            <p class="panel-kicker">Result</p>
-            <h2>규정 답변 준비 화면</h2>
-          </div>
-          <span class="status-dot guide-status">질문 대기</span>
+      <section class="guide-result-panel">
+        <div class="result-head">
+          <h2>숨김 안내 패널</h2>
         </div>
-
-        <div id="guideResult" class="empty-state">
-          <div class="empty-icon" aria-hidden="true">¶</div>
-          <h3>규정·지침 질문을 입력하면 소속 교육청 기준과 재검증 흐름이 표시됩니다.</h3>
-          <p>경상북도교육청을 기본값으로 하되, 실제 소속 교육청이 다르면 선택값과 함께 자동 재검증 대상으로 처리됩니다.</p>
-        </div>
+        <span class="guide-status"></span>
+        <div id="guideResult"></div>
       </section>
     </section>
 
     <section class="notice" role="note" aria-label="중요 안내">
-      <strong>정보 제공 안내</strong>
-      <p>이 서비스는 법률 자문이나 사건 판단을 제공하지 않습니다. 실제 분쟁과 소송 등 중요한 판단은 전문가와 상담하세요.</p>
+      <strong>상담자료실 안내</strong>
+      <p>이 서비스는 공식자료 탐색과 상담 답변 보조를 위한 정보 제공 시스템입니다. 실제 분쟁, 소송, 형사 사건, 즉각적인 안전 문제는 관계 기관과 전문가 상담이 우선입니다.</p>
     </section>
-
   </main>
 
   <footer>
-    <p>GYO6 Law Info · 무료 규정·지침 Q&amp;A</p>
+    <p>설탕과소금 상담자료실 · 특성화고 학생과 선생님을 위한 공개 자료와 익명 상담</p>
   </footer>
 
-  <script src="ai-config.js?v=20260621-simple-law-v1"></script>
-  <script src="firebase-config.js?v=20260621-simple-law-v1"></script>
-  <script type="module" src="auth.js?v=20260621-simple-law-v1"></script>
-  <script src="policy-knowledge-base.js?v=20260621-simple-law-v1"></script>
-  <script src="policy-source-registry.js?v=20260621-simple-law-v1"></script>
-  <script src="policy-corpus.js?v=20260621-simple-law-v1"></script>
-  <script src="policy-question-taxonomy.js?v=20260621-simple-law-v1"></script>
-  <script src="policy-engine.js?v=20260621-simple-law-v1"></script>
-  <script src="app.js?v=20260621-simple-law-v1"></script>
+  <script src="ai-config.js?v=20260531-auto-topic"></script>
+  <script src="policy-knowledge-base.js?v=20260708-policy"></script>
+  <script src="policy-source-registry.js?v=20260708-policy"></script>
+  <script src="policy-corpus.js?v=20260708-policy"></script>
+  <script src="policy-question-taxonomy.js?v=20260708-policy"></script>
+  <script src="policy-engine.js?v=20260708-policy"></script>
+  <script src="firebase-config.js?v=20260612-auth-required-2"></script>
+  <script type="module" src="auth.js?v=20260708-counsel-room"></script>
+  <script src="app.js?v=20260708-counsel-room"></script>
 </body>
 </html>

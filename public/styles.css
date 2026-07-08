@@ -1126,6 +1126,378 @@ h1 {
   line-height: 1.65;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.hero-jump.secondary {
+  border: 1px solid #b7d8d2;
+  background: #fff;
+  color: var(--teal);
+}
+
+.split-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+  gap: 18px;
+  align-items: end;
+}
+
+.split-head p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.resource-library,
+.counsel-gateway,
+.counsel-room,
+.admin-consultation-panel,
+.admin-tool-lock {
+  margin: 0 0 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.resource-library,
+.counsel-gateway,
+.counsel-room,
+.admin-consultation-panel {
+  padding: 22px;
+}
+
+.resource-search {
+  display: grid;
+  gap: 6px;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.resource-search input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fbfcfd;
+  color: var(--ink);
+}
+
+.resource-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.resource-filter button,
+.counsel-entry-actions button {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.resource-filter button.active,
+.resource-filter button:hover,
+.resource-filter button:focus-visible,
+.counsel-entry-actions button:hover,
+.counsel-entry-actions button:focus-visible {
+  border-color: #8abeb5;
+  background: #edf7f6;
+  color: var(--teal);
+}
+
+.resource-columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.resource-column {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.resource-column h3 {
+  margin: 0;
+  padding: 0 0 8px;
+  border-bottom: 2px solid #b7d8d2;
+  color: var(--teal);
+  font-size: 17px;
+}
+
+.resource-card {
+  display: grid;
+  gap: 6px;
+  min-height: 104px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+  text-decoration: none;
+}
+
+.resource-card:hover,
+.resource-card:focus-visible {
+  border-color: #8abeb5;
+  background: #f4fbfa;
+}
+
+.resource-card strong {
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.resource-card span {
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.resource-card.is-filtered-out {
+  display: none;
+}
+
+.counsel-gateway {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.counsel-gateway h2,
+.counsel-room h2,
+.admin-consultation-panel h2 {
+  margin: 0;
+  color: var(--navy);
+}
+
+.counsel-gateway p,
+.room-head p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.usage-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+  color: #40556a;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.counsel-entry-actions {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.counsel-entry-actions button {
+  min-height: 52px;
+  font-size: 15px;
+}
+
+.counsel-entry-actions button.active {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #fff;
+}
+
+.counsel-room.is-hidden {
+  display: none;
+}
+
+.room-head,
+.list-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.member-lock,
+.admin-tool-lock {
+  padding: 16px;
+  border: 1px solid #cfe4e2;
+  border-left: 5px solid var(--teal);
+  border-radius: 8px;
+  background: #f4fbfa;
+}
+
+.member-lock {
+  margin-bottom: 16px;
+}
+
+.member-lock strong,
+.admin-tool-lock strong {
+  color: var(--teal);
+}
+
+.member-lock p,
+.admin-tool-lock p {
+  margin: 6px 0 0;
+  color: #40556a;
+  line-height: 1.65;
+}
+
+.counsel-form {
+  display: grid;
+  gap: 12px;
+}
+
+.counsel-form label,
+.admin-reply-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.counsel-form input,
+.counsel-form textarea,
+.admin-reply-form textarea,
+.admin-reply-form select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fbfcfd;
+  color: var(--ink);
+}
+
+.counsel-form textarea,
+.admin-reply-form textarea {
+  resize: vertical;
+}
+
+.counsel-form :disabled {
+  cursor: not-allowed;
+  opacity: .62;
+}
+
+.form-feedback {
+  min-height: 22px;
+  margin: 0;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.consultation-list-wrap {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.list-head h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.consultation-list,
+.admin-consultation-list {
+  display: grid;
+  gap: 10px;
+}
+
+.consultation-item,
+.admin-consultation-item {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+
+.consultation-item header,
+.admin-consultation-item header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.consultation-item h4,
+.admin-consultation-item h4 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.consultation-meta,
+.consultation-reply {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.consultation-body {
+  margin: 0;
+  color: #40556a;
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.consultation-status {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: #edf7f6;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.admin-reply-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px auto;
+  gap: 8px;
+  align-items: end;
+}
+
+.admin-reply-form button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.admin-tool-lock {
+  margin-top: 4px;
+}
+
+.admin-ai-workspace {
+  margin-bottom: 22px;
+}
+
 .admin-knowledge {
   margin: 0 0 22px;
   padding: 20px;
@@ -4335,6 +4707,10 @@ footer p {
   .guide-workspace,
   .quick-start,
   .trust-rules,
+  .split-head,
+  .resource-columns,
+  .counsel-gateway,
+  .counsel-entry-actions,
   .source-grid,
   .admin-grid,
   .tool-tabs,
@@ -4389,6 +4765,10 @@ footer p {
 
   .report-library-list article {
     display: grid;
+  }
+
+  .admin-reply-form {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -4493,6 +4873,24 @@ footer p {
   .hero-jump {
     width: 100%;
     max-width: 100%;
+  }
+
+  .hero-actions {
+    display: grid;
+  }
+
+  .resource-library,
+  .counsel-gateway,
+  .counsel-room,
+  .admin-consultation-panel {
+    padding: 16px;
+  }
+
+  .room-head,
+  .list-head,
+  .consultation-item header,
+  .admin-consultation-item header {
+    display: grid;
   }
 
   h1 {

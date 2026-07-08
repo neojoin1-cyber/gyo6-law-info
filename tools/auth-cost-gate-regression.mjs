@@ -83,9 +83,10 @@ assert.match(policyEngineFirstAnalyze.analysis?.coreFinding || "", /3년 이상 
 assert.doesNotMatch(policyEngineFirstAnalyze.analysis?.coreFinding || "", /근로기준법 기준/);
 
 const workerSource = await readFile(new URL("../workers/ai-analysis/src/index.js", import.meta.url), "utf-8");
-assert.match(workerSource, /const LAW_ACCESS_ROLES = new Set\(\["law", "owner"\]\)/);
+assert.match(workerSource, /const LAW_ACCESS_ROLES = new Set\(\["admin", "owner"\]\)/);
 assert.doesNotMatch(workerSource, /const LAW_ACCESS_ROLES = new Set\(\["law", "teacher", "admin", "owner"\]\)/);
 assert.match(workerSource, /canUseLawInfo: approved && LAW_ACCESS_ROLES\.has\(member\.role\)/);
+assert.match(workerSource, /관리자에 의해 법률정보 권한을 승인받아야 합니다/);
 assert.match(workerSource, /url\.pathname === "\/api\/search"/);
 assert.match(workerSource, /const access = await assertLawAccess\(authContext, env\)/);
 assert.match(workerSource, /maybeAttachGptAnswerComposer\(payload, finalResult, env, "policy_answer"\)/);
@@ -129,11 +130,14 @@ assert.deepEqual(hostingRewrites.at(-1), {
 });
 
 const renderResultStart = appSource.indexOf("async function renderResult");
+const accessGuardIndex = appSource.indexOf("const access = await getLawInfoAccess();", renderResultStart);
 const freeRenderIndex = appSource.indexOf("renderFreeBasicPolicyResult({", renderResultStart);
-const earlyReturnIndex = appSource.indexOf("return;", freeRenderIndex);
+const postFreeWindow = appSource.slice(freeRenderIndex, freeRenderIndex + 240);
 assert.ok(freeRenderIndex > renderResultStart);
-assert.ok(earlyReturnIndex > freeRenderIndex);
+assert.ok(accessGuardIndex > renderResultStart && accessGuardIndex < freeRenderIndex);
+assert.doesNotMatch(postFreeWindow, /return;/);
 assert.match(appSource, /statusDot\.textContent = "기본 답변"/);
+assert.match(appSource, /renderLawInfoAccessBlockedResult\(access\.message\)/);
 assert.doesNotMatch(appSource, /외부 AI API 호출 없이 무료 규정 엔진으로 답변했습니다/);
 assert.doesNotMatch(appSource, /무료 규정 엔진으로 먼저 답변합니다/);
 

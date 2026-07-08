@@ -51,11 +51,13 @@ let kakaoClarificationTableEnsured = false;
 
 const FIREBASE_JWKS_URL = "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com";
 const APPROVED_MEMBER_STATUSES = new Set(["approved"]);
-const LAW_ACCESS_ROLES = new Set(["law", "owner"]);
+const LAW_ACCESS_ROLES = new Set(["admin", "owner"]);
 const ADMIN_ROLES = new Set(["admin", "owner"]);
 const OWNER_ROLES = new Set(["owner"]);
 const MEMBER_ROLES = ["pending", "general", "jobs", "law", "teacher", "admin", "owner"];
 const MEMBER_STATUSES = ["pending", "approved", "suspended", "deleted"];
+const COUNSEL_ROOMS = new Set(["student", "teacher"]);
+const CONSULTATION_STATUSES = new Set(["open", "answered", "closed"]);
 let firebaseJwkCache = null;
 
 export default {
@@ -183,6 +185,25 @@ export default {
         return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
+      if (url.pathname === "/api/consultations") {
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) {
+          return sendJson(authContext, authContext.status || 401, corsHeaders);
+        }
+
+        if (request.method === "GET") {
+          const result = await listConsultations(authContext, env, url);
+          return sendJson(result, getResultStatus(result), corsHeaders);
+        }
+
+        if (request.method === "POST") {
+          const result = await createConsultation(authContext, await readJsonBody(request), env);
+          return sendJson(result, getResultStatus(result), corsHeaders);
+        }
+
+        return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+      }
+
       if (url.pathname === "/api/admin/members") {
         const adminContext = await requireAdminContext(request, env);
         if (adminContext.error) {
@@ -246,6 +267,20 @@ export default {
         }
 
         const result = await createMemberInvitation(adminContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/consultation/reply") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await replyConsultation(adminContext, await readJsonBody(request), env);
         return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
@@ -515,7 +550,7 @@ async function assertKakaoAccess(payload = {}, env = {}) {
       ok: false,
       code: "KAKAO_LAW_ROLE_REQUIRED",
       status: 403,
-      message: "현재 승인 등급에는 법률정보 챗봇 이용권한이 없습니다.",
+      message: "관리자에 의해 법률정보 권한을 승인받아야 합니다.",
       userKey,
       member: sanitizeMember(member)
     };
@@ -558,7 +593,7 @@ function buildKakaoAccessBlockedResponse(access = {}) {
 async function registerKakaoMember(payload = {}, userKey = "", env = {}, options = {}) {
   const now = new Date().toISOString();
   const accessCode = formatKakaoAccessCode(userKey);
-  const role = options.approved ? "law" : "pending";
+  const role = options.approved ? "admin" : "pending";
   const status = options.approved ? "approved" : "pending";
   const displayName = getKakaoDisplayName(payload, accessCode);
   await env.MEMBER_DB.prepare(`
@@ -573,7 +608,7 @@ async function registerKakaoMember(payload = {}, userKey = "", env = {}, options
     displayName,
     "카카오톡 채널",
     "",
-    "law",
+    "admin",
     role,
     status,
     `카카오 챗봇 이용 신청 식별번호: ${accessCode}`,
@@ -589,7 +624,7 @@ async function registerKakaoMember(payload = {}, userKey = "", env = {}, options
 async function touchKakaoMember(payload = {}, member = {}, env = {}, options = {}) {
   const now = new Date().toISOString();
   const displayName = getKakaoDisplayName(payload, formatKakaoAccessCode(member.uid));
-  const nextRole = options.approved && !LAW_ACCESS_ROLES.has(member.role) ? "law" : member.role;
+  const nextRole = options.approved && !LAW_ACCESS_ROLES.has(member.role) ? "admin" : member.role;
   const nextStatus = options.approved && member.status !== "approved" ? "approved" : member.status;
   const approvedAt = nextStatus === "approved" && member.status !== "approved" ? now : member.approvedAt || null;
   const approvedBy = nextStatus === "approved" && member.status !== "approved" ? "kakao-allowlist" : member.approvedBy || null;
@@ -613,7 +648,7 @@ async function promoteKakaoMemberFromAllowlist(userKey = "", env = {}) {
   const now = new Date().toISOString();
   await env.MEMBER_DB.prepare(`
     UPDATE members
-    SET role = 'law',
+    SET role = 'admin',
         status = 'approved',
         updated_at = ?,
         approved_at = COALESCE(approved_at, ?),
@@ -2807,7 +2842,7 @@ async function assertLawAccess(authContext, env) {
       ok: false,
       code: "LAW_ROLE_REQUIRED",
       status: 403,
-      message: "법률정보 이용 권한이 없습니다. 관리자에게 법률정보 권한을 요청하세요."
+      message: "관리자에 의해 법률정보 권한을 승인받아야 합니다."
     };
   }
 
@@ -2912,6 +2947,257 @@ async function upsertMemberProfile(user, body = {}, env) {
   }
 
   return registerMember(user, body, env);
+}
+
+async function createConsultation(authContext, body = {}, env) {
+  const access = await assertApprovedMemberAccess(authContext, env);
+  if (!access.ok) {
+    return access;
+  }
+
+  await ensureConsultationTables(env);
+
+  const room = normalizeCounselRoom(body.room);
+  if (!room) {
+    return { error: "학생 상담실 또는 선생님 상담실을 선택해 주세요.", code: "ROOM_REQUIRED", status: 400 };
+  }
+
+  const title = truncateText(body.title, 120);
+  const content = truncateText(body.body, 4000);
+  if (!title || !content) {
+    return { error: "상담 제목과 내용을 입력해 주세요.", code: "CONSULTATION_REQUIRED", status: 400 };
+  }
+
+  const now = new Date().toISOString();
+  const anonymousName = truncateText(body.anonymousName || (room === "student" ? "익명 학생" : "익명 선생님"), 40);
+
+  const result = await env.MEMBER_DB.prepare(`
+    INSERT INTO consultations (
+      room, author_uid, author_email, author_name, anonymous_name, title, body,
+      status, created_at, updated_at
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, 'open', ?, ?)
+  `).bind(
+    room,
+    authContext.user.uid,
+    authContext.user.email || "",
+    authContext.member?.displayName || authContext.user.name || "",
+    anonymousName,
+    title,
+    content,
+    now,
+    now
+  ).run();
+
+  const id = result.meta?.last_row_id || result.meta?.lastRowId;
+  await writeAuditLog(env, {
+    actorUid: authContext.user.uid,
+    targetUid: String(id || ""),
+    action: "consultation.create",
+    detail: JSON.stringify({ room })
+  });
+
+  return {
+    ok: true,
+    consultation: await getConsultationById(id, env, hasAdminAccess(authContext.member))
+  };
+}
+
+async function listConsultations(authContext, env, url) {
+  const access = await assertApprovedMemberAccess(authContext, env);
+  if (!access.ok) {
+    return access;
+  }
+
+  await ensureConsultationTables(env);
+
+  const isAdmin = hasAdminAccess(authContext.member);
+  const room = normalizeCounselRoom(url.searchParams.get("room"));
+  const where = [];
+  const params = [];
+
+  if (!isAdmin) {
+    where.push("author_uid = ?");
+    params.push(authContext.user.uid);
+  }
+
+  if (room) {
+    where.push("room = ?");
+    params.push(room);
+  }
+
+  const query = `
+    SELECT id, room, author_uid, author_email, author_name, anonymous_name, title, body,
+           status, admin_reply, admin_uid, admin_replied_at, created_at, updated_at
+    FROM consultations
+    ${where.length ? `WHERE ${where.join(" AND ")}` : ""}
+    ORDER BY updated_at DESC
+    LIMIT 200
+  `;
+  const statement = env.MEMBER_DB.prepare(query);
+  const result = await (params.length ? statement.bind(...params) : statement).all();
+
+  return {
+    ok: true,
+    consultations: (result.results || []).map((row) => mapConsultationRow(row, isAdmin))
+  };
+}
+
+async function replyConsultation(adminContext, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  await ensureConsultationTables(env);
+
+  const id = Number(body.id);
+  if (!Number.isInteger(id) || id <= 0) {
+    return { error: "답변할 상담글 ID가 필요합니다.", code: "CONSULTATION_ID_REQUIRED", status: 400 };
+  }
+
+  const reply = truncateText(body.reply, 5000);
+  if (!reply) {
+    return { error: "관리자 답변 내용을 입력해 주세요.", code: "REPLY_REQUIRED", status: 400 };
+  }
+
+  const status = normalizeConsultationStatus(body.status || "answered");
+  const now = new Date().toISOString();
+  await env.MEMBER_DB.prepare(`
+    UPDATE consultations
+    SET admin_reply = ?, admin_uid = ?, admin_replied_at = ?, status = ?, updated_at = ?
+    WHERE id = ?
+  `).bind(reply, adminContext.user.uid, now, status, now, id).run();
+
+  const consultation = await getConsultationById(id, env, true);
+  if (!consultation) {
+    return { error: "상담글을 찾지 못했습니다.", code: "CONSULTATION_NOT_FOUND", status: 404 };
+  }
+
+  await writeAuditLog(env, {
+    actorUid: adminContext.user.uid,
+    targetUid: String(id),
+    action: "consultation.reply",
+    detail: JSON.stringify({ status })
+  });
+
+  return {
+    ok: true,
+    consultation
+  };
+}
+
+async function assertApprovedMemberAccess(authContext, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      ok: false,
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  if (!authContext?.member || authContext.member.status !== "approved") {
+    return {
+      ok: false,
+      error: "관리자 승인 후 상담실을 이용할 수 있습니다.",
+      code: "MEMBER_APPROVAL_REQUIRED",
+      status: 403
+    };
+  }
+
+  return { ok: true };
+}
+
+async function ensureConsultationTables(env) {
+  if (!env.MEMBER_DB) {
+    return;
+  }
+
+  await env.MEMBER_DB.prepare(`
+    CREATE TABLE IF NOT EXISTS consultations (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      room TEXT NOT NULL,
+      author_uid TEXT NOT NULL,
+      author_email TEXT DEFAULT '',
+      author_name TEXT DEFAULT '',
+      anonymous_name TEXT DEFAULT '',
+      title TEXT NOT NULL,
+      body TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'open',
+      admin_reply TEXT DEFAULT '',
+      admin_uid TEXT DEFAULT '',
+      admin_replied_at TEXT,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    )
+  `).run();
+
+  await env.MEMBER_DB.prepare(`
+    CREATE INDEX IF NOT EXISTS idx_consultations_author_room_updated
+      ON consultations (author_uid, room, updated_at)
+  `).run();
+
+  await env.MEMBER_DB.prepare(`
+    CREATE INDEX IF NOT EXISTS idx_consultations_room_status_updated
+      ON consultations (room, status, updated_at)
+  `).run();
+}
+
+async function getConsultationById(id, env, includeAuthor = false) {
+  if (!id || !env.MEMBER_DB) {
+    return null;
+  }
+
+  const row = await env.MEMBER_DB.prepare(`
+    SELECT id, room, author_uid, author_email, author_name, anonymous_name, title, body,
+           status, admin_reply, admin_uid, admin_replied_at, created_at, updated_at
+    FROM consultations
+    WHERE id = ?
+  `).bind(id).first();
+
+  return row ? mapConsultationRow(row, includeAuthor) : null;
+}
+
+function mapConsultationRow(row, includeAuthor = false) {
+  const item = {
+    id: row.id,
+    room: normalizeCounselRoom(row.room) || "student",
+    title: row.title || "",
+    body: row.body || "",
+    status: normalizeConsultationStatus(row.status || "open"),
+    adminReply: row.admin_reply || "",
+    adminRepliedAt: row.admin_replied_at || "",
+    createdAt: row.created_at || "",
+    updatedAt: row.updated_at || "",
+    author: {
+      anonymousName: row.anonymous_name || ""
+    }
+  };
+
+  if (includeAuthor) {
+    item.author = {
+      uid: row.author_uid || "",
+      email: row.author_email || "",
+      name: row.author_name || "",
+      anonymousName: row.anonymous_name || ""
+    };
+  }
+
+  return item;
+}
+
+function normalizeCounselRoom(value) {
+  const room = cleanText(value);
+  return COUNSEL_ROOMS.has(room) ? room : "";
+}
+
+function normalizeConsultationStatus(value) {
+  const status = cleanText(value);
+  return CONSULTATION_STATUSES.has(status) ? status : "answered";
 }
 
 async function listMembers(env) {
@@ -3069,10 +3355,10 @@ async function approveKakaoMemberByAdmin(adminContext, body = {}, env) {
     };
   }
 
-  const role = normalizeRole(body.role || "law", "law");
+  const role = normalizeRole(body.role || "admin", "admin");
   if (!LAW_ACCESS_ROLES.has(role) && !OWNER_ROLES.has(role)) {
     return {
-      error: "카카오 챗봇 이용권한은 법률정보 회원 또는 총괄관리자 권한으로만 승인할 수 있습니다.",
+      error: "카카오 챗봇 이용권한은 관리자 또는 총괄관리자 권한으로만 승인할 수 있습니다.",
       code: "LAW_ROLE_REQUIRED",
       status: 400
     };

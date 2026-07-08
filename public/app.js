@@ -29,6 +29,15 @@ const guideResult = document.querySelector("#guideResult");
 const guideStatus = document.querySelector(".guide-status");
 const guideResultTitle = document.querySelector(".guide-result-panel .result-head h2");
 const resetGuideButton = document.querySelector("#resetGuideButton");
+const adminLegalTool = document.querySelector("#adminLegalTool");
+const adminToolLock = document.querySelector("#adminToolLock");
+const adminConsultationPanel = document.querySelector("#adminConsultationPanel");
+const adminConsultationList = document.querySelector("#adminConsultationList");
+const refreshAdminConsultationsButton = document.querySelector("#refreshAdminConsultations");
+const resourceSearchInput = document.querySelector("#resourceSearch");
+const counselGateway = document.querySelector("#counselGateway");
+const counselRooms = [...document.querySelectorAll("[data-counsel-room-panel]")];
+let activeCounselRoom = "";
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
 const AI_USAGE_LEDGER_KEY = "gyo6LawInfoAiUsageLedger";
 const LOCAL_COST_CONTROL = {
@@ -1990,6 +1999,10 @@ const fallbackPreset = {
   checklist: ["질문에서 대상, 장소, 날짜, 기관을 분리합니다.", "관련 키워드로 법령 원문과 행정자료 후보를 자동 검색 대상으로 둡니다.", "실제 사안 적용 전 위험도와 전문가 검토 필요 여부를 표시합니다."]
 };
 
+initializePublicResourceLibrary();
+initializeCounselRooms();
+syncAccessControlledViews();
+
 initializeTopicControls();
 initializePolicyCategoryControls();
 
@@ -2059,6 +2072,12 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   activateTool("legal");
 
+  const access = await getLawInfoAccess();
+  if (!access.ok) {
+    renderLawInfoAccessBlockedResult(access.message);
+    return;
+  }
+
   if (!policyRoleInput?.value) {
     resetTransientQuestionState({ keepFormValues: true });
     showEmptyMessage("대상 신분을 먼저 선택해 주세요.", "학생, 공립 교원, 기간제 교원, 학교 관리자처럼 적용 규정이 달라지는 기준을 먼저 정합니다.");
@@ -2110,6 +2129,7 @@ guideQuestionInput?.addEventListener("input", schedulePolicyGuideAutoRender);
 
 window.addEventListener("hashchange", activateToolFromHash);
 document.body?.addEventListener("gyo6-auth-state", (event) => {
+  syncAccessControlledViews();
   if (!syncLawWindowMode() || userSelectedTool || window.location?.hash || getRequestedToolParam()) {
     return;
   }
@@ -2231,6 +2251,327 @@ window.addEventListener("afterprint", () => {
 
 activateToolFromHash();
 hydrateFromUrl();
+
+function initializePublicResourceLibrary() {
+  const filterButtons = [...document.querySelectorAll("[data-resource-filter]")];
+  const applyFilter = () => {
+    const activeFilter = document.querySelector("[data-resource-filter].active")?.dataset.resourceFilter || "all";
+    const query = normalizeSearchText(resourceSearchInput?.value || "");
+    document.querySelectorAll("[data-resource-card]").forEach((card) => {
+      const typeMatched = activeFilter === "all" || card.dataset.resourceType === activeFilter;
+      const textMatched = !query || normalizeSearchText(card.textContent).includes(query);
+      card.classList.toggle("is-filtered-out", !typeMatched || !textMatched);
+    });
+  };
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+      applyFilter();
+    });
+  });
+
+  resourceSearchInput?.addEventListener("input", applyFilter);
+  applyFilter();
+}
+
+function initializeCounselRooms() {
+  document.querySelectorAll("[data-counsel-open]").forEach((button) => {
+    button.addEventListener("click", () => openCounselRoom(button.dataset.counselOpen || ""));
+  });
+
+  document.querySelectorAll("[data-counsel-close]").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeCounselRoom = "";
+      counselRooms.forEach((room) => room.classList.add("is-hidden"));
+      document.querySelectorAll("[data-counsel-open]").forEach((item) => item.classList.remove("active"));
+      counselGateway?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  document.querySelectorAll("[data-counsel-form]").forEach((counselForm) => {
+    counselForm.addEventListener("submit", handleCounselSubmit);
+  });
+
+  document.querySelectorAll("[data-refresh-consultations]").forEach((button) => {
+    button.addEventListener("click", () => loadCounselRoomList(button.dataset.refreshConsultations || ""));
+  });
+
+  refreshAdminConsultationsButton?.addEventListener("click", loadAdminConsultations);
+  adminConsultationPanel?.addEventListener("submit", handleAdminReplySubmit);
+}
+
+function syncAccessControlledViews() {
+  const authState = getAuthSnapshot();
+  const canUseAdminTool = isAdminState(authState);
+  const canUseCounsel = isApprovedMemberState(authState);
+
+  if (adminLegalTool) {
+    adminLegalTool.hidden = !canUseAdminTool;
+  }
+  if (adminToolLock) {
+    adminToolLock.hidden = canUseAdminTool;
+  }
+  if (adminConsultationPanel) {
+    adminConsultationPanel.hidden = !canUseAdminTool;
+  }
+
+  document.body.classList.toggle("is-admin-user", canUseAdminTool);
+  document.body.classList.toggle("is-approved-member", canUseCounsel);
+
+  document.querySelectorAll("[data-member-required]").forEach((lock) => {
+    lock.hidden = canUseCounsel;
+  });
+
+  document.querySelectorAll("[data-counsel-form]").forEach((counselForm) => {
+    counselForm.querySelectorAll("input, textarea, button").forEach((field) => {
+      field.disabled = !canUseCounsel;
+    });
+  });
+
+  if (activeCounselRoom && canUseCounsel) {
+    loadCounselRoomList(activeCounselRoom);
+  }
+  if (canUseAdminTool) {
+    loadAdminConsultations();
+  }
+}
+
+function openCounselRoom(room) {
+  if (!["student", "teacher"].includes(room)) {
+    return;
+  }
+
+  activeCounselRoom = room;
+  counselRooms.forEach((panel) => {
+    panel.classList.toggle("is-hidden", panel.dataset.counselRoomPanel !== room);
+  });
+  document.querySelectorAll("[data-counsel-open]").forEach((button) => {
+    button.classList.toggle("active", button.dataset.counselOpen === room);
+  });
+
+  const panel = document.querySelector(`[data-counsel-room-panel="${room}"]`);
+  panel?.focus({ preventScroll: true });
+  panel?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  if (isApprovedMemberState(getAuthSnapshot())) {
+    loadCounselRoomList(room);
+  }
+}
+
+async function handleCounselSubmit(event) {
+  event.preventDefault();
+  const counselForm = event.currentTarget;
+  const room = counselForm.dataset.room || "";
+  const feedback = counselForm.querySelector("[data-counsel-feedback]");
+
+  if (!isApprovedMemberState(getAuthSnapshot())) {
+    setFeedback(feedback, "관리자 승인 후 상담글을 등록할 수 있습니다.");
+    return;
+  }
+
+  const payload = {
+    room,
+    anonymousName: getLocalFormValue(counselForm, "anonymousName"),
+    title: getLocalFormValue(counselForm, "title"),
+    body: getLocalFormValue(counselForm, "body")
+  };
+
+  try {
+    setFeedback(feedback, "상담글을 등록하는 중입니다.");
+    await fetchConsultationApi("/api/consultations", {
+      method: "POST",
+      body: payload
+    });
+    counselForm.reset();
+    setFeedback(feedback, "상담글을 등록했습니다. 관리자가 답변하면 내 상담글에 표시됩니다.");
+    await loadCounselRoomList(room);
+  } catch (error) {
+    setFeedback(feedback, error.message || "상담글 등록 중 오류가 발생했습니다.");
+  }
+}
+
+async function loadCounselRoomList(room) {
+  if (!["student", "teacher"].includes(room) || !isApprovedMemberState(getAuthSnapshot())) {
+    return;
+  }
+
+  const mount = document.querySelector(`[data-counsel-list="${room}"]`);
+  if (!mount) {
+    return;
+  }
+
+  mount.innerHTML = `<p class="consultation-meta">내 상담글을 불러오는 중입니다.</p>`;
+
+  try {
+    const data = await fetchConsultationApi(`/api/consultations?room=${encodeURIComponent(room)}`);
+    const items = data.consultations || [];
+    mount.innerHTML = items.length
+      ? items.map(renderConsultationItem).join("")
+      : `<p class="consultation-meta">아직 등록한 상담글이 없습니다.</p>`;
+  } catch (error) {
+    mount.innerHTML = `<p class="consultation-meta">${escapeHtml(error.message || "상담글을 불러오지 못했습니다.")}</p>`;
+  }
+}
+
+async function loadAdminConsultations() {
+  if (!adminConsultationList || !isAdminState(getAuthSnapshot())) {
+    return;
+  }
+
+  adminConsultationList.innerHTML = `<p class="consultation-meta">상담 목록을 불러오는 중입니다.</p>`;
+
+  try {
+    const data = await fetchConsultationApi("/api/consultations");
+    const items = data.consultations || [];
+    adminConsultationList.innerHTML = items.length
+      ? items.map(renderAdminConsultationItem).join("")
+      : `<p class="consultation-meta">접수된 상담글이 없습니다.</p>`;
+  } catch (error) {
+    adminConsultationList.innerHTML = `<p class="consultation-meta">${escapeHtml(error.message || "상담 목록을 불러오지 못했습니다.")}</p>`;
+  }
+}
+
+async function handleAdminReplySubmit(event) {
+  const formElement = event.target;
+  if (!(formElement instanceof HTMLFormElement) || !formElement.matches("[data-admin-reply-form]")) {
+    return;
+  }
+
+  event.preventDefault();
+
+  try {
+    await fetchConsultationApi("/api/admin/consultation/reply", {
+      method: "POST",
+      body: {
+        id: getLocalFormValue(formElement, "id"),
+        reply: getLocalFormValue(formElement, "reply"),
+        status: getLocalFormValue(formElement, "status") || "answered"
+      }
+    });
+    await loadAdminConsultations();
+  } catch (error) {
+    window.alert(error.message || "답변 저장 중 오류가 발생했습니다.");
+  }
+}
+
+function renderConsultationItem(item) {
+  return `
+    <article class="consultation-item">
+      <header>
+        <h4>${escapeHtml(item.title || "제목 없음")}</h4>
+        <span class="consultation-status">${escapeHtml(getConsultationStatusLabel(item.status))}</span>
+      </header>
+      <p class="consultation-meta">${escapeHtml(getCounselRoomLabel(item.room))} · 접수 ${escapeHtml(formatDateTime(item.createdAt))}</p>
+      <p class="consultation-body">${escapeHtml(item.body || "")}</p>
+      ${item.adminReply ? `<div class="consultation-reply"><strong>관리자 답변</strong><p>${escapeHtml(item.adminReply)}</p><small>답변 ${escapeHtml(formatDateTime(item.adminRepliedAt))}</small></div>` : `<p class="consultation-meta">아직 관리자 답변이 등록되지 않았습니다.</p>`}
+    </article>
+  `;
+}
+
+function renderAdminConsultationItem(item) {
+  return `
+    <article class="admin-consultation-item">
+      <header>
+        <h4>${escapeHtml(item.title || "제목 없음")}</h4>
+        <span class="consultation-status">${escapeHtml(getConsultationStatusLabel(item.status))}</span>
+      </header>
+      <p class="consultation-meta">
+        ${escapeHtml(getCounselRoomLabel(item.room))} · ${escapeHtml(item.author?.anonymousName || "익명")} · ${escapeHtml(item.author?.email || "이메일 없음")} · 접수 ${escapeHtml(formatDateTime(item.createdAt))}
+      </p>
+      <p class="consultation-body">${escapeHtml(item.body || "")}</p>
+      <form class="admin-reply-form" data-admin-reply-form>
+        <input type="hidden" name="id" value="${escapeHtml(item.id)}">
+        <label>관리자 답변
+          <textarea name="reply" rows="3" required>${escapeHtml(item.adminReply || "")}</textarea>
+        </label>
+        <label>상태
+          <select name="status">
+            <option value="answered" ${item.status === "answered" ? "selected" : ""}>답변 완료</option>
+            <option value="open" ${item.status === "open" ? "selected" : ""}>접수</option>
+            <option value="closed" ${item.status === "closed" ? "selected" : ""}>종결</option>
+          </select>
+        </label>
+        <button type="submit">답변 저장</button>
+      </form>
+    </article>
+  `;
+}
+
+async function fetchConsultationApi(path, options = {}) {
+  const auth = window.GYO6_AUTH;
+  if (!auth?.getAccessTokenFor) {
+    throw new Error("로그인 모듈을 아직 불러오지 못했습니다. 새로고침 후 다시 시도해 주세요.");
+  }
+
+  const access = await auth.getAccessTokenFor("public");
+  if (!access.ok) {
+    throw new Error(access.message || "로그인 후 이용할 수 있습니다.");
+  }
+
+  const response = await fetch(getConsultationApiUrl(path), {
+    method: options.method || "GET",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      ...(access.token ? { authorization: `Bearer ${access.token}` } : {})
+    },
+    body: options.body ? JSON.stringify(options.body) : undefined
+  });
+  const data = await response.json().catch(() => ({}));
+  if (!response.ok || data.error) {
+    throw new Error(data.error || `HTTP ${response.status}`);
+  }
+  return data;
+}
+
+function getConsultationApiUrl(path) {
+  const configuredBase = getConfiguredAiWorkerBaseUrl();
+  return configuredBase ? `${configuredBase.replace(/\/+$/, "")}${path}` : path;
+}
+
+function getAuthSnapshot() {
+  return window.GYO6_AUTH?.getState?.() || {
+    ready: false,
+    user: null,
+    member: null,
+    capabilities: {}
+  };
+}
+
+function isApprovedMemberState(authState) {
+  return Boolean(authState?.user && authState?.member?.status === "approved");
+}
+
+function isAdminState(authState) {
+  return Boolean(authState?.capabilities?.canManageMembers || (authState?.member?.status === "approved" && ["admin", "owner"].includes(authState?.member?.role)));
+}
+
+function normalizeSearchText(value) {
+  return String(value || "").replace(/\s+/g, "").toLowerCase();
+}
+
+function getLocalFormValue(formElement, name) {
+  return String(formElement.elements[name]?.value || "").trim();
+}
+
+function setFeedback(mount, message) {
+  if (mount) {
+    mount.textContent = message || "";
+  }
+}
+
+function getCounselRoomLabel(room) {
+  return room === "student" ? "학생 상담실" : room === "teacher" ? "선생님 상담실" : "상담실";
+}
+
+function getConsultationStatusLabel(status) {
+  return {
+    open: "접수",
+    answered: "답변 완료",
+    closed: "종결"
+  }[status] || "접수";
+}
 
 function activateToolFromHash() {
   syncLawWindowMode();
@@ -5205,6 +5546,12 @@ async function renderResult(question, preset, scopes, answerMode, userRole, part
     workspace.insertBefore(resultPanel, queryPanel);
   }
 
+  const access = await getLawInfoAccess();
+  if (!access.ok) {
+    renderLawInfoAccessBlockedResult(access.message);
+    return;
+  }
+
   renderFreeBasicPolicyResult({
     question,
     preset,
@@ -5214,7 +5561,6 @@ async function renderResult(question, preset, scopes, answerMode, userRole, part
     partyRole,
     topicContext
   });
-  return;
 
   const encodedQuestion = encodeURIComponent(question);
   const modeMessage = getModeMessage(answerMode);

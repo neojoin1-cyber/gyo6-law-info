@@ -169,7 +169,7 @@ authMount?.addEventListener("submit", async (event) => {
         method: "POST",
         body: {
           accessCode: getFormValue(form, "accessCode"),
-          role: "law",
+          role: "admin",
           note: getFormValue(form, "note")
         }
       });
@@ -390,7 +390,7 @@ function renderAuth() {
           <div class="auth-card-head">
             <div>
               <strong>회원 로그인</strong>
-              <p>질문창은 닫히지 않습니다. 기본 법률정보 Q&amp;A는 로그인 없이 무료 규정 엔진으로 사용할 수 있고, 로그인은 관리자·회원 관리가 필요할 때 사용합니다.</p>
+              <p>공개 자료실은 로그인 없이 볼 수 있고, 익명 상담은 승인된 회원이 이용합니다. AI 법률정보 도구는 관리자 답변 작성용으로만 열립니다.</p>
             </div>
             <button type="button" data-auth-click="close-auth" aria-label="로그인 창 닫기">닫기</button>
           </div>
@@ -431,6 +431,9 @@ function renderAuth() {
   }
 
   const member = state.member || {};
+  const isApproved = member.status === "approved";
+  const roleFieldLabel = isApproved ? "승인된 권한" : "신청 권한";
+  const roleFieldValue = isApproved ? member.role || "general" : member.requestedRole || "general";
   authMount.innerHTML = `
     <details class="auth-menu">
       <summary>${escapeHtml(state.user.displayName || "회원")}</summary>
@@ -453,9 +456,10 @@ function renderAuth() {
             <label>이름<input name="displayName" type="text" value="${escapeHtml(member.displayName || state.user.displayName || "")}"></label>
             <label>소속/학교<input name="schoolName" type="text" value="${escapeHtml(member.schoolName || "")}"></label>
             <label>연락처<input name="phone" type="text" value="${escapeHtml(member.phone || "")}"></label>
-            <label>신청 권한
-              <select name="requestedRole">
-                ${renderRoleOptions(member.requestedRole || "general")}
+            <label>${roleFieldLabel}
+              ${isApproved ? `<input type="hidden" name="requestedRole" value="${escapeHtml(member.requestedRole || member.role || "general")}">` : ""}
+              <select name="requestedRole" ${isApproved ? "disabled" : ""}>
+                ${renderRoleOptions(roleFieldValue)}
               </select>
             </label>
             <label>새 비밀번호<input name="newPassword" type="password" minlength="6" placeholder="변경할 때만 입력"></label>
@@ -504,7 +508,7 @@ function renderAdminPanelShell() {
       <summary>관리자 회원 관리</summary>
       <form data-auth-action="kakao-approve" class="auth-kakao-approve">
         <h3>카카오 챗봇 식별번호 승인</h3>
-        <p class="auth-form-note">카카오톡 챗봇이 알려준 KAKAO-XXXXXXXX 번호를 넣으면 법률정보 회원으로 바로 승인합니다.</p>
+        <p class="auth-form-note">카카오톡 챗봇이 알려준 KAKAO-XXXXXXXX 번호를 넣으면 관리자 권한으로 승인합니다.</p>
         <label>식별번호<input name="accessCode" type="text" required placeholder="예: KAKAO-85E6EFA9" autocomplete="off"></label>
         <label>관리 메모<input name="note" type="text" placeholder="예: ○○고 취업지도 교사, 파일럿 승인"></label>
         <div class="auth-actions"><button type="submit">카카오 챗봇 승인</button></div>
@@ -650,7 +654,7 @@ function getAccessDeniedMessage() {
   if (member.status !== "approved") {
     return "회원가입 승인 후 법률정보 AI를 이용할 수 있습니다.";
   }
-  return "현재 회원 등급에는 법률정보 AI 이용권한이 없습니다.";
+  return "관리자에 의해 법률정보 권한을 승인받아야 합니다.";
 }
 
 function formatMemberStatus(member = {}) {
