@@ -601,7 +601,11 @@ assert.match(indexSource, /선생님 상담실 입장/);
 assert.match(indexSource, /data-counsel-enter="student"/);
 assert.match(indexSource, /data-counsel-enter="teacher"/);
 assert.match(indexSource, /firebase-config\.js\?v=20260708-counsel-rooms-v1/);
-assert.match(indexSource, /styles\.css\?v=20260708-resource-levels-v1/);
+assert.match(indexSource, /styles\.css\?v=20260708-counsel-entry-v1/);
+assert.ok(
+  indexSource.indexOf('id="counselRoom"') < indexSource.indexOf('public-resource-library'),
+  "counsel room entry should stay above the public resource library"
+);
 assert.match(indexSource, /상담자료 질문창/);
 assert.match(indexSource, /소속과 주체, 생활 업무영역을 먼저 고릅니다/);
 assert.match(indexSource, /무료 로컬 규정 엔진으로 답변합니다/);

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>설탕과소금 상담자료실 | 학생·선생님 익명 상담실</title>
   <meta name="description" content="특성화고 학생과 선생님을 위한 회원 전용 익명 상담실과 관리자가 상담 답변을 작성할 때 활용하는 취업, 교육행정, 학교회계, 학생생활기록, 학교폭력 절차 상담자료실">
-  <link rel="stylesheet" href="styles.css?v=20260708-resource-levels-v1">
+  <link rel="stylesheet" href="styles.css?v=20260708-counsel-entry-v1">
 </head>
 <body class="auth-law-blocked law-tool-mode law-tool-legal">
   <header class="topbar">
@@ -36,12 +36,94 @@
         <p class="lead">서식자료, 법조문, 지침은 로그인 없이 먼저 확인하고, 익명 상담은 학생방과 선생님방으로 나누어 안전하게 운영합니다.</p>
       </div>
       <div class="legal-intro-steps" aria-label="사용 방법">
-        <span>사용 방법</span>
-        <ol>
-          <li>학생 상담실 또는 선생님 상담실을 고릅니다.</li>
-          <li>로그인 후 관리자 승인을 받은 회원만 상담을 남깁니다.</li>
-          <li>상담 글은 작성자와 관리자만 확인합니다.</li>
-        </ol>
+        <span>바로 이용</span>
+        <p>익명 상담은 아래에서 방을 선택하고, 자료는 공개 자료실에서 확인합니다.</p>
+      </div>
+    </section>
+
+    <section class="counsel-room" id="counselRoom" aria-labelledby="counsel-title">
+      <div class="counsel-head">
+        <div>
+          <p class="panel-kicker">Private Counseling</p>
+          <h2 id="counsel-title">회원 전용 익명 상담실</h2>
+          <p>학생 상담실과 선생님 상담실 중 선택하면, 로그인 후 승인된 회원만 작성자 본인과 관리자에게 보이는 익명 상담을 남길 수 있습니다.</p>
+          <ul class="counsel-steps" aria-label="상담실 이용 흐름">
+            <li><strong>1</strong><span>방 선택</span></li>
+            <li><strong>2</strong><span>로그인·승인</span></li>
+            <li><strong>3</strong><span>비공개 상담</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="counsel-entry" id="counselEntry">
+        <div class="counsel-room-picker" aria-label="상담실 입구 선택">
+          <button class="counsel-room-card" type="button" data-counsel-enter="student">
+            <span>Student Room</span>
+            <strong>학생 상담실 입장</strong>
+            <small>취업·진로, 학교생활, 현장실습, 권리보호 상담을 익명으로 남깁니다.</small>
+          </button>
+          <button class="counsel-room-card" type="button" data-counsel-enter="teacher">
+            <span>Teacher Room</span>
+            <strong>선생님 상담실 입장</strong>
+            <small>취업지도, 교육행정, 학교업무, 민원·규정 상담을 익명으로 남깁니다.</small>
+          </button>
+        </div>
+        <p class="counsel-entry-note">개인정보는 적지 말고 상황과 궁금한 점만 남겨 주세요. 답변은 작성자 본인과 관리자만 확인합니다.</p>
+      </div>
+
+      <div class="counsel-workspace" id="counselWorkspace" hidden>
+        <div class="counsel-room-toolbar">
+          <div>
+            <p class="panel-kicker" id="counselRoomKicker">Student Room</p>
+            <h3 id="counselRoomTitle">학생 상담실</h3>
+          </div>
+          <div class="counsel-room-actions">
+            <button class="ghost-action" id="backToCounselEntryButton" type="button">상담실 메인</button>
+            <button class="ghost-action" id="refreshCounselButton" type="button">새로고침</button>
+          </div>
+        </div>
+        <div class="counsel-grid">
+          <form class="counsel-form" id="counselForm">
+            <h3 id="counselFormTitle">학생 상담실에 익명 상담 남기기</h3>
+            <p class="counsel-room-help" id="counselFormHelp">학생 본인의 취업·진로, 학교생활, 현장실습, 권리보호 상담을 남길 수 있습니다.</p>
+            <input id="counselAudience" name="audience" type="hidden" value="student">
+            <div class="field-grid counsel-field-grid">
+              <label class="field-stack" for="counselAnonymousName">
+                <span>익명 표시명</span>
+                <input id="counselAnonymousName" name="anonymousName" type="text" maxlength="40" placeholder="예: 익명 학생, 익명 교사">
+              </label>
+              <label class="field-stack" for="counselTopic">
+                <span>상담 분야</span>
+                <select id="counselTopic" name="topic">
+                  <option value="career">취업·진로</option>
+                  <option value="field-training">현장실습·도제</option>
+                  <option value="school-life">학교생활·상담</option>
+                  <option value="admin">교육행정·학교업무</option>
+                  <option value="rights">권리보호·민원</option>
+                  <option value="other">기타</option>
+                </select>
+              </label>
+            </div>
+            <label class="field-stack" for="counselTitle">
+              <span>제목</span>
+              <input id="counselTitle" name="title" type="text" maxlength="120" required placeholder="상담 제목을 짧게 적어 주세요">
+            </label>
+            <label class="field-stack" for="counselBody">
+              <span>상담 내용</span>
+              <textarea id="counselBody" name="body" rows="7" required placeholder="개인정보는 최소화하고, 상황·궁금한 점·확인한 자료를 적어 주세요."></textarea>
+            </label>
+            <p class="counsel-privacy-note">상담실은 로그인과 관리자 승인이 필요합니다. 작성자와 관리자 외에는 내용을 볼 수 없습니다.</p>
+            <button class="primary-action" type="submit">익명 상담 등록</button>
+          </form>
+          <div class="counsel-list-panel">
+            <div class="counsel-list-head">
+              <h3 id="counselListTitle">내 학생 상담 목록</h3>
+              <span id="counselStatus" class="status-dot">로그인 확인 중</span>
+            </div>
+            <div id="counselCaseList" class="counsel-case-list" aria-live="polite"></div>
+            <div id="counselCaseDetail" class="counsel-case-detail" aria-live="polite"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -180,95 +262,6 @@
         <p>선생님들에게는 웹 상담자료 질문창을 우선 안내해 주세요. 이 경로는 외부 접속에서도 회원 권한 확인을 거친 상담자료 AI 경로로 사무실 Ollama 보강을 사용합니다.</p>
         <p class="chatbot-privacy-note">카카오톡 챗봇은 같은 보강 품질과 권한·비용 가드가 확인된 뒤 다시 열겠습니다. 학생 이름, 주민번호, 연락처 같은 민감정보는 웹 질문창에도 입력하지 않는 것이 원칙입니다.</p>
         <a class="chatbot-guide-action" href="#legalTool">웹 상담자료 질문창으로 이동</a>
-      </div>
-    </section>
-
-    <section class="counsel-room" id="counselRoom" aria-labelledby="counsel-title">
-      <div class="counsel-head">
-        <div>
-          <p class="panel-kicker">Private Counseling</p>
-          <h2 id="counsel-title">회원 전용 익명 상담실</h2>
-          <p>상담실은 학생용과 선생님용 입구를 따로 둡니다. 먼저 방을 고르고 로그인하면, 승인된 회원만 작성자 본인과 관리자에게 보이는 익명 상담을 남길 수 있습니다.</p>
-        </div>
-      </div>
-
-      <div class="counsel-entry" id="counselEntry">
-        <div class="counsel-entry-guide">
-          <h3>이용 방법</h3>
-          <ol>
-            <li>학생 상담실 또는 선생님 상담실 입구를 선택합니다.</li>
-            <li>로그인하고 관리자 승인이 완료되면 익명 상담을 작성합니다.</li>
-            <li>답변은 작성자 본인과 관리자만 확인할 수 있습니다.</li>
-          </ol>
-          <p>학생 이름, 연락처, 주민번호 같은 민감정보는 적지 말고, 상황과 궁금한 점 중심으로 남겨 주세요.</p>
-        </div>
-        <div class="counsel-room-picker" aria-label="상담실 입구 선택">
-          <button class="counsel-room-card" type="button" data-counsel-enter="student">
-            <span>Student Room</span>
-            <strong>학생 상담실 입장</strong>
-            <small>취업·진로, 학교생활, 현장실습, 권리보호 상담을 익명으로 남깁니다.</small>
-          </button>
-          <button class="counsel-room-card" type="button" data-counsel-enter="teacher">
-            <span>Teacher Room</span>
-            <strong>선생님 상담실 입장</strong>
-            <small>취업지도, 교육행정, 학교업무, 민원·규정 상담을 익명으로 남깁니다.</small>
-          </button>
-        </div>
-      </div>
-
-      <div class="counsel-workspace" id="counselWorkspace" hidden>
-        <div class="counsel-room-toolbar">
-          <div>
-            <p class="panel-kicker" id="counselRoomKicker">Student Room</p>
-            <h3 id="counselRoomTitle">학생 상담실</h3>
-          </div>
-          <div class="counsel-room-actions">
-            <button class="ghost-action" id="backToCounselEntryButton" type="button">상담실 메인</button>
-            <button class="ghost-action" id="refreshCounselButton" type="button">새로고침</button>
-          </div>
-        </div>
-        <div class="counsel-grid">
-          <form class="counsel-form" id="counselForm">
-            <h3 id="counselFormTitle">학생 상담실에 익명 상담 남기기</h3>
-            <p class="counsel-room-help" id="counselFormHelp">학생 본인의 취업·진로, 학교생활, 현장실습, 권리보호 상담을 남길 수 있습니다.</p>
-            <input id="counselAudience" name="audience" type="hidden" value="student">
-            <div class="field-grid counsel-field-grid">
-              <label class="field-stack" for="counselAnonymousName">
-                <span>익명 표시명</span>
-                <input id="counselAnonymousName" name="anonymousName" type="text" maxlength="40" placeholder="예: 익명 학생, 익명 교사">
-              </label>
-              <label class="field-stack" for="counselTopic">
-                <span>상담 분야</span>
-                <select id="counselTopic" name="topic">
-                  <option value="career">취업·진로</option>
-                  <option value="field-training">현장실습·도제</option>
-                  <option value="school-life">학교생활·상담</option>
-                  <option value="admin">교육행정·학교업무</option>
-                  <option value="rights">권리보호·민원</option>
-                  <option value="other">기타</option>
-                </select>
-              </label>
-            </div>
-            <label class="field-stack" for="counselTitle">
-              <span>제목</span>
-              <input id="counselTitle" name="title" type="text" maxlength="120" required placeholder="상담 제목을 짧게 적어 주세요">
-            </label>
-            <label class="field-stack" for="counselBody">
-              <span>상담 내용</span>
-              <textarea id="counselBody" name="body" rows="7" required placeholder="개인정보는 최소화하고, 상황·궁금한 점·확인한 자료를 적어 주세요."></textarea>
-            </label>
-            <p class="counsel-privacy-note">상담실은 로그인과 관리자 승인이 필요합니다. 작성자와 관리자 외에는 내용을 볼 수 없습니다.</p>
-            <button class="primary-action" type="submit">익명 상담 등록</button>
-          </form>
-          <div class="counsel-list-panel">
-            <div class="counsel-list-head">
-              <h3 id="counselListTitle">내 학생 상담 목록</h3>
-              <span id="counselStatus" class="status-dot">로그인 확인 중</span>
-            </div>
-            <div id="counselCaseList" class="counsel-case-list" aria-live="polite"></div>
-            <div id="counselCaseDetail" class="counsel-case-detail" aria-live="polite"></div>
-          </div>
-        </div>
       </div>
     </section>
 

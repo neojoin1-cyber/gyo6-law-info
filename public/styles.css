@@ -589,6 +589,14 @@ h1 {
   line-height: 1.45;
 }
 
+.legal-intro-steps p {
+  margin: 0;
+  color: #31445a;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
 .hero-panel {
   display: grid;
   gap: 14px;
@@ -2149,8 +2157,8 @@ h1 {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 16px;
   align-items: center;
-  margin-bottom: 14px;
-  padding: 18px 20px;
+  margin-bottom: 10px;
+  padding: 16px 20px;
 }
 
 .counsel-head h2,
@@ -2160,17 +2168,51 @@ h1 {
 }
 
 .counsel-head p:not(.panel-kicker) {
-  margin: 7px 0 0;
+  margin: 6px 0 0;
   color: #43566a;
   font-size: 14px;
-  line-height: 1.75;
+  line-height: 1.6;
+}
+
+.counsel-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.counsel-steps li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 6px 10px 6px 7px;
+  border: 1px solid #cfe3de;
+  border-radius: 999px;
+  background: #f5fbf9;
+  color: #21384d;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.counsel-steps strong {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
 }
 
 .counsel-entry {
   display: grid;
-  grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
-  gap: 14px;
-  align-items: stretch;
+  gap: 10px;
+  align-items: start;
 }
 
 .counsel-entry-guide {
@@ -2211,8 +2253,8 @@ h1 {
 .counsel-room-card {
   display: grid;
   gap: 7px;
-  min-height: 132px;
-  padding: 18px;
+  min-height: 112px;
+  padding: 16px 18px;
   border: 1px solid #cfe3de;
   border-radius: 8px;
   background: #fbfefd;
@@ -2231,11 +2273,23 @@ h1 {
 
 .counsel-room-card strong {
   color: var(--navy);
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.25;
 }
 
 .counsel-room-card small {
+  color: #43566a;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.counsel-entry-note {
+  margin: 0;
+  padding: 10px 13px;
+  border: 1px solid #d7e8e3;
+  border-radius: 8px;
+  background: #f7fcfa;
   color: #43566a;
   font-size: 13px;
   font-weight: 700;
