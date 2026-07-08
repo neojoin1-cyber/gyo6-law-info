@@ -55,10 +55,14 @@ assert.match(sickLeaveEvidenceReply.messageText, /필요한 증빙자료와 제�
 const fixedTermSickLeaveState = handlePolicyChatRequest({
   question: "기간제교사의 병가는 몇일 가능하며 어떻게 신청하나요?"
 }).answerState;
-assert.equal(fixedTermSickLeaveState.status, "conditional");
+assert.ok(
+  ["conditional", "needs_slot"].includes(fixedTermSickLeaveState.status),
+  "Fixed-term teacher sick leave must still provide a conditional answer even when evidence is requested"
+);
 assert.ok(fixedTermSickLeaveState.primaryText.includes("60일") && fixedTermSickLeaveState.primaryText.includes("180일"));
 assert.ok(fixedTermSickLeaveState.conditionalAnswers.some((text) => /60일|180일/.test(text)));
 assert.ok(fixedTermSickLeaveState.conditionalAnswers.some((text) => /진단서|증빙/.test(text)));
+assert.ok(fixedTermSickLeaveState.slotQuestions.some((item) => /증빙/.test(item.label || item.question || "")));
 
 const privateSchoolTeacherSickLeave = buildKakaoSkillResponse({
   userRequest: {
@@ -176,9 +180,16 @@ const genericChildbirthLeave = handlePolicyChatRequest({
   question: "출산 휴가 규정"
 });
 assert.equal(genericChildbirthLeave.semanticFrame.domainCode, "staffAttendanceService");
-assert.equal(genericChildbirthLeave.answerState.status, "conditional");
+assert.ok(
+  ["conditional", "needs_slot"].includes(genericChildbirthLeave.answerState.status),
+  "Generic childbirth leave must keep the common rule answer even when role or employment type is requested"
+);
 assert.doesNotMatch(genericChildbirthLeave.responseText, /질문만으로는 적용 규정을 특정하기 어렵습니다/);
 assert.match(genericChildbirthLeave.responseText, /출산|특별휴가|나이스|증빙/);
+assert.ok(
+  genericChildbirthLeave.answerState.conditionalAnswers.some((text) => /90일|120일|45일|60일/.test(text))
+);
+assert.ok(genericChildbirthLeave.answerState.slotQuestions.some((item) => /대상 신분|고용 형태/.test(item.label || item.question || "")));
 
 const semanticBridgeKakaoCases = [
   {
@@ -292,8 +303,8 @@ const legalRiskQuestion = buildKakaoSkillResponse({
 const legalRiskQuestionText = legalRiskQuestion.template.outputs[0].simpleText.text;
 assert.match(legalRiskQuestionText, /가까운 분야|완성질문|규정|확인 필요|증빙/);
 assert.ok(
-  legalRiskQuestion.template.quickReplies.some((reply) => /증빙|대상자|절차/.test(reply.label)),
-  "Expected legal-risk quick replies for evidence, subject, or procedure follow-up"
+  legalRiskQuestion.template.quickReplies.some((reply) => /법률위험 질문 만들기|증빙|대상자|절차/.test(reply.label)),
+  "Expected legal-risk quick replies for question-building, evidence, subject, or procedure follow-up"
 );
 
 const pendingLegalSession = {
@@ -541,11 +552,11 @@ assert.match(wranglerConfig, /KAKAO_GPT_NORMALIZER_TIMEOUT_MS\s*=\s*"1800"/);
 assert.match(wranglerConfig, /KAKAO_NLU_MODEL\s*=\s*"gpt-5\.4-nano"/);
 assert.match(wranglerConfig, /KAKAO_AUTH_REQUIRED\s*=\s*"false"/);
 assert.match(wranglerConfig, /KAKAO_APPROVED_USER_KEYS\s*=\s*""/);
-assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_ENABLED\s*=\s*"true"/);
-assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_MODE\s*=\s*"auto"/);
+assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_ENABLED\s*=\s*"false"/);
+assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_MODE\s*=\s*"off"/);
 assert.match(wranglerConfig, /POLICY_GPT_NORMALIZER_MIN_CONFIDENCE\s*=\s*"0\.82"/);
-assert.match(wranglerConfig, /POLICY_GPT_ANSWER_ENABLED\s*=\s*"true"/);
-assert.match(wranglerConfig, /POLICY_GPT_ANSWER_MODE\s*=\s*"always"/);
+assert.match(wranglerConfig, /POLICY_GPT_ANSWER_ENABLED\s*=\s*"false"/);
+assert.match(wranglerConfig, /POLICY_GPT_ANSWER_MODE\s*=\s*"off"/);
 assert.match(wranglerConfig, /FIREBASE_TRUSTED_PROJECT_IDS\s*=\s*"gyo6-law-info,gyo6--ebook"/);
 assert.match(wranglerConfig, /AUTH_REQUIRED\s*=\s*"true"/);
 assert.match(firebaseConfig, /GYO6_FIREBASE_CONFIG\s*=\s*\{\}/);
@@ -700,9 +711,9 @@ const renderResultStart = appSource.indexOf("async function renderResult");
 const accessGuardIndex = appSource.indexOf("const access = await getLawInfoAccess();", renderResultStart);
 const freeRenderIndex = appSource.indexOf("renderFreeBasicPolicyResult({", renderResultStart);
 const earlyReturnIndex = appSource.indexOf("return;", freeRenderIndex);
-assert.ok(freeRenderIndex > renderResultStart, "web law info should render the free local policy engine first");
-assert.ok(earlyReturnIndex > freeRenderIndex, "web law info should not continue into paid AI analysis after free rendering");
-assert.ok(accessGuardIndex < 0 || accessGuardIndex > earlyReturnIndex, "web law info should not require access before the free answer");
+assert.ok(freeRenderIndex > renderResultStart, "web law info should render the free local policy engine after access is confirmed");
+assert.ok(accessGuardIndex > renderResultStart && accessGuardIndex < freeRenderIndex, "web law info must require approved access before rendering the answer");
+assert.ok(earlyReturnIndex < 0 || earlyReturnIndex > freeRenderIndex + 240, "web law info should not stop before admin-only AI enhancement can run");
 
 const freeKakaoResponse = await worker.fetch(
   new Request("https://worker.test/api/kakao/skill", {

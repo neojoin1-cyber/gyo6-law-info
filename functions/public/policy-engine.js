@@ -371,6 +371,10 @@
         matches: () => isStaffOvertimeQuestion(normalized)
       },
       {
+        domainCode: "staffAttendanceService",
+        matches: () => isStaffAttendanceTermQuestion(normalized)
+      },
+      {
         domainCode: "domesticTravelExpense",
         matches: () => isDomesticTravelQuestion(normalized)
       },
@@ -613,6 +617,10 @@
       return { needsConfirmation: false };
     }
 
+    if (isDomesticTravelQuestion(normalized)) {
+      return { needsConfirmation: false };
+    }
+
     if (
       isStaffTargetedMediaAbuseContext(normalized)
       || isPersonalInfoMediaDisclosureContext(normalized)
@@ -749,6 +757,22 @@
     const subject = getSubjectContext(normalized);
     return /휴가|휴가규정|연가|연차|병가|공가|특별휴가|출산휴가|복무|근태/.test(normalized)
       && subject.isStaff;
+  }
+
+  function isStaffAttendanceTermQuestion(normalized = "") {
+    if (hasDeathLeaveSignal(normalized)) return false;
+    if (isStudentAttendanceBereavementContext(normalized)) return false;
+    if (/출장|여비|일비|식비|식대|밥값|숙박비|운임|교통비/.test(normalized)) return false;
+    const subject = getSubjectContext(normalized);
+    if (!subject.isStaff) return false;
+    const hasStudentAttendanceCore = /가정학습|교외체험학습|체험학습|등교중지|질병결석|결석\s*처리|출결\s*처리|출석인정|인정결석|학생부|생활기록부|생기부|학교생활기록/.test(normalized);
+    const hasStrongStudentAttendanceCore = /가정학습|교외체험학습|체험학습|등교중지|질병결석|질병.{0,4}결석|결석\s*처리|출결\s*처리|학생부|생활기록부|생기부|학교생활기록/.test(normalized);
+    const hasStaffDutyCore = /근태|근무상황|복무|연가|연차|병가|공가|특별휴가|나이스\s*근무/.test(normalized);
+    const hasExplicitStaffAttendance = /(?:교사|교원|선생님|교직원|직원|공무원|행정직|주무관|교육공무직|공무직|기간제|계약제|정규직).{0,16}(?:지각|조퇴|외출|근태|근무상황|복무)|(?:교사|교원|선생님|교직원|직원|공무원|행정직|주무관|교육공무직|공무직|기간제|계약제|정규직).{0,8}(?:출결|인정결석|출석인정|결석)|(?:지각|조퇴|외출).{0,16}(?:교사|교원|선생님|교직원|직원|공무원|행정직|주무관|교육공무직|공무직|기간제|계약제|정규직)/.test(normalized);
+    if (hasStrongStudentAttendanceCore && !hasStaffDutyCore) return false;
+    if (hasStudentAttendanceCore && !hasStaffDutyCore && !hasExplicitStaffAttendance) return false;
+    return (hasStaffDutyCore || hasExplicitStaffAttendance)
+      && !/학생부|생활기록부|생기부|학교생활기록/.test(normalized);
   }
 
   function isStudentAttendanceBereavementContext(normalized = "") {
@@ -1866,7 +1890,8 @@
     if (issueCode === "overtime") {
       return `${domainLabel} 질문에서 ${subjectLabel}의 시간외근무는 출장 여부보다 실제 근무명령·사전승인·근무시간 증빙을 기준으로 판단합니다. 1박 2일 인솔출장이라는 사실만으로 자동 인정되는 사안은 아니며, 여비와 분리해 확인합니다.`;
     }
-    return `${domainLabel} 질문에서 ${subjectLabel}의 ${issueLabel} 사안은 ${employmentLabel} 기준으로 적용 규정, 승인 절차, 증빙자료를 함께 확인합니다.`;
+    const staffSubjectLabel = subjectLabel === "대상자" ? "교직원" : subjectLabel;
+    return `${domainLabel} 질문에서 교직원에게는 ${staffSubjectLabel}의 ${issueLabel} 사안이 학생 출결이 아니라 복무 기준으로 적용되므로, ${employmentLabel} 기준의 적용 규정, 승인 절차, 증빙자료를 함께 확인합니다.`;
   }
 
   function buildStaffAttendanceAnswers(subjectLabel, slots, frame, missingText) {
@@ -1938,8 +1963,9 @@
     const disputeText = frame.task?.code === "disputeRisk"
       ? "복무평가·계약연장·불이익이 함께 언급되면 동일 사례 처리, 서면 근거, 불리한 처분과 복무 사용 사이의 인과관계를 별도로 확인해야 합니다."
       : "";
+    const staffSubjectLabel = subjectLabel === "대상자" ? "교직원" : subjectLabel;
     return uniqueStrings([
-      `${subjectLabel}의 ${issueLabel} 질문은 ${employmentLabel} 기준으로 적용 규정과 소속기관 지침을 대조해 처리합니다.`,
+      `${staffSubjectLabel}에게는 ${issueLabel} 질문을 학생 출결이 아니라 복무 기준으로 보며, ${employmentLabel} 기준의 적용 규정과 소속기관 지침을 대조해 처리합니다.`,
       "공립 교원은 교원휴가에 관한 예규와 국가공무원 복무규정, 지방공무원은 지방공무원 복무규정, 교육공무직·기간제·사립학교는 취업규칙·단체협약·근로계약·학교법인 규정을 우선 대조합니다.",
       `${issueLabel} 처리는 ${evidence}를 기준으로 사유, 기간, 승인권자, 처리 이력, 분쟁 위험을 함께 확인합니다.`,
       disputeText,
@@ -1960,7 +1986,7 @@
     }
     const basis = getOtherStaffBasis(employmentCode);
     return uniqueStrings([
-      `${subjectLabel}의 ${issueLabel}는 ${employmentLabel} 기준으로 ${basis.primary}를 먼저 적용하고, 소속 교육청·학교 내부 기준을 함께 확인합니다.`,
+      `교직원에게는 ${issueLabel}를 학생 출결이 아니라 복무 기준으로 보며, ${subjectLabel}의 ${issueLabel}는 ${employmentLabel} 기준으로 ${basis.primary}를 먼저 적용하고, 소속 교육청·학교 내부 기준을 함께 확인합니다.`,
       basis.secondary,
       "나이스 근무상황, 내부 결재, 근로계약서, 취업규칙·단체협약, 증빙자료를 대조해 일수·유급 여부·승인권자를 확정합니다.",
       frame.task?.code === "disputeRisk" ? "불이익·평가·재계약 문제가 있으면 동일 사례 처리와 서면 기준을 별도로 확인합니다." : "",

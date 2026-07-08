@@ -4819,6 +4819,16 @@ function buildPolicyGuideIntentResolution(context = {}) {
   }
 
   const runnerUp = candidates.find((candidate) => candidate.code !== primary.code) || null;
+  if (primary.code === "domesticTravelExpense") {
+    return {
+      status: "confirmed",
+      primary,
+      candidates,
+      confidence: primary.confidence,
+      summary: primary.summary || primary.label || "",
+      reason: primary.reason || ""
+    };
+  }
   const closeRival = runnerUp
     && runnerUp.confidence >= 0.48
     && primary.confidence - runnerUp.confidence < 0.18
@@ -5327,7 +5337,7 @@ function renderPolicyGuideOptionalClarifyingPanel(questions = []) {
   return `
     <details class="answer-extra-panel">
       <summary>
-        <span>자동 보강 후보</span>
+        <span>추가 확인</span>
         <strong>선택 정보 ${questions.length}개</strong>
       </summary>
       ${renderPolicyGuideClarifyingPanel(questions)}
@@ -5813,7 +5823,7 @@ function renderPolicyGuideClarifyingPanel(questions = []) {
     <section class="clarifier-panel guide-clarifier-panel" aria-label="자동 보강 후보와 선택 입력">
       <div class="clarifier-head">
         <div>
-          <span>자동 보강 후보</span>
+          <span>추가 확인</span>
           <h3>시스템이 자동으로 보강할 항목입니다.</h3>
         </div>
       </div>
@@ -7141,6 +7151,14 @@ async function renderResult(question, preset, scopes, answerMode, userRole, part
   abortActiveRequests();
   workspace?.classList.add("has-result");
 
+  const access = await getLawInfoAccess();
+  if (!access.ok) {
+    cachePendingLawQuestion(question);
+    renderLawInfoAccessBlockedResult(access.message);
+    statusDot.textContent = "권한 필요";
+    return;
+  }
+
   renderFreeBasicPolicyResult({
     question,
     preset,
@@ -7150,7 +7168,6 @@ async function renderResult(question, preset, scopes, answerMode, userRole, part
     partyRole,
     topicContext
   });
-  return;
 
   const encodedQuestion = encodeURIComponent(question);
   const modeMessage = getModeMessage(answerMode);
