@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>설탕과소금 상담자료실 | 학생·선생님 익명 상담실</title>
-  <meta name="description" content="특성화고 학생과 선생님을 위한 회원 전용 익명 상담실과 관리자가 상담 답변을 작성할 때 활용하는 취업, 교육행정, 학교회계, 학생생활기록, 학교폭력 절차 상담자료실">
-  <link rel="stylesheet" href="styles.css?v=20260708-counsel-entry-v1">
+  <title>설탕과소금 상담자료실 | 학생·선생님 상담실</title>
+  <meta name="description" content="특성화고 학생과 선생님을 위한 회원 전용 상담실과 관리자가 상담 답변을 작성할 때 활용하는 취업, 교육행정, 학교회계, 학생생활기록, 학교폭력 절차 상담자료실">
+  <link rel="stylesheet" href="styles.css?v=20260708-counsel-private-v1">
 </head>
 <body class="auth-law-blocked law-tool-mode law-tool-legal">
   <header class="topbar">
@@ -33,11 +33,11 @@
       <div>
         <p class="eyebrow">특성화고 취업 · 교육행정 · 학교 현장 상담자료실</p>
         <h1 id="page-title">상담자료실</h1>
-        <p class="lead">서식자료, 법조문, 지침은 로그인 없이 먼저 확인하고, 익명 상담은 학생방과 선생님방으로 나누어 안전하게 운영합니다.</p>
+        <p class="lead">서식자료, 법조문, 지침은 로그인 없이 먼저 확인하고, 회원 상담은 학생방과 선생님방으로 나누어 안전하게 운영합니다.</p>
       </div>
       <div class="legal-intro-steps" aria-label="사용 방법">
         <span>바로 이용</span>
-        <p>익명 상담은 아래에서 방을 선택하고, 자료는 공개 자료실에서 확인합니다.</p>
+        <p>상담은 아래에서 방을 선택하고, 자료는 공개 자료실에서 확인합니다.</p>
       </div>
     </section>
 
@@ -45,8 +45,8 @@
       <div class="counsel-head">
         <div>
           <p class="panel-kicker">Private Counseling</p>
-          <h2 id="counsel-title">회원 전용 익명 상담실</h2>
-          <p>학생 상담실과 선생님 상담실 중 선택하면, 로그인 후 승인된 회원만 작성자 본인과 관리자에게 보이는 익명 상담을 남길 수 있습니다.</p>
+          <h2 id="counsel-title">회원 전용 상담실</h2>
+          <p>학생 상담실과 선생님 상담실 중 선택하면, 로그인 후 승인된 회원만 작성자 본인과 관리자에게 보이는 비공개 상담을 남길 수 있습니다.</p>
           <ul class="counsel-steps" aria-label="상담실 이용 흐름">
             <li><strong>1</strong><span>방 선택</span></li>
             <li><strong>2</strong><span>로그인·승인</span></li>
@@ -60,12 +60,12 @@
           <button class="counsel-room-card" type="button" data-counsel-enter="student">
             <span>Student Room</span>
             <strong>학생 상담실 입장</strong>
-            <small>취업·진로, 학교생활, 현장실습, 권리보호 상담을 익명으로 남깁니다.</small>
+            <small>취업·진로, 학교생활, 현장실습, 권리보호 상담을 비공개로 남깁니다.</small>
           </button>
           <button class="counsel-room-card" type="button" data-counsel-enter="teacher">
             <span>Teacher Room</span>
             <strong>선생님 상담실 입장</strong>
-            <small>취업지도, 교육행정, 학교업무, 민원·규정 상담을 익명으로 남깁니다.</small>
+            <small>취업지도, 교육행정, 학교업무, 민원·규정 상담을 비공개로 남깁니다.</small>
           </button>
         </div>
         <p class="counsel-entry-note">개인정보는 적지 말고 상황과 궁금한 점만 남겨 주세요. 답변은 작성자 본인과 관리자만 확인합니다.</p>
@@ -84,13 +84,13 @@
         </div>
         <div class="counsel-grid">
           <form class="counsel-form" id="counselForm">
-            <h3 id="counselFormTitle">학생 상담실에 익명 상담 남기기</h3>
+            <h3 id="counselFormTitle">학생 상담실에 상담 남기기</h3>
             <p class="counsel-room-help" id="counselFormHelp">학생 본인의 취업·진로, 학교생활, 현장실습, 권리보호 상담을 남길 수 있습니다.</p>
             <input id="counselAudience" name="audience" type="hidden" value="student">
             <div class="field-grid counsel-field-grid">
               <label class="field-stack" for="counselAnonymousName">
-                <span>익명 표시명</span>
-                <input id="counselAnonymousName" name="anonymousName" type="text" maxlength="40" placeholder="예: 익명 학생, 익명 교사">
+                <span>표시명 <small>선택</small></span>
+                <input id="counselAnonymousName" name="anonymousName" type="text" maxlength="40" placeholder="예: 학생">
               </label>
               <label class="field-stack" for="counselTopic">
                 <span>상담 분야</span>
@@ -113,7 +113,7 @@
               <textarea id="counselBody" name="body" rows="7" required placeholder="개인정보는 최소화하고, 상황·궁금한 점·확인한 자료를 적어 주세요."></textarea>
             </label>
             <p class="counsel-privacy-note">상담실은 로그인과 관리자 승인이 필요합니다. 작성자와 관리자 외에는 내용을 볼 수 없습니다.</p>
-            <button class="primary-action" type="submit">익명 상담 등록</button>
+            <button class="primary-action" type="submit">상담 등록</button>
           </form>
           <div class="counsel-list-panel">
             <div class="counsel-list-head">
@@ -625,12 +625,12 @@
   </main>
 
   <footer>
-    <p>GYO6 상담자료실 · 공개 자료와 회원 전용 익명 상담</p>
+    <p>GYO6 상담자료실 · 공개 자료와 회원 전용 상담</p>
   </footer>
 
   <script src="ai-config.js?v=20260708-counsel-rooms-v1"></script>
   <script src="firebase-config.js?v=20260708-counsel-rooms-v1"></script>
-  <script type="module" src="auth.js?v=20260708-counsel-rooms-v1"></script>
+  <script type="module" src="auth.js?v=20260708-counsel-private-v1"></script>
   <script src="policy-knowledge-base.js?v=20260708-counsel-rooms-v1"></script>
   <script src="policy-source-registry.js?v=20260708-counsel-rooms-v1"></script>
   <script src="policy-source-expansion-generated.js?v=20260708-counsel-rooms-v1"></script>
@@ -638,6 +638,6 @@
   <script src="policy-corpus.js?v=20260708-counsel-rooms-v1"></script>
   <script src="policy-question-taxonomy.js?v=20260708-counsel-rooms-v1"></script>
   <script src="policy-engine.js?v=20260708-counsel-rooms-v1"></script>
-  <script src="app.js?v=20260708-resource-levels-v1"></script>
+  <script src="app.js?v=20260708-counsel-private-v1"></script>
 </body>
 </html>

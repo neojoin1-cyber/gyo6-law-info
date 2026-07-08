@@ -390,7 +390,7 @@ function renderAuth() {
           <div class="auth-card-head">
             <div>
               <strong>회원 로그인</strong>
-              <p>공개 자료실은 로그인 없이 볼 수 있고, 익명 상담은 승인된 회원이 이용합니다. AI 법률정보 도구는 관리자 답변 작성용으로만 열립니다.</p>
+              <p>공개 자료실은 로그인 없이 볼 수 있고, 회원 상담은 승인된 회원이 이용합니다. AI 법률정보 도구는 관리자 답변 작성용으로만 열립니다.</p>
             </div>
             <button type="button" data-auth-click="close-auth" aria-label="로그인 창 닫기">닫기</button>
           </div>

@@ -601,7 +601,11 @@ assert.match(indexSource, /선생님 상담실 입장/);
 assert.match(indexSource, /data-counsel-enter="student"/);
 assert.match(indexSource, /data-counsel-enter="teacher"/);
 assert.match(indexSource, /firebase-config\.js\?v=20260708-counsel-rooms-v1/);
-assert.match(indexSource, /styles\.css\?v=20260708-counsel-entry-v1/);
+assert.match(indexSource, /auth\.js\?v=20260708-counsel-private-v1/);
+assert.match(indexSource, /styles\.css\?v=20260708-counsel-private-v1/);
+assert.match(indexSource, /app\.js\?v=20260708-counsel-private-v1/);
+assert.match(indexSource, /회원 전용 상담실/);
+assert.doesNotMatch(indexSource, /회원 전용 익명 상담실|익명 상담 등록|익명 상담 남기기/);
 assert.ok(
   indexSource.indexOf('id="counselRoom"') < indexSource.indexOf('public-resource-library'),
   "counsel room entry should stay above the public resource library"
@@ -624,10 +628,10 @@ assert.match(indexSource, /카카오톡 챗봇/);
 assert.match(indexSource, /고품질 보강 연결을 점검 중입니다/);
 assert.match(indexSource, /웹 상담자료 질문창이 사무실 Ollama 보강 경로까지 확인된 공식 이용 경로입니다/);
 assert.match(indexSource, /웹 상담자료 질문창으로 이동/);
-assert.match(indexSource, /auth\.js\?v=20260708-counsel-rooms-v1/);
+assert.match(indexSource, /auth\.js\?v=20260708-counsel-private-v1/);
 assert.match(indexSource, /policy-knowledge-base\.js\?v=20260708-counsel-rooms-v1/);
 assert.match(indexSource, /policy-engine\.js\?v=20260708-counsel-rooms-v1/);
-assert.match(indexSource, /app\.js\?v=20260708-resource-levels-v1/);
+assert.match(indexSource, /app\.js\?v=20260708-counsel-private-v1/);
 assert.match(authSource, /function syncAuthBodyState/);
 assert.match(authSource, /auth-law-ready/);
 assert.match(authSource, /gyo6-auth-state/);

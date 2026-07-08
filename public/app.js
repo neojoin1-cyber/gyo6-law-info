@@ -164,10 +164,10 @@ const COUNSEL_ROOM_CONFIG = {
     code: "student",
     label: "학생 상담실",
     kicker: "Student Room",
-    formTitle: "학생 상담실에 익명 상담 남기기",
+    formTitle: "학생 상담실에 상담 남기기",
     help: "학생 본인의 취업·진로, 학교생활, 현장실습, 권리보호 상담을 남길 수 있습니다.",
     loginMessage: "학생 상담실은 로그인 후 관리자 승인을 받은 회원만 이용할 수 있습니다.",
-    emptyMessage: "아직 학생 상담실에 등록된 상담이 없습니다. 왼쪽에서 익명 상담을 남겨 주세요.",
+    emptyMessage: "아직 학생 상담실에 등록된 상담이 없습니다. 왼쪽에서 상담을 남겨 주세요.",
     listTitle: "내 학생 상담 목록",
     listStatus: "학생 상담"
   },
@@ -175,10 +175,10 @@ const COUNSEL_ROOM_CONFIG = {
     code: "teacher",
     label: "선생님 상담실",
     kicker: "Teacher Room",
-    formTitle: "선생님 상담실에 익명 상담 남기기",
+    formTitle: "선생님 상담실에 상담 남기기",
     help: "선생님과 행정직을 포함한 교직원의 취업지도, 교육행정, 학교업무, 민원·규정 상담을 남길 수 있습니다.",
     loginMessage: "선생님 상담실은 로그인 후 관리자 승인을 받은 회원만 이용할 수 있습니다.",
-    emptyMessage: "아직 선생님 상담실에 등록된 상담이 없습니다. 왼쪽에서 익명 상담을 남겨 주세요.",
+    emptyMessage: "아직 선생님 상담실에 등록된 상담이 없습니다. 왼쪽에서 상담을 남겨 주세요.",
     listTitle: "내 선생님 상담 목록",
     listStatus: "선생님 상담"
   }
@@ -3641,7 +3641,7 @@ async function submitCounselCase(event) {
   const formData = new FormData(counselForm);
   const roomConfig = getActiveCounselRoomConfig();
   const payload = {
-    anonymousName: String(formData.get("anonymousName") || "").trim() || "익명",
+    anonymousName: String(formData.get("anonymousName") || "").trim() || "표시명 없음",
     audience: roomConfig.code,
     topic: String(formData.get("topic") || "other"),
     title: String(formData.get("title") || "").trim(),
@@ -3718,7 +3718,7 @@ async function loadCounselCases(options = {}) {
       window.GYO6_AUTH?.requestLogin?.(roomConfig.loginMessage);
     }
     setCounselStatus("로그인 필요");
-    counselCaseList.innerHTML = `<p class="counsel-empty">${escapeHtml(roomConfig.loginMessage)} 로그인 후 승인되면 익명 상담을 남기고 내 상담을 확인할 수 있습니다.</p>`;
+    counselCaseList.innerHTML = `<p class="counsel-empty">${escapeHtml(roomConfig.loginMessage)} 로그인 후 승인되면 상담을 남기고 내 상담을 확인할 수 있습니다.</p>`;
     counselCaseDetail.innerHTML = "";
     return;
   }
@@ -3827,7 +3827,7 @@ function renderCounselCaseDetail(item = {}, replies = [], counselor = false) {
       </div>
       <div class="counsel-detail-body">
         <div class="counsel-meta">
-          <span>${escapeHtml(item.anonymousName || "익명")}</span>
+          <span>${escapeHtml(item.anonymousName || "표시명 없음")}</span>
           <span>${escapeHtml(counselAudienceLabel(item.audience))}</span>
           <span>${escapeHtml(counselTopicLabel(item.topic))}</span>
           <span>${escapeHtml(formatCounselDate(item.createdAt))}</span>

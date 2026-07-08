@@ -2362,8 +2362,8 @@ h1 {
   gap: 13px;
 }
 
-.counsel-field-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.field-grid.counsel-field-grid {
+  grid-template-columns: minmax(74px, .48fr) minmax(0, 1.52fr);
 }
 
 .counsel-privacy-note {
