@@ -15,12 +15,30 @@ const academicYears = buildAcademicYears(generatedAt);
 const outDir = path.join(rootDir, "data", "policy-quality");
 const HARVEST_ENABLED = process.env.PUBLIC_RESOURCE_HARVEST_OFFICIAL !== "0";
 const HARVEST_FETCH_TIMEOUT_MS = Number(process.env.PUBLIC_RESOURCE_HARVEST_TIMEOUT_MS || 14000);
-const HARVEST_DETAIL_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_DETAIL_LIMIT || 140);
-const HARVEST_LIST_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_LIST_LIMIT || 90);
+const HARVEST_DETAIL_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_DETAIL_LIMIT || 420);
+const HARVEST_LIST_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_LIST_LIMIT || 180);
+const HARVEST_CONTENT_PAGE_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_CONTENT_PAGE_LIMIT || 160);
 const HARVEST_CONCURRENCY = Number(process.env.PUBLIC_RESOURCE_HARVEST_CONCURRENCY || 4);
 const DOCUMENT_FILE_PATTERN = /\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx)(\?|#|$)/i;
 const NON_DOCUMENT_FILE_PATTERN = /\.(jpg|jpeg|png|gif|webp|mp3|mp4|avi|wmv|mov|zip)(\?|#|$)/i;
+const DOWNLOAD_ENDPOINT_PATTERN = /\/(?:cf\/)?(?:ntt)?fileDownload\.do|\/comm\/nttFileDownload\.do|\/common\/FileDown\.do/i;
 const EMBEDDED_FORM_PATTERN = /서식|양식|신청서|보고서|동의서|협약서|계약서|점검표|체크리스트|기록|대장|조서|품의|검수|정산|부록|붙임|별지|서식모음/i;
+
+const OFFICIAL_CONTENT_HARVEST_SOURCES = [
+  {
+    code: "gbe-edupia-content",
+    label: "경북교육청 학교지원종합자료실",
+    provider: "경상북도교육청 학교지원종합자료실",
+    origin: "https://www.gbe.kr",
+    rootUrls: [
+      "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14937&cntntsId=6600",
+      "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14629&cntntsId=6638",
+      "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=15703&cntntsId=6470",
+      "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=20867&cntntsId=8635"
+    ],
+    category: "general"
+  }
+];
 
 const OFFICIAL_FILE_HARVEST_SOURCES = [
   {
@@ -106,6 +124,30 @@ const OFFICIAL_FILE_HARVEST_SOURCES = [
     bbsId: "1901",
     category: "schoolAdmin",
     terms: ["학교운영위원회", "회의록", "심의", "규정", "학칙", "위원회"]
+  },
+  {
+    code: "cbe-school-violence",
+    label: "충북교육청 학교폭력예방교육자료실",
+    provider: "충청북도교육청 인성시민과",
+    origin: "https://www.cbe.go.kr",
+    listPath: "/dept-21/na/ntt/selectNttList.do",
+    infoPath: "/dept-21/na/ntt/selectNttInfo.do",
+    mi: "11221",
+    bbsId: "1661",
+    category: "schoolViolenceSafety",
+    terms: ["학교폭력 사안처리", "학교폭력", "서식모음집", "가이드북", "학업중단 숙려제", "전담기구", "피해학생 보호"]
+  },
+  {
+    code: "cbe-sexual-awareness",
+    label: "충북교육청 성인식개선 자료실",
+    provider: "충청북도교육청 인성시민과",
+    origin: "https://www.cbe.go.kr",
+    listPath: "/dept-21/na/ntt/selectNttList.do",
+    infoPath: "/dept-21/na/ntt/selectNttInfo.do",
+    mi: "12940",
+    bbsId: "1416",
+    category: "schoolViolenceSafety",
+    terms: ["성폭력", "성희롱", "디지털 성범죄", "사안처리", "예방교육", "서식"]
   },
   {
     code: "hifive-education-library",
@@ -459,9 +501,66 @@ async function buildHarvestedOfficialFileCandidates() {
     }
   });
 
+  const contentPageTargets = await buildOfficialContentPageTargets();
+  contentPageTargets.forEach((target) => {
+    if (target.detailUrl && !discovered.has(target.detailUrl)) {
+      discovered.set(target.detailUrl, target);
+    }
+  });
+
   const detailTargets = [...discovered.values()].slice(0, HARVEST_DETAIL_LIMIT);
   const detailResults = await mapWithConcurrency(detailTargets, HARVEST_CONCURRENCY, harvestOfficialDetailFiles);
   return detailResults.flat();
+}
+
+async function buildOfficialContentPageTargets() {
+  const rootTargets = OFFICIAL_CONTENT_HARVEST_SOURCES.flatMap((source) =>
+    (source.rootUrls || []).map((url) => ({ source, url }))
+  ).slice(0, HARVEST_CONTENT_PAGE_LIMIT);
+
+  const rootPages = await mapWithConcurrency(rootTargets, HARVEST_CONCURRENCY, async (target) => {
+    const html = await fetchText(target.url);
+    if (!html) {
+      return [];
+    }
+    const rootTitle = extractDetailTitle(html) || target.source.label;
+    const targets = [{
+      source: target.source,
+      term: rootTitle,
+      nttSn: stableId(target.url),
+      title: rootTitle,
+      detailUrl: target.url
+    }];
+
+    for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']*cntntsView\.do[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+      const label = cleanText(stripHtml(match[2]));
+      const detailUrl = toAbsoluteUrl(match[1], target.source.origin);
+      if (!detailUrl || !isUsefulOfficialContentPage(label, detailUrl)) {
+        continue;
+      }
+      targets.push({
+        source: target.source,
+        term: label,
+        nttSn: stableId(detailUrl),
+        title: label,
+        detailUrl
+      });
+    }
+    return targets;
+  });
+
+  const map = new Map();
+  rootPages.flat().forEach((target) => {
+    if (target.detailUrl && !map.has(target.detailUrl)) {
+      map.set(target.detailUrl, target);
+    }
+  });
+  return [...map.values()].slice(0, HARVEST_CONTENT_PAGE_LIMIT);
+}
+
+function isUsefulOfficialContentPage(label = "", url = "") {
+  const text = `${label} ${url}`;
+  return /현장체험|교외체험|학교폭력|학생생활|생활규정|학교규칙|학생선도|출결|생활기록|학적|전입|전출|성적|평가|복무|휴가|계약제|교육공무직|학교회계|예산|계약|수익자|강사|개인정보|정보공개|CCTV|영상정보|방과후|돌봄|특수교육|기숙사|안전|보건|학교운영위원회|민원|상담|서식|규정|지침|현장실습|직업계고/i.test(text);
 }
 
 function buildSeededHarvestDetailTargets() {
@@ -532,7 +631,13 @@ function extractDetailTargetsFromList(html = "", source = {}, term = "") {
     .map((match) => match[1] || match[2])
     .filter(Boolean));
 
-  return ids.map((nttSn) => ({
+  const nttInfoIds = uniqueStrings([
+    ...html.matchAll(/class=["'][^"']*nttInfoBtn[^"']*["'][^>]*data-id=["']?(\d+)/gi),
+    ...html.matchAll(/data-id=["']?(\d+)["']?[^>]*class=["'][^"']*nttInfoBtn[^"']*["']/gi),
+    ...html.matchAll(/selectNttInfo\.do\?[^"']*nttSn=(\d+)/gi)
+  ].map((match) => match[1]).filter(Boolean));
+
+  return uniqueStrings([...ids, ...nttInfoIds]).map((nttSn) => ({
     source,
     term,
     nttSn,
@@ -628,6 +733,13 @@ function extractOfficialFileLinks(html = "", target = {}) {
     addFile(text || extractFileNameFromUrl(match[1]), match[1]);
   }
 
+  for (const match of html.matchAll(/<a\b[^>]*href=["'][^"']*goFileDown\(['"]([^'"]+)['"]\)[^"']*["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const text = cleanText(stripHtml(match[2]));
+    const url = new URL("/comm/nttFileDownload.do", origin);
+    url.searchParams.set("fileKey", decodeHtml(match[1]));
+    addFile(text || `첨부파일 ${match[1]}`, url.href);
+  }
+
   for (const match of html.matchAll(/funcFiledownload\('([^']+)','([^']+)','([^']+)'\)/gi)) {
     const url = new URL("/common/FileDown.do", origin);
     url.searchParams.set("filepath", decodeHtml(match[1]));
@@ -670,7 +782,10 @@ function inferHarvestedResourceType(text = "") {
 
 function isUsefulOfficialDocument(fileName = "", url = "", title = "") {
   const text = `${fileName} ${url} ${title}`;
-  if (!DOCUMENT_FILE_PATTERN.test(url) && !DOCUMENT_FILE_PATTERN.test(fileName)) {
+  const hasDocumentSignal = DOCUMENT_FILE_PATTERN.test(url)
+    || DOCUMENT_FILE_PATTERN.test(fileName)
+    || DOWNLOAD_ENDPOINT_PATTERN.test(url);
+  if (!hasDocumentSignal) {
     return false;
   }
   if (NON_DOCUMENT_FILE_PATTERN.test(url) || NON_DOCUMENT_FILE_PATTERN.test(fileName)) {
@@ -722,7 +837,7 @@ async function fetchText(url = "") {
 function isOfficialHarvestPageUrl(url = "") {
   try {
     const host = new URL(url).hostname.replace(/^www\./, "");
-    return /(^|\.)gbe\.kr$|(^|\.)moe\.go\.kr$|(^|\.)moel\.go\.kr$|(^|\.)kosha\.or\.kr$|(^|\.)hrdkorea\.or\.kr$|(^|\.)hifive\.go\.kr$|(^|\.)schoolsafe\.or\.kr$|(^|\.)pipc\.go\.kr$/.test(host);
+    return /(^|\.)gbe\.kr$|(^|\.)cbe\.go\.kr$|(^|\.)moe\.go\.kr$|(^|\.)moel\.go\.kr$|(^|\.)kosha\.or\.kr$|(^|\.)hrdkorea\.or\.kr$|(^|\.)hifive\.go\.kr$|(^|\.)schoolsafe\.or\.kr$|(^|\.)pipc\.go\.kr$/.test(host);
   } catch {
     return false;
   }
@@ -750,6 +865,7 @@ function getOrigin(url = "") {
 function providerFromUrl(url = "") {
   const domain = getDomainFromUrl(url);
   if (/gbe\.kr$/.test(domain)) return "경상북도교육청";
+  if (/cbe\.go\.kr$/.test(domain)) return "충청북도교육청";
   if (/hifive\.go\.kr$/.test(domain)) return "교육부·하이파이브";
   if (/moe\.go\.kr$/.test(domain)) return "교육부";
   if (/moel\.go\.kr$/.test(domain)) return "고용노동부";
@@ -769,6 +885,7 @@ function extractFileNameFromUrl(url = "") {
 function decodeHtml(value = "") {
   return String(value || "")
     .replace(/&amp;/g, "&")
+    .replace(/&nbsp;|&#160;/g, " ")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
     .replace(/&quot;/g, "\"")
@@ -945,11 +1062,18 @@ function inferCategoryFromDomains(domains = []) {
 
 function inferCategoryFromText(value = "") {
   const text = normalizeSearchText(value);
+  if (/fieldtraining/.test(text)) return "fieldTraining";
+  if (/careeremployment/.test(text)) return "careerEmployment";
+  if (/studentlife/.test(text)) return "studentLife";
+  if (/schoolviolencesafety/.test(text)) return "schoolViolenceSafety";
+  if (/schooladmin/.test(text)) return "schoolAdmin";
+  if (/privacyrecords/.test(text)) return "privacyRecords";
+  if (/stafflabor/.test(text)) return "staffLabor";
   if (/현장실습|직업계고|특성화고|ncs|curriculum|fieldtraining|employment|career/.test(text)) return /employment|career|취업|채용/.test(text) ? "careerEmployment" : "fieldTraining";
-  if (/학생부|생활기록|출결|학적|평가|체험학습|record|attendance|assessment|graduation/.test(text)) return "studentLife";
-  if (/학교폭력|안전|급식|보건|폭력|safety|violence|meal|health/.test(text)) return "schoolViolenceSafety";
+  if (/학생부|생활기록|출결|학적|평가|체험학습|교외체험|현장체험|대안교육|학업중단|studentlife|record|attendance|assessment|graduation/.test(text)) return "studentLife";
+  if (/학교폭력|생활지도|생활규정|학생선도|안전|급식|보건|폭력|성폭력|성희롱|디지털성범죄|아동학대|safety|violence|meal|health/.test(text)) return "schoolViolenceSafety";
   if (/복무|휴가|교권|민원|교육공무직|계약제|기간제|근무상황|취업규칙|단체협약|service|leave|teacher|complaint/.test(text)) return "staffLabor";
-  if (/회계|계약|위원회|시설|행정|budget|accounting|contract|committee|facility/.test(text)) return "schoolAdmin";
+  if (/회계|계약|위원회|시설|행정|방과후|돌봄|늘봄|수익자|강사|budget|accounting|contract|committee|facility/.test(text)) return "schoolAdmin";
   if (/개인정보|정보공개|기록|cctv|privacy|record|disclosure/.test(text)) return "privacyRecords";
   return "general";
 }
@@ -1032,12 +1156,17 @@ async function writeOutputs(data) {
       generatedAt: data.generatedAt,
       stats: data.stats,
       missions: data.missions,
-      candidates: data.candidates.filter((item) => item.includeInLibrary).slice(0, 240)
+      candidates: selectPublicLibraryCandidates(data.candidates)
     }, null, 2)}; });`,
     ""
   ].join("\n");
   await writeFile(path.join(rootDir, "public", "public-resource-acquisition-generated.js"), moduleContent, "utf8");
   await writeFile(path.join(rootDir, "functions", "public", "public-resource-acquisition-generated.js"), moduleContent, "utf8");
+}
+
+function selectPublicLibraryCandidates(candidates = []) {
+  const limit = Number(process.env.PUBLIC_RESOURCE_PUBLIC_CANDIDATE_LIMIT || 1000);
+  return candidates.filter((item) => item.includeInLibrary).slice(0, limit);
 }
 
 function renderSummary(data) {

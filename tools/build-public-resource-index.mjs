@@ -21,6 +21,7 @@ const policyCorpus = corpus.default || corpus;
 const sourceExpansion = generatedExpansion.default || generatedExpansion;
 const publicResourceAcquisition = generatedAcquisition.default || generatedAcquisition;
 const DOCUMENT_FILE_PATTERN = /\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx)(\?|#|$)/i;
+const DOWNLOAD_ENDPOINT_PATTERN = /\/(?:cf\/)?(?:ntt)?fileDownload\.do|\/comm\/nttFileDownload\.do|\/common\/FileDown\.do/i;
 
 const resources = buildResourceIndex();
 await writeGeneratedModule(resources);
@@ -365,7 +366,7 @@ function getReadableSourceTarget(value = "") {
 
 function getLinkKind(url = "") {
   if (!url) return "search";
-  if (DOCUMENT_FILE_PATTERN.test(url) || /\/cf\/fileDownload\.do|\/fileDownload\.do/i.test(url)) return "file";
+  if (DOCUMENT_FILE_PATTERN.test(url) || DOWNLOAD_ENDPOINT_PATTERN.test(url)) return "file";
   if (/law\.go\.kr/i.test(url)) return "law";
   return "page";
 }

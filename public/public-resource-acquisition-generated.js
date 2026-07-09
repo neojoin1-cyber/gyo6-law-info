@@ -6,166 +6,53 @@
     root.GYO6_PUBLIC_RESOURCE_ACQUISITION = data;
   }
 })(typeof globalThis !== "undefined" ? globalThis : window, function createPublicResourceAcquisition() { return {
-  "version": "generated-2026-07-09T02-57-11-861Z",
-  "generatedAt": "2026-07-09T02:57:11.861Z",
+  "version": "generated-2026-07-09T03-29-19-167Z",
+  "generatedAt": "2026-07-09T03:29:19.167Z",
   "stats": {
-    "existingResources": 147,
+    "existingResources": 808,
     "missions": 8,
-    "candidates": 235,
-    "publicCandidates": 127,
-    "harvestedFiles": 124,
-    "highPriority": 140,
-    "directUrlNeeded": 110,
+    "candidates": 878,
+    "publicCandidates": 792,
+    "harvestedFiles": 833,
+    "highPriority": 790,
+    "directUrlNeeded": 89,
     "byCategory": {
-      "careerEmployment": 15,
-      "fieldTraining": 65,
-      "general": 22,
-      "schoolAdmin": 39,
-      "schoolViolenceSafety": 29,
-      "studentLife": 48,
-      "staffLabor": 11,
-      "privacyRecords": 6
+      "fieldTraining": 72,
+      "general": 101,
+      "privacyRecords": 38,
+      "schoolAdmin": 163,
+      "schoolViolenceSafety": 172,
+      "staffLabor": 49,
+      "studentLife": 276,
+      "careerEmployment": 7
     }
   },
   "missions": [
     {
-      "category": "staffLabor",
-      "label": "교직원 복무·노무",
-      "existing": 4,
-      "directCount": 4,
-      "byType": {
-        "rule": 1,
-        "law": 3
-      },
-      "missingTypes": [
-        "rule",
-        "guide",
-        "form"
-      ],
-      "minPublic": 32,
-      "minDirect": 8,
-      "coverageScore": 26,
-      "status": "needs_acquisition"
-    },
-    {
-      "category": "privacyRecords",
-      "label": "개인정보·기록",
-      "existing": 4,
-      "directCount": 4,
-      "byType": {
-        "law": 4
-      },
-      "missingTypes": [
-        "rule",
-        "guide",
-        "form"
-      ],
-      "minPublic": 24,
-      "minDirect": 6,
-      "coverageScore": 33,
-      "status": "needs_acquisition"
-    },
-    {
       "category": "careerEmployment",
       "label": "취업·진로",
-      "existing": 4,
-      "directCount": 4,
-      "byType": {
-        "guide": 2,
-        "form": 2
-      },
+      "existing": 0,
+      "directCount": 0,
+      "byType": {},
       "missingTypes": [
         "law",
         "rule",
-        "guide"
+        "guide",
+        "form"
       ],
       "minPublic": 24,
       "minDirect": 5,
-      "coverageScore": 37,
+      "coverageScore": 0,
       "status": "needs_acquisition"
-    },
-    {
-      "category": "schoolViolenceSafety",
-      "label": "학교폭력·안전",
-      "existing": 14,
-      "directCount": 14,
-      "byType": {
-        "guide": 6,
-        "form": 2,
-        "law": 6
-      },
-      "missingTypes": [
-        "rule"
-      ],
-      "minPublic": 34,
-      "minDirect": 8,
-      "coverageScore": 64,
-      "status": "needs_acquisition"
-    },
-    {
-      "category": "general",
-      "label": "공통·기타",
-      "existing": 16,
-      "directCount": 16,
-      "byType": {
-        "guide": 1,
-        "form": 9,
-        "law": 6
-      },
-      "missingTypes": [
-        "rule",
-        "guide"
-      ],
-      "minPublic": 20,
-      "minDirect": 5,
-      "coverageScore": 82,
-      "status": "watch"
-    },
-    {
-      "category": "schoolAdmin",
-      "label": "학교회계·행정",
-      "existing": 26,
-      "directCount": 26,
-      "byType": {
-        "guide": 22,
-        "form": 3,
-        "law": 1
-      },
-      "missingTypes": [
-        "law",
-        "rule"
-      ],
-      "minPublic": 30,
-      "minDirect": 7,
-      "coverageScore": 85,
-      "status": "healthy"
-    },
-    {
-      "category": "studentLife",
-      "label": "학생생활·학적",
-      "existing": 28,
-      "directCount": 28,
-      "byType": {
-        "guide": 13,
-        "form": 8,
-        "rule": 7
-      },
-      "missingTypes": [
-        "law"
-      ],
-      "minPublic": 32,
-      "minDirect": 8,
-      "coverageScore": 89,
-      "status": "healthy"
     },
     {
       "category": "fieldTraining",
       "label": "현장실습·직업교육",
-      "existing": 51,
-      "directCount": 51,
+      "existing": 58,
+      "directCount": 58,
       "byType": {
-        "guide": 41,
-        "form": 10
+        "guide": 43,
+        "form": 15
       },
       "missingTypes": [
         "law",
@@ -175,112 +62,203 @@
       "minDirect": 8,
       "coverageScore": 93,
       "status": "healthy"
+    },
+    {
+      "category": "schoolAdmin",
+      "label": "학교회계·행정",
+      "existing": 152,
+      "directCount": 152,
+      "byType": {
+        "guide": 83,
+        "form": 68,
+        "law": 1
+      },
+      "missingTypes": [
+        "law",
+        "rule"
+      ],
+      "minPublic": 30,
+      "minDirect": 7,
+      "coverageScore": 93,
+      "status": "healthy"
+    },
+    {
+      "category": "privacyRecords",
+      "label": "개인정보·기록",
+      "existing": 38,
+      "directCount": 38,
+      "byType": {
+        "guide": 1,
+        "form": 33,
+        "law": 4
+      },
+      "missingTypes": [
+        "rule",
+        "guide"
+      ],
+      "minPublic": 24,
+      "minDirect": 6,
+      "coverageScore": 93,
+      "status": "healthy"
+    },
+    {
+      "category": "studentLife",
+      "label": "학생생활·학적",
+      "existing": 259,
+      "directCount": 259,
+      "byType": {
+        "guide": 73,
+        "form": 176,
+        "rule": 9,
+        "law": 1
+      },
+      "missingTypes": [
+        "law"
+      ],
+      "minPublic": 32,
+      "minDirect": 8,
+      "coverageScore": 96,
+      "status": "healthy"
+    },
+    {
+      "category": "schoolViolenceSafety",
+      "label": "학교폭력·안전",
+      "existing": 158,
+      "directCount": 158,
+      "byType": {
+        "guide": 87,
+        "form": 66,
+        "law": 5
+      },
+      "missingTypes": [
+        "rule"
+      ],
+      "minPublic": 34,
+      "minDirect": 8,
+      "coverageScore": 96,
+      "status": "healthy"
+    },
+    {
+      "category": "general",
+      "label": "공통·기타",
+      "existing": 95,
+      "directCount": 95,
+      "byType": {
+        "guide": 2,
+        "form": 83,
+        "rule": 4,
+        "law": 6
+      },
+      "missingTypes": [
+        "guide"
+      ],
+      "minPublic": 20,
+      "minDirect": 5,
+      "coverageScore": 96,
+      "status": "healthy"
+    },
+    {
+      "category": "staffLabor",
+      "label": "교직원 복무·노무",
+      "existing": 48,
+      "directCount": 48,
+      "byType": {
+        "guide": 5,
+        "form": 37,
+        "rule": 3,
+        "law": 3
+      },
+      "missingTypes": [],
+      "minPublic": 32,
+      "minDirect": 8,
+      "coverageScore": 100,
+      "status": "healthy"
     }
   ],
   "candidates": [
     {
-      "id": "harvest-hifive-education-library-145569-0-2025년-고졸채용기업-지원정책-리플릿-pdf",
-      "category": "careerEmployment",
-      "type": "guide",
-      "title": "특성화고·마이스터고 포털(교육부) - 2025년 고졸채용기업 지원정책 리플릿",
-      "provider": "교육부·하이파이브",
-      "query": "특성화고·마이스터고 포털(교육부) 2025년 고졸채용기업 지원정책 리플릿.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260623&filerealname=2025%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85+%EB%A6%AC%ED%94%8C%EB%A6%BF.pdf&filename=A7C60C653F134D049AC31614B6504973.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "하이파이브 교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
-    },
-    {
-      "id": "harvest-hifive-education-library-145569-1-2025년-고졸채용기업-지원정책-자료집-pdf",
-      "category": "careerEmployment",
-      "type": "guide",
-      "title": "특성화고·마이스터고 포털(교육부) - 2025년 고졸채용기업 지원정책_자료집",
-      "provider": "교육부·하이파이브",
-      "query": "특성화고·마이스터고 포털(교육부) 2025년 고졸채용기업 지원정책_자료집.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260623&filerealname=2025%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf&filename=DD5423794658446A908B570535A1CBC5.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "하이파이브 교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
-    },
-    {
-      "id": "harvest-hifive-education-library-145654-2-붙임-2-1-2026년-고졸채용기업-지원정책-자료집-pdf",
-      "category": "careerEmployment",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14923-cntntsid-6572-0-서식-중등-3-6-3-1-학교현장실습-결과-보고서-양식",
+      "category": "fieldTraining",
       "type": "form",
-      "title": "특성화고·마이스터고 포털(교육부) - 붙임 2-1. 2026년 고졸채용기업 지원정책_자료집",
-      "provider": "교육부·하이파이브",
-      "query": "특성화고·마이스터고 포털(교육부) 붙임 2-1. 2026년 고졸채용기업 지원정책_자료집.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260707&filerealname=%EB%B6%99%EC%9E%84+2-1.+2026%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf&filename=C7570C7F3A134629A11FE7AC0689004E.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "title": "교육실습생 평가 및 유의사항 - [서식-중등-3-6-3-1]학교현장실습 결과 보고서 양식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육실습생 평가 및 유의사항 [서식-중등-3-6-3-1]학교현장실습 결과 보고서 양식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=398a98ed43d20459c6e99e318666a5b4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "하이파이브 교육자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260707&filerealname=%EB%B6%99%EC%9E%84+2-1.+2026%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf&filename=C7570C7F3A134629A11FE7AC0689004E.pdf",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=398a98ed43d20459c6e99e318666a5b4",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-hifive-education-library-145654-3-붙임-2-2-2026년-고졸채용기업-지원정책-리플릿-pdf",
-      "category": "careerEmployment",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14923-cntntsid-6572-1-서식-중등-3-6-3-2-학교현장실습-결과-확인서-양식",
+      "category": "fieldTraining",
       "type": "form",
-      "title": "특성화고·마이스터고 포털(교육부) - 붙임 2-2. 2026년 고졸채용기업 지원정책_리플릿",
-      "provider": "교육부·하이파이브",
-      "query": "특성화고·마이스터고 포털(교육부) 붙임 2-2. 2026년 고졸채용기업 지원정책_리플릿.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260707&filerealname=%EB%B6%99%EC%9E%84+2-2.+2026%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EB%A6%AC%ED%94%8C%EB%A6%BF.pdf&filename=C4A97D498AE8460B976AC3C7E39D4A56.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "title": "교육실습생 평가 및 유의사항 - [서식-중등-3-6-3-2]학교현장실습 결과 확인서 양식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육실습생 평가 및 유의사항 [서식-중등-3-6-3-2]학교현장실습 결과 확인서 양식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4bb0a11f211cd3fe84be6639e2f669f1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "하이파이브 교육자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260707&filerealname=%EB%B6%99%EC%9E%84+2-2.+2026%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EB%A6%AC%ED%94%8C%EB%A6%BF.pdf&filename=C4A97D498AE8460B976AC3C7E39D4A56.pdf",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4bb0a11f211cd3fe84be6639e2f669f1",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14923-cntntsid-6572-2-서식-중등-3-6-3-3-학교현장실습-결과-총괄표-양식",
+      "category": "fieldTraining",
+      "type": "form",
+      "title": "교육실습생 평가 및 유의사항 - [서식-중등-3-6-3-3]학교현장실습 결과 총괄표 양식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육실습생 평가 및 유의사항 [서식-중등-3-6-3-3]학교현장실습 결과 총괄표 양식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=08b4c3710e7f77ee2c24fb7ec9b512c5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=08b4c3710e7f77ee2c24fb7ec9b512c5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -308,7 +286,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
@@ -336,7 +314,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -364,7 +342,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-0-안전보건공단-직업계고-카드북1-차량계-건설기계작업-웹용-pdf",
@@ -388,7 +366,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-1-안전보건공단-직업계고-카드북2-중량물운반-웹용-pdf",
@@ -412,7 +390,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-2-안전보건공단-직업계고-카드북3-금속성형기계작업-웹용-pdf",
@@ -436,7 +414,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-3-안전보건공단-직업계고-카드북4-금속절삭기계-웹용-pdf",
@@ -460,7 +438,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-4-안전보건공단-직업계고-카드북5-식품제조작업-웹용-pdf",
@@ -484,7 +462,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-5-안전보건공단-직업계고-카드북6-세척제취급작업-웹용-pdf",
@@ -508,7 +486,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
@@ -536,7 +514,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-3-2025-직업계고-현장실습생-강의안-최종-25-06-30-pdf",
@@ -560,7 +538,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-0-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
@@ -584,7 +562,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-134988-0-1-직업계고-현장실습-운영-공통-매뉴얼-안내-2024년-개정-주요-변경사항-pdf",
@@ -608,7 +586,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-1-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
@@ -632,7 +610,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-134988-1-2-직업계고-현장실습-운영의-이해-pdf",
@@ -656,7 +634,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-127647-0-2023년-개정-현장실습-간편-매뉴얼-학교용-pdf",
@@ -680,7 +658,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-127696-1-2023년-hifive-현장실습-관리시스템-매뉴얼-학교-pdf",
@@ -704,7 +682,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-127696-0-2023년-hifive-현장실습-활용-매뉴얼-학생-pdf",
@@ -728,7 +706,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-3-2024년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -752,7 +730,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-0-2024년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
@@ -776,7 +754,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-1-2024년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
@@ -800,7 +778,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-2-2024년-직업계고-현장실습-산업안전-핸드북-농수산상업및가사-pdf",
@@ -824,7 +802,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-4-2024년-직업계고-현장실습생-대상-강의안-pdf",
@@ -848,7 +826,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-141253-0-2025-현장실습-바로가기-및-실습일지-작성방법-휴대폰용-pdf",
@@ -872,7 +850,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145569-0-2025년-고졸채용기업-지원정책-리플릿-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "특성화고·마이스터고 포털(교육부) - 2025년 고졸채용기업 지원정책 리플릿",
+      "provider": "교육부·하이파이브",
+      "query": "특성화고·마이스터고 포털(교육부) 2025년 고졸채용기업 지원정책 리플릿.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260623&filerealname=2025%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85+%EB%A6%AC%ED%94%8C%EB%A6%BF.pdf&filename=A7C60C653F134D049AC31614B6504973.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145569-1-2025년-고졸채용기업-지원정책-자료집-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "특성화고·마이스터고 포털(교육부) - 2025년 고졸채용기업 지원정책_자료집",
+      "provider": "교육부·하이파이브",
+      "query": "특성화고·마이스터고 포털(교육부) 2025년 고졸채용기업 지원정책_자료집.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260623&filerealname=2025%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf&filename=DD5423794658446A908B570535A1CBC5.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-0-2025년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -896,7 +922,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-1-2025년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
@@ -920,7 +946,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-4-2025년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
@@ -944,7 +970,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-2-2025년-직업계고-현장실습-산업안전-핸드북-농업-수산-해운-상업-및-가사-실업-pdf",
@@ -968,7 +994,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
@@ -992,7 +1018,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
@@ -1016,7 +1042,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-140473-1-2025년-hifive-사용자-매뉴얼-학생용-250820-pdf",
@@ -1040,7 +1066,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-140473-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-v-1-4-250820-pdf",
@@ -1064,7 +1090,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145403-1-2026-hifive-시스템-매뉴얼-학교용-0519-pdf",
@@ -1088,7 +1114,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145403-0-2026-hifive-시스템-매뉴얼-학생용-0430-pdf",
@@ -1112,7 +1138,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-3-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-기업용-pdf",
@@ -1136,7 +1162,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-학교용-pdf",
@@ -1160,7 +1186,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-128161-0-3-2023년-직업계고-현장실습생-대상-강의안-pdf",
@@ -1184,7 +1210,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf",
@@ -1208,7 +1234,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf",
@@ -1232,7 +1258,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145654-0-붙임-1-1-2026년-고졸청년-지원정책-자료집-pdf",
@@ -1260,7 +1286,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-145654-1-붙임-1-2-2026년-고졸청년-지원정책-리플릿-pdf",
@@ -1288,7 +1314,63 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145654-2-붙임-2-1-2026년-고졸채용기업-지원정책-자료집-pdf",
+      "category": "fieldTraining",
+      "type": "form",
+      "title": "특성화고·마이스터고 포털(교육부) - 붙임 2-1. 2026년 고졸채용기업 지원정책_자료집",
+      "provider": "교육부·하이파이브",
+      "query": "특성화고·마이스터고 포털(교육부) 붙임 2-1. 2026년 고졸채용기업 지원정책_자료집.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260707&filerealname=%EB%B6%99%EC%9E%84+2-1.+2026%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf&filename=C7570C7F3A134629A11FE7AC0689004E.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260707&filerealname=%EB%B6%99%EC%9E%84+2-1.+2026%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf&filename=C7570C7F3A134629A11FE7AC0689004E.pdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145654-3-붙임-2-2-2026년-고졸채용기업-지원정책-리플릿-pdf",
+      "category": "fieldTraining",
+      "type": "form",
+      "title": "특성화고·마이스터고 포털(교육부) - 붙임 2-2. 2026년 고졸채용기업 지원정책_리플릿",
+      "provider": "교육부·하이파이브",
+      "query": "특성화고·마이스터고 포털(교육부) 붙임 2-2. 2026년 고졸채용기업 지원정책_리플릿.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260707&filerealname=%EB%B6%99%EC%9E%84+2-2.+2026%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EB%A6%AC%ED%94%8C%EB%A6%BF.pdf&filename=C4A97D498AE8460B976AC3C7E39D4A56.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260707&filerealname=%EB%B6%99%EC%9E%84+2-2.+2026%EB%85%84+%EA%B3%A0%EC%A1%B8%EC%B1%84%EC%9A%A9%EA%B8%B0%EC%97%85+%EC%A7%80%EC%9B%90%EC%A0%95%EC%B1%85_%EB%A6%AC%ED%94%8C%EB%A6%BF.pdf&filename=C4A97D498AE8460B976AC3C7E39D4A56.pdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
@@ -1316,7 +1398,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
@@ -1344,7 +1426,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
@@ -1372,7 +1454,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
@@ -1400,7 +1482,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-75109-0-직업계고-현장실습-운영-간편-매뉴얼-기업용-0713-pdf",
@@ -1424,7 +1506,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-75109-1-직업계고-현장실습-운영-간편-매뉴얼-학생-학교용-0713-pdf",
@@ -1448,7 +1530,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-75109-2-직업계고-현장실습-운영-매뉴얼-기업용-내지0713-pdf",
@@ -1472,7 +1554,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-75109-3-직업계고-현장실습-운영-매뉴얼-학교용-내지0713-pdf",
@@ -1496,7 +1578,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-135418-0-hifive-휴대폰-간편-접속-방법-안내-pdf",
@@ -1520,7 +1602,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-hifive-education-library-143951-0-q-실습일지-휴무일-처리-매뉴얼-pdf",
@@ -1544,21 +1626,889 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-568617-0-2019학년도-여름방학대비-경북학생생활지도-연수자료-hwp",
+      "id": "harvest-gbe-integrated-library-1380208-0-붙임-3-2024학년도-학업성적관리업무-자체-점검표-단위학교용-hwp",
       "category": "general",
-      "type": "guide",
-      "title": "2019년 여름방학대비 학생생활지도 연수 교재 - 2019학년도_여름방학대비_경북학생생활지도_연수자료",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "생활지도 2019년 여름방학대비 학생생활지도 연수 교재 2019학년도_여름방학대비_경북학생생활지도_연수자료.hwp",
-      "url": "https://www.gbe.kr/uploads/BOARD/2019/06/BOARD_201906281700526256116138.hwp",
+      "type": "form",
+      "title": "[유초등교육과] 2024학년도 학업성적관리업무 자체 점검표(단위학교용) - [붙임 3 ] 2024학년도 학업성적관리업무 자체 점검표(단위학교용)",
+      "provider": "경상북도교육청",
+      "query": "점검표 [유초등교육과] 2024학년도 학업성적관리업무 자체 점검표(단위학교용) [붙임 3 ] 2024학년도 학업성적관리업무 자체 점검표(단위학교용).hwp",
+      "url": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1380208/doc_f08av8d4e=a1v74=44v53=9dvab=9f82v99f3v4fe8_v3096.hwp",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1380208/doc_f08av8d4e=a1v74=44v53=9dvab=9f82v99f3v4fe8_v3096.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1380208-2-pdf-다운로드",
+      "category": "general",
+      "type": "form",
+      "title": "[유초등교육과] 2024학년도 학업성적관리업무 자체 점검표(단위학교용) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "점검표 [유초등교육과] 2024학년도 학업성적관리업무 자체 점검표(단위학교용) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1598674-1-pdf-다운로드",
+      "category": "general",
+      "type": "form",
+      "title": "[유초등교육과] 2026 글벗과 함께하는 노벨 문학 배움터 운영 계획 및 관련 서식 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026 글벗과 함께하는 노벨 문학 배움터 운영 계획 및 관련 서식 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1600838-1-pdf-다운로드",
+      "category": "general",
+      "type": "form",
+      "title": "[유초등교육과] 2026 책벗 공방 운영 계획 및 관련 서식 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026 책벗 공방 운영 계획 및 관련 서식 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587951-1-pdf-다운로드",
+      "category": "general",
+      "type": "form",
+      "title": "[유초등교육과] 2026년 교육공무원 성과상여금 지급 관련 서식 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026년 교육공무원 성과상여금 지급 관련 서식 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1609886-0-붙임-교수-학습과정안-서식-hwp",
+      "category": "general",
+      "type": "form",
+      "title": "[중등교육과] [자료] 교수-학습 과정안(서식) - [붙임] 교수-학습과정안(서식)",
+      "provider": "경상북도교육청",
+      "query": "서식 [중등교육과] [자료] 교수-학습 과정안(서식) [붙임] 교수-학습과정안(서식).hwp",
+      "url": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1609886/doc_27cbvd59e=a6vd7=46v06=b7v3e=c6dfvd617vf486_v6803.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1609886/doc_27cbvd59e=a6vd7=46v06=b7v3e=c6dfvd617vf486_v6803.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1609886-2-pdf-다운로드",
+      "category": "general",
+      "type": "form",
+      "title": "[중등교육과] [자료] 교수-학습 과정안(서식) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [중등교육과] [자료] 교수-학습 과정안(서식) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587954-1-pdf-다운로드",
+      "category": "general",
+      "type": "form",
+      "title": "[중등교육과] 2026 성과상여금 관련 서식 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [중등교육과] 2026 성과상여금 관련 서식 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587680-0-2026학년도-학교-환경관리-기본방향-hwp",
+      "category": "general",
+      "type": "form",
+      "title": "[체육건강과] 2026학년도 학교 환경관리 기본방향(엑셀 보고 서식 포함)",
+      "provider": "경상북도교육청",
+      "query": "서식 [체육건강과] 2026학년도 학교 환경관리 기본방향(엑셀 보고 서식 포함) 2026학년도 학교 환경관리 기본방향..hwp",
+      "url": "https://www.gbe.kr/upload/dep_phy/na/bbs_2684/ntt_1587680/doc_5703v06e2=a0vcc=49v0f=9ev7f=cb49vba9dv5614_v3322.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_phy/na/bbs_2684/ntt_1587680/doc_5703v06e2=a0vcc=49v0f=9ev7f=cb49vba9dv5614_v3322.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587680-1-내지-2026학년도-학교-환경관리-기본방향-pdf",
+      "category": "general",
+      "type": "form",
+      "title": "[체육건강과] 2026학년도 학교 환경관리 기본방향(엑셀 보고 서식 포함) - 내지-2026학년도 학교 환경관리 기본방향",
+      "provider": "경상북도교육청",
+      "query": "서식 [체육건강과] 2026학년도 학교 환경관리 기본방향(엑셀 보고 서식 포함) 내지-2026학년도 학교 환경관리 기본방향.pdf",
+      "url": "https://www.gbe.kr/upload/dep_phy/na/bbs_2684/ntt_1587680/doc_e7a4vff10=8ev5c=48vbe=95v96=a01bve920v54d3_v5289.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_phy/na/bbs_2684/ntt_1587680/doc_e7a4vff10=8ev5c=48vbe=95v96=a01bve920v54d3_v5289.pdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587680-3-pdf-다운로드",
+      "category": "general",
+      "type": "form",
+      "title": "[체육건강과] 2026학년도 학교 환경관리 기본방향(엑셀 보고 서식 포함) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [체육건강과] 2026학년도 학교 환경관리 기본방향(엑셀 보고 서식 포함) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-909755-1-pdf-다운로드",
+      "category": "general",
+      "type": "form",
+      "title": "[학생생활과] 생명사랑 교육활동 자료 및 점검표 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "점검표 [학생생활과] 생명사랑 교육활동 자료 및 점검표 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-0-서식-중등-8-2-1-1-개별화교육계획서-예시안",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-1] 개별화교육계획서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-1] 개별화교육계획서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a8fb90325bde6830504297018769dbbe",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a8fb90325bde6830504297018769dbbe",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-1-서식-중등-8-2-1-2-개별화교육계획-요구-조사서-예시안",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-2] 개별화교육계획 요구 조사서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-2] 개별화교육계획 요구 조사서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88cec1a953b68fc9a800bc3784c90367",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88cec1a953b68fc9a800bc3784c90367",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-3-서식-중등-8-2-1-4-나이스-개별화교육계획-등록-동의서-예시안",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=50838fd642850c5fecf51c1029d60fb6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=50838fd642850c5fecf51c1029d60fb6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-4-서식-중등-8-2-1-5-개별화교육지원팀-협의회-관련-서식-예시안",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7b610fca3312301f06546ad10fd8ea2c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7b610fca3312301f06546ad10fd8ea2c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-5-서식-중등-8-2-1-6-개별화교육계획-운영-자체-점검표",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-6] 개별화교육계획 운영 자체 점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-6] 개별화교육계획 운영 자체 점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=66d716100f0c05c78b1cbf5c5e44c64a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=66d716100f0c05c78b1cbf5c5e44c64a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16527-cntntsid-7194-0-서식-초등-7-2-1-1-개별화교육계획서-예시안",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-초등-7-2-1-1] 개별화교육계획서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-초등-7-2-1-1] 개별화교육계획서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f6e2d3fd5fd6ba121197b9f1e73b4968",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f6e2d3fd5fd6ba121197b9f1e73b4968",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16527-cntntsid-7194-1-서식-초등-7-2-1-2-개별화교육계획-요구-조사서-예시안",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-초등-7-2-1-2] 개별화교육계획 요구 조사서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-초등-7-2-1-2] 개별화교육계획 요구 조사서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c2362cd45e3bb20336287d807d078a3d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c2362cd45e3bb20336287d807d078a3d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16527-cntntsid-7194-3-서식-초등-7-2-1-4-나이스-개별화교육계획-등록-동의서-예시안",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-초등-7-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-초등-7-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d38cd9802774b76dc0f5727fc1dd285b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d38cd9802774b76dc0f5727fc1dd285b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16527-cntntsid-7194-4-서식-초등-7-2-1-5-개별화교육지원팀-협의회-관련-서식-예시안",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-초등-7-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-초등-7-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a9b65acfcce76875d5fafc868ae918ca",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a9b65acfcce76875d5fafc868ae918ca",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16527-cntntsid-7194-5-서식-초등-7-2-1-6-개별화교육계획-운영-자체-점검표",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-초등-7-2-1-6] 개별화교육계획 운영 자체 점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-초등-7-2-1-6] 개별화교육계획 운영 자체 점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba3556748877e8fa5b1b9d39943b933c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba3556748877e8fa5b1b9d39943b933c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-0-서식-유특-6-2-1-1-개별화교육지원팀-운영안내-및-회의-유형-희망조사를-위한-가정통신문",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-1 개별화교육지원팀 운영안내 및 회의 유형 희망조사를 위한 가정통신문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-1 개별화교육지원팀 운영안내 및 회의 유형 희망조사를 위한 가정통신문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=27b72da572a18f7914dc8dd2e30b4f3b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=27b72da572a18f7914dc8dd2e30b4f3b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-9-서식-유특-6-2-1-10-개별화교육계획-운영-자체-점검표",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-10 개별화교육계획 운영 자체 점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-10 개별화교육계획 운영 자체 점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=26a51efc331d7bb939f451bfe370ca39",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=26a51efc331d7bb939f451bfe370ca39",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-1-서식-유특-6-2-1-2-개별화교육계획-기초-조사서",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-2 개별화교육계획 기초 조사서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-2 개별화교육계획 기초 조사서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e1a44d75102e859c50bb263b8e9ff9f6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e1a44d75102e859c50bb263b8e9ff9f6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-2-서식-유특-6-2-1-3-나이스-개별화교육계획-등록-동의",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-3 나이스 개별화교육계획 등록 동의",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-3 나이스 개별화교육계획 등록 동의",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a86bc62d349a05fa3e4b123c7f53094c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a86bc62d349a05fa3e4b123c7f53094c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-4-서식-유특-6-2-1-5-보호자-위임장",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-5 보호자 위임장",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-5 보호자 위임장",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6243f6c588b4e3ef012e95fcd688675",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6243f6c588b4e3ef012e95fcd688675",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-5-서식-유특-6-2-1-6-회의-안내-가정통신문",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-6 회의 안내 가정통신문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-6 회의 안내 가정통신문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ddf8a6c4592675147a337cd60eb7651c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ddf8a6c4592675147a337cd60eb7651c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-6-서식-유특-6-2-1-7-개별화교육지원팀-협의록",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-7 개별화교육지원팀 협의록",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-7 개별화교육지원팀 협의록",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=374ddb9eb136d10c7f5627c40ddd0b60",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=374ddb9eb136d10c7f5627c40ddd0b60",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-7-서식-유특-6-2-1-8-개별화교육지원팀-협의회-시나리오-예시",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-8 개별화교육지원팀 협의회 시나리오(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-8 개별화교육지원팀 협의회 시나리오(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bafdda693fe5b01d4353e648cbd4324f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bafdda693fe5b01d4353e648cbd4324f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-8-서식-유특-6-2-1-9-개별화교육계획-서식",
+      "category": "general",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-9 개별화교육계획 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-9 개별화교육계획 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1df32ec3dd1f81cedf2990cdd9707de3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1df32ec3dd1f81cedf2990cdd9707de3",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15625-cntntsid-7035-0-2023학년도-교육공무원-초등-인사관리지침-pdf",
+      "category": "general",
+      "type": "rule",
+      "title": "근무성적 평정 관련 규정 - 2023학년도 교육공무원(초등) 인사관리지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "근무성적 평정 근무성적 평정 관련 규정 2023학년도 교육공무원(초등) 인사관리지침.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a5affddbdecf16c5aa7e23083491a3dd",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -1568,259 +2518,3015 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1192624-2-대안교육기관등록제-주요질의모음-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15625-cntntsid-7035-2-2026학년도-교육공무원-중등-인사관리지침",
       "category": "general",
-      "type": "form",
-      "title": "대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 - 대안교육기관등록제 주요질의모음",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 대안교육기관등록제 주요질의모음.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_fd79v4f52=3fve3=4fvdc=87vd1=8fbbv462evbe24_v5798.hwp",
+      "type": "rule",
+      "title": "근무성적 평정 관련 규정 - 2026학년도 교육공무원(중등) 인사관리지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "근무성적 평정 근무성적 평정 관련 규정 2026학년도 교육공무원(중등) 인사관리지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d589d548f2c48b10cc91d41151c85b4a",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15704-cntntsid-6471-0-서식-초등-1-4-1-보결수업-배정-원칙-예시",
+      "category": "general",
+      "type": "form",
+      "title": "보결수업 규정 - [서식-초등-1-4-1] 보결수업 배정 원칙(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "보결수업 규정 [서식-초등-1-4-1] 보결수업 배정 원칙(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=533eadf9a805c9e7a2c6e38998e93406",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_fd79v4f52=3fve3=4fvdc=87vd1=8fbbv462evbe24_v5798.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=533eadf9a805c9e7a2c6e38998e93406",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15704-cntntsid-6471-2-서식-초등-1-4-3-보결-수업에-관한-규정",
       "category": "general",
       "type": "form",
-      "title": "대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 - 제출서식(동의서)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 제출서식(동의서).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+      "title": "보결수업 규정 - [서식-초등-1-4-3] 보결 수업에 관한 규정",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "보결수업 규정 [서식-초등-1-4-3] 보결 수업에 관한 규정",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=afc93008381068a22dc86be113b6688e",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=afc93008381068a22dc86be113b6688e",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1186466-0-1-생명사랑-남서부센터-상담의뢰서-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15628-cntntsid-7040-0-2024학년도-교육공무원-초등-중등-인사관리지침-hwp",
       "category": "general",
-      "type": "form",
-      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 1. 생명사랑 남서부센터 상담의뢰서",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 1. 생명사랑 남서부센터 상담의뢰서.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_aca8v13df=50vd0=4dv16=bfv7a=ef42v389bvc8cc_v9620.hwp",
+      "type": "rule",
+      "title": "연수성적 평정 관련 규정 - 2024학년도 교육공무원 초등, 중등 인사관리지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "연수성적 평정 연수성적 평정 관련 규정 2024학년도 교육공무원 초등, 중등 인사관리지침.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0e059ee6131579cf21d2f2447b8df071",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15628-cntntsid-7040-1-2026학년도-교육공무원-중등-인사관리지침",
+      "category": "general",
+      "type": "rule",
+      "title": "연수성적 평정 관련 규정 - 2026학년도 교육공무원 중등 인사관리지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "연수성적 평정 연수성적 평정 관련 규정 2026학년도 교육공무원 중등 인사관리지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d589d548f2c48b10cc91d41151c85b4a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-0-서식-중등-7-11-1-1-1-개인별상담카드",
+      "category": "general",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-중등–7-11-1-1-1] 개인별상담카드",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-중등–7-11-1-1-1] 개인별상담카드",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d72ab81fc6db3e162b4542717aad965c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_aca8v13df=50vd0=4dv16=bfv7a=ef42v389bvc8cc_v9620.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d72ab81fc6db3e162b4542717aad965c",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1186466-1-2-생명사랑-동북부센터-상담의뢰서-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-1-서식-중등-7-11-1-1-2-식습관조사",
       "category": "general",
       "type": "form",
-      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 2. 생명사랑 동북부센터 상담의뢰서",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 2. 생명사랑 동북부센터 상담의뢰서.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_0bc0v4a9f=abved=4fv18=a0vc7=7d3cvb43bv2509_v6836.hwp",
+      "title": "영양상담의 계획 - [서식-중등–7-11-1-1-2] 식습관조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-중등–7-11-1-1-2] 식습관조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f9c44c024ac60821a459de3bbdf651fa",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_0bc0v4a9f=abved=4fv18=a0vc7=7d3cvb43bv2509_v6836.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f9c44c024ac60821a459de3bbdf651fa",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1186466-2-3-교사용-학생-자살징후-체크리스트-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-2-서식-중등-7-11-1-1-3-운동습관조사",
       "category": "general",
       "type": "form",
-      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 3. 교사용 학생 자살징후 체크리스트",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 3. 교사용 학생 자살징후 체크리스트.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+      "title": "영양상담의 계획 - [서식-중등–7-11-1-1-3] 운동습관조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-중등–7-11-1-1-3] 운동습관조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a92f8b666ee5c790c26f40dfe88e041a",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a92f8b666ee5c790c26f40dfe88e041a",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1186466-3-4-생명사랑-기타참고자료-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-3-서식-중등-7-11-1-1-4-행동습관조사",
       "category": "general",
       "type": "form",
-      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 4. 생명사랑 기타참고자료",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 4. 생명사랑 기타참고자료.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_8f77vcfe0=a5v2b=48v1e=bav4f=dddave1f2v1978_v7291.hwp",
+      "title": "영양상담의 계획 - [서식-중등–7-11-1-1-4] 행동습관조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-중등–7-11-1-1-4] 행동습관조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8e140f67882991143e93adf499d42d89",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_8f77vcfe0=a5v2b=48v1e=bav4f=dddave1f2v1978_v7291.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8e140f67882991143e93adf499d42d89",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-4-서식-중등-7-11-1-1-5-감정과-식품섭취에-대한-조사",
       "category": "general",
       "type": "form",
-      "title": "생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 - [붙임1] 교사용 학생 자살 징후 체크리스트",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 [붙임1] 교사용 학생 자살 징후 체크리스트.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+      "title": "영양상담의 계획 - [서식-중등–7-11-1-1-5] 감정과 식품섭취에 대한 조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-중등–7-11-1-1-5] 감정과 식품섭취에 대한 조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d017db2ed422f4b51eda4da1803d12d8",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d017db2ed422f4b51eda4da1803d12d8",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1285472-1-붙임2-1-생명사랑-남서부센터-상담의뢰서-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-5-서식-중등-7-11-1-1-6-가족-식습관-조사",
       "category": "general",
       "type": "form",
-      "title": "생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 - [붙임2-1] 생명사랑 남서부센터 상담의뢰서",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 [붙임2-1] 생명사랑 남서부센터 상담의뢰서.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_efacv74b7=feva6=4fv82=8cv4a=1c29vf47evceb8_v833.hwp",
+      "title": "영양상담의 계획 - [서식-중등–7-11-1-1-6] 가족 식습관 조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-중등–7-11-1-1-6] 가족 식습관 조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a5d82d07a2e0cfba19d5d0c57f2d3747",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_efacv74b7=feva6=4fv82=8cv4a=1c29vf47evceb8_v833.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a5d82d07a2e0cfba19d5d0c57f2d3747",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1285472-2-붙임2-2-생명사랑-동북부센터-상담의뢰서-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-6-서식-중등-7-11-1-1-7-개인별상담카드개인별-상담자-카드-학생",
       "category": "general",
       "type": "form",
-      "title": "생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 - [붙임2-2] 생명사랑 동북부센터 상담의뢰서",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 [붙임2-2] 생명사랑 동북부센터 상담의뢰서.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_71ddv94c9=a7v1e=4bv9b=afv6e=e163vd53cv3895_v6918.hwp",
+      "title": "영양상담의 계획 - [서식-중등–7-11-1-1-7] 개인별상담카드개인별 상담자 카드(학생)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-중등–7-11-1-1-7] 개인별상담카드개인별 상담자 카드(학생)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ee79fb1e58e77d38df7f30262f2ed8b9",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_71ddv94c9=a7v1e=4bv9b=afv6e=e163vd53cv3895_v6918.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ee79fb1e58e77d38df7f30262f2ed8b9",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-0-서식-초등-6-6-1-1-개인별상담카드",
+      "category": "general",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-초등–6-6-1-1] 개인별상담카드",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-초등–6-6-1-1] 개인별상담카드",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1fdec1f357034c25b0544928f26cb5de",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1fdec1f357034c25b0544928f26cb5de",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-1-서식-초등-6-6-1-2-식습관조사",
+      "category": "general",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-초등–6-6-1-2] 식습관조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-초등–6-6-1-2] 식습관조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2c4324119f99989dd9318f100917ed7e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2c4324119f99989dd9318f100917ed7e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-2-서식-초등-6-6-1-3-운동습관조사",
+      "category": "general",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-초등–6-6-1-3] 운동습관조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-초등–6-6-1-3] 운동습관조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4d508c16512ac9b35ba0827db5119fa3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4d508c16512ac9b35ba0827db5119fa3",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-3-서식-초등-6-6-1-4-행동습관조사",
+      "category": "general",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-초등–6-6-1-4] 행동습관조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-초등–6-6-1-4] 행동습관조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c7ac6059c00558529ce2a340ca098833",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c7ac6059c00558529ce2a340ca098833",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-4-서식-초등-6-6-1-5-감정과-식품섭취에-대한-조사",
+      "category": "general",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-초등–6-6-1-5] 감정과 식품섭취에 대한 조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-초등–6-6-1-5] 감정과 식품섭취에 대한 조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8f30eaaaa10594ccc5769dd5f2e37d25",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8f30eaaaa10594ccc5769dd5f2e37d25",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-5-서식-초등-6-6-1-6-가족-식습관-조사",
+      "category": "general",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-초등–6-6-1-6] 가족 식습관 조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-초등–6-6-1-6] 가족 식습관 조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c9b44040e56fdf05e948469c2f5b05a8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c9b44040e56fdf05e948469c2f5b05a8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-6-서식-초등-6-6-1-7-개인별상담카드개인별-상담자-카드-학생",
+      "category": "general",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-초등–6-6-1-7] 개인별상담카드개인별 상담자 카드(학생)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-초등–6-6-1-7] 개인별상담카드개인별 상담자 카드(학생)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bf530c3fc4478d5fd8b8e015c8f4dfd4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bf530c3fc4478d5fd8b8e015c8f4dfd4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-8-학교-영앙상담-매뉴얼",
+      "category": "general",
+      "type": "guide",
+      "title": "영양상담의 계획 - 학교 영앙상담 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 학교 영앙상담 매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1cac6bb045765da905de85bbbdea8c07",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-9-학교-영양상담-매뉴얼",
+      "category": "general",
+      "type": "guide",
+      "title": "영양상담의 계획 - 학교 영양상담 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 학교 영양상담 매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1cac6bb045765da905de85bbbdea8c07",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16561-cntntsid-6995-0-서식-중등-8-4-1-1-치료지원서비스제공-계획서",
+      "category": "general",
+      "type": "form",
+      "title": "치료지원 - [서식-중등-8-4-1-1] 치료지원서비스제공 계획서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-1] 치료지원서비스제공 계획서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a309ae1953f7c0741b843afb9c8a50db",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a309ae1953f7c0741b843afb9c8a50db",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16537-cntntsid-7207-0-서식-초등-7-4-1-1-치료지원서비스제공-계획서",
+      "category": "general",
+      "type": "form",
+      "title": "치료지원 - [서식-초등-7-4-1-1] 치료지원서비스제공 계획서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-초등-7-4-1-1] 치료지원서비스제공 계획서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de41306c02604940aa46c2b87cb20b49",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de41306c02604940aa46c2b87cb20b49",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20887-cntntsid-8601-1-서식-유특-6-4-1-2-특수교육관련서비스-바우처카드-발급-신청서",
+      "category": "general",
+      "type": "form",
+      "title": "치료지원 - 서식-유특-6-4-1-2. 특수교육관련서비스 바우처카드 발급 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 서식-유특-6-4-1-2. 특수교육관련서비스 바우처카드 발급 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=705f6b53fab2b5949ae6ec41d9969aa6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=705f6b53fab2b5949ae6ec41d9969aa6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20887-cntntsid-8601-2-서식-유특-6-4-1-3-특수교육대상학생-치료지원-신청-안내-가정통신문-예시",
+      "category": "general",
+      "type": "form",
+      "title": "치료지원 - 서식-유특-6-4-1-3. 특수교육대상학생 치료지원 신청 안내 가정통신문(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 서식-유특-6-4-1-3. 특수교육대상학생 치료지원 신청 안내 가정통신문(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a9b38d46f2587afaf9e73b94271c9faa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a9b38d46f2587afaf9e73b94271c9faa",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20887-cntntsid-8601-5-서식-유특-6-4-1-6-장애인학대관련범죄등-경력-조회-동의서",
+      "category": "general",
+      "type": "form",
+      "title": "치료지원 - 서식-유특-6-4-1-6. 장애인학대관련범죄등 경력 조회 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 서식-유특-6-4-1-6. 장애인학대관련범죄등 경력 조회 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c12dcf95b2af7ac2d38f45998ebc65ac",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c12dcf95b2af7ac2d38f45998ebc65ac",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20887-cntntsid-8601-6-서식-유특-6-4-1-7-경북i짱짱카드-포인트-추가-요청서",
+      "category": "general",
+      "type": "form",
+      "title": "치료지원 - 서식-유특-6-4-1-7. 경북i짱짱카드 포인트 추가 요청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 서식-유특-6-4-1-7. 경북i짱짱카드 포인트 추가 요청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=803274e205b38a22b06e794a57bc4250",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=803274e205b38a22b06e794a57bc4250",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20887-cntntsid-8601-7-서식-유특-6-4-1-8-특수교육대상학생-치료지원-내용-변경-신청서",
+      "category": "general",
+      "type": "form",
+      "title": "치료지원 - 서식-유특-6-4-1-8. 특수교육대상학생 치료지원 내용 변경 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 서식-유특-6-4-1-8. 특수교육대상학생 치료지원 내용 변경 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9640408b1948e192e3176595730bbae2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9640408b1948e192e3176595730bbae2",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14799-cntntsid-7218-0-서식-초등-8-3-1-1-타시도-희망내신프로그램-학교용-매뉴얼-2023",
+      "category": "general",
+      "type": "form",
+      "title": "타시･도교류(전출) - [서식-초등-8-3-1-1] 타시도 희망내신프로그램_학교용 매뉴얼(2023)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "타시도교류(전출)교환(파견) 타시･도교류(전출) [서식-초등-8-3-1-1] 타시도 희망내신프로그램_학교용 매뉴얼(2023)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1427db567da608590f1bac9bf48ff655",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1427db567da608590f1bac9bf48ff655",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20876-cntntsid-8639-1-서식-유특-6-1-1-2-특수교육대상학생-선정-배치-신청서",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-2 특수교육대상학생 선정 · 배치 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 선정 배치 특수교육대상자 신규 선정 배치 서식-유특-6-1-1-2 특수교육대상학생 선정 · 배치 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8867f24da36aadcd371982e89d0d842f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8867f24da36aadcd371982e89d0d842f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20876-cntntsid-8639-2-서식-유특-6-1-1-3-학교장-의견서",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-3 학교장 의견서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 선정 배치 특수교육대상자 신규 선정 배치 서식-유특-6-1-1-3 학교장 의견서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c8747ba906ec4875acfd69d49df4aeff",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c8747ba906ec4875acfd69d49df4aeff",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20876-cntntsid-8639-4-서식-유특-6-1-1-5-기초-조사-카드-담임교사용",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-5 기초 조사 카드(담임교사용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 선정 배치 특수교육대상자 신규 선정 배치 서식-유특-6-1-1-5 기초 조사 카드(담임교사용)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fba8b0dd252f9333827e7b28f4068df2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fba8b0dd252f9333827e7b28f4068df2",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20876-cntntsid-8639-5-서식-유특-6-1-1-6-기초-조사-카드-보호자용",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-6 기초 조사 카드(보호자용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 선정 배치 특수교육대상자 신규 선정 배치 서식-유특-6-1-1-6 기초 조사 카드(보호자용)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=68c6609c70815258097f119d4adc2de9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=68c6609c70815258097f119d4adc2de9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20876-cntntsid-8639-6-서식-유특-6-1-1-7-선정-배치-결과-통지서",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-7 선정 배치 결과 통지서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 선정 배치 특수교육대상자 신규 선정 배치 서식-유특-6-1-1-7 선정 배치 결과 통지서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ea2ed87e8e871f228ae616da29d0e1be",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ea2ed87e8e871f228ae616da29d0e1be",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20876-cntntsid-8639-7-서식-유특-6-1-1-8-학교장-기관장-의견서-건강장애학생용",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-8 학교장(기관장)의견서(건강장애학생용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 선정 배치 특수교육대상자 신규 선정 배치 서식-유특-6-1-1-8 학교장(기관장)의견서(건강장애학생용)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=950bdfc53ee37fb68c8311bf925651e6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=950bdfc53ee37fb68c8311bf925651e6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16522-cntntsid-7190-1-서식-초등-7-1-1-2-특수교육대상자-선정-배치-신청서",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-2] 특수교육대상자 선정·배치 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 특수교육대상자 신규 선정・배치 [서식-초등-7-1-1-2] 특수교육대상자 선정·배치 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=89a52cdb7915fcde695185896eadca7a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=89a52cdb7915fcde695185896eadca7a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16522-cntntsid-7190-2-서식-초등-7-1-1-3-학교장-의견서",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-3] 학교장 의견서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 특수교육대상자 신규 선정・배치 [서식-초등-7-1-1-3] 학교장 의견서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bbf7f912c1034f5467cb38bce8d5c4df",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bbf7f912c1034f5467cb38bce8d5c4df",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16522-cntntsid-7190-4-서식-초등-7-1-1-5-기초-조사-카드-담임교사용",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-5] 기초 조사 카드(담임교사용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 특수교육대상자 신규 선정・배치 [서식-초등-7-1-1-5] 기초 조사 카드(담임교사용)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0e54db71f3413bb05af8bbc9bfae4bac",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0e54db71f3413bb05af8bbc9bfae4bac",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20890-cntntsid-8604-0-서식-유특-6-5-1-1-특수교육실무사-학교-배치-신청서",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육실무사 지원 - 서식-유특-6-5-1-1 특수교육실무사 학교 배치 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원인력 특수교육실무사 지원 서식-유특-6-5-1-1 특수교육실무사 학교 배치 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f9d2b0702f3d2d9f5572286aba989f2b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f9d2b0702f3d2d9f5572286aba989f2b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20890-cntntsid-8604-1-서식-유특-6-5-1-2-특수교육실무사-지원-요구-학생-기초자료",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육실무사 지원 - 서식-유특-6-5-1-2 특수교육실무사 지원 요구 학생 기초자료",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원인력 특수교육실무사 지원 서식-유특-6-5-1-2 특수교육실무사 지원 요구 학생 기초자료",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=698e00f037acc459404fa3a67b88abe7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=698e00f037acc459404fa3a67b88abe7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20890-cntntsid-8604-2-서식-유특-6-5-1-3-특수교육실무사-지원-요구-학생-행동-평정표",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육실무사 지원 - 서식-유특-6-5-1-3 특수교육실무사 지원 요구 학생 행동 평정표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원인력 특수교육실무사 지원 서식-유특-6-5-1-3 특수교육실무사 지원 요구 학생 행동 평정표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5eccc1ec24c1c69ebc70f4a57d3e1732",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5eccc1ec24c1c69ebc70f4a57d3e1732",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20890-cntntsid-8604-3-서식-유특-6-5-1-4-특수교육실무사-운용-계획",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육실무사 지원 - 서식-유특-6-5-1-4 특수교육실무사 운용 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원인력 특수교육실무사 지원 서식-유특-6-5-1-4 특수교육실무사 운용 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=283273c452654612c87e7d20a0022c8f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=283273c452654612c87e7d20a0022c8f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20890-cntntsid-8604-5-서식-유특-6-5-1-6-특수교육실무사-업무일지-예시",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육실무사 지원 - 서식-유특-6-5-1-6 특수교육실무사 업무일지(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원인력 특수교육실무사 지원 서식-유특-6-5-1-6 특수교육실무사 업무일지(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5774291bc99d0ef2b6122208c39b65ad",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5774291bc99d0ef2b6122208c39b65ad",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-0-서식-초등-3-6-1-1-학생-중심-상담활동-지원",
+      "category": "general",
+      "type": "form",
+      "title": "학생상담 - [서식-초등-3-6-1-1]학생 중심 상담활동 지원",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생상담 [서식-초등-3-6-1-1]학생 중심 상담활동 지원",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b2944273b87fee8425e5c5ec0feccf8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b2944273b87fee8425e5c5ec0feccf8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-1-서식-초등-3-6-1-2-또래상담-도우미-프로그램-운영",
+      "category": "general",
+      "type": "form",
+      "title": "학생상담 - [서식-초등-3-6-1-2]또래상담(도우미)프로그램 운영",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생상담 [서식-초등-3-6-1-2]또래상담(도우미)프로그램 운영",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=78f4e7bb14cdd99326a7981dc0856ad4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=78f4e7bb14cdd99326a7981dc0856ad4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-2-서식-초등-3-6-1-3-학생학부모상담주간운영계획-예시",
+      "category": "general",
+      "type": "form",
+      "title": "학생상담 - [서식-초등-3-6-1-3]학생학부모상담주간운영계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생상담 [서식-초등-3-6-1-3]학생학부모상담주간운영계획(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9b39f5bad56f18fda6f005e17161abfc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9b39f5bad56f18fda6f005e17161abfc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14784-cntntsid-7245-0-서식-초등-8-9-1-1-학생생활교육",
+      "category": "general",
+      "type": "form",
+      "title": "학생생활교육 - [서식-초등-8-9-1-1] 학생생활교육",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생생활교육 [서식-초등-8-9-1-1] 학생생활교육",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d2a9a73c441732d1ea6bc9e3f040cdae",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d2a9a73c441732d1ea6bc9e3f040cdae",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14784-cntntsid-7245-1-서식-초등-8-9-1-2-2020년-회복적-생활교육-안내-자료",
+      "category": "general",
+      "type": "form",
+      "title": "학생생활교육 - [서식-초등-8-9-1-2] 2020년 회복적 생활교육 안내 자료",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생생활교육 [서식-초등-8-9-1-2] 2020년 회복적 생활교육 안내 자료",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6e2c3fa4adc6e69ceccb1bb78f8a6ac7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6e2c3fa4adc6e69ceccb1bb78f8a6ac7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-0-서식-교원인사-1-5-1-1-휴직원",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-1] 휴직원",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-1] 휴직원",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a8036a286ca1cfd2bcba82c4a0b15c52",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a8036a286ca1cfd2bcba82c4a0b15c52",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-9-서식-교원인사-1-5-1-10-유학휴직-서약서-계획서-학교장추천서",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-10]유학휴직 서약서_계획서_학교장추천서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-10]유학휴직 서약서_계획서_학교장추천서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cdd3e0affa643fdd3d99f8860ba53333",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cdd3e0affa643fdd3d99f8860ba53333",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-1-서식-교원인사-1-5-1-2-휴직-연장원",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-2] 휴직 연장원",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-2] 휴직 연장원",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=48af574272992f73fdefd8f67191f2b3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=48af574272992f73fdefd8f67191f2b3",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-2-서식-교원인사-1-5-1-3-복직원",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-3] 복직원",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-3] 복직원",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6167474e90fe1dbbbc6a7907a3c2234e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6167474e90fe1dbbbc6a7907a3c2234e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-3-서식-교원인사-1-5-1-4-학교장-의견서",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-4] 학교장 의견서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-4] 학교장 의견서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=80ccb54900397ec3c2d12250f148ceb1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=80ccb54900397ec3c2d12250f148ceb1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-4-서식-교원인사-1-5-1-5-휴직교원-유의사항-확인서",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-5] 휴직교원 유의사항 확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-5] 휴직교원 유의사항 확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=08b2444aa8ac8f559ff99a60001862cc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=08b2444aa8ac8f559ff99a60001862cc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-5-서식-교원인사-1-5-1-6-자율연수휴직-신청서-계획서-보고서",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-6] 자율연수휴직 신청서, 계획서, 보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-6] 자율연수휴직 신청서, 계획서, 보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ddbf4807901c3d389089e4ee0ef0e7cd",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ddbf4807901c3d389089e4ee0ef0e7cd",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-6-서식-교원인사-1-5-1-7-휴직자-실태보고서",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-7] 휴직자 실태보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-7] 휴직자 실태보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dd056f60d112b4efdb7eb264e0044acc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dd056f60d112b4efdb7eb264e0044acc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-7-서식-교원인사-1-5-1-8-휴직자-근무실태-자체점검-관리대장",
+      "category": "general",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-8] 휴직자 근무실태 자체점검 관리대장",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-8] 휴직자 근무실태 자체점검 관리대장",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d680e6668b7884a18d5ccae416ab5cd6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d680e6668b7884a18d5ccae416ab5cd6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1380208-1-정보공개-운영-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "[유초등교육과] 2024학년도 학업성적관리업무 자체 점검표(단위학교용) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "점검표 [유초등교육과] 2024학년도 학업성적관리업무 자체 점검표(단위학교용) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1598674-0-정보공개-운영-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "[유초등교육과] 2026 글벗과 함께하는 노벨 문학 배움터 운영 계획 및 관련 서식 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026 글벗과 함께하는 노벨 문학 배움터 운영 계획 및 관련 서식 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1600838-0-정보공개-운영-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "[유초등교육과] 2026 책벗 공방 운영 계획 및 관련 서식 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026 책벗 공방 운영 계획 및 관련 서식 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587951-0-정보공개-운영-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "[유초등교육과] 2026년 교육공무원 성과상여금 지급 관련 서식 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026년 교육공무원 성과상여금 지급 관련 서식 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1609886-1-정보공개-운영-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "[중등교육과] [자료] 교수-학습 과정안(서식) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [중등교육과] [자료] 교수-학습 과정안(서식) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587954-0-정보공개-운영-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "[중등교육과] 2026 성과상여금 관련 서식 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [중등교육과] 2026 성과상여금 관련 서식 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587680-2-정보공개-운영-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "[체육건강과] 2026학년도 학교 환경관리 기본방향(엑셀 보고 서식 포함) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [체육건강과] 2026학년도 학교 환경관리 기본방향(엑셀 보고 서식 포함) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-909755-0-정보공개-운영-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "[학생생활과] 생명사랑 교육활동 자료 및 점검표 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "점검표 [학생생활과] 생명사랑 교육활동 자료 및 점검표 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-2-서식-중등-8-2-1-3-개인정보활용동의서-예시안",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-3] 개인정보활용동의서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-3] 개인정보활용동의서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b63f5880f4dd9f1dd5cdc493ff458113",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b63f5880f4dd9f1dd5cdc493ff458113",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16527-cntntsid-7194-2-서식-초등-7-2-1-3-개인정보활용동의서-예시안",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-초등-7-2-1-3] 개인정보활용동의서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-초등-7-2-1-3] 개인정보활용동의서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d62c2e0ed7fc82acc6479af1afb6eea8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d62c2e0ed7fc82acc6479af1afb6eea8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20880-cntntsid-8595-3-서식-유특-6-2-1-4-개인정보-활용동의서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개별화교육계획 - 서식-유특-6-2-1-4 개인정보 활용동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육지원 개별화교육계획 서식-유특-6-2-1-4 개인정보 활용동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f543e7d18e1c47a767b6eca9412dff13",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f543e7d18e1c47a767b6eca9412dff13",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20867-cntntsid-8635-0-서식-유-6-2-1-1-개인정보-보호-내부-관리계획-기안문",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 - [서식-유-6-2-1-1] 개인정보 보호 내부 관리계획 기안문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 [서식-유-6-2-1-1] 개인정보 보호 내부 관리계획 기안문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=63bafae8628dfcc34e6e08d91dbc085e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=63bafae8628dfcc34e6e08d91dbc085e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20867-cntntsid-8635-1-서식-유-6-2-1-2-개인정보-보호-내부-관리계획",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 - [서식-유-6-2-1-2] 개인정보 보호 내부 관리계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 [서식-유-6-2-1-2] 개인정보 보호 내부 관리계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2e2bca223cc9ca3339d8a5b200e5e0bc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2e2bca223cc9ca3339d8a5b200e5e0bc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20867-cntntsid-8635-2-서식-유-6-2-1-3-개인정보-보호-업무-추진-계획-수립-기안문",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 - [서식-유-6-2-1-3] 개인정보 보호 업무 추진 계획 수립 기안문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 [서식-유-6-2-1-3] 개인정보 보호 업무 추진 계획 수립 기안문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=421668c504dbf0b9e7c3a7351cf04e5f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=421668c504dbf0b9e7c3a7351cf04e5f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20867-cntntsid-8635-3-서식-유-6-2-1-4-개인정보-보호-업무-추진-계획",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 - [서식-유-6-2-1-4] 개인정보 보호 업무 추진 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 [서식-유-6-2-1-4] 개인정보 보호 업무 추진 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=da71e13a6e7223457dbec62e32f3d765",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=da71e13a6e7223457dbec62e32f3d765",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20867-cntntsid-8635-4-서식-유-6-2-1-6-개인정보-처리방침",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 - [서식-유-6-2-1-6] 개인정보 처리방침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 [서식-유-6-2-1-6] 개인정보 처리방침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c3c51bf442f8f61f757d532e1fc98553",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c3c51bf442f8f61f757d532e1fc98553",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15799-cntntsid-6802-0-서식-중등-6-13-1-1-개인정보-내부관리-계획-예시",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 보호 업무 - [서식-중등-6-13-1-1] 개인정보 내부관리 계획 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 보호 개인정보 보호 업무 [서식-중등-6-13-1-1] 개인정보 내부관리 계획 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ff240dad3cd8af2b2983cc69b616f05d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ff240dad3cd8af2b2983cc69b616f05d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15799-cntntsid-6802-1-서식-중등-6-13-1-3-각급학교-개인정보-수집업무-길잡이-중고용",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 보호 업무 - [서식-중등-6-13-1-3] 각급학교 개인정보 수집업무 길잡이(중고용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 보호 개인정보 보호 업무 [서식-중등-6-13-1-3] 각급학교 개인정보 수집업무 길잡이(중고용)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=eb15179dc4049ee2bff4037613d28136",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=eb15179dc4049ee2bff4037613d28136",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15799-cntntsid-6802-2-서식-중등-6-13-1-4-개인정보-수집-이용-제공-동의서-학년초-사안별-hwp",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 보호 업무 - [서식-중등-6-13-1-4] 개인정보 수집·이용·제공 동의서(학년초, 사안별)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 보호 개인정보 보호 업무 [서식-중등-6-13-1-4] 개인정보 수집·이용·제공 동의서(학년초, 사안별).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0129f3402c31b6f5682ed11da7cc909a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0129f3402c31b6f5682ed11da7cc909a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15799-cntntsid-6802-3-서식-중등-6-13-1-5-공문서-처리-관련-유의사항-개인정보-및-민감정보-공개-업무-비관련자-공람-hwp",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 보호 업무 - [서식-중등-6-13-1-5] 공문서 처리 관련 유의사항(개인정보 및 민감정보 공개, 업무 비관련자 공람)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 보호 개인정보 보호 업무 [서식-중등-6-13-1-5] 공문서 처리 관련 유의사항(개인정보 및 민감정보 공개, 업무 비관련자 공람).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4f14c2786e00ef92eaf40cb54d020842",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4f14c2786e00ef92eaf40cb54d020842",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15799-cntntsid-6802-4-서식-중등-6-13-1-6-개인정보파일-등록-변경등록-신청서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 보호 업무 - [서식-중등-6-13-1-6] 개인정보파일 (등록, 변경등록) 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 보호 개인정보 보호 업무 [서식-중등-6-13-1-6] 개인정보파일 (등록, 변경등록) 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=21e9e50959e08910d90d582578b11d89",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=21e9e50959e08910d90d582578b11d89",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15799-cntntsid-6802-5-서식-중등-6-13-1-8-개인정보처리방침-홈페이지탑재-관리-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 보호 업무 - [서식-중등-6-13-1-8] 개인정보처리방침(홈페이지탑재) 관리 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 보호 개인정보 보호 업무 [서식-중등-6-13-1-8] 개인정보처리방침(홈페이지탑재) 관리 매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1267844ab297da177106bc1c70baceec",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1267844ab297da177106bc1c70baceec",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-0-서식-초등-4-1-1-1-각-급-학교-개인정보-수집업무-길잡이-초등용-hwp",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 파일 등록 - [서식-초등-4-1-1-1] 각 급 학교 개인정보 수집업무 길잡이(초등용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보보호 개인정보 파일 등록 [서식-초등-4-1-1-1] 각 급 학교 개인정보 수집업무 길잡이(초등용).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28697a866f374ae96b33001bf71c0dec",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28697a866f374ae96b33001bf71c0dec",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-1-서식-초등-4-1-1-2-개인정보-점검-프로그램-실행-방법",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 파일 등록 - [서식-초등-4-1-1-2] 개인정보 점검 프로그램 실행 방법",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보보호 개인정보 파일 등록 [서식-초등-4-1-1-2] 개인정보 점검 프로그램 실행 방법",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cd34524d742523f3efbb8b1b09e40bf4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cd34524d742523f3efbb8b1b09e40bf4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-2-서식-초등-4-1-1-3-2025년-개인정보파일-등록-매뉴얼",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 파일 등록 - [서식-초등-4-1-1-3] 2025년 개인정보파일 등록 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보보호 개인정보 파일 등록 [서식-초등-4-1-1-3] 2025년 개인정보파일 등록 매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e310c73763c38a006e8e504cf0297908",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e310c73763c38a006e8e504cf0297908",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-7-서식-초등-6-6-1-8-월-상담기록부",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식-초등–6-6-1-8] ( )월 상담기록부",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식-초등–6-6-1-8] ( )월 상담기록부",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8d5ae18417b6286f167fbc15c72e14b3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8d5ae18417b6286f167fbc15c72e14b3",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15076-cntntsid-6900-7-서식-중등-7-11-1-1-8-월-상담기록부",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "영양상담의 계획 - [서식–중등-7-11-1-1-8] ○○월 상담기록부",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 [서식–중등-7-11-1-1-8] ○○월 상담기록부",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=076178e468a40d57a545ac022bfed508",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=076178e468a40d57a545ac022bfed508",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15284-cntntsid-6458-3-정보공개-매뉴얼",
+      "category": "privacyRecords",
+      "type": "guide",
+      "title": "정보공개 청구 및 접수 - 정보공개 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "정보공개 정보공개 청구 및 접수 정보공개 매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a64155a1f38aaf37da5914182865b147",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16561-cntntsid-6995-3-서식-중등-8-4-1-4-개인정보-수집-이용-제공-활용-동의서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "치료지원 - [서식-중등-8-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=847c16425feff28de054a8c64d60cbad",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=847c16425feff28de054a8c64d60cbad",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16537-cntntsid-7207-3-서식-초등-7-4-1-4-개인정보-수집-이용-제공-활용-동의서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "치료지원 - [서식-초등-7-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-초등-7-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bcb49a787fa913233308d359c1af9bd1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bcb49a787fa913233308d359c1af9bd1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20887-cntntsid-8601-3-서식-유특-6-4-1-4-개인정보-수집-이용에-관한-동의서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "치료지원 - 서식-유특-6-4-1-4. 개인정보 수집·이용에 관한 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 서식-유특-6-4-1-4. 개인정보 수집·이용에 관한 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6e3cef0cedfe72e3784fe04f936509d9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6e3cef0cedfe72e3784fe04f936509d9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20876-cntntsid-8639-3-서식-유특-6-1-1-4-개인정보-수집-이용에-관한-동의서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-4 개인정보 수집 · 이용에 관한 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 선정 배치 특수교육대상자 신규 선정 배치 서식-유특-6-1-1-4 개인정보 수집 · 이용에 관한 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5ea758954420e4ccc7362082a772fe45",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5ea758954420e4ccc7362082a772fe45",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16522-cntntsid-7190-3-서식-초등-7-1-1-4-개인정보-수집-및-이용-동의서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-4] 개인정보 수집 및 이용 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 특수교육대상자 신규 선정・배치 [서식-초등-7-1-1-4] 개인정보 수집 및 이용 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=486902efc3c7a650e99b4ad5033ea270",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=486902efc3c7a650e99b4ad5033ea270",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20890-cntntsid-8604-4-서식-유특-6-5-1-5-개인정보-수집이용에-관한-동의서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "특수교육실무사 지원 - 서식-유특-6-5-1-5 개인정보 수집이용에 관한 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원인력 특수교육실무사 지원 서식-유특-6-5-1-5 개인정보 수집이용에 관한 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=38e246fdd771f592475aef1cdfe370a5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=38e246fdd771f592475aef1cdfe370a5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1594788-0-붙임1-2026-초등돌봄교육-운영-길라잡이-서식-98-수정사항-hwp",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "[교육복지과] 2026 초등돌봄교육(늘봄학교) 운영 길라잡이 서식 일부 수정 - [붙임1] 2026 초등돌봄교육 운영 길라잡이 서식 98 수정사항",
+      "provider": "경상북도교육청",
+      "query": "서식 [교육복지과] 2026 초등돌봄교육(늘봄학교) 운영 길라잡이 서식 일부 수정 [붙임1] 2026 초등돌봄교육 운영 길라잡이 서식 98 수정사항.hwp",
+      "url": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_5404v99dd=7cv2b=4cv46=advb5=21a7v9325v1243_v3979.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_5404v99dd=7cv2b=4cv46=advb5=21a7v9325v1243_v3979.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1594788-1-붙임2-2026-초등돌봄교육-운영-길라잡이-서식-98-신구대조표-hwp",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "[교육복지과] 2026 초등돌봄교육(늘봄학교) 운영 길라잡이 서식 일부 수정 - [붙임2] 2026 초등돌봄교육 운영 길라잡이 서식 98 신구대조표",
+      "provider": "경상북도교육청",
+      "query": "서식 [교육복지과] 2026 초등돌봄교육(늘봄학교) 운영 길라잡이 서식 일부 수정 [붙임2] 2026 초등돌봄교육 운영 길라잡이 서식 98 신구대조표.hwp",
+      "url": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_07b0vbc63=d7v74=4bv4f=9fvef=05d4v8c67v272d_v1178.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_07b0vbc63=d7v74=4bv4f=9fvef=05d4v8c67v272d_v1178.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1594788-2-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "[교육복지과] 2026 초등돌봄교육(늘봄학교) 운영 길라잡이 서식 일부 수정 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [교육복지과] 2026 초등돌봄교육(늘봄학교) 운영 길라잡이 서식 일부 수정 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1594788-3-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "[교육복지과] 2026 초등돌봄교육(늘봄학교) 운영 길라잡이 서식 일부 수정 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [교육복지과] 2026 초등돌봄교육(늘봄학교) 운영 길라잡이 서식 일부 수정 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1506762-0-경상북도학교운영위원장협의회-회장-입후보자-등록서-hwp",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "[행정과] (서식)2025년 경상북도 학교운영위원장협의회 회장 입후보자 등록서",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] (서식)2025년 경상북도 학교운영위원장협의회 회장 입후보자 등록서 경상북도학교운영위원장협의회 회장 입후보자 등록서.hwp",
+      "url": "https://www.gbe.kr/upload/dep_asn/na/bbs_2710/ntt_1506762/doc_1064v8aac=1bv57=4fv64=90v9a=11dev2f9av83d9_v4262.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_asn/na/bbs_2710/ntt_1506762/doc_1064v8aac=1bv57=4fv64=90v9a=11dev2f9av83d9_v4262.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1506762-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "[행정과] (서식)2025년 경상북도 학교운영위원장협의회 회장 입후보자 등록서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] (서식)2025년 경상북도 학교운영위원장협의회 회장 입후보자 등록서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1506762-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "[행정과] (서식)2025년 경상북도 학교운영위원장협의회 회장 입후보자 등록서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] (서식)2025년 경상북도 학교운영위원장협의회 회장 입후보자 등록서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-571423-0-2019년도학운위운영계획-hwp",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 2019년 학교운영위원회 운영계획 - 2019년도학운위운영계획",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 2019년 학교운영위원회 운영계획 2019년도학운위운영계획.hwp",
+      "url": "https://www.gbe.kr/uploads/BOARD/2019/03/BOARD_201903061050539176156030.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-571423-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 2019년 학교운영위원회 운영계획 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 2019년 학교운영위원회 운영계획 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-571423-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 2019년 학교운영위원회 운영계획 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 2019년 학교운영위원회 운영계획 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1561095-0-2025-학교운영위원회-길잡이-최종본-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 2025 학교운영위원회 길잡이",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 2025 학교운영위원회 길잡이 2025 학교운영위원회 길잡이(최종본).pdf",
+      "url": "https://www.gbe.kr/upload/dep_asn/na/bbs_2710/ntt_1561095/doc_95d5vdab7=d0vdf=41vec=80v9c=1ea6vd1cev2d04_v5649.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1561095-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 2025 학교운영위원회 길잡이 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 2025 학교운영위원회 길잡이 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1561095-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 2025 학교운영위원회 길잡이 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 2025 학교운영위원회 길잡이 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1481405-0-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 학교운영위원회 핸드북 e-book(QR코드) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 학교운영위원회 핸드북 e-book(QR코드) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1481405-1-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 학교운영위원회 핸드북 e-book(QR코드) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 학교운영위원회 핸드북 e-book(QR코드) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1361451-0-학교운영위원회-핸드북-2023년-개정-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 학교운영위원회 핸드북(2023년 개정)",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 학교운영위원회 핸드북(2023년 개정) 학교운영위원회 핸드북(2023년 개정).pdf",
+      "url": "https://www.gbe.kr/upload/dep_asn/na/bbs_2710/ntt_1361451/doc_fd64v90db=41v17=4dv7b=8cv4c=2929vf8bcv3d6b_v8142.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1361451-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 학교운영위원회 핸드북(2023년 개정) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 학교운영위원회 핸드북(2023년 개정) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1361451-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "[행정과] 학교운영위원회 핸드북(2023년 개정) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영 [행정과] 학교운영위원회 핸드북(2023년 개정) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-772868-0-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2019 유치원운영위원회 길잡이 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "위원회 2019 유치원운영위원회 길잡이 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-405635-0-2019년도학운위운영계획-hwp",
@@ -1844,7 +5550,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-405635-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2019년도 학교운영위원회 운영계획 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2019년도 학교운영위원회 운영계획 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-405635-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2019년도 학교운영위원회 운영계획 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2019년도 학교운영위원회 운영계획 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-389974-0-2019학년도-학교회계-예산편성-기본지침-업로드-hwp",
@@ -1868,7 +5622,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-389974-1-2019학년도-학교회계-예산편성-기본지침-pdf-pdf",
@@ -1892,7 +5646,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-389974-2-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2019학년도 공립학교 학교회계 예산편성 기본지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2019학년도 공립학교 학교회계 예산편성 기본지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-389974-3-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2019학년도 공립학교 학교회계 예산편성 기본지침 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2019학년도 공립학교 학교회계 예산편성 기본지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-772874-0-2020년도학운위운영계획-홍보-hwp",
@@ -1916,7 +5718,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-772874-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2020년도 학교운영위원회 운영 계획 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2020년도 학교운영위원회 운영 계획 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-772874-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2020년도 학교운영위원회 운영 계획 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2020년도 학교운영위원회 운영 계획 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-389975-0-2020학년도-학교회계-예산편성-기본지침-2019-11-29-홈페이지-hwp",
@@ -1940,7 +5790,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-389975-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2020학년도 공립학교 학교회계 예산편성 기본지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2020학년도 공립학교 학교회계 예산편성 기본지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-389975-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2020학년도 공립학교 학교회계 예산편성 기본지침 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2020학년도 공립학교 학교회계 예산편성 기본지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-974526-0-2021년-학교운영위원회-핸드북-최종완료-수정-hwp",
@@ -1964,7 +5862,79 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-974526-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2021 학교운영위원회 핸드북 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2021 학교운영위원회 핸드북 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-974526-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2021 학교운영위원회 핸드북 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2021 학교운영위원회 핸드북 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1191645-0-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2021년 유치원운영위원회 학부모 지원 자료(교육부) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "위원회 2021년 유치원운영위원회 학부모 지원 자료(교육부) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-884918-0-2021학년도-학교회계-예산편성-기본지침-2021-홈페이지-hwp",
@@ -1988,7 +5958,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-884918-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2021학년도 공립학교 학교회계 예산편성 기본지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2021학년도 공립학교 학교회계 예산편성 기본지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-884918-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2021학년도 공립학교 학교회계 예산편성 기본지침 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2021학년도 공립학교 학교회계 예산편성 기본지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-983816-0-2022학년도-학교회계-예산편성-기본지침-최종-hwp",
@@ -2012,7 +6030,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-983816-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2022학년도 공립학교 학교회계 예산편성 기본지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2022학년도 공립학교 학교회계 예산편성 기본지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-983816-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2022학년도 공립학교 학교회계 예산편성 기본지침 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2022학년도 공립학교 학교회계 예산편성 기본지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-1283157-0-붙임-2023년도-학교운영위원회-운영계획-발송-hwp",
@@ -2040,7 +6106,79 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1283157-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2023년 학교운영위원회 운영 계획 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2023년 학교운영위원회 운영 계획 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1283157-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2023년 학교운영위원회 운영 계획 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2023년 학교운영위원회 운영 계획 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1399486-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2023년 학교운영위원회 핸드북 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2023년 학교운영위원회 핸드북 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-1399486-0-학교운영위원회-핸드북-2023년-개정-pdf",
@@ -2064,7 +6202,31 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1399486-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2023년 학교운영위원회 핸드북 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2023년 학교운영위원회 핸드북 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1264173-0-2023학년도-학교회계-예산편성-기본지침-최종-pdf",
@@ -2088,7 +6250,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1264173-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2023학년도 공립학교회계 예산편성 기본지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2023학년도 공립학교회계 예산편성 기본지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1264173-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2023학년도 공립학교회계 예산편성 기본지침 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2023학년도 공립학교회계 예산편성 기본지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1297292-0-2023-3-2-2023학년도-학교회계-예산편성-기본지침-최종-개정사항-반영-pdf",
@@ -2112,7 +6322,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1297292-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2023학년도 공립학교회계 예산편성 기본지침(개정) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2023학년도 공립학교회계 예산편성 기본지침(개정) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1297292-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2023학년도 공립학교회계 예산편성 기본지침(개정) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2023학년도 공립학교회계 예산편성 기본지침(개정) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1357166-0-2024학년도-공립학교회계-예산편성-기본지침-홈페이지-pdf",
@@ -2136,7 +6394,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1357166-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2024학년도 공립학교회계 예산편성 기본지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2024학년도 공립학교회계 예산편성 기본지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1357166-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2024학년도 공립학교회계 예산편성 기본지침 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2024학년도 공립학교회계 예산편성 기본지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-1577076-0-2025-학교운영위원회-길잡이-최종본-pdf",
@@ -2160,7 +6466,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1577076-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2025 학교운영위원회 길잡이 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2025 학교운영위원회 길잡이 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1577076-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2025 학교운영위원회 길잡이 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2025 학교운영위원회 길잡이 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1459768-0-2025-공립학교회계예산편성-지침-최종-인쇄본-pdf",
@@ -2184,7 +6538,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1459768-1-2025학년도-공립학교회계-예산편성-기본지침-인쇄본-hwp",
@@ -2208,7 +6562,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1459768-2-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2025학년도 공립학교회계 예산편성 기본지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2025학년도 공립학교회계 예산편성 기본지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1459768-3-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2025학년도 공립학교회계 예산편성 기본지침 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2025학년도 공립학교회계 예산편성 기본지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1564258-1-최종-2026학년도-공립학교회계-예산편성-기본지침-pdf",
@@ -2232,7 +6634,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1564258-0-2026학년도-공립학교회계-예산편성-기본지침-hwp",
@@ -2256,7 +6658,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1564258-2-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2026학년도 공립학교회계 예산편성 기본지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2026학년도 공립학교회계 예산편성 기본지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1564258-3-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2026학년도 공립학교회계 예산편성 기본지침 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2026학년도 공립학교회계 예산편성 기본지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1610395-0-2026학년도-공립학교회계-예산편성-기본지침-변경사항-게시용-pdf",
@@ -2280,7 +6730,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1610395-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2026학년도 공립학교회계 예산편성 기본지침 변경사항 안내 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2026학년도 공립학교회계 예산편성 기본지침 변경사항 안내 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1610395-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2026학년도 공립학교회계 예산편성 기본지침 변경사항 안내 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "예산편성 2026학년도 공립학교회계 예산편성 기본지침 변경사항 안내 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-1609517-0-2026학년도-학교운영위원회-운영-계획-hwp",
@@ -2304,35 +6802,1579 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "id": "harvest-gbe-school-committee-1609517-1-정보공개-운영-매뉴얼",
       "category": "schoolAdmin",
-      "type": "form",
-      "title": "대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 - 제출서식(소방시설등 자체점검 실시결과 보고서)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 제출서식(소방시설등 자체점검 실시결과 보고서).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+      "type": "guide",
+      "title": "2026학년도 학교운영위원회 운영 계획 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2026학년도 학교운영위원회 운영 계획 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1609517-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "2026학년도 학교운영위원회 운영 계획 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 2026학년도 학교운영위원회 운영 계획 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15872-cntntsid-7048-0-서식-관리-4-2-1-1-계약-관리-세부-안내-사항-2025년-7월",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "계약 관리 - [서식-관리-4-2-1-1] 계약 관리 세부 안내 사항_2025년 7월",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약 관리 [서식-관리-4-2-1-1] 계약 관리 세부 안내 사항_2025년 7월",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=65c2937c465ffab0cc7ec95e34b8ec4f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=65c2937c465ffab0cc7ec95e34b8ec4f",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15387-cntntsid-6684-0-2025-늘봄학교-운영-길라잡이-서식편",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "계획 및 준비(사업부서) - 2025 늘봄학교 운영 길라잡이(서식편)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후학교 교육활동비 계획 및 준비(사업부서) 2025 늘봄학교 운영 길라잡이(서식편)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=aba82e335b2c3de69595242f3532ca3b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=aba82e335b2c3de69595242f3532ca3b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14795-cntntsid-7213-1-서식-초등-8-2-3-2-행정처분및징계자현황-교사용-서식",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "근무성적평정 - [서식-초등-8-2-3-2] 행정처분및징계자현황(교사용)(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "근무성적평정 [서식-초등-8-2-3-2] 행정처분및징계자현황(교사용)(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=95fd5ea7fd52f25b42bbe59f56d820fa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=95fd5ea7fd52f25b42bbe59f56d820fa",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-0-서식-유-4-1-1-1-방과후-과정-운영계획",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-1] 방과후 과정 운영계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-1] 방과후 과정 운영계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e0d9d0e76ebd2d641c8e1216ab9398f2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e0d9d0e76ebd2d641c8e1216ab9398f2",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-9-서식-유-4-1-1-10-귀가일지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-10] 귀가일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-10] 귀가일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1389c06b805b1b14608552fa968c9f1c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1389c06b805b1b14608552fa968c9f1c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-10-서식-유-4-1-1-11-방과후-과정-운영-점검표",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-11] 방과후 과정 운영 점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-11] 방과후 과정 운영 점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=53a28d5a64b8c9566e463bea66420427",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=53a28d5a64b8c9566e463bea66420427",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-11-서식-유-4-1-1-12-학부모-설문조사",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-12] 학부모 설문조사",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-12] 학부모 설문조사",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6cdcb661ecacc5bba6da47712dcad26",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6cdcb661ecacc5bba6da47712dcad26",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-12-서식-유-4-1-1-13-간식일지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-13] 간식일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-13] 간식일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2be5f1fd7e90147bd20702fa8f7feabc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2be5f1fd7e90147bd20702fa8f7feabc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-13-서식-유-4-1-1-14-유치원-보존식표",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-14] 유치원 보존식표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-14] 유치원 보존식표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=942260f03772763ddb407e5f645cbfa7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=942260f03772763ddb407e5f645cbfa7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-14-서식-유-4-1-1-19-엄마품돌봄-운영-계획",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-19] 엄마품돌봄 운영 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-19] 엄마품돌봄 운영 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f976855ba0c1da2aaf5eff47cf95f77f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f976855ba0c1da2aaf5eff47cf95f77f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-1-서식-유-4-1-1-2-방과후-과정-운영계획-심의",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-2] 방과후 과정 운영계획 심의",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-2] 방과후 과정 운영계획 심의",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=398e297fba6f47010c453826ea8d5578",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=398e297fba6f47010c453826ea8d5578",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-15-서식-유-4-1-1-20-엄마품돌봄-신청서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-20] 엄마품돌봄 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-20] 엄마품돌봄 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=36b98ed9b744bd7ae205e7b877849707",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=36b98ed9b744bd7ae205e7b877849707",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-16-서식-유-4-1-1-21-엄마품돌봄-출석부",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-21] 엄마품돌봄 출석부",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-21] 엄마품돌봄 출석부",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c686c7f89e635f957e6ec1932bcad3ca",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c686c7f89e635f957e6ec1932bcad3ca",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-17-서식-유-4-1-1-22-엄마품돌봄-비상연락망",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-22] 엄마품돌봄 비상연락망",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-22] 엄마품돌봄 비상연락망",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88adf144381bdb29f74e5269314ef08f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88adf144381bdb29f74e5269314ef08f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-18-서식-유-4-1-1-23-엄마품돌봄-등하원일지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-23] 엄마품돌봄 등하원일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-23] 엄마품돌봄 등하원일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13d63ecba526a280beac5e3966875bd5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13d63ecba526a280beac5e3966875bd5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-19-서식-유-4-1-1-24-엄마품돌봄-귀가일지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-24] 엄마품돌봄 귀가일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-24] 엄마품돌봄 귀가일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5822b72e59919d50f460cb11d03f0004",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5822b72e59919d50f460cb11d03f0004",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-20-서식-유-4-1-1-25-재량휴업-중-돌봄-신청-안내장",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-25] 재량휴업 중 돌봄 신청 안내장",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-25] 재량휴업 중 돌봄 신청 안내장",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8fe62075ca44b369c1798fdb6b554365",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8fe62075ca44b369c1798fdb6b554365",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-21-서식-유-4-1-1-26-2026학년도-유치원-교육과정-운영-지원-및-방과후-과정-운영-내실화-계획",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-26]2026학년도 유치원 교육과정 운영 지원 및 방과후 과정 운영 내실화 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-26]2026학년도 유치원 교육과정 운영 지원 및 방과후 과정 운영 내실화 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=546411d737a295d2244a8d0230c291bb",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=546411d737a295d2244a8d0230c291bb",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-2-서식-유-4-1-1-3-급-간식-운영-계획",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-3] 급·간식 운영 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-3] 급·간식 운영 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d973aec64b17915c45efc23bab82f025",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d973aec64b17915c45efc23bab82f025",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-3-서식-유-4-1-1-4-유아귀가-동의서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-4] 유아귀가 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-4] 유아귀가 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c08cfbd70cd79db479148e55c240658a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c08cfbd70cd79db479148e55c240658a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-4-서식-유-4-1-1-5-개인조사-설문지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-5] 개인조사 설문지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-5] 개인조사 설문지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=84911073657691e53242c4055cf9a535",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=84911073657691e53242c4055cf9a535",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-5-서식-유-4-1-1-6-방과후과정-신청서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-6] 방과후과정 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-6] 방과후과정 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=66f5b7cb392d672d260372a3d92ee73c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=66f5b7cb392d672d260372a3d92ee73c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-6-서식-유-4-1-1-7-통학버스-승-하차-동의서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-7] 통학버스 승·하차 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-7] 통학버스 승·하차 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f770e5248561ffdc78ddb98e0752bb69",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f770e5248561ffdc78ddb98e0752bb69",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-7-서식-유-4-1-1-8-통학버스-이용-신청서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-8] 통학버스 이용 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-8] 통학버스 이용 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d8165ab1f4f6c0dac5d03008605be818",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d8165ab1f4f6c0dac5d03008605be818",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-8-서식-유-4-1-1-9-방과후-과정-일지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - [서식-유-4-1-1-9] 방과후 과정 일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 [서식-유-4-1-1-9] 방과후 과정 일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e0454335ff62cc074fd872b006ab3ad5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e0454335ff62cc074fd872b006ab3ad5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14503-cntntsid-6454-22-보고서식1호-7호",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후과정 - 보고서식1호~7호",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후과정 • 돌봄 방과후과정 보고서식1호~7호",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a754a4ff4fd383bdb6b7b2186e449a68",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a754a4ff4fd383bdb6b7b2186e449a68",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14841-cntntsid-6380-0-2026-중등-방과후학교-길라잡이-서식",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후학교 업무 흐름(개인위탁) - 2026 중등 방과후학교 길라잡이 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후학교 업무 흐름(개인위탁) 2026 중등 방과후학교 길라잡이 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14842-cntntsid-6381-0-2026-중등-방과후학교-길라잡이-서식",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후학교 업무 흐름(업체위탁) - 2026 중등 방과후학교 길라잡이 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후학교 업무 흐름(업체위탁) 2026 중등 방과후학교 길라잡이 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15195-cntntsid-7084-1-2026-중등-방과후학교-운영-길라잡이-서식",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후학교 회계 관리 - 2026 중등 방과후학교 운영 길라잡이 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후학교 위탁 운영/방과후학교 관리 방과후학교 회계 관리 2026 중등 방과후학교 운영 길라잡이 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15195-cntntsid-7084-0-2026-초등-돌봄교육-운영-길라잡이-서식",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후학교 회계 관리 - 2026 초등 돌봄교육 운영 길라잡이 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후학교 위탁 운영/방과후학교 관리 방과후학교 회계 관리 2026 초등 돌봄교육 운영 길라잡이 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=181cb71afd4def2a13b5ab4217a27926",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=181cb71afd4def2a13b5ab4217a27926",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20858-cntntsid-8628-0-서식-유-4-2-1-1-방학중-방과후-과정운영계획",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방학중 방과후 과정 - [서식-유-4-2-1-1] 방학중 방과후 과정운영계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방학중 방과후 과정 [서식-유-4-2-1-1] 방학중 방과후 과정운영계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=539418412eafe28ed7a24e50da0ba006",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=539418412eafe28ed7a24e50da0ba006",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20858-cntntsid-8628-1-서식-유-4-2-1-2-방학중-방과후-과정-신청서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방학중 방과후 과정 - [서식-유-4-2-1-2] 방학중 방과후 과정 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방학중 방과후 과정 [서식-유-4-2-1-2] 방학중 방과후 과정 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=71b8c3481a09e4f4be93b9489f8cd31b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=71b8c3481a09e4f4be93b9489f8cd31b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20858-cntntsid-8628-3-서식-유-4-2-1-4-방학중-방과후-과정-출석부",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방학중 방과후 과정 - [서식-유-4-2-1-4] 방학중 방과후 과정 출석부",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방학중 방과후 과정 [서식-유-4-2-1-4] 방학중 방과후 과정 출석부",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cf2d292037446118fee9629cd5cae8d0",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cf2d292037446118fee9629cd5cae8d0",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20858-cntntsid-8628-4-서식-유-4-2-1-5-방학중-방과후-과정-운영-일지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방학중 방과후 과정 - [서식-유-4-2-1-5] 방학중 방과후 과정 운영 일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방학중 방과후 과정 [서식-유-4-2-1-5] 방학중 방과후 과정 운영 일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6db6bd498af1fbbafc7eb0dbad472395",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6db6bd498af1fbbafc7eb0dbad472395",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20858-cntntsid-8628-5-서식-유-4-2-1-6-방학중-방과후-과정-귀가-일지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방학중 방과후 과정 - [서식-유-4-2-1-6] 방학중 방과후 과정 귀가 일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방학중 방과후 과정 [서식-유-4-2-1-6] 방학중 방과후 과정 귀가 일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e5bcc17fce8979631120f3305c11edc6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e5bcc17fce8979631120f3305c11edc6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15704-cntntsid-6471-1-서식-초등-1-4-2-보결수업-수당-지급에-대한-학교운영위원회-심의-안건-예시",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "보결수업 규정 - [서식-초등-1-4-2] 보결수업 수당 지급에 대한 학교운영위원회 심의 안건(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "보결수업 규정 [서식-초등-1-4-2] 보결수업 수당 지급에 대한 학교운영위원회 심의 안건(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b90b6b3c80a179b766d7bd5498251da8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b90b6b3c80a179b766d7bd5498251da8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15241-cntntsid-6392-0-서식-행정-2-1-1-1-별지-제1호-2호-3호서식",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "성과계획서 작성 및 성과 관리 - [서식-행정-2-1-1-1]별지 제1호, 2호, 3호서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "근무성적평정 성과계획서 작성 및 성과 관리 [서식-행정-2-1-1-1]별지 제1호, 2호, 3호서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ebd91110e87127e4c99bb6c4200cfe6f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ebd91110e87127e4c99bb6c4200cfe6f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15344-cntntsid-6618-0-2026학년도-공립학교회계-예산편성-기본지침-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "성립전예산 - 2026학년도 공립학교회계 예산편성 기본지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "성립전예산 사용 성립전예산 2026학년도 공립학교회계 예산편성 기본지침.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c8507b290c3eb9553ac813897be0efa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14822-cntntsid-7254-0-서식-초등-11-3-1-초등-특수-학교-스포츠강사-학교단위-선발업무-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "스포츠강사 관리 - [서식-초등-11-3-1] 초등(특수)학교 스포츠강사 학교단위 선발업무 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "스포츠강사 관리 [서식-초등-11-3-1] 초등(특수)학교 스포츠강사 학교단위 선발업무 매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=582dc799331dd520991a630267093b10",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=582dc799331dd520991a630267093b10",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14822-cntntsid-7254-1-서식-초등-11-3-2-초등-특수-스포츠강사-인사관리-지침",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "스포츠강사 관리 - [서식-초등-11-3-2] 초등(특수) 스포츠강사 인사관리 지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "스포츠강사 관리 [서식-초등-11-3-2] 초등(특수) 스포츠강사 인사관리 지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=54e5dadf31b1ac53f16a9d80c05acdc8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=54e5dadf31b1ac53f16a9d80c05acdc8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14822-cntntsid-7254-2-서식-초등-11-3-3-초등스포츠강사-관리규정-각종-서식",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "스포츠강사 관리 - [서식-초등-11-3-3] 초등스포츠강사 관리규정 각종 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "스포츠강사 관리 [서식-초등-11-3-3] 초등스포츠강사 관리규정 각종 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0f03b9ac3ba8fb053ac3a4ab62a64e31",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0f03b9ac3ba8fb053ac3a4ab62a64e31",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20860-cntntsid-8629-0-서식-유-4-3-1-1-엄마품돌봄-운영-계획",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "엄마품 돌봄 - [서식-유-4-3-1-1] 엄마품돌봄 운영 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "엄마품 돌봄 [서식-유-4-3-1-1] 엄마품돌봄 운영 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1bd8f07a25ebb7d7c677544a55fc0803",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1bd8f07a25ebb7d7c677544a55fc0803",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20860-cntntsid-8629-1-서식-유-4-3-1-2-엄마품-돌봄-신청서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "엄마품 돌봄 - [서식-유-4-3-1-2] 엄마품 돌봄 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "엄마품 돌봄 [서식-유-4-3-1-2] 엄마품 돌봄 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9d01c37fc16af6c1ba3a0436e028d533",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9d01c37fc16af6c1ba3a0436e028d533",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20860-cntntsid-8629-2-서식-유-4-3-1-3-엄마품돌봄-비상연락망",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "엄마품 돌봄 - [서식-유-4-3-1-3] 엄마품돌봄 비상연락망",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "엄마품 돌봄 [서식-유-4-3-1-3] 엄마품돌봄 비상연락망",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e83de3e196b848d499cefe22e2c0f816",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e83de3e196b848d499cefe22e2c0f816",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20860-cntntsid-8629-3-서식-유-4-3-1-4-엄마품돌봄-운영-및-귀가일지",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "엄마품 돌봄 - [서식-유-4-3-1-4] 엄마품돌봄 운영 및 귀가일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "엄마품 돌봄 [서식-유-4-3-1-4] 엄마품돌봄 운영 및 귀가일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f3b8caaf44710bab69914f37e21116ed",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f3b8caaf44710bab69914f37e21116ed",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20860-cntntsid-8629-5-서식-유-4-3-1-6-2026학년도-돌봄유치원-운영계획",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "엄마품 돌봄 - [서식-유-4-3-1-6] 2026학년도 돌봄유치원 운영계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "엄마품 돌봄 [서식-유-4-3-1-6] 2026학년도 돌봄유치원 운영계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9fbdced2da9061f1df45cbe6d812f3a6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9fbdced2da9061f1df45cbe6d812f3a6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15929-cntntsid-6813-0-서식-행정기관-6-1-1-1-자리배치-예시",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-1] 자리배치 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "업무협약(MOU) 체결 및 계약 업무 업무협약(MOU) 체결 [서식-행정기관-6-1-1-1] 자리배치 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b4b3656e5ac81490dde1e93fed17b9e5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b4b3656e5ac81490dde1e93fed17b9e5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15929-cntntsid-6813-1-서식-행정기관-6-1-1-2-협약서-예시",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-2] 협약서 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "업무협약(MOU) 체결 및 계약 업무 업무협약(MOU) 체결 [서식-행정기관-6-1-1-2] 협약서 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=79d38b7080a15a04c43b844da5c479d1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=79d38b7080a15a04c43b844da5c479d1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14820-cntntsid-7250-0-서식-초등-8-8-1-1-2025-영어회화전문강사-업무편람",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "영어회화전문강사 관리 - [서식-초등-8-8-1-1] 2025 영어회화전문강사 업무편람",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영어회화전문강사 관리 [서식-초등-8-8-1-1] 2025 영어회화전문강사 업무편람",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=24c9682310adc1d510333f18532c8223",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=24c9682310adc1d510333f18532c8223",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14820-cntntsid-7250-1-서식-초등-8-8-1-2-영어회화-전문강사-위수탁계약서-개인위탁용",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "영어회화전문강사 관리 - [서식-초등-8-8-1-2] 영어회화 전문강사 위수탁계약서(개인위탁용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영어회화전문강사 관리 [서식-초등-8-8-1-2] 영어회화 전문강사 위수탁계약서(개인위탁용)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7474cf2e7fd9e5a331c9e479670082a4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7474cf2e7fd9e5a331c9e479670082a4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14820-cntntsid-7250-2-서식-초등-8-8-1-3-영어회화-전문강사-임용계약서-예시",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "영어회화전문강사 관리 - [서식-초등-8-8-1-3] 영어회화 전문강사 임용계약서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영어회화전문강사 관리 [서식-초등-8-8-1-3] 영어회화 전문강사 임용계약서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e746bfb77e6d6dace46d0b9450456015",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e746bfb77e6d6dace46d0b9450456015",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15871-cntntsid-7046-0-서식-관리-4-1-1-2026학년도-공립학교회계-예산편성-기본지침",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "예산 관리 - [서식-관리-4-1-1] 2026학년도 공립학교회계 예산편성 기본지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "예산 관리 [서식-관리-4-1-1] 2026학년도 공립학교회계 예산편성 기본지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c8507b290c3eb9553ac813897be0efa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c8507b290c3eb9553ac813897be0efa",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15348-cntntsid-6625-0-2026학년도-공립학교회계-예산편성-기본지침-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "예산의 이용 및 전용 - 2026학년도 공립학교회계 예산편성 기본지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "예산의 이용 및 전용 2026학년도 공립학교회계 예산편성 기본지침.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c8507b290c3eb9553ac813897be0efa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15352-cntntsid-6630-0-2026학년도-공립학교회계-예산편성-기본지침-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "예산의 이월 - 2026학년도 공립학교회계 예산편성 기본지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "예산의 이월 2026학년도 공립학교회계 예산편성 기본지침.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c8507b290c3eb9553ac813897be0efa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15341-cntntsid-6614-0-2026학년도-공립학교회계-예산편성-기본지침-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "예산의 편성 - 2026학년도 공립학교회계 예산편성 기본지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교회계 예결산 예산의 편성 2026학년도 공립학교회계 예산편성 기본지침.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c8507b290c3eb9553ac813897be0efa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-accounting-1475036-0-일잘러의학교회계실무-pdf",
@@ -2356,7 +8398,163 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1475036-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "일잘러의 학교회계 실무 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교회계 일잘러의 학교회계 실무 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1475036-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "일잘러의 학교회계 실무 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교회계 일잘러의 학교회계 실무 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15284-cntntsid-6458-0-서식-행정-5-2-1-1-정보공개청구서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "정보공개 청구 및 접수 - [서식-행정-5-2-1-1] 정보공개청구서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "정보공개 정보공개 청구 및 접수 [서식-행정-5-2-1-1] 정보공개청구서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7e1a0c96968a3dce0be821e94c3fd700",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7e1a0c96968a3dce0be821e94c3fd700",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15284-cntntsid-6458-1-서식-행정-5-2-1-2-정보공개구술청구서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "정보공개 청구 및 접수 - [서식-행정-5-2-1-2] 정보공개구술청구서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "정보공개 정보공개 청구 및 접수 [서식-행정-5-2-1-2] 정보공개구술청구서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8438294d170d5c9a7667f382e9775fd8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8438294d170d5c9a7667f382e9775fd8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15284-cntntsid-6458-2-서식-행정-5-2-1-3-정보공개처리대장",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "정보공개 청구 및 접수 - [서식-행정-5-2-1-3] 정보공개처리대장",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "정보공개 정보공개 청구 및 접수 [서식-행정-5-2-1-3] 정보공개처리대장",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d3d3d4130c5cd61eecf52aaa334468bd",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d3d3d4130c5cd61eecf52aaa334468bd",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15346-cntntsid-6619-0-2026학년도-공립학교회계-예산편성-기본지침-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "추가경정예산 - 2026학년도 공립학교회계 예산편성 기본지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "추가경정예산편성 추가경정예산 2026학년도 공립학교회계 예산편성 기본지침.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c8507b290c3eb9553ac813897be0efa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-776287-0-학교운영위원회업무편람-2016년도-hwp",
@@ -2380,7 +8578,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-776287-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "학교운영위원회 업무편람(2016년도) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 학교운영위원회 업무편람(2016년도) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-776287-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "학교운영위원회 업무편람(2016년도) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 학교운영위원회 업무편람(2016년도) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-1350831-0-학교운영위원회-업무편람-2023년도-hwp",
@@ -2404,7 +8650,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1350831-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "학교운영위원회 업무편람(2023년도) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 학교운영위원회 업무편람(2023년도) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-school-committee-1350831-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "학교운영위원회 업무편람(2023년도) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 학교운영위원회 업무편람(2023년도) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-school-committee-772142-0-붙임1-교육자료-학교운영위원회-온라인시스템-이용방법-추가자료-20-3-11-선관위-최종-pptx",
@@ -2432,21 +8726,21 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1396580-0-관리자-학교폭력-사안처리-절차-안내-교재본-pdf",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-school-committee-772142-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
       "type": "guide",
-      "title": "2024 학교 내 성희롱성폭력아동학대 사안대응 관리자 역량 강화 연수_학교폭력 사안처리 절차 안내 - (관리자)학교폭력 사안처리 절차 안내_교재본",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "학교폭력 2024 학교 내 성희롱성폭력아동학대 사안대응 관리자 역량 강화 연수_학교폭력 사안처리 절차 안내 (관리자)학교폭력 사안처리 절차 안내_교재본.pdf",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1396580/doc_1788vabe9=fdvac=48v76=96v62=d8fevc578vb06d_v2635.pdf",
+      "title": "학교운영위원회(학부모 위원 선출) 온라인시스템 이용방법 안내 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 학교운영위원회(학부모 위원 선출) 온라인시스템 이용방법 안내 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -2456,21 +8750,21 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1515207-0-학교폭력-예방-컨설팅단-연수자료-용량조절-1-pptx",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-school-committee-772142-2-pdf-다운로드",
+      "category": "schoolAdmin",
       "type": "guide",
-      "title": "2025 학교폭력 예방 연수 자료－컨설턴트용 - 학교폭력 예방 컨설팅단 연수자료(용량조절)1",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "학교폭력 2025 학교폭력 예방 연수 자료－컨설턴트용 학교폭력 예방 컨설팅단 연수자료(용량조절)1.pptx",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1515207/doc_d510v974f=b7ved=44v4c=8evc3=6befv8bbbv0133_v297.pptx",
+      "title": "학교운영위원회(학부모 위원 선출) 온라인시스템 이용방법 안내 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교운영위원회 학교운영위원회(학부모 위원 선출) 온라인시스템 이용방법 안내 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교운영위원회 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교운영위원회 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -2480,21 +8774,21 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1584459-0-2026학년도-현장중심-학교폭력-예방-및-대책-경북교육청-hwp",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15354-cntntsid-6635-0-2026학년도-공립학교회계-예산편성-기본지침-pdf",
+      "category": "schoolAdmin",
       "type": "guide",
-      "title": "2026학년도 경북교육청 현장 중심 학교폭력 예방 및 대책 시행 계획 - 2026학년도 현장중심 학교폭력 예방 및 대책(경북교육청)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "학교폭력 2026학년도 경북교육청 현장 중심 학교폭력 예방 및 대책 시행 계획 2026학년도 현장중심 학교폭력 예방 및 대책(경북교육청).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1584459/doc_448bv7772=86vad=4dv08=88v96=d220va11bv165b_v3507.hwp",
+      "title": "학교회계 결산 - 2026학년도 공립학교회계 예산편성 기본지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교회계 결산 2026학년도 공립학교회계 예산편성 기본지침.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c8507b290c3eb9553ac813897be0efa",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -2504,105 +8798,161 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-961271-0-개정-학교폭력예방-및-대책에-관한-법률-시행-관련-안내-최종-학생생활과-hwp",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14867-cntntsid-6413-0-서식-중등-1-17-1-1-2026학년도-경상북도-고등학교-학업성적관리-시행지침-hwp",
+      "category": "schoolAdmin",
       "type": "form",
-      "title": "개정 학교폭력예방법 안내 및 관련 서식 - 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 안내(최종)-학생생활과-",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 개정 학교폭력예방법 안내 및 관련 서식 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 안내(최종)-학생생활과-.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_eb1cv9470=1bv5a=4cv0f=83v8f=f339vdaf4v20e2_v426.hwp",
+      "title": "학업성적관리위원회 운영 - [서식-중등-1-17-1-1] 2026학년도 경상북도 고등학교 학업성적관리 시행지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학업성적관리위원회 운영 [서식-중등-1-17-1-1] 2026학년도 경상북도 고등학교 학업성적관리 시행지침.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ccbf8bed5998fd6bde7140d5692c7e13",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_eb1cv9470=1bv5a=4cv0f=83v8f=f339vdaf4v20e2_v426.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ccbf8bed5998fd6bde7140d5692c7e13",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-961271-1-개정-학교폭력예방-및-대책에-관한-법률-시행-관련-학교용-각종-서식-hwp",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14867-cntntsid-6413-1-서식-중등-1-17-1-2-2026학년도-경상북도-고등학교-학업성적관리-시행지침-신-구조문-대조표-hwp",
+      "category": "schoolAdmin",
       "type": "form",
-      "title": "개정 학교폭력예방법 안내 및 관련 서식 - 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 학교용 각종 서식",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 개정 학교폭력예방법 안내 및 관련 서식 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 학교용 각종 서식.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_aa01v8fca=abvb6=48v30=a7v73=d4b7va536v1c2a_v7710.hwp",
+      "title": "학업성적관리위원회 운영 - [서식-중등-1-17-1-2] 2026학년도 경상북도 고등학교 학업성적관리 시행지침 신·구조문 대조표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학업성적관리위원회 운영 [서식-중등-1-17-1-2] 2026학년도 경상북도 고등학교 학업성적관리 시행지침 신·구조문 대조표.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f372fab6e28e506995e4953262b7f40",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_aa01v8fca=abvb6=48v30=a7v73=d4b7va536v1c2a_v7710.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f372fab6e28e506995e4953262b7f40",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1625762-2-관련-서식-hwp",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14867-cntntsid-6413-2-서식-중등-1-17-1-3-2026학년도-경상북도-중학교-학업성적관리-시행지침-hwp",
+      "category": "schoolAdmin",
       "type": "form",
-      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 관련 서식",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 관련 서식.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
+      "title": "학업성적관리위원회 운영 - [서식-중등-1-17-1-3] 2026학년도 경상북도 중학교 학업성적관리 시행지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학업성적관리위원회 운영 [서식-중등-1-17-1-3] 2026학년도 경상북도 중학교 학업성적관리 시행지침.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a300c2257797c65a2181da5b896876e2",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a300c2257797c65a2181da5b896876e2",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1625762-0-성희롱성폭력아동학대-핵심강사-연수-배포용-pptx",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14867-cntntsid-6413-3-서식-중등-1-17-1-4-2026학년도-경상북도-중학교-학업성적관리-시행지침-신-구조문-대조표-hwp",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "학업성적관리위원회 운영 - [서식-중등-1-17-1-4] 2026학년도 경상북도 중학교 학업성적관리 시행지침 신·구조문 대조표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학업성적관리위원회 운영 [서식-중등-1-17-1-4] 2026학년도 경상북도 중학교 학업성적관리 시행지침 신·구조문 대조표.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=89fb5648d736eadb7dc37ab951b6314b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=89fb5648d736eadb7dc37ab951b6314b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15954-cntntsid-6891-8-서식-교원인사-1-5-1-9-가족돌봄휴직신청서",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-9] 가족돌봄휴직신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "관련 서식 휴(복)직 관련 공문 및 서식 [서식-교원인사-1-5-1-9] 가족돌봄휴직신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=517eda49a3a425f95c08c17641b43c7f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=517eda49a3a425f95c08c17641b43c7f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787714-0-정보공개-운영-매뉴얼",
       "category": "schoolViolenceSafety",
       "type": "guide",
-      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 성희롱성폭력아동학대 핵심강사 연수(배포용)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 성희롱성폭력아동학대 핵심강사 연수(배포용).pptx",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_1cccve9b4=d6vf3=44vbd=91vd1=bb22vc01avb80c_v8571.pptx",
+      "title": "[개요]코로나19 대응지침(지자체용) 개정안(제9판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [개요]코로나19 대응지침(지자체용) 개정안(제9판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 감염병 대응지침",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -2612,21 +8962,21 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1625762-1-성희롱성폭령-사안처리-안내서-6-29-pdf",
+      "id": "harvest-gbe-health-response-787714-1-pdf-다운로드",
       "category": "schoolViolenceSafety",
       "type": "guide",
-      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 성희롱성폭령 사안처리 안내서(6. 29.)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 성희롱성폭령 사안처리 안내서(6. 29.).pdf",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_9e90v2d21=ecvdc=4cv21=abvc5=fdb1vd5edvf327_v7326.pdf",
+      "title": "[개요]코로나19 대응지침(지자체용) 개정안(제9판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [개요]코로나19 대응지침(지자체용) 개정안(제9판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 감염병 대응지침",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -2636,21 +8986,21 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1625762-3-지침-예시안-hwp",
+      "id": "harvest-gbe-health-response-789867-0-정보공개-운영-매뉴얼",
       "category": "schoolViolenceSafety",
       "type": "guide",
-      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 지침 예시안",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 지침 예시안.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_0a1bvef24=b8va2=41v37=98vdd=5294vd33av44fe_v7743.hwp",
+      "title": "[안내] 코로나바이러스감염증-19 대응지침(제 9-1판) Q/A - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내] 코로나바이러스감염증-19 대응지침(제 9-1판) Q/A 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 감염병 대응지침",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -2660,35 +9010,5019 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "harvest-gbe-student-life-1600483-0-학교폭력-예방-및-사안처리-관련-체크리스트-pdf",
+      "id": "harvest-gbe-health-response-789867-1-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내] 코로나바이러스감염증-19 대응지침(제 9-1판) Q/A - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내] 코로나바이러스감염증-19 대응지침(제 9-1판) Q/A PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-780916-0-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]감염병위기단계 (심각단계)수업시 마스크 착용 원칙 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 [안내]감염병위기단계 (심각단계)수업시 마스크 착용 원칙 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-780916-1-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]감염병위기단계 (심각단계)수업시 마스크 착용 원칙 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 [안내]감염병위기단계 (심각단계)수업시 마스크 착용 원칙 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787710-1-코로나바이러스감염증-19-대응-지침-지자체용-제9판-부록-배포용200629-hwp",
       "category": "schoolViolenceSafety",
       "type": "form",
-      "title": "학교폭력 예방 및 사안처리 관련 체크리스트(학교용)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "학교폭력 학교폭력 예방 및 사안처리 관련 체크리스트(학교용) 학교폭력 예방 및 사안처리 관련 체크리스트.pdf",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 코로나바이러스감염증-19 대응 지침(지자체용)제9판_부록 배포용200629.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787710/doc_77cbb028-a3c9-47c8-b520-3188e4e5ee491593994269545.hwp",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 감염병 대응지침",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
+        "originalFileUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787710/doc_77cbb028-a3c9-47c8-b520-3188e4e5ee491593994269545.hwp",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787710-2-코로나바이러스감염증-19-대응-지침-지자체용-제9판-배포200629-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 코로나바이러스감염증-19 대응 지침(지자체용)제9판_배포200629.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787710/doc_050a8f97-bba3-4e40-b3ba-b2d7c90c363b1593994270185.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787710-0-개요-코로나바이러스감염증-19-대응-지침-지자체용-제9판-배포용-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 - (개요)코로나바이러스감염증-19 대응 지침(지자체용) 제9판_배포용",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 (개요)코로나바이러스감염증-19 대응 지침(지자체용) 제9판_배포용.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787710/doc_b58b1f37-cbe5-42d7-8ce8-2ae698677a651593994269424.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787710-3-정오표2-코로나바이러스감염증-19-대응-지침-지자체용-제9판-200629-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 - (정오표2)코로나바이러스감염증-19 대응 지침(지자체용)제9판_200629",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 (정오표2)코로나바이러스감염증-19 대응 지침(지자체용)제9판_200629.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787710/doc_d8cc7db1-ea7c-4817-ba94-06c3e6ecea6d1593994270763.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787710-4-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787710-5-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 (제9판) 정오표 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-789864-0-코로나바이러스감염증-19-대응-지침-지자체용-제9-1판-부록-최종-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 지자체용(제9-1판)",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 지자체용(제9-1판) 코로나바이러스감염증-19 대응 지침(지자체용) 제9-1판_부록_최종.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_789864/doc_523e0751-f534-4a59-8fa6-9a216d6fc9931594876448230.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_789864/doc_523e0751-f534-4a59-8fa6-9a216d6fc9931594876448230.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-789864-1-코로나바이러스감염증-19-대응-지침-지자체용-제9-1판-최종-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 지자체용(제9-1판)",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 지자체용(제9-1판) 코로나바이러스감염증-19 대응 지침(지자체용) 제9-1판_최종.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_789864/doc_ae09744b-0a2d-4111-a464-59a3a6bb333e1594876448865.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-789864-2-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 지자체용(제9-1판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 지자체용(제9-1판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-789864-3-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 지자체용(제9-1판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 지자체용(제9-1판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-786296-0-코로나바이러스감염증-19-대응-지침-지자체용-제9판-부록-배포용-0625-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 지자체용(제9판)",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 지자체용(제9판) 코로나바이러스감염증-19 대응 지침(지자체용) 제9판 부록_배포용_0625.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_786296/doc_e0b35bbd-f8f9-4b62-81ad-1e511a5ef2371593399126597.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_786296/doc_e0b35bbd-f8f9-4b62-81ad-1e511a5ef2371593399126597.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-786296-1-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 지자체용(제9판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 지자체용(제9판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-786296-2-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침 지자체용(제9판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침 지자체용(제9판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787713-0-코로나바이러스감염증-19-대응-지침-지자체용-제9판-배포200629-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침(제 9판)",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침(제 9판) 코로나바이러스감염증-19 대응 지침(지자체용)제9판_배포200629.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787713/doc_8fd6eb6a-0b08-48b0-bc42-213f1f666ebf1593994421675.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787713-1-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침(제 9판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침(제 9판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-787713-2-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[안내]코로나바이러스감염증-19 대응지침(제 9판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 [안내]코로나바이러스감염증-19 대응지침(제 9판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899164-0-유-초-중등및특수학교-코로나19매뉴얼-요약-3판-최종-발송용-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 매뉴얼 안내(제 3판) - 유·초·중등및특수학교 코로나19매뉴얼(요약)-3판-최종(발송용)",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 매뉴얼 안내(제 3판) 유·초·중등및특수학교 코로나19매뉴얼(요약)-3판-최종(발송용).hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_899164/doc_5f62vf39b=deva1=4av1a=84v98=109fveb52v8edd_v8868.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899164-1-유초중등및특수학교-코로나19-감염예방-관리매뉴얼-제3판-1217-발송용-최종-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 매뉴얼 안내(제 3판) - 유초중등및특수학교 코로나19 감염예방 관리매뉴얼 제3판(1217)_발송용(최종)",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 매뉴얼 안내(제 3판) 유초중등및특수학교 코로나19 감염예방 관리매뉴얼 제3판(1217)_발송용(최종).hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_899164/doc_a219vfba3=3bv94=45v04=84v7c=f1b9v0290v64cf_v2898.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899164-2-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 매뉴얼 안내(제 3판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 매뉴얼 안내(제 3판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899164-3-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 매뉴얼 안내(제 3판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 매뉴얼 안내(제 3판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-903535-0-유-초-중등및특수학교-코로나19매뉴얼-요약-4판-최종-발송용-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 매뉴얼 안내(제 4판) - 유·초·중등및특수학교 코로나19매뉴얼(요약)-4판-최종(발송용)",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 매뉴얼 안내(제 4판) 유·초·중등및특수학교 코로나19매뉴얼(요약)-4판-최종(발송용).hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_903535/doc_bc7fv4b17=e7vdf=4bvc3=84v5a=35fcv108av032c_v4109.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-903535-1-유초중등-및-특수학교-코로나19-감염예방-관리매뉴얼-제4판-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 매뉴얼 안내(제 4판) - 유초중등 및 특수학교 코로나19 감염예방 관리매뉴얼 제4판",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 매뉴얼 안내(제 4판) 유초중등 및 특수학교 코로나19 감염예방 관리매뉴얼 제4판.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_903535/doc_4872vc3bd=40v84=41v08=9cv34=dec4vaedfvd8b3_v6233.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-903535-2-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 매뉴얼 안내(제 4판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 매뉴얼 안내(제 4판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-903535-3-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 매뉴얼 안내(제 4판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 매뉴얼 안내(제 4판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-790400-0-유-초-중등및특수학교-코로나19매뉴얼-요약-2-2판-최종-발송용-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 메뉴얼 안내(제 2-2판) - 유·초·중등및특수학교 코로나19매뉴얼(요약)-2-2판-최종(발송용)",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 메뉴얼 안내(제 2-2판) 유·초·중등및특수학교 코로나19매뉴얼(요약)-2-2판-최종(발송용).hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_790400/doc_adb0a795-6cb7-4f69-b9b1-9acafe4ccd9d1595222666549.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-790400-1-유초중등및특수학교-코로나19-감염예방-관리매뉴얼-제2-2판-0720-발송용-최종-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 메뉴얼 안내(제 2-2판) - 유초중등및특수학교 코로나19 감염예방 관리매뉴얼 제2-2판(0720)_발송용-최종",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 메뉴얼 안내(제 2-2판) 유초중등및특수학교 코로나19 감염예방 관리매뉴얼 제2-2판(0720)_발송용-최종.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_790400/doc_fd516547-69b6-48d6-8431-21230d1b9cf91595222666729.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-790400-2-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 메뉴얼 안내(제 2-2판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 메뉴얼 안내(제 2-2판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-790400-3-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[알림]코로나19감염병예방 관리 메뉴얼 안내(제 2-2판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 [알림]코로나19감염병예방 관리 메뉴얼 안내(제 2-2판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-903542-0-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[요약] 코로나19감염병예방 관리 매뉴얼 안내(제 4판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 [요약] 코로나19감염병예방 관리 매뉴얼 안내(제 4판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-903542-1-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[요약] 코로나19감염병예방 관리 매뉴얼 안내(제 4판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 [요약] 코로나19감염병예방 관리 매뉴얼 안내(제 4판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-790401-0-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[요약]코로나19 감염병예방 관리 매뉴얼(2-2판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 [요약]코로나19 감염병예방 관리 매뉴얼(2-2판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-790401-1-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[요약]코로나19 감염병예방 관리 매뉴얼(2-2판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 [요약]코로나19 감염병예방 관리 매뉴얼(2-2판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899189-0-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[요약]코로나19감염병예방 관리 매뉴얼 안내(제 3판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 [요약]코로나19감염병예방 관리 매뉴얼 안내(제 3판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899189-1-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "[요약]코로나19감염병예방 관리 매뉴얼 안내(제 3판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 [요약]코로나19감염병예방 관리 매뉴얼 안내(제 3판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1615284-0-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "[학생생활과] 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [학생생활과] 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1615284-1-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "[학생생활과] 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [학생생활과] 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14946-cntntsid-6652-0-서식-중등-4-3-4-1-의무교육단계-미인정결석-학생-관리-기준",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "교육공동체와의 협력적 안전체계 구축 - [서식-중등-4-3-4-1]의무교육단계 미인정결석 학생 관리 기준",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공동체와의 협력적 안전체계 구축 [서식-중등-4-3-4-1]의무교육단계 미인정결석 학생 관리 기준",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=01d0f3a9a5507b592af87332b436478c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=01d0f3a9a5507b592af87332b436478c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15889-cntntsid-7076-0-서식-관리-10-4-1-1-학교-식중독-의심환자-발생-보고-서식",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "급식 안전 관리 - [서식-관리-10-4-1-1] 학교 식중독 의심환자 발생 보고 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "급식 안전 관리 [서식-관리-10-4-1-1] 학교 식중독 의심환자 발생 보고 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ffe80c04dc710f44b15178f47ccc9ebd",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ffe80c04dc710f44b15178f47ccc9ebd",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14699-cntntsid-6955-0-서식-초등-5-3-1-1-보건교육-운영계획-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "보건교육 계획수립 및 운영 - [서식-초등-5-3-1-1] 보건교육 운영계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "보건교육 보건교육 계획수립 및 운영 [서식-초등-5-3-1-1] 보건교육 운영계획(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba9ef92bae8eea5df77ef25582b9b1ab",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba9ef92bae8eea5df77ef25582b9b1ab",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14699-cntntsid-6955-1-서식-초등-5-3-1-2-학생-건강증진-프로그램-계획-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "보건교육 계획수립 및 운영 - [서식-초등-5-3-1-2] 학생 건강증진 프로그램 계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "보건교육 보건교육 계획수립 및 운영 [서식-초등-5-3-1-2] 학생 건강증진 프로그램 계획(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a1e53e7f466fcd40dffb98bacedf68d2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a1e53e7f466fcd40dffb98bacedf68d2",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14699-cntntsid-6955-2-서식-초등-5-3-1-3-유인물-및-홍보-교육자료-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "보건교육 계획수립 및 운영 - [서식-초등-5-3-1-3] 유인물 및 홍보 교육자료(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "보건교육 보건교육 계획수립 및 운영 [서식-초등-5-3-1-3] 유인물 및 홍보 교육자료(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c890a1c8d93e2465aa873f943a1900fe",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c890a1c8d93e2465aa873f943a1900fe",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14692-cntntsid-6948-0-서식-초등-5-1-1-1-보건일지-서식-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "보건실 운영 계획 - [서식-초등-5-1-1-1] 보건일지 서식(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "보건교육 보건실 운영 계획 [서식-초등-5-1-1-1] 보건일지 서식(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbeb29cb65cee8446db2ccb88f5e2755",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbeb29cb65cee8446db2ccb88f5e2755",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14692-cntntsid-6948-1-서식-초등-5-1-1-2-보건실-비품대장-서식-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "보건실 운영 계획 - [서식-초등—5-1-1-2] 보건실 비품대장 서식(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "보건교육 보건실 운영 계획 [서식-초등—5-1-1-2] 보건실 비품대장 서식(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ebb6c22b6d76c5f26e423dd6dadb664",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ebb6c22b6d76c5f26e423dd6dadb664",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14589-cntntsid-6597-0-서식-교무학사-3-1-1-1-아동학대체크리스트",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "아동학대 발견 및 신고 - [서식-교무학사-3-1-1-1] 아동학대체크리스트",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활‧안전‧체험활동‧방과후‧초등돌봄‧교육 아동학대 발견 및 신고 [서식-교무학사-3-1-1-1] 아동학대체크리스트",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=33dd76177ac6416820c2b8c3d84cc230",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=33dd76177ac6416820c2b8c3d84cc230",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-0-서식-유-5-1-1-1-2026학년도-유아-안전-365-프로젝트-계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-1]2026학년도 유아 안전 365 프로젝트 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-1]2026학년도 유아 안전 365 프로젝트 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbbc829dd0cd5617d9ac75d6088f5faa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbbc829dd0cd5617d9ac75d6088f5faa",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-9-서식-유-5-1-1-10-영유아-건강검진-안내문",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-10]영유아 건강검진 안내문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-10]영유아 건강검진 안내문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1cbf78fb317485dec653104551a763f2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1cbf78fb317485dec653104551a763f2",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-10-서식-유-5-1-1-11-투약-의뢰서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-11]투약 의뢰서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-11]투약 의뢰서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0c5dd366d4ef544abfa2be1feb1c1539",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0c5dd366d4ef544abfa2be1feb1c1539",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-11-서식-유-5-1-1-12-보건일지",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-12]보건일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-12]보건일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=487b2e50a1ef478f607b888b976e3547",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=487b2e50a1ef478f607b888b976e3547",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-12-서식-유-5-1-1-14-교직원-심폐소생술-등-응급처치교육계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-14]교직원 심폐소생술 등 응급처치교육계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-14]교직원 심폐소생술 등 응급처치교육계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6d4e3b5286e3901fa1860d33f7dd5369",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6d4e3b5286e3901fa1860d33f7dd5369",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-1-서식-유-5-1-1-2-부모교육자료1-아동학대예방",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-2]부모교육자료1(아동학대예방)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-2]부모교육자료1(아동학대예방)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f842cf8f35e858f9c16d778fbf879882",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f842cf8f35e858f9c16d778fbf879882",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-2-서식-유-5-1-1-3-부모교육자료2-성폭력예방",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-3]부모교육자료2(성폭력예방)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-3]부모교육자료2(성폭력예방)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c28543e02234a3f9cfb5d87ae45a823d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c28543e02234a3f9cfb5d87ae45a823d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-3-서식-유-5-1-1-4-귀가-동의서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-4]귀가 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-4]귀가 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=16698d50cff64093b058919eeb5cf9c3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=16698d50cff64093b058919eeb5cf9c3",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-4-서식-유-5-1-1-5-가정방문-협조-요청서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-5]가정방문 협조 요청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-5]가정방문 협조 요청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=78c40a069a32e3a7ffe168a4ef8a6135",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=78c40a069a32e3a7ffe168a4ef8a6135",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-5-서식-유-5-1-1-6-보건-운영-계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-6]보건 운영 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-6]보건 운영 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=24ff59fe40d0f6c8e92f8e2ddd39884a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=24ff59fe40d0f6c8e92f8e2ddd39884a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-6-서식-유-5-1-1-7-감염병-관리-계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-7]감염병 관리 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-7]감염병 관리 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2192d4b14d823694de17a5ce866c550a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2192d4b14d823694de17a5ce866c550a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-7-서식-유-5-1-1-8-응급처치-동의서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-8]응급처치 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-8]응급처치 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=99e4b4fe22adb58af4a64a33d0f5efda",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=99e4b4fe22adb58af4a64a33d0f5efda",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20865-cntntsid-6431-8-서식-유-5-1-1-9-유아-건강상태-조사서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전 · 보건교육 - [서식-유-5-1-1-9]유아 건강상태 조사서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전 · 보건 안전 · 보건교육 [서식-유-5-1-1-9]유아 건강상태 조사서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=71c79da13e8df5f4a4fdddc6909303f7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=71c79da13e8df5f4a4fdddc6909303f7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14619-cntntsid-6628-0-서식-초등-3-8-1-1-학교안전사고-예방-학교계획-작성-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전교육 - [서식-초등-3-8-1-1] 학교안전사고 예방 학교계획 작성 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전교육 [서식-초등-3-8-1-1] 학교안전사고 예방 학교계획 작성 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b307225adc4a448fc27d78da7af03d6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b307225adc4a448fc27d78da7af03d6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14619-cntntsid-6628-1-학교현장-재난유형별-교육훈련-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "안전교육 - 학교현장 재난유형별 교육훈련 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전교육 학교현장 재난유형별 교육훈련 매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=252e262fca7cc7fa66bc1a96d8e3d6e2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14619-cntntsid-6628-2-학교현장-재난유형별-교육훈련-매뉴얼-학생용",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "안전교육 - 학교현장 재난유형별 교육훈련 매뉴얼(학생용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전교육 학교현장 재난유형별 교육훈련 매뉴얼(학생용)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=594450d2bd38a49d2246852126b9d3a7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14948-cntntsid-6660-0-서식-중등-4-4-1-1-2026년-학교안전사고-예방-지역계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-1] 2026년 학교안전사고 예방 지역계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교 안전교육 안전하고 행복한 학교 [서식-중등-4-4-1-1] 2026년 학교안전사고 예방 지역계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e463cb17c326ee9cc3bbcc49765ff171",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e463cb17c326ee9cc3bbcc49765ff171",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14948-cntntsid-6660-1-서식-중등-4-4-1-2-학교안전사고-예방-학교계획-작성-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-2]학교안전사고 예방 학교계획 작성 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교 안전교육 안전하고 행복한 학교 [서식-중등-4-4-1-2]학교안전사고 예방 학교계획 작성 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b617adb9326434d92f6efd114f7dd325",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b617adb9326434d92f6efd114f7dd325",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14948-cntntsid-6660-2-서식-중등-4-4-1-3-학년별-학생-안전교육의-시간-및-횟수",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-3]학년별 학생 안전교육의 시간 및 횟수",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교 안전교육 안전하고 행복한 학교 [서식-중등-4-4-1-3]학년별 학생 안전교육의 시간 및 횟수",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e726686d52b51977f912b99c37060cc0",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e726686d52b51977f912b99c37060cc0",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14948-cntntsid-6660-3-서식-중등-4-4-1-4-수학여행-안전교육-및-점검자료",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-4]수학여행 안전교육 및 점검자료",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교 안전교육 안전하고 행복한 학교 [서식-중등-4-4-1-4]수학여행 안전교육 및 점검자료",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fb1f0b89d641007ecb5713d0596b1b33",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fb1f0b89d641007ecb5713d0596b1b33",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14755-cntntsid-7178-8-영양-교-사를-위한-학교급식업무매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "영양상담의 계획 - 영양(교)사를 위한 학교급식업무매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "영양상담 영양상담의 계획 영양(교)사를 위한 학교급식업무매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=26a1438f5a273a048c296b88b0dfc7f3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1548192-0-25-학교폭력-사안처리-가이드북-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - '25 학교폭력 사안처리 가이드북",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 충북교육청 인성시민과 '25 학교폭력 사안처리 가이드북.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/04/022CC18A-033A-37BD-E189-997CB87C3F9B.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1569593-0-26-학교폭력-사안처리-가이드북-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - '26 학교폭력 사안처리 가이드북",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 충북교육청 인성시민과 '26 학교폭력 사안처리 가이드북.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/03/9CA0E6C1-EBB5-5E10-9586-5F16C1E16D8A.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1529999-0-배포용-2023-학부모용-학교폭력-예방교육-모음집-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - (배포용) 2023 학부모용 학교폭력 예방교육 모음집",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 충북교육청 인성시민과 (배포용) 2023 학부모용 학교폭력 예방교육 모음집.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/06/C8B1D3DD-F8D3-C6C8-79C3-127A8C60F3E3.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-588219-1-서식-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "충북교육청 인성시민과 - (서식) 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 충북교육청 인성시민과 (서식) 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼.hwp",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644762.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644762.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-1562027-0-교육부-학교-내-성희롱-성폭력-사안대응-업무안내서-2025년-개정-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - [교육부]학교 내 성희롱 성폭력 사안대응 업무안내서(2025년 개정)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 충북교육청 인성시민과 [교육부]학교 내 성희롱 성폭력 사안대응 업무안내서(2025년 개정).pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/CF568C9D-4783-CC44-0C17-8D718F500467.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-1522472-0-여성가족부-성희롱-성폭력-예방지침-표준안-및-해설-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - [여성가족부] 성희롱·성폭력 예방지침 표준안 및 해설",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성희롱 충북교육청 인성시민과 [여성가족부] 성희롱·성폭력 예방지침 표준안 및 해설.hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2024/03/0BF484BB-D064-79C9-A374-03BFD90C327A.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-588219-0-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - ★ 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 충북교육청 인성시민과 ★ 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644761.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1509624-0-1-2023년-사안처리-가이드북-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 1. 2023년 사안처리 가이드북",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 충북교육청 인성시민과 1. 2023년 사안처리 가이드북.hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2023/07/57ECC6D4-D655-BD66-ADD7-6C9A3432E1AC.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-1560985-0-16-디지털-성폭력-및-딥페이크등-예방교육자료-제작-최종-보고서-제출-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "충북교육청 인성시민과 - 16. 디지털 성폭력 및 딥페이크등 예방교육자료 제작 최종 보고서(제출)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 충북교육청 인성시민과 16. 디지털 성폭력 및 딥페이크등 예방교육자료 제작 최종 보고서(제출).pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3DA6A511-69E9-F3F9-4C97-AB346E22FBBD.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3DA6A511-69E9-F3F9-4C97-AB346E22FBBD.pdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1512170-0-2-2023-학교폭력-사안처리-세부설명-a-to-z-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 2. 2023. 학교폭력 사안처리 세부설명 A to Z",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 충북교육청 인성시민과 2. 2023. 학교폭력 사안처리 세부설명 A to Z.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2023/09/1F60CC1A-916E-DA03-FE66-6492C7E32042.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-590351-0-2022-학교폭력사안처리-가이드북-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 2022. 학교폭력사안처리 가이드북",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "가이드북 충북교육청 인성시민과 2022. 학교폭력사안처리 가이드북.hwpx",
+      "url": "https://www.cbe.go.kr/upload/na_old/7c106bed-9ac3-4285-9b5f-a23b372a0c00/2022/16596552701.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-583028-0-2022년-폭력예방교육-운영안내-지침-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 2022년 폭력예방교육 운영안내(지침)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "예방교육 충북교육청 인성시민과 2022년 폭력예방교육 운영안내(지침).pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16444682231.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1535303-0-2024-1차-학교폭력-실태조사-결과-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 2024. 1차 학교폭력 실태조사 결과",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 충북교육청 인성시민과 2024. 1차 학교폭력 실태조사 결과.hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/09/40329B09-5570-6F46-F4B6-9A14F8EF17D7.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1549081-0-2024-2차-학교폭력-실태-표본-조사-결과-최종-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 2024. 2차 학교폭력 실태(표본)조사 결과_최종",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 충북교육청 인성시민과 2024. 2차 학교폭력 실태(표본)조사 결과_최종 .pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/05/B1609003-3E6B-4D2B-9846-CF5D41B19374.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-1525064-0-2024년-사건통보서-및-재발방지대책-제출-서식-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "충북교육청 인성시민과 - 2024년 사건통보서 및 재발방지대책 제출 서식",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 충북교육청 인성시민과 2024년 사건통보서 및 재발방지대책 제출 서식.hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2024/04/B2694D0A-ED33-0136-20EA-B36A524AE3F7.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2024/04/B2694D0A-ED33-0136-20EA-B36A524AE3F7.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1532095-0-2024년-학교폭력-사안처리-가이드북-개정안-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 2024년 학교폭력 사안처리 가이드북 개정안",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 충북교육청 인성시민과 2024년 학교폭력 사안처리 가이드북 개정안.hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/07/2B8746F1-D91A-9198-AB2E-3AD3CEC07373.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1559065-0-2025-1차-학교폭력-실태-전수-조사-결과-누리집용-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 2025. 1차 학교폭력 실태(전수)조사 결과(누리집용)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 충북교육청 인성시민과 2025. 1차 학교폭력 실태(전수)조사 결과(누리집용).hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/11/15C12F59-7697-5891-98C8-8FC9E7CF31CD.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1548192-1-2025-학교폭력-사안처리-세부설명-a-to-z-서식모음집-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "충북교육청 인성시민과 - 2025. 학교폭력 사안처리 세부설명 A to Z (서식모음집)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 충북교육청 인성시민과 2025. 학교폭력 사안처리 세부설명 A to Z (서식모음집).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/08/7CD816BB-2537-3414-6031-21F8A3CF39FC.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/08/7CD816BB-2537-3414-6031-21F8A3CF39FC.hwpx",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1570140-0-2025년-2차-학교폭력-실태-표본-조사-결과-누리집-탑재용-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 2025년 2차 학교폭력 실태(표본)조사 결과(누리집 탑재용)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 충북교육청 인성시민과 2025년 2차 학교폭력 실태(표본)조사 결과(누리집 탑재용).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/04/60EA93F7-7E85-9701-A93C-0EEEDC1FA1C7.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-1511311-0-23년-학교폭력-사안처리-가이드북-한글파일-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 23년 학교폭력 사안처리 가이드북(한글파일)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "가이드북 충북교육청 인성시민과 23년 학교폭력 사안처리 가이드북(한글파일).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/07/A84E1F3B-C9FF-9D13-464E-D7CF150AD62C.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-583659-0-게시용-2022-성희롱-성폭력-사안처리지원단-구성-운영-계획-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 게시용) 2022. 성희롱·성폭력 사안처리지원단 구성·운영 계획",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 충북교육청 인성시민과 게시용) 2022. 성희롱·성폭력 사안처리지원단 구성·운영 계획.hwp",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475261.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-573475-0-교육부-양성평등정책담당관-학교-내-성희롱-성폭력-사안처리-사례집-배포용-2020-12월-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 교육부 양성평등정책담당관_학교 내 성희롱 성폭력 사안처리 사례집(배포용)2020.12월",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 충북교육청 인성시민과 교육부 양성평등정책담당관_학교 내 성희롱 성폭력 사안처리 사례집(배포용)2020.12월.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16202979431.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-1562027-1-단계별-관련-서식-2025개정판-학교내성희롱성폭력사안대응업무안내서-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "충북교육청 인성시민과 - 단계별 관련 서식_[2025개정판]학교내성희롱성폭력사안대응업무안내서",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 충북교육청 인성시민과 단계별 관련 서식_[2025개정판]학교내성희롱성폭력사안대응업무안내서.hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3AECD204-2541-B00C-16BC-3C1F90779283.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3AECD204-2541-B00C-16BC-3C1F90779283.hwpx",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-572186-0-사안처리-핸드북-발송용-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 사안처리 핸드북(발송용)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 충북교육청 인성시민과 사안처리 핸드북(발송용).pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/7c106bed-9ac3-4285-9b5f-a23b372a0c00/2021/16174263511.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-583659-1-성희롱-성폭력-사안처리지원단-외부지원-신청서-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "충북교육청 인성시민과 - 성희롱·성폭력 사안처리지원단 외부지원 신청서",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 충북교육청 인성시민과 성희롱·성폭력 사안처리지원단 외부지원 신청서.hwp",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475262.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475262.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-568298-0-여성가족부-권익기반과-2021년-폭력예방교육-운영안내-지침-최종-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 여성가족부 권익기반과_2021년 폭력예방교육 운영안내(지침)_최종",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "예방교육 충북교육청 인성시민과 여성가족부 권익기반과_2021년 폭력예방교육 운영안내(지침)_최종.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16127450531.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-1544100-0-여성가족부-성폭력방지과-번-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "충북교육청 인성시민과 - 여성가족부 성폭력방지과_②번 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 충북교육청 인성시민과 여성가족부 성폭력방지과_②번 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식.xlsx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/2EBCEF60-57EC-43F2-A45A-0A1F2D068932.xlsx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/2EBCEF60-57EC-43F2-A45A-0A1F2D068932.xlsx",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-1541549-0-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 충북교육청 인성시민과 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/01/9F3CA501-1CA3-B09C-13B9-FA4C912389D7.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-1541549-1-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-단계별-관련-서식-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "충북교육청 인성시민과 - 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼 [단계별 관련 서식]",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 충북교육청 인성시민과 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼 [단계별 관련 서식].hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/CA0E6530-3591-F9C6-F7D7-900C9EF26B4C.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/CA0E6530-3591-F9C6-F7D7-900C9EF26B4C.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-578707-0-충청북도교육청용-교직원-성희롱-성폭력-사안처리-대응-매뉴얼-2021-9-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 충청북도교육청용 교직원 성희롱 성폭력 사안처리 대응 매뉴얼 (2021.9.)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 충북교육청 인성시민과 충청북도교육청용 교직원 성희롱 성폭력 사안처리 대응 매뉴얼 (2021.9.).hwp",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16334319591.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-sexual-awareness-588221-0-학교-내-성희롱-성폭력-사안처리지원단-업무매뉴얼-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 학교 내 성희롱 성폭력 사안처리지원단 업무매뉴얼",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 충북교육청 인성시민과 학교 내 성희롱 성폭력 사안처리지원단 업무매뉴얼.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521646551.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 성인식개선 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-cbe-school-violence-545690-0-학교폭력-사안처리-가이드북-일부개정판-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "충북교육청 인성시민과 - 학교폭력 사안처리 가이드북-일부개정판",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 충북교육청 인성시민과 학교폭력 사안처리 가이드북-일부개정판.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/7c106bed-9ac3-4285-9b5f-a23b372a0c00/2019/15699401241.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16561-cntntsid-6995-2-서식-중등-8-4-1-3-성범죄-경력-및-아동학대관련범죄-전력-조회-동의서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "치료지원 - [서식-중등-8-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=042adc0095b4b1ca63fa4a5cec83c3bb",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=042adc0095b4b1ca63fa4a5cec83c3bb",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16537-cntntsid-7207-2-서식-초등-7-4-1-3-성범죄-경력-및-아동학대관련범죄-전력-조회-동의서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "치료지원 - [서식-초등-7-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-초등-7-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bbce1eea7a417a8dea2c3f1d264833cf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bbce1eea7a417a8dea2c3f1d264833cf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20887-cntntsid-8601-4-서식-유특-6-4-1-5-성범죄-경력-및-아동학대관련-범죄전력-조회-동의서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "치료지원 - 서식-유특-6-4-1-5. 성범죄 경력 및 아동학대관련 범죄전력 조회 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 서식-유특-6-4-1-5. 성범죄 경력 및 아동학대관련 범죄전력 조회 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b896d785038ca9ae8b0093fe1c322869",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b896d785038ca9ae8b0093fe1c322869",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-781596-0-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나19 감염병예방 관리 안내(제2-1판): 학생용 마스크 착용 세부 수칙 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 코로나19 감염병예방 관리 안내(제2-1판): 학생용 마스크 착용 세부 수칙 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-781596-1-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나19 감염병예방 관리 안내(제2-1판): 학생용 마스크 착용 세부 수칙 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 코로나19 감염병예방 관리 안내(제2-1판): 학생용 마스크 착용 세부 수칙 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-777990-0-20200507-유초중등-및-특수학교-코로나19-감염예방-관리안내-제2판-결재용-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나19 감염병예방 관리 안내(제2판) - 20200507_유초중등_및_특수학교_코로나19_감염예방_관리안내_제2판(결재용)",
+      "provider": "경상북도교육청",
+      "query": "감염병 코로나19 감염병예방 관리 안내(제2판) 20200507_유초중등_및_특수학교_코로나19_감염예방_관리안내_제2판(결재용).hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_777990/doc_20b9c966-7d61-4485-9904-1e018aa71a171588894945734.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-777990-1-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나19 감염병예방 관리 안내(제2판) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 코로나19 감염병예방 관리 안내(제2판) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-777990-2-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나19 감염병예방 관리 안내(제2판) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 코로나19 감염병예방 관리 안내(제2판) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-786297-0-개요-코로나바이러스감염증-19-대응-지침-지자체용-제9판-배포용-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나19 대응지침[지자체용] 재정안 제 9판 개요 - (개요)코로나바이러스감염증-19 대응 지침(지자체용) 제9판_배포용",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나19 대응지침[지자체용] 재정안 제 9판 개요 (개요)코로나바이러스감염증-19 대응 지침(지자체용) 제9판_배포용.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_786297/doc_e304de94-6a8c-49f8-9b16-c253a5a2b0de1593399342089.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-786297-1-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나19 대응지침[지자체용] 재정안 제 9판 개요 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나19 대응지침[지자체용] 재정안 제 9판 개요 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-786297-2-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나19 대응지침[지자체용] 재정안 제 9판 개요 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나19 대응지침[지자체용] 재정안 제 9판 개요 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-934600-0-코로나바이러스감염증-19-대응지침-지자체용-제-10판-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침 지자체용(제 10판) 개정안",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침 지자체용(제 10판) 개정안 코로나바이러스감염증-19 대응지침(지자체용) 제 10판.pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_934600/doc_e6aevb63f=3dv0d=45v4c=a2vfb=d24ev0eaevd75e_v6063.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-934600-2-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침 지자체용(제 10판) 개정안 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침 지자체용(제 10판) 개정안 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-934600-3-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침 지자체용(제 10판) 개정안 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침 지자체용(제 10판) 개정안 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899139-0-코로나바이러스감염증-19-대응지침-지자체용-제9-5판-개정전후-대비표-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침 지자체용(제9-5판)개정안",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침 지자체용(제9-5판)개정안 코로나바이러스감염증-19 대응지침 지자체용(제9-5판) 개정전후 대비표.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_899139/doc_37bbve465=47va5=46v72=aevef=c997v2d86v0791_v644.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899139-2-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침 지자체용(제9-5판)개정안 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침 지자체용(제9-5판)개정안 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-899139-3-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침 지자체용(제9-5판)개정안 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침 지자체용(제9-5판)개정안 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-1157722-0-코로나바이러스감염증-19-대응-지침-지자체용-제10-3판-개정전후대비표-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침(지자체용) 제 10-3판 개정 안내",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침(지자체용) 제 10-3판 개정 안내 코로나바이러스감염증-19 대응 지침(지자체용) 제10-3판 개정전후대비표.pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_1157722/doc_83c4v0cc9=d4v79=44v58=bfv7c=9072ve4c9v1fac_v9107.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-1157722-2-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침(지자체용) 제 10-3판 개정 안내 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침(지자체용) 제 10-3판 개정 안내 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-1157722-3-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "코로나바이러스감염증-19 대응지침(지자체용) 제 10-3판 개정 안내 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "대응지침 코로나바이러스감염증-19 대응지침(지자체용) 제 10-3판 개정 안내 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-1561898-0-학교-감염병-예방-위기대응-매뉴얼-제3차-개정-초중고특수학교용-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "학교 감염병 예방 위기대응 매뉴얼 제3차 개정판 안내",
+      "provider": "경상북도교육청",
+      "query": "감염병 학교 감염병 예방 위기대응 매뉴얼 제3차 개정판 안내 학교 감염병 예방 위기대응 매뉴얼 제3차 개정(초중고특수학교용).pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_1561898/doc_f338v8666=67vfd=4av8d=aev9f=33f8vee42vc0cc_v4783.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-1561898-2-정보공개-운영-매뉴얼",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "학교 감염병 예방 위기대응 매뉴얼 제3차 개정판 안내 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "감염병 학교 감염병 예방 위기대응 매뉴얼 제3차 개정판 안내 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-health-response-1561898-3-pdf-다운로드",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "학교 감염병 예방 위기대응 매뉴얼 제3차 개정판 안내 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "감염병 학교 감염병 예방 위기대응 매뉴얼 제3차 개정판 안내 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 감염병 대응지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 감염병 대응지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15027-cntntsid-6806-0-서식-중등-7-1-1-1-학교보건-및-건강증진-계획-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교 보건교육 - [서식-중등-7-1-1-1] 학교보건 및 건강증진 계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "체육·보건·영양교육 학교 보건교육 [서식-중등-7-1-1-1] 학교보건 및 건강증진 계획(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0cd970cee630547a68914b4ddf2ff260",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0cd970cee630547a68914b4ddf2ff260",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15176-cntntsid-7072-0-서식-관리-10-1-1-1-학생-사고-보고서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교 안전 사고 대응 - [서식-관리-10-1-1-1] 학생 사고 보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "안전사고 예방 및 대처 방안 학교 안전 사고 대응 [서식-관리-10-1-1-1] 학생 사고 보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=060f0303c07d6d5edf44ae380d2b7f27",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=060f0303c07d6d5edf44ae380d2b7f27",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14953-cntntsid-6672-0-서식-중등-4-6-1-1-학교폭력-전담기구-운영-계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 발생 사안처리 절차 - [서식-중등-4-6-1-1]학교폭력 전담기구 운영 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력 발생 사안처리 절차 [서식-중등-4-6-1-1]학교폭력 전담기구 운영 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c23fd2f9c8ab8672e1385bb791f6e7ee",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c23fd2f9c8ab8672e1385bb791f6e7ee",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14953-cntntsid-6672-1-서식-중등-4-6-1-2-학교폭력-사안-발생-시-처리-절차hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 발생 사안처리 절차 - [서식-중등-4-6-1-2]학교폭력 사안 발생 시 처리 절차hwp",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력 발생 사안처리 절차 [서식-중등-4-6-1-2]학교폭력 사안 발생 시 처리 절차hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bf66a77199553a84b529549b84a779e4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bf66a77199553a84b529549b84a779e4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14953-cntntsid-6672-2-서식-중등-4-6-1-3-학교폭력-사안처리-길라잡이",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 발생 사안처리 절차 - [서식-중등-4-6-1-3] 학교폭력 사안처리 길라잡이",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력 발생 사안처리 절차 [서식-중등-4-6-1-3] 학교폭력 사안처리 길라잡이",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e669a89197b18e40ef890cb441de5a33",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e669a89197b18e40ef890cb441de5a33",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14953-cntntsid-6672-3-서식-중등-4-6-1-4-학교폭력-사안처리-길라잡이각종-양식-모음",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 발생 사안처리 절차 - [서식-중등-4-6-1-4] 학교폭력_사안처리 길라잡이각종 양식 모음",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력 발생 사안처리 절차 [서식-중등-4-6-1-4] 학교폭력_사안처리 길라잡이각종 양식 모음",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7c430ff58a3d89fa610e80d1ac4d6f45",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7c430ff58a3d89fa610e80d1ac4d6f45",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14954-cntntsid-6675-0-서식-중등-4-6-1-3-학교폭력-사안처리-길라잡이",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 사안 조사 - [서식-중등-4-6-1-3] 학교폭력 사안처리 길라잡이",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력 사안 조사 [서식-중등-4-6-1-3] 학교폭력 사안처리 길라잡이",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e669a89197b18e40ef890cb441de5a33",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e669a89197b18e40ef890cb441de5a33",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-0-서식-중등-4-3-1-1-학교폭력-범죄-예방-점검-체크리스트",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-1]학교폭력·범죄 예방 점검 체크리스트",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-1]학교폭력·범죄 예방 점검 체크리스트",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b97b63d6076dee1d106f933f23f4a68e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b97b63d6076dee1d106f933f23f4a68e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-7-서식-중등-4-3-1-10-학교안전사고-예방-지역계획-및-작성-예시안",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-10]학교안전사고 예방 지역계획 및 작성 예시안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-10]학교안전사고 예방 지역계획 및 작성 예시안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9ca184874fb192bf18725b6eee03607b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9ca184874fb192bf18725b6eee03607b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-8-서식-중등-4-3-1-11-2023학년도-학생-안전교육-편성-운영-기준-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-11]2023학년도 학생 안전교육 편성·운영 기준",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-11]2023학년도 학생 안전교육 편성·운영 기준.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=90422d58386ec4228c84bb89c4169277",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=90422d58386ec4228c84bb89c4169277",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-10-서식-중등-4-3-1-12-2023학년도-배움터지킴이-자원봉사자-운영계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-12]2023학년도 배움터지킴이 자원봉사자 운영계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-12]2023학년도 배움터지킴이 자원봉사자 운영계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=774bb39d0a3c76198ef53be68d46add0",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=774bb39d0a3c76198ef53be68d46add0",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-1-서식-중등-4-3-1-2-cctv설치안내-가정통신문",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-2]CCTV설치안내 가정통신문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-2]CCTV설치안내 가정통신문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2093e0ff61cfe57e945dbcd5897f6075",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2093e0ff61cfe57e945dbcd5897f6075",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-2-서식-중등-4-3-1-3-cctv-화상정보-열람-신청서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-3]CCTV 화상정보 열람 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-3]CCTV 화상정보 열람 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=834f7ff95961ab17b5888e6a50ae216e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=834f7ff95961ab17b5888e6a50ae216e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-3-서식-중등-4-3-1-6-학교내학부모-및-외부인-출입통제-안내-가정통신문",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-6]학교내학부모 및 외부인 출입통제 안내 가정통신문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-6]학교내학부모 및 외부인 출입통제 안내 가정통신문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4861122fc57f2e39d83c556705095de1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4861122fc57f2e39d83c556705095de1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-4-서식-중등-4-3-1-7-외부인-학교-방문-일지",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-7]외부인 학교 방문 일지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-7]외부인 학교 방문 일지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=141c4debed78cc324142b6b17cfeb2a0",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=141c4debed78cc324142b6b17cfeb2a0",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-5-서식-중등-4-3-1-8-배움터지킴이-운영-계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-8]배움터지킴이 운영 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-8]배움터지킴이 운영 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9b078a1f93abccf17ead3a66020ef7da",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9b078a1f93abccf17ead3a66020ef7da",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14943-cntntsid-6636-6-서식-중등-4-3-1-9-배움터지킴이-자원봉사자-모집공고-및-지원서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-9]배움터지킴이 자원봉사자 모집공고 및 지원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력 예방 및 안전 인프라 확충 [서식-중등-4-3-1-9]배움터지킴이 자원봉사자 모집공고 및 지원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0f6e4ce4b5c86f91c2fe9cdd3c70e436",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0f6e4ce4b5c86f91c2fe9cdd3c70e436",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14593-cntntsid-6602-0-서식-교무학사-3-2-1-2-2026학교폭력사안처리길라잡이-최종",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "학교폭력예방 및 근절 대책 수립 - [서식-교무학사-3-2-1-2] 2026학교폭력사안처리길라잡이(최종)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 근절 학교폭력예방 및 근절 대책 수립 [서식-교무학사-3-2-1-2] 2026학교폭력사안처리길라잡이(최종)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=931fd83dcf820df98bf78876ec2ddbdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=931fd83dcf820df98bf78876ec2ddbdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15887-cntntsid-7074-2-2026학교폭력사안처리길라잡이-최종",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "학교폭력예방 및 대처 방안 - 2026학교폭력사안처리길라잡이(최종)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 대처 방안 2026학교폭력사안처리길라잡이(최종)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=931fd83dcf820df98bf78876ec2ddbdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15887-cntntsid-7074-0-25년-학교폭력-사안-발생-시-처리-절차-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "학교폭력예방 및 대처 방안 - 25년 학교폭력 사안 발생 시 처리 절차",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 대처 방안 25년 학교폭력 사안 발생 시 처리 절차.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9d85b38d524739e63732479cae52b7b3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15887-cntntsid-7074-1-학교내-성희롱성폭력-대응-절차-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "학교폭력예방 및 대처 방안 - 학교내 성희롱성폭력 대응 절차",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교폭력예방 및 대처 방안 학교내 성희롱성폭력 대응 절차.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2e8c972a439392fa3025064055ad9632",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15458-cntntsid-6753-0-서식-행정-16-5-1-1-재난상황조서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "한국교육시설안전원 공제 가입 - [서식-행정-16-5-1-1] 재난상황조서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "한국교육시설안전원 한국교육시설안전원 공제 가입 [서식-행정-16-5-1-1] 재난상황조서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c3f99bb209ddab75d901060728c19fc6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c3f99bb209ddab75d901060728c19fc6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14944-cntntsid-6643-0-서식-중등-4-3-2-1-학교폭력예방-및-근절계획-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-1]학교폭력예방 및 근절계획(예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 [서식-중등-4-3-2-1]학교폭력예방 및 근절계획(예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=71a67f42db947b83ee79779b427fc2e1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=71a67f42db947b83ee79779b427fc2e1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14944-cntntsid-6643-1-서식-중등-4-3-2-2-학생자치순찰대-운영-계획",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-2]학생자치순찰대 운영 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 [서식-중등-4-3-2-2]학생자치순찰대 운영 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2646f1ecf8549092535b02061277edfa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2646f1ecf8549092535b02061277edfa",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14944-cntntsid-6643-2-서식-중등-4-3-2-3-사이버폭력-인식-및-대처-학년별-학습지",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-3]사이버폭력 인식 및 대처 학년별 학습지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 [서식-중등-4-3-2-3]사이버폭력 인식 및 대처 학년별 학습지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=db5542c6015fefc84f7aae15e6b3cc0d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=db5542c6015fefc84f7aae15e6b3cc0d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14944-cntntsid-6643-3-서식-중등-4-3-2-4-불법촬영-및-유포-행위-관련-가정통신문-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-4]불법촬영 및 유포 행위 관련 가정통신문(예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 [서식-중등-4-3-2-4]불법촬영 및 유포 행위 관련 가정통신문(예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5b5dd0cd7513b71dd135887969937b51",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5b5dd0cd7513b71dd135887969937b51",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14944-cntntsid-6643-4-서식-중등-4-3-2-5-도박중독-예방교육-가정통신문-예시",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-5]도박중독 예방교육 가정통신문(예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 [서식-중등-4-3-2-5]도박중독 예방교육 가정통신문(예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b7dd8a75897d0e31647e9137926e138f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b7dd8a75897d0e31647e9137926e138f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587953-0-정보공개-운영-매뉴얼",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "[유초등교육과] 2026년 기간제교원 성과상여금 지급 관련 서식 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026년 기간제교원 성과상여금 지급 관련 서식 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1587953-1-pdf-다운로드",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "[유초등교육과] 2026년 기간제교원 성과상여금 지급 관련 서식 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026년 기간제교원 성과상여금 지급 관련 서식 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15159-cntntsid-7060-0-2023-경상북도-계약제교원-운영-지침",
+      "category": "staffLabor",
+      "type": "guide",
+      "title": "계약제 교원 채용 - 2023 경상북도 계약제교원 운영 지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제 교원 계약제 교원 채용 2023 경상북도 계약제교원 운영 지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d6bf3fb208fae0da8b8ab88e122cb800",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14879-cntntsid-6435-0-서식-중등-1-23-1-1-계약제교원-자료전송-매뉴얼",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 임용 일반 - [서식-중등-1-23-1-1] 계약제교원 자료전송 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제 교원 임용 계약제교원 임용 일반 [서식-중등-1-23-1-1] 계약제교원 자료전송 매뉴얼",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c06d77071f3e2fa9ad164523fc19261",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c06d77071f3e2fa9ad164523fc19261",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14880-cntntsid-6439-0-서식-중등-1-23-2-1-계약제교원-채용-관련-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-1] 계약제교원 채용 관련 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 임용 절차 [서식-중등-1-23-2-1] 계약제교원 채용 관련 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b799e2e5afe278ca7e22a398bc769ab5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b799e2e5afe278ca7e22a398bc769ab5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14880-cntntsid-6439-1-서식-중등-1-23-2-2-계약제교원-관련-기타-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-2] 계약제교원 관련 기타 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 임용 절차 [서식-중등-1-23-2-2] 계약제교원 관련 기타 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9dec1f5f1cf585623f153b0e7f31158c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9dec1f5f1cf585623f153b0e7f31158c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14880-cntntsid-6439-2-서식-중등-1-23-2-3-계약제교원-임용-기안문-예시",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-3] 계약제교원 임용 기안문(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 임용 절차 [서식-중등-1-23-2-3] 계약제교원 임용 기안문(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=419f70b4f9e3b138ef08e949b9b9d504",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=419f70b4f9e3b138ef08e949b9b9d504",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14880-cntntsid-6439-3-서식-중등-1-23-2-4-범죄경력-유무조회-기안문-예시",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-4] 범죄경력 유무조회 기안문(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 임용 절차 [서식-중등-1-23-2-4] 범죄경력 유무조회 기안문(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4a3e1a975b31670e2f9835c74bf3d856",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=4a3e1a975b31670e2f9835c74bf3d856",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14880-cntntsid-6439-4-서식-중등-1-23-2-5-계약제교원-결격사유-범죄경력-통합조회-업무처리-안내",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-5] 계약제교원 결격사유-범죄경력 통합조회 업무처리 안내",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 임용 절차 [서식-중등-1-23-2-5] 계약제교원 결격사유-범죄경력 통합조회 업무처리 안내",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d977240a3cf810fe43da0de936edf366",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d977240a3cf810fe43da0de936edf366",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14880-cntntsid-6439-5-서식-중등-1-23-2-6-교육공무원-호봉-획정-조서-예시",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-6] 교육공무원 호봉 획정 조서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 임용 절차 [서식-중등-1-23-2-6] 교육공무원 호봉 획정 조서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3a88f686e99f9817d12c15ee4cf1278c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3a88f686e99f9817d12c15ee4cf1278c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14880-cntntsid-6439-6-2026-경상북도-계약제교원-운영-지침",
+      "category": "staffLabor",
+      "type": "guide",
+      "title": "계약제교원 임용 절차 - 2026 경상북도 계약제교원 운영 지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 임용 절차 2026 경상북도 계약제교원 운영 지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8ba107453ba4a400fa964734c81869cd",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15894-cntntsid-7104-0-서식-관리-12-4-1-1-민원-응대-요령",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-1] 민원 응대 요령",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "공직자 민원응대 매뉴얼 [서식-관리-12-4-1-1] 민원 응대 요령",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c19a7c7b46665d1c59b36b49a97f3860",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c19a7c7b46665d1c59b36b49a97f3860",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15894-cntntsid-7104-1-서식-관리-12-4-1-2-민원편람",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-2] 민원편람",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "공직자 민원응대 매뉴얼 [서식-관리-12-4-1-2] 민원편람",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fac37123bd76c48c714db2eb0278fe27",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fac37123bd76c48c714db2eb0278fe27",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15139-cntntsid-7044-0-서식-관리-3-3-1-1-교육공무직원-채용-및-퇴직-관련-각종-예시안",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "교육공무직원 인사 관리 - [서식-관리-3-3-1-1] 교육공무직원 채용 및 퇴직 관련 각종 예시안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공무직원 관리 교육공무직원 인사 관리 [서식-관리-3-3-1-1] 교육공무직원 채용 및 퇴직 관련 각종 예시안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ef9320f0b2d5d968cfca3577f81d7e8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ef9320f0b2d5d968cfca3577f81d7e8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15139-cntntsid-7044-1-서식-관리-3-3-1-2-교육공무직원-발령대장-예시안",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "교육공무직원 인사 관리 - [서식-관리-3-3-1-2] 교육공무직원 발령대장 예시안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공무직원 관리 교육공무직원 인사 관리 [서식-관리-3-3-1-2] 교육공무직원 발령대장 예시안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd9c04abebb2a89272fa6b250d8e8e40",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd9c04abebb2a89272fa6b250d8e8e40",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14937-cntntsid-6600-0-서식-중등-4-1-1-1-학교규칙-운영메뉴얼-2022년",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-1]학교규칙 운영메뉴얼(2022년)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정 규칙과 질서가 있는 학교문화 개선 [서식-중등-4-1-1-1]학교규칙 운영메뉴얼(2022년)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6efa083a7ac240ded46925053cf2e849",
+      "searchDomain": "gbe.kr",
+      "description": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6efa083a7ac240ded46925053cf2e849",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14937-cntntsid-6600-1-서식-중등-4-1-1-2-학교규칙-제-개정-절차",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-2]학교규칙 제.개정 절차",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정 규칙과 질서가 있는 학교문화 개선 [서식-중등-4-1-1-2]학교규칙 제.개정 절차",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d4ab0d01682927eda5c5729436528437",
+      "searchDomain": "gbe.kr",
+      "description": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d4ab0d01682927eda5c5729436528437",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14937-cntntsid-6600-2-서식-중등-4-1-1-3-그린마일리지-운영-계획",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-3]그린마일리지 운영 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정 규칙과 질서가 있는 학교문화 개선 [서식-중등-4-1-1-3]그린마일리지 운영 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=46dcedf5275e03504bf8c3c2baf658a6",
+      "searchDomain": "gbe.kr",
+      "description": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=46dcedf5275e03504bf8c3c2baf658a6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14937-cntntsid-6600-3-서식-중등-4-1-1-4-학교규칙-학생생활에관한사항-자체점검표",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-4]학교규칙(학생생활에관한사항) 자체점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정 규칙과 질서가 있는 학교문화 개선 [서식-중등-4-1-1-4]학교규칙(학생생활에관한사항) 자체점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cbbde172c73304a5cf64d3c29e7b3245",
+      "searchDomain": "gbe.kr",
+      "description": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cbbde172c73304a5cf64d3c29e7b3245",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14937-cntntsid-6600-4-서식-중등-4-1-1-5-20-학년도학교생활규정제-개정위원회구성",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-5]20○○학년도학교생활규정제·개정위원회구성",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정 규칙과 질서가 있는 학교문화 개선 [서식-중등-4-1-1-5]20○○학년도학교생활규정제·개정위원회구성",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0f9b06829a4b176108d42040e5c65554",
+      "searchDomain": "gbe.kr",
+      "description": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0f9b06829a4b176108d42040e5c65554",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14937-cntntsid-6600-5-서식-중등-4-1-1-6-제-차-학생-생활규정-제-개정을-위한-의견-수렴-결과",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-6]제○차 학생 생활규정 제·개정을 위한 의견 수렴 결과",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정 규칙과 질서가 있는 학교문화 개선 [서식-중등-4-1-1-6]제○차 학생 생활규정 제·개정을 위한 의견 수렴 결과",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=570e91ab098fc03bb7cb392e8be22458",
+      "searchDomain": "gbe.kr",
+      "description": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=570e91ab098fc03bb7cb392e8be22458",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14937-cntntsid-6600-6-서식-중등-4-1-1-7-20-학년도-제-차-학생생활규정-제-개정-협의회-결과",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-7]20○○학년도 제○차 학생생활규정 제·개정 협의회 결과",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정 규칙과 질서가 있는 학교문화 개선 [서식-중등-4-1-1-7]20○○학년도 제○차 학생생활규정 제·개정 협의회 결과",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8b6b507cb42413621cfa668ef50fb601",
+      "searchDomain": "gbe.kr",
+      "description": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8b6b507cb42413621cfa668ef50fb601",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14937-cntntsid-6600-7-서식-중등-4-1-1-8-20-학년도학생선도위원회운영계획",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-8]20○○학년도학생선도위원회운영계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생선도위원회 운영계획 학교생활규정 제개정 절차 학생생활규정 규칙과 질서가 있는 학교문화 개선 [서식-중등-4-1-1-8]20○○학년도학생선도위원회운영계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b3f3d0089c4cc47c65d1073612bd55ff",
+      "searchDomain": "gbe.kr",
+      "description": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경상북도교육청 학생생활규정·학생선도위원회 운영 자료",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b3f3d0089c4cc47c65d1073612bd55ff",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15203-cntntsid-7091-0-서식-관리-11-9-1-1-특별민원-29개-유형-대응-매뉴얼-예시",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "민원 응대 요령 - [서식-관리-11-9-1-1] 특별민원 29개 유형 대응 매뉴얼(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학부모(민원인) 항의성 전화/방문 대응 민원 응대 요령 [서식-관리-11-9-1-1] 특별민원 29개 유형 대응 매뉴얼(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d7125cffe187470f6a88d396cb5d3be8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d7125cffe187470f6a88d396cb5d3be8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15203-cntntsid-7091-1-국민권익위원회-특별민원-대응-매뉴얼-pdf",
+      "category": "staffLabor",
+      "type": "guide",
+      "title": "민원 응대 요령 - 국민권익위원회『특별민원 대응 매뉴얼』",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학부모(민원인) 항의성 전화/방문 대응 민원 응대 요령 국민권익위원회『특별민원 대응 매뉴얼』.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f11d6fb6f76ffd22aca0b47661107ca",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20858-cntntsid-8628-2-서식-유-4-2-1-3-방학중-방과후-과정-근무상황부",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "방학중 방과후 과정 - [서식-유-4-2-1-3] 방학중 방과후 과정 근무상황부",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방학중 방과후 과정 [서식-유-4-2-1-3] 방학중 방과후 과정 근무상황부",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=74b143e0bfc2e482aa65bf0f7abc9c44",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=74b143e0bfc2e482aa65bf0f7abc9c44",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15925-cntntsid-6805-0-서식-행정기관-5-1-1-1-출장-보고서예시",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "복무 - [서식-행정기관-5-1-1-1] 출장 보고서예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "복무 [서식-행정기관-5-1-1-1] 출장 보고서예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5f60bb4fcbc7e6d39300d15fd3401e8a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5f60bb4fcbc7e6d39300d15fd3401e8a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15163-cntntsid-7062-0-서식-관리-7-1-1-1-복무-보고-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "복무 관리 사항 - [서식-관리-7-1-1-1] 복무 보고 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "복무 복무 관리 사항 [서식-관리-7-1-1-1] 복무 보고 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=43b17b257bf3aa1ca017b27318f0c030",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=43b17b257bf3aa1ca017b27318f0c030",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15163-cntntsid-7062-1-서식-관리-7-1-1-2-복무-관리-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "복무 관리 사항 - [서식-관리-7-1-1-2] 복무 관리 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "복무 복무 관리 사항 [서식-관리-7-1-1-2] 복무 관리 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=059ffcc068ff8a7f8facecf846113981",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=059ffcc068ff8a7f8facecf846113981",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15163-cntntsid-7062-2-서식-관리-7-1-1-3-유연근무제-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "복무 관리 사항 - [서식-관리-7-1-1-3] 유연근무제 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "복무 복무 관리 사항 [서식-관리-7-1-1-3] 유연근무제 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a01ebe529aff9ea3e1caba2d0c958b9c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a01ebe529aff9ea3e1caba2d0c958b9c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15163-cntntsid-7062-3-서식-관리-7-1-1-4-개정-주요-내용-2023",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "복무 관리 사항 - [서식-관리-7-1-1-4] 개정 주요 내용(2023)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "복무 복무 관리 사항 [서식-관리-7-1-1-4] 개정 주요 내용(2023)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b67318ea93ed965ded1894ac4a913937",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b67318ea93ed965ded1894ac4a913937",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20860-cntntsid-8629-4-서식-유-4-3-1-5-엄마품돌봄-근무상황부",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "엄마품 돌봄 - [서식-유-4-3-1-5] 엄마품돌봄 근무상황부",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "엄마품 돌봄 [서식-유-4-3-1-5] 엄마품돌봄 근무상황부",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f33e3ba4e07048d20ce7063f9bc06c0f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f33e3ba4e07048d20ce7063f9bc06c0f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15293-cntntsid-6477-0-서식-행정-6-1-1-1-표준근로계약서-양식-hwp",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "채용 및 계약 - [서식-행정-6-1-1-1] 표준근로계약서 양식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공무직원등 채용 및 계약 [서식-행정-6-1-1-1] 표준근로계약서 양식.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=10b2be38ec132fee5a451efa9b883dab",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=10b2be38ec132fee5a451efa9b883dab",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15293-cntntsid-6477-1-서식-행정-6-1-1-2-붙임1-경상북도교육감-소속-일반직공무원-결원-대체인력-및-업무대행-제도-운영-지침-",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "채용 및 계약 - [서식-행정-6-1-1-2] (붙임1) 경상북도교육감 소속 일반직공무원 결원 대체인력 및 업무대행 제도 운영 지침(안내)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공무직원등 채용 및 계약 [서식-행정-6-1-1-2] (붙임1) 경상북도교육감 소속 일반직공무원 결원 대체인력 및 업무대행 제도 운영 지침(안내).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6be876ee631ba21f4282921fae1fd99c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6be876ee631ba21f4282921fae1fd99c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15293-cntntsid-6477-4-경상북도교육감-소속-교육공무직원-공정채용-업무-처리지침",
+      "category": "staffLabor",
+      "type": "guide",
+      "title": "채용 및 계약 - 경상북도교육감 소속 교육공무직원 공정채용 업무 처리지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공무직원등 채용 및 계약 경상북도교육감 소속 교육공무직원 공정채용 업무 처리지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=95af91c45f24750a2f1bc188b42e778d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15293-cntntsid-6477-5-경상북도교육감-소속-교육공무직원-공정채용-업무-처리지침-해설서",
+      "category": "staffLabor",
+      "type": "guide",
+      "title": "채용 및 계약 - 경상북도교육감 소속 교육공무직원 공정채용 업무 처리지침 해설서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공무직원등 채용 및 계약 경상북도교육감 소속 교육공무직원 공정채용 업무 처리지침 해설서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=463c67e6a67792c717bab92746e3688c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15293-cntntsid-6477-2-경상북도교육감-소속-교육공무직원-관리규정-전문",
+      "category": "staffLabor",
+      "type": "rule",
+      "title": "채용 및 계약 - 경상북도교육감 소속 교육공무직원 관리규정(전문)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공무직원등 채용 및 계약 경상북도교육감 소속 교육공무직원 관리규정(전문)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=89a9498f705723347cd8e2a8063d138e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15293-cntntsid-6477-3-경상북도교육감-소속-특수운영직군-종사자-관리규정-전문",
+      "category": "staffLabor",
+      "type": "rule",
+      "title": "채용 및 계약 - 경상북도교육감 소속 특수운영직군 종사자 관리규정(전문)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공무직원등 채용 및 계약 경상북도교육감 소속 특수운영직군 종사자 관리규정(전문)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d13d6ae50b92c61800ee027bfce96c75",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14805-cntntsid-7229-0-서식-초등-8-5-2-1-교원-휴가-관련-서식-모음-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "휴가 - [서식-초등-8-5-2-1] 교원 휴가 관련 서식 모음(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "휴가 [서식-초등-8-5-2-1] 교원 휴가 관련 서식 모음(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b44d2e8b804f9111486951a329f71ef8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b44d2e8b804f9111486951a329f71ef8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14805-cntntsid-7229-1-서식-초등-8-5-2-2-교육공무원-공무외-국외여행-업무처리-지침-개정-2023-1-26",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "휴가 - [서식-초등-8-5-2-2] 교육공무원 공무외 국외여행 업무처리 지침 개정(2023.1.26.)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "휴가 [서식-초등-8-5-2-2] 교육공무원 공무외 국외여행 업무처리 지침 개정(2023.1.26.)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8c507a5eb87529f14c22877d84d24607",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8c507a5eb87529f14c22877d84d24607",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14805-cntntsid-7229-2-서식-초등-8-5-2-3-교원-휴가-관련-질의-답변-자료집",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "휴가 - [서식-초등-8-5-2-3] 교원 휴가 관련 질의·답변 자료집",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "휴가 [서식-초등-8-5-2-3] 교원 휴가 관련 질의·답변 자료집",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f7df333ac2b523d74d591a4d6b9aa587",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f7df333ac2b523d74d591a4d6b9aa587",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14805-cntntsid-7229-3-서식-초등-8-5-2-4-공무-국외-출장-관련-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "휴가 - [서식-초등-8-5-2-4] 공무 국외 출장 관련 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "휴가 [서식-초등-8-5-2-4] 공무 국외 출장 관련 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a5582c76d2bf0c509651468810d4a28c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a5582c76d2bf0c509651468810d4a28c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-student-life-1284280-0-학교장허가-교외체험학습-운영-지침-2023-3-1-시행-hwp",
@@ -2712,7 +14046,235 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1284280-1-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "(2023.3.1.시행) 학교장허가 교외체험학습 운영 지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "교외체험학습 (2023.3.1.시행) 학교장허가 교외체험학습 운영 지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1284280-2-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "(2023.3.1.시행) 학교장허가 교외체험학습 운영 지침 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "교외체험학습 (2023.3.1.시행) 학교장허가 교외체험학습 운영 지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1432410-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "[안내]스쿨 싸이렌 제1호-딥페이크 성범죄 경보 발령 안내 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "딥페이크 [안내]스쿨 싸이렌 제1호-딥페이크 성범죄 경보 발령 안내 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1592277-0-2026-초등-학적-업무-매뉴얼-내지-서식-포함-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "[유초등교육과] 2026학년도 학적 업무 매뉴얼 탑재(PDF, 한글 서식 포함) - 2026 초등 학적 업무 매뉴얼 내지(서식 포함)",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026학년도 학적 업무 매뉴얼 탑재(PDF, 한글 서식 포함) 2026 초등 학적 업무 매뉴얼 내지(서식 포함).hwp",
+      "url": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1592277/doc_0f14ve95d=1ev16=4fv18=9fvcd=a8e2ve83evc3e1_v1906.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1592277/doc_0f14ve95d=1ev16=4fv18=9fvcd=a8e2ve83evc3e1_v1906.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1592277-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "[유초등교육과] 2026학년도 학적 업무 매뉴얼 탑재(PDF, 한글 서식 포함) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026학년도 학적 업무 매뉴얼 탑재(PDF, 한글 서식 포함) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-integrated-library-1592277-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "form",
+      "title": "[유초등교육과] 2026학년도 학적 업무 매뉴얼 탑재(PDF, 한글 서식 포함) - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "서식 [유초등교육과] 2026학년도 학적 업무 매뉴얼 탑재(PDF, 한글 서식 포함) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 통합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 통합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-568617-0-2019학년도-여름방학대비-경북학생생활지도-연수자료-hwp",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2019년 여름방학대비 학생생활지도 연수 교재 - 2019학년도_여름방학대비_경북학생생활지도_연수자료",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "생활지도 2019년 여름방학대비 학생생활지도 연수 교재 2019학년도_여름방학대비_경북학생생활지도_연수자료.hwp",
+      "url": "https://www.gbe.kr/uploads/BOARD/2019/06/BOARD_201906281700526256116138.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-568617-1-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2019년 여름방학대비 학생생활지도 연수 교재 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "생활지도 2019년 여름방학대비 학생생활지도 연수 교재 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-568617-2-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2019년 여름방학대비 학생생활지도 연수 교재 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "생활지도 2019년 여름방학대비 학생생활지도 연수 교재 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-393046-1-2019년-수학여행-등-현장체험학습-매뉴얼-신구대조-경북교육청-pdf",
@@ -2736,7 +14298,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-393046-0-2019년-수학여행-등-현장체험학습-운영매뉴얼-경북교육청-pdf",
@@ -2760,7 +14322,55 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-393046-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2019학년도 수학여행 등 현장체험학습 운영 매뉴얼 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2019학년도 수학여행 등 현장체험학습 운영 매뉴얼 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-393046-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2019학년도 수학여행 등 현장체험학습 운영 매뉴얼 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2019학년도 수학여행 등 현장체험학습 운영 매뉴얼 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-772069-0-2020학년도-수학여행-수련활동-등-현장체험학습-운영-안내서-pdf",
@@ -2784,7 +14394,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-772069-1-운영-안내서-부록3-14-한글파일-hwp",
@@ -2812,7 +14422,55 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-772069-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2020학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2020학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-772069-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2020학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2020학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-909735-0-2021학년도-수학여행-수련활동-등-현장체험학습-운영-안내서-pdf",
@@ -2836,7 +14494,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-909735-1-2021학년도-수학여행-수련활동-등-현장체험학습-운영-안내서-부록-서식-한글파일-hwp",
@@ -2864,7 +14522,55 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-909735-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2021학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2021학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-909735-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2021학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2021학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1177565-0-2022학년도-현장체험학습-운영-안내서-pdf",
@@ -2888,7 +14594,31 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1177565-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2022학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2022학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1177565-1-현장체험학습-운영-안내서-부록서식-한글파일-hwp",
@@ -2916,7 +14646,31 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1177565-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2022학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2022학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1284315-0-2023학년도-수학여행-수련활동-등-현장체험학습-운영-안내서-pdf",
@@ -2940,7 +14694,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1284315-1-2023학년도-수학여행-수련활동-등-현장체험학습-운영-안내서-서식-hwp",
@@ -2968,7 +14722,127 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1284315-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1284315-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1396580-0-관리자-학교폭력-사안처리-절차-안내-교재본-pdf",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2024 학교 내 성희롱성폭력아동학대 사안대응 관리자 역량 강화 연수_학교폭력 사안처리 절차 안내 - (관리자)학교폭력 사안처리 절차 안내_교재본",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2024 학교 내 성희롱성폭력아동학대 사안대응 관리자 역량 강화 연수_학교폭력 사안처리 절차 안내 (관리자)학교폭력 사안처리 절차 안내_교재본.pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1396580/doc_1788vabe9=fdvac=48v76=96v62=d8fevc578vb06d_v2635.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1396580-1-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2024 학교 내 성희롱성폭력아동학대 사안대응 관리자 역량 강화 연수_학교폭력 사안처리 절차 안내 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2024 학교 내 성희롱성폭력아동학대 사안대응 관리자 역량 강화 연수_학교폭력 사안처리 절차 안내 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1396580-2-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2024 학교 내 성희롱성폭력아동학대 사안대응 관리자 역량 강화 연수_학교폭력 사안처리 절차 안내 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2024 학교 내 성희롱성폭력아동학대 사안대응 관리자 역량 강화 연수_학교폭력 사안처리 절차 안내 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1385989-0-2024학년도-수학여행-수련활동-등-현장체험학습-운영-안내서-pdf",
@@ -2992,7 +14866,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1385989-1-2024학년도-수학여행-수련활동-등-현장체험학습-운영-안내서-부록-서식-hwp",
@@ -3020,7 +14894,199 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1385989-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2024학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2024학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1385989-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2024학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2024학년도 수학여행 수련활동 등 현장체험학습 운영 안내서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1396581-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2024학년도 학교 내 성희롱 성폭력 아동학대 사안대응 관리자 역량강화 연수_아동학대 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 2024학년도 학교 내 성희롱 성폭력 아동학대 사안대응 관리자 역량강화 연수_아동학대 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1396575-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2024학년도 학교 내 성희롱․성폭력․아동학대 사안대응 관리자 역량강화 연수 자료 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 2024학년도 학교 내 성희롱․성폭력․아동학대 사안대응 관리자 역량강화 연수 자료 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1396577-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2024학년도 학교내 성희롱 성폭력 아동학대 사안대응 관리자 역량강화 연수 자료_1. 디지털 성범죄 대응방안과 학교의 역할 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 2024학년도 학교내 성희롱 성폭력 아동학대 사안대응 관리자 역량강화 연수 자료_1. 디지털 성범죄 대응방안과 학교의 역할 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1515207-1-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2025 학교폭력 예방 연수 자료－컨설턴트용 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2025 학교폭력 예방 연수 자료－컨설턴트용 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1515207-0-학교폭력-예방-컨설팅단-연수자료-용량조절-1-pptx",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2025 학교폭력 예방 연수 자료－컨설턴트용 - 학교폭력 예방 컨설팅단 연수자료(용량조절)1",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2025 학교폭력 예방 연수 자료－컨설턴트용 학교폭력 예방 컨설팅단 연수자료(용량조절)1.pptx",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1515207/doc_d510v974f=b7ved=44v4c=8evc3=6befv8bbbv0133_v297.pptx",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1515207-2-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2025 학교폭력 예방 연수 자료－컨설턴트용 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2025 학교폭력 예방 연수 자료－컨설턴트용 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1493035-0-2025학년도-수학여행-수련활동-등-현장체험학습-운영-안내서-서식-부록-hwp",
@@ -3048,7 +15114,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1493035-1-2025학년도-현장체험학습-운영-안내서-pdf",
@@ -3072,7 +15138,151 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1493035-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2025학년도 수학여행.수련활동 등 현장체험학습 운영 안내서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2025학년도 수학여행.수련활동 등 현장체험학습 운영 안내서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1493035-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2025학년도 수학여행.수련활동 등 현장체험학습 운영 안내서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2025학년도 수학여행.수련활동 등 현장체험학습 운영 안내서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1542123-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2025학년도 학교 내 성희롱성폭력(디지털성폭력) 사안대응 길라잡이 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "성폭력 2025학년도 학교 내 성희롱성폭력(디지털성폭력) 사안대응 길라잡이 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1584459-0-2026학년도-현장중심-학교폭력-예방-및-대책-경북교육청-hwp",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2026학년도 경북교육청 현장 중심 학교폭력 예방 및 대책 시행 계획 - 2026학년도 현장중심 학교폭력 예방 및 대책(경북교육청)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2026학년도 경북교육청 현장 중심 학교폭력 예방 및 대책 시행 계획 2026학년도 현장중심 학교폭력 예방 및 대책(경북교육청).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1584459/doc_448bv7772=86vad=4dv08=88v96=d220va11bv165b_v3507.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1584459-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2026학년도 경북교육청 현장 중심 학교폭력 예방 및 대책 시행 계획 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2026학년도 경북교육청 현장 중심 학교폭력 예방 및 대책 시행 계획 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1584459-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2026학년도 경북교육청 현장 중심 학교폭력 예방 및 대책 시행 계획 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 2026학년도 경북교육청 현장 중심 학교폭력 예방 및 대책 시행 계획 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1589594-1-2026학년도-수학여행-수련활동-일일형현장체험학습-운영-안내서-pdf",
@@ -3096,7 +15306,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-field-trip-1589594-0-2026학년도-수학여행-수련활동-일일형현장체험학습-운영-안내서-안-hwp",
@@ -3120,7 +15330,471 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1589594-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2026학년도 수학여행, 수련활동, 일일형현장체험학습 운영 안내서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2026학년도 수학여행, 수련활동, 일일형현장체험학습 운영 안내서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-field-trip-1589594-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "2026학년도 수학여행, 수련활동, 일일형현장체험학습 운영 안내서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "현장체험학습 2026학년도 수학여행, 수련활동, 일일형현장체험학습 운영 안내서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 현장체험학습 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 현장체험학습 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-961271-0-개정-학교폭력예방-및-대책에-관한-법률-시행-관련-안내-최종-학생생활과-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "개정 학교폭력예방법 안내 및 관련 서식 - 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 안내(최종)-학생생활과-",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 개정 학교폭력예방법 안내 및 관련 서식 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 안내(최종)-학생생활과-.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_eb1cv9470=1bv5a=4cv0f=83v8f=f339vdaf4v20e2_v426.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_eb1cv9470=1bv5a=4cv0f=83v8f=f339vdaf4v20e2_v426.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-961271-1-개정-학교폭력예방-및-대책에-관한-법률-시행-관련-학교용-각종-서식-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "개정 학교폭력예방법 안내 및 관련 서식 - 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 학교용 각종 서식",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 개정 학교폭력예방법 안내 및 관련 서식 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 학교용 각종 서식.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_aa01v8fca=abvb6=48v30=a7v73=d4b7va536v1c2a_v7710.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_aa01v8fca=abvb6=48v30=a7v73=d4b7va536v1c2a_v7710.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-961271-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "개정 학교폭력예방법 안내 및 관련 서식 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 개정 학교폭력예방법 안내 및 관련 서식 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-961271-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "form",
+      "title": "개정 학교폭력예방법 안내 및 관련 서식 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 개정 학교폭력예방법 안내 및 관련 서식 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15379-cntntsid-6673-0-2025학년도-수학여행-수련활동-등-현장체험학습-운영안내서-pdf",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "계획 및 준비(사업부서) - 2025학년도 수학여행 수련활동 등 현장체험학습 운영안내서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습비 계획 및 준비(사업부서) 2025학년도 수학여행 수련활동 등 현장체험학습 운영안내서.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=011b6f3bb4fecad357b7a0ad0bfb8f3c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-0-서식-초등-4-14-1-1-paps-실시-계획-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-1] PAPS 실시 계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생건강체력평가(PAPS) 계획 수립 및 검사 실시 [서식-초등-4-14-1-1] PAPS 실시 계획(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=00e68f52ca784bec0839fe1c3b332f43",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=00e68f52ca784bec0839fe1c3b332f43",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-1-서식-초등-4-14-1-2-paps-측정-종목-구성",
+      "category": "studentLife",
+      "type": "form",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-2] PAPS 측정 종목 구성",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생건강체력평가(PAPS) 계획 수립 및 검사 실시 [서식-초등-4-14-1-2] PAPS 측정 종목 구성",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=99c31ad1727db12fa588440f33d6625a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=99c31ad1727db12fa588440f33d6625a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-2-서식-초등-4-14-1-3-paps-측정-준비-사항",
+      "category": "studentLife",
+      "type": "form",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-3] PAPS 측정 준비 사항",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생건강체력평가(PAPS) 계획 수립 및 검사 실시 [서식-초등-4-14-1-3] PAPS 측정 준비 사항",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba5e4859820a6a256e2a96f001b65d78",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba5e4859820a6a256e2a96f001b65d78",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-3-서식-초등-4-14-1-4-paps-측정-장비-안내",
+      "category": "studentLife",
+      "type": "form",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-4] PAPS 측정 장비 안내",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생건강체력평가(PAPS) 계획 수립 및 검사 실시 [서식-초등-4-14-1-4] PAPS 측정 장비 안내",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b786b69a128467fb67e795acdda9e530",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b786b69a128467fb67e795acdda9e530",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-4-서식-초등-4-14-1-5-paps-관련-faq",
+      "category": "studentLife",
+      "type": "form",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-5] PAPS 관련 FAQ",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생건강체력평가(PAPS) 계획 수립 및 검사 실시 [서식-초등-4-14-1-5] PAPS 관련 FAQ",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c6b530d6be8890238929a5971e4f0488",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c6b530d6be8890238929a5971e4f0488",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14794-cntntsid-7206-0-서식-초등-8-2-2-1-다면평가자-서약서-서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교사 다면평가 - [서식-초등-8-2-2-1] 다면평가자 서약서(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교사 다면평가 [서식-초등-8-2-2-1] 다면평가자 서약서(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fba1d8f38c452b271f3105941b4c49b8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fba1d8f38c452b271f3105941b4c49b8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14794-cntntsid-7206-1-서식-초등-8-2-2-2-교사-자기실적평가표-서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교사 다면평가 - [서식-초등-8-2-2-2] (교사)자기실적평가표(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교사 다면평가 [서식-초등-8-2-2-2] (교사)자기실적평가표(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6c58054d27a0f987db0eec584d0bf3ee",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6c58054d27a0f987db0eec584d0bf3ee",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14794-cntntsid-7206-2-서식-초등-8-2-2-3-교감-자기실적평가표-서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교사 다면평가 - [서식-초등-8-2-2-3] (교감)자기실적평가표(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교사 다면평가 [서식-초등-8-2-2-3] (교감)자기실적평가표(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f81daed2b823321e4ea7df8a802e3f88",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f81daed2b823321e4ea7df8a802e3f88",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14794-cntntsid-7206-3-서식-초등-8-2-2-4-다면평가-정성-정량-기준표-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교사 다면평가 - [서식-초등-8-2-2-4] 다면평가(정성,정량)기준표(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교사 다면평가 [서식-초등-8-2-2-4] 다면평가(정성,정량)기준표(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=828caae568c562ddcb49749301f34585",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=828caae568c562ddcb49749301f34585",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14794-cntntsid-7206-4-서식-초등-8-2-2-5-교사다면평가-시행-계획-내부결재",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교사 다면평가 - [서식-초등-8-2-2-5] 교사다면평가 시행 계획(내부결재)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교사 다면평가 [서식-초등-8-2-2-5] 교사다면평가 시행 계획(내부결재)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ce9ed4685d9da879ef36d86f04ad3cd9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ce9ed4685d9da879ef36d86f04ad3cd9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-registry-fieldexperienceguide-1591411-0-2026학년도-학교장-허가-교외체험학습-운영-지침-pdf",
@@ -3148,7 +15822,3371 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-fieldexperienceguide-1591411-1-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교외체험학습 운영 지침(2026.3.1.) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "2026학년도 학교장허가 교외체험학습 운영 지침 신청서 보고서 출석 인정 교외체험학습 운영 지침(2026.3.1.) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "2026학년도 학교장허가 교외체험학습 운영 지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "2026학년도 학교장허가 교외체험학습 운영 지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-fieldexperienceguide-1591411-2-pdf-다운로드",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교외체험학습 운영 지침(2026.3.1.) - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "2026학년도 학교장허가 교외체험학습 운영 지침 신청서 보고서 출석 인정 교외체험학습 운영 지침(2026.3.1.) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "2026학년도 학교장허가 교외체험학습 운영 지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "2026학년도 학교장허가 교외체험학습 운영 지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1352999-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "rule",
+      "title": "교원의 학생생활지도에 관한 고시 마이크로러닝 콘텐츠를 통한 홍보 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "생활지도 교원의 학생생활지도에 관한 고시 마이크로러닝 콘텐츠를 통한 홍보 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1352999-1-pdf-다운로드",
+      "category": "studentLife",
+      "type": "rule",
+      "title": "교원의 학생생활지도에 관한 고시 마이크로러닝 콘텐츠를 통한 홍보 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "생활지도 교원의 학생생활지도에 관한 고시 마이크로러닝 콘텐츠를 통한 홍보 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14946-cntntsid-6652-1-서식-중등-4-3-4-2-학업중단숙려제-new-start프로그램-운영-계획서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교육공동체와의 협력적 안전체계 구축 - [서식-중등-4-3-4-2]학업중단숙려제 New-Start프로그램 운영 계획서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공동체와의 협력적 안전체계 구축 [서식-중등-4-3-4-2]학업중단숙려제 New-Start프로그램 운영 계획서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6c2086255362ba9ce9909e1cfd97fc16",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6c2086255362ba9ce9909e1cfd97fc16",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14946-cntntsid-6652-2-서식-중등-4-3-4-3-학업중단숙려제-new-start프로그램-안내-가정통신문",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교육공동체와의 협력적 안전체계 구축 - [서식-중등-4-3-4-3]학업중단숙려제 New-Start프로그램 안내 가정통신문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공동체와의 협력적 안전체계 구축 [서식-중등-4-3-4-3]학업중단숙려제 New-Start프로그램 안내 가정통신문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=02f66a164880bf69edfefd52079c2e39",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=02f66a164880bf69edfefd52079c2e39",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14946-cntntsid-6652-3-서식-중등-4-3-4-4-2023-학업중단숙려제-운영-기준-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "교육공동체와의 협력적 안전체계 구축 - [서식-중등-4-3-4-4]2023 학업중단숙려제 운영 기준",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "교육공동체와의 협력적 안전체계 구축 [서식-중등-4-3-4-4]2023 학업중단숙려제 운영 기준.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=83266fd7ee3e85eb622baac84628ef5f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=83266fd7ee3e85eb622baac84628ef5f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14795-cntntsid-7213-0-서식-초등-8-2-3-1-근평-및-다면평가-관련-조견표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "근무성적평정 - [서식-초등-8-2-3-1] 근평 및 다면평가 관련 조견표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "근무성적평정 [서식-초등-8-2-3-1] 근평 및 다면평가 관련 조견표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bebbf3defd9d3092dc4c0c464cc4b232",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bebbf3defd9d3092dc4c0c464cc4b232",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1192624-2-대안교육기관등록제-주요질의모음-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 - 대안교육기관등록제 주요질의모음",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 대안교육기관등록제 주요질의모음.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_fd79v4f52=3fve3=4fvdc=87vd1=8fbbv462evbe24_v5798.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_fd79v4f52=3fve3=4fvdc=87vd1=8fbbv462evbe24_v5798.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1192624-3-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 - 제출서식(동의서)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 제출서식(동의서).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 - 제출서식(소방시설등 자체점검 실시결과 보고서)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 제출서식(소방시설등 자체점검 실시결과 보고서).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1192624-4-pdf-다운로드",
+      "category": "studentLife",
+      "type": "form",
+      "title": "대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 대안교육기관 등록 관련 주요질의사항 및 관련 서식 안내 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1465862-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "딥페이크 등 디지털 성폭력 예방 교수학습자료(초·중·고등학생용) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "성폭력 딥페이크 등 디지털 성폭력 예방 교수학습자료(초·중·고등학생용) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1433326-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "딥페이크 성범죄 예방 연수 자료 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "딥페이크 딥페이크 성범죄 예방 연수 자료 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20851-cntntsid-8621-0-서식-유-3-3-1-1-봄-꽃-놀이-체험학습-기안",
+      "category": "studentLife",
+      "type": "form",
+      "title": "봄 꽃 놀이 - [서식-유-3-3-1-1] 봄 꽃 놀이 체험학습 기안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험 봄 꽃 놀이 [서식-유-3-3-1-1] 봄 꽃 놀이 체험학습 기안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f6dd9c515ac901605ed5afb748a50c08",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f6dd9c515ac901605ed5afb748a50c08",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20851-cntntsid-8621-1-서식-유-3-3-1-2-봄-꽃-놀이-체험학습-사전답사-기안",
+      "category": "studentLife",
+      "type": "form",
+      "title": "봄 꽃 놀이 - [서식-유-3-3-1-2] 봄 꽃 놀이 체험학습 사전답사 기안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험 봄 꽃 놀이 [서식-유-3-3-1-2] 봄 꽃 놀이 체험학습 사전답사 기안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b41f49c585a9cb223ffacf9f84b0bb8c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b41f49c585a9cb223ffacf9f84b0bb8c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20851-cntntsid-8621-2-서식-유-3-3-1-3-봄-꽃-놀이-체험학습-사전답사-결과-보고서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "봄 꽃 놀이 - [서식-유-3-3-1-3] 봄 꽃 놀이 체험학습 사전답사 결과 보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험 봄 꽃 놀이 [서식-유-3-3-1-3] 봄 꽃 놀이 체험학습 사전답사 결과 보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ec07f06f08ee4bc625b3c296f1b99b2b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ec07f06f08ee4bc625b3c296f1b99b2b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20851-cntntsid-8621-3-서식-유-3-3-1-4-봄-꽃-놀이-체험학습-계획",
+      "category": "studentLife",
+      "type": "form",
+      "title": "봄 꽃 놀이 - [서식-유-3-3-1-4] 봄 꽃 놀이 체험학습 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험 봄 꽃 놀이 [서식-유-3-3-1-4] 봄 꽃 놀이 체험학습 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3adcfe091f89aec0e8f7ef221bee0fd9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3adcfe091f89aec0e8f7ef221bee0fd9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20851-cntntsid-8621-4-서식-유-3-3-1-5-봄-꽃-놀이-체험학습-안내장",
+      "category": "studentLife",
+      "type": "form",
+      "title": "봄 꽃 놀이 - [서식-유-3-3-1-5] 봄 꽃 놀이 체험학습 안내장",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험 봄 꽃 놀이 [서식-유-3-3-1-5] 봄 꽃 놀이 체험학습 안내장",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7eb789643a91b767de97c42a1aa9d81e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7eb789643a91b767de97c42a1aa9d81e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1186466-0-1-생명사랑-남서부센터-상담의뢰서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 1. 생명사랑 남서부센터 상담의뢰서",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 1. 생명사랑 남서부센터 상담의뢰서.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_aca8v13df=50vd0=4dv16=bfv7a=ef42v389bvc8cc_v9620.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_aca8v13df=50vd0=4dv16=bfv7a=ef42v389bvc8cc_v9620.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1186466-1-2-생명사랑-동북부센터-상담의뢰서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 2. 생명사랑 동북부센터 상담의뢰서",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 2. 생명사랑 동북부센터 상담의뢰서.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_0bc0v4a9f=abved=4fv18=a0vc7=7d3cvb43bv2509_v6836.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_0bc0v4a9f=abved=4fv18=a0vc7=7d3cvb43bv2509_v6836.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1186466-2-3-교사용-학생-자살징후-체크리스트-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 3. 교사용 학생 자살징후 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 3. 교사용 학생 자살징후 체크리스트.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1186466-3-4-생명사랑-기타참고자료-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 4. 생명사랑 기타참고자료",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 4. 생명사랑 기타참고자료.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_8f77vcfe0=a5v2b=48v1e=bav4f=dddave1f2v1978_v7291.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_8f77vcfe0=a5v2b=48v1e=bav4f=dddave1f2v1978_v7291.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1186466-4-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1186466-5-pdf-다운로드",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑 관련 다운로드 참고자료(센터 상담의뢰서, 체크리스트, 참고자료) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 - [붙임1] 교사용 학생 자살 징후 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 [붙임1] 교사용 학생 자살 징후 체크리스트.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1285472-1-붙임2-1-생명사랑-남서부센터-상담의뢰서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 - [붙임2-1] 생명사랑 남서부센터 상담의뢰서",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 [붙임2-1] 생명사랑 남서부센터 상담의뢰서.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_efacv74b7=feva6=4fv82=8cv4a=1c29vf47evceb8_v833.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_efacv74b7=feva6=4fv82=8cv4a=1c29vf47evceb8_v833.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1285472-2-붙임2-2-생명사랑-동북부센터-상담의뢰서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 - [붙임2-2] 생명사랑 동북부센터 상담의뢰서",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 [붙임2-2] 생명사랑 동북부센터 상담의뢰서.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_71ddv94c9=a7v1e=4bv9b=afv6e=e163vd53cv3895_v6918.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_71ddv94c9=a7v1e=4bv9b=afv6e=e163vd53cv3895_v6918.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1285472-3-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1285472-4-pdf-다운로드",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 생명사랑센터 남서부, 동북부 센터 상담의뢰서 및 교사용 학생 자살 징후 체크리스트 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-0-서식-유-2-3-1-1-유치원생활기록부-작성-및-관리지침-교육부고시-제2025-8호",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-1]「유치원생활기록부 작성 및 관리지침」(교육부고시 제2025-8호)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-1]「유치원생활기록부 작성 및 관리지침」(교육부고시 제2025-8호)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=422a1e314e3ba6871cae1bf47e8f141a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=422a1e314e3ba6871cae1bf47e8f141a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-1-서식-유-2-3-1-2-유치원생활기록부-작성-보고-기안",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-2]유치원생활기록부 작성 보고 기안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-2]유치원생활기록부 작성 보고 기안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0fdabd45d7b65cb94a54d2f30bf9d2c4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0fdabd45d7b65cb94a54d2f30bf9d2c4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-2-서식-유-2-3-1-3-유치원생활기록부-서식-2025",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-3]유치원생활기록부 서식(2025)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-3]유치원생활기록부 서식(2025)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6dc74dad8c1f94add08675079c92cc5c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6dc74dad8c1f94add08675079c92cc5c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-3-서식-유-2-3-1-4-유치원생활기록부-색인목록",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-4]유치원생활기록부 색인목록",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-4]유치원생활기록부 색인목록",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=50700c9ecf7ef823332fe869e3f0c154",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=50700c9ecf7ef823332fe869e3f0c154",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-4-서식-유-2-3-1-5-특기사항-기록을-위한-학부모-동의서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-5]특기사항 기록을 위한 학부모 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-5]특기사항 기록을 위한 학부모 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0e568ea46e05f9427b9ed67dc9d0627e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0e568ea46e05f9427b9ed67dc9d0627e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-5-서식-유-2-3-1-6-유치원생활기록부-정정보고-기안",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-6]유치원생활기록부 정정보고 기안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-6]유치원생활기록부 정정보고 기안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=55ae3a646026d91b2f95db7ad74e651f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=55ae3a646026d91b2f95db7ad74e651f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-6-서식-유-2-3-1-7-유치원생활기록부-정정대장-서식-2025",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-7]유치원생활기록부 정정대장 서식(2025)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-7]유치원생활기록부 정정대장 서식(2025)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=08d257d88b348b7775e3168f3f43ba11",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=08d257d88b348b7775e3168f3f43ba11",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-7-서식-유-2-3-1-8-유치원생활기록부-송부-요청-기안",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-8]유치원생활기록부 송부-요청 기안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-8]유치원생활기록부 송부-요청 기안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b234123aae84ded1bdbcb294397931f8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b234123aae84ded1bdbcb294397931f8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-8-서식-유-2-3-1-9-유치원생활기록부-송부요청서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-1-9]유치원생활기록부 송부요청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-1-9]유치원생활기록부 송부요청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=48a2c195f384b4ca6d223dcb39e9c826",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=48a2c195f384b4ca6d223dcb39e9c826",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-9-서식-유-2-3-10-학적처리-사용-용어",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-10]학적처리 사용 용어",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-10]학적처리 사용 용어",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=01e91277b9b819a1af8e5492d708c0c4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=01e91277b9b819a1af8e5492d708c0c4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-10-서식-유-2-3-11-출결상황-관리",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-11]출결상황 관리",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-11]출결상황 관리",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1ad39f30f1dfe4d8f305d25da0d19baf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1ad39f30f1dfe4d8f305d25da0d19baf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-11-서식-유-2-3-12-2024-유치원생활기록부-기재요령-배포본",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-12]2024 유치원생활기록부 기재요령(배포본)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-12]2024 유치원생활기록부 기재요령(배포본)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbc3f98ae578bbae0b52fdbc85b9bccc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbc3f98ae578bbae0b52fdbc85b9bccc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14472-cntntsid-6412-12-서식-유-2-3-13-2024-유치원생활기록부-유아발달상황-작성을-위한-현장-지원자료",
+      "category": "studentLife",
+      "type": "form",
+      "title": "생활기록부 - [서식-유-2-3-13]2024 유치원생활기록부 유아발달상황 작성을 위한 현장 지원자료",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "생활기록부 [서식-유-2-3-13]2024 유치원생활기록부 유아발달상황 작성을 위한 현장 지원자료",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=40542a486f65236cc8db68d167dbe10d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=40542a486f65236cc8db68d167dbe10d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14796-cntntsid-7215-0-서식-초등-8-4-1-성과상여금-개인정보제공동의서-서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "성과상여금 평가(교사) - [서식-초등-8-4-1] 성과상여금-개인정보제공동의서(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "성과상여금 평가(교사) [서식-초등-8-4-1] 성과상여금-개인정보제공동의서(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=84c89c6d5c1db534646de41c9b3cfafd",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=84c89c6d5c1db534646de41c9b3cfafd",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14796-cntntsid-7215-1-서식-초등-8-4-2-성과상여금-최상위등급심사의결서-서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "성과상여금 평가(교사) - [서식-초등-8-4-2] 성과상여금-최상위등급심사의결서(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "성과상여금 평가(교사) [서식-초등-8-4-2] 성과상여금-최상위등급심사의결서(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=923ca9e25bac256858d8f6b18b1aa007",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=923ca9e25bac256858d8f6b18b1aa007",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14796-cntntsid-7215-2-서식-초등-8-4-3-성과상여금-이의신청서-서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "성과상여금 평가(교사) - [서식-초등-8-4-3] 성과상여금-이의신청서(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "성과상여금 평가(교사) [서식-초등-8-4-3] 성과상여금-이의신청서(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=260b7a431a08848ed750c615b4a1256b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=260b7a431a08848ed750c615b4a1256b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14796-cntntsid-7215-3-서식-초등-8-4-4-교육공무원및기간제교사성과상여금지급업무추진계획-내부결재",
+      "category": "studentLife",
+      "type": "form",
+      "title": "성과상여금 평가(교사) - [서식-초등-8-4-4] 교육공무원및기간제교사성과상여금지급업무추진계획(내부결재)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "성과상여금 평가(교사) [서식-초등-8-4-4] 교육공무원및기간제교사성과상여금지급업무추진계획(내부결재)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=df388959883ed985fffd561d0fe3b8a5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=df388959883ed985fffd561d0fe3b8a5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1615284-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "성폭력 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1615284-1-pdf-다운로드",
+      "category": "studentLife",
+      "type": "form",
+      "title": "성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "성폭력 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1625762-2-관련-서식-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 관련 서식",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 관련 서식.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1625762-0-성희롱성폭력아동학대-핵심강사-연수-배포용-pptx",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 성희롱성폭력아동학대 핵심강사 연수(배포용)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 성희롱성폭력아동학대 핵심강사 연수(배포용).pptx",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_1cccve9b4=d6vf3=44vbd=91vd1=bb22vc01avb80c_v8571.pptx",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1625762-1-성희롱성폭령-사안처리-안내서-6-29-pdf",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 성희롱성폭령 사안처리 안내서(6. 29.)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 성희롱성폭령 사안처리 안내서(6. 29.).pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_9e90v2d21=ecvdc=4cv21=abvc5=fdb1vd5edvf327_v7326.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1625762-4-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1625762-3-지침-예시안-hwp",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - 지침 예시안",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 지침 예시안.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_0a1bvef24=b8va2=41v37=98vdd=5294vd33av44fe_v7743.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1625762-5-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 성희롱·성폭력·아동학대 사안처리 핵심강사 연수 자료 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14898-cntntsid-6501-0-서식-중등-2-4-1-1-서술형평가-문제지-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "수행평가 - [서식-중등-2-4-1-1] 서술형평가 문제지(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "수행평가 [서식-중등-2-4-1-1] 서술형평가 문제지(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3c90d15bf05014de0007a7885e189e06",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3c90d15bf05014de0007a7885e189e06",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14898-cntntsid-6501-1-서식-중등-2-4-1-2-서술형평가-채점기준표-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "수행평가 - [서식-중등-2-4-1-2] 서술형평가 채점기준표(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "수행평가 [서식-중등-2-4-1-2] 서술형평가 채점기준표(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=06e53c03831880379f94c6ce97a1319d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=06e53c03831880379f94c6ce97a1319d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14898-cntntsid-6501-2-서식-중등-2-4-1-3-수행평가-반영-비율-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "수행평가 - [서식-중등-2-4-1-3] 수행평가 반영 비율(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "수행평가 [서식-중등-2-4-1-3] 수행평가 반영 비율(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c436e43db5b399cc4e5dd738c3247698",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c436e43db5b399cc4e5dd738c3247698",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14898-cntntsid-6501-3-서식-중등-2-4-1-4-가정통신문-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "수행평가 - [서식-중등-2-4-1-4] 가정통신문(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "수행평가 [서식-중등-2-4-1-4] 가정통신문(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=90e843f3dd9ab2113b2e33f066c216ca",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=90e843f3dd9ab2113b2e33f066c216ca",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14898-cntntsid-6501-4-2026학년도-경상북도-고등학교-학업성적관리-시행지침",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "수행평가 - 2026학년도 경상북도 고등학교 학업성적관리 시행지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "수행평가 2026학년도 경상북도 고등학교 학업성적관리 시행지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ccbf8bed5998fd6bde7140d5692c7e13",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14898-cntntsid-6501-5-2026학년도-경상북도-중학교-학업성적관리-시행지침",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "수행평가 - 2026학년도 경상북도 중학교 학업성적관리 시행지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "수행평가 2026학년도 경상북도 중학교 학업성적관리 시행지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a300c2257797c65a2181da5b896876e2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1563287-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "아동학대 예방 및 대처요령 교육부문 가이드북 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 아동학대 예방 및 대처요령 교육부문 가이드북 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1560943-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "아동학대 예방 주간 자료 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 아동학대 예방 주간 자료 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1453269-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "아동학대 예방 주간 현수막 및 리플렛 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 아동학대 예방 주간 현수막 및 리플렛 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1353996-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "아동학대예방-리플렛 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 아동학대예방-리플렛 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1353986-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "아동학대예방-부모교육자료 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "아동학대 아동학대예방-부모교육자료 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14948-cntntsid-6660-4-서식-중등-4-4-1-5-문화현장체험학습-안전교육-안내-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-5]문화현장체험학습 안전교육 안내 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교 안전교육 안전하고 행복한 학교 [서식-중등-4-4-1-5]문화현장체험학습 안전교육 안내 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8aadfbe8b4f83fb4fd84196992ff2d60",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8aadfbe8b4f83fb4fd84196992ff2d60",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14493-cntntsid-6443-0-서식-유-2-4-1-1-영역별-유아-평가지",
+      "category": "studentLife",
+      "type": "form",
+      "title": "유아평가 - [서식-유-2-4-1-1]영역별 유아 평가지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "유치원평가 유아평가 [서식-유-2-4-1-1]영역별 유아 평가지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a47e3f82036ba4400fb5bfc2e826e166",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a47e3f82036ba4400fb5bfc2e826e166",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14913-cntntsid-6542-0-서식-중등-3-2-2-1-컨설팅-장학-신청서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-1] 컨설팅 장학 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "자율장학의 실제 및 평가 [서식-중등-3-2-2-1] 컨설팅 장학 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=eb1e3d5d11eaf3dbea626fc7510134f9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=eb1e3d5d11eaf3dbea626fc7510134f9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14913-cntntsid-6542-1-서식-중등-3-2-2-2-컨설팅-장학-결과-보고서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-2] 컨설팅 장학 결과 보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "자율장학의 실제 및 평가 [서식-중등-3-2-2-2] 컨설팅 장학 결과 보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=795308e20ee28c5cea1c5bdd807fb6b3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=795308e20ee28c5cea1c5bdd807fb6b3",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14913-cntntsid-6542-2-서식-중등-3-2-2-3-심층-수업-컨설팅-신청서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-3] 심층 수업 컨설팅 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "자율장학의 실제 및 평가 [서식-중등-3-2-2-3] 심층 수업 컨설팅 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b64987b08deb49ab2b691b6f46278ff6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b64987b08deb49ab2b691b6f46278ff6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14913-cntntsid-6542-3-서식-중등-3-2-2-4-심층-수업-컨설팅-보고서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-4] 심층 수업 컨설팅 보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "자율장학의 실제 및 평가 [서식-중등-3-2-2-4] 심층 수업 컨설팅 보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5608744e0ad917663560054fa5c9f108",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5608744e0ad917663560054fa5c9f108",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14913-cntntsid-6542-4-서식-중등-3-2-2-5-교육-지원-청-지원-장학-신청서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-5] 교육(지원)청 지원 장학 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "자율장학의 실제 및 평가 [서식-중등-3-2-2-5] 교육(지원)청 지원 장학 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=df504f9b61a30200a01604eceeb39c99",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=df504f9b61a30200a01604eceeb39c99",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14913-cntntsid-6542-5-서식-중등-3-2-2-6-교육-지원-청-지원-장학-결과-보고서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-6] 교육(지원)청 지원 장학 결과 보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "자율장학의 실제 및 평가 [서식-중등-3-2-2-6] 교육(지원)청 지원 장학 결과 보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ab53650968c2ae1166404eaac5691e56",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ab53650968c2ae1166404eaac5691e56",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-2-서식-초등-1-9-1-1-전입생-개인정보이용-동의서-스쿨뱅킹-동의서-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "전입학생 학적 처리 - [서식-초등-1-9-1-1] 전입생 개인정보이용 동의서, 스쿨뱅킹 동의서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "전입·전출 학생 학적처리 전입학생 학적 처리 [서식-초등-1-9-1-1] 전입생 개인정보이용 동의서, 스쿨뱅킹 동의서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a4b8da881dc8c2121c8697c73b21e4b5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a4b8da881dc8c2121c8697c73b21e4b5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-3-서식-초등-1-9-1-2-전입생-학반-배치-학교-내규-및-관련-서식-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "전입학생 학적 처리 - [서식-초등-1-9-1-2] 전입생 학반 배치 학교 내규 및 관련 서식(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "전입·전출 학생 학적처리 전입학생 학적 처리 [서식-초등-1-9-1-2] 전입생 학반 배치 학교 내규 및 관련 서식(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3152b3e666e1a6f9607c96750d77d7a7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3152b3e666e1a6f9607c96750d77d7a7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-4-서식-초등-1-9-1-3-학생정서-행동특성검사-요청-기안문",
+      "category": "studentLife",
+      "type": "form",
+      "title": "전입학생 학적 처리 - [서식-초등-1-9-1-3] 학생정서·행동특성검사 요청 기안문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "전입·전출 학생 학적처리 전입학생 학적 처리 [서식-초등-1-9-1-3] 학생정서·행동특성검사 요청 기안문",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e5cc91a0f409de1e4f2f3e56f656a24c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e5cc91a0f409de1e4f2f3e56f656a24c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-0-2025-초등학교-학적업무-매뉴얼-hwp",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "전입학생 학적 처리 - 2025 초등학교 학적업무 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "전입·전출 학생 학적처리 전입학생 학적 처리 2025 초등학교 학적업무 매뉴얼.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e5cc91a0f409de1e4f2f3e56f656a24c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-1-학적업무-관련서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "전입학생 학적 처리 - 학적업무 관련서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "전입·전출 학생 학적처리 전입학생 학적 처리 학적업무 관련서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c535068f8d188110d0b70d1ce40cb708",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c535068f8d188110d0b70d1ce40cb708",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14474-cntntsid-6415-0-서식-유-1-3-1-1-재원증명서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "출결 및 전출입 - [서식-유-1-3-1-1]재원증명서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "출결 및 전출입 [서식-유-1-3-1-1]재원증명서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7dc3c80b67dfcfc68547aa8b2bf58ae1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7dc3c80b67dfcfc68547aa8b2bf58ae1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14474-cntntsid-6415-1-서식-유-1-3-1-2-교외체험학습-신청서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "출결 및 전출입 - [서식-유-1-3-1-2]교외체험학습 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "출결 및 전출입 [서식-유-1-3-1-2]교외체험학습 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2c927c69c05964b735de2e08acf5f254",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2c927c69c05964b735de2e08acf5f254",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14474-cntntsid-6415-2-서식-유-1-3-1-3-교외체험학습-보고서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "출결 및 전출입 - [서식-유-1-3-1-3]교외체험학습 보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "출결 및 전출입 [서식-유-1-3-1-3]교외체험학습 보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6c5b32f2ac4b9eafd883711f501acabb",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6c5b32f2ac4b9eafd883711f501acabb",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14474-cntntsid-6415-3-서식-유-1-3-1-4-교외체험학습-대리-인솔-위임장",
+      "category": "studentLife",
+      "type": "form",
+      "title": "출결 및 전출입 - [서식-유-1-3-1-4]교외체험학습 대리 인솔 위임장",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "출결 및 전출입 [서식-유-1-3-1-4]교외체험학습 대리 인솔 위임장",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dedf5d83eee731640be7646f2721b889",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dedf5d83eee731640be7646f2721b889",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14474-cntntsid-6415-4-서식-유-1-3-1-5-유아이동부",
+      "category": "studentLife",
+      "type": "form",
+      "title": "출결 및 전출입 - [서식-유-1-3-1-5]유아이동부",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "출결 및 전출입 [서식-유-1-3-1-5]유아이동부",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dcf7a23909e52aec52a14ea16a874f90",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dcf7a23909e52aec52a14ea16a874f90",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14474-cntntsid-6415-5-서식-유-1-3-1-6-퇴학신청서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "출결 및 전출입 - [서식-유-1-3-1-6]퇴학신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "출결 및 전출입 [서식-유-1-3-1-6]퇴학신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=14ecdffdc162bab4221c012ad2544104",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=14ecdffdc162bab4221c012ad2544104",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16561-cntntsid-6995-1-서식-중등-8-4-1-2-치료지원서비스제공-기록지-및-월별-평가서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "치료지원 - [서식-중등-8-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2049c9d4eb0e2d4bbb4e0cb29a31eed7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2049c9d4eb0e2d4bbb4e0cb29a31eed7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16537-cntntsid-7207-1-서식-초등-7-4-1-2-치료지원서비스제공-기록지-및-월별-평가서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "치료지원 - [서식-초등-7-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-초등-7-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=34ab7e7600f495393b54c5d79d573e60",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=34ab7e7600f495393b54c5d79d573e60",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20887-cntntsid-8601-0-서식-유특-6-4-1-1-치료지원서비스제공기록지-및-월별-평가서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "치료지원 - 서식-유특-6-4-1-1. 치료지원서비스제공기록지 및 월별 평가서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 서식-유특-6-4-1-1. 치료지원서비스제공기록지 및 월별 평가서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=77f2970207f4e92f393c2dfa3ccabd36",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=77f2970207f4e92f393c2dfa3ccabd36",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20876-cntntsid-8639-0-서식-유특-6-1-1-1-특수교육대상학생-진단-평가-의뢰서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-1 특수교육대상학생 진단 · 평가 의뢰서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 선정 배치 특수교육대상자 신규 선정 배치 서식-유특-6-1-1-1 특수교육대상학생 진단 · 평가 의뢰서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=554da544410f069e07cae29ba7cd87cc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=554da544410f069e07cae29ba7cd87cc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16522-cntntsid-7190-0-서식-초등-7-1-1-1-특수교육대상자-진단-평가-의뢰서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-1] 특수교육대상자 진단·평가 의뢰서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 특수교육대상자 신규 선정・배치 [서식-초등-7-1-1-1] 특수교육대상자 진단·평가 의뢰서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=608b90cb70a2904cee5de673d02f23b8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=608b90cb70a2904cee5de673d02f23b8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14900-cntntsid-6503-0-서식-중등-2-5-1-1-평가-출제-관련-교과협의록-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가 출제 계획 수립 - [서식-중등-2-5-1-1] 평가 출제 관련 교과협의록 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가문항제작 안내 평가 출제 계획 수립 [서식-중등-2-5-1-1] 평가 출제 관련 교과협의록 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8e0fcfc1d5032d1bdc4ea1d8e165eb14",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8e0fcfc1d5032d1bdc4ea1d8e165eb14",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14900-cntntsid-6503-1-서식-중등-2-5-1-2-평가-출제시-유의사항-연수-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가 출제 계획 수립 - [서식-중등-2-5-1-2] 평가 출제시 유의사항 연수 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가문항제작 안내 평가 출제 계획 수립 [서식-중등-2-5-1-2] 평가 출제시 유의사항 연수 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a91135a470218753a02242734248e56d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a91135a470218753a02242734248e56d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14900-cntntsid-6503-2-서식-중등-2-5-1-3-평가-안내-가정통신문-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가 출제 계획 수립 - [서식-중등-2-5-1-3] 평가 안내 가정통신문 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가문항제작 안내 평가 출제 계획 수립 [서식-중등-2-5-1-3] 평가 안내 가정통신문 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=63e00851675546b1118a3ce4c0cf3e17",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=63e00851675546b1118a3ce4c0cf3e17",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14902-cntntsid-6511-0-서식-중등-2-5-3-1-2026-중학교-학업성적-평가관리-단계별-업무-매뉴얼-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가 출제 후 활용 및 보안 관리 - [서식-중등-2-5-3-1] 2026 중학교 학업성적 평가관리 단계별 업무 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가 출제 후 활용 및 보안 관리 [서식-중등-2-5-3-1] 2026 중학교 학업성적 평가관리 단계별 업무 매뉴얼.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b71749dfad3def127f651aa634f9ae53",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b71749dfad3def127f651aa634f9ae53",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14902-cntntsid-6511-1-서식-중등-2-5-3-2-2026-고등학교-학업성적-평가관리-단계별-업무-매뉴얼-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가 출제 후 활용 및 보안 관리 - [서식-중등-2-5-3-2] 2026 고등학교 학업성적 평가관리 단계별 업무 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가 출제 후 활용 및 보안 관리 [서식-중등-2-5-3-2] 2026 고등학교 학업성적 평가관리 단계별 업무 매뉴얼.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=891a13ca2c1e7bd010b642845fc579d1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=891a13ca2c1e7bd010b642845fc579d1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14902-cntntsid-6511-2-2026학년도-경상북도-고등학교-학업성적관리-시행지침-hwp",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "평가 출제 후 활용 및 보안 관리 - 2026학년도 경상북도 고등학교 학업성적관리 시행지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가 출제 후 활용 및 보안 관리 2026학년도 경상북도 고등학교 학업성적관리 시행지침.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ccbf8bed5998fd6bde7140d5692c7e13",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14902-cntntsid-6511-3-2026학년도-경상북도-중학교-학업성적관리-시행지침-hwp",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "평가 출제 후 활용 및 보안 관리 - 2026학년도 경상북도 중학교 학업성적관리 시행지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가 출제 후 활용 및 보안 관리 2026학년도 경상북도 중학교 학업성적관리 시행지침.hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a300c2257797c65a2181da5b896876e2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14894-cntntsid-6469-0-서식-중등-2-2-2-1-평가계획-관련-학업성적관리위원회-회의록-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-1] 평가계획 관련 학업성적관리위원회 회의록(예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-1] 평가계획 관련 학업성적관리위원회 회의록(예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=81cd5eaf5d8baf3787fa68037b956f52",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=81cd5eaf5d8baf3787fa68037b956f52",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14894-cntntsid-6469-1-서식-중등-2-2-2-2-교과별-평가계획-학업성적관리위원회-심의안-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-2] 교과별 평가계획 학업성적관리위원회 심의안 (예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-2] 교과별 평가계획 학업성적관리위원회 심의안 (예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=56fc6db5b0699b91ae23877c0e7817c7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=56fc6db5b0699b91ae23877c0e7817c7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14894-cntntsid-6469-2-서식-중등-2-2-2-3-평가계획-관련-가정통신문-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-3] 평가계획 관련 가정통신문(예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-3] 평가계획 관련 가정통신문(예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=152dce9f1d8800bafca800f5e23f6735",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=152dce9f1d8800bafca800f5e23f6735",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14894-cntntsid-6469-3-서식-중등-2-2-2-4-평가계획-정보공시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-4] 평가계획 정보공시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-4] 평가계획 정보공시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=62c48b7adeae2b6dd423136e544afc5e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=62c48b7adeae2b6dd423136e544afc5e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1404000-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "학교 내 성희롱 성폭력 사안 대응 업무 가이드(교육부) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "성폭력 학교 내 성희롱 성폭력 사안 대응 업무 가이드(교육부) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15127-cntntsid-7027-0-서식-관리-2-2-1-1-학교-평가-영역-및-지표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교 평가 - [서식-관리-2-2-1-1] 학교 평가 영역 및 지표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교 및 학교장 평가 학교 평가 [서식-관리-2-2-1-1] 학교 평가 영역 및 지표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=609c0838d7b6973956a67d65ac66df1e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=609c0838d7b6973956a67d65ac66df1e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15127-cntntsid-7027-1-서식-관리-2-2-1-2-2026-학교평가-길라잡이-중등-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교 평가 - [서식-관리-2-2-1-2] 2026 학교평가 길라잡이(중등)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교 및 학교장 평가 학교 평가 [서식-관리-2-2-1-2] 2026 학교평가 길라잡이(중등).pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=36fbe45170e7fb6665e1afd65ae37d29",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=36fbe45170e7fb6665e1afd65ae37d29",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15127-cntntsid-7027-2-서식-관리-2-2-1-3-2026-학교평가-길라잡이-중등-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교 평가 - [서식-관리-2-2-1-3] 2026 학교평가 길라잡이(중등)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교 및 학교장 평가 학교 평가 [서식-관리-2-2-1-3] 2026 학교평가 길라잡이(중등).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7a5b23d0d1b8a8ac7e951297a6f86605",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7a5b23d0d1b8a8ac7e951297a6f86605",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15876-cntntsid-7053-0-서식1-2026-학교평가-길라잡이-중등-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교 평가 - [서식1] 2026 학교평가 길라잡이(중등)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 학교 평가 [서식1] 2026 학교평가 길라잡이(중등).pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=36fbe45170e7fb6665e1afd65ae37d29",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=36fbe45170e7fb6665e1afd65ae37d29",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-0-서식-초등-2-3-1-1-과목별-교수학습-및-평가-계획-예시-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-1] 과목별 교수학습 및 평가 계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "과정 중심 평가 학교교육과정분석 및 평가계획 수립 [서식-초등-2-3-1-1] 과목별 교수학습 및 평가 계획(예시).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f6318257f2feecb1feea16d82deeeb9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f6318257f2feecb1feea16d82deeeb9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-1-서식-초등-2-3-1-2-평가-정보표-서식-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-2] 평가 정보표(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "과정 중심 평가 학교교육과정분석 및 평가계획 수립 [서식-초등-2-3-1-2] 평가 정보표(서식).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e896d962fe0dbb89b12ce1c12d7b99c0",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e896d962fe0dbb89b12ce1c12d7b99c0",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-2-서식-초등-2-3-1-3-자체-점검표-단위학교용-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-3] 자체 점검표(단위학교용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "과정 중심 평가 학교교육과정분석 및 평가계획 수립 [서식-초등-2-3-1-3] 자체 점검표(단위학교용).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0be9aa1045a508a4c43d720cac27ea43",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0be9aa1045a508a4c43d720cac27ea43",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-3-서식-초등-2-3-1-4-2026학년도-초등-과정중심-평가-관련-서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-4] - 2026학년도 초등 과정중심 평가(관련 서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "과정 중심 평가 학교교육과정분석 및 평가계획 수립 [서식-초등-2-3-1-4] - 2026학년도 초등 과정중심 평가(관련 서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f077f37c37c69cac61ae3a2cdeffd98f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f077f37c37c69cac61ae3a2cdeffd98f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14863-cntntsid-6409-0-서식-중등-1-15-1-1-2026학년도-학교생활기록부-기재요령-중",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-중등-1-15-1-1] 2026학년도 학교생활기록부 기재요령(중)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-중등-1-15-1-1] 2026학년도 학교생활기록부 기재요령(중)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=240d22a3586538c1f9eabed44086f6a4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=240d22a3586538c1f9eabed44086f6a4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14863-cntntsid-6409-1-서식-중등-1-15-1-2-2026학년도-학교생활기록부-기재요령-고",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-중등-1-15-1-2] 2026학년도 학교생활기록부 기재요령(고)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-중등-1-15-1-2] 2026학년도 학교생활기록부 기재요령(고)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=400fea92520f4fa1d774cc9c0250de74",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=400fea92520f4fa1d774cc9c0250de74",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14863-cntntsid-6409-2-서식-중등-1-15-1-3-2026학년도-학교생활기록부-기재요령-주요-개정사항-중",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-중등-1-15-1-3] 2026학년도 학교생활기록부 기재요령 주요 개정사항(중)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-중등-1-15-1-3] 2026학년도 학교생활기록부 기재요령 주요 개정사항(중)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d20de28022d26239c9655eab5186e43a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d20de28022d26239c9655eab5186e43a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14863-cntntsid-6409-3-서식-중등-1-15-1-4-2026학년도-학교생활기록부-기재요령-주요-개정사항-고",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-중등-1-15-1-4] 2026학년도 학교생활기록부 기재요령 주요 개정사항(고)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-중등-1-15-1-4] 2026학년도 학교생활기록부 기재요령 주요 개정사항(고)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0049c1d2276add2dc0c1c008d793541c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0049c1d2276add2dc0c1c008d793541c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14863-cntntsid-6409-4-서식-중등-1-15-1-5-2025학년도-학교생활기록부-현장점검-도움자료-중",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-중등-1-15-1-5] 2025학년도 학교생활기록부 현장점검 도움자료(중)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-중등-1-15-1-5] 2025학년도 학교생활기록부 현장점검 도움자료(중)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=31195e75c41901c55b01251a9279c09a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=31195e75c41901c55b01251a9279c09a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14863-cntntsid-6409-5-서식-중등-1-15-1-6-2025학년도-학교생활기록부-현장점검-도움자료-고",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-중등-1-15-1-6] 2025학년도 학교생활기록부 현장점검 도움자료(고)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-중등-1-15-1-6] 2025학년도 학교생활기록부 현장점검 도움자료(고)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fee487620e83b43508697f97ba4756e4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fee487620e83b43508697f97ba4756e4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14863-cntntsid-6409-6-서식-중등-1-15-1-7-학교-학교생활기록부-점검결과표-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-중등-1-15-1-7] ○○○학교 학교생활기록부 점검결과표(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-중등-1-15-1-7] ○○○학교 학교생활기록부 점검결과표(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2763ef77bb8e10bdd5b432da1427060f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2763ef77bb8e10bdd5b432da1427060f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15703-cntntsid-6470-0-서식-초등-1-3-1-2026학년도-학교생활기록부-기재요령-초등학교-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-초등-1-3-1] 2026학년도 학교생활기록부 기재요령(초등학교)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-초등-1-3-1] 2026학년도 학교생활기록부 기재요령(초등학교).pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f5913fd2fba7055dc0ad565aee8ff05b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f5913fd2fba7055dc0ad565aee8ff05b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15703-cntntsid-6470-1-서식-초등-1-3-2-2026학년도-학교생활기록부-기재요령-주요-개정사항-초등학교-pptx",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-초등-1-3-2] 2026학년도 학교생활기록부 기재요령 주요 개정사항(초등학교)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-초등-1-3-2] 2026학년도 학교생활기록부 기재요령 주요 개정사항(초등학교).pptx",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1fe3ea6fb8f6179c0786e932346069f2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1fe3ea6fb8f6179c0786e932346069f2",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15703-cntntsid-6470-2-서식-초등-1-3-3-2026학년도-학적-업무-매뉴얼-초등학교-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-초등-1-3-3] 2026학년도 학적 업무 매뉴얼(초등학교)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-초등-1-3-3] 2026학년도 학적 업무 매뉴얼(초등학교).pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2017b43a12e29ace0d995b47a2643876",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2017b43a12e29ace0d995b47a2643876",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15703-cntntsid-6470-3-서식-초등-1-3-4-서식-초등1-3-4-2026학년도-학적-업무-매뉴얼-한글파일-서식포함-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-초등-1-3-4] [서식-초등1-3-4] 2026학년도 학적 업무 매뉴얼(한글파일 서식포함)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-초등-1-3-4] [서식-초등1-3-4] 2026학년도 학적 업무 매뉴얼(한글파일 서식포함).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8a0414e897fac93cb0a119b91fbfb9f4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8a0414e897fac93cb0a119b91fbfb9f4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-registry-fieldexperienceguide-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14848-cntntsid-6404-0-서식-중등-1-13-1-1-학교장허가-교외체험학습-운영-2023-3-1-시행",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교장허가 교외체험학습 - [서식-중등-1-13-1-1] 학교장허가 교외체험학습 운영(2023.3.1.시행)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "2026학년도 학교장허가 교외체험학습 운영 지침 신청서 보고서 출석 인정 학교장허가 교외체험학습 [서식-중등-1-13-1-1] 학교장허가 교외체험학습 운영(2023.3.1.시행)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b049f3f05f1fd30573dc10a31074f981",
+      "searchDomain": "gbe.kr",
+      "description": "2026학년도 학교장허가 교외체험학습 운영 지침에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "2026학년도 학교장허가 교외체험학습 운영 지침",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b049f3f05f1fd30573dc10a31074f981",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-student-life-944012-0-학교장허가-교외체험학습-운영-지침-개정-2021-6-pdf",
@@ -3172,7 +19210,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "harvest-gbe-student-life-778776-0-경북교육청-학교장허가-교외체험학습-운영-지침-2020-5-14-pdf",
@@ -3196,23 +19234,23 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "mission-stafflabor-rule-law-go-kr-교원휴가에-관한-예규",
-      "category": "staffLabor",
-      "type": "rule",
-      "title": "교원휴가에 관한 예규",
-      "provider": "교육부·국가법령정보센터",
-      "query": "교원휴가에 관한 예규 연가 병가 공가 특별휴가",
-      "url": "https://www.law.go.kr/행정규칙/%EA%B5%90%EC%9B%90%ED%9C%B4%EA%B0%80%EC%97%90%EA%B4%80%ED%95%9C%EC%98%88%EA%B7%9C",
-      "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 교원휴가에 관한 예규 연가 병가 공가 특별휴가 원문·서식을 확인하는 자동 확보 후보",
+      "id": "harvest-gbe-student-life-944012-1-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "학교장허가 교외체험학습 운영 지침 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "교외체험학습 학교장허가 교외체험학습 운영 지침 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
-      "source": "mission-seed",
-      "missionLabel": "교직원 복무·노무",
-      "reason": "교직원 복무·노무 자료실 확보 목표 4/32, 직접 원문 4/8",
-      "qualityScore": 96,
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
@@ -3220,23 +19258,23 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
-      "id": "mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
-      "category": "staffLabor",
-      "type": "rule",
-      "title": "국가공무원 복무규정",
-      "provider": "국가법령정보센터",
-      "query": "국가공무원 복무규정 복무 휴가 출장",
-      "url": "https://www.law.go.kr/법령/%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%EB%B3%B5%EB%AC%B4%EA%B7%9C%EC%A0%95",
-      "searchDomain": "law.go.kr",
-      "description": "국가법령정보센터 공식자료에서 국가공무원 복무규정 복무 휴가 출장 원문·서식을 확인하는 자동 확보 후보",
+      "id": "harvest-gbe-student-life-944012-2-pdf-다운로드",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "학교장허가 교외체험학습 운영 지침 - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "교외체험학습 학교장허가 교외체험학습 운영 지침 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
-      "source": "mission-seed",
-      "missionLabel": "교직원 복무·노무",
-      "reason": "교직원 복무·노무 자료실 확보 목표 4/32, 직접 원문 4/8",
-      "qualityScore": 96,
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
@@ -3244,7 +19282,1671 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15727-cntntsid-6544-0-4-학교자체평가-결과보고서-서식-초등-hwpx",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 - 4. 학교자체평가 결과보고서 서식(초등)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 4. 학교자체평가 결과보고서 서식(초등).hwpx",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cf1bf6d6c1794a6cf44483b632d407be",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cf1bf6d6c1794a6cf44483b632d407be",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15727-cntntsid-6544-1-5-학교자체평가-결과보고서-서식-특수-hwpx",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 - 5. 학교자체평가 결과보고서 서식(특수)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 5. 학교자체평가 결과보고서 서식(특수).hwpx",
+      "url": "https://edupia/cf/fileDownload.do?fileKey=b613d62f6ead8e6eb49a9cdeebbacdc7",
+      "searchDomain": "edupia",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://edupia/cf/fileDownload.do?fileKey=b613d62f6ead8e6eb49a9cdeebbacdc7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14930-cntntsid-6586-0-서식-중등-3-8-2-1-학교평가-평가지표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 기준(평가지표) - [서식-중등-3-8-2-1] 학교평가 평가지표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 기준(평가지표) [서식-중등-3-8-2-1] 학교평가 평가지표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f50fe4bb6b6f48499c9f96f68984c2b1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f50fe4bb6b6f48499c9f96f68984c2b1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14929-cntntsid-6582-0-서식-중등-3-8-1-1-학교평가-위원회-구성-및-협의회-계획",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-1] 학교평가 위원회 구성 및 협의회 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 학교평가 시행 개요 및 절차 [서식-중등-3-8-1-1] 학교평가 위원회 구성 및 협의회 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6bf024f6f3f2be9e974aeb241172aa62",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6bf024f6f3f2be9e974aeb241172aa62",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14929-cntntsid-6582-1-서식-중등-3-8-1-2-학교평가-추진-계획",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-2] 학교평가 추진 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 학교평가 시행 개요 및 절차 [서식-중등-3-8-1-2] 학교평가 추진 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5eff610c8c302247d33fa8a16b55e581",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5eff610c8c302247d33fa8a16b55e581",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14929-cntntsid-6582-2-서식-중등-3-8-1-3-학교평가-연수-및-등록부",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-3] 학교평가 연수 및 등록부",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 학교평가 시행 개요 및 절차 [서식-중등-3-8-1-3] 학교평가 연수 및 등록부",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=988117d19e3679e43e6c340e27279b3d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=988117d19e3679e43e6c340e27279b3d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14929-cntntsid-6582-3-서식-중등-3-8-1-4-학교평가-실행-양식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-4] 학교평가 실행 양식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 학교평가 시행 개요 및 절차 [서식-중등-3-8-1-4] 학교평가 실행 양식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=481105bbcebf8b67606f5764d9466ada",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=481105bbcebf8b67606f5764d9466ada",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14929-cntntsid-6582-4-서식-중등-3-8-1-5-학교평가-결과-확인서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-5] 학교평가 결과 확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 학교평가 시행 개요 및 절차 [서식-중등-3-8-1-5] 학교평가 결과 확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7b2bd3ef3a648545c61cfd55d7a62f2f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7b2bd3ef3a648545c61cfd55d7a62f2f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14929-cntntsid-6582-5-서식-중등-3-8-1-6-학교평가-결과-나눔-공유",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-6] 학교평가 결과 나눔(공유)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교평가 학교평가 시행 개요 및 절차 [서식-중등-3-8-1-6] 학교평가 결과 나눔(공유)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=124c10fb35f5fa1be87d88c8903d0ca9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=124c10fb35f5fa1be87d88c8903d0ca9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1600483-0-학교폭력-예방-및-사안처리-관련-체크리스트-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교폭력 예방 및 사안처리 관련 체크리스트(학교용)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 학교폭력 예방 및 사안처리 관련 체크리스트(학교용) 학교폭력 예방 및 사안처리 관련 체크리스트.pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1600483-2-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교폭력 예방 및 사안처리 관련 체크리스트(학교용) - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 학교폭력 예방 및 사안처리 관련 체크리스트(학교용) 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1600483-3-pdf-다운로드",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교폭력 예방 및 사안처리 관련 체크리스트(학교용) - PDF 다운로드",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 학교폭력 예방 및 사안처리 관련 체크리스트(학교용) PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14893-cntntsid-6466-0-서식-중등-2-2-1-1-학기초-평가계획-관련-교과협의록-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-1] 학기초 평가계획 관련 교과협의록 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획 수립 학년별·교과별 평가계획 수립 [서식-중등-2-2-1-1] 학기초 평가계획 관련 교과협의록 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a206e0bc512579bfaa20877e9d131825",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a206e0bc512579bfaa20877e9d131825",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14893-cntntsid-6466-1-서식-중등-2-2-1-2-1학년-자유학년제-평가계획-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-2] 1학년 자유학년제 평가계획 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획 수립 학년별·교과별 평가계획 수립 [서식-중등-2-2-1-2] 1학년 자유학년제 평가계획 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9164f99aa76ce40e7f6e6c4afeea2e2b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9164f99aa76ce40e7f6e6c4afeea2e2b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14893-cntntsid-6466-2-서식-중등-2-2-1-3-2-3학년-평가계획-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-3] 2·3학년 평가계획 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획 수립 학년별·교과별 평가계획 수립 [서식-중등-2-2-1-3] 2·3학년 평가계획 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=da3c81bd16edd3ee851e22ec6b0e358f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=da3c81bd16edd3ee851e22ec6b0e358f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14857-cntntsid-6401-0-서식-중등-1-12-1-1-질병-결석신고서-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학생 출결관리 - [서식-중등-1-12-1-1] 질병 결석신고서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생 출결관리 [서식-중등-1-12-1-1] 질병 결석신고서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d16df144c8981d7fbaddd750d9438cf3",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d16df144c8981d7fbaddd750d9438cf3",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14857-cntntsid-6401-1-서식-중등-1-12-1-2-기타-결석신고서-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학생 출결관리 - [서식-중등-1-12-1-2] 기타 결석신고서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생 출결관리 [서식-중등-1-12-1-2] 기타 결석신고서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1875682708b6a3ab222ca64ee1281d38",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1875682708b6a3ab222ca64ee1281d38",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14857-cntntsid-6401-2-서식-중등-1-12-1-3-출석인정-결석신고서-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학생 출결관리 - [서식-중등-1-12-1-3] 출석인정 결석신고서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생 출결관리 [서식-중등-1-12-1-3] 출석인정 결석신고서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13b829486c4c91fd0c71f31b4a338c46",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13b829486c4c91fd0c71f31b4a338c46",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14857-cntntsid-6401-3-서식-중등-1-12-1-4-지각-조퇴-결과계-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학생 출결관리 - [서식-중등-1-12-1-4] 지각,조퇴,결과계(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생 출결관리 [서식-중등-1-12-1-4] 지각,조퇴,결과계(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=32b8cbba9573ebe8f8435d08079655c0",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=32b8cbba9573ebe8f8435d08079655c0",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14857-cntntsid-6401-4-서식-중등-1-12-1-5-내교통지서-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학생 출결관리 - [서식-중등-1-12-1-5]] 내교통지서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생 출결관리 [서식-중등-1-12-1-5]] 내교통지서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=97aac798ced53ebd4ec35c619887ac4d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=97aac798ced53ebd4ec35c619887ac4d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14857-cntntsid-6401-5-서식-중등-1-12-1-6-아동학대-피해의심학생-및-무단결석-학생-발생시-대응방안",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학생 출결관리 - [서식-중등-1-12-1-6] 아동학대 피해의심학생 및 무단결석 학생 발생시 대응방안",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생 출결관리 [서식-중등-1-12-1-6] 아동학대 피해의심학생 및 무단결석 학생 발생시 대응방안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88c063163ce4c743abaf9e71d811060f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88c063163ce4c743abaf9e71d811060f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14857-cntntsid-6401-6-서식-중등-1-12-1-7-법정-감염병으로-인한-등교중지-관련-협조문-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학생 출결관리 - [서식-중등-1-12-1-7] 법정 감염병으로 인한 등교중지 관련 협조문(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생 출결관리 [서식-중등-1-12-1-7] 법정 감염병으로 인한 등교중지 관련 협조문(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b4863d6f5e0315fd82ea70f7484a79e8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b4863d6f5e0315fd82ea70f7484a79e8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-3-서식-초등-3-6-1-4-학업중단숙려제-new-stsrt프로그램-운영",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학생상담 - [서식-초등-3-6-1-4]학업중단숙려제[New-Stsrt프로그램] 운영",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학생상담 [서식-초등-3-6-1-4]학업중단숙려제[New-Stsrt프로그램] 운영",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e75874ce7690bb27bee14f738b33c27e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e75874ce7690bb27bee14f738b33c27e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14867-cntntsid-6413-5-2026-고학교-학업성적-평가관리-단계별-업무-매뉴얼-pdf",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "학업성적관리위원회 운영 - 2026 고학교 학업성적 평가관리 단계별 업무 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학업성적관리위원회 운영 2026 고학교 학업성적 평가관리 단계별 업무 매뉴얼.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=126875c76cefb2c971e5f3dd0f5bdcaf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14867-cntntsid-6413-4-2026-중학교-학업성적-평가관리-단계별-업무-매뉴얼-pdf",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "학업성적관리위원회 운영 - 2026 중학교 학업성적 평가관리 단계별 업무 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학업성적관리위원회 운영 2026 중학교 학업성적 평가관리 단계별 업무 매뉴얼.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e630bdf12269570031e790bff0a660f9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-0-서식-중등-1-10-2-1-고등학교전-편-재입학-지원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-1] 고등학교전·편·재입학 지원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-1] 고등학교전·편·재입학 지원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13cecbb364564f9944a78c8a4a35812a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13cecbb364564f9944a78c8a4a35812a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-1-서식-중등-1-10-2-2-고등학교-전-편입학-배정-의뢰서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-2] 고등학교 전·편입학 배정 의뢰서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-2] 고등학교 전·편입학 배정 의뢰서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1408efe8b6d2937788eb8f5032c52988",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1408efe8b6d2937788eb8f5032c52988",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-2-서식-중등-1-10-2-3-거주확인서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-3] 거주확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-3] 거주확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de1a5e3a9fc4961fd62ffabb24713474",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de1a5e3a9fc4961fd62ffabb24713474",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-3-서식-중등-1-10-2-4-귀국자-편입학-원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-4] 귀국자 편입학 원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-4] 귀국자 편입학 원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d0d879bddbe253aeea17b52e364c0d5a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d0d879bddbe253aeea17b52e364c0d5a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-4-서식-중등-1-10-2-5-평준화-일반고등학교-전-편입학-배정원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-5] 평준화 일반고등학교 전·편입학 배정원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-5] 평준화 일반고등학교 전·편입학 배정원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9886eec2280eb3d4b6515d63daaae767",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9886eec2280eb3d4b6515d63daaae767",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-5-서식-중등-1-10-2-6-평준화지역-비평준화지역-고등학교-전학-지원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-6] 평준화지역·비평준화지역 고등학교 전학 지원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-6] 평준화지역·비평준화지역 고등학교 전학 지원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbf3f1b03d454b8b414a74e4d45e83fd",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbf3f1b03d454b8b414a74e4d45e83fd",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-6-서식-중등-1-10-2-7-고등학교-학년결정-입학신청서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-7] 고등학교 학년결정 입학신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-7] 고등학교 학년결정 입학신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=628d10fb29d27872b5236539b2a371da",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=628d10fb29d27872b5236539b2a371da",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-7-서식-중등-1-10-2-8-전학을-위한-학교장의-노력현황",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-8] 전학을 위한 학교장의 노력현황",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-8] 전학을 위한 학교장의 노력현황",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6695561f43dde35792f3136eba3cdbe",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6695561f43dde35792f3136eba3cdbe",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-8-서식-중등-1-10-2-9-귀국학생의-재취학에-따른-조기진급-졸업-진학평가위원회-협의결과",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-9] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-9] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5b3ace64cd22c3fa25dc155109b9ae20",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5b3ace64cd22c3fa25dc155109b9ae20",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14859-cntntsid-6399-1-서식-중등-1-11-1-1-복학통지서-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(유예,면제 및 정원 외 관리) - [서식-중등-1-11-1-1] 복학통지서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(유예,면제 및 정원 외 관리) [서식-중등-1-11-1-1] 복학통지서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2a8c72db9d05b16afad07f3fe70b4ad8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2a8c72db9d05b16afad07f3fe70b4ad8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14859-cntntsid-6399-2-서식-중등-1-11-1-2-의무교육관리위원회-협의록-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(유예,면제 및 정원 외 관리) - [서식-중등-1-11-1-2] 의무교육관리위원회 협의록(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(유예,면제 및 정원 외 관리) [서식-중등-1-11-1-2] 의무교육관리위원회 협의록(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3569139fbea10aca61d2fc721d4de92f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3569139fbea10aca61d2fc721d4de92f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14859-cntntsid-6399-3-서식-중등-1-11-1-3-취학의무-유예-면제-신청서-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(유예,면제 및 정원 외 관리) - [서식-중등-1-11-1-3] 취학의무 유예(면제) 신청서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(유예,면제 및 정원 외 관리) [서식-중등-1-11-1-3] 취학의무 유예(면제) 신청서(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=05e1e9ed5b14bc0ebc07336d96f75cc1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=05e1e9ed5b14bc0ebc07336d96f75cc1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14859-cntntsid-6399-4-서식-중등-1-11-1-4-취학의무-유예-면제-통지문-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(유예,면제 및 정원 외 관리) - [서식-중등-1-11-1-4] 취학의무 유예(면제) 통지문(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(유예,면제 및 정원 외 관리) [서식-중등-1-11-1-4] 취학의무 유예(면제) 통지문(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=725f75e5219bfb14dd4b7de253f81635",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=725f75e5219bfb14dd4b7de253f81635",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14859-cntntsid-6399-0-2022-학적업무관련서식",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(유예,면제 및 정원 외 관리) - 2022 학적업무관련서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(유예,면제 및 정원 외 관리) 2022 학적업무관련서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e89bbc1c6d7141fe5b329efbb29d7d20",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e89bbc1c6d7141fe5b329efbb29d7d20",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14854-cntntsid-6394-0-서식-중등-1-10-1-1-중학교-전-편-재입학-배정원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-1] 중학교 전·편·재입학 배정원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) 학적관리(중학교 전・편입학) [서식-중등-1-10-1-1] 중학교 전·편·재입학 배정원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d4c39450162afc9928f9d8baa49c1b63",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d4c39450162afc9928f9d8baa49c1b63",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14854-cntntsid-6394-1-서식-중등-1-10-1-2-중학교-전-편-재입학-지원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-2] 중학교 전·편·재입학 지원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) 학적관리(중학교 전・편입학) [서식-중등-1-10-1-2] 중학교 전·편·재입학 지원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7ad5c460c3ae4b5afa6b22a5d3ab560e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7ad5c460c3ae4b5afa6b22a5d3ab560e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14854-cntntsid-6394-2-서식-중등-1-10-1-3-중학교-전-편입학-배정-의뢰서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-3] 중학교 전·편입학 배정 의뢰서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) 학적관리(중학교 전・편입학) [서식-중등-1-10-1-3] 중학교 전·편입학 배정 의뢰서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=67e797f09bae62eef7ba2f26200a267a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=67e797f09bae62eef7ba2f26200a267a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14854-cntntsid-6394-3-서식-중등-1-10-1-4-거주확인서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-4] 거주확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) 학적관리(중학교 전・편입학) [서식-중등-1-10-1-4] 거주확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3d772ca15119b232c5aa17bea1234a60",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3d772ca15119b232c5aa17bea1234a60",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14854-cntntsid-6394-4-서식-중등-1-10-1-5-귀국자-편입학-원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-5] 귀국자 편입학 원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) 학적관리(중학교 전・편입학) [서식-중등-1-10-1-5] 귀국자 편입학 원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c1efe005a6b3d3a449c86f27fffe1f84",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c1efe005a6b3d3a449c86f27fffe1f84",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14854-cntntsid-6394-5-서식-중등-1-10-1-6-귀국학생의-재취학에-따른-조기진급-졸업-진학평가위원회-협의결과",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-6] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) 학적관리(중학교 전・편입학) [서식-중등-1-10-1-6] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0d59c1a54072c068ebd6709fa0c2924c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0d59c1a54072c068ebd6709fa0c2924c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14854-cntntsid-6394-6-서식-중등-1-10-1-7-중학교-학교폭력-가해학생-전학-서류-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-7] 중학교 학교폭력 가해학생 전학 서류(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) 학적관리(중학교 전・편입학) [서식-중등-1-10-1-7] 중학교 학교폭력 가해학생 전학 서류(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e2288ef7b9250c001fe8d0c456912e0e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e2288ef7b9250c001fe8d0c456912e0e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14854-cntntsid-6394-7-귀국자-특례입학-업무처리-지침",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "학적관리(중학교 전・편입학) - 귀국자 특례입학 업무처리 지침",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) 학적관리(중학교 전・편입학) 귀국자 특례입학 업무처리 지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5ae4127c5ee5dcc1e2e76266e1799b2d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15891-cntntsid-7097-0-서식-관리-12-1-1-1-2023학년도-수학여행-수련활동-등-현장체험학습-운영-안내서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 - [서식-관리-12-1-1-1] 2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 [서식-관리-12-1-1-1] 2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=feb254489c20bf06418fe3dfb55e6175",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=feb254489c20bf06418fe3dfb55e6175",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-0-서식-초등-3-13-1-1-현장체험학습-안전교육-계획",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-1] 현장체험학습 안전교육 계획",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-1] 현장체험학습 안전교육 계획",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fed6901effa63c2476da2d5262224a12",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fed6901effa63c2476da2d5262224a12",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-9-서식-초등-3-13-1-10-국외-현장체험학습-자체점검표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-10] 국외 현장체험학습 자체점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-10] 국외 현장체험학습 자체점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2403aed5fa3c02f7eebd9ddd2d696703",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2403aed5fa3c02f7eebd9ddd2d696703",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-10-서식-초등-3-13-1-11-국외-현장체험학습-신고서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-11] 국외 현장체험학습 신고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-11] 국외 현장체험학습 신고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3ffdd069d1a7b71cc81dc32dc922c009",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3ffdd069d1a7b71cc81dc32dc922c009",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-1-서식-초등-3-13-1-2-현장체험학습-활성화위원회-구성-현황",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-2] 현장체험학습 활성화위원회 구성 현황",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-2] 현장체험학습 활성화위원회 구성 현황",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bd957e01fbbbf72fd02682b07cad5d82",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bd957e01fbbbf72fd02682b07cad5d82",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-2-서식-초등-3-13-1-3-현장체험학습-ks표준에-의한-점검-항목",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-3] 현장체험학습 KS표준에 의한 점검 항목",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-3] 현장체험학습 KS표준에 의한 점검 항목",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=04fe305032d476ac7bbd4e98172a685f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=04fe305032d476ac7bbd4e98172a685f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-3-서식-초등-3-13-1-4-체험학습-용역업체-제안서-평가-항목-및-배점표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-4] 체험학습 용역업체 제안서 평가 항목 및 배점표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-4] 체험학습 용역업체 제안서 평가 항목 및 배점표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f7900dac6ea9d453ccca79742427775f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f7900dac6ea9d453ccca79742427775f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-4-서식-초등-3-13-1-5-숙박형-현장체험학습-현장답사-안전점검표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-5] 숙박형 현장체험학습 현장답사 안전점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-5] 숙박형 현장체험학습 현장답사 안전점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0a185969715b71a362d61eb75963840d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0a185969715b71a362d61eb75963840d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-5-서식-초등-3-13-1-6-숙박형-현장체험학습-자체점검표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-6] 숙박형 현장체험학습 자체점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-6] 숙박형 현장체험학습 자체점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f413ec87878c14530c0430674f4b3421",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f413ec87878c14530c0430674f4b3421",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-6-서식-초등-3-13-1-7-1일형-현장체험학습-현장답사-안전점검표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-7] 1일형 현장체험학습 현장답사 안전점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-7] 1일형 현장체험학습 현장답사 안전점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b040633845d42ddc115cea21c5cb6bf4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b040633845d42ddc115cea21c5cb6bf4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-7-서식-초등-3-13-1-8-1일형-현장체험학습-자체점검표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-8] 1일형 현장체험학습 자체점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-8] 1일형 현장체험학습 자체점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b274e56ac00adcd084c095add2fff225",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b274e56ac00adcd084c095add2fff225",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14629-cntntsid-6638-8-서식-초등-3-13-1-9-국외-현장체험학습-상황별-안전점검표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 계획 - [서식-초등-3-13-1-9] 국외 현장체험학습 상황별 안전점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습 계획 [서식-초등-3-13-1-9] 국외 현장체험학습 상황별 안전점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6fc648e625c20f7efaf6d2848dd57b8d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6fc648e625c20f7efaf6d2848dd57b8d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14972-cntntsid-6706-0-2025학년도-수학여행-수련활동-등-현장체험학습-운영-안내서",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "현장체험학습의 이해 - 2025학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 현장체험학습의 이해 2025학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=011b6f3bb4fecad357b7a0ad0bfb8f3c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "mission-privacyrecords-law-law-go-kr-개인정보-보호법",
@@ -3256,95 +20958,67 @@
       "url": "https://www.law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
       "searchDomain": "law.go.kr",
       "description": "국가법령정보센터 공식자료에서 개인정보 보호법 학교 개인정보 처리 영상정보처리기기 원문·서식을 확인하는 자동 확보 후보",
-      "priority": "high",
-      "source": "mission-seed",
-      "missionLabel": "개인정보·기록",
-      "reason": "개인정보·기록 자료실 확보 목표 4/24, 직접 원문 4/6",
-      "qualityScore": 88,
-      "includeInLibrary": true,
-      "needsDirectUrl": true,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
-    },
-    {
-      "id": "mission-general-law-law-go-kr-2025-초-중등교육법",
-      "category": "general",
-      "type": "law",
-      "title": "2025 초·중등교육법",
-      "provider": "국가법령정보센터",
-      "query": "2025 초중등교육법 학생 지도 학칙 학교운영",
-      "url": "https://www.law.go.kr/법령/%EC%B4%88%C2%B7%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95",
-      "searchDomain": "law.go.kr",
-      "description": "국가법령정보센터 공식자료에서 2025 초중등교육법 학생 지도 학칙 학교운영 원문·서식을 확인하는 자동 확보 후보",
-      "priority": "normal",
-      "source": "mission-seed",
-      "missionLabel": "공통·기타",
-      "reason": "공통·기타 자료실 확보 목표 16/20, 직접 원문 16/5",
-      "qualityScore": 80,
-      "includeInLibrary": true,
-      "needsDirectUrl": true,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
-    },
-    {
-      "id": "mission-general-law-law-go-kr-2026-초-중등교육법",
-      "category": "general",
-      "type": "law",
-      "title": "2026 초·중등교육법",
-      "provider": "국가법령정보센터",
-      "query": "2026 초중등교육법 학생 지도 학칙 학교운영",
-      "url": "https://www.law.go.kr/법령/%EC%B4%88%C2%B7%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95",
-      "searchDomain": "law.go.kr",
-      "description": "국가법령정보센터 공식자료에서 2026 초중등교육법 학생 지도 학칙 학교운영 원문·서식을 확인하는 자동 확보 후보",
-      "priority": "normal",
-      "source": "mission-seed",
-      "missionLabel": "공통·기타",
-      "reason": "공통·기타 자료실 확보 목표 16/20, 직접 원문 16/5",
-      "qualityScore": 80,
-      "includeInLibrary": true,
-      "needsDirectUrl": true,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
-    },
-    {
-      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
-      "category": "studentLife",
-      "type": "rule",
-      "title": "2026 학교생활기록 작성 및 관리지침",
-      "provider": "교육부·국가법령정보센터",
-      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
-      "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
-      "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "low",
       "source": "mission-seed",
-      "missionLabel": "학생생활·학적",
-      "reason": "학생생활·학적 자료실 확보 목표 28/32, 직접 원문 28/8",
+      "missionLabel": "개인정보·기록",
+      "reason": "개인정보·기록 자료실 확보 목표 38/24, 직접 원문 38/6",
       "qualityScore": 88,
       "includeInLibrary": true,
       "needsDirectUrl": true,
       "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "mission-stafflabor-rule-law-go-kr-교원휴가에-관한-예규",
+      "category": "staffLabor",
+      "type": "rule",
+      "title": "교원휴가에 관한 예규",
+      "provider": "교육부·국가법령정보센터",
+      "query": "교원휴가에 관한 예규 연가 병가 공가 특별휴가",
+      "url": "https://www.law.go.kr/행정규칙/%EA%B5%90%EC%9B%90%ED%9C%B4%EA%B0%80%EC%97%90%EA%B4%80%ED%95%9C%EC%98%88%EA%B7%9C",
+      "searchDomain": "law.go.kr",
+      "description": "교육부·국가법령정보센터 공식자료에서 교원휴가에 관한 예규 연가 병가 공가 특별휴가 원문·서식을 확인하는 자동 확보 후보",
+      "priority": "low",
+      "source": "mission-seed",
+      "missionLabel": "교직원 복무·노무",
+      "reason": "교직원 복무·노무 자료실 확보 목표 48/32, 직접 원문 48/8",
+      "qualityScore": 88,
+      "includeInLibrary": true,
+      "needsDirectUrl": true,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
+      "category": "staffLabor",
+      "type": "rule",
+      "title": "국가공무원 복무규정",
+      "provider": "국가법령정보센터",
+      "query": "국가공무원 복무규정 복무 휴가 출장",
+      "url": "https://www.law.go.kr/법령/%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%EB%B3%B5%EB%AC%B4%EA%B7%9C%EC%A0%95",
+      "searchDomain": "law.go.kr",
+      "description": "국가법령정보센터 공식자료에서 국가공무원 복무규정 복무 휴가 출장 원문·서식을 확인하는 자동 확보 후보",
+      "priority": "low",
+      "source": "mission-seed",
+      "missionLabel": "교직원 복무·노무",
+      "reason": "교직원 복무·노무 자료실 확보 목표 48/32, 직접 원문 48/8",
+      "qualityScore": 88,
+      "includeInLibrary": true,
+      "needsDirectUrl": true,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     },
     {
       "id": "mission-studentlife-rule-law-go-kr-2025-학교생활기록-작성-및-관리지침",
@@ -3359,7 +21033,83 @@
       "priority": "low",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
-      "reason": "학생생활·학적 자료실 확보 목표 28/32, 직접 원문 28/8",
+      "reason": "학생생활·학적 자료실 확보 목표 259/32, 직접 원문 259/8",
+      "qualityScore": 88,
+      "includeInLibrary": true,
+      "needsDirectUrl": true,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "mission-general-law-law-go-kr-2025-초-중등교육법",
+      "category": "general",
+      "type": "law",
+      "title": "2025 초·중등교육법",
+      "provider": "국가법령정보센터",
+      "query": "2025 초중등교육법 학생 지도 학칙 학교운영",
+      "url": "https://www.law.go.kr/법령/%EC%B4%88%C2%B7%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95",
+      "searchDomain": "law.go.kr",
+      "description": "국가법령정보센터 공식자료에서 2025 초중등교육법 학생 지도 학칙 학교운영 원문·서식을 확인하는 자동 확보 후보",
+      "priority": "low",
+      "source": "mission-seed",
+      "missionLabel": "공통·기타",
+      "reason": "공통·기타 자료실 확보 목표 95/20, 직접 원문 95/5",
+      "qualityScore": 80,
+      "includeInLibrary": true,
+      "needsDirectUrl": true,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "mission-general-law-law-go-kr-2026-초-중등교육법",
+      "category": "general",
+      "type": "law",
+      "title": "2026 초·중등교육법",
+      "provider": "국가법령정보센터",
+      "query": "2026 초중등교육법 학생 지도 학칙 학교운영",
+      "url": "https://www.law.go.kr/법령/%EC%B4%88%C2%B7%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95",
+      "searchDomain": "law.go.kr",
+      "description": "국가법령정보센터 공식자료에서 2026 초중등교육법 학생 지도 학칙 학교운영 원문·서식을 확인하는 자동 확보 후보",
+      "priority": "low",
+      "source": "mission-seed",
+      "missionLabel": "공통·기타",
+      "reason": "공통·기타 자료실 확보 목표 95/20, 직접 원문 95/5",
+      "qualityScore": 80,
+      "includeInLibrary": true,
+      "needsDirectUrl": true,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-07-09T03:29:19.167Z"
+    },
+    {
+      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
+      "category": "studentLife",
+      "type": "rule",
+      "title": "2026 학교생활기록 작성 및 관리지침",
+      "provider": "교육부·국가법령정보센터",
+      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
+      "searchDomain": "law.go.kr",
+      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "priority": "low",
+      "source": "mission-seed",
+      "missionLabel": "학생생활·학적",
+      "reason": "학생생활·학적 자료실 확보 목표 259/32, 직접 원문 259/8",
       "qualityScore": 80,
       "includeInLibrary": true,
       "needsDirectUrl": true,
@@ -3372,7 +21122,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-07-09T02:57:11.861Z"
+      "generatedAt": "2026-07-09T03:29:19.167Z"
     }
   ]
 }; });
