@@ -15,9 +15,10 @@ const academicYears = buildAcademicYears(generatedAt);
 const outDir = path.join(rootDir, "data", "policy-quality");
 const HARVEST_ENABLED = process.env.PUBLIC_RESOURCE_HARVEST_OFFICIAL !== "0";
 const HARVEST_FETCH_TIMEOUT_MS = Number(process.env.PUBLIC_RESOURCE_HARVEST_TIMEOUT_MS || 14000);
-const HARVEST_DETAIL_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_DETAIL_LIMIT || 420);
-const HARVEST_LIST_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_LIST_LIMIT || 180);
-const HARVEST_CONTENT_PAGE_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_CONTENT_PAGE_LIMIT || 160);
+const HARVEST_DETAIL_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_DETAIL_LIMIT || 1200);
+const HARVEST_LIST_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_LIST_LIMIT || 360);
+const HARVEST_CONTENT_PAGE_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_CONTENT_PAGE_LIMIT || 600);
+const HARVEST_CONTENT_CRAWL_DEPTH = Number(process.env.PUBLIC_RESOURCE_HARVEST_CONTENT_CRAWL_DEPTH || 2);
 const HARVEST_CONCURRENCY = Number(process.env.PUBLIC_RESOURCE_HARVEST_CONCURRENCY || 4);
 const DOCUMENT_FILE_PATTERN = /\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx)(\?|#|$)/i;
 const NON_DOCUMENT_FILE_PATTERN = /\.(jpg|jpeg|png|gif|webp|mp3|mp4|avi|wmv|mov|zip)(\?|#|$)/i;
@@ -75,7 +76,7 @@ const OFFICIAL_FILE_HARVEST_SOURCES = [
     mi: "9138",
     bbsId: "2852",
     category: "general",
-    terms: ["직업계고", "특성화고", "현장실습", "표준협약서", "취업지원", "NCS", "도제학교", "일학습병행", "개인정보보호", "정보공개", "학교운영", "서식", "점검표"]
+    terms: ["직업계고", "특성화고", "마이스터고", "현장실습", "표준협약서", "취업지원", "고졸채용", "취업역량", "채용연계", "진로", "NCS", "도제학교", "일학습병행", "개인정보보호", "정보공개", "학교운영", "서식", "점검표"]
   },
   {
     code: "gbe-field-trip",
@@ -161,7 +162,39 @@ const OFFICIAL_FILE_HARVEST_SOURCES = [
     rootMenuId: "04",
     menuId: "0403",
     category: "fieldTraining",
+    pages: 4,
     terms: ["", "직업계고 현장실습", "현장실습 공통 매뉴얼", "서식모음집", "산업안전 매뉴얼", "실습일지", "직업계고 학점제", "NCS 교육과정"]
+  },
+  {
+    code: "hifive-career-employment-library",
+    label: "하이파이브 고졸채용·취업지원 자료실",
+    provider: "교육부·하이파이브",
+    origin: "https://www.hifive.go.kr",
+    kind: "hifive-bbs",
+    listPath: "/front/bbs/bbsList.do",
+    infoPath: "/front/bbs/bbsDetail.do",
+    bbsId: "87",
+    rootMenuId: "04",
+    menuId: "0403",
+    category: "careerEmployment",
+    pages: 5,
+    terms: [
+      "고졸채용",
+      "고졸청년 지원정책",
+      "고졸채용기업 지원정책",
+      "직업계고 취업지원",
+      "취업지원",
+      "중앙취업지원센터",
+      "취업역량",
+      "채용연계",
+      "취업맞춤반",
+      "학교장추천",
+      "이력서",
+      "자기소개서",
+      "면접",
+      "직무역량",
+      "졸업생 취업"
+    ]
   }
 ];
 
@@ -477,11 +510,12 @@ async function buildHarvestedOfficialFileCandidates() {
   }
 
   const listTargets = OFFICIAL_FILE_HARVEST_SOURCES.flatMap((source) =>
-    source.terms.map((term) => ({
+    source.terms.flatMap((term) => Array.from({ length: Math.max(1, Number(source.pages || 1)) }, (_, index) => ({
       source,
       term,
-      url: buildOfficialListSearchUrl(source, term)
-    }))
+      page: index + 1,
+      url: buildOfficialListSearchUrl(source, term, index + 1)
+    })))
   ).slice(0, HARVEST_LIST_LIMIT);
 
   const discovered = new Map();
@@ -514,53 +548,71 @@ async function buildHarvestedOfficialFileCandidates() {
 }
 
 async function buildOfficialContentPageTargets() {
-  const rootTargets = OFFICIAL_CONTENT_HARVEST_SOURCES.flatMap((source) =>
+  const initialTargets = OFFICIAL_CONTENT_HARVEST_SOURCES.flatMap((source) =>
     (source.rootUrls || []).map((url) => ({ source, url }))
   ).slice(0, HARVEST_CONTENT_PAGE_LIMIT);
 
-  const rootPages = await mapWithConcurrency(rootTargets, HARVEST_CONCURRENCY, async (target) => {
-    const html = await fetchText(target.url);
-    if (!html) {
-      return [];
-    }
-    const rootTitle = extractDetailTitle(html) || target.source.label;
-    const targets = [{
-      source: target.source,
-      term: rootTitle,
-      nttSn: stableId(target.url),
-      title: rootTitle,
-      detailUrl: target.url
-    }];
-
-    for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']*cntntsView\.do[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
-      const label = cleanText(stripHtml(match[2]));
-      const detailUrl = toAbsoluteUrl(match[1], target.source.origin);
-      if (!detailUrl || !isUsefulOfficialContentPage(label, detailUrl)) {
-        continue;
-      }
-      targets.push({
-        source: target.source,
-        term: label,
-        nttSn: stableId(detailUrl),
-        title: label,
-        detailUrl
-      });
-    }
-    return targets;
-  });
-
   const map = new Map();
-  rootPages.flat().forEach((target) => {
-    if (target.detailUrl && !map.has(target.detailUrl)) {
-      map.set(target.detailUrl, target);
+  let frontier = initialTargets;
+  const seen = new Set();
+  for (let depth = 0; depth < Math.max(1, HARVEST_CONTENT_CRAWL_DEPTH); depth += 1) {
+    const remainingSlots = Math.max(0, HARVEST_CONTENT_PAGE_LIMIT - map.size);
+    if (!frontier.length || remainingSlots <= 0) {
+      break;
     }
-  });
+    const batch = frontier.filter((target) => target.url && !seen.has(target.url)).slice(0, remainingSlots);
+    batch.forEach((target) => seen.add(target.url));
+    const pages = await mapWithConcurrency(batch, HARVEST_CONCURRENCY, harvestOfficialContentPageTargets);
+    const next = [];
+    pages.flat().forEach((target) => {
+      if (target.detailUrl && !map.has(target.detailUrl)) {
+        map.set(target.detailUrl, target);
+        if (target.depth < HARVEST_CONTENT_CRAWL_DEPTH - 1) {
+          next.push({ source: target.source, url: target.detailUrl, depth: target.depth + 1 });
+        }
+      }
+    });
+    frontier = next;
+  }
   return [...map.values()].slice(0, HARVEST_CONTENT_PAGE_LIMIT);
+}
+
+async function harvestOfficialContentPageTargets(target = {}) {
+  const html = await fetchText(target.url);
+  if (!html) {
+    return [];
+  }
+  const rootTitle = extractDetailTitle(html) || target.source.label;
+  const targets = [{
+    source: target.source,
+    term: rootTitle,
+    nttSn: stableId(target.url),
+    title: rootTitle,
+    detailUrl: target.url,
+    depth: Number(target.depth || 0)
+  }];
+
+  for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']*cntntsView\.do[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const label = cleanText(stripHtml(match[2]));
+    const detailUrl = toAbsoluteUrl(match[1], target.source.origin);
+    if (!detailUrl || !isUsefulOfficialContentPage(label, detailUrl)) {
+      continue;
+    }
+    targets.push({
+      source: target.source,
+      term: label,
+      nttSn: stableId(detailUrl),
+      title: label,
+      detailUrl,
+      depth: Number(target.depth || 0)
+    });
+  }
+  return targets;
 }
 
 function isUsefulOfficialContentPage(label = "", url = "") {
   const text = `${label} ${url}`;
-  return /현장체험|교외체험|학교폭력|학생생활|생활규정|학교규칙|학생선도|출결|생활기록|학적|전입|전출|성적|평가|복무|휴가|계약제|교육공무직|학교회계|예산|계약|수익자|강사|개인정보|정보공개|CCTV|영상정보|방과후|돌봄|특수교육|기숙사|안전|보건|학교운영위원회|민원|상담|서식|규정|지침|현장실습|직업계고/i.test(text);
+  return /현장체험|교외체험|학교폭력|학생생활|생활규정|학교규칙|학생선도|출결|생활기록|학적|전입|전출|성적|평가|복무|휴가|계약제|교육공무직|학교회계|예산|계약|수익자|강사|개인정보|정보공개|CCTV|영상정보|방과후|돌봄|특수교육|기숙사|안전|보건|학교운영위원회|민원|상담|서식|규정|지침|현장실습|직업계고|특성화고|마이스터고|고졸|취업지원|채용연계|진로/i.test(text);
 }
 
 function buildSeededHarvestDetailTargets() {
@@ -586,7 +638,7 @@ function buildSeededHarvestDetailTargets() {
   });
 }
 
-function buildOfficialListSearchUrl(source, term) {
+function buildOfficialListSearchUrl(source, term, page = 1) {
   if (source.kind === "hifive-bbs") {
     const url = new URL(source.listPath, source.origin);
     url.searchParams.set("auth_type", "M2");
@@ -595,6 +647,7 @@ function buildOfficialListSearchUrl(source, term) {
     url.searchParams.set("menuId", source.menuId || "0403");
     url.searchParams.set("rootMenuId", source.rootMenuId || "04");
     url.searchParams.set("search_auth_type", "M2");
+    url.searchParams.set("currpage", String(Math.max(1, Number(page || 1))));
     if (term) {
       url.searchParams.set("search_code", "title");
       url.searchParams.set("search_text", term);
@@ -606,6 +659,7 @@ function buildOfficialListSearchUrl(source, term) {
   url.searchParams.set("bbsId", source.bbsId);
   url.searchParams.set("searchType", "sj");
   url.searchParams.set("searchValue", term);
+  url.searchParams.set("pageIndex", String(Math.max(1, Number(page || 1))));
   return url.href;
 }
 
@@ -794,7 +848,7 @@ function isUsefulOfficialDocument(fileName = "", url = "", title = "") {
   if (/영상|음원|댄스|포스터|카드뉴스|사진|이미지|배너|홍보영상|뉴스레터|공모전|수상작|소식지|우수사례집|인사발령|전보\s*인사|채용\s*공고|시험\s*공고|접수\s*현황/.test(text)) {
     return false;
   }
-  return /현장실습|직업계고|특성화고|마이스터고|표준협약|도제|일학습|NCS|취업지원|체험학습|수학여행|학교폭력|사안처리|생활규정|생활지도|학생선도|안전계획|안전교육|보건|감염병|학교회계|예산편성|강사수당|강사료|품의|검수|계약|복무|휴가|근무상황|교육공무직|계약제교원|기간제|취업규칙|단체협약|개인정보|정보공개|학교운영위원회|회의록|서식|신청서|보고서|점검표|체크리스트|동의서|지침|매뉴얼|핸드북|안내서/i.test(text);
+  return /현장실습|직업계고|특성화고|마이스터고|표준협약|도제|일학습|NCS|취업지원|고졸채용|고졸청년|채용연계|취업역량|취업맞춤반|학교장추천|중앙취업지원센터|이력서|자기소개서|면접|직무역량|체험학습|수학여행|학교폭력|사안처리|생활규정|생활지도|학생선도|안전계획|안전교육|보건|감염병|학교회계|예산편성|강사수당|강사료|품의|검수|계약|복무|휴가|근무상황|교육공무직|계약제교원|기간제|취업규칙|단체협약|개인정보|정보공개|학교운영위원회|회의록|서식|신청서|보고서|점검표|체크리스트|동의서|지침|매뉴얼|핸드북|안내서/i.test(text);
 }
 
 function dedupeHarvestedFiles(files = []) {
@@ -1062,8 +1116,14 @@ function inferCategoryFromDomains(domains = []) {
 
 function inferCategoryFromText(value = "") {
   const text = normalizeSearchText(value);
-  if (/fieldtraining/.test(text)) return "fieldTraining";
+  const explicitCareer = /고졸채용|고졸청년|취업지원|취업추천|취업역량|채용연계|취업맞춤반|학교장추천|중앙취업지원센터|이력서|자기소개서|면접|직무역량|잡알리오/.test(text);
+  const explicitFieldTraining = /현장실습|표준협약|실습일지|순회지도|기업현장교사|산업안전|실험실습|실습실|직업계고.*매뉴얼/.test(text);
+  if (explicitCareer && !explicitFieldTraining) return "careerEmployment";
+  if (explicitFieldTraining) return "fieldTraining";
   if (/careeremployment/.test(text)) return "careerEmployment";
+  if (/고졸채용|고졸청년|취업지원|취업추천|취업역량|채용연계|취업맞춤반|학교장추천|중앙취업지원센터|이력서|자기소개서|면접|직무역량|잡알리오/.test(text)
+    && !/현장실습|표준협약|실습일지|산업안전|순회지도/.test(text)) return "careerEmployment";
+  if (/fieldtraining/.test(text)) return "fieldTraining";
   if (/studentlife/.test(text)) return "studentLife";
   if (/schoolviolencesafety/.test(text)) return "schoolViolenceSafety";
   if (/schooladmin/.test(text)) return "schoolAdmin";
@@ -1165,7 +1225,7 @@ async function writeOutputs(data) {
 }
 
 function selectPublicLibraryCandidates(candidates = []) {
-  const limit = Number(process.env.PUBLIC_RESOURCE_PUBLIC_CANDIDATE_LIMIT || 1000);
+  const limit = Number(process.env.PUBLIC_RESOURCE_PUBLIC_CANDIDATE_LIMIT || 2000);
   return candidates.filter((item) => item.includeInLibrary).slice(0, limit);
 }
 

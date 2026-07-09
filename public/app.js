@@ -67,7 +67,7 @@ const PENDING_LAW_QUESTION_KEY = "gyo6LawInfoPendingQuestion";
 const PUBLIC_RESOURCE_PAGE_SIZE = 60;
 const PUBLIC_RESOURCE_CATEGORIES = [
   { code: "all", label: "전체" },
-  { code: "fieldTraining", label: "현장실습·직업교육", pattern: /현장실습|직업계고|특성화고|마이스터고|직업교육|직업교육훈련|도제|일학습병행|산학협력|ncs|선도기업|표준협약|기업현장교사|실습|하이파이브|hifive|취업역량/i },
+  { code: "fieldTraining", label: "현장실습·직업교육", pattern: /현장실습|직업계고|특성화고|마이스터고|직업교육|직업교육훈련|도제|일학습병행|산학협력|ncs|선도기업|표준협약|기업현장교사|실습|하이파이브|hifive/i },
   { code: "studentLife", label: "학생생활·학적", pattern: /학생부|생활기록|생활기록부|출결|출석|결석|학적|전입|전출|졸업|성적|평가|체험학습|교외체험|학생생활|생활지도|학생선도|선도위원회|학칙|기재요령/ },
   { code: "schoolViolenceSafety", label: "학교폭력·안전", pattern: /학교폭력|학폭|폭력|안전|사고|중대재해|산업안전|안전보건|보건|감염병|급식|학교안전|위험성평가|아동학대|성폭력|보호조치/ },
   { code: "staffLabor", label: "교직원 복무·노무", pattern: /교원|교사|교직원|교육공무직|공무직|기간제|계약제|복무|휴가|병가|연가|출장|여비|근로|노무|임금|퇴직|해고|근로계약|취업규칙|징계/ },

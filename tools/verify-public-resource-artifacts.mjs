@@ -11,12 +11,12 @@ assert(acquisition?.generatedAt, "acquisition: generatedAt is missing");
 assert(index?.generatedAt, "index: generatedAt is missing");
 assert(Array.isArray(acquisition.missions) && acquisition.missions.length >= 8, "acquisition: mission coverage is incomplete");
 assert(Array.isArray(acquisition.candidates), "acquisition: candidates must be an array");
-assert(Array.isArray(index.resources) && index.resources.length >= 500, "index: public resource count regressed below expanded library baseline");
+assert(Array.isArray(index.resources) && index.resources.length >= 1000, "index: public resource count regressed below treasure-library baseline");
 assert(index.stats?.searchOnly === 0, "index: search-only resources must not be published");
-assert((index.stats?.byType?.guide || 0) >= 200, "index: practical guide count regressed below expanded library baseline");
-assert((index.stats?.byType?.form || 0) >= 300, "index: practical form count regressed below expanded library baseline");
-assert(index.resources.filter((resource) => resource.linkKind === "file").length >= 450, "index: directly downloadable file count regressed below expanded library baseline");
-assert((index.stats?.embeddedFormCandidates || 0) >= 300, "index: embedded form extraction queue regressed below expanded library baseline");
+assert((index.stats?.byType?.guide || 0) >= 330, "index: practical guide count regressed below treasure-library baseline");
+assert((index.stats?.byType?.form || 0) >= 650, "index: practical form count regressed below treasure-library baseline");
+assert(index.resources.filter((resource) => resource.linkKind === "file").length >= 1000, "index: directly downloadable file count regressed below treasure-library baseline");
+assert((index.stats?.embeddedFormCandidates || 0) >= 650, "index: embedded form extraction queue regressed below treasure-library baseline");
 
 const resourcesByCategory = index.resources.reduce((acc, resource) => {
   const category = resource.category || "uncategorized";
@@ -24,12 +24,13 @@ const resourcesByCategory = index.resources.reduce((acc, resource) => {
   return acc;
 }, {});
 
-assert((resourcesByCategory.fieldTraining || 0) >= 45, "index: vocational field-training resources regressed below expanded library baseline");
-assert((resourcesByCategory.studentLife || 0) >= 180, "index: student-life resources regressed below expanded library baseline");
-assert((resourcesByCategory.schoolAdmin || 0) >= 100, "index: school administration resources regressed below expanded library baseline");
-assert((resourcesByCategory.schoolViolenceSafety || 0) >= 100, "index: school violence/safety resources regressed below expanded library baseline");
-assert((resourcesByCategory.privacyRecords || 0) >= 25, "index: privacy/records resources regressed below expanded library baseline");
-assert((resourcesByCategory.staffLabor || 0) >= 25, "index: staff labor resources regressed below expanded library baseline");
+assert((resourcesByCategory.fieldTraining || 0) >= 80, "index: vocational field-training resources regressed below treasure-library baseline");
+assert((resourcesByCategory.careerEmployment || 0) >= 10, "index: career/employment resources regressed below treasure-library baseline");
+assert((resourcesByCategory.studentLife || 0) >= 300, "index: student-life resources regressed below treasure-library baseline");
+assert((resourcesByCategory.schoolAdmin || 0) >= 160, "index: school administration resources regressed below treasure-library baseline");
+assert((resourcesByCategory.schoolViolenceSafety || 0) >= 150, "index: school violence/safety resources regressed below treasure-library baseline");
+assert((resourcesByCategory.privacyRecords || 0) >= 60, "index: privacy/records resources regressed below treasure-library baseline");
+assert((resourcesByCategory.staffLabor || 0) >= 60, "index: staff labor resources regressed below treasure-library baseline");
 
 if (expectFresh) {
   assert(isFresh(acquisition.generatedAt), "acquisition: generatedAt is too old for scheduled automation");
@@ -58,9 +59,9 @@ for (const resource of index.resources) {
 const importantResourceText = index.resources.map((item) => `${item.title} ${item.url}`).join("\n");
 assert(/직업교육훈련촉진법/.test(importantResourceText), "index: missing vocational education act");
 assert(/하이파이브|hifive\.go\.kr/i.test(importantResourceText), "index: missing HIFIVE vocational education resources");
-assert(index.resources.filter((resource) => /하이파이브|hifive\.go\.kr/i.test(`${resource.provider} ${resource.url} ${resource.title}`)).length >= 40, "index: HIFIVE vocational resources regressed below expanded library baseline");
-assert(index.resources.filter((resource) => /충청북도교육청|충북교육청|cbe\.go\.kr/i.test(`${resource.provider} ${resource.url} ${resource.title}`)).length >= 20, "index: CBE official safety/form resources regressed below expanded library baseline");
-assert(index.resources.filter((resource) => /학교지원종합자료실|edupia|gbe\.kr/i.test(`${resource.provider} ${resource.url} ${resource.title}`)).length >= 300, "index: GBE Edupia official form resources regressed below expanded library baseline");
+assert(index.resources.filter((resource) => /하이파이브|hifive\.go\.kr/i.test(`${resource.provider} ${resource.url} ${resource.title}`)).length >= 80, "index: HIFIVE vocational resources regressed below treasure-library baseline");
+assert(index.resources.filter((resource) => /충청북도교육청|충북교육청|cbe\.go\.kr/i.test(`${resource.provider} ${resource.url} ${resource.title}`)).length >= 30, "index: CBE official safety/form resources regressed below treasure-library baseline");
+assert(index.resources.filter((resource) => /학교지원종합자료실|edupia|gbe\.kr/i.test(`${resource.provider} ${resource.url} ${resource.title}`)).length >= 900, "index: GBE Edupia official form resources regressed below treasure-library baseline");
 assert(/직업계고.*현장실습.*공통.*매뉴얼/.test(importantResourceText), "index: missing vocational field-training common manuals");
 assert(/서식모음집|공통매뉴얼.*한글|표준협약서/.test(importantResourceText), "index: missing vocational editable/form resources");
 assert(/학교생활기록작성및관리지침|학교생활기록부기재요령/.test(importantResourceText), "index: missing school record rule/guide");

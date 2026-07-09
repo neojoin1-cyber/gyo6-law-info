@@ -281,7 +281,12 @@ function classifyType(item = {}) {
 
 function inferResourceCategory(value = "") {
   const text = compactText(value);
-  if (/현장실습|직업계고|특성화고|마이스터고|표준협약|도제|일학습|NCS|하이파이브|취업지원|고졸채용/i.test(text)) {
+  const explicitCareer = /고졸채용|고졸청년|취업지원|취업추천|취업역량|채용연계|취업맞춤반|학교장추천|중앙취업지원센터|이력서|자기소개서|면접|직무역량|잡알리오|진로|졸업생취업/i.test(text);
+  const explicitFieldTraining = /현장실습|표준협약|실습일지|순회지도|기업현장교사|산업안전|실험실습|실습실|직업계고.*매뉴얼/i.test(text);
+  if (explicitCareer && !explicitFieldTraining) {
+    return "careerEmployment";
+  }
+  if (explicitFieldTraining || /현장실습|직업계고|특성화고|마이스터고|표준협약|도제|일학습|NCS|하이파이브/i.test(text)) {
     return "fieldTraining";
   }
   if (/학교폭력|사안처리|학생보호|안전사고|학교안전|산업안전|실습실|위험성평가|보건|감염병|급식|아동학대|성폭력|딥페이크/i.test(text)) {
@@ -299,7 +304,7 @@ function inferResourceCategory(value = "") {
   if (/교원휴가|복무|연가|병가|공가|특별휴가|출장|근무상황|교육공무직|계약제교원|기간제|인사관리|취업규칙|단체협약|노무|근로기준/i.test(text)) {
     return "staffLabor";
   }
-  if (/진로|취업|채용|취업추천|면접|자소서|이력서|고용|청년지원/i.test(text)) {
+  if (/진로|취업|채용|취업추천|면접|자소서|자기소개서|이력서|고용|청년지원/i.test(text)) {
     return "careerEmployment";
   }
   return "general";
