@@ -6,8 +6,8 @@
     root.GYO6_PUBLIC_RESOURCE_INDEX = data;
   }
 })(typeof globalThis !== "undefined" ? globalThis : window, function createGeneratedPublicResourceIndex() { return {
-  "version": "generated-2026-07-08T17-55-17-556Z",
-  "generatedAt": "2026-07-08T17:55:17.556Z",
+  "version": "generated-2026-07-09T04-17-47-865Z",
+  "generatedAt": "2026-07-09T04:17:47.865Z",
   "stats": {
     "total": 28,
     "direct": 28,
@@ -31,7 +31,7 @@
       "url": "https://www.law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "curated-law-개인정보-보호법",
@@ -45,7 +45,7 @@
       "url": "https://www.law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-infodisclosure-governancecommitteerule",
@@ -59,7 +59,7 @@
       "url": "https://www.law.go.kr/법령/%EA%B3%B5%EA%B3%B5%EA%B8%B0%EA%B4%80%EC%9D%98%EC%A0%95%EB%B3%B4%EA%B3%B5%EA%B0%9C%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-publicrecords-governancecommitteerule",
@@ -73,7 +73,7 @@
       "url": "https://www.law.go.kr/법령/%EA%B3%B5%EA%B3%B5%EA%B8%B0%EB%A1%9D%EB%AC%BC%EA%B4%80%EB%A6%AC%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-teacherrightsact-classmanagementguidance",
@@ -87,7 +87,7 @@
       "url": "https://www.law.go.kr/법령/%EA%B5%90%EC%9B%90%EC%9D%98%EC%A7%80%EC%9C%84%ED%96%A5%EC%83%81%EB%B0%8F%EA%B5%90%EC%9C%A1%ED%99%9C%EB%8F%99%EB%B3%B4%ED%98%B8%EB%A5%BC%EC%9C%84%ED%95%9C%ED%8A%B9%EB%B3%84%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "acquisition-mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
@@ -101,7 +101,7 @@
       "url": "https://www.law.go.kr/법령/%EA%B5%AD%EA%B0%80%EA%B3%B5%EB%AC%B4%EC%9B%90%EB%B3%B5%EB%AC%B4%EA%B7%9C%EC%A0%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "curated-law-근로기준법",
@@ -115,7 +115,7 @@
       "url": "https://www.law.go.kr/법령/%EA%B7%BC%EB%A1%9C%EA%B8%B0%EC%A4%80%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-industrialsafetyact-schoolsafetyhealth",
@@ -129,7 +129,7 @@
       "url": "https://www.law.go.kr/법령/%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EB%B3%B4%EA%B1%B4%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-specialeducationact-specialeducationsupport",
@@ -143,7 +143,7 @@
       "url": "https://www.law.go.kr/법령/%EC%9E%A5%EC%95%A0%EC%9D%B8%EB%93%B1%EC%97%90%EB%8C%80%ED%95%9C%ED%8A%B9%EC%88%98%EA%B5%90%EC%9C%A1%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-localservice-staffattendanceservice",
@@ -157,7 +157,7 @@
       "url": "https://www.law.go.kr/법령/%EC%A7%80%EB%B0%A9%EA%B3%B5%EB%AC%B4%EC%9B%90%EB%B3%B5%EB%AC%B4%EA%B7%9C%EC%A0%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-localcontract-afterschoolchildcare",
@@ -171,7 +171,7 @@
       "url": "https://www.law.go.kr/법령/%EC%A7%80%EB%B0%A9%EC%9E%90%EC%B9%98%EB%8B%A8%EC%B2%B4%EB%A5%BC%EB%8B%B9%EC%82%AC%EC%9E%90%EB%A1%9C%ED%95%98%EB%8A%94%EA%B3%84%EC%95%BD%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "curated-law-직업교육훈련-촉진법",
@@ -185,7 +185,7 @@
       "url": "https://www.law.go.kr/법령/%EC%A7%81%EC%97%85%EA%B5%90%EC%9C%A1%ED%9B%88%EB%A0%A8%EC%B4%89%EC%A7%84%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "curated-law-초-중등교육법",
@@ -199,7 +199,7 @@
       "url": "https://www.law.go.kr/법령/%EC%B4%88%C2%B7%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "kb-growth-classmanagementguidance-1",
@@ -213,7 +213,7 @@
       "url": "https://www.law.go.kr/법령/%EC%B4%88%C2%B7%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95%EC%8B%9C%ED%96%89%EB%A0%B9",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-elementarysecondaryeducationact-classmanagementguidance",
@@ -227,7 +227,7 @@
       "url": "https://www.law.go.kr/법령/%EC%B4%88%EC%A4%91%EB%93%B1%EA%B5%90%EC%9C%A1%EB%B2%95%EC%8B%9C%ED%96%89%EB%A0%B9",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-schoolmealact-schoolmealoperation",
@@ -241,7 +241,7 @@
       "url": "https://www.law.go.kr/법령/%ED%95%99%EA%B5%90%EA%B8%89%EC%8B%9D%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-schoolhealthact-schoolsafetyhealth",
@@ -255,7 +255,7 @@
       "url": "https://www.law.go.kr/법령/%ED%95%99%EA%B5%90%EB%B3%B4%EA%B1%B4%EB%B2%95",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "curated-law-학교안전사고-예방-및-보상에-관한-법률",
@@ -269,7 +269,7 @@
       "url": "https://www.law.go.kr/법령/%ED%95%99%EA%B5%90%EC%95%88%EC%A0%84%EC%82%AC%EA%B3%A0%EC%98%88%EB%B0%A9%EB%B0%8F%EB%B3%B4%EC%83%81%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "curated-law-학교폭력예방-및-대책에-관한-법률",
@@ -283,7 +283,7 @@
       "url": "https://www.law.go.kr/법령/%ED%95%99%EA%B5%90%ED%8F%AD%EB%A0%A5%EC%98%88%EB%B0%A9%EB%B0%8F%EB%8C%80%EC%B1%85%EC%97%90%EA%B4%80%ED%95%9C%EB%B2%95%EB%A5%A0",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-studentlifeguidancenotice-parentcomplaintresponse",
@@ -297,7 +297,7 @@
       "url": "https://www.law.go.kr/행정규칙/%EA%B5%90%EC%9B%90%EC%9D%98%ED%95%99%EC%83%9D%EC%83%9D%ED%99%9C%EC%A7%80%EB%8F%84%EC%97%90%EA%B4%80%ED%95%9C%EA%B3%A0%EC%8B%9C",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "kb-growth-classmanagementguidance-0",
@@ -311,7 +311,7 @@
       "url": "https://www.law.go.kr/행정규칙/%EA%B5%90%EC%9B%90%EC%9D%98%ED%95%99%EC%83%9D%EC%83%9D%ED%99%9C%EC%A7%80%EB%8F%84%EC%97%90%EA%B4%80%ED%95%9C%EA%B3%A0%EC%8B%9C",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "acquisition-mission-stafflabor-rule-law-go-kr-교원휴가에-관한-예규",
@@ -325,7 +325,7 @@
       "url": "https://www.law.go.kr/행정규칙/%EA%B5%90%EC%9B%90%ED%9C%B4%EA%B0%80%EC%97%90%EA%B4%80%ED%95%9C%EC%98%88%EA%B7%9C",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-schoolrecordguide-assessmentacademicmanagement",
@@ -339,21 +339,21 @@
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EB%B6%80%EA%B8%B0%EC%9E%AC%EC%9A%94%EB%A0%B9",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
-      "id": "acquisition-mission-studentlife-rule-law-go-kr-2025-학교생활기록-작성-및-관리지침",
+      "id": "acquisition-mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
       "type": "rule",
       "category": "studentLife",
       "title": "학교생활기록작성및관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2025 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "sourceTier": "mission-seed",
       "description": "학교생활기록 작성 및 관리지침 출결 정정 경조사 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "curated-rule-학교생활기록-작성-및-관리지침",
@@ -367,7 +367,7 @@
       "url": "https://www.law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000188164",
       "searchUrl": "",
       "linkKind": "law",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-studentguidancerule-parentcomplaintresponse",
@@ -381,7 +381,7 @@
       "url": "https://www.gbe.kr/edupia/cm/cntnts/cntntsView.do?mi=14937&cntntsId=6600",
       "searchUrl": "",
       "linkKind": "page",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "curated-guide-학교생활기록부-기재요령",
@@ -395,7 +395,7 @@
       "url": "https://star.moe.go.kr/web/contents/m21100.do",
       "searchUrl": "",
       "linkKind": "page",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     },
     {
       "id": "corpus-source-fieldexperienceguide-fieldexperiencelearning",
@@ -409,7 +409,7 @@
       "url": "https://www.gbe.kr/dep_stu/na/ntt/selectNttInfo.do?mi=8671&bbsId=2693&nttSn=1591411",
       "searchUrl": "",
       "linkKind": "page",
-      "generatedAt": "2026-07-08T17:55:17.556Z"
+      "generatedAt": "2026-07-09T04:17:47.865Z"
     }
   ]
 }; });
