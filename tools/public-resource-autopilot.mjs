@@ -13,6 +13,115 @@ const generatedAt = new Date();
 const currentYear = generatedAt.getFullYear();
 const academicYears = buildAcademicYears(generatedAt);
 const outDir = path.join(rootDir, "data", "policy-quality");
+const HARVEST_ENABLED = process.env.PUBLIC_RESOURCE_HARVEST_OFFICIAL !== "0";
+const HARVEST_FETCH_TIMEOUT_MS = Number(process.env.PUBLIC_RESOURCE_HARVEST_TIMEOUT_MS || 14000);
+const HARVEST_DETAIL_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_DETAIL_LIMIT || 140);
+const HARVEST_LIST_LIMIT = Number(process.env.PUBLIC_RESOURCE_HARVEST_LIST_LIMIT || 90);
+const HARVEST_CONCURRENCY = Number(process.env.PUBLIC_RESOURCE_HARVEST_CONCURRENCY || 4);
+const DOCUMENT_FILE_PATTERN = /\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx)(\?|#|$)/i;
+const NON_DOCUMENT_FILE_PATTERN = /\.(jpg|jpeg|png|gif|webp|mp3|mp4|avi|wmv|mov|zip)(\?|#|$)/i;
+const EMBEDDED_FORM_PATTERN = /서식|양식|신청서|보고서|동의서|협약서|계약서|점검표|체크리스트|기록|대장|조서|품의|검수|정산|부록|붙임|별지|서식모음/i;
+
+const OFFICIAL_FILE_HARVEST_SOURCES = [
+  {
+    code: "gbe-student-life",
+    label: "경북교육청 학생생활과 자료실",
+    provider: "경상북도교육청 학생생활과",
+    origin: "https://www.gbe.kr",
+    listPath: "/dep_stu/na/ntt/selectNttList.do",
+    infoPath: "/dep_stu/na/ntt/selectNttInfo.do",
+    mi: "8671",
+    bbsId: "2693",
+    category: "studentLife",
+    terms: ["교외체험학습", "학교폭력", "학교폭력 사안처리", "학생생활규정", "생활지도", "학생선도", "상담 기록", "아동학대", "성폭력", "딥페이크", "체크리스트", "관련 서식"]
+  },
+  {
+    code: "gbe-school-accounting",
+    label: "경북교육청 학교회계 안내·지침서",
+    provider: "경상북도교육청",
+    origin: "https://www.gbe.kr",
+    listPath: "/main/na/ntt/selectNttList.do",
+    infoPath: "/main/na/ntt/selectNttInfo.do",
+    mi: "3372",
+    bbsId: "1852",
+    category: "schoolAdmin",
+    terms: ["예산편성", "학교회계", "강사수당", "강사료", "수익자부담", "품의", "검수", "지출", "계약", "정산 서식"]
+  },
+  {
+    code: "gbe-integrated-library",
+    label: "경북교육청 통합자료실",
+    provider: "경상북도교육청",
+    origin: "https://www.gbe.kr",
+    listPath: "/main/na/ntt/selectNttList.do",
+    infoPath: "/main/na/ntt/selectNttInfo.do",
+    mi: "9138",
+    bbsId: "2852",
+    category: "general",
+    terms: ["직업계고", "특성화고", "현장실습", "표준협약서", "취업지원", "NCS", "도제학교", "일학습병행", "개인정보보호", "정보공개", "학교운영", "서식", "점검표"]
+  },
+  {
+    code: "gbe-field-trip",
+    label: "경북교육청 현장체험학습 자료실",
+    provider: "경상북도교육청",
+    origin: "https://www.gbe.kr",
+    listPath: "/main/na/ntt/selectNttList.do",
+    infoPath: "/main/na/ntt/selectNttInfo.do",
+    mi: "3432",
+    bbsId: "1875",
+    category: "studentLife",
+    terms: ["현장체험학습", "수학여행", "수련활동", "안전계획", "동의서", "보고서", "체험학습", "서식", "부록 서식"]
+  },
+  {
+    code: "gbe-staff-personnel",
+    label: "경북교육청 인사정보 자료실",
+    provider: "경상북도교육청",
+    origin: "https://www.gbe.kr",
+    listPath: "/main/na/ntt/selectNttList.do",
+    infoPath: "/main/na/ntt/selectNttInfo.do",
+    mi: "3531",
+    bbsId: "1880",
+    category: "staffLabor",
+    terms: ["계약제교원", "기간제교사", "복무", "휴가", "근무상황", "교육공무직 취업규칙", "교육공무직 단체협약", "계약제교원 운영 지침"]
+  },
+  {
+    code: "gbe-health-response",
+    label: "경북교육청 감염병 대응지침",
+    provider: "경상북도교육청",
+    origin: "https://www.gbe.kr",
+    listPath: "/main/na/ntt/selectNttList.do",
+    infoPath: "/main/na/ntt/selectNttInfo.do",
+    mi: "9245",
+    bbsId: "2885",
+    category: "schoolViolenceSafety",
+    terms: ["감염병", "등교중지", "보건", "대응지침", "학교보건", "마스크"]
+  },
+  {
+    code: "gbe-school-committee",
+    label: "경북교육청 학교운영위원회 자료실",
+    provider: "경상북도교육청",
+    origin: "https://www.gbe.kr",
+    listPath: "/main/na/ntt/selectNttList.do",
+    infoPath: "/main/na/ntt/selectNttInfo.do",
+    mi: "3735",
+    bbsId: "1901",
+    category: "schoolAdmin",
+    terms: ["학교운영위원회", "회의록", "심의", "규정", "학칙", "위원회"]
+  },
+  {
+    code: "hifive-education-library",
+    label: "하이파이브 교육자료실",
+    provider: "교육부·하이파이브",
+    origin: "https://www.hifive.go.kr",
+    kind: "hifive-bbs",
+    listPath: "/front/bbs/bbsList.do",
+    infoPath: "/front/bbs/bbsDetail.do",
+    bbsId: "87",
+    rootMenuId: "04",
+    menuId: "0403",
+    category: "fieldTraining",
+    terms: ["", "직업계고 현장실습", "현장실습 공통 매뉴얼", "서식모음집", "산업안전 매뉴얼", "실습일지", "직업계고 학점제", "NCS 교육과정"]
+  }
+];
 
 const RESOURCE_AUTOPILOT_MISSIONS = [
   {
@@ -122,7 +231,9 @@ const RESOURCE_AUTOPILOT_MISSIONS = [
 
 const existingResources = normalizeExistingResources(currentIndex.resources || []);
 const missionReports = RESOURCE_AUTOPILOT_MISSIONS.map((mission) => buildMissionReport(mission));
+const harvestedFileCandidates = await buildHarvestedOfficialFileCandidates();
 const candidates = dedupeCandidates([
+  ...harvestedFileCandidates,
   ...RESOURCE_AUTOPILOT_MISSIONS.flatMap(buildMissionCandidates),
   ...buildKnowledgeBaseGapCandidates(),
   ...buildRegistryUpgradeCandidates()
@@ -138,6 +249,7 @@ const payload = {
     missions: missionReports.length,
     candidates: candidates.length,
     publicCandidates: candidates.filter((item) => item.includeInLibrary).length,
+    harvestedFiles: harvestedFileCandidates.length,
     highPriority: candidates.filter((item) => item.priority === "high").length,
     directUrlNeeded: candidates.filter((item) => item.needsDirectUrl).length,
     byCategory: candidates.reduce((acc, item) => {
@@ -153,6 +265,7 @@ await writeOutputs(payload);
 
 console.log(`Public resource autopilot generated: ${payload.stats.candidates} candidates`);
 console.log(`Public library candidates: ${payload.stats.publicCandidates}`);
+console.log(`Official files harvested: ${payload.stats.harvestedFiles}`);
 console.log(`Direct URL needed: ${payload.stats.directUrlNeeded}`);
 console.log(`Weakest mission: ${missionReports[0]?.label || "none"} (${missionReports[0]?.coverageScore ?? 0})`);
 
@@ -170,6 +283,7 @@ function normalizeExistingResources(resources = []) {
   return resources.map((item) => ({
     id: cleanText(item.id),
     type: normalizeType(item.type),
+    category: cleanText(item.category),
     title: cleanText(item.title),
     provider: cleanText(item.provider),
     query: cleanText(item.query),
@@ -178,7 +292,7 @@ function normalizeExistingResources(resources = []) {
     searchUrl: cleanText(item.searchUrl),
     linkKind: cleanText(item.linkKind || inferLinkKind(item.url)),
     searchDomain: getDomainFromUrl(item.searchUrl || item.url),
-    normalizedText: normalizeSearchText([item.title, item.provider, item.query, item.description].join(" "))
+    normalizedText: normalizeSearchText([item.category, item.hierarchy?.level2, item.hierarchy?.level3, item.title, item.provider, item.query, item.description].join(" "))
   }));
 }
 
@@ -315,6 +429,370 @@ function buildRegistryUpgradeCandidates() {
   });
 }
 
+async function buildHarvestedOfficialFileCandidates() {
+  if (!HARVEST_ENABLED || typeof fetch !== "function") {
+    return [];
+  }
+
+  const listTargets = OFFICIAL_FILE_HARVEST_SOURCES.flatMap((source) =>
+    source.terms.map((term) => ({
+      source,
+      term,
+      url: buildOfficialListSearchUrl(source, term)
+    }))
+  ).slice(0, HARVEST_LIST_LIMIT);
+
+  const discovered = new Map();
+  const seededDetails = buildSeededHarvestDetailTargets();
+  seededDetails.forEach((target) => {
+    discovered.set(target.detailUrl, target);
+  });
+
+  const listResults = await mapWithConcurrency(listTargets, HARVEST_CONCURRENCY, async (target) => {
+    const html = await fetchText(target.url);
+    return extractDetailTargetsFromList(html, target.source, target.term);
+  });
+
+  listResults.flat().forEach((target) => {
+    if (target.detailUrl && !discovered.has(target.detailUrl)) {
+      discovered.set(target.detailUrl, target);
+    }
+  });
+
+  const detailTargets = [...discovered.values()].slice(0, HARVEST_DETAIL_LIMIT);
+  const detailResults = await mapWithConcurrency(detailTargets, HARVEST_CONCURRENCY, harvestOfficialDetailFiles);
+  return detailResults.flat();
+}
+
+function buildSeededHarvestDetailTargets() {
+  return Object.entries(sourceRegistry.officialSources || {}).flatMap(([key, source]) => {
+    return [source.url, source.supportUrl]
+      .filter(Boolean)
+      .filter((url) => isOfficialHarvestPageUrl(url))
+      .map((url) => {
+        const parsed = new URL(url);
+        return {
+          source: {
+            code: `registry-${key}`,
+            label: source.title || key,
+            provider: source.provider || getProviderForTier(source.tier),
+            category: inferCategoryFromDomains(source.domains || []),
+            origin: `${parsed.protocol}//${parsed.host}`
+          },
+          term: source.query || source.title || key,
+          detailUrl: url,
+          nttSn: parsed.searchParams.get("nttSn") || ""
+        };
+      });
+  });
+}
+
+function buildOfficialListSearchUrl(source, term) {
+  if (source.kind === "hifive-bbs") {
+    const url = new URL(source.listPath, source.origin);
+    url.searchParams.set("auth_type", "M2");
+    url.searchParams.set("auth_type_bbs_id", "");
+    url.searchParams.set("bbs_id", source.listBbsId || "");
+    url.searchParams.set("menuId", source.menuId || "0403");
+    url.searchParams.set("rootMenuId", source.rootMenuId || "04");
+    url.searchParams.set("search_auth_type", "M2");
+    if (term) {
+      url.searchParams.set("search_code", "title");
+      url.searchParams.set("search_text", term);
+    }
+    return url.href;
+  }
+  const url = new URL(source.listPath, source.origin);
+  url.searchParams.set("mi", source.mi);
+  url.searchParams.set("bbsId", source.bbsId);
+  url.searchParams.set("searchType", "sj");
+  url.searchParams.set("searchValue", term);
+  return url.href;
+}
+
+function extractDetailTargetsFromList(html = "", source = {}, term = "") {
+  if (!html) {
+    return [];
+  }
+
+  if (source.kind === "hifive-bbs") {
+    return [...html.matchAll(/funcGoDetail\('([^']+)','([^']+)','([^']+)'\)[\s\S]*?title="([^"]+)"/gi)]
+      .map((match) => ({
+        source,
+        term,
+        nttSn: match[1],
+        bbsId: match[2],
+        title: decodeHtml(match[4]),
+        detailUrl: buildOfficialDetailUrl({ ...source, bbsId: match[2] }, match[1])
+      }))
+      .filter((item) => item.detailUrl);
+  }
+
+  const ids = uniqueStrings([...html.matchAll(/listFileDown["']?\s*[^>]*data-id=["']?(\d+)|listFileDown(\d+)/gi)]
+    .map((match) => match[1] || match[2])
+    .filter(Boolean));
+
+  return ids.map((nttSn) => ({
+    source,
+    term,
+    nttSn,
+    detailUrl: buildOfficialDetailUrl(source, nttSn)
+  })).filter((item) => item.detailUrl);
+}
+
+function buildOfficialDetailUrl(source = {}, nttSn = "") {
+  if (source.kind === "hifive-bbs") {
+    if (!source.origin || !source.infoPath || !source.bbsId || !nttSn) {
+      return "";
+    }
+    const url = new URL(source.infoPath, source.origin);
+    url.searchParams.set("bbs_id", source.bbsId);
+    url.searchParams.set("auth_type_bbs_id", "");
+    url.searchParams.set("search_auth_type", "M2");
+    url.searchParams.set("auth_type", "M2");
+    url.searchParams.set("rootMenuId", source.rootMenuId || "04");
+    url.searchParams.set("menuId", source.menuId || "0403");
+    url.searchParams.set("currpage", "1");
+    url.searchParams.set("bbs_seq", nttSn);
+    url.searchParams.set("passwd", "");
+    return url.href;
+  }
+  if (!source.origin || !source.infoPath || !source.mi || !source.bbsId || !nttSn) {
+    return "";
+  }
+  const url = new URL(source.infoPath, source.origin);
+  url.searchParams.set("mi", source.mi);
+  url.searchParams.set("bbsId", source.bbsId);
+  url.searchParams.set("nttSn", nttSn);
+  return url.href;
+}
+
+async function harvestOfficialDetailFiles(target = {}) {
+  const html = await fetchText(target.detailUrl);
+  if (!html) {
+    return [];
+  }
+
+  const detailTitle = extractDetailTitle(html) || target.title || target.term;
+  return extractOfficialFileLinks(html, target)
+    .filter((file) => isUsefulOfficialDocument(file.fileName, file.url, detailTitle))
+    .map((file, index) => {
+      const text = `${detailTitle} ${file.fileName} ${target.term}`;
+      const type = inferHarvestedResourceType(text);
+      const embeddedFormCandidate = type === "form" || EMBEDDED_FORM_PATTERN.test(text);
+      return normalizeCandidate({
+        id: `harvest:${target.source.code || "official"}:${target.nttSn || stableId(target.detailUrl)}:${index}:${file.fileName}`,
+        category: inferCategoryFromText([target.source.category, detailTitle, file.fileName, target.term].join(" ")),
+        type,
+        title: buildHarvestedResourceTitle(detailTitle, file.fileName),
+        provider: target.source.provider || providerFromUrl(target.detailUrl),
+        query: uniqueStrings([target.term, detailTitle, file.fileName]).join(" "),
+        url: file.url,
+        searchDomain: getDomainFromUrl(file.url),
+        description: `${target.source.label || "공식자료실"}에서 확인한 첨부 원문 파일`,
+        priority: "high",
+        source: "official-file-harvest",
+        missionLabel: target.source.label || "",
+        reason: "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+        qualityScore: 98,
+        includeInLibrary: true,
+        needsDirectUrl: false,
+        extraction: {
+          embeddedFormCandidate,
+          originalFileUrl: file.url,
+          status: embeddedFormCandidate ? "queued_for_verified_pdf_docx_split" : "source_only",
+          outputFormats: embeddedFormCandidate ? ["pdf", "docx"] : []
+        }
+      });
+    });
+}
+
+function extractOfficialFileLinks(html = "", target = {}) {
+  const origin = target.source?.origin || getOrigin(target.detailUrl);
+  const files = [];
+  const addFile = (fileName = "", rawUrl = "") => {
+    const cleanName = cleanText(decodeHtml(fileName));
+    const absolute = toAbsoluteUrl(rawUrl, origin);
+    if (!cleanName || !absolute || !isDirectCandidateUrl(absolute)) {
+      return;
+    }
+    files.push({ fileName: cleanName, url: absolute });
+  };
+
+  for (const match of html.matchAll(/AddUploadedFile\(\s*['"][^'"]*['"]\s*,\s*['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]/gi)) {
+    addFile(match[1], match[2]);
+  }
+
+  for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']*(?:fileDownload\.do|\/upload\/)[^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const text = cleanText(stripHtml(match[2]));
+    addFile(text || extractFileNameFromUrl(match[1]), match[1]);
+  }
+
+  for (const match of html.matchAll(/funcFiledownload\('([^']+)','([^']+)','([^']+)'\)/gi)) {
+    const url = new URL("/common/FileDown.do", origin);
+    url.searchParams.set("filepath", decodeHtml(match[1]));
+    url.searchParams.set("filerealname", decodeHtml(match[2]));
+    url.searchParams.set("filename", decodeHtml(match[3]));
+    addFile(match[2], url.href);
+  }
+
+  return dedupeHarvestedFiles(files);
+}
+
+function extractDetailTitle(html = "") {
+  const thMatch = html.match(/<th\b[^>]*class=["'][^"']*title[^"']*["'][^>]*>([\s\S]*?)<\/th>/i);
+  if (thMatch) {
+    return cleanText(stripHtml(thMatch[1]));
+  }
+  const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  return titleMatch ? cleanText(stripHtml(titleMatch[1]).replace(/^[^-]+-/, "")) : "";
+}
+
+function buildHarvestedResourceTitle(detailTitle = "", fileName = "") {
+  const cleanTitle = cleanText(detailTitle);
+  const cleanFile = cleanText(fileName.replace(/\.(pdf|hwp|hwpx|docx?|xlsx?|pptx?)$/i, ""));
+  if (!cleanTitle) return cleanFile;
+  if (!cleanFile || normalizeSearchText(cleanTitle).includes(normalizeSearchText(cleanFile).slice(0, 12))) {
+    return cleanTitle;
+  }
+  return `${cleanTitle} - ${cleanFile}`;
+}
+
+function inferHarvestedResourceType(text = "") {
+  if (EMBEDDED_FORM_PATTERN.test(text)) {
+    return "form";
+  }
+  if (/규정|규칙|고시|예규|훈령|단체협약|취업규칙/.test(text)) {
+    return "rule";
+  }
+  return "guide";
+}
+
+function isUsefulOfficialDocument(fileName = "", url = "", title = "") {
+  const text = `${fileName} ${url} ${title}`;
+  if (!DOCUMENT_FILE_PATTERN.test(url) && !DOCUMENT_FILE_PATTERN.test(fileName)) {
+    return false;
+  }
+  if (NON_DOCUMENT_FILE_PATTERN.test(url) || NON_DOCUMENT_FILE_PATTERN.test(fileName)) {
+    return false;
+  }
+  if (/영상|음원|댄스|포스터|카드뉴스|사진|이미지|배너|홍보영상|뉴스레터|공모전|수상작|소식지|우수사례집|인사발령|전보\s*인사|채용\s*공고|시험\s*공고|접수\s*현황/.test(text)) {
+    return false;
+  }
+  return /현장실습|직업계고|특성화고|마이스터고|표준협약|도제|일학습|NCS|취업지원|체험학습|수학여행|학교폭력|사안처리|생활규정|생활지도|학생선도|안전계획|안전교육|보건|감염병|학교회계|예산편성|강사수당|강사료|품의|검수|계약|복무|휴가|근무상황|교육공무직|계약제교원|기간제|취업규칙|단체협약|개인정보|정보공개|학교운영위원회|회의록|서식|신청서|보고서|점검표|체크리스트|동의서|지침|매뉴얼|핸드북|안내서/i.test(text);
+}
+
+function dedupeHarvestedFiles(files = []) {
+  const map = new Map();
+  files.forEach((file) => {
+    const key = normalizeSearchText(`${file.fileName}|${file.url}`);
+    if (!map.has(key)) {
+      map.set(key, file);
+    }
+  });
+  return [...map.values()];
+}
+
+async function fetchText(url = "") {
+  if (!url || !isOfficialHarvestPageUrl(url)) {
+    return "";
+  }
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), HARVEST_FETCH_TIMEOUT_MS);
+  try {
+    const response = await fetch(url, {
+      redirect: "follow",
+      signal: controller.signal,
+      headers: {
+        "user-agent": "Mozilla/5.0 GYO6ResourceHarvester/1.0",
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+      }
+    });
+    if (!response.ok) {
+      return "";
+    }
+    return await response.text();
+  } catch {
+    return "";
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+function isOfficialHarvestPageUrl(url = "") {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "");
+    return /(^|\.)gbe\.kr$|(^|\.)moe\.go\.kr$|(^|\.)moel\.go\.kr$|(^|\.)kosha\.or\.kr$|(^|\.)hrdkorea\.or\.kr$|(^|\.)hifive\.go\.kr$|(^|\.)schoolsafe\.or\.kr$|(^|\.)pipc\.go\.kr$/.test(host);
+  } catch {
+    return false;
+  }
+}
+
+function toAbsoluteUrl(rawUrl = "", origin = "") {
+  const value = decodeHtml(cleanText(rawUrl));
+  if (!value) return "";
+  try {
+    return new URL(value, origin || "https://www.gbe.kr").href;
+  } catch {
+    return "";
+  }
+}
+
+function getOrigin(url = "") {
+  try {
+    const parsed = new URL(url);
+    return `${parsed.protocol}//${parsed.host}`;
+  } catch {
+    return "";
+  }
+}
+
+function providerFromUrl(url = "") {
+  const domain = getDomainFromUrl(url);
+  if (/gbe\.kr$/.test(domain)) return "경상북도교육청";
+  if (/hifive\.go\.kr$/.test(domain)) return "교육부·하이파이브";
+  if (/moe\.go\.kr$/.test(domain)) return "교육부";
+  if (/moel\.go\.kr$/.test(domain)) return "고용노동부";
+  if (/kosha\.or\.kr$/.test(domain)) return "안전보건공단";
+  if (/hrdkorea\.or\.kr$/.test(domain)) return "한국산업인력공단";
+  return "공식자료";
+}
+
+function extractFileNameFromUrl(url = "") {
+  try {
+    return decodeURIComponent(new URL(url, "https://www.gbe.kr").pathname.split("/").pop() || "");
+  } catch {
+    return "";
+  }
+}
+
+function decodeHtml(value = "") {
+  return String(value || "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#039;|&apos;/g, "'");
+}
+
+function stripHtml(value = "") {
+  return decodeHtml(String(value || "").replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " "));
+}
+
+async function mapWithConcurrency(items = [], limit = 4, mapper) {
+  const results = [];
+  let index = 0;
+  const workerCount = Math.max(1, Math.min(limit, items.length || 1));
+  await Promise.all(Array.from({ length: workerCount }, async () => {
+    while (index < items.length) {
+      const currentIndex = index;
+      index += 1;
+      results[currentIndex] = await mapper(items[currentIndex]);
+    }
+  }));
+  return results.filter(Boolean);
+}
+
 function normalizeCandidate(item = {}) {
   const title = cleanText(item.title);
   const provider = cleanText(item.provider || "공식자료");
@@ -340,7 +818,23 @@ function normalizeCandidate(item = {}) {
     qualityScore: Math.max(0, Math.min(100, Number(item.qualityScore || 0))),
     includeInLibrary: Boolean(item.includeInLibrary && isDirectCandidateUrl(url)),
     needsDirectUrl: Boolean(item.needsDirectUrl),
+    extraction: normalizeExtractionPlan(item.extraction, { type, title, query, url }),
     generatedAt: generatedAt.toISOString()
+  };
+}
+
+function normalizeExtractionPlan(extraction = null, item = {}) {
+  const text = `${item.type || ""} ${item.title || ""} ${item.query || ""}`;
+  const embeddedFormCandidate = Boolean(extraction?.embeddedFormCandidate || EMBEDDED_FORM_PATTERN.test(text));
+  if (!embeddedFormCandidate) {
+    return { embeddedFormCandidate: false, status: "source_only", outputFormats: [] };
+  }
+  const outputFormats = uniqueStrings(extraction?.outputFormats || []);
+  return {
+    embeddedFormCandidate: true,
+    originalFileUrl: cleanText(extraction?.originalFileUrl || item.url || ""),
+    status: cleanText(extraction?.status === "source_only" ? "queued_for_verified_pdf_docx_split" : extraction?.status || "queued_for_verified_pdf_docx_split"),
+    outputFormats: outputFormats.length ? outputFormats : ["pdf", "docx"]
   };
 }
 
@@ -396,7 +890,7 @@ function extractLegalResource(value = "") {
 function isDirectCandidateUrl(url = "") {
   const value = cleanText(url);
   if (!value || /google\.com\/search/i.test(value)) return false;
-  if (/\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx)(\?|#|$)/i.test(value)) return true;
+  if (DOCUMENT_FILE_PATTERN.test(value)) return true;
   if (/law\.go\.kr\/(법령|행정규칙)\//i.test(value)) return true;
   try {
     const parsed = new URL(value);
@@ -430,6 +924,7 @@ function hasDirectExistingMatch(candidate = {}) {
 }
 
 function isMissionRelatedResource(resource, mission) {
+  if (resource.category && resource.category === mission.category) return true;
   const text = resource.normalizedText;
   if (mission.domainHints.some((hint) => text.includes(normalizeSearchText(hint)))) return true;
   if (mission.seeds.some((item) => normalizeSearchText(item.query).split(/[^\p{L}\p{N}]+/u).filter((term) => term.length >= 3).some((term) => text.includes(term)))) return true;
@@ -453,7 +948,7 @@ function inferCategoryFromText(value = "") {
   if (/현장실습|직업계고|특성화고|ncs|curriculum|fieldtraining|employment|career/.test(text)) return /employment|career|취업|채용/.test(text) ? "careerEmployment" : "fieldTraining";
   if (/학생부|생활기록|출결|학적|평가|체험학습|record|attendance|assessment|graduation/.test(text)) return "studentLife";
   if (/학교폭력|안전|급식|보건|폭력|safety|violence|meal|health/.test(text)) return "schoolViolenceSafety";
-  if (/복무|휴가|교권|민원|service|leave|teacher|complaint/.test(text)) return "staffLabor";
+  if (/복무|휴가|교권|민원|교육공무직|계약제|기간제|근무상황|취업규칙|단체협약|service|leave|teacher|complaint/.test(text)) return "staffLabor";
   if (/회계|계약|위원회|시설|행정|budget|accounting|contract|committee|facility/.test(text)) return "schoolAdmin";
   if (/개인정보|정보공개|기록|cctv|privacy|record|disclosure/.test(text)) return "privacyRecords";
   return "general";

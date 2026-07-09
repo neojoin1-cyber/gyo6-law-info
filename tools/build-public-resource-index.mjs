@@ -20,6 +20,7 @@ const policyKb = knowledgeBase.default || knowledgeBase;
 const policyCorpus = corpus.default || corpus;
 const sourceExpansion = generatedExpansion.default || generatedExpansion;
 const publicResourceAcquisition = generatedAcquisition.default || generatedAcquisition;
+const DOCUMENT_FILE_PATTERN = /\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx)(\?|#|$)/i;
 
 const resources = buildResourceIndex();
 await writeGeneratedModule(resources);
@@ -216,10 +217,12 @@ function normalizeResource(item = {}) {
   const searchUrl = buildSearchUrl({ ...item, title, provider, query, type, url });
   const linkKind = getLinkKind(url);
   const description = cleanDisplayDescription(cleanText(item.description || item.summary || item.use || item.note || query), type, title, provider);
+  const category = cleanText(item.category || item.resourceCategory || "")
+    || inferResourceCategory(`${type} ${title} ${provider} ${query} ${description} ${item.sourceTier || item.tier || ""}`);
   return {
     id: stableId(item.id || `${type}:${provider}:${title}:${url || query}`),
     type,
-    category: cleanText(item.category || item.resourceCategory || ""),
+    category,
     title,
     provider,
     query,
@@ -228,7 +231,26 @@ function normalizeResource(item = {}) {
     url,
     searchUrl,
     linkKind,
+    extraction: normalizeExtractionPlan(item.extraction, { type, title, query, url }),
     generatedAt: generatedAt.toISOString()
+  };
+}
+
+function normalizeExtractionPlan(extraction = null, item = {}) {
+  const text = compactText(`${item.type || ""} ${item.title || ""} ${item.query || ""}`);
+  const embeddedFormCandidate = Boolean(
+    extraction?.embeddedFormCandidate
+    || /서식|양식|신청서|보고서|동의서|협약서|계약서|점검표|체크리스트|기록|대장|조서|품의|검수|정산|부록|붙임|별지|서식모음/i.test(text)
+  );
+  if (!embeddedFormCandidate) {
+    return { embeddedFormCandidate: false, status: "source_only", outputFormats: [] };
+  }
+  const outputFormats = [...new Set(extraction?.outputFormats || [])];
+  return {
+    embeddedFormCandidate: true,
+    originalFileUrl: cleanText(extraction?.originalFileUrl || item.url || ""),
+    status: cleanText(extraction?.status === "source_only" ? "queued_for_verified_pdf_docx_split" : extraction?.status || "queued_for_verified_pdf_docx_split"),
+    outputFormats: outputFormats.length ? outputFormats : ["pdf", "docx"]
   };
 }
 
@@ -254,6 +276,32 @@ function classifyType(item = {}) {
   if (/고시|훈령|예규|행정규칙|관리지침|규정|규칙|학칙|취업규칙|단체협약/.test(titleText) || /schoolRule|officialRule/i.test(tierText)) return "rule";
   if (/표준협약서|협약서|신청서|보고서|동의서|기록서|점검표|체크리스트|서식|양식|template|form/.test(text)) return "form";
   return "guide";
+}
+
+function inferResourceCategory(value = "") {
+  const text = compactText(value);
+  if (/현장실습|직업계고|특성화고|마이스터고|표준협약|도제|일학습|NCS|하이파이브|취업지원|고졸채용/i.test(text)) {
+    return "fieldTraining";
+  }
+  if (/학교폭력|사안처리|학생보호|안전사고|학교안전|산업안전|실습실|위험성평가|보건|감염병|급식|아동학대|성폭력|딥페이크/i.test(text)) {
+    return "schoolViolenceSafety";
+  }
+  if (/학교생활기록|생활기록부|출결|학적|교외체험학습|현장체험학습|수학여행|학생생활|생활지도|학생선도|학업성적|평가|전입|전출|졸업/i.test(text)) {
+    return "studentLife";
+  }
+  if (/학교회계|예산|결산|계약|수의계약|강사수당|강사료|품의|검수|지출|정산|학교운영위원회|학칙|규정개정|행정/i.test(text)) {
+    return "schoolAdmin";
+  }
+  if (/개인정보|정보공개|공공기록|기록물|기록관리|CCTV|영상정보|정보보안|저작권|공문서|비공개|나이스|NEIS/i.test(text)) {
+    return "privacyRecords";
+  }
+  if (/교원휴가|복무|연가|병가|공가|특별휴가|출장|근무상황|교육공무직|계약제교원|기간제|인사관리|취업규칙|단체협약|노무|근로기준/i.test(text)) {
+    return "staffLabor";
+  }
+  if (/진로|취업|채용|취업추천|면접|자소서|이력서|고용|청년지원/i.test(text)) {
+    return "careerEmployment";
+  }
+  return "general";
 }
 
 function normalizeDirectUrl(url = "", type = "", title = "", query = "") {
@@ -317,7 +365,7 @@ function getReadableSourceTarget(value = "") {
 
 function getLinkKind(url = "") {
   if (!url) return "search";
-  if (/\.(pdf|hwp|hwpx|doc|docx|xls|xlsx|ppt|pptx)(\?|#|$)/i.test(url)) return "file";
+  if (DOCUMENT_FILE_PATTERN.test(url) || /\/cf\/fileDownload\.do|\/fileDownload\.do/i.test(url)) return "file";
   if (/law\.go\.kr/i.test(url)) return "law";
   return "page";
 }
@@ -431,11 +479,17 @@ function preferUrl(left = "", right = "") {
 }
 
 function compareResources(a, b) {
-  const typeOrder = { law: 0, rule: 1, guide: 2, form: 3 };
+  const typeOrder = { guide: 0, form: 1, rule: 2, law: 3 };
   const directRank = (item) => item.linkKind === "file" ? -3 : item.linkKind === "law" ? -2 : item.linkKind === "page" ? -1 : 0;
   return (typeOrder[a.type] ?? 9) - (typeOrder[b.type] ?? 9)
     || directRank(a) - directRank(b)
+    || extractResourceYear(b) - extractResourceYear(a)
     || a.title.localeCompare(b.title, "ko");
+}
+
+function extractResourceYear(item = {}) {
+  const match = `${item.title || ""} ${item.query || ""}`.match(/20\d{2}/);
+  return match ? Number(match[0]) : 0;
 }
 
 async function writeGeneratedModule(payload) {
@@ -449,7 +503,8 @@ async function writeGeneratedModule(payload) {
       byType: payload.reduce((acc, item) => {
         acc[item.type] = (acc[item.type] || 0) + 1;
         return acc;
-      }, {})
+      }, {}),
+      embeddedFormCandidates: payload.filter((item) => item.extraction?.embeddedFormCandidate).length
     },
     resources: payload
   };

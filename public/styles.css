@@ -1210,6 +1210,12 @@ h1 {
   color: #35536a;
 }
 
+.resource-extraction-chip {
+  border: 1px solid #d9c389;
+  background: #fff8df;
+  color: #75560b;
+}
+
 .resource-row h3 {
   margin: 0 0 6px;
   color: var(--navy);

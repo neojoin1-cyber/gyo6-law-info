@@ -2960,6 +2960,7 @@ function normalizePublicResource(item = {}) {
     ? declaredCategory
     : classifyPublicResourceCategory({ title, provider, query, sourceTier, description, type, terms: item.terms });
   const hierarchy = buildPublicResourceHierarchy({ title, provider, query, sourceTier, description, type, category, terms: item.terms });
+  const extraction = normalizePublicResourceExtraction(item.extraction, { type, title, query, url });
 
   return {
     id: createPublicResourceId(item.id || `${type}:${provider}:${title}:${url || query}`),
@@ -2975,6 +2976,7 @@ function normalizePublicResource(item = {}) {
     searchUrl,
     actionLabel,
     linkKind,
+    extraction,
     terms: uniqueStrings([
       title,
       provider,
@@ -2986,6 +2988,24 @@ function normalizePublicResource(item = {}) {
       ...(item.domains || []),
       ...(item.terms || [])
     ])
+  };
+}
+
+function normalizePublicResourceExtraction(extraction = null, item = {}) {
+  const text = normalizePublicResourceText(`${item.type || ""} ${item.title || ""} ${item.query || ""}`);
+  const embeddedFormCandidate = Boolean(
+    extraction?.embeddedFormCandidate
+    || /서식|양식|신청서|보고서|동의서|협약서|계약서|점검표|체크리스트|기록|대장|조서|품의|검수|정산|부록|붙임|별지|서식모음/.test(text)
+  );
+  if (!embeddedFormCandidate) {
+    return { embeddedFormCandidate: false, status: "source_only", outputFormats: [] };
+  }
+  const outputFormats = uniqueStrings(extraction?.outputFormats || []);
+  return {
+    embeddedFormCandidate: true,
+    originalFileUrl: String(extraction?.originalFileUrl || item.url || "").trim(),
+    status: String(extraction?.status === "source_only" ? "queued_for_verified_pdf_docx_split" : extraction?.status || "queued_for_verified_pdf_docx_split").trim(),
+    outputFormats: outputFormats.length ? outputFormats : ["pdf", "docx"]
   };
 }
 
@@ -3255,11 +3275,17 @@ function dedupePublicResources(items = []) {
 }
 
 function comparePublicResources(a, b) {
-  const typeOrder = { law: 0, rule: 1, guide: 2, form: 3 };
+  const typeOrder = { guide: 0, form: 1, rule: 2, law: 3 };
   const directScore = (item) => item.linkKind === "file" ? -2 : item.linkKind === "law" || item.linkKind === "page" ? -1 : 0;
   return (typeOrder[a.type] ?? 9) - (typeOrder[b.type] ?? 9)
     || directScore(a) - directScore(b)
+    || extractPublicResourceYear(b) - extractPublicResourceYear(a)
     || a.title.localeCompare(b.title, "ko");
+}
+
+function extractPublicResourceYear(item = {}) {
+  const match = `${item.title || ""} ${item.query || ""}`.match(/20\d{2}/);
+  return match ? Number(match[0]) : 0;
 }
 
 function getFilteredPublicResources() {
@@ -3429,15 +3455,17 @@ function updatePublicResourceSummary(filtered = []) {
   ].filter(Boolean).join(" / ");
   const pathLabel = [categoryLabel, typeLabel, levelLabels].filter(Boolean).join(" / ");
   const directCount = filtered.filter((item) => ["file", "law", "page"].includes(item.linkKind)).length;
-  const searchCount = filtered.length - directCount;
   const tokens = getPublicResourceSearchTokens(publicResourceState.query);
   const queryLabel = tokens.length ? `, 포함 단어 ${tokens.map((token) => `"${token}"`).join(" + ")}` : "";
-  resourceSummaryMount.textContent = `${pathLabel} 자료 ${formatNumber(filtered.length)}건${queryLabel}을 표시합니다. 바로 열 수 있는 원문·파일 ${formatNumber(directCount)}건, 공식자료 검색 연결 ${formatNumber(searchCount)}건입니다.`;
+  resourceSummaryMount.textContent = `${pathLabel} 자료 ${formatNumber(filtered.length)}건${queryLabel}을 표시합니다. 바로 열 수 있는 원문·파일 ${formatNumber(directCount)}건입니다.`;
 }
 
 function renderPublicResourceRow(item = {}) {
   const level2Label = item.hierarchy?.level2 || getPublicResourceCategoryLabel(item.category);
   const showLevel2 = level2Label && level2Label !== getPublicResourceCategoryLabel(item.category);
+  const extractionChip = item.extraction?.embeddedFormCandidate
+    ? `<span class="resource-category-chip resource-extraction-chip">서식 추출 준비</span>`
+    : "";
   return `
     <article class="resource-row" data-resource-id="${escapeHtml(item.id)}" tabindex="0">
       <div>
@@ -3445,6 +3473,7 @@ function renderPublicResourceRow(item = {}) {
           <span class="resource-type">${escapeHtml(getPublicResourceTypeLabel(item.type))}</span>
           <span class="resource-category-chip">${escapeHtml(getPublicResourceCategoryLabel(item.category))}</span>
           ${showLevel2 ? `<span class="resource-category-chip">${escapeHtml(level2Label)}</span>` : ""}
+          ${extractionChip}
         </div>
         <h3>${escapeHtml(item.title)}</h3>
         <p>${escapeHtml(item.description || item.query || "공식자료 원문을 확인합니다.")}</p>
@@ -3452,7 +3481,6 @@ function renderPublicResourceRow(item = {}) {
       </div>
       <div class="resource-row-actions">
         ${item.url ? `<a data-resource-open href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.actionLabel)}</a>` : ""}
-        ${item.searchUrl && item.searchUrl !== item.url ? `<a data-resource-open class="secondary" href="${escapeHtml(item.searchUrl)}" target="_blank" rel="noopener noreferrer">자료명 검색</a>` : ""}
       </div>
     </article>
   `;
@@ -3498,11 +3526,11 @@ function renderPublicResourcePreview(item = null) {
       <div><dt>출처</dt><dd>${escapeHtml(item.provider || "공식자료")}</dd></div>
       <div><dt>경로</dt><dd>${escapeHtml(formatPublicResourcePath(item))}</dd></div>
       <div><dt>연결</dt><dd>${escapeHtml(item.actionLabel || "자료 확인")}</dd></div>
+      ${item.extraction?.embeddedFormCandidate ? `<div><dt>서식 추출</dt><dd>원문 검증 후 PDF·DOCX 분리 제공 대상</dd></div>` : ""}
       <div><dt>검색어</dt><dd>${escapeHtml(item.query || item.title)}</dd></div>
     </dl>
     <div class="resource-preview-actions">
       ${item.url ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.actionLabel)}</a>` : ""}
-      ${item.searchUrl && item.searchUrl !== item.url ? `<a class="secondary" href="${escapeHtml(item.searchUrl)}" target="_blank" rel="noopener noreferrer">공식 도메인에서 다시 검색</a>` : ""}
     </div>
   `;
 }
