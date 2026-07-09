@@ -6,8 +6,8 @@
     root.GYO6_PUBLIC_RESOURCE_ACQUISITION = data;
   }
 })(typeof globalThis !== "undefined" ? globalThis : window, function createPublicResourceAcquisition() { return {
-  "version": "generated-2026-07-09T11-22-34-330Z",
-  "generatedAt": "2026-07-09T11:22:34.330Z",
+  "version": "generated-2026-07-09T18-14-41-527Z",
+  "generatedAt": "2026-07-09T18:14:41.527Z",
   "stats": {
     "existingResources": 28,
     "missions": 8,
@@ -188,7 +188,7 @@
       "qualityScore": 96,
       "includeInLibrary": true,
       "needsDirectUrl": false,
-      "generatedAt": "2026-07-09T11:22:34.330Z"
+      "generatedAt": "2026-07-09T18:14:41.527Z"
     },
     {
       "id": "mission-stafflabor-rule-law-go-kr-교원휴가에-관한-예규",
@@ -207,7 +207,7 @@
       "qualityScore": 96,
       "includeInLibrary": true,
       "needsDirectUrl": false,
-      "generatedAt": "2026-07-09T11:22:34.330Z"
+      "generatedAt": "2026-07-09T18:14:41.527Z"
     },
     {
       "id": "mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
@@ -226,18 +226,18 @@
       "qualityScore": 96,
       "includeInLibrary": true,
       "needsDirectUrl": false,
-      "generatedAt": "2026-07-09T11:22:34.330Z"
+      "generatedAt": "2026-07-09T18:14:41.527Z"
     },
     {
-      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
+      "id": "mission-studentlife-rule-law-go-kr-2025-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
-      "title": "2026 학교생활기록 작성 및 관리지침",
+      "title": "2025 학교생활기록 작성 및 관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2025 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "description": "교육부·국가법령정보센터 공식자료에서 2025 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "high",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
@@ -245,7 +245,7 @@
       "qualityScore": 96,
       "includeInLibrary": true,
       "needsDirectUrl": false,
-      "generatedAt": "2026-07-09T11:22:34.330Z"
+      "generatedAt": "2026-07-09T18:14:41.527Z"
     },
     {
       "id": "mission-general-law-law-go-kr-2025-초-중등교육법",
@@ -264,7 +264,7 @@
       "qualityScore": 88,
       "includeInLibrary": true,
       "needsDirectUrl": true,
-      "generatedAt": "2026-07-09T11:22:34.330Z"
+      "generatedAt": "2026-07-09T18:14:41.527Z"
     },
     {
       "id": "mission-general-law-law-go-kr-2026-초-중등교육법",
@@ -283,18 +283,18 @@
       "qualityScore": 88,
       "includeInLibrary": true,
       "needsDirectUrl": true,
-      "generatedAt": "2026-07-09T11:22:34.330Z"
+      "generatedAt": "2026-07-09T18:14:41.527Z"
     },
     {
-      "id": "mission-studentlife-rule-law-go-kr-2025-학교생활기록-작성-및-관리지침",
+      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
-      "title": "2025 학교생활기록 작성 및 관리지침",
+      "title": "2026 학교생활기록 작성 및 관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2025 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2025 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "high",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
@@ -302,7 +302,7 @@
       "qualityScore": 88,
       "includeInLibrary": true,
       "needsDirectUrl": true,
-      "generatedAt": "2026-07-09T11:22:34.330Z"
+      "generatedAt": "2026-07-09T18:14:41.527Z"
     }
   ]
 }; });
