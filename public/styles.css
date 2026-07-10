@@ -1122,6 +1122,12 @@ h1 {
   background: #f8fcfb;
 }
 
+.resource-keyword-panel--primary {
+  margin: 0 0 14px;
+  border-color: #b8dcd4;
+  background: #f3fbf9;
+}
+
 .resource-classify-panel > span,
 .resource-keyword-panel > span,
 .resource-classify-grid label > span,
@@ -1129,6 +1135,14 @@ h1 {
   color: var(--navy);
   font-size: 13px;
   font-weight: 900;
+}
+
+.resource-classify-panel small,
+.resource-keyword-panel small {
+  color: #4a6174;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
 }
 
 .resource-classify-grid,

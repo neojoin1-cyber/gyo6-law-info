@@ -87,11 +87,38 @@
           <strong data-resource-count="form">0</strong>
         </button>
       </div>
-      <details class="resource-advanced-filter" open>
-        <summary>분류와 단어로 세밀하게 찾기</summary>
+      <div class="resource-keyword-panel resource-keyword-panel--primary" aria-label="단어로 자료 검색">
+        <span>단어로 바로 찾기</span>
+        <small>필요한 단어를 1개 이상 넣으면 제목, 출처, 설명, 분류까지 함께 검색합니다.</small>
+        <div class="resource-keyword-grid">
+          <label class="resource-search" for="resourceSearch">
+            <span>단어 1</span>
+            <input id="resourceSearch" data-resource-keyword type="search" placeholder="예: 현장실습">
+          </label>
+          <label class="resource-search" for="resourceSearch2">
+            <span>단어 2</span>
+            <input id="resourceSearch2" data-resource-keyword type="search" placeholder="예: 표준협약서">
+          </label>
+          <label class="resource-search" for="resourceSearch3">
+            <span>단어 3</span>
+            <input id="resourceSearch3" data-resource-keyword type="search" placeholder="예: 안전">
+          </label>
+          <label class="resource-search" for="resourceSearch4">
+            <span>단어 4</span>
+            <input id="resourceSearch4" data-resource-keyword type="search" placeholder="예: 서식">
+          </label>
+          <div class="resource-search-actions">
+            <button type="button" id="resourceSearchButton">검색</button>
+            <button type="button" id="resourceResetButton">초기화</button>
+          </div>
+        </div>
+      </div>
+      <details class="resource-advanced-filter">
+        <summary>분류로 좁히기</summary>
         <div class="public-resource-controls">
           <div class="resource-classify-panel" aria-label="분류로 자료 찾기">
             <span>분류로 찾기</span>
+            <small>3·4단계 하위 분류를 고르면 자료유형과 상위 분류가 자동으로 맞춰집니다.</small>
             <div class="resource-classify-grid">
               <label for="resourceTypeSelect">
                 <span>1단계 자료유형</span>
@@ -109,31 +136,6 @@
                 <span>4단계 세부자료</span>
                 <select id="resourceLevel3Select"></select>
               </label>
-            </div>
-          </div>
-          <div class="resource-keyword-panel" aria-label="단어로 자료 검색">
-            <span>단어로 검색</span>
-            <div class="resource-keyword-grid">
-              <label class="resource-search" for="resourceSearch">
-                <span>단어 1</span>
-                <input id="resourceSearch" data-resource-keyword type="search" placeholder="예: 현장실습">
-              </label>
-              <label class="resource-search" for="resourceSearch2">
-                <span>단어 2</span>
-                <input id="resourceSearch2" data-resource-keyword type="search" placeholder="예: 표준협약서">
-              </label>
-              <label class="resource-search" for="resourceSearch3">
-                <span>단어 3</span>
-                <input id="resourceSearch3" data-resource-keyword type="search" placeholder="예: 안전">
-              </label>
-              <label class="resource-search" for="resourceSearch4">
-                <span>단어 4</span>
-                <input id="resourceSearch4" data-resource-keyword type="search" placeholder="예: 서식">
-              </label>
-              <div class="resource-search-actions">
-                <button type="button" id="resourceSearchButton">검색</button>
-                <button type="button" id="resourceResetButton">초기화</button>
-              </div>
             </div>
           </div>
         </div>

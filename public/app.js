@@ -2658,16 +2658,30 @@ function initializePublicResourceLibrary() {
   });
 
   resourceLevel2Select?.addEventListener("change", () => {
-    publicResourceState.level2 = resourceLevel2Select.value || "all";
-    publicResourceState.level3 = "all";
+    const selectedLevel2 = resourceLevel2Select.value || "all";
+    if (selectedLevel2 === "all") {
+      publicResourceState.level2 = "all";
+      publicResourceState.level3 = "all";
+    } else {
+      applyPublicResourceHierarchySelection({ level2: selectedLevel2 });
+    }
     publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
     updatePublicResourceHierarchyControls();
     renderPublicResourceLibrary();
   });
 
   resourceLevel3Select?.addEventListener("change", () => {
-    publicResourceState.level3 = resourceLevel3Select.value || "all";
+    const selectedLevel3 = resourceLevel3Select.value || "all";
+    if (selectedLevel3 === "all") {
+      publicResourceState.level3 = "all";
+    } else {
+      applyPublicResourceHierarchySelection({
+        level2: publicResourceState.level2 !== "all" ? publicResourceState.level2 : "",
+        level3: selectedLevel3
+      });
+    }
     publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+    updatePublicResourceHierarchyControls();
     renderPublicResourceLibrary();
   });
 
@@ -3012,6 +3026,83 @@ function applyPublicResourcePreset(preset = "all") {
   updatePublicResourceHierarchyControls();
   renderPublicResourceLibrary();
   document.querySelector("#resourceSummary")?.scrollIntoView?.({ behavior: "smooth", block: "nearest" });
+}
+
+function applyPublicResourceHierarchySelection({ level2 = "", level3 = "" } = {}) {
+  const selectedLevel2 = String(level2 || "").trim();
+  const selectedLevel3 = String(level3 || "").trim();
+  const match = findPublicResourceHierarchyMatch({ level2: selectedLevel2, level3: selectedLevel3 });
+  if (!match) {
+    publicResourceState.level2 = selectedLevel2 || "all";
+    publicResourceState.level3 = selectedLevel3 || "all";
+    return;
+  }
+
+  publicResourceState.filter = match.type || publicResourceState.filter || "all";
+  publicResourceState.category = normalizePublicResourceCategory(match.category, "all") || "all";
+  publicResourceState.level2 = match.hierarchy?.level2 || selectedLevel2 || "all";
+  publicResourceState.level3 = selectedLevel3 || "all";
+}
+
+function findPublicResourceHierarchyMatch({ level2 = "", level3 = "" } = {}) {
+  const selectedLevel2 = String(level2 || "").trim();
+  const selectedLevel3 = String(level3 || "").trim();
+  const candidates = publicResourceState.resources.filter((item) => {
+    if (selectedLevel2 && selectedLevel2 !== "all" && item.hierarchy?.level2 !== selectedLevel2) {
+      return false;
+    }
+    if (selectedLevel3 && selectedLevel3 !== "all" && item.hierarchy?.level3 !== selectedLevel3) {
+      return false;
+    }
+    return true;
+  });
+  if (!candidates.length) {
+    return null;
+  }
+
+  const scoped = candidates.filter((item) => {
+    if (publicResourceState.filter !== "all" && item.type !== publicResourceState.filter) {
+      return false;
+    }
+    if (publicResourceState.category !== "all" && item.category !== publicResourceState.category) {
+      return false;
+    }
+    if (!selectedLevel2 && publicResourceState.level2 !== "all" && item.hierarchy?.level2 !== publicResourceState.level2) {
+      return false;
+    }
+    return true;
+  });
+  const pool = scoped.length ? scoped : candidates;
+  return pool
+    .map((item) => ({
+      item,
+      score: scorePublicResourceHierarchyMatch(item)
+    }))
+    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title, "ko"))[0]?.item || null;
+}
+
+function scorePublicResourceHierarchyMatch(item = {}) {
+  let score = 0;
+  if (publicResourceState.filter !== "all" && item.type === publicResourceState.filter) {
+    score += 100;
+  }
+  if (publicResourceState.category !== "all" && item.category === publicResourceState.category) {
+    score += 80;
+  }
+  if (publicResourceState.level2 !== "all" && item.hierarchy?.level2 === publicResourceState.level2) {
+    score += 60;
+  }
+  if (item.linkKind === "file") {
+    score += 6;
+  }
+  if (item.extraction?.embeddedFormCandidate) {
+    score += 4;
+  }
+  const year = extractPublicResourceYear(item);
+  if (year) {
+    score += Math.min(year - 2000, 30);
+  }
+  return score;
 }
 
 function syncPublicResourcePresetButtons() {

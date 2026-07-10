@@ -42,6 +42,12 @@ try {
       hasLevel3Select: Boolean(document.querySelector("#resourceLevel3Select")),
       hasSearchButton: Boolean(document.querySelector("#resourceSearchButton")),
       hasResetButton: Boolean(document.querySelector("#resourceResetButton")),
+      advancedFilterOpen: Boolean(document.querySelector(".resource-advanced-filter")?.open),
+      keywordBeforeAdvanced: (() => {
+        const keywordPanel = document.querySelector(".resource-keyword-panel--primary");
+        const advancedFilter = document.querySelector(".resource-advanced-filter");
+        return Boolean(keywordPanel && advancedFilter && (keywordPanel.compareDocumentPosition(advancedFilter) & Node.DOCUMENT_POSITION_FOLLOWING));
+      })(),
       hasLibraryEntry: Boolean(document.querySelector(".library-entry")),
       hasQuickPaths: document.querySelectorAll("[data-resource-preset]").length,
       libraryBeforeCounsel: (() => {
@@ -123,11 +129,53 @@ try {
     };
   })()`);
 
+  const parentCascadeState = await evaluateJson(send, `(() => {
+    const setSelect = (selector, value) => {
+      const select = document.querySelector(selector);
+      if (!select) return false;
+      select.value = value;
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+      return select.value === value;
+    };
+    document.querySelector("#resourceResetButton")?.click();
+    setSelect("#resourceTypeSelect", "form");
+    setSelect("#resourceLevel1Select", "all");
+    const level3Option = [...document.querySelectorAll("#resourceLevel3Select option")]
+      .find((option) => option.value && option.value !== "all");
+    setSelect("#resourceLevel3Select", level3Option?.value || "all");
+    const afterLevel3 = {
+      type: document.querySelector("#resourceTypeSelect")?.value || "",
+      level1: document.querySelector("#resourceLevel1Select")?.value || "",
+      level2: document.querySelector("#resourceLevel2Select")?.value || "",
+      level3: document.querySelector("#resourceLevel3Select")?.value || "",
+      summary: document.querySelector("#resourceSummary")?.textContent?.trim() || "",
+      rows: document.querySelectorAll(".resource-row").length
+    };
+
+    document.querySelector("#resourceResetButton")?.click();
+    setSelect("#resourceTypeSelect", "all");
+    setSelect("#resourceLevel1Select", "all");
+    const level2Option = [...document.querySelectorAll("#resourceLevel2Select option")]
+      .find((option) => option.value && option.value !== "all");
+    setSelect("#resourceLevel2Select", level2Option?.value || "all");
+    const afterLevel2 = {
+      type: document.querySelector("#resourceTypeSelect")?.value || "",
+      level1: document.querySelector("#resourceLevel1Select")?.value || "",
+      level2: document.querySelector("#resourceLevel2Select")?.value || "",
+      level3: document.querySelector("#resourceLevel3Select")?.value || "",
+      summary: document.querySelector("#resourceSummary")?.textContent?.trim() || "",
+      rows: document.querySelectorAll(".resource-row").length
+    };
+    return { afterLevel3, afterLevel2 };
+  })()`);
+
   assert(allState.title.includes("자료실"), "자료실 제목을 찾지 못했습니다.");
   assert(allState.hasLibraryEntry && allState.hasQuickPaths >= 6, "자료실 우선 진입 UI가 없습니다.");
   assert(allState.libraryBeforeCounsel, "자료실이 상담실보다 위에 배치되어야 합니다.");
   assert(allState.hasTypeSelect && allState.hasLevel1Select && allState.hasLevel2Select && allState.hasLevel3Select, "4단계 분류 선택 상자가 없습니다.");
   assert(allState.hasSearchButton && allState.hasResetButton, "자료 검색/초기화 버튼이 없습니다.");
+  assert(allState.keywordBeforeAdvanced, "단어 검색이 고급 분류보다 먼저 노출되어야 합니다.");
+  assert(!allState.advancedFilterOpen, "고급 분류는 기본 화면에서 접혀 있어야 합니다.");
   assert(allState.typeOptions.includes("form"), "서식 유형 필터가 없습니다.");
   assert(allState.level1Options.includes("fieldTraining"), "현장실습·직업교육 분류가 없습니다.");
   assert(allState.level1Options.includes("schoolViolenceSafety"), "학교폭력·안전 분류가 없습니다.");
@@ -148,6 +196,10 @@ try {
       && !/\/법령\//.test(decoded);
   }), "교원휴가 예규가 행정규칙 원문으로 연결되지 않습니다.");
   assert([...fieldTrainingState.hrefs, ...violenceState.hrefs, ...adminRuleState.hrefs].every((href) => !/google\.com\/search/.test(href)), "구글 검색 대행 링크가 노출되었습니다.");
+  assert(parentCascadeState.afterLevel3.type === "form", "4단계 선택 후 자료유형이 유지되지 않았습니다.");
+  assert(parentCascadeState.afterLevel3.level1 !== "all" && parentCascadeState.afterLevel3.level2 !== "all", "4단계 선택 후 상위 대·중분류가 자동 지정되지 않았습니다.");
+  assert(parentCascadeState.afterLevel2.type !== "all" && parentCascadeState.afterLevel2.level1 !== "all", "3단계 선택 후 상위 자료유형·대분류가 자동 지정되지 않았습니다.");
+  assert(parentCascadeState.afterLevel3.rows > 0 && parentCascadeState.afterLevel2.rows > 0, "상위분류 자동 지정 후 자료 목록이 비어 있습니다.");
 
   console.log(JSON.stringify({
     ok: true,
@@ -157,6 +209,7 @@ try {
     fieldTrainingSummary: fieldTrainingState.summary,
     schoolViolenceSummary: violenceState.summary,
     adminRuleSummary: adminRuleState.summary,
+    parentCascade: parentCascadeState,
     directLinkOnly: true
   }, null, 2));
 } finally {

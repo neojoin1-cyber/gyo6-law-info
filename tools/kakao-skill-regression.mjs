@@ -582,6 +582,8 @@ assert.match(indexSource, /id="resourceSearchButton"/);
 assert.match(indexSource, /id="resourceResetButton"/);
 assert.match(indexSource, /public-resource-index-generated\.js\?v=20260709-resource-harvest-v4/);
 assert.match(appSource, /function initializePublicResourceLibrary/);
+assert.match(appSource, /function applyPublicResourceHierarchySelection/);
+assert.match(appSource, /function findPublicResourceHierarchyMatch/);
 assert.match(appSource, /GYO6_POLICY_CORPUS/);
 assert.match(appSource, /GYO6_POLICY_SOURCE_EXPANSION_GENERATED/);
 assert.match(appSource, /GYO6_PUBLIC_RESOURCE_INDEX/);
