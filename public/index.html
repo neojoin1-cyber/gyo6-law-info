@@ -37,7 +37,118 @@
       </div>
       <div class="legal-intro-steps" aria-label="사용 방법">
         <span>바로 이용</span>
-        <p>상담은 아래에서 방을 선택하고, 자료는 공개 자료실에서 확인합니다.</p>
+        <p>자료는 로그인 없이 먼저 찾고, 상담은 학생·선생님 방을 선택해 비공개로 남깁니다.</p>
+      </div>
+    </section>
+
+    <section class="library-entry" aria-labelledby="library-entry-title">
+      <div>
+        <p class="panel-kicker">Resource First</p>
+        <h2 id="library-entry-title">자료를 먼저 찾고, 필요할 때 상담으로 이어집니다.</h2>
+        <p>법률·규정·지침·서식은 로그인 없이 바로 확인하고, 개인 상황 판단이 필요하면 승인 회원 상담실에 글을 남겨 주세요.</p>
+      </div>
+      <div class="library-entry-actions" aria-label="자료실과 상담실 바로가기">
+        <a href="#publicResourceLibrary">자료 찾기</a>
+        <a href="#counselRoom">상담실 입장</a>
+      </div>
+    </section>
+
+    <section class="public-resource-library" id="publicResourceLibrary" aria-labelledby="public-resource-title">
+      <div class="public-resource-head">
+        <div>
+          <p class="panel-kicker">Open Library</p>
+          <h2 id="public-resource-title">로그인 없이 이용하는 자료실</h2>
+          <p>축적된 공식자료 인덱스를 법률, 규정, 지침, 서식으로 나누어 검색하고, 가능한 자료는 원문·파일·미리보기로 바로 연결합니다.</p>
+        </div>
+      </div>
+      <div class="resource-quick-paths" aria-label="자주 찾는 자료 묶음">
+        <button type="button" data-resource-preset="fieldTraining">
+          <span>현장실습</span>
+          <strong data-resource-category-count="fieldTraining">0</strong>
+        </button>
+        <button type="button" data-resource-preset="careerEmployment">
+          <span>취업·진로</span>
+          <strong data-resource-category-count="careerEmployment">0</strong>
+        </button>
+        <button type="button" data-resource-preset="schoolViolenceSafety">
+          <span>학교폭력·안전</span>
+          <strong data-resource-category-count="schoolViolenceSafety">0</strong>
+        </button>
+        <button type="button" data-resource-preset="studentLife">
+          <span>학생생활·학적</span>
+          <strong data-resource-category-count="studentLife">0</strong>
+        </button>
+        <button type="button" data-resource-preset="schoolAdmin">
+          <span>학교행정</span>
+          <strong data-resource-category-count="schoolAdmin">0</strong>
+        </button>
+        <button type="button" data-resource-preset="form">
+          <span>서식창고</span>
+          <strong data-resource-count="form">0</strong>
+        </button>
+      </div>
+      <details class="resource-advanced-filter" open>
+        <summary>분류와 단어로 세밀하게 찾기</summary>
+        <div class="public-resource-controls">
+          <div class="resource-classify-panel" aria-label="분류로 자료 찾기">
+            <span>분류로 찾기</span>
+            <div class="resource-classify-grid">
+              <label for="resourceTypeSelect">
+                <span>1단계 자료유형</span>
+                <select id="resourceTypeSelect"></select>
+              </label>
+              <label for="resourceLevel1Select">
+                <span>2단계 대분류</span>
+                <select id="resourceLevel1Select"></select>
+              </label>
+              <label for="resourceLevel2Select">
+                <span>3단계 중분류</span>
+                <select id="resourceLevel2Select"></select>
+              </label>
+              <label for="resourceLevel3Select">
+                <span>4단계 세부자료</span>
+                <select id="resourceLevel3Select"></select>
+              </label>
+            </div>
+          </div>
+          <div class="resource-keyword-panel" aria-label="단어로 자료 검색">
+            <span>단어로 검색</span>
+            <div class="resource-keyword-grid">
+              <label class="resource-search" for="resourceSearch">
+                <span>단어 1</span>
+                <input id="resourceSearch" data-resource-keyword type="search" placeholder="예: 현장실습">
+              </label>
+              <label class="resource-search" for="resourceSearch2">
+                <span>단어 2</span>
+                <input id="resourceSearch2" data-resource-keyword type="search" placeholder="예: 표준협약서">
+              </label>
+              <label class="resource-search" for="resourceSearch3">
+                <span>단어 3</span>
+                <input id="resourceSearch3" data-resource-keyword type="search" placeholder="예: 안전">
+              </label>
+              <label class="resource-search" for="resourceSearch4">
+                <span>단어 4</span>
+                <input id="resourceSearch4" data-resource-keyword type="search" placeholder="예: 서식">
+              </label>
+              <div class="resource-search-actions">
+                <button type="button" id="resourceSearchButton">검색</button>
+                <button type="button" id="resourceResetButton">초기화</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+      <div class="resource-summary" id="resourceSummary" aria-live="polite">자료 인덱스를 불러오는 중입니다.</div>
+      <div class="resource-browser" id="resourceBrowser">
+        <div class="resource-list-panel">
+          <div class="resource-list" id="resourceList" aria-live="polite"></div>
+          <button type="button" class="resource-more" id="resourceMoreButton" hidden>자료 더 보기</button>
+        </div>
+        <aside class="resource-preview" id="resourcePreview" tabindex="-1" aria-label="자료 미리보기">
+          <span class="resource-preview-kicker">Preview</span>
+          <h3>자료를 선택하세요</h3>
+          <p>왼쪽 목록에서 자료를 누르면 요약, 출처, 원문·파일 링크가 이곳에 나타납니다.</p>
+        </aside>
       </div>
     </section>
 
@@ -124,76 +235,6 @@
             <div id="counselCaseDetail" class="counsel-case-detail" aria-live="polite"></div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="public-resource-library" aria-labelledby="public-resource-title">
-      <div class="public-resource-head">
-        <div>
-          <p class="panel-kicker">Open Library</p>
-          <h2 id="public-resource-title">로그인 없이 이용하는 상담자료실</h2>
-          <p>축적된 공식자료 인덱스를 법률, 규정, 지침, 서식으로 나누어 검색하고, 가능한 자료는 원문·파일·미리보기로 바로 연결합니다.</p>
-        </div>
-      </div>
-      <div class="public-resource-controls">
-        <div class="resource-classify-panel" aria-label="분류로 자료 찾기">
-          <span>분류로 찾기</span>
-          <div class="resource-classify-grid">
-            <label for="resourceTypeSelect">
-              <span>1단계 자료유형</span>
-              <select id="resourceTypeSelect"></select>
-            </label>
-            <label for="resourceLevel1Select">
-              <span>2단계 대분류</span>
-              <select id="resourceLevel1Select"></select>
-            </label>
-            <label for="resourceLevel2Select">
-              <span>3단계 중분류</span>
-              <select id="resourceLevel2Select"></select>
-            </label>
-            <label for="resourceLevel3Select">
-              <span>4단계 세부자료</span>
-              <select id="resourceLevel3Select"></select>
-            </label>
-          </div>
-        </div>
-        <div class="resource-keyword-panel" aria-label="단어로 자료 검색">
-          <span>단어로 검색</span>
-          <div class="resource-keyword-grid">
-            <label class="resource-search" for="resourceSearch">
-              <span>단어 1</span>
-              <input id="resourceSearch" data-resource-keyword type="search" placeholder="예: 현장실습">
-            </label>
-            <label class="resource-search" for="resourceSearch2">
-              <span>단어 2</span>
-              <input id="resourceSearch2" data-resource-keyword type="search" placeholder="예: 표준협약서">
-            </label>
-            <label class="resource-search" for="resourceSearch3">
-              <span>단어 3</span>
-              <input id="resourceSearch3" data-resource-keyword type="search" placeholder="예: 안전">
-            </label>
-            <label class="resource-search" for="resourceSearch4">
-              <span>단어 4</span>
-              <input id="resourceSearch4" data-resource-keyword type="search" placeholder="예: 서식">
-            </label>
-            <div class="resource-search-actions">
-              <button type="button" id="resourceSearchButton">검색</button>
-              <button type="button" id="resourceResetButton">초기화</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="resource-summary" id="resourceSummary" aria-live="polite">자료 인덱스를 불러오는 중입니다.</div>
-      <div class="resource-browser" id="resourceBrowser">
-        <div class="resource-list-panel">
-          <div class="resource-list" id="resourceList" aria-live="polite"></div>
-          <button type="button" class="resource-more" id="resourceMoreButton" hidden>자료 더 보기</button>
-        </div>
-        <aside class="resource-preview" id="resourcePreview" tabindex="-1" aria-label="자료 미리보기">
-          <span class="resource-preview-kicker">Preview</span>
-          <h3>자료를 선택하세요</h3>
-          <p>왼쪽 목록에서 자료를 누르면 요약, 출처, 원문·파일 링크가 이곳에 나타납니다.</p>
-        </aside>
       </div>
     </section>
 

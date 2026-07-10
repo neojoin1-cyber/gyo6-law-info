@@ -565,7 +565,10 @@ assert.doesNotMatch(firebaseConfig, /apiKey:\s*["']/);
 assert.doesNotMatch(firebaseConfig, /AIza/);
 assert.match(firebaseConfig, /GYO6_AUTH_REQUIRED\s*=\s*true/);
 assert.match(indexSource, /설탕과소금 상담자료실/);
-assert.match(indexSource, /로그인 없이 이용하는 상담자료실/);
+assert.match(indexSource, /로그인 없이 이용하는 자료실/);
+assert.match(indexSource, /자료를 먼저 찾고, 필요할 때 상담으로 이어집니다/);
+assert.match(indexSource, /data-resource-preset="fieldTraining"/);
+assert.match(indexSource, /data-resource-preset="form"/);
 assert.match(indexSource, /public-resource-controls/);
 assert.match(indexSource, /resource-browser/);
 assert.match(indexSource, /id="resourceSearch"/);
@@ -609,8 +612,8 @@ assert.match(indexSource, /app\.js\?v=20260709-resource-harvest-v4/);
 assert.match(indexSource, /회원 전용 상담실/);
 assert.doesNotMatch(indexSource, /회원 전용 익명 상담실|익명 상담 등록|익명 상담 남기기/);
 assert.ok(
-  indexSource.indexOf('id="counselRoom"') < indexSource.indexOf('public-resource-library'),
-  "counsel room entry should stay above the public resource library"
+  indexSource.indexOf('id="publicResourceLibrary"') < indexSource.indexOf('id="counselRoom"'),
+  "public resource library should stay above the counsel room entry"
 );
 assert.match(indexSource, /상담자료 질문창/);
 assert.match(indexSource, /소속과 주체, 생활 업무영역을 먼저 고릅니다/);

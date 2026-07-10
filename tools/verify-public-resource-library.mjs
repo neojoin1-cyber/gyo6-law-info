@@ -42,6 +42,13 @@ try {
       hasLevel3Select: Boolean(document.querySelector("#resourceLevel3Select")),
       hasSearchButton: Boolean(document.querySelector("#resourceSearchButton")),
       hasResetButton: Boolean(document.querySelector("#resourceResetButton")),
+      hasLibraryEntry: Boolean(document.querySelector(".library-entry")),
+      hasQuickPaths: document.querySelectorAll("[data-resource-preset]").length,
+      libraryBeforeCounsel: (() => {
+        const library = document.querySelector("#publicResourceLibrary");
+        const counsel = document.querySelector("#counselRoom");
+        return Boolean(library && counsel && (library.compareDocumentPosition(counsel) & Node.DOCUMENT_POSITION_FOLLOWING));
+      })(),
       typeOptions: [...document.querySelectorAll("#resourceTypeSelect option")].map((option) => option.value),
       level1Options: [...document.querySelectorAll("#resourceLevel1Select option")].map((option) => option.value),
       summary: document.querySelector("#resourceSummary")?.textContent?.trim() || "",
@@ -116,7 +123,9 @@ try {
     };
   })()`);
 
-  assert(allState.title.includes("상담자료실"), "자료실 제목을 찾지 못했습니다.");
+  assert(allState.title.includes("자료실"), "자료실 제목을 찾지 못했습니다.");
+  assert(allState.hasLibraryEntry && allState.hasQuickPaths >= 6, "자료실 우선 진입 UI가 없습니다.");
+  assert(allState.libraryBeforeCounsel, "자료실이 상담실보다 위에 배치되어야 합니다.");
   assert(allState.hasTypeSelect && allState.hasLevel1Select && allState.hasLevel2Select && allState.hasLevel3Select, "4단계 분류 선택 상자가 없습니다.");
   assert(allState.hasSearchButton && allState.hasResetButton, "자료 검색/초기화 버튼이 없습니다.");
   assert(allState.typeOptions.includes("form"), "서식 유형 필터가 없습니다.");

@@ -61,6 +61,7 @@ const resourceListMount = document.querySelector("#resourceList");
 const resourcePreviewMount = document.querySelector("#resourcePreview");
 const resourceSummaryMount = document.querySelector("#resourceSummary");
 const resourceMoreButton = document.querySelector("#resourceMoreButton");
+const resourcePresetButtons = [...document.querySelectorAll("[data-resource-preset]")];
 const REPORT_LIBRARY_KEY = "gyo6LawInfoReportLibrary";
 const AI_USAGE_LEDGER_KEY = "gyo6LawInfoAiUsageLedger";
 const PENDING_LAW_QUESTION_KEY = "gyo6LawInfoPendingQuestion";
@@ -2707,6 +2708,12 @@ function initializePublicResourceLibrary() {
     renderPublicResourceLibrary();
   });
 
+  resourcePresetButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      applyPublicResourcePreset(button.dataset.resourcePreset || "all");
+    });
+  });
+
   resourceListMount.addEventListener("click", (event) => {
     const target = event.target instanceof Element ? event.target : null;
     if (!target || target.closest("[data-resource-open]")) {
@@ -2989,6 +2996,35 @@ function normalizePublicResource(item = {}) {
       ...(item.terms || [])
     ])
   };
+}
+
+function applyPublicResourcePreset(preset = "all") {
+  const resourceTypes = new Set(["law", "rule", "guide", "form"]);
+  publicResourceState.filter = resourceTypes.has(preset) ? preset : "all";
+  publicResourceState.category = resourceTypes.has(preset) ? "all" : normalizePublicResourceCategory(preset, "all");
+  publicResourceState.level2 = "all";
+  publicResourceState.level3 = "all";
+  publicResourceState.query = "";
+  publicResourceState.visible = PUBLIC_RESOURCE_PAGE_SIZE;
+  resourceKeywordInputs.forEach((input) => {
+    input.value = "";
+  });
+  updatePublicResourceHierarchyControls();
+  renderPublicResourceLibrary();
+  document.querySelector("#resourceSummary")?.scrollIntoView?.({ behavior: "smooth", block: "nearest" });
+}
+
+function syncPublicResourcePresetButtons() {
+  const resourceTypes = new Set(["law", "rule", "guide", "form"]);
+  resourcePresetButtons.forEach((button) => {
+    const preset = button.dataset.resourcePreset || "all";
+    const isTypePreset = resourceTypes.has(preset);
+    const active = isTypePreset
+      ? publicResourceState.filter === preset && publicResourceState.category === "all"
+      : publicResourceState.filter === "all" && publicResourceState.category === preset;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", active ? "true" : "false");
+  });
 }
 
 function normalizePublicResourceExtraction(extraction = null, item = {}) {
@@ -3318,6 +3354,7 @@ function renderPublicResourceLibrary() {
   }
 
   updatePublicResourceSummary(filtered);
+  syncPublicResourcePresetButtons();
 
   const visibleItems = filtered.slice(0, publicResourceState.visible);
   resourceListMount.innerHTML = visibleItems.length
