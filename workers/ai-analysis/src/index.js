@@ -57,6 +57,7 @@ const OWNER_ROLES = new Set(["owner"]);
 const MEMBER_ROLES = ["pending", "general", "jobs", "law", "teacher", "admin", "owner"];
 const MEMBER_STATUSES = ["pending", "approved", "suspended", "deleted"];
 const COUNSEL_ROOMS = new Set(["student", "teacher"]);
+const BOARD_ROOMS = new Set(["promotion", "collaboration", "qna"]);
 const CONSULTATION_STATUSES = new Set(["open", "answered", "closed"]);
 let firebaseJwkCache = null;
 
@@ -204,6 +205,30 @@ export default {
         return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
       }
 
+      if (url.pathname === "/api/boards") {
+        if (request.method === "GET") {
+          const authContext = await getOptionalAuthContext(request, env);
+          if (authContext?.error) {
+            return sendJson(authContext, authContext.status || 401, corsHeaders);
+          }
+
+          const result = await listBoardPosts(authContext, env, url);
+          return sendJson(result, getResultStatus(result), corsHeaders);
+        }
+
+        if (request.method === "POST") {
+          const authContext = await requireAuthContext(request, env);
+          if (authContext.error) {
+            return sendJson(authContext, authContext.status || 401, corsHeaders);
+          }
+
+          const result = await createBoardPost(authContext, await readJsonBody(request), env);
+          return sendJson(result, getResultStatus(result), corsHeaders);
+        }
+
+        return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+      }
+
       if (url.pathname === "/api/admin/members") {
         const adminContext = await requireAdminContext(request, env);
         if (adminContext.error) {
@@ -281,6 +306,20 @@ export default {
         }
 
         const result = await replyConsultation(adminContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/board/reply") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await replyBoardPost(adminContext, await readJsonBody(request), env);
         return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
@@ -3090,6 +3129,154 @@ async function replyConsultation(adminContext, body = {}, env) {
   };
 }
 
+async function createBoardPost(authContext, body = {}, env) {
+  const access = await assertApprovedMemberAccess(authContext, env);
+  if (!access.ok) {
+    return access;
+  }
+
+  await ensureConsultationTables(env);
+
+  const room = normalizeBoardRoom(body.room);
+  if (!room) {
+    return { error: "게시판을 선택해 주세요.", code: "BOARD_ROOM_REQUIRED", status: 400 };
+  }
+
+  if (room === "promotion" && !hasAdminAccess(authContext.member)) {
+    return { error: "홍보 게시판 작성은 관리자만 가능합니다.", code: "ADMIN_REQUIRED", status: 403 };
+  }
+
+  const title = truncateText(body.title, 120);
+  const content = truncateText(body.body, 4000);
+  if (!title || !content) {
+    return { error: "제목과 내용을 입력해 주세요.", code: "BOARD_POST_REQUIRED", status: 400 };
+  }
+
+  const now = new Date().toISOString();
+  const anonymousName = truncateText(body.anonymousName || getBoardRoomDefaultAuthor(room), 40);
+
+  const result = await env.MEMBER_DB.prepare(`
+    INSERT INTO consultations (
+      room, author_uid, author_email, author_name, anonymous_name, title, body,
+      status, created_at, updated_at
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, 'open', ?, ?)
+  `).bind(
+    room,
+    authContext.user.uid,
+    authContext.user.email || "",
+    authContext.member?.displayName || authContext.user.name || "",
+    anonymousName,
+    title,
+    content,
+    now,
+    now
+  ).run();
+
+  const id = result.meta?.last_row_id || result.meta?.lastRowId;
+  await writeAuditLog(env, {
+    actorUid: authContext.user.uid,
+    targetUid: String(id || ""),
+    action: "board.create",
+    detail: JSON.stringify({ room })
+  });
+
+  return {
+    ok: true,
+    post: await getBoardPostById(id, env, authContext)
+  };
+}
+
+async function listBoardPosts(authContext, env, url) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  await ensureConsultationTables(env);
+
+  const room = normalizeBoardRoom(url.searchParams.get("room"));
+  const keyword = truncateText(url.searchParams.get("q"), 80);
+  const rooms = room ? [room] : [...BOARD_ROOMS];
+  const placeholders = rooms.map(() => "?").join(", ");
+  const where = [`room IN (${placeholders})`];
+  const params = [...rooms];
+
+  if (keyword) {
+    where.push("(title LIKE ? OR body LIKE ?)");
+    params.push(`%${keyword}%`, `%${keyword}%`);
+  }
+
+  const query = `
+    SELECT id, room, author_uid, author_email, author_name, anonymous_name, title, body,
+           status, admin_reply, admin_uid, admin_replied_at, created_at, updated_at
+    FROM consultations
+    WHERE ${where.join(" AND ")}
+    ORDER BY updated_at DESC
+    LIMIT 200
+  `;
+  const result = await env.MEMBER_DB.prepare(query).bind(...params).all();
+
+  return {
+    ok: true,
+    posts: (result.results || []).map((row) => mapBoardPostRow(row, authContext))
+  };
+}
+
+async function replyBoardPost(adminContext, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "회원 DB가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  await ensureConsultationTables(env);
+
+  const id = Number(body.id);
+  if (!Number.isInteger(id) || id <= 0) {
+    return { error: "답변할 게시글 ID가 필요합니다.", code: "BOARD_POST_ID_REQUIRED", status: 400 };
+  }
+
+  const target = await env.MEMBER_DB.prepare(`
+    SELECT id, room
+    FROM consultations
+    WHERE id = ?
+  `).bind(id).first();
+  if (!target || !normalizeBoardRoom(target.room)) {
+    return { error: "게시판 글을 찾지 못했습니다.", code: "BOARD_POST_NOT_FOUND", status: 404 };
+  }
+
+  const reply = truncateText(body.reply, 5000);
+  if (!reply) {
+    return { error: "관리자 답변 내용을 입력해 주세요.", code: "REPLY_REQUIRED", status: 400 };
+  }
+
+  const status = normalizeConsultationStatus(body.status || "answered");
+  const now = new Date().toISOString();
+  await env.MEMBER_DB.prepare(`
+    UPDATE consultations
+    SET admin_reply = ?, admin_uid = ?, admin_replied_at = ?, status = ?, updated_at = ?
+    WHERE id = ?
+  `).bind(reply, adminContext.user.uid, now, status, now, id).run();
+
+  await writeAuditLog(env, {
+    actorUid: adminContext.user.uid,
+    targetUid: String(id),
+    action: "board.reply",
+    detail: JSON.stringify({ status })
+  });
+
+  return {
+    ok: true,
+    post: await getBoardPostById(id, env, adminContext)
+  };
+}
+
 async function assertApprovedMemberAccess(authContext, env) {
   if (!env.MEMBER_DB) {
     return {
@@ -3162,6 +3349,21 @@ async function getConsultationById(id, env, includeAuthor = false) {
   return row ? mapConsultationRow(row, includeAuthor) : null;
 }
 
+async function getBoardPostById(id, env, authContext = null) {
+  if (!id || !env.MEMBER_DB) {
+    return null;
+  }
+
+  const row = await env.MEMBER_DB.prepare(`
+    SELECT id, room, author_uid, author_email, author_name, anonymous_name, title, body,
+           status, admin_reply, admin_uid, admin_replied_at, created_at, updated_at
+    FROM consultations
+    WHERE id = ?
+  `).bind(id).first();
+
+  return row && normalizeBoardRoom(row.room) ? mapBoardPostRow(row, authContext) : null;
+}
+
 function mapConsultationRow(row, includeAuthor = false) {
   const item = {
     id: row.id,
@@ -3190,9 +3392,67 @@ function mapConsultationRow(row, includeAuthor = false) {
   return item;
 }
 
+function mapBoardPostRow(row, authContext = null) {
+  const room = normalizeBoardRoom(row.room) || "qna";
+  const canViewPrivate = canViewBoardPrivate(row, authContext);
+  const item = {
+    id: row.id,
+    room,
+    title: row.title || "",
+    status: normalizeConsultationStatus(row.status || "open"),
+    createdAt: row.created_at || "",
+    updatedAt: row.updated_at || "",
+    canViewBody: canViewPrivate,
+    author: {
+      anonymousName: row.anonymous_name || getBoardRoomDefaultAuthor(room)
+    }
+  };
+
+  if (canViewPrivate) {
+    item.body = row.body || "";
+    item.adminReply = row.admin_reply || "";
+    item.adminRepliedAt = row.admin_replied_at || "";
+  }
+
+  if (hasAdminAccess(authContext?.member)) {
+    item.author = {
+      uid: row.author_uid || "",
+      email: row.author_email || "",
+      name: row.author_name || "",
+      anonymousName: row.anonymous_name || getBoardRoomDefaultAuthor(room)
+    };
+  }
+
+  return item;
+}
+
+function canViewBoardPrivate(row, authContext = null) {
+  if (normalizeBoardRoom(row.room) === "promotion") {
+    return true;
+  }
+  if (!authContext || authContext.error) {
+    return false;
+  }
+  if (hasAdminAccess(authContext.member)) {
+    return true;
+  }
+  return Boolean(authContext.user?.uid && authContext.user.uid === row.author_uid);
+}
+
 function normalizeCounselRoom(value) {
   const room = cleanText(value);
   return COUNSEL_ROOMS.has(room) ? room : "";
+}
+
+function normalizeBoardRoom(value) {
+  const room = cleanText(value);
+  return BOARD_ROOMS.has(room) ? room : "";
+}
+
+function getBoardRoomDefaultAuthor(room) {
+  if (room === "promotion") return "설탕과소금";
+  if (room === "collaboration") return "협업 문의";
+  return "질문 작성자";
 }
 
 function normalizeConsultationStatus(value) {
