@@ -54,11 +54,228 @@ const APPROVED_MEMBER_STATUSES = new Set(["approved"]);
 const LAW_ACCESS_ROLES = new Set(["admin", "owner"]);
 const ADMIN_ROLES = new Set(["admin", "owner"]);
 const OWNER_ROLES = new Set(["owner"]);
-const MEMBER_ROLES = ["pending", "general", "jobs", "law", "teacher", "admin", "owner"];
+const EBOOK_STUDENT_ROLES = new Set(["student", "teacher", "school_admin_teacher", "admin", "owner"]);
+const EBOOK_TEACHER_ROLES = new Set(["teacher", "school_admin_teacher", "admin", "owner"]);
+const MEMBER_ROLES = ["pending", "general", "jobs", "law", "student", "teacher", "school_admin_teacher", "admin", "owner"];
 const MEMBER_STATUSES = ["pending", "approved", "suspended", "deleted"];
 const COUNSEL_ROOMS = new Set(["student", "teacher"]);
 const BOARD_ROOMS = new Set(["promotion", "collaboration", "qna"]);
 const CONSULTATION_STATUSES = new Set(["open", "answered", "closed"]);
+const EBOOK_CATALOG = [
+  {
+    ebookId: "fb-service-l3-2026-ext",
+    subject: "식음료서비스",
+    title: "식음료서비스 외부평가 전자책",
+    level: "L3",
+    year: "2026",
+    status: "sample",
+    lessons: [
+      {
+        lessonId: "fb.c01.l01",
+        lessonTitle: "식음료 영업 준비 1차시",
+        unitTitle: "영업 전 점검",
+        estimatedMinutes: 50
+      }
+    ]
+  }
+];
+const FB_SERVICE_C01_STUDENT_LESSON = {
+  schemaVersion: "gyo6-ebook-v1",
+  audience: "student",
+  ebookId: "fb-service-l3-2026-ext",
+  sourceBookId: "FB_SERVICE_L3_2026_EXT",
+  subject: "식음료서비스",
+  lessonId: "fb.c01.l01",
+  lessonTitle: "식음료 영업 준비 1차시",
+  unitTitle: "영업 전 점검",
+  estimatedMinutes: 50,
+  policy: {
+    teacherNoteIncluded: false,
+    teacherGuideIncluded: false,
+    answerVisibility: "after_attempt_or_review_mode"
+  },
+  steps: [
+    {
+      stepId: "fb.c01.l01.s01",
+      title: "도입",
+      phase: "intro",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s01.b01", type: "headline", html: "손님이 문을 열고 들어오기 전, 매장은 이미 평가받기 시작합니다." },
+        { blockId: "fb.c01.l01.s01.b02", type: "activity_prompt", html: "좋은 첫인상을 만드는 요소를 조명, 온도, 위생, 안전, 비품 관점에서 떠올려 봅니다." }
+      ],
+      questions: [],
+      studentExplanations: []
+    },
+    {
+      stepId: "fb.c01.l01.s02",
+      title: "핵심 개념",
+      phase: "concept",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s02.b01", type: "concept", html: "영업 전 점검은 고객 입장 전에 물리적 환경, 위생 상태, 안전 상태, 비품 재고를 체계적으로 확인하는 과정입니다." },
+        { blockId: "fb.c01.l01.s02.b02", type: "mnemonic", html: "조·냉·위·안·비 = 조명, 냉난방, 위생, 안전, 비품" }
+      ],
+      questions: [],
+      studentExplanations: []
+    },
+    {
+      stepId: "fb.c01.l01.s03",
+      title: "온도 기준 확인",
+      phase: "question",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s03.b01", type: "prompt", html: "여름과 겨울의 실내 적정 온도를 다르게 맞춰야 한다면 각각 몇 도 정도일까요?" }
+      ],
+      questions: [
+        {
+          questionId: "fb.c01.q001",
+          type: "short_answer",
+          promptHtml: "여름과 겨울의 실내 적정 온도 기준을 쓰세요.",
+          answerPolicy: "after_attempt",
+          expectedAnswerHtml: "여름 26°C 내외, 겨울 20°C 내외",
+          studentExplanationHtml: "계절별로 적정 온도를 다르게 유지합니다. 시험에서는 여름과 겨울 수치를 뒤바꾼 보기가 자주 나옵니다."
+        }
+      ],
+      studentExplanations: [
+        { blockId: "fb.c01.l01.s03.e01", showAfter: "attempt", html: "일반 기준은 여름 26°C 내외, 겨울 20°C 내외입니다." }
+      ]
+    },
+    {
+      stepId: "fb.c01.l01.s04",
+      title: "현장 판단",
+      phase: "question",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s04.b01", type: "prompt", html: "점검하다 불량 전구를 발견했습니다. 나중에 처리할까요, 즉시 교체 요청할까요?" }
+      ],
+      questions: [
+        {
+          questionId: "fb.c01.q002",
+          type: "oral_or_choice",
+          promptHtml: "불량 전구 발견 시 적절한 조치를 고르세요.",
+          options: ["영업 중 고객이 말하면 처리한다.", "나중에 시간이 남으면 처리한다.", "즉시 교체를 요청한다.", "조명을 끄고 영업한다."],
+          correctOptionIndex: 2,
+          answerPolicy: "after_attempt",
+          studentExplanationHtml: "영업 전 점검은 손님이 보기 전에 위험과 불편을 제거하는 과정입니다. 조명 불량은 분위기와 안전에 영향을 주므로 즉시 교체 요청이 맞습니다."
+        }
+      ],
+      studentExplanations: []
+    },
+    {
+      stepId: "fb.c01.l01.s05",
+      title: "정리",
+      phase: "summary",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s05.b01", type: "summary", html: "영업 전 점검 5대 영역: 조명, 냉난방, 위생, 안전, 비품" },
+        { blockId: "fb.c01.l01.s05.b02", type: "keyline", html: "핵심은 고객 입장 전 완료입니다." }
+      ],
+      questions: [
+        {
+          questionId: "fb.c01.q003",
+          type: "multiple_choice",
+          promptHtml: "다음 중 식음료 영업장의 영업 전 점검 항목으로 옳지 않은 것은?",
+          options: ["영업장 바닥과 창문의 청결 상태를 확인한다.", "비상구 표시등의 점등 여부를 매일 확인한다.", "테이블 위 냅킨·설탕·크리머 등 비품 재고를 점검한다.", "고객 주문을 받은 후 메뉴판을 영업장 입구에 비치한다."],
+          correctOptionIndex: 3,
+          answerPolicy: "after_attempt",
+          studentExplanationHtml: "영업 전 점검은 고객이 입장하기 전에 완료해야 하는 사전 준비 과정입니다. 고객 주문 후 처리하는 것은 영업 전 점검 항목이 아닙니다."
+        }
+      ],
+      studentExplanations: []
+    }
+  ],
+  assets: [
+    { assetId: "fb.c01.cover", sourcePath: "textbooks 또는 teacher-tools 파이프라인의 C01_0.jpg 계열 이미지", status: "owner_confirmation_needed" }
+  ]
+};
+const FB_SERVICE_C01_TEACHER_LESSON = {
+  ...FB_SERVICE_C01_STUDENT_LESSON,
+  audience: "teacher",
+  allowedRoles: ["owner", "admin", "school_admin_teacher", "teacher"],
+  steps: [
+    {
+      stepId: "fb.c01.l01.s01",
+      title: "도입",
+      phase: "intro",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s01.b01", type: "headline", html: "손님이 문을 열고 들어오기 전, 매장은 이미 평가받기 시작합니다." }
+      ],
+      teacherNotes: [
+        { noteId: "fb.c01.l01.s01.tn01", source: "A안 slides[].notes", html: "이 화면에서는 정답을 말하지 말고 ‘첫인상’이라는 키워드만 열어 둡니다." }
+      ],
+      teacherGuides: [
+        { guideId: "fb.c01.l01.s01.tg01", type: "teacher_talk", html: "손님이 들어오기 전 이미 평가가 시작된다는 관점으로 발문합니다." }
+      ]
+    },
+    {
+      stepId: "fb.c01.l01.s02",
+      title: "핵심 개념",
+      phase: "concept",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s02.b01", type: "concept", html: "영업 전 점검은 고객 입장 전에 물리적 환경, 위생 상태, 안전 상태, 비품 재고를 체계적으로 확인하는 과정입니다." }
+      ],
+      teacherNotes: [
+        { noteId: "fb.c01.l01.s02.tn01", source: "A안 slides[].notes", html: "학생들이 조·냉·위·안·비를 소리 내어 따라 말하게 합니다." }
+      ],
+      teacherGuides: [
+        { guideId: "fb.c01.l01.s02.tg01", type: "board", html: "조·냉·위·안·비를 칠판 또는 화면에 크게 남깁니다." }
+      ]
+    },
+    {
+      stepId: "fb.c01.l01.s03",
+      title: "온도 기준 확인",
+      phase: "question",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s03.b01", type: "prompt", html: "여름과 겨울의 실내 적정 온도를 다르게 맞춰야 한다면 각각 몇 도 정도일까요?" }
+      ],
+      questions: [
+        { questionId: "fb.c01.q001", type: "short_answer", promptHtml: "여름과 겨울의 실내 적정 온도 기준을 쓰세요.", expectedAnswerHtml: "여름 26°C 내외, 겨울 20°C 내외", studentExplanationHtml: "계절별로 적정 온도를 다르게 유지합니다." }
+      ],
+      teacherNotes: [
+        { noteId: "fb.c01.l01.s03.tn01", source: "A안 slides[].notes", html: "정답 공개 전에 10초 정도 기다립니다. 실제 응답은 손들기·구두 답변으로 충분합니다." }
+      ],
+      teacherGuides: [
+        { guideId: "fb.c01.l01.s03.tg01", type: "trap", html: "여름과 겨울 수치를 뒤바꾸는 함정 보기를 강조합니다." }
+      ]
+    },
+    {
+      stepId: "fb.c01.l01.s04",
+      title: "현장 판단",
+      phase: "question",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s04.b01", type: "prompt", html: "점검하다 불량 전구를 발견했습니다. 나중에 처리할까요, 즉시 교체 요청할까요?" }
+      ],
+      questions: [
+        { questionId: "fb.c01.q002", type: "oral_or_choice", expectedAnswerHtml: "즉시 교체 요청", studentExplanationHtml: "조명 불량은 분위기와 안전에 영향을 주므로 영업 전 즉시 처리해야 합니다." }
+      ],
+      teacherNotes: [
+        { noteId: "fb.c01.l01.s04.tn01", source: "A안 slides[].notes", html: "정답보다 이유 설명이 중요합니다." }
+      ],
+      teacherGuides: [
+        { guideId: "fb.c01.l01.s04.tg01", type: "teacher_talk", html: "‘작은 문제니까 나중에’가 왜 위험한지 안전과 고객 첫인상 관점으로 이어 설명합니다." }
+      ]
+    },
+    {
+      stepId: "fb.c01.l01.s05",
+      title: "정리와 평가",
+      phase: "summary_quiz",
+      studentBlocks: [
+        { blockId: "fb.c01.l01.s05.b01", type: "summary", html: "영업 전 점검 5대 영역: 조명, 냉난방, 위생, 안전, 비품" }
+      ],
+      questions: [
+        { questionId: "fb.c01.q003", type: "multiple_choice", promptHtml: "다음 중 식음료 영업장의 영업 전 점검 항목으로 옳지 않은 것은?", correctOptionIndex: 3, studentExplanationHtml: "고객 주문 후 처리하는 것은 영업 전 점검 항목이 아닙니다." }
+      ],
+      teacherNotes: [
+        { noteId: "fb.c01.l01.s05.tn01", source: "A안 slides[].notes", html: "학생에게 먼저 손가락으로 1~4번을 표시하게 한 뒤 정답을 공개합니다." }
+      ],
+      teacherGuides: [
+        { guideId: "fb.c01.l01.s05.tg01", type: "rubric", html: "평가 기준: 영업 전 점검 항목을 구분하고, 고객 입장 전 완료라는 핵심 조건을 설명할 수 있는지 확인합니다." },
+        { guideId: "fb.c01.l01.s05.tg02", type: "board", html: "판서: 조명, 냉난방, 위생, 안전, 비품 / 여름 26°C, 겨울 20°C / 고객 입장 전 완료" }
+      ]
+    }
+  ],
+  portalPolicy: {
+    studentApiMustExcludeTeacherFields: true,
+    cssHideIsNotSufficient: true,
+    teacherPersonalMemoStorage: "userId + ebookId + lessonId + stepId/blockId"
+  }
+};
 let firebaseJwkCache = null;
 
 export default {
@@ -227,6 +444,53 @@ export default {
         }
 
         return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+      }
+
+      if (url.pathname === "/api/ebooks") {
+        if (request.method !== "GET") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const authContext = await getOptionalAuthContext(request, env);
+        if (authContext?.error) {
+          return sendJson(authContext, authContext.status || 401, corsHeaders);
+        }
+
+        const result = listEbooks(authContext);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      const ebookLessonMatch = url.pathname.match(/^\/api\/ebooks\/([^/]+)\/lessons\/([^/]+)$/);
+      if (ebookLessonMatch) {
+        if (request.method !== "GET") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) {
+          return sendJson(authContext, authContext.status || 401, corsHeaders);
+        }
+
+        const result = getEbookLesson(authContext, {
+          ebookId: decodeURIComponent(ebookLessonMatch[1]),
+          lessonId: decodeURIComponent(ebookLessonMatch[2]),
+          mode: url.searchParams.get("mode") || "student"
+        });
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/progress") {
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) {
+          return sendJson(authContext, authContext.status || 401, corsHeaders);
+        }
+
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const result = await saveEbookProgress(authContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
       if (url.pathname === "/api/admin/members") {
@@ -3277,6 +3541,147 @@ async function replyBoardPost(adminContext, body = {}, env) {
   };
 }
 
+function listEbooks(authContext = null) {
+  const member = authContext?.member || null;
+  return {
+    ok: true,
+    ebooks: EBOOK_CATALOG.map((ebook) => ({
+      ...ebook,
+      access: {
+        canOpenStudent: canUseStudentEbook(member),
+        canOpenTeacher: canUseTeacherEbook(member)
+      }
+    }))
+  };
+}
+
+function getEbookLesson(authContext, options = {}) {
+  const ebookId = cleanText(options.ebookId);
+  const lessonId = cleanText(options.lessonId);
+  const mode = cleanText(options.mode || "student");
+  const member = authContext?.member || null;
+
+  if (ebookId !== "fb-service-l3-2026-ext" || lessonId !== "fb.c01.l01") {
+    return { error: "전자책 또는 차시를 찾지 못했습니다.", code: "EBOOK_LESSON_NOT_FOUND", status: 404 };
+  }
+
+  if (mode === "teacher") {
+    if (!canUseTeacherEbook(member)) {
+      return { error: "교사용 전자책은 승인된 교사 권한이 필요합니다.", code: "TEACHER_EBOOK_REQUIRED", status: 403 };
+    }
+    return {
+      ok: true,
+      mode: "teacher",
+      lesson: deepClone(FB_SERVICE_C01_TEACHER_LESSON)
+    };
+  }
+
+  if (!canUseStudentEbook(member)) {
+    return { error: "학생용 전자책은 승인 회원 권한이 필요합니다.", code: "STUDENT_EBOOK_REQUIRED", status: 403 };
+  }
+
+  return {
+    ok: true,
+    mode: "student",
+    lesson: buildStudentSafeLesson(FB_SERVICE_C01_STUDENT_LESSON)
+  };
+}
+
+async function saveEbookProgress(authContext, body = {}, env) {
+  const member = authContext?.member || null;
+  if (!canUseStudentEbook(member)) {
+    return { error: "전자책 진도 저장은 승인 회원만 가능합니다.", code: "STUDENT_EBOOK_REQUIRED", status: 403 };
+  }
+  if (!env.MEMBER_DB) {
+    return { error: "회원 DB가 아직 연결되지 않았습니다.", code: "MEMBER_DB_NOT_CONFIGURED", status: 503 };
+  }
+
+  await ensureEbookTables(env);
+
+  const ebookId = cleanText(body.ebookId);
+  const lessonId = cleanText(body.lessonId);
+  const stepId = cleanText(body.stepId);
+  const questionId = cleanText(body.questionId || "");
+  if (!ebookId || !lessonId || !stepId) {
+    return { error: "전자책, 차시, 단계 ID가 필요합니다.", code: "EBOOK_PROGRESS_REQUIRED", status: 400 };
+  }
+
+  const now = new Date().toISOString();
+  await env.MEMBER_DB.prepare(`
+    INSERT INTO ebook_progress (
+      user_uid, ebook_id, lesson_id, step_id, question_id, status, payload_json, updated_at
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(user_uid, ebook_id, lesson_id, step_id, question_id)
+    DO UPDATE SET status = excluded.status, payload_json = excluded.payload_json, updated_at = excluded.updated_at
+  `).bind(
+    authContext.user.uid,
+    ebookId,
+    lessonId,
+    stepId,
+    questionId,
+    cleanText(body.status || "completed"),
+    JSON.stringify(body.payload || {}),
+    now
+  ).run();
+
+  return { ok: true, updatedAt: now };
+}
+
+async function ensureEbookTables(env) {
+  if (!env.MEMBER_DB) return;
+  await env.MEMBER_DB.prepare(`
+    CREATE TABLE IF NOT EXISTS ebook_progress (
+      user_uid TEXT NOT NULL,
+      ebook_id TEXT NOT NULL,
+      lesson_id TEXT NOT NULL,
+      step_id TEXT NOT NULL,
+      question_id TEXT NOT NULL DEFAULT '',
+      status TEXT NOT NULL DEFAULT 'completed',
+      payload_json TEXT NOT NULL DEFAULT '{}',
+      updated_at TEXT NOT NULL,
+      PRIMARY KEY (user_uid, ebook_id, lesson_id, step_id, question_id)
+    )
+  `).run();
+}
+
+function buildStudentSafeLesson(lesson) {
+  const safeLesson = deepClone(lesson);
+  safeLesson.steps = (safeLesson.steps || []).map((step) => ({
+    ...step,
+    questions: (step.questions || []).map((question) => sanitizeStudentQuestion(question)),
+    studentExplanations: (step.studentExplanations || []).map((item) => ({
+      ...item,
+      lockedUntil: item.showAfter === "attempt" ? "attempt" : item.lockedUntil || ""
+    }))
+  }));
+  delete safeLesson.sourceFiles;
+  return safeLesson;
+}
+
+function sanitizeStudentQuestion(question) {
+  const safe = { ...question };
+  if (safe.answerPolicy === "after_attempt") {
+    safe.answerLockedUntil = "attempt";
+  }
+  delete safe.expectedAnswerHtml;
+  delete safe.correctOptionIndex;
+  delete safe.studentExplanationHtml;
+  return safe;
+}
+
+function canUseStudentEbook(member) {
+  return member?.status === "approved" && EBOOK_STUDENT_ROLES.has(member.role);
+}
+
+function canUseTeacherEbook(member) {
+  return member?.status === "approved" && EBOOK_TEACHER_ROLES.has(member.role);
+}
+
+function deepClone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
 async function assertApprovedMemberAccess(authContext, env) {
   if (!env.MEMBER_DB) {
     return {
@@ -3965,6 +4370,8 @@ function getMemberCapabilities(member) {
     canUsePublic: true,
     canUseJobs: approved && ["jobs", "law", "teacher", "admin", "owner"].includes(member.role),
     canUseLawInfo: approved && LAW_ACCESS_ROLES.has(member.role),
+    canUseEbooks: approved && EBOOK_STUDENT_ROLES.has(member.role),
+    canUseTeacherEbooks: approved && EBOOK_TEACHER_ROLES.has(member.role),
     canManageMembers: approved && ADMIN_ROLES.has(member.role),
     canGrantOwner: approved && OWNER_ROLES.has(member.role)
   };
