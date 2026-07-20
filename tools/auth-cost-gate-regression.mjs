@@ -98,6 +98,7 @@ assert.match(workerSource, /buildPolicyEngineFirstAnalyzeResult/);
 assert.match(workerSource, /policy-engine-first/);
 assert.match(workerSource, /url\.pathname === "\/api\/admin\/member\/kakao-approve"/);
 assert.match(workerSource, /approveKakaoMemberByAdmin/);
+assert.match(workerSource, /parseEmailList\(env\.ADDITIONAL_OWNER_EMAILS\)/);
 
 assert.match(wranglerSource, /KAKAO_GPT_ANSWER_ENABLED = "false"/);
 assert.match(wranglerSource, /KAKAO_GPT_ANSWER_MODE = "off"/);
@@ -107,6 +108,7 @@ assert.match(wranglerSource, /POLICY_GPT_NORMALIZER_ENABLED = "false"/);
 assert.match(wranglerSource, /POLICY_GPT_NORMALIZER_MODE = "off"/);
 assert.match(wranglerSource, /POLICY_GPT_ANSWER_ENABLED = "false"/);
 assert.match(wranglerSource, /POLICY_GPT_ANSWER_MODE = "off"/);
+assert.match(wranglerSource, /ADDITIONAL_OWNER_EMAILS = "admin@gyo6\.kr"/);
 
 const sharedApiSource = await readFile(new URL("../functions/shared/api.mjs", import.meta.url), "utf-8");
 assert.match(sharedApiSource, /LEGACY_ANALYZE_DISABLED/);

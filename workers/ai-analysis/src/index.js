@@ -4263,6 +4263,7 @@ async function getMemberByEmail(email, env) {
 
 function buildVirtualMember(user, env) {
   const ownerEmails = parseEmailList(env.OWNER_EMAILS);
+  parseEmailList(env.ADDITIONAL_OWNER_EMAILS).forEach((email) => ownerEmails.add(email));
   const adminEmails = parseEmailList(env.ADMIN_EMAILS);
   const email = cleanText(user.email || "").toLowerCase();
   const now = new Date().toISOString();
@@ -4277,7 +4278,7 @@ function buildVirtualMember(user, env) {
       requestedRole: "owner",
       role: "owner",
       status: "approved",
-      note: "OWNER_EMAILS 환경값으로 자동 총괄관리자 처리",
+      note: "총괄관리자 이메일 환경값으로 자동 승인",
       createdAt: now,
       updatedAt: now,
       approvedAt: now,

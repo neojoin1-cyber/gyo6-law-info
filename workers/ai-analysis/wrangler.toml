@@ -40,6 +40,7 @@ POLICY_ANSWER_FALLBACK_MODEL = "gpt-5.4-mini"
 FIREBASE_PROJECT_ID = "gyo6-law-info"
 FIREBASE_TRUSTED_PROJECT_IDS = "gyo6-law-info,gyo6--ebook"
 AUTH_REQUIRED = "true"
+ADDITIONAL_OWNER_EMAILS = "admin@gyo6.kr"
 ALLOWED_ORIGINS = "https://gyo6.kr,https://www.gyo6.kr,https://gyo6-law-info.web.app,http://localhost:5173,http://127.0.0.1:5173"
 
 [[d1_databases]]
