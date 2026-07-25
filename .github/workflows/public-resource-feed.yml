@@ -60,7 +60,8 @@ jobs:
             public/public-resource-index-generated.js \
             functions/public/policy-source-expansion-generated.js \
             functions/public/public-resource-acquisition-generated.js \
-            functions/public/public-resource-index-generated.js
+            functions/public/public-resource-index-generated.js \
+            functions/public/public-resource-form-vault-generated.js
           if git diff --cached --quiet; then
             echo "No public resource changes to commit."
             exit 0
