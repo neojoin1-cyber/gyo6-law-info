@@ -42,6 +42,7 @@ jobs:
       - name: Build and verify employment form vault
         run: |
           npm run career-forms:build
+          npm run forms:enrich-files
           npm run career-forms:verify
 
       - name: Run resource regression gate

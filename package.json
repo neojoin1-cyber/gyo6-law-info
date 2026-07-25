@@ -24,6 +24,7 @@
     "policy:resources:scheduled": "npm run policy:quality:sources && npm run policy:resources:autopilot && npm run policy:resources:verify",
     "career-forms:build": "node tools/build-public-resource-form-vault.mjs && node tools/build-career-employment-form-vault.mjs",
     "career-forms:verify": "node tools/verify-career-employment-form-vault.mjs",
+    "forms:enrich-files": "node tools/enrich-public-resource-form-files.mjs",
     "policy:quality:schedule": "node tools/policy-quality-scheduler.mjs status",
     "policy:quality:install-schedule": "node tools/policy-quality-scheduler.mjs install",
     "policy:classification-audit": "node tools/policy-classification-audit.mjs",

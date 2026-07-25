@@ -13,6 +13,21 @@ try {
 } catch {
   // The public library can be built before an optional extraction queue exists.
 }
+let previousVault = { entries: [] };
+try {
+  previousVault = require(path.join(rootDir, "public", "public-resource-form-vault-generated.js"));
+} catch {
+  // The first build has no prior file verification metadata to preserve.
+}
+const verifiedFormatByUrl = new Map(
+  (previousVault.entries || [])
+    .filter((entry) => entry.verifiedFile && entry.sourceUrl && entry.format)
+    .map((entry) => [entry.sourceUrl, {
+      format: entry.format,
+      fileName: entry.fileName || "",
+      verifiedFile: true
+    }])
+);
 const generatedAt = new Date();
 const runId = generatedAt.toISOString().replace(/[:.]/g, "-");
 
@@ -44,7 +59,8 @@ function buildFormVault() {
 }
 
 function normalizeReadyForm(resource = {}) {
-  const format = detectFormat(resource.url, resource);
+  const verified = verifiedFormatByUrl.get(resource.url) || null;
+  const format = detectFormat(resource.url, resource) || verified?.format || "";
   const editable = EDITABLE_FORMATS.has(format);
   const pdfPreview = format === "pdf";
   const artifactId = stableId(resource.id || resource.title || resource.url);
@@ -60,6 +76,8 @@ function normalizeReadyForm(resource = {}) {
     hierarchy: resource.hierarchy || null,
     description: resource.description || resource.query || "공식 서식 파일",
     format: format || "file",
+    fileName: verified?.fileName || "",
+    verifiedFile: Boolean(verified),
     sourceUrl: resource.url,
     downloadUrl: resource.url,
     previewUrl: pdfPreview ? resource.url : "",
