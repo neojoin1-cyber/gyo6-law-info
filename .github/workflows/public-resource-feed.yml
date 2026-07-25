@@ -39,6 +39,11 @@ jobs:
       - name: Refresh public resource library
         run: npm run policy:resources:scheduled
 
+      - name: Build and verify employment form vault
+        run: |
+          npm run career-forms:build
+          npm run career-forms:verify
+
       - name: Run resource regression gate
         run: npm run test:kakao-skill
 
@@ -51,6 +56,7 @@ jobs:
           git add \
             public/policy-source-expansion-generated.js \
             public/public-resource-acquisition-generated.js \
+            public/public-resource-form-vault-generated.js \
             public/public-resource-index-generated.js \
             functions/public/policy-source-expansion-generated.js \
             functions/public/public-resource-acquisition-generated.js \

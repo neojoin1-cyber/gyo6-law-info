@@ -22,6 +22,8 @@
     "policy:resources:autopilot": "node tools/public-resource-autopilot.mjs && node tools/build-public-resource-index.mjs",
     "policy:resources:verify": "node tools/verify-public-resource-artifacts.mjs",
     "policy:resources:scheduled": "npm run policy:quality:sources && npm run policy:resources:autopilot && npm run policy:resources:verify",
+    "career-forms:build": "node tools/build-public-resource-form-vault.mjs && node tools/build-career-employment-form-vault.mjs",
+    "career-forms:verify": "node tools/verify-career-employment-form-vault.mjs",
     "policy:quality:schedule": "node tools/policy-quality-scheduler.mjs status",
     "policy:quality:install-schedule": "node tools/policy-quality-scheduler.mjs install",
     "policy:classification-audit": "node tools/policy-classification-audit.mjs",
