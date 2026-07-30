@@ -25,7 +25,7 @@ const resourcesByCategory = index.resources.reduce((acc, resource) => {
 }, {});
 
 assert((resourcesByCategory.fieldTraining || 0) >= 80, "index: vocational field-training resources regressed below treasure-library baseline");
-assert((resourcesByCategory.careerEmployment || 0) >= 10, "index: career/employment resources regressed below treasure-library baseline");
+assert((resourcesByCategory.careerEmployment || 0) >= 28, "index: career/employment resources regressed below official-guidance baseline");
 assert((resourcesByCategory.studentLife || 0) >= 300, "index: student-life resources regressed below treasure-library baseline");
 assert((resourcesByCategory.schoolAdmin || 0) >= 160, "index: school administration resources regressed below treasure-library baseline");
 assert((resourcesByCategory.schoolViolenceSafety || 0) >= 150, "index: school violence/safety resources regressed below treasure-library baseline");
@@ -64,6 +64,15 @@ assert(index.resources.filter((resource) => /충청북도교육청|충북교육�
 assert(index.resources.filter((resource) => /학교지원종합자료실|edupia|gbe\.kr/i.test(`${resource.provider} ${resource.url} ${resource.title}`)).length >= 900, "index: GBE Edupia official form resources regressed below treasure-library baseline");
 assert(/직업계고.*현장실습.*공통.*매뉴얼/.test(importantResourceText), "index: missing vocational field-training common manuals");
 assert(/서식모음집|공통매뉴얼.*한글|표준협약서/.test(importantResourceText), "index: missing vocational editable/form resources");
+const careerResources = index.resources.filter((resource) => resource.category === "careerEmployment");
+const careerProviderText = careerResources.map((resource) => `${resource.provider} ${resource.url}`).join("\n");
+assert(/교육부|교육청/.test(careerProviderText), "index: missing ministry/education-office career guidance");
+assert(/고용24|한국고용정보원|keis\.or\.kr|work24\.go\.kr/i.test(careerProviderText), "index: missing employment-agency career guidance");
+assert(/한국직업능력연구원|krivet\.re\.kr/i.test(careerProviderText), "index: missing vocational research institute guidance");
+assert(/대한상공회의소|korcham\.net/i.test(careerProviderText), "index: missing KCCI employment/qualification guidance");
+assert(!careerResources.some((resource) => /계약제교원|기간제교사|교육공무직|교원\s*채용|직원\s*채용|강사\s*채용|채용\s*시험|휴직|복직/.test(`${resource.title} ${resource.description}`)), "index: staff hiring material leaked into student career guidance");
+assert(!careerResources.some((resource) => /조기취업형\s*계약학과|선도대학\s*육성사업/.test(`${resource.title} ${resource.description}`)), "index: university-only material leaked into vocational high-school guidance");
+assert(!index.resources.some((resource) => /reg_name|^특성화고·마이스터고 포털\(교육부\)\s*-/.test(resource.title)), "index: malformed source title leaked into public library");
 assert(/학교생활기록작성및관리지침|학교생활기록부기재요령/.test(importantResourceText), "index: missing school record rule/guide");
 assert(/교원휴가에관한예규/.test(importantResourceText), "index: missing teacher leave administrative rule");
 assert(!/법령\/[^"'\n]*교원휴가/.test(importantResourceText), "index: teacher leave rule must not use /법령/ path");

@@ -178,7 +178,25 @@ function buildCuratedResources() {
     searchResource("현장실습 표준협약서", "교육부·하이파이브", "form", "현장실습 표준협약서 서식", "hifive.go.kr"),
     searchResource("순회지도·상담 기록 서식", "교육부·시도교육청", "form", "현장실습 순회지도 상담 기록 서식", "hifive.go.kr"),
     searchResource("학교폭력 사안처리 가이드북", "교육부·시도교육청", "guide", "학교폭력 사안처리 가이드북 PDF", "moe.go.kr"),
-    searchResource("학교안전사고 보고·점검 서식", "교육부·학교안전공제중앙회", "form", "학교 안전사고 보고 점검 서식", "schoolsafe.or.kr")
+    searchResource("학교안전사고 보고·점검 서식", "교육부·학교안전공제중앙회", "form", "학교 안전사고 보고 점검 서식", "schoolsafe.or.kr"),
+    careerGuide("서울교육청 직업계고 취업 정책 안내", "서울특별시교육청 취업지원센터", "고졸채용기업·고졸청년 지원정책과 취업지원 제도 자료", "https://high-job.sen.go.kr/FUS/BO/E1List.do"),
+    careerGuide("서울교육청 직업계고 현장실습 자료실", "서울특별시교육청 취업지원센터", "현장실습 운영 매뉴얼, 지원금, 노동인권, 산업안전 자료", "https://high-job.sen.go.kr/FUS/BO/E2List.do"),
+    careerGuide("경기교육청 취창업지원센터 일반자료실", "경기도교육청 취창업지원센터", "직업계고 취업지원, 현장실습, 학생·기업 지원 공식자료", "https://more.goe.go.kr/gajago/subList/20000000914"),
+    careerGuide("경기교육청 현장실습 선도기업 인정 절차", "경기도교육청 취창업지원센터", "참여기업 발굴부터 현장실사와 선도기업 승인까지의 운영 절차", "https://more.goe.go.kr/gajago/subList/30300001926"),
+    careerGuide("경기교육청 직업계고 구인의뢰 운영 안내", "경기도교육청 취창업지원센터", "기업 구인의뢰를 직업계고 취업담당자에게 연결하는 공식 절차", "https://more.goe.go.kr/gajago/subList/30300001816"),
+    careerGuide("직업계고 채용연계형 직무교육과정 지원", "교육부", "직업계고 졸업예정자 대상 맞춤형 직무교육과 채용연계 정책", "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=91657&lev=0"),
+    careerGuide("직업계고 졸업자 취업통계 조사 운영", "교육부·한국교육개발원", "직업계고 취업 통계와 학교 취업지원 정책 수립의 공식 기초자료", "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=82760&lev=0&m=020402&opType=N&s=moe&statusYN=W"),
+    careerGuide("고졸 청년층 취업지원 프로그램 HI+", "고용노동부·고용24", "고교 재학생과 졸업예정자의 직업선택·취업준비 프로그램", "https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?currentPageNo=1&recordCountPerPage=10&systClId=SC00000188&systId=SI00000321&upprSystClId=SC00000187"),
+    careerGuide("고교생 맞춤형 고용서비스", "고용노동부·고용24", "진로탐색, 취업활동계획, 직업훈련과 일경험을 연계하는 고교생 지원제도", "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000373"),
+    careerGuide("직무별 자기소개서 작성 가이드", "고용노동부·고용24", "직무별 자기소개서와 취업서류 지도를 위한 공식 가이드", "https://www.work24.go.kr/wk/r/d/1150/retrieveSelfintroWriteGuideViewList.do?currentPageNo=1&pageIndex=1&recordCountPerPage=10"),
+    careerGuide("취업지원 서비스 제공을 위한 취업상담 매뉴얼", "한국고용정보원", "취업상담 절차, 상담 기술, 기록 관리와 관련 양식 수록", "https://www.keis.or.kr/keis/ko/proj/114/pblc/detail.do?categoryIdx=125&pubIdx=6712"),
+    careerGuide("고졸청년층 취업지원프로그램 개발 연구", "한국고용정보원", "고졸 청년 취업지원 프로그램의 구성과 학교 현장 활용 근거", "https://www.keis.or.kr/keis/ko/proj/113/pblc/detail.do?categoryIdx=131&pubIdx=1634"),
+    careerGuide("직업계고 취업지원관 업무 매뉴얼", "한국직업능력연구원", "취업지원센터 운영 준거와 취업지원관 표준 업무 매뉴얼", "https://www.krivet.re.kr/kor/sub.do?menuSn=12&pstNo=E120210135"),
+    careerGuide("직업계고 중앙취업지원센터 설립·운영 방안", "한국직업능력연구원", "정부·교육청·학교의 취업지원 역할과 운영체계 연구", "https://www.krivet.re.kr/kor/sub.do?menuSn=12&pstNo=E120190316"),
+    careerGuide("직업계고 학생 취업지원 만족도와 취업성과", "한국직업능력연구원", "취업지원 프로그램 품질과 취업성과의 관계를 분석한 공식 연구", "https://www.krivet.re.kr/kor/sub.do?menuSn=12&pstNo=G620230004-2"),
+    careerGuide("대한상공회의소 국가기술자격 시험·출제자료", "대한상공회의소 자격평가사업단", "컴퓨터활용능력·전산회계운용사 등 직업계고 취업 연계 자격자료", "https://license.korcham.net/co/examguide02.do?cd=&mm=21"),
+    careerGuide("컴퓨터활용능력 자격·채용 우대 안내", "대한상공회의소 자격평가사업단", "응시기준, 시험과목, 공공기관·기업 채용 우대 정보", "https://license.korcham.net/co/examguide.do?mm=202&cd=0103"),
+    careerGuide("대한상공회의소 직업훈련·특성화고 지원사업", "대한상공회의소", "직업훈련과 교육부 특성화고 지원사업 운영 정보", "https://www.korcham.net/nCham/Service/Kcci/appl/Govbusiness.asp")
   ].map(normalizeResource);
 }
 
@@ -200,6 +218,19 @@ function rule(title, provider, description, url) {
 
 function guide(title, provider, description, url) {
   return { id: `curated:guide:${stableId(title)}`, type: "guide", title, provider, description, query: title, url };
+}
+
+function careerGuide(title, provider, description, url) {
+  return {
+    id: `curated:career-guide:${stableId(title)}`,
+    type: "guide",
+    category: "careerEmployment",
+    title,
+    provider,
+    description,
+    query: `${title} ${description}`,
+    url
+  };
 }
 
 function searchResource(title, provider, type, query, searchDomain) {
@@ -281,8 +312,15 @@ function classifyType(item = {}) {
 
 function inferResourceCategory(value = "") {
   const text = compactText(value);
-  const explicitCareer = /고졸채용|고졸청년|취업지원|취업추천|취업역량|채용연계|취업맞춤반|학교장추천|중앙취업지원센터|이력서|자기소개서|면접|직무역량|잡알리오|진로|졸업생취업/i.test(text);
+  if (/조기취업형\s*계약학과|선도대학\s*육성사업/i.test(text)) {
+    return "general";
+  }
+  const staffEmployment = /계약제교원|기간제교사|교육공무직|교원\s*채용|직원\s*채용|강사\s*채용|인사\s*채용|채용\s*시험|휴직|복직/i.test(text);
+  const explicitCareer = /고졸채용|고졸청년|직업계고\s*취업|특성화고\s*취업|마이스터고\s*취업|취업지원|취업추천|취업역량|채용연계|취업맞춤반|학교장추천|중앙취업지원센터|이력서|자기소개서|면접지도|직무역량|잡알리오|진로교육|진로지도|직업진로|졸업생\s*취업/i.test(text);
   const explicitFieldTraining = /현장실습|표준협약|실습일지|순회지도|기업현장교사|산업안전|실험실습|실습실|직업계고.*매뉴얼/i.test(text);
+  if (staffEmployment) {
+    return "staffLabor";
+  }
   if (explicitCareer && !explicitFieldTraining) {
     return "careerEmployment";
   }
@@ -304,7 +342,7 @@ function inferResourceCategory(value = "") {
   if (/교원휴가|복무|연가|병가|공가|특별휴가|출장|근무상황|교육공무직|계약제교원|기간제|인사관리|취업규칙|단체협약|노무|근로기준/i.test(text)) {
     return "staffLabor";
   }
-  if (/진로|취업|채용|취업추천|면접|자소서|자기소개서|이력서|고용|청년지원/i.test(text)) {
+  if (/취업지도|취업상담|취업준비|구직지도|진로교육|진로지도|직업진로|고졸\s*취업|청년\s*취업|면접지도|자소서|자기소개서|이력서/i.test(text)) {
     return "careerEmployment";
   }
   return "general";
@@ -432,6 +470,7 @@ function extractLegalResource(value = "") {
 
 function isDisplayReadyResource(item = {}) {
   if (!item.title || !item.type || !item.url) return false;
+  if (/^\s*'\+reg_name\+'\s*-|^특성화고·마이스터고 포털\(교육부\)\s*-/i.test(item.title)) return false;
   if (item.linkKind === "search") return false;
   if (/google\.com\/search/i.test([item.url, item.searchUrl].join(" "))) return false;
   if (isGenericUrl(item.url)) return false;

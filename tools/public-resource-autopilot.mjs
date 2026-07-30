@@ -195,6 +195,30 @@ const OFFICIAL_FILE_HARVEST_SOURCES = [
       "직무역량",
       "졸업생 취업"
     ]
+  },
+  {
+    code: "sen-highjob-employment-policy",
+    label: "서울교육청 하이잡 취업 정책 안내",
+    provider: "서울특별시교육청 취업지원센터",
+    origin: "https://high-job.sen.go.kr",
+    kind: "highjob-board",
+    listPath: "/FUS/BO/E1List.do",
+    infoPath: "/FUS/BO/E1View.do",
+    category: "careerEmployment",
+    pages: 5,
+    terms: [""]
+  },
+  {
+    code: "sen-highjob-field-training",
+    label: "서울교육청 하이잡 현장실습 자료실",
+    provider: "서울특별시교육청 취업지원센터",
+    origin: "https://high-job.sen.go.kr",
+    kind: "highjob-board",
+    listPath: "/FUS/BO/E2List.do",
+    infoPath: "/FUS/BO/E2View.do",
+    category: "fieldTraining",
+    pages: 5,
+    terms: [""]
   }
 ];
 
@@ -308,6 +332,7 @@ const existingResources = normalizeExistingResources(currentIndex.resources || [
 const missionReports = RESOURCE_AUTOPILOT_MISSIONS.map((mission) => buildMissionReport(mission));
 const harvestedFileCandidates = await buildHarvestedOfficialFileCandidates();
 const candidates = dedupeCandidates([
+  ...existingResources.map(buildExistingResourceCandidate),
   ...harvestedFileCandidates,
   ...RESOURCE_AUTOPILOT_MISSIONS.flatMap(buildMissionCandidates),
   ...buildKnowledgeBaseGapCandidates(),
@@ -369,6 +394,37 @@ function normalizeExistingResources(resources = []) {
     searchDomain: getDomainFromUrl(item.searchUrl || item.url),
     normalizedText: normalizeSearchText([item.category, item.hierarchy?.level2, item.hierarchy?.level3, item.title, item.provider, item.query, item.description].join(" "))
   }));
+}
+
+function buildExistingResourceCandidate(resource = {}) {
+  const title = cleanExistingResourceTitle(resource.title);
+  const text = [
+    title,
+    resource.provider,
+    resource.query,
+    resource.description
+  ].join(" ");
+  const inferredCategory = inferCategoryFromText(text);
+  const category = resource.category === "careerEmployment"
+    ? inferredCategory
+    : resource.category || inferredCategory;
+  return normalizeCandidate({
+    ...resource,
+    title,
+    id: `existing:${resource.id || stableId(resource.url || resource.title)}`,
+    category,
+    source: resource.sourceTier || "previous-generated-index",
+    priority: "normal",
+    reason: "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+    qualityScore: 96,
+    includeInLibrary: true
+  });
+}
+
+function cleanExistingResourceTitle(value = "") {
+  return cleanText(value)
+    .replace(/^\s*'\+reg_name\+'\s*-\s*/i, "")
+    .replace(/^특성화고·마이스터고 포털\(교육부\)\s*-\s*/i, "");
 }
 
 function buildMissionReport(mission) {
@@ -639,6 +695,14 @@ function buildSeededHarvestDetailTargets() {
 }
 
 function buildOfficialListSearchUrl(source, term, page = 1) {
+  if (source.kind === "highjob-board") {
+    const url = new URL(source.listPath, source.origin);
+    url.searchParams.set("pageIndex", String(Math.max(1, Number(page || 1))));
+    if (term) {
+      url.searchParams.set("searchKeyword", term);
+    }
+    return url.href;
+  }
   if (source.kind === "hifive-bbs") {
     const url = new URL(source.listPath, source.origin);
     url.searchParams.set("auth_type", "M2");
@@ -666,6 +730,16 @@ function buildOfficialListSearchUrl(source, term, page = 1) {
 function extractDetailTargetsFromList(html = "", source = {}, term = "") {
   if (!html) {
     return [];
+  }
+
+  if (source.kind === "highjob-board") {
+    return [...html.matchAll(/fncDetailView\('(\d+)'\)/gi)]
+      .map((match) => ({
+        source,
+        term,
+        nttSn: match[1],
+        detailUrl: `${new URL(source.infoPath, source.origin).href}?board_seq=${encodeURIComponent(match[1])}`
+      }));
   }
 
   if (source.kind === "hifive-bbs") {
@@ -806,6 +880,10 @@ function extractOfficialFileLinks(html = "", target = {}) {
 }
 
 function extractDetailTitle(html = "") {
+  const strongMatch = html.match(/<strong\b[^>]*>([\s\S]*?)<\/strong>/i);
+  if (strongMatch) {
+    return cleanText(stripHtml(strongMatch[1]));
+  }
   const thMatch = html.match(/<th\b[^>]*class=["'][^"']*title[^"']*["'][^>]*>([\s\S]*?)<\/th>/i);
   if (thMatch) {
     return cleanText(stripHtml(thMatch[1]));
@@ -815,7 +893,8 @@ function extractDetailTitle(html = "") {
 }
 
 function buildHarvestedResourceTitle(detailTitle = "", fileName = "") {
-  const cleanTitle = cleanText(detailTitle);
+  const rawTitle = cleanText(detailTitle);
+  const cleanTitle = /reg_name|특성화고·마이스터고 포털\(교육부\)/i.test(rawTitle) ? "" : rawTitle;
   const cleanFile = cleanText(fileName.replace(/\.(pdf|hwp|hwpx|docx?|xlsx?|pptx?)$/i, ""));
   if (!cleanTitle) return cleanFile;
   if (!cleanFile || normalizeSearchText(cleanTitle).includes(normalizeSearchText(cleanFile).slice(0, 12))) {
@@ -891,7 +970,7 @@ async function fetchText(url = "") {
 function isOfficialHarvestPageUrl(url = "") {
   try {
     const host = new URL(url).hostname.replace(/^www\./, "");
-    return /(^|\.)gbe\.kr$|(^|\.)cbe\.go\.kr$|(^|\.)moe\.go\.kr$|(^|\.)moel\.go\.kr$|(^|\.)kosha\.or\.kr$|(^|\.)hrdkorea\.or\.kr$|(^|\.)hifive\.go\.kr$|(^|\.)schoolsafe\.or\.kr$|(^|\.)pipc\.go\.kr$/.test(host);
+    return /(^|\.)gbe\.kr$|(^|\.)cbe\.go\.kr$|(^|\.)sen\.go\.kr$|(^|\.)goe\.go\.kr$|(^|\.)moe\.go\.kr$|(^|\.)moel\.go\.kr$|(^|\.)work24\.go\.kr$|(^|\.)keis\.or\.kr$|(^|\.)krivet\.re\.kr$|(^|\.)korcham\.net$|(^|\.)kosha\.or\.kr$|(^|\.)hrdkorea\.or\.kr$|(^|\.)hifive\.go\.kr$|(^|\.)schoolsafe\.or\.kr$|(^|\.)pipc\.go\.kr$/.test(host);
   } catch {
     return false;
   }
@@ -1116,8 +1195,11 @@ function inferCategoryFromDomains(domains = []) {
 
 function inferCategoryFromText(value = "") {
   const text = normalizeSearchText(value);
-  const explicitCareer = /고졸채용|고졸청년|취업지원|취업추천|취업역량|채용연계|취업맞춤반|학교장추천|중앙취업지원센터|이력서|자기소개서|면접|직무역량|잡알리오/.test(text);
+  if (/조기취업형계약학과|선도대학육성사업/.test(text)) return "general";
+  const staffEmployment = /계약제교원|기간제교사|교육공무직|교원채용|직원채용|강사채용|인사채용|채용시험|휴직|복직/.test(text);
+  const explicitCareer = /고졸채용|고졸청년|직업계고취업|특성화고취업|마이스터고취업|취업지원|취업추천|취업역량|채용연계|취업맞춤반|학교장추천|중앙취업지원센터|이력서|자기소개서|면접지도|직무역량|잡알리오|진로교육|진로지도|직업진로|졸업생취업/.test(text);
   const explicitFieldTraining = /현장실습|표준협약|실습일지|순회지도|기업현장교사|산업안전|실험실습|실습실|직업계고.*매뉴얼/.test(text);
+  if (staffEmployment) return "staffLabor";
   if (explicitCareer && !explicitFieldTraining) return "careerEmployment";
   if (explicitFieldTraining) return "fieldTraining";
   if (/careeremployment/.test(text)) return "careerEmployment";
