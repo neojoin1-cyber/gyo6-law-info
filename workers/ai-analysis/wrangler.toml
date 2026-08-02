@@ -47,3 +47,7 @@ ALLOWED_ORIGINS = "https://gyo6.kr,https://www.gyo6.kr,https://gyo6-law-info.web
 binding = "MEMBER_DB"
 database_name = "gyo6-law-info-member-db"
 database_id = "56a7e9b6-2eba-4be1-8e1c-84beb2cd22e3"
+
+[[r2_buckets]]
+binding = "BOARD_ATTACHMENTS"
+bucket_name = "gyo6-board-attachments"

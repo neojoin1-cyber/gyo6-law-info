@@ -60,6 +60,24 @@ const MEMBER_ROLES = ["pending", "general", "jobs", "law", "student", "teacher",
 const MEMBER_STATUSES = ["pending", "approved", "suspended", "deleted"];
 const COUNSEL_ROOMS = new Set(["student", "teacher"]);
 const BOARD_ROOMS = new Set(["promotion", "collaboration", "qna"]);
+const BOARD_ATTACHMENT_MAX_FILES = 5;
+const BOARD_ATTACHMENT_MAX_BYTES = 15 * 1024 * 1024;
+const BOARD_ATTACHMENT_TYPES = new Map([
+  ["png", "image/png"],
+  ["jpg", "image/jpeg"],
+  ["jpeg", "image/jpeg"],
+  ["webp", "image/webp"],
+  ["gif", "image/gif"],
+  ["pdf", "application/pdf"],
+  ["hwp", "application/x-hwp"],
+  ["hwpx", "application/vnd.hancom.hwpx"],
+  ["doc", "application/msword"],
+  ["docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
+  ["xls", "application/vnd.ms-excel"],
+  ["xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],
+  ["ppt", "application/vnd.ms-powerpoint"],
+  ["pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation"]
+]);
 const CONSULTATION_STATUSES = new Set(["open", "answered", "closed"]);
 const EBOOK_CATALOG = [
   {
@@ -507,6 +525,28 @@ export default {
         if (authContext.error) return sendJson(authContext, authContext.status || 401, corsHeaders);
         const result = await deleteBoardPost(authContext, await readJsonBody(request), env);
         return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/board/attachment/upload") {
+        if (request.method !== "POST") return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) return sendJson(authContext, authContext.status || 401, corsHeaders);
+        const result = await uploadBoardAttachment(request, authContext, env, url);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/board/attachment/delete") {
+        if (request.method !== "POST") return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) return sendJson(authContext, authContext.status || 401, corsHeaders);
+        const result = await deleteBoardAttachment(authContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      const boardAttachmentMatch = url.pathname.match(/^\/api\/board\/attachment\/([a-f0-9-]{36})$/i);
+      if (boardAttachmentMatch) {
+        if (request.method !== "GET") return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        return getBoardAttachment(request, boardAttachmentMatch[1], env, corsHeaders);
       }
 
       if (url.pathname === "/api/admin/members") {
@@ -3434,13 +3474,14 @@ async function createBoardPost(authContext, body = {}, env) {
 
   const now = new Date().toISOString();
   const anonymousName = truncateText(body.anonymousName || getBoardRoomDefaultAuthor(room), 40);
+  const isPopup = room === "promotion" && hasAdminAccess(authContext.member) && Boolean(body.isPopup) ? 1 : 0;
 
   const result = await env.MEMBER_DB.prepare(`
     INSERT INTO consultations (
       room, author_uid, author_email, author_name, anonymous_name, title, body,
-      status, created_at, updated_at
+      status, is_popup, created_at, updated_at
     )
-    VALUES (?, ?, ?, ?, ?, ?, ?, 'open', ?, ?)
+    VALUES (?, ?, ?, ?, ?, ?, ?, 'open', ?, ?, ?)
   `).bind(
     room,
     authContext.user.uid,
@@ -3449,6 +3490,7 @@ async function createBoardPost(authContext, body = {}, env) {
     anonymousName,
     title,
     content,
+    isPopup,
     now,
     now
   ).run();
@@ -3458,7 +3500,7 @@ async function createBoardPost(authContext, body = {}, env) {
     actorUid: authContext.user.uid,
     targetUid: String(id || ""),
     action: "board.create",
-    detail: JSON.stringify({ room })
+    detail: JSON.stringify({ room, isPopup: Boolean(isPopup) })
   });
 
   return {
@@ -3480,6 +3522,7 @@ async function listBoardPosts(authContext, env, url) {
 
   const room = normalizeBoardRoom(url.searchParams.get("room"));
   const keyword = truncateText(url.searchParams.get("q"), 80);
+  const popupOnly = url.searchParams.get("popup") === "1";
   const rooms = room ? [room] : [...BOARD_ROOMS];
   const placeholders = rooms.map(() => "?").join(", ");
   const where = [`room IN (${placeholders})`];
@@ -3489,20 +3532,26 @@ async function listBoardPosts(authContext, env, url) {
     where.push("(title LIKE ? OR body LIKE ?)");
     params.push(`%${keyword}%`, `%${keyword}%`);
   }
+  if (popupOnly) {
+    where.push("room = 'promotion'");
+    where.push("is_popup = 1");
+  }
 
   const query = `
     SELECT id, room, author_uid, author_email, author_name, anonymous_name, title, body,
-           status, admin_reply, admin_uid, admin_replied_at, created_at, updated_at
+           status, admin_reply, admin_uid, admin_replied_at, is_popup, created_at, updated_at
     FROM consultations
     WHERE ${where.join(" AND ")}
     ORDER BY updated_at DESC
-    LIMIT 200
+    LIMIT ${popupOnly ? 10 : 200}
   `;
   const result = await env.MEMBER_DB.prepare(query).bind(...params).all();
+  const rows = result.results || [];
+  const attachmentsByPost = await listBoardAttachmentsForPosts(rows.map((row) => row.id), env);
 
   return {
     ok: true,
-    posts: (result.results || []).map((row) => mapBoardPostRow(row, authContext))
+    posts: rows.map((row) => mapBoardPostRow(row, authContext, attachmentsByPost.get(String(row.id)) || []))
   };
 }
 
@@ -3512,7 +3561,7 @@ async function updateBoardPost(authContext, body = {}, env) {
   await ensureConsultationTables(env);
   const id = Number(body.id);
   if (!Number.isInteger(id) || id <= 0) return { error: "수정할 게시글 ID가 필요합니다.", code: "BOARD_POST_ID_REQUIRED", status: 400 };
-  const target = await env.MEMBER_DB.prepare(`SELECT id, room, author_uid FROM consultations WHERE id = ?`).bind(id).first();
+  const target = await env.MEMBER_DB.prepare("SELECT id, room, author_uid, is_popup FROM consultations WHERE id = ?").bind(id).first();
   if (!target || !normalizeBoardRoom(target.room)) return { error: "게시글을 찾지 못했습니다.", code: "BOARD_POST_NOT_FOUND", status: 404 };
   if (!canManageBoardPost(target, authContext)) return { error: "게시글을 수정할 권한이 없습니다.", code: "BOARD_POST_FORBIDDEN", status: 403 };
   const room = normalizeBoardRoom(body.room || target.room);
@@ -3522,9 +3571,18 @@ async function updateBoardPost(authContext, body = {}, env) {
   const content = truncateText(body.body, 4000);
   const anonymousName = truncateText(body.anonymousName || getBoardRoomDefaultAuthor(room), 40);
   if (!title || !content) return { error: "제목과 내용을 입력해 주세요.", code: "BOARD_POST_REQUIRED", status: 400 };
+  const isPopup = hasAdminAccess(authContext.member)
+    ? (room === "promotion" && Boolean(body.isPopup) ? 1 : 0)
+    : Number(target.is_popup || 0);
   const now = new Date().toISOString();
-  await env.MEMBER_DB.prepare(`UPDATE consultations SET room = ?, anonymous_name = ?, title = ?, body = ?, updated_at = ? WHERE id = ?`).bind(room, anonymousName, title, content, now, id).run();
-  await writeAuditLog(env, { actorUid: authContext.user.uid, targetUid: String(id), action: "board.update", detail: JSON.stringify({ room }) });
+  await env.MEMBER_DB.prepare("UPDATE consultations SET room = ?, anonymous_name = ?, title = ?, body = ?, is_popup = ?, updated_at = ? WHERE id = ?")
+    .bind(room, anonymousName, title, content, isPopup, now, id).run();
+  await writeAuditLog(env, {
+    actorUid: authContext.user.uid,
+    targetUid: String(id),
+    action: "board.update",
+    detail: JSON.stringify({ room, isPopup: Boolean(isPopup) })
+  });
   return { ok: true, post: await getBoardPostById(id, env, authContext) };
 }
 
@@ -3534,13 +3592,267 @@ async function deleteBoardPost(authContext, body = {}, env) {
   await ensureConsultationTables(env);
   const id = Number(body.id);
   if (!Number.isInteger(id) || id <= 0) return { error: "삭제할 게시글 ID가 필요합니다.", code: "BOARD_POST_ID_REQUIRED", status: 400 };
-  const target = await env.MEMBER_DB.prepare(`SELECT id, room, author_uid, title FROM consultations WHERE id = ?`).bind(id).first();
+  const target = await env.MEMBER_DB.prepare("SELECT id, room, author_uid, title FROM consultations WHERE id = ?").bind(id).first();
   if (!target || !normalizeBoardRoom(target.room)) return { error: "게시글을 찾지 못했습니다.", code: "BOARD_POST_NOT_FOUND", status: 404 };
   if (!canManageBoardPost(target, authContext)) return { error: "게시글을 삭제할 권한이 없습니다.", code: "BOARD_POST_FORBIDDEN", status: 403 };
   if (target.room === "promotion" && !hasAdminAccess(authContext.member)) return { error: "홍보 게시판 삭제는 관리자만 가능합니다.", code: "ADMIN_REQUIRED", status: 403 };
-  await env.MEMBER_DB.prepare("DELETE FROM consultations WHERE id = ?").bind(id).run();
-  await writeAuditLog(env, { actorUid: authContext.user.uid, targetUid: String(id), action: "board.delete", detail: JSON.stringify({ room: target.room, title: target.title || "" }) });
+
+  const attachments = await env.MEMBER_DB.prepare("SELECT object_key FROM board_attachments WHERE post_id = ?").bind(id).all();
+  const keys = (attachments.results || []).map((item) => item.object_key).filter(Boolean);
+  if (keys.length && env.BOARD_ATTACHMENTS) {
+    await env.BOARD_ATTACHMENTS.delete(keys);
+  }
+
+  await env.MEMBER_DB.batch([
+    env.MEMBER_DB.prepare("DELETE FROM board_attachments WHERE post_id = ?").bind(id),
+    env.MEMBER_DB.prepare("DELETE FROM consultations WHERE id = ?").bind(id)
+  ]);
+  await writeAuditLog(env, { actorUid: authContext.user.uid, targetUid: String(id), action: "board.delete", detail: JSON.stringify({ room: target.room, title: target.title || "", attachments: keys.length }) });
   return { ok: true, id };
+}
+
+async function uploadBoardAttachment(request, authContext, env, url) {
+  const access = await assertApprovedMemberAccess(authContext, env);
+  if (!access.ok) return access;
+  if (!env.BOARD_ATTACHMENTS) {
+    return { error: "게시판 파일 저장소가 연결되지 않았습니다.", code: "BOARD_ATTACHMENT_STORE_NOT_CONFIGURED", status: 503 };
+  }
+
+  await ensureConsultationTables(env);
+  const postId = Number(url.searchParams.get("postId"));
+  if (!Number.isInteger(postId) || postId <= 0) {
+    return { error: "첨부할 게시글 ID가 필요합니다.", code: "BOARD_POST_ID_REQUIRED", status: 400 };
+  }
+
+  const target = await env.MEMBER_DB.prepare("SELECT id, room, author_uid FROM consultations WHERE id = ?").bind(postId).first();
+  if (!target || !normalizeBoardRoom(target.room)) {
+    return { error: "게시글을 찾지 못했습니다.", code: "BOARD_POST_NOT_FOUND", status: 404 };
+  }
+  if (!canManageBoardPost(target, authContext)) {
+    return { error: "파일을 첨부할 권한이 없습니다.", code: "BOARD_POST_FORBIDDEN", status: 403 };
+  }
+  if (target.room === "promotion" && !hasAdminAccess(authContext.member)) {
+    return { error: "홍보 게시판 첨부는 관리자만 가능합니다.", code: "ADMIN_REQUIRED", status: 403 };
+  }
+
+  const current = await env.MEMBER_DB.prepare("SELECT COUNT(*) AS count FROM board_attachments WHERE post_id = ?").bind(postId).first();
+  if (Number(current?.count || 0) >= BOARD_ATTACHMENT_MAX_FILES) {
+    return { error: `게시글당 첨부파일은 ${BOARD_ATTACHMENT_MAX_FILES}개까지 등록할 수 있습니다.`, code: "BOARD_ATTACHMENT_LIMIT", status: 400 };
+  }
+
+  const encodedName = request.headers.get("x-file-name") || "";
+  let requestedName = "";
+  try {
+    requestedName = decodeURIComponent(encodedName);
+  } catch {
+    requestedName = encodedName;
+  }
+  const fileName = sanitizeBoardFileName(requestedName);
+  const fileInfo = getBoardAttachmentType(fileName);
+  if (!fileName || !fileInfo) {
+    return { error: "이미지, PDF, 한글 또는 오피스 문서만 첨부할 수 있습니다.", code: "BOARD_ATTACHMENT_TYPE", status: 400 };
+  }
+
+  const declaredSize = Number(request.headers.get("x-file-size") || request.headers.get("content-length") || 0);
+  if (!Number.isFinite(declaredSize) || declaredSize <= 0 || declaredSize > BOARD_ATTACHMENT_MAX_BYTES) {
+    return { error: "첨부파일은 파일당 15MB 이하만 등록할 수 있습니다.", code: "BOARD_ATTACHMENT_SIZE", status: 413 };
+  }
+
+  const bytes = await request.arrayBuffer();
+  if (!bytes.byteLength || bytes.byteLength > BOARD_ATTACHMENT_MAX_BYTES) {
+    return { error: "첨부파일은 파일당 15MB 이하만 등록할 수 있습니다.", code: "BOARD_ATTACHMENT_SIZE", status: 413 };
+  }
+  if (!hasBoardAttachmentSignature(fileInfo.extension, bytes)) {
+    return { error: "파일 내용과 확장자가 일치하지 않습니다.", code: "BOARD_ATTACHMENT_SIGNATURE", status: 400 };
+  }
+
+  const id = crypto.randomUUID();
+  const objectKey = `boards/${postId}/${id}.${fileInfo.extension}`;
+  const now = new Date().toISOString();
+  await env.BOARD_ATTACHMENTS.put(objectKey, bytes, {
+    httpMetadata: { contentType: fileInfo.contentType },
+    customMetadata: { postId: String(postId), fileName }
+  });
+
+  try {
+    await env.MEMBER_DB.prepare(`
+      INSERT INTO board_attachments (
+        id, post_id, object_key, file_name, content_type, size_bytes, author_uid, created_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    `).bind(id, postId, objectKey, fileName, fileInfo.contentType, bytes.byteLength, authContext.user.uid, now).run();
+  } catch (error) {
+    await env.BOARD_ATTACHMENTS.delete(objectKey);
+    throw error;
+  }
+
+  await writeAuditLog(env, {
+    actorUid: authContext.user.uid,
+    targetUid: id,
+    action: "board.attachment.upload",
+    detail: JSON.stringify({ postId, fileName, size: bytes.byteLength })
+  });
+
+  return {
+    ok: true,
+    attachment: mapBoardAttachment({
+      id,
+      post_id: postId,
+      file_name: fileName,
+      content_type: fileInfo.contentType,
+      size_bytes: bytes.byteLength,
+      created_at: now
+    })
+  };
+}
+
+async function deleteBoardAttachment(authContext, body = {}, env) {
+  const access = await assertApprovedMemberAccess(authContext, env);
+  if (!access.ok) return access;
+  if (!env.BOARD_ATTACHMENTS) {
+    return { error: "게시판 파일 저장소가 연결되지 않았습니다.", code: "BOARD_ATTACHMENT_STORE_NOT_CONFIGURED", status: 503 };
+  }
+
+  await ensureConsultationTables(env);
+  const id = cleanText(body.id);
+  if (!/^[a-f0-9-]{36}$/i.test(id)) {
+    return { error: "삭제할 첨부파일 ID가 필요합니다.", code: "BOARD_ATTACHMENT_ID_REQUIRED", status: 400 };
+  }
+
+  const target = await env.MEMBER_DB.prepare(`
+    SELECT a.id, a.post_id, a.object_key, a.file_name, c.room, c.author_uid
+    FROM board_attachments a
+    JOIN consultations c ON c.id = a.post_id
+    WHERE a.id = ?
+  `).bind(id).first();
+  if (!target) return { error: "첨부파일을 찾지 못했습니다.", code: "BOARD_ATTACHMENT_NOT_FOUND", status: 404 };
+  if (!canManageBoardPost(target, authContext)) {
+    return { error: "첨부파일을 삭제할 권한이 없습니다.", code: "BOARD_POST_FORBIDDEN", status: 403 };
+  }
+  if (target.room === "promotion" && !hasAdminAccess(authContext.member)) {
+    return { error: "홍보 게시판 첨부는 관리자만 삭제할 수 있습니다.", code: "ADMIN_REQUIRED", status: 403 };
+  }
+
+  await env.BOARD_ATTACHMENTS.delete(target.object_key);
+  await env.MEMBER_DB.prepare("DELETE FROM board_attachments WHERE id = ?").bind(id).run();
+  await writeAuditLog(env, {
+    actorUid: authContext.user.uid,
+    targetUid: id,
+    action: "board.attachment.delete",
+    detail: JSON.stringify({ postId: target.post_id, fileName: target.file_name || "" })
+  });
+  return { ok: true, id };
+}
+
+async function getBoardAttachment(request, id, env, corsHeaders = {}) {
+  if (!env.MEMBER_DB || !env.BOARD_ATTACHMENTS) {
+    return sendJson({ error: "게시판 파일 저장소가 연결되지 않았습니다." }, 503, corsHeaders);
+  }
+
+  await ensureConsultationTables(env);
+  const target = await env.MEMBER_DB.prepare(`
+    SELECT a.id, a.object_key, a.file_name, a.content_type, a.size_bytes,
+           c.room, c.author_uid
+    FROM board_attachments a
+    JOIN consultations c ON c.id = a.post_id
+    WHERE a.id = ?
+  `).bind(id).first();
+  if (!target) return sendJson({ error: "첨부파일을 찾지 못했습니다." }, 404, corsHeaders);
+
+  const isPublic = normalizeBoardRoom(target.room) === "promotion";
+  if (!isPublic) {
+    const authContext = await getOptionalAuthContext(request, env);
+    if (authContext?.error) return sendJson(authContext, authContext.status || 401, corsHeaders);
+    if (!canViewBoardPrivate(target, authContext)) {
+      return sendJson({ error: "첨부파일을 열람할 권한이 없습니다." }, 403, corsHeaders);
+    }
+  }
+
+  const object = await env.BOARD_ATTACHMENTS.get(target.object_key);
+  if (!object) return sendJson({ error: "저장된 파일을 찾지 못했습니다." }, 404, corsHeaders);
+
+  const inline = String(target.content_type || "").startsWith("image/");
+  const headers = new Headers(corsHeaders);
+  headers.set("content-type", target.content_type || "application/octet-stream");
+  headers.set("content-length", String(target.size_bytes || object.size || ""));
+  headers.set("cache-control", isPublic ? "public, max-age=300" : "no-store");
+  headers.set("x-content-type-options", "nosniff");
+  headers.set("cross-origin-resource-policy", "cross-origin");
+  headers.set("content-disposition", buildBoardContentDisposition(target.file_name, inline));
+  if (object.httpEtag) headers.set("etag", object.httpEtag);
+  return new Response(object.body, { status: 200, headers });
+}
+
+async function listBoardAttachmentsForPosts(postIds, env) {
+  const ids = [...new Set((postIds || []).map(Number).filter((id) => Number.isInteger(id) && id > 0))];
+  const grouped = new Map();
+  if (!ids.length) return grouped;
+  const placeholders = ids.map(() => "?").join(", ");
+  const result = await env.MEMBER_DB.prepare(`
+    SELECT id, post_id, file_name, content_type, size_bytes, created_at
+    FROM board_attachments
+    WHERE post_id IN (${placeholders})
+    ORDER BY created_at ASC
+  `).bind(...ids).all();
+
+  for (const row of result.results || []) {
+    const key = String(row.post_id);
+    const items = grouped.get(key) || [];
+    items.push(mapBoardAttachment(row));
+    grouped.set(key, items);
+  }
+  return grouped;
+}
+
+function mapBoardAttachment(row) {
+  const contentType = row.content_type || "application/octet-stream";
+  return {
+    id: row.id,
+    name: row.file_name || "첨부파일",
+    contentType,
+    size: Number(row.size_bytes || 0),
+    isImage: contentType.startsWith("image/"),
+    url: `/api/board/attachment/${encodeURIComponent(row.id)}`,
+    createdAt: row.created_at || ""
+  };
+}
+
+function sanitizeBoardFileName(value) {
+  return String(value || "")
+    .replace(/[\/\\]/g, "_")
+    .replace(/[\u0000-\u001f\u007f]/g, "")
+    .trim()
+    .slice(0, 180);
+}
+
+function getBoardAttachmentType(fileName) {
+  const match = String(fileName || "").toLowerCase().match(/\.([a-z0-9]+)$/);
+  if (!match) return null;
+  const extension = match[1];
+  const contentType = BOARD_ATTACHMENT_TYPES.get(extension);
+  return contentType ? { extension, contentType } : null;
+}
+
+function hasBoardAttachmentSignature(extension, value) {
+  const bytes = new Uint8Array(value);
+  const starts = (...signature) => signature.every((item, index) => bytes[index] === item);
+  if (extension === "png") return starts(0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a);
+  if (extension === "jpg" || extension === "jpeg") return starts(0xff, 0xd8, 0xff);
+  if (extension === "gif") return starts(0x47, 0x49, 0x46, 0x38);
+  if (extension === "webp") {
+    return starts(0x52, 0x49, 0x46, 0x46) && bytes[8] === 0x57 && bytes[9] === 0x45 && bytes[10] === 0x42 && bytes[11] === 0x50;
+  }
+  if (extension === "pdf") return starts(0x25, 0x50, 0x44, 0x46);
+  if (["hwpx", "docx", "xlsx", "pptx"].includes(extension)) return starts(0x50, 0x4b);
+  if (["hwp", "doc", "xls", "ppt"].includes(extension)) return starts(0xd0, 0xcf, 0x11, 0xe0);
+  return false;
+}
+
+function buildBoardContentDisposition(fileName, inline = false) {
+  const safeAscii = String(fileName || "attachment")
+    .replace(/[^\x20-\x7e]/g, "_")
+    .replace(/[\"\\]/g, "_");
+  const encoded = encodeURIComponent(String(fileName || "attachment")).replace(/[!'()*]/g, (char) => `%${char.charCodeAt(0).toString(16).toUpperCase()}`);
+  return `${inline ? "inline" : "attachment"}; filename="${safeAscii}"; filename*=UTF-8''${encoded}`;
 }
 
 async function replyBoardPost(adminContext, body = {}, env) {
@@ -3790,6 +4102,26 @@ async function ensureConsultationTables(env) {
     CREATE INDEX IF NOT EXISTS idx_consultations_room_status_updated
       ON consultations (room, status, updated_at)
   `).run();
+
+
+  await env.MEMBER_DB.prepare(`
+    CREATE TABLE IF NOT EXISTS board_attachments (
+      id TEXT PRIMARY KEY,
+      post_id INTEGER NOT NULL,
+      object_key TEXT NOT NULL UNIQUE,
+      file_name TEXT NOT NULL,
+      content_type TEXT NOT NULL,
+      size_bytes INTEGER NOT NULL,
+      author_uid TEXT NOT NULL,
+      created_at TEXT NOT NULL,
+      FOREIGN KEY (post_id) REFERENCES consultations(id) ON DELETE CASCADE
+    )
+  `).run();
+
+  await env.MEMBER_DB.prepare(`
+    CREATE INDEX IF NOT EXISTS idx_board_attachments_post_created
+      ON board_attachments (post_id, created_at)
+  `).run();
 }
 
 async function getConsultationById(id, env, includeAuthor = false) {
@@ -3814,12 +4146,14 @@ async function getBoardPostById(id, env, authContext = null) {
 
   const row = await env.MEMBER_DB.prepare(`
     SELECT id, room, author_uid, author_email, author_name, anonymous_name, title, body,
-           status, admin_reply, admin_uid, admin_replied_at, created_at, updated_at
+           status, admin_reply, admin_uid, admin_replied_at, is_popup, created_at, updated_at
     FROM consultations
     WHERE id = ?
   `).bind(id).first();
 
-  return row && normalizeBoardRoom(row.room) ? mapBoardPostRow(row, authContext) : null;
+  if (!row || !normalizeBoardRoom(row.room)) return null;
+  const attachmentsByPost = await listBoardAttachmentsForPosts([id], env);
+  return mapBoardPostRow(row, authContext, attachmentsByPost.get(String(id)) || []);
 }
 
 function mapConsultationRow(row, includeAuthor = false) {
@@ -3850,7 +4184,7 @@ function mapConsultationRow(row, includeAuthor = false) {
   return item;
 }
 
-function mapBoardPostRow(row, authContext = null) {
+function mapBoardPostRow(row, authContext = null, attachments = []) {
   const room = normalizeBoardRoom(row.room) || "qna";
   const canViewPrivate = canViewBoardPrivate(row, authContext);
   const item = {
@@ -3860,8 +4194,10 @@ function mapBoardPostRow(row, authContext = null) {
     status: normalizeConsultationStatus(row.status || "open"),
     createdAt: row.created_at || "",
     updatedAt: row.updated_at || "",
+    isPopup: room === "promotion" && Number(row.is_popup || 0) === 1,
     canViewBody: canViewPrivate,
     canManage: canManageBoardPost(row, authContext),
+    canSetPopup: hasAdminAccess(authContext?.member),
     author: {
       anonymousName: row.anonymous_name || getBoardRoomDefaultAuthor(room)
     }
@@ -3871,6 +4207,7 @@ function mapBoardPostRow(row, authContext = null) {
     item.body = row.body || "";
     item.adminReply = row.admin_reply || "";
     item.adminRepliedAt = row.admin_replied_at || "";
+    item.attachments = attachments;
   }
 
   if (hasAdminAccess(authContext?.member)) {
@@ -4659,7 +4996,7 @@ function getCorsHeaders(origin, env) {
   return {
     "access-control-allow-origin": allowOrigin,
     "access-control-allow-methods": "GET,POST,OPTIONS",
-    "access-control-allow-headers": "content-type,accept,authorization",
+    "access-control-allow-headers": "content-type,accept,authorization,x-file-name,x-file-size",
     "vary": "Origin"
   };
 }
