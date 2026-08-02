@@ -493,6 +493,22 @@ export default {
         return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
+      if (url.pathname === "/api/board/update") {
+        if (request.method !== "POST") return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) return sendJson(authContext, authContext.status || 401, corsHeaders);
+        const result = await updateBoardPost(authContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/board/delete") {
+        if (request.method !== "POST") return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        const authContext = await requireAuthContext(request, env);
+        if (authContext.error) return sendJson(authContext, authContext.status || 401, corsHeaders);
+        const result = await deleteBoardPost(authContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
       if (url.pathname === "/api/admin/members") {
         const adminContext = await requireAdminContext(request, env);
         if (adminContext.error) {
@@ -3490,6 +3506,43 @@ async function listBoardPosts(authContext, env, url) {
   };
 }
 
+async function updateBoardPost(authContext, body = {}, env) {
+  const access = await assertApprovedMemberAccess(authContext, env);
+  if (!access.ok) return access;
+  await ensureConsultationTables(env);
+  const id = Number(body.id);
+  if (!Number.isInteger(id) || id <= 0) return { error: "수정할 게시글 ID가 필요합니다.", code: "BOARD_POST_ID_REQUIRED", status: 400 };
+  const target = await env.MEMBER_DB.prepare(`SELECT id, room, author_uid FROM consultations WHERE id = ?`).bind(id).first();
+  if (!target || !normalizeBoardRoom(target.room)) return { error: "게시글을 찾지 못했습니다.", code: "BOARD_POST_NOT_FOUND", status: 404 };
+  if (!canManageBoardPost(target, authContext)) return { error: "게시글을 수정할 권한이 없습니다.", code: "BOARD_POST_FORBIDDEN", status: 403 };
+  const room = normalizeBoardRoom(body.room || target.room);
+  if (!room) return { error: "게시판을 선택해 주세요.", code: "BOARD_ROOM_REQUIRED", status: 400 };
+  if ((room === "promotion" || target.room === "promotion") && !hasAdminAccess(authContext.member)) return { error: "홍보 게시판 수정은 관리자만 가능합니다.", code: "ADMIN_REQUIRED", status: 403 };
+  const title = truncateText(body.title, 120);
+  const content = truncateText(body.body, 4000);
+  const anonymousName = truncateText(body.anonymousName || getBoardRoomDefaultAuthor(room), 40);
+  if (!title || !content) return { error: "제목과 내용을 입력해 주세요.", code: "BOARD_POST_REQUIRED", status: 400 };
+  const now = new Date().toISOString();
+  await env.MEMBER_DB.prepare(`UPDATE consultations SET room = ?, anonymous_name = ?, title = ?, body = ?, updated_at = ? WHERE id = ?`).bind(room, anonymousName, title, content, now, id).run();
+  await writeAuditLog(env, { actorUid: authContext.user.uid, targetUid: String(id), action: "board.update", detail: JSON.stringify({ room }) });
+  return { ok: true, post: await getBoardPostById(id, env, authContext) };
+}
+
+async function deleteBoardPost(authContext, body = {}, env) {
+  const access = await assertApprovedMemberAccess(authContext, env);
+  if (!access.ok) return access;
+  await ensureConsultationTables(env);
+  const id = Number(body.id);
+  if (!Number.isInteger(id) || id <= 0) return { error: "삭제할 게시글 ID가 필요합니다.", code: "BOARD_POST_ID_REQUIRED", status: 400 };
+  const target = await env.MEMBER_DB.prepare(`SELECT id, room, author_uid, title FROM consultations WHERE id = ?`).bind(id).first();
+  if (!target || !normalizeBoardRoom(target.room)) return { error: "게시글을 찾지 못했습니다.", code: "BOARD_POST_NOT_FOUND", status: 404 };
+  if (!canManageBoardPost(target, authContext)) return { error: "게시글을 삭제할 권한이 없습니다.", code: "BOARD_POST_FORBIDDEN", status: 403 };
+  if (target.room === "promotion" && !hasAdminAccess(authContext.member)) return { error: "홍보 게시판 삭제는 관리자만 가능합니다.", code: "ADMIN_REQUIRED", status: 403 };
+  await env.MEMBER_DB.prepare("DELETE FROM consultations WHERE id = ?").bind(id).run();
+  await writeAuditLog(env, { actorUid: authContext.user.uid, targetUid: String(id), action: "board.delete", detail: JSON.stringify({ room: target.room, title: target.title || "" }) });
+  return { ok: true, id };
+}
+
 async function replyBoardPost(adminContext, body = {}, env) {
   if (!env.MEMBER_DB) {
     return {
@@ -3808,6 +3861,7 @@ function mapBoardPostRow(row, authContext = null) {
     createdAt: row.created_at || "",
     updatedAt: row.updated_at || "",
     canViewBody: canViewPrivate,
+    canManage: canManageBoardPost(row, authContext),
     author: {
       anonymousName: row.anonymous_name || getBoardRoomDefaultAuthor(room)
     }
@@ -3829,6 +3883,12 @@ function mapBoardPostRow(row, authContext = null) {
   }
 
   return item;
+}
+
+function canManageBoardPost(row, authContext = null) {
+  if (!authContext || authContext.error || authContext.member?.status !== "approved") return false;
+  if (hasAdminAccess(authContext.member)) return true;
+  return Boolean(authContext.user?.uid && authContext.user.uid === row.author_uid);
 }
 
 function canViewBoardPrivate(row, authContext = null) {
