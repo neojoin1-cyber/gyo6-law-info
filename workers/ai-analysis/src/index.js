@@ -294,7 +294,11 @@ const FB_SERVICE_C01_TEACHER_LESSON = {
     teacherPersonalMemoStorage: "userId + ebookId + lessonId + stepId/blockId"
   }
 };
+const BUSINESS_CARD_MODES = new Set(["general", "vocational", "exam", "studio"]);
+const BUSINESS_CARD_STATUSES = new Set(["new", "contacted", "follow-up", "completed"]);
+const BUSINESS_CARD_SLUGS = new Set(["kim-younghee"]);
 let firebaseJwkCache = null;
+let businessCardTablesEnsured = false;
 
 export default {
   async fetch(request, env) {
@@ -392,6 +396,15 @@ export default {
           detailUrl: env.PUBLIC_SITE_URL || "https://gyo6-law-info.web.app/"
         });
         return sendJson(result, 200, corsHeaders);
+      }
+
+      if (url.pathname === "/api/card/exchange") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const result = await createBusinessCardExchange(request, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
       if (url.pathname === "/api/member/me") {
@@ -612,6 +625,48 @@ export default {
         }
 
         const result = await createMemberInvitation(adminContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/card/contacts") {
+        if (request.method !== "GET") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await listBusinessCardContacts(adminContext, env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/card/contact/update") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await updateBusinessCardContact(adminContext, await readJsonBody(request), env);
+        return sendJson(result, getResultStatus(result), corsHeaders);
+      }
+
+      if (url.pathname === "/api/admin/card/contact/delete") {
+        if (request.method !== "POST") {
+          return sendJson({ error: "지원하지 않는 HTTP 메서드입니다." }, 405, corsHeaders);
+        }
+
+        const adminContext = await requireAdminContext(request, env);
+        if (adminContext.error) {
+          return sendJson(adminContext, adminContext.status || 403, corsHeaders);
+        }
+
+        const result = await deleteBusinessCardContact(adminContext, await readJsonBody(request), env);
         return sendJson(result, getResultStatus(result), corsHeaders);
       }
 
@@ -3507,6 +3562,318 @@ async function createBoardPost(authContext, body = {}, env) {
     ok: true,
     post: await getBoardPostById(id, env, authContext)
   };
+}
+
+async function createBusinessCardExchange(request, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return {
+      error: "명함 교환 저장소가 아직 연결되지 않았습니다.",
+      code: "MEMBER_DB_NOT_CONFIGURED",
+      status: 503
+    };
+  }
+
+  if (truncateText(body.website, 120)) {
+    return { ok: true, accepted: true };
+  }
+
+  const cardSlug = normalizeBusinessCardSlug(body.cardSlug);
+  const name = truncateText(body.name, 60);
+  const phone = normalizeBusinessCardPhone(body.phone);
+  const email = normalizeBusinessCardEmail(body.email);
+  const organization = truncateText(body.organization, 100);
+  const title = truncateText(body.title, 60);
+  const note = truncateText(body.note, 300);
+  const mode = normalizeBusinessCardMode(body.mode);
+  const source = normalizeBusinessCardSource(body.source);
+
+  if (!cardSlug || !name) {
+    return { error: "이름과 올바른 명함 정보가 필요합니다.", code: "CARD_EXCHANGE_REQUIRED", status: 400 };
+  }
+  if (!phone && !email) {
+    return { error: "전화번호 또는 이메일 중 하나를 입력해 주세요.", code: "CARD_CONTACT_REQUIRED", status: 400 };
+  }
+  if (cleanText(body.phone) && !phone) {
+    return { error: "전화번호 형식을 확인해 주세요.", code: "CARD_PHONE_INVALID", status: 400 };
+  }
+  if (cleanText(body.email) && !email) {
+    return { error: "이메일 형식을 확인해 주세요.", code: "CARD_EMAIL_INVALID", status: 400 };
+  }
+  if (body.consent !== true) {
+    return { error: "개인정보 수집·이용 동의가 필요합니다.", code: "CARD_CONSENT_REQUIRED", status: 400 };
+  }
+
+  await ensureBusinessCardTables(env);
+  const ipHash = await hashBusinessCardClient(request, env);
+  if (ipHash) {
+    const since = new Date(Date.now() - 60 * 60 * 1000).toISOString();
+    const recent = await env.MEMBER_DB.prepare(`
+      SELECT COUNT(*) AS count
+      FROM business_card_contacts
+      WHERE ip_hash = ? AND created_at >= ?
+    `).bind(ipHash, since).first();
+    if (Number(recent?.count || 0) >= 8) {
+      return {
+        error: "짧은 시간에 명함 교환 요청이 많았습니다. 잠시 후 다시 시도해 주세요.",
+        code: "CARD_EXCHANGE_RATE_LIMIT",
+        status: 429
+      };
+    }
+  }
+
+  const now = new Date().toISOString();
+  const result = await env.MEMBER_DB.prepare(`
+    INSERT INTO business_card_contacts (
+      card_slug, name, phone, email, organization, title, context_note,
+      source, mode, tags, status, follow_up_at, owner_note,
+      consent_version, consented_at, ip_hash, user_agent, created_at, updated_at
+    )
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, '[]', 'new', NULL, '', ?, ?, ?, ?, ?, ?)
+  `).bind(
+    cardSlug,
+    name,
+    phone,
+    email,
+    organization,
+    title,
+    note,
+    source,
+    mode,
+    "card-exchange-2026-08-04",
+    now,
+    ipHash,
+    truncateText(request.headers.get("user-agent"), 180),
+    now,
+    now
+  ).run();
+
+  return {
+    ok: true,
+    accepted: true,
+    id: result.meta?.last_row_id || result.meta?.lastRowId || null,
+    createdAt: now
+  };
+}
+
+async function listBusinessCardContacts(adminContext, env) {
+  if (!env.MEMBER_DB) {
+    return { error: "명함 교환 저장소가 아직 연결되지 않았습니다.", code: "MEMBER_DB_NOT_CONFIGURED", status: 503 };
+  }
+
+  await ensureBusinessCardTables(env);
+  const result = await env.MEMBER_DB.prepare(`
+    SELECT id, card_slug, name, phone, email, organization, title, context_note,
+           source, mode, tags, status, follow_up_at, owner_note,
+           consent_version, consented_at, created_at, updated_at
+    FROM business_card_contacts
+    ORDER BY created_at DESC
+    LIMIT 500
+  `).all();
+
+  return {
+    ok: true,
+    contacts: (result.results || []).map(mapBusinessCardContact)
+  };
+}
+
+async function updateBusinessCardContact(adminContext, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return { error: "명함 교환 저장소가 아직 연결되지 않았습니다.", code: "MEMBER_DB_NOT_CONFIGURED", status: 503 };
+  }
+
+  await ensureBusinessCardTables(env);
+  const id = Number(body.id);
+  if (!Number.isInteger(id) || id <= 0) {
+    return { error: "수정할 연락처 ID가 필요합니다.", code: "CARD_CONTACT_ID_REQUIRED", status: 400 };
+  }
+
+  const status = BUSINESS_CARD_STATUSES.has(cleanText(body.status)) ? cleanText(body.status) : "new";
+  const tags = [...new Set(asArray(body.tags)
+    .map((item) => truncateText(item, 30))
+    .filter(Boolean))].slice(0, 8);
+  const ownerNote = truncateText(body.ownerNote, 1000);
+  const followUpAt = normalizeBusinessCardFollowUpDate(body.followUpAt);
+  if (cleanText(body.followUpAt) && !followUpAt) {
+    return { error: "후속 연락 날짜를 확인해 주세요.", code: "CARD_FOLLOW_UP_DATE_INVALID", status: 400 };
+  }
+
+  const existing = await env.MEMBER_DB.prepare("SELECT id, name FROM business_card_contacts WHERE id = ?").bind(id).first();
+  if (!existing) {
+    return { error: "명함 교환 기록을 찾지 못했습니다.", code: "CARD_CONTACT_NOT_FOUND", status: 404 };
+  }
+
+  const now = new Date().toISOString();
+  await env.MEMBER_DB.prepare(`
+    UPDATE business_card_contacts
+    SET status = ?, tags = ?, follow_up_at = ?, owner_note = ?, updated_at = ?
+    WHERE id = ?
+  `).bind(status, JSON.stringify(tags), followUpAt || null, ownerNote, now, id).run();
+
+  await writeAuditLog(env, {
+    actorUid: adminContext.user.uid,
+    targetUid: String(id),
+    action: "business-card.contact.update",
+    detail: JSON.stringify({ status, tags, followUpAt })
+  });
+
+  const contact = await getBusinessCardContactById(id, env);
+  return { ok: true, contact };
+}
+
+async function deleteBusinessCardContact(adminContext, body = {}, env) {
+  if (!env.MEMBER_DB) {
+    return { error: "명함 교환 저장소가 아직 연결되지 않았습니다.", code: "MEMBER_DB_NOT_CONFIGURED", status: 503 };
+  }
+
+  await ensureBusinessCardTables(env);
+  const id = Number(body.id);
+  if (!Number.isInteger(id) || id <= 0) {
+    return { error: "삭제할 연락처 ID가 필요합니다.", code: "CARD_CONTACT_ID_REQUIRED", status: 400 };
+  }
+
+  const existing = await env.MEMBER_DB.prepare("SELECT id, name FROM business_card_contacts WHERE id = ?").bind(id).first();
+  if (!existing) {
+    return { error: "명함 교환 기록을 찾지 못했습니다.", code: "CARD_CONTACT_NOT_FOUND", status: 404 };
+  }
+
+  await env.MEMBER_DB.prepare("DELETE FROM business_card_contacts WHERE id = ?").bind(id).run();
+  await writeAuditLog(env, {
+    actorUid: adminContext.user.uid,
+    targetUid: String(id),
+    action: "business-card.contact.delete",
+    detail: JSON.stringify({ name: existing.name || "" })
+  });
+
+  return { ok: true, id };
+}
+
+async function getBusinessCardContactById(id, env) {
+  const row = await env.MEMBER_DB.prepare(`
+    SELECT id, card_slug, name, phone, email, organization, title, context_note,
+           source, mode, tags, status, follow_up_at, owner_note,
+           consent_version, consented_at, created_at, updated_at
+    FROM business_card_contacts
+    WHERE id = ?
+  `).bind(id).first();
+  return row ? mapBusinessCardContact(row) : null;
+}
+
+function mapBusinessCardContact(row = {}) {
+  let tags = [];
+  try {
+    tags = Array.isArray(JSON.parse(row.tags || "[]")) ? JSON.parse(row.tags || "[]") : [];
+  } catch {
+    tags = [];
+  }
+  return {
+    id: row.id,
+    cardSlug: row.card_slug || "",
+    name: row.name || "",
+    phone: row.phone || "",
+    email: row.email || "",
+    organization: row.organization || "",
+    title: row.title || "",
+    note: row.context_note || "",
+    source: row.source || "direct",
+    mode: normalizeBusinessCardMode(row.mode),
+    tags,
+    status: BUSINESS_CARD_STATUSES.has(row.status) ? row.status : "new",
+    followUpAt: row.follow_up_at || "",
+    ownerNote: row.owner_note || "",
+    consentVersion: row.consent_version || "",
+    consentedAt: row.consented_at || "",
+    createdAt: row.created_at || "",
+    updatedAt: row.updated_at || ""
+  };
+}
+
+async function ensureBusinessCardTables(env) {
+  if (!env.MEMBER_DB || businessCardTablesEnsured) return;
+
+  await env.MEMBER_DB.prepare(`
+    CREATE TABLE IF NOT EXISTS business_card_contacts (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      card_slug TEXT NOT NULL,
+      name TEXT NOT NULL,
+      phone TEXT DEFAULT '',
+      email TEXT DEFAULT '',
+      organization TEXT DEFAULT '',
+      title TEXT DEFAULT '',
+      context_note TEXT DEFAULT '',
+      source TEXT NOT NULL DEFAULT 'direct',
+      mode TEXT NOT NULL DEFAULT 'general',
+      tags TEXT NOT NULL DEFAULT '[]',
+      status TEXT NOT NULL DEFAULT 'new',
+      follow_up_at TEXT,
+      owner_note TEXT DEFAULT '',
+      consent_version TEXT NOT NULL,
+      consented_at TEXT NOT NULL,
+      ip_hash TEXT DEFAULT '',
+      user_agent TEXT DEFAULT '',
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    )
+  `).run();
+  await env.MEMBER_DB.prepare(`
+    CREATE INDEX IF NOT EXISTS idx_business_card_contacts_created
+      ON business_card_contacts (created_at DESC)
+  `).run();
+  await env.MEMBER_DB.prepare(`
+    CREATE INDEX IF NOT EXISTS idx_business_card_contacts_status_follow_up
+      ON business_card_contacts (status, follow_up_at)
+  `).run();
+  await env.MEMBER_DB.prepare(`
+    CREATE INDEX IF NOT EXISTS idx_business_card_contacts_ip_created
+      ON business_card_contacts (ip_hash, created_at)
+  `).run();
+  businessCardTablesEnsured = true;
+}
+
+function normalizeBusinessCardSlug(value) {
+  const slug = cleanText(value).toLowerCase();
+  return BUSINESS_CARD_SLUGS.has(slug) ? slug : "";
+}
+
+function normalizeBusinessCardMode(value) {
+  const mode = cleanText(value).toLowerCase();
+  return BUSINESS_CARD_MODES.has(mode) ? mode : "general";
+}
+
+function normalizeBusinessCardSource(value) {
+  return cleanText(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9._-]/g, "")
+    .slice(0, 60) || "direct";
+}
+
+function normalizeBusinessCardPhone(value) {
+  const raw = cleanText(value);
+  if (!raw) return "";
+  if (!/^[0-9+()\-\s.]{7,30}$/.test(raw)) return "";
+  return raw.replace(/\s+/g, " ").slice(0, 30);
+}
+
+function normalizeBusinessCardEmail(value) {
+  const email = cleanText(value).toLowerCase();
+  if (!email) return "";
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? email.slice(0, 120) : "";
+}
+
+function normalizeBusinessCardFollowUpDate(value) {
+  const date = cleanText(value);
+  if (!date) return "";
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return "";
+  const parsed = new Date(`${date}T00:00:00Z`);
+  return Number.isNaN(parsed.getTime()) ? "" : date;
+}
+
+async function hashBusinessCardClient(request, env) {
+  const ip = cleanText(request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for"));
+  if (!ip) return "";
+  const salt = cleanText(env.CARD_EXCHANGE_HASH_SALT || "gyo6-card-exchange-v1");
+  const input = new TextEncoder().encode(`${salt}:${ip}`);
+  const digest = await crypto.subtle.digest("SHA-256", input);
+  return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("").slice(0, 40);
 }
 
 async function listBoardPosts(authContext, env, url) {
