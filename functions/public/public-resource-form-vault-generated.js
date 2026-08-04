@@ -6,24 +6,27 @@
     root.GYO6_PUBLIC_RESOURCE_FORM_VAULT = data;
   }
 })(typeof globalThis !== "undefined" ? globalThis : window, function createGeneratedPublicResourceFormVault() { return {
-  "version": "career-employment-expanded-2026-08-04T03-49-32-301Z",
-  "generatedAt": "2026-08-04T03:49:52.472Z",
+  "version": "career-employment-expanded-2026-08-04T11-23-15-715Z",
+  "generatedAt": "2026-08-04T11:23:46.873Z",
   "policy": "form-vault-v2-career-employment-official-source",
   "stats": {
-    "total": 90,
+    "total": 140,
     "target": 10000,
-    "ready": 90,
-    "pdfPreview": 39,
-    "editable": 44,
-    "plannedPdf": 55,
-    "plannedEditable": 55,
+    "ready": 140,
+    "pdfPreview": 40,
+    "editable": 83,
+    "plannedPdf": 105,
+    "plannedEditable": 105,
     "extractionQueued": 0,
     "highPriorityExtraction": 0,
     "byCategory": {
       "careerEmployment": 41,
       "fieldTraining": 32,
-      "schoolViolenceSafety": 11,
-      "studentLife": 6
+      "privacyRecords": 3,
+      "studentLife": 44,
+      "staffLabor": 1,
+      "schoolViolenceSafety": 16,
+      "general": 3
     },
     "careerEmploymentReady": 41,
     "careerEmploymentCoverage": {
@@ -32,7 +35,7 @@
       "fieldToEmployment": 33,
       "employmentAdministration": 1
     },
-    "verifiedFiles": 82
+    "verifiedFiles": 121
   },
   "entries": [
     {
@@ -67,8 +70,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-16sern3",
-      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
+      "id": "form-ready-career-crossfile-nbm697",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -98,8 +101,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-1td3erw",
-      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
+      "id": "form-ready-career-crossfile-1ra22rs",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -129,8 +132,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-1i2nekw",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "form-ready-career-crossfile-bj3ai4",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -155,13 +158,13 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "[ìì] 2025ë ê°ì  ì§ìê³ê³  íì¥ì¤ìµ ë§¤ë´ì¼ ììëª¨ìì§.hwp",
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-bph8c6",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
+      "id": "form-ready-career-crossfile-o43iwi",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -186,13 +189,13 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "[ìì] 2026ë ê°ì  ì§ìê³ê³  íì¥ì¤ìµ ê³µíµë§¤ë´ì¼ ììëª¨ìì§.hwp",
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-1xu3n56",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "form-ready-career-crossfile-1fmxg0u",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -217,13 +220,13 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "[ìì]2024ë ê°ì  ì§ìê³ê³  íì¥ì¤ìµ ë§¤ë´ì¼ ììëª¨ìì§.hwp",
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-6yl576",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
+      "id": "form-ready-career-crossfile-6hrf52",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -248,13 +251,13 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "â[ë¶ì] 2024 íì¥ì¤ìµ ë§¤ë´ì¼ ì£¼ì ë³ê²½ì¬í­ ì êµ¬ëì¡°í.hwpx",
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-cpmzph",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "form-ready-career-crossfile-12jmy75",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -279,7 +282,7 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "2. 2023ë ê°ì  ì§ìê³ê³  íì¥ì¤ìµ ë§¤ë´ì¼ ììëª¨ìì§.hwp",
       "verifiedFile": true
     },
@@ -466,8 +469,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-1j8xhr7",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
+      "id": "form-ready-career-crossfile-1eple7n",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -496,8 +499,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-6jfm3j",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
+      "id": "form-ready-career-crossfile-13127b5",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -727,7 +730,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z",
+      "generatedAt": "2026-08-04T11:23:15.582Z",
       "employmentScope": "jobPreparation",
       "verifiedOfficial": true
     },
@@ -759,7 +762,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z",
+      "generatedAt": "2026-08-04T11:23:15.582Z",
       "employmentScope": "jobPreparation",
       "verifiedOfficial": true
     },
@@ -848,8 +851,8 @@
       "sourceTier": "previous-generated-index"
     },
     {
-      "id": "form-ready-career-crossfile-11rlbw8",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf",
+      "id": "form-ready-career-crossfile-15utevy",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -878,8 +881,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-m7msln",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf",
+      "id": "form-ready-career-crossfile-1uv8jmp",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -935,7 +938,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z",
+      "generatedAt": "2026-08-04T11:23:15.582Z",
       "employmentScope": "jobPreparation",
       "verifiedOfficial": true
     },
@@ -967,7 +970,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z",
+      "generatedAt": "2026-08-04T11:23:15.582Z",
       "employmentScope": "jobPreparation",
       "verifiedOfficial": true
     },
@@ -999,7 +1002,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z",
+      "generatedAt": "2026-08-04T11:23:15.582Z",
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true
     },
@@ -1031,13 +1034,13 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z",
+      "generatedAt": "2026-08-04T11:23:15.582Z",
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true
     },
     {
-      "id": "form-ready-career-crossfile-7fjixc",
-      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
+      "id": "form-ready-career-crossfile-wiafno",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1066,8 +1069,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-q1bc2k",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
+      "id": "form-ready-career-crossfile-5cpn2o",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1092,13 +1095,13 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "ë¶ì1. 2024 ì§ìê³ê³  íì¥ì¤ìµ ì´ì ê³µíµ ë§¤ë´ì¼(íêµì©)_íê¸.hwp",
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-p7u2uu",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
+      "id": "form-ready-career-crossfile-sfm1mq",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1122,13 +1125,13 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "ë¶ì1. 2024 ì§ìê³ê³  íì¥ì¤ìµ ì´ì ê³µíµ ë§¤ë´ì¼(íêµì©)_PDF.pdf",
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-11q7r2l",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
+      "id": "form-ready-career-crossfile-107pmnd",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1153,13 +1156,13 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "ë¶ì2. 2024 ì§ìê³ê³  íì¥ì¤ìµ ì´ì ê³µíµ ë§¤ë´ì¼(ê¸°ìì©)_íê¸.hwp",
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-c6llw5",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
+      "id": "form-ready-career-crossfile-17exgix",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1183,7 +1186,7 @@
       ],
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true,
-      "sourceTier": "official-file-harvest",
+      "sourceTier": "previous-generated-index",
       "fileName": "ë¶ì2. 2024 ì§ìê³ê³  íì¥ì¤ìµ ì´ì ê³µíµ ë§¤ë´ì¼(ê¸°ìì©)_PDF.pdf",
       "verifiedFile": true
     },
@@ -1278,8 +1281,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1295,7 +1298,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20211007&filerealname=%28%EB%B6%99%EC%9E%841%29+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EC%A0%90%EA%B2%80%ED%91%9C%28%EA%B3%B5%ED%86%B5%29.hwp&filename=B90BC8B0F3EA4EB2817327F7E491F414.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20211007&filerealname=%28%EB%B6%99%EC%9E%841%29+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EC%A0%90%EA%B2%80%ED%91%9C%28%EA%B3%B5%ED%86%B5%29.hwp&filename=B90BC8B0F3EA4EB2817327F7E491F414.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20211007&filerealname=%28%EB%B6%99%EC%9E%841%29+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84%EC%A0%90%EA%B2%80%ED%91%9C%28%EA%B3%B5%ED%86%B5%29.hwp&filename=B90BC8B0F3EA4EB2817327F7E491F414.hwp",
       "priority": 78,
       "tags": [
@@ -1305,11 +1308,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1326,7 +1329,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20211007&filerealname=%28%EB%B6%99%EC%9E%842%29+2021+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=0F9506A132DB466A8833819312634266.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20211007&filerealname=%28%EB%B6%99%EC%9E%842%29+2021+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=0F9506A132DB466A8833819312634266.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf.docx",
       "priority": 75,
       "tags": [
         "(붙임2) 2021 직업계고 산업안전 매뉴얼",
@@ -1335,7 +1338,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-7287-0-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1365,11 +1368,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
-      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hw",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1385,7 +1388,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20210705&filerealname=%5B%EB%B6%99%EC%9E%841%5D+2021%ED%95%99%EB%85%84%EB%8F%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EB%A7%A4%EB%89%B4%EC%96%BC_%EC%84%9C%EC%8B%9D.hwp&filename=C024C6D7D0F34CE5A15AF5347C7A3AF5.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20210705&filerealname=%5B%EB%B6%99%EC%9E%841%5D+2021%ED%95%99%EB%85%84%EB%8F%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EB%A7%A4%EB%89%B4%EC%96%BC_%EC%84%9C%EC%8B%9D.hwp&filename=C024C6D7D0F34CE5A15AF5347C7A3AF5.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20210705&filerealname=%5B%EB%B6%99%EC%9E%841%5D+2021%ED%95%99%EB%85%84%EB%8F%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EB%A7%A4%EB%89%B4%EC%96%BC_%EC%84%9C%EC%8B%9D.hwp&filename=C024C6D7D0F34CE5A15AF5347C7A3AF5.hwp",
       "priority": 79,
       "tags": [
@@ -1395,11 +1398,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
-      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1415,8 +1418,8 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20210705&filerealname=%5B%EB%B6%99%EC%9E%842%5D+%28%EC%95%88%EB%82%B4%29_%EC%82%B0%EC%97%85%EC%B2%B4_%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5_%EC%B0%B8%EC%97%AC_%EB%8F%99%EC%9D%98%EC%84%9C%28%ED%95%99%EB%B6%80%EB%AA%A8_%EB%8F%99%EC%9D%98%EC%84%9C%29_%EC%84%9C%EC%8B%9D_%EC%95%88%EB%82%B4.pptx&filename=46467015C59D4915934D4A947560C680.pptx",
       "previewUrl": "",
       "editableUrl": "",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx.docx",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx.docx",
       "priority": 62,
       "tags": [
         "[붙임2] (안내)_산업체_현장실습_참여_동의서(학부모_동의서)_서식_안내",
@@ -1424,11 +1427,11 @@
         "fieldTraining",
         "바로사용"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1444,7 +1447,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250610&filerealname=%5B%EC%84%9C%EC%8B%9D%5D+2025%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=A5414CBF3A0949DC9089DEC4090CD95C.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250610&filerealname=%5B%EC%84%9C%EC%8B%9D%5D+2025%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=A5414CBF3A0949DC9089DEC4090CD95C.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250610&filerealname=%5B%EC%84%9C%EC%8B%9D%5D+2025%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=A5414CBF3A0949DC9089DEC4090CD95C.hwp",
       "priority": 83,
       "tags": [
@@ -1454,11 +1457,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1474,7 +1477,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260331&filerealname=%5B%EC%84%9C%EC%8B%9D%5D+2026%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EA%B3%B5%ED%86%B5%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=3669AF9CF1CB4599BDFEF30016A894DF.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260331&filerealname=%5B%EC%84%9C%EC%8B%9D%5D+2026%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EA%B3%B5%ED%86%B5%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=3669AF9CF1CB4599BDFEF30016A894DF.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260331&filerealname=%5B%EC%84%9C%EC%8B%9D%5D+2026%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EA%B3%B5%ED%86%B5%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=3669AF9CF1CB4599BDFEF30016A894DF.hwp",
       "priority": 84,
       "tags": [
@@ -1484,11 +1487,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1504,7 +1507,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%5B%EC%84%9C%EC%8B%9D%5D2024%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=C693CF60F5CD41BF8AAA5DC4244D5F77.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%5B%EC%84%9C%EC%8B%9D%5D2024%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=C693CF60F5CD41BF8AAA5DC4244D5F77.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%5B%EC%84%9C%EC%8B%9D%5D2024%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=C693CF60F5CD41BF8AAA5DC4244D5F77.hwp",
       "priority": 82,
       "tags": [
@@ -1514,11 +1517,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1534,7 +1537,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240620&filerealname=%E2%98%85%5B%EB%B6%99%EC%9E%84%5D+2024+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%A3%BC%EC%9A%94+%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD+%EC%8B%A0%EA%B5%AC%EB%8C%80%EC%A1%B0%ED%91%9C.hwpx&filename=CC42A826E69840A8B9D7C3BB04E46D48.hwpx",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240620&filerealname=%E2%98%85%5B%EB%B6%99%EC%9E%84%5D+2024+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%A3%BC%EC%9A%94+%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD+%EC%8B%A0%EA%B5%AC%EB%8C%80%EC%A1%B0%ED%91%9C.hwpx&filename=CC42A826E69840A8B9D7C3BB04E46D48.hwpx",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240620&filerealname=%E2%98%85%5B%EB%B6%99%EC%9E%84%5D+2024+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%A3%BC%EC%9A%94+%EB%B3%80%EA%B2%BD%EC%82%AC%ED%95%AD+%EC%8B%A0%EA%B5%AC%EB%8C%80%EC%A1%B0%ED%91%9C.hwpx&filename=CC42A826E69840A8B9D7C3BB04E46D48.hwpx",
       "priority": 82,
       "tags": [
@@ -1544,11 +1547,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1564,7 +1567,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20230517&filerealname=2.+2023%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=A8189ABDC05B484DA99E3D0D31427FD6.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20230517&filerealname=2.+2023%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=A8189ABDC05B484DA99E3D0D31427FD6.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20230517&filerealname=2.+2023%EB%85%84+%EA%B0%9C%EC%A0%95+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%EC%84%9C%EC%8B%9D%EB%AA%A8%EC%9D%8C%EC%A7%91.hwp&filename=A8189ABDC05B484DA99E3D0D31427FD6.hwp",
       "priority": 81,
       "tags": [
@@ -1574,7 +1577,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-6465-0-붙임1-2023학년도-현장실습-지원금-통합신청-사전신청-매뉴얼-학생용-pdf",
@@ -1604,7 +1607,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-6465-1-붙임2-2023학년도-현장실습-지원금-faq-pdf",
@@ -1634,7 +1637,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6962-0-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
@@ -1664,7 +1667,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6963-0-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1694,7 +1697,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6961-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
@@ -1724,7 +1727,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6961-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
@@ -1754,11 +1757,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1775,7 +1778,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250610&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%EA%B8%B0%EC%97%85%EC%9A%A9%29.pdf&filename=AD0F1426AD204599B3BA91AF415DABBB.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250610&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%EA%B8%B0%EC%97%85%EC%9A%A9%29.pdf&filename=AD0F1426AD204599B3BA91AF415DABBB.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매.docx",
       "priority": 79,
       "tags": [
         "2025년 직업계고 현장실습 운영 공통 매뉴얼(기업용)",
@@ -1784,11 +1787,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1805,7 +1808,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250610&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%ED%95%99%EA%B5%90%EC%9A%A9%29.pdf&filename=1311947925BE4618875F2BCC2894AA3B.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250610&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%ED%95%99%EA%B5%90%EC%9A%A9%29.pdf&filename=1311947925BE4618875F2BCC2894AA3B.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매.docx",
       "priority": 79,
       "tags": [
         "2025년 직업계고 현장실습 운영 공통 매뉴얼(학교용)",
@@ -1814,7 +1817,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-7578-0-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
@@ -1844,7 +1847,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6958-0-2024년-개인정보활용동의서-서식-hwp",
@@ -1874,7 +1877,498 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-0-서식-초등-4-1-1-1-각-급",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-0-서식-초등-4-1-1-1-각-급-학교-개인정보-수집",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "개인정보 파일 등록 - [서식-초등-4-1-1-1] 각 급 학교 개인정보 수집업무 길잡이(초등용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "privacyRecords",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28697a866f374ae96b33001bf71c0dec",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28697a866f374ae96b33001bf71c0dec",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28697a866f374ae96b33001bf71c0dec",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-0-서식-초등-4-1-1-1-각-급-학교-개인정보-수집.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28697a866f374ae96b33001bf71c0dec",
+      "priority": 66,
+      "tags": [
+        "개인정보 파일 등록 - [서식-초등-4-1-1-1] 각 급 학교 개인정보 수집업무 길잡이(초등용)",
+        "경상북도교육청 학교지원종합자료실",
+        "privacyRecords",
+        "바로사용",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-1-서식-초등-4-1-1-2-개인정",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-1-서식-초등-4-1-1-2-개인정보-점검-프로그램-실",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "개인정보 파일 등록 - [서식-초등-4-1-1-2] 개인정보 점검 프로그램 실행 방법",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "privacyRecords",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cd34524d742523f3efbb8b1b09e40bf4",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cd34524d742523f3efbb8b1b09e40bf4",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-1-서식-초등-4-1-1-2-개인정보-점검-프로그램-실.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-1-서식-초등-4-1-1-2-개인정보-점검-프로그램-실.docx",
+      "priority": 50,
+      "tags": [
+        "개인정보 파일 등록 - [서식-초등-4-1-1-2] 개인정보 점검 프로그램 실행 방법",
+        "경상북도교육청 학교지원종합자료실",
+        "privacyRecords",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-2-서식-초등-4-1-1-3-202",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-2-서식-초등-4-1-1-3-2025년-개인정보파일-등",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "개인정보 파일 등록 - [서식-초등-4-1-1-3] 2025년 개인정보파일 등록 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "privacyRecords",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e310c73763c38a006e8e504cf0297908",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e310c73763c38a006e8e504cf0297908",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-2-서식-초등-4-1-1-3-2025년-개인정보파일-등.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14642-cntntsid-6659-2-서식-초등-4-1-1-3-2025년-개인정보파일-등.docx",
+      "priority": 55,
+      "tags": [
+        "개인정보 파일 등록 - [서식-초등-4-1-1-3] 2025년 개인정보파일 등록 매뉴얼",
+        "경상북도교육청 학교지원종합자료실",
+        "privacyRecords",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-0-서식-초등-4-14-2-1-pa",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-0-서식-초등-4-14-2-1-paps-측정-결과지",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "결과 평가 및 처리 - [서식-초등-4-14-2-1] PAPS 측정 결과지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-2-1] PAPS ì¸¡ì  ê²°ê³¼ì§.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28a9f65b907b8b678cb125eec11e34b3",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28a9f65b907b8b678cb125eec11e34b3",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28a9f65b907b8b678cb125eec11e34b3",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-0-서식-초등-4-14-2-1-paps-측정-결과지.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28a9f65b907b8b678cb125eec11e34b3",
+      "priority": 50,
+      "tags": [
+        "결과 평가 및 처리 - [서식-초등-4-14-2-1] PAPS 측정 결과지",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-1-서식-초등-4-14-2-2-pa",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-1-서식-초등-4-14-2-2-paps-체크리스트",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "결과 평가 및 처리 - [서식-초등-4-14-2-2] PAPS 체크리스트",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-2-2] PAPS ì²´í¬ë¦¬ì¤í¸.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c1484491342e3b6b2a4d5f14f9928f67",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c1484491342e3b6b2a4d5f14f9928f67",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c1484491342e3b6b2a4d5f14f9928f67",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-1-서식-초등-4-14-2-2-paps-체크리스트.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c1484491342e3b6b2a4d5f14f9928f67",
+      "priority": 50,
+      "tags": [
+        "결과 평가 및 처리 - [서식-초등-4-14-2-2] PAPS 체크리스트",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-2-서식-초등-4-14-2-3-pa",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-2-서식-초등-4-14-2-3-paps-기록지",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "결과 평가 및 처리 - [서식-초등-4-14-2-3] PAPS 기록지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-2-3] PAPS ê¸°ë¡ì§.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d6384012f098885092b51a1d628c54e6",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d6384012f098885092b51a1d628c54e6",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d6384012f098885092b51a1d628c54e6",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-2-서식-초등-4-14-2-3-paps-기록지.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d6384012f098885092b51a1d628c54e6",
+      "priority": 50,
+      "tags": [
+        "결과 평가 및 처리 - [서식-초등-4-14-2-3] PAPS 기록지",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-3-서식-초등-4-14-2-4-자기",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-3-서식-초등-4-14-2-4-자기신체평가-설문지",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "결과 평가 및 처리 - [서식-초등-4-14-2-4] 자기신체평가 설문지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-2-4] ìê¸°ì ì²´íê° ì¤ë¬¸ì§.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6ec00811b74a7193a583c1261a7b527c",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6ec00811b74a7193a583c1261a7b527c",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6ec00811b74a7193a583c1261a7b527c",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-3-서식-초등-4-14-2-4-자기신체평가-설문지.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6ec00811b74a7193a583c1261a7b527c",
+      "priority": 50,
+      "tags": [
+        "결과 평가 및 처리 - [서식-초등-4-14-2-4] 자기신체평가 설문지",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-4-서식-초등-4-14-2-5-자세",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-4-서식-초등-4-14-2-5-자세평가-설문지",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "결과 평가 및 처리 - [서식-초등-4-14-2-5] 자세평가 설문지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-2-5] ìì¸íê° ì¤ë¬¸ì§.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ab1ee8a68c68850c776ccb97d3ac9578",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ab1ee8a68c68850c776ccb97d3ac9578",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ab1ee8a68c68850c776ccb97d3ac9578",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-4-서식-초등-4-14-2-5-자세평가-설문지.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ab1ee8a68c68850c776ccb97d3ac9578",
+      "priority": 50,
+      "tags": [
+        "결과 평가 및 처리 - [서식-초등-4-14-2-5] 자세평가 설문지",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-5-서식-초등-4-14-2-6-종합",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-5-서식-초등-4-14-2-6-종합유연성검사-숫자카드",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "결과 평가 및 처리 - [서식-초등-4-14-2-6] 종합유연성검사 숫자카드",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-2-6] ì¢í©ì ì°ì±ê²ì¬ ì«ìì¹´ë.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=264537a0e78a2eef2c7fbb4819d18e1d",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=264537a0e78a2eef2c7fbb4819d18e1d",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=264537a0e78a2eef2c7fbb4819d18e1d",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-5-서식-초등-4-14-2-6-종합유연성검사-숫자카드.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=264537a0e78a2eef2c7fbb4819d18e1d",
+      "priority": 50,
+      "tags": [
+        "결과 평가 및 처리 - [서식-초등-4-14-2-6] 종합유연성검사 숫자카드",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-6-서식-초등-4-14-2-7-건강",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-6-서식-초등-4-14-2-7-건강체력교실-운영-계획-",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "결과 평가 및 처리 - [서식-초등-4-14-2-7] 건강체력교실 운영 계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-2-7] ê±´ê°ì²´ë ¥êµì¤ ì´ì ê³í(ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7aeceebf9337e1bd58d0481aad7ca530",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7aeceebf9337e1bd58d0481aad7ca530",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7aeceebf9337e1bd58d0481aad7ca530",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14689-cntntsid-6946-6-서식-초등-4-14-2-7-건강체력교실-운영-계획.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7aeceebf9337e1bd58d0481aad7ca530",
+      "priority": 50,
+      "tags": [
+        "결과 평가 및 처리 - [서식-초등-4-14-2-7] 건강체력교실 운영 계획(예시)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14879-cntntsid-6435-0-서식-중등-1-23-1-1-계약",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14879-cntntsid-6435-0-서식-중등-1-23-1-1-계약제교원-자료전송-매뉴",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "계약제교원 임용 일반 - [서식-중등-1-23-1-1] 계약제교원 자료전송 매뉴얼",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "staffLabor",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì¤ë±-1-23-1-1] ê³ì½ì êµì ìë£ì ì¡ ë§¤ë´ì¼-ìµì¢(2021.1.5.).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c06d77071f3e2fa9ad164523fc19261",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c06d77071f3e2fa9ad164523fc19261",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c06d77071f3e2fa9ad164523fc19261",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14879-cntntsid-6435-0-서식-중등-1-23-1-1-계약제교원-자료전송-매뉴.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9c06d77071f3e2fa9ad164523fc19261",
+      "priority": 50,
+      "tags": [
+        "계약제교원 임용 일반 - [서식-중등-1-23-1-1] 계약제교원 자료전송 매뉴얼",
+        "경상북도교육청 학교지원종합자료실",
+        "staffLabor",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-0-서식-초등-4-14-1-1-pa",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-0-서식-초등-4-14-1-1-paps-실시-계획-예시",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-1] PAPS 실시 계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-1-1] PAPS ì¤ì ê³í(ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=00e68f52ca784bec0839fe1c3b332f43",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=00e68f52ca784bec0839fe1c3b332f43",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=00e68f52ca784bec0839fe1c3b332f43",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-0-서식-초등-4-14-1-1-paps-실시-계획-예시.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=00e68f52ca784bec0839fe1c3b332f43",
+      "priority": 50,
+      "tags": [
+        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-1] PAPS 실시 계획(예시)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-1-서식-초등-4-14-1-2-pa",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-1-서식-초등-4-14-1-2-paps-측정-종목-구성",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-2] PAPS 측정 종목 구성",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-1-2] PAPS ì¸¡ì  ì¢ëª© êµ¬ì±.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=99c31ad1727db12fa588440f33d6625a",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=99c31ad1727db12fa588440f33d6625a",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=99c31ad1727db12fa588440f33d6625a",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-1-서식-초등-4-14-1-2-paps-측정-종목-구성.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=99c31ad1727db12fa588440f33d6625a",
+      "priority": 50,
+      "tags": [
+        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-2] PAPS 측정 종목 구성",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-2-서식-초등-4-14-1-3-pa",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-2-서식-초등-4-14-1-3-paps-측정-준비-사항",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-3] PAPS 측정 준비 사항",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-1-3] PAPS ì¸¡ì  ì¤ë¹ ì¬í­.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba5e4859820a6a256e2a96f001b65d78",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba5e4859820a6a256e2a96f001b65d78",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba5e4859820a6a256e2a96f001b65d78",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-2-서식-초등-4-14-1-3-paps-측정-준비-사항.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ba5e4859820a6a256e2a96f001b65d78",
+      "priority": 50,
+      "tags": [
+        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-3] PAPS 측정 준비 사항",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-3-서식-초등-4-14-1-4-pa",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-3-서식-초등-4-14-1-4-paps-측정-장비-안내",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-4] PAPS 측정 장비 안내",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-1-4] PAPS ì¸¡ì  ì¥ë¹ ìë´.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b786b69a128467fb67e795acdda9e530",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b786b69a128467fb67e795acdda9e530",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b786b69a128467fb67e795acdda9e530",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-3-서식-초등-4-14-1-4-paps-측정-장비-안내.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b786b69a128467fb67e795acdda9e530",
+      "priority": 50,
+      "tags": [
+        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-4] PAPS 측정 장비 안내",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-4-서식-초등-4-14-1-5-pa",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-4-서식-초등-4-14-1-5-paps-관련-faq",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-5] PAPS 관련 FAQ",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-4-14-1-5] PAPS ê´ë ¨ FAQ.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c6b530d6be8890238929a5971e4f0488",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c6b530d6be8890238929a5971e4f0488",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c6b530d6be8890238929a5971e4f0488",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14688-cntntsid-6945-4-서식-초등-4-14-1-5-paps-관련-faq.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c6b530d6be8890238929a5971e4f0488",
+      "priority": 50,
+      "tags": [
+        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-5] PAPS 관련 FAQ",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-7314-0-서식-기업현장교사-자격-확인서-hwp",
@@ -1904,11 +2398,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pd",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1925,7 +2419,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250704&filerealname=%EB%A6%AC%ED%94%8C%EB%A6%BF-%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%28%EA%B8%B0%EC%97%85%EC%9A%A9%29_%EC%B5%9C%EC%A2%85.pdf&filename=C912C633DF6B472284D142025F2A78C3.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250704&filerealname=%EB%A6%AC%ED%94%8C%EB%A6%BF-%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%28%EA%B8%B0%EC%97%85%EC%9A%A9%29_%EC%B5%9C%EC%A2%85.pdf&filename=C912C633DF6B472284D142025F2A78C3.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼.docx",
       "priority": 74,
       "tags": [
         "리플릿-직업계고 현장실습 운영 공통 매뉴얼 (기업용)_최종",
@@ -1934,11 +2428,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pd",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1955,7 +2449,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250704&filerealname=%EB%A6%AC%ED%94%8C%EB%A6%BF-%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%28%ED%95%99%EA%B5%90%EC%9A%A9%29_%EC%B5%9C%EC%A2%85.pdf&filename=C41C2A0F5ACB4F888B36BEBDD5E9F89D.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250704&filerealname=%EB%A6%AC%ED%94%8C%EB%A6%BF-%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC+%28%ED%95%99%EA%B5%90%EC%9A%A9%29_%EC%B5%9C%EC%A2%85.pdf&filename=C41C2A0F5ACB4F888B36BEBDD5E9F89D.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼.docx",
       "priority": 74,
       "tags": [
         "리플릿-직업계고 현장실습 운영 공통 매뉴얼 (학교용)_최종",
@@ -1964,11 +2458,73 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
-      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14692-cntntsid-6948-0-서식-초등-5-1-1-1-보건일",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14692-cntntsid-6948-0-서식-초등-5-1-1-1-보건일지-서식-예시",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "보건실 운영 계획 - [서식-초등-5-1-1-1] 보건일지 서식(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "schoolViolenceSafety",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-5-1-1-1] ë³´ê±´ì¼ì§ìì(ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbeb29cb65cee8446db2ccb88f5e2755",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbeb29cb65cee8446db2ccb88f5e2755",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbeb29cb65cee8446db2ccb88f5e2755",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14692-cntntsid-6948-0-서식-초등-5-1-1-1-보건일지-서식-예시.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbeb29cb65cee8446db2ccb88f5e2755",
+      "priority": 50,
+      "tags": [
+        "보건실 운영 계획 - [서식-초등-5-1-1-1] 보건일지 서식(예시)",
+        "경상북도교육청 학교지원종합자료실",
+        "schoolViolenceSafety",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14692-cntntsid-6948-1-서식-초등-5-1-1-2-보건실",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14692-cntntsid-6948-1-서식-초등-5-1-1-2-보건실-비품대장-서식-예시",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "보건실 운영 계획 - [서식-초등—5-1-1-2] 보건실 비품대장 서식(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "schoolViolenceSafety",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-5-1-1-2] ë³´ê±´ì¤ë¹íëì¥ìì(ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ebb6c22b6d76c5f26e423dd6dadb664",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ebb6c22b6d76c5f26e423dd6dadb664",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ebb6c22b6d76c5f26e423dd6dadb664",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14692-cntntsid-6948-1-서식-초등-5-1-1-2-보건실-비품대장-서식-예시.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ebb6c22b6d76c5f26e423dd6dadb664",
+      "priority": 50,
+      "tags": [
+        "보건실 운영 계획 - [서식-초등—5-1-1-2] 보건실 비품대장 서식(예시)",
+        "경상북도교육청 학교지원종합자료실",
+        "schoolViolenceSafety",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pd",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1985,7 +2541,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20220613&filerealname=%EB%B6%99%EC%9E%84.+2022%ED%95%99%EB%85%84%EB%8F%84+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%A7%80%EC%9B%90%EA%B8%88+%EC%82%AC%EC%A0%84%EC%8B%A0%EC%B2%AD+%EB%A7%A4%EB%89%B4%EC%96%BC_%EC%B5%9C%EC%A2%85.pdf&filename=B7980E3D8C924FE9B27556A6DD62312D.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20220613&filerealname=%EB%B6%99%EC%9E%84.+2022%ED%95%99%EB%85%84%EB%8F%84+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%A7%80%EC%9B%90%EA%B8%88+%EC%82%AC%EC%A0%84%EC%8B%A0%EC%B2%AD+%EB%A7%A4%EB%89%B4%EC%96%BC_%EC%B5%9C%EC%A2%85.pdf&filename=B7980E3D8C924FE9B27556A6DD62312D.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf.docx",
       "priority": 76,
       "tags": [
         "붙임. 2022학년도 현장실습 지원금 사전신청 매뉴얼_최종",
@@ -1994,11 +2550,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2014,7 +2570,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%841.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%ED%95%99%EA%B5%90%EC%9A%A9%29_%ED%95%9C%EA%B8%80.hwp&filename=2C899BC25F4B4DA7941D3397D5D82F3B.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%841.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%ED%95%99%EA%B5%90%EC%9A%A9%29_%ED%95%9C%EA%B8%80.hwp&filename=2C899BC25F4B4DA7941D3397D5D82F3B.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%841.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%ED%95%99%EA%B5%90%EC%9A%A9%29_%ED%95%9C%EA%B8%80.hwp&filename=2C899BC25F4B4DA7941D3397D5D82F3B.hwp",
       "priority": 82,
       "tags": [
@@ -2024,11 +2580,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2045,7 +2601,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%841.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%ED%95%99%EA%B5%90%EC%9A%A9%29_PDF.pdf&filename=072A242B76664A809966D8F00BD4F4F7.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%841.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%ED%95%99%EA%B5%90%EC%9A%A9%29_PDF.pdf&filename=072A242B76664A809966D8F00BD4F4F7.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf.docx",
       "priority": 78,
       "tags": [
         "붙임1. 2024 직업계고 현장실습 운영 공통 매뉴얼(학교용)_PDF",
@@ -2054,11 +2610,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2074,7 +2630,7 @@
       "downloadUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%842.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%EA%B8%B0%EC%97%85%EC%9A%A9%29_%ED%95%9C%EA%B8%80.hwp&filename=68FBE46917BA4EEEA9721DD543796CDB.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%842.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%EA%B8%B0%EC%97%85%EC%9A%A9%29_%ED%95%9C%EA%B8%80.hwp&filename=68FBE46917BA4EEEA9721DD543796CDB.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp.pdf",
       "plannedEditableUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%842.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%EA%B8%B0%EC%97%85%EC%9A%A9%29_%ED%95%9C%EA%B8%80.hwp&filename=68FBE46917BA4EEEA9721DD543796CDB.hwp",
       "priority": 82,
       "tags": [
@@ -2084,11 +2640,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
-      "sourceResourceId": "acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2105,7 +2661,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%842.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%EA%B8%B0%EC%97%85%EC%9A%A9%29_PDF.pdf&filename=2E83812651264402B72993B053E0DF24.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240611&filerealname=%EB%B6%99%EC%9E%842.+2024+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%9A%B4%EC%98%81+%EA%B3%B5%ED%86%B5+%EB%A7%A4%EB%89%B4%EC%96%BC%28%EA%B8%B0%EC%97%85%EC%9A%A9%29_PDF.pdf&filename=2E83812651264402B72993B053E0DF24.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf.docx",
       "priority": 78,
       "tags": [
         "붙임2. 2024 직업계고 현장실습 운영 공통 매뉴얼(기업용)_PDF",
@@ -2114,11 +2670,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
-      "sourceResourceId": "acquisition-existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2135,7 +2691,7 @@
       "previewUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20220121&filerealname=%EB%B6%99%EC%9E%842.+%EC%8B%A4%EC%8A%B5%EA%B8%B0%EC%97%85+%EC%88%98%EC%A0%95+%EA%B8%B0%EB%8A%A5+%EC%9D%B4%EC%9A%A9+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=B1D1957428C1400EA062AEB1D4847766.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20220121&filerealname=%EB%B6%99%EC%9E%842.+%EC%8B%A4%EC%8A%B5%EA%B8%B0%EC%97%85+%EC%88%98%EC%A0%95+%EA%B8%B0%EB%8A%A5+%EC%9D%B4%EC%9A%A9+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=B1D1957428C1400EA062AEB1D4847766.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf.docx",
       "priority": 62,
       "tags": [
         "붙임2. 실습기업 수정 기능 이용 매뉴얼",
@@ -2144,7 +2700,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-588219-1-서식-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-hwp",
@@ -2174,7 +2730,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1560985-0-16-디지털-성폭력-및-딥페이크등-예방교육자료-제작-최종-보고서-제출-pdf",
@@ -2204,7 +2760,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1525064-0-2024년-사건통보서-및-재발방지대책-제출-서식-hwp",
@@ -2234,7 +2790,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-school-violence-1548192-1-2025-학교폭력-사안처리-세부설명-a-to-z-서식모음집-hwpx",
@@ -2264,7 +2820,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1575631-0-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
@@ -2294,7 +2850,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1562027-1-단계별-관련-서식-2025개정판-학교내성희롱성폭력사안대응업무안내서-hwpx",
@@ -2324,7 +2880,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-583659-1-성희롱-성폭력-사안처리지원단-외부지원-신청서-hwp",
@@ -2354,7 +2910,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1575631-1-성희롱성폭력-사안발생-미-통보-동의서-서식-hwpx",
@@ -2384,7 +2940,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1544100-0-여성가족부-성폭력방지과-번-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
@@ -2414,7 +2970,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1541549-1-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-단계별-관련-서식-hwp",
@@ -2444,7 +3000,38 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14589-cntntsid-6597-0-서식-교무학사-3-1-1-1-아",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14589-cntntsid-6597-0-서식-교무학사-3-1-1-1-아동학대체크리스트",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "아동학대 발견 및 신고 - [서식-교무학사-3-1-1-1] 아동학대체크리스트",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "schoolViolenceSafety",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-1-1-1]ìëíëì²´í¬ë¦¬ì¤í¸.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=33dd76177ac6416820c2b8c3d84cc230",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=33dd76177ac6416820c2b8c3d84cc230",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=33dd76177ac6416820c2b8c3d84cc230",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14589-cntntsid-6597-0-서식-교무학사-3-1-1-1-아동학대체크리스트.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=33dd76177ac6416820c2b8c3d84cc230",
+      "priority": 50,
+      "tags": [
+        "아동학대 발견 및 신고 - [서식-교무학사-3-1-1-1] 아동학대체크리스트",
+        "경상북도교육청 학교지원종합자료실",
+        "schoolViolenceSafety",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acq",
@@ -2527,7 +3114,6 @@
         "학교 평가 - [서식-관리-2-2-1-2] 2026 학교평가 길라잡이(중등)",
         "학교 평가 - [서식-관리-2-2-1-3] 2026 학교평가 길라잡이(중등)",
         "학교 평가 - [서식1] 2026 학교평가 길라잡이(중등)",
-        "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-4] - 2026학년도 초등 과정중심 평가(관련 서식)",
         "학교생활기록부 관리 - [서식-초등-1-3-3] 2026학년도 학적 업무 매뉴얼(초등학교)",
         "학교생활기록부 관리 - [서식-초등-1-3-4] [서식-초등1-3-4] 2026학년도 학적 업무 매뉴얼(한글파일 서식포함)",
         "학교폭력예방 및 근절 대책 수립 - [서식-교무학사-3-2-1-2] 2026학교폭력사안처리길라잡이(최종)",
@@ -2539,7 +3125,6 @@
         "[행정과] (서식)2025년 경상북도 학교운영위원장협의회 회장 입후보자 등록서 - 정보공개 운영 매뉴얼",
         "[행정과] (서식)2025년 경상북도 학교운영위원장협의회 회장 입후보자 등록서 - PDF 다운로드",
         "2025학년도 수학여행.수련활동 등 현장체험학습 운영 안내서",
-        "개인정보 파일 등록 - [서식-초등-4-1-1-3] 2025년 개인정보파일 등록 매뉴얼",
         "계약 관리 - [서식-관리-4-2-1-1] 계약 관리 세부 안내 사항_2025년 7월",
         "계획 및 준비(사업부서) - 2025 늘봄학교 운영 길라잡이(서식편)",
         "생활기록부 - [서식-유-2-3-1-1]「유치원생활기록부 작성 및 관리지침」(교육부고시 제2025-8호)",
@@ -2668,36 +3253,21 @@
         "개인정보 처리방침 - [별지 제3호 서식] 개인정보 열람등 조치 이의신청서",
         "개인정보 처리방침 - [서식-초등-4-1-2-1] 학교 개인정보처리방침 관리 매뉴얼",
         "개인정보 처리방침 - [서식-초등-4-1-2-3] 개인정보 처리방침 작성지침",
-        "개인정보 파일 등록 - [서식-초등-4-1-1-1] 각 급 학교 개인정보 수집업무 길잡이(초등용)",
-        "개인정보 파일 등록 - [서식-초등-4-1-1-2] 개인정보 점검 프로그램 실행 방법",
         "개인정보보호 교육 - [서식-초등-4-1-4-1]개인정보 보호 교육 자료",
         "개정 학교폭력예방법 안내 및 관련 서식 - 정보공개 운영 매뉴얼",
         "개정 학교폭력예방법 안내 및 관련 서식 - PDF 다운로드",
-        "결과 평가 및 처리 - [서식-초등-4-14-2-1] PAPS 측정 결과지",
-        "결과 평가 및 처리 - [서식-초등-4-14-2-2] PAPS 체크리스트",
-        "결과 평가 및 처리 - [서식-초등-4-14-2-3] PAPS 기록지",
-        "결과 평가 및 처리 - [서식-초등-4-14-2-4] 자기신체평가 설문지",
-        "결과 평가 및 처리 - [서식-초등-4-14-2-5] 자세평가 설문지",
-        "결과 평가 및 처리 - [서식-초등-4-14-2-6] 종합유연성검사 숫자카드",
-        "결과 평가 및 처리 - [서식-초등-4-14-2-7] 건강체력교실 운영 계획(예시)",
         "경상북도교육청 법무행정 - 법률상담신청서 양식 다운로드",
         "계약제교원 근무성적 평정 - [서식-초등-8-7-5-1] 기간제 교원 근무실적평가서(서식)",
         "계약제교원 근무성적 평정 - [서식-초등-8-7-5-2] 기간제 교원 평가결과보고서_보고용(서식)",
         "계약제교원 근무성적 평정 - [서식-초등-8-7-5-3] 기간제 교원 연수실적관리대장(서식)",
         "계약제교원 근무성적 평정 - [서식-초등-8-7-5-4] 기간제 교원 조기퇴직 기안및사직원(서식)",
         "계약제교원 근무성적 평정 - [서식-초등-8-7-5-5] 계약제 교원 운영현황 자체점검표(서식)",
-        "계약제교원 임용 일반 - [서식-중등-1-23-1-1] 계약제교원 자료전송 매뉴얼",
         "계약제교원 임용 절차 - [서식-중등-1-23-2-1] 계약제교원 채용 관련 서식",
         "계약제교원 임용 절차 - [서식-중등-1-23-2-2] 계약제교원 관련 기타 서식",
         "계약제교원 임용 절차 - [서식-중등-1-23-2-3] 계약제교원 임용 기안문(예시)",
         "계약제교원 임용 절차 - [서식-중등-1-23-2-4] 범죄경력 유무조회 기안문(예시)",
         "계약제교원 임용 절차 - [서식-중등-1-23-2-5] 계약제교원 결격사유-범죄경력 통합조회 업무처리 안내",
         "계약제교원 임용 절차 - [서식-중등-1-23-2-6] 교육공무원 호봉 획정 조서(예시)",
-        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-1] PAPS 실시 계획(예시)",
-        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-2] PAPS 측정 종목 구성",
-        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-3] PAPS 측정 준비 사항",
-        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-4] PAPS 측정 장비 안내",
-        "계획 수립 및 검사 실시 - [서식-초등-4-14-1-5] PAPS 관련 FAQ",
         "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-1] 민원 응대 요령",
         "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-2] 민원편람",
         "교사 다면평가 - [서식-초등-8-2-2-1] 다면평가자 서약서(서식)",
@@ -2793,8 +3363,6 @@
         "보건교육 계획수립 및 운영 - [서식-초등-5-3-1-2] 학생 건강증진 프로그램 계획(예시)",
         "보건교육 계획수립 및 운영 - [서식-초등-5-3-1-3] 유인물 및 홍보 교육자료(예시)",
         "보건실 시설 요건 및 관리 - [서식-중등-7-1-3-1] 학교 응급환자 관리 계획(예시)",
-        "보건실 운영 계획 - [서식-초등-5-1-1-1] 보건일지 서식(예시)",
-        "보건실 운영 계획 - [서식-초등—5-1-1-2] 보건실 비품대장 서식(예시)",
         "보결수업 규정 - [서식-초등-1-4-1] 보결수업 배정 원칙(예시)",
         "보결수업 규정 - [서식-초등-1-4-2] 보결수업 수당 지급에 대한 학교운영위원회 심의 안건(예시)",
         "보결수업 규정 - [서식-초등-1-4-3] 보결 수업에 관한 규정",
@@ -2864,7 +3432,6 @@
         "승진 관련 각종 서식 - [서식-교원인사-4-7-4-7] 연구학교 근무 확인서",
         "승진 관련 각종 서식 - [서식-교원인사-4-7-4-8] 학교폭력 예방 및 대응 기여교사 확인서",
         "승진 관련 각종 서식 - [서식-교원인사-4-7-4-9] 보직교사 경력증명서",
-        "아동학대 발견 및 신고 - [서식-교무학사-3-1-1-1] 아동학대체크리스트",
         "안전 · 보건교육 - [서식-유-5-1-1-10]영유아 건강검진 안내문",
         "안전 · 보건교육 - [서식-유-5-1-1-11]투약 의뢰서",
         "안전 · 보건교육 - [서식-유-5-1-1-12]보건일지",
@@ -2877,7 +3444,6 @@
         "안전 · 보건교육 - [서식-유-5-1-1-7]감염병 관리 계획",
         "안전 · 보건교육 - [서식-유-5-1-1-8]응급처치 동의서",
         "안전 · 보건교육 - [서식-유-5-1-1-9]유아 건강상태 조사서",
-        "안전교육 - [서식-초등-3-8-1-1] 학교안전사고 예방 학교계획 작성 예시",
         "안전하고 행복한 학교 - [서식-중등-4-4-1-2]학교안전사고 예방 학교계획 작성 예시",
         "안전하고 행복한 학교 - [서식-중등-4-4-1-3]학년별 학생 안전교육의 시간 및 횟수",
         "안전하고 행복한 학교 - [서식-중등-4-4-1-4]수학여행 안전교육 및 점검자료",
@@ -2942,16 +3508,9 @@
         "자율장학의 실제 및 평가 - [서식-중등-3-2-2-4] 심층 수업 컨설팅 보고서",
         "자율장학의 실제 및 평가 - [서식-중등-3-2-2-5] 교육(지원)청 지원 장학 신청서",
         "자율장학의 실제 및 평가 - [서식-중등-3-2-2-6] 교육(지원)청 지원 장학 결과 보고서",
-        "장학의 실제 및 평가 - [서식-초등-2-11-2-1] 도 단위 지원 장학 서식",
-        "장학의 실제 및 평가 - [서식-초등-2-11-2-2] 컨설팅장학 관련 서식",
-        "장학의 실제 및 평가 - [서식-초등-2-11-2-3] 심층수업컨설팅 관련 서식",
         "재량휴업 중 돌봄 - [서식-유-4-3-3-1] 재량휴업일 중 돌봄 운영 계획",
         "재량휴업 중 돌봄 - [서식-유-4-3-3-2] 재량휴업중 돌봄 신청 안내장",
         "재량휴업 중 돌봄 - [서식-유-4-3-3-3] 재량휴업중 돌봄 운영 및 귀가 일지",
-        "전입학생 학적 처리 - [서식-초등-1-9-1-1] 전입생 개인정보이용 동의서, 스쿨뱅킹 동의서(예시)",
-        "전입학생 학적 처리 - [서식-초등-1-9-1-2] 전입생 학반 배치 학교 내규 및 관련 서식(예시)",
-        "전입학생 학적 처리 - [서식-초등-1-9-1-3] 학생정서·행동특성검사 요청 기안문",
-        "전입학생 학적 처리 - 학적업무 관련서식",
         "정보공개 청구 및 접수 - [서식-행정-5-2-1-1] 정보공개청구서",
         "정보공개 청구 및 접수 - [서식-행정-5-2-1-2] 정보공개구술청구서",
         "정보공개 청구 및 접수 - [서식-행정-5-2-1-3] 정보공개처리대장",
@@ -3075,9 +3634,6 @@
         "학교교육과정 평가와 개선 - [서식-초등-2-1-7-1] 학교교육과정 평가 문항 자료",
         "학교교육과정 평가와 개선 - [서식-초등-2-1-7-2] 학교교육과정 평가 자료(업무별 평가)",
         "학교교육과정 평가와 개선 - [서식-초등-2-1-7-3] 학교교육과정 평가 자료(부서별 협의)",
-        "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-1] 과목별 교수학습 및 평가 계획(예시)",
-        "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-2] 평가 정보표(서식)",
-        "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-3] 자체 점검표(단위학교용)",
         "학교급식 위생․안전교육 - [서식-중등-7-8-1-1] CCP 및 CP기록지",
         "학교급식 위생․안전교육 - [서식-중등-7-8-1-2] CCP 및 CP 점검결과 및 조치",
         "학교급식 위생․안전교육 - [서식-중등-7-8-1-3] HACCP 자체검증 결과표",
@@ -3092,8 +3648,6 @@
         "학교운동부 안전관리 - [서식-중등-7-15-6-2] 학생선수 대회 참가 및 전지훈련 안전교육자료(예시)",
         "학교운영위원회 구성 계획 수립 및 홍보 - [서식-행정-7-1-2-1] 학교운영위원회 위원 구성 계획",
         "학교운영위원회(학부모 위원 선출) 온라인시스템 이용방법 안내 - [붙임1]교육자료_학교운영위원회 온라인시스템 이용방법 추가자료(20.3.11.)-선관위 최종",
-        "학교평가 - 4. 학교자체평가 결과보고서 서식(초등)",
-        "학교평가 - 5. 학교자체평가 결과보고서 서식(특수)",
         "학교평가 기준(평가지표) - [서식-중등-3-8-2-1] 학교평가 평가지표",
         "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-1] 학교평가 위원회 구성 및 협의회 계획",
         "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-2] 학교평가 추진 계획",
@@ -3117,7 +3671,6 @@
         "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-7]외부인 학교 방문 일지",
         "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-8]배움터지킴이 운영 계획",
         "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-9]배움터지킴이 자원봉사자 모집공고 및 지원서",
-        "학교폭력대책심의위원회 심의 - [서식-초등-3-3-3-1] 심의위원회 요청 과정 전체 양식",
         "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-1] 학기초 평가계획 관련 교과협의록 예시",
         "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-2] 1학년 자유학년제 평가계획 예시",
         "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-3] 2·3학년 평가계획 예시",
@@ -3131,10 +3684,6 @@
         "학생 출결관리 - [서식-중등-1-12-1-5]] 내교통지서(예시)",
         "학생 출결관리 - [서식-중등-1-12-1-6] 아동학대 피해의심학생 및 무단결석 학생 발생시 대응방안",
         "학생 출결관리 - [서식-중등-1-12-1-7] 법정 감염병으로 인한 등교중지 관련 협조문(예시)",
-        "학생상담 - [서식-초등-3-6-1-1]학생 중심 상담활동 지원",
-        "학생상담 - [서식-초등-3-6-1-2]또래상담(도우미)프로그램 운영",
-        "학생상담 - [서식-초등-3-6-1-3]학생학부모상담주간운영계획(예시)",
-        "학생상담 - [서식-초등-3-6-1-4]학업중단숙려제[New-Stsrt프로그램] 운영",
         "학생생활교육 - [서식-초등-8-9-1-1] 학생생활교육",
         "학적관리(고교 전・편입학) - [서식-중등-1-10-2-1] 고등학교전·편·재입학 지원서",
         "학적관리(고교 전・편입학) - [서식-중등-1-10-2-2] 고등학교 전·편입학 배정 의뢰서",
@@ -3179,19 +3728,7 @@
         "현장체험학습 계획 - [서식-초등-3-13-1-8] 1일형 현장체험학습 자체점검표",
         "현장체험학습 계획 - [서식-초등-3-13-1-9] 국외 현장체험학습 상황별 안전점검표",
         "현장체험학습 운영 - [서식-중등-4-12-3-1]현장체험학습 사전안전교육자료(예시)",
-        "현장체험학습 운영 - [서식-초등-3-13-2-1] 교통 안전 점검 항목 및 안전교육",
-        "현장체험학습 운영 - [서식-초등-3-13-2-10] 경주지역 수학여행 프로그램 소개",
-        "현장체험학습 운영 - [서식-초등-3-13-2-11] 체험학습 불참자 환불 및 정산보고",
-        "현장체험학습 운영 - [서식-초등-3-13-2-2] 음식 안전 점검 항목 및 안전교육",
-        "현장체험학습 운영 - [서식-초등-3-13-2-3] 숙소 안전 점검 항목 및 안전교육",
-        "현장체험학습 운영 - [서식-초등-3-13-2-4] 화재 예방 안전 점검 항목 및 조치 사항",
-        "현장체험학습 운영 - [서식-초등-3-13-2-5] 활동별 안전 점검 항목 및 조치 사항",
-        "현장체험학습 운영 - [서식-초등-3-13-2-6] 활동별 응급 조치 사항",
-        "현장체험학습 운영 - [서식-초등-3-13-2-7] 수학여행 사전 점검 서비스 기관 소개",
-        "현장체험학습 운영 - [서식-초등-3-13-2-8] 청렴 체크리스트",
-        "현장체험학습 운영 - [서식-초등-3-13-2-9] 현장체험학습 사안보고서",
         "현장체험학습 평가 - [서식-중등-4-12-4-1]현장체험학습 만족도 조사 설문지(예시)",
-        "현장체험학습 평가 및 개선 - [서식-초등-3-13-3-1] 주제별체험학습 결과 설문",
         "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-1] 휴직원",
         "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-10]유학휴직 서약서_계획서_학교장추천서",
         "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-2] 휴직 연장원",
@@ -3216,11 +3753,42 @@
         "흡연예방사업 예산 편성 및 집행 - [서식-초등-5-6-3-2] 사업예산집행결과 서식",
         "2026학년도 학교장허가 교외체험학습 운영 지침"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
-      "sourceResourceId": "acquisition-harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14619-cntntsid-6628-0-서식-초등-3-8-1-1-학교안",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14619-cntntsid-6628-0-서식-초등-3-8-1-1-학교안전사고-예방-학교계획",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "안전교육 - [서식-초등-3-8-1-1] 학교안전사고 예방 학교계획 작성 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "schoolViolenceSafety",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwpx",
+      "fileName": "[ìì-ì´ë±-3-8-1-1]íêµìì ì¬ê³  ìë°© íêµê³í ìì± ìì.hwpx",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b307225adc4a448fc27d78da7af03d6",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b307225adc4a448fc27d78da7af03d6",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b307225adc4a448fc27d78da7af03d6",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14619-cntntsid-6628-0-서식-초등-3-8-1-1-학교안전사고-예방-학교계획.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b307225adc4a448fc27d78da7af03d6",
+      "priority": 62,
+      "tags": [
+        "안전교육 - [서식-초등-3-8-1-1] 학교안전사고 예방 학교계획 작성 예시",
+        "경상북도교육청 학교지원종합자료실",
+        "schoolViolenceSafety",
+        "바로사용",
+        "HWPX",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-existing-acquisition-harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3236,7 +3804,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
       "priority": 66,
       "tags": [
@@ -3246,11 +3814,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
-      "sourceResourceId": "acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3266,7 +3834,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
       "priority": 66,
       "tags": [
@@ -3276,11 +3844,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp",
-      "sourceResourceId": "acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3291,12 +3859,12 @@
       "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "format": "hwp",
       "fileName": "",
-      "verifiedFile": false,
+      "verifiedFile": true,
       "sourceUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
       "priority": 66,
       "tags": [
@@ -3304,13 +3872,14 @@
         "경상북도교육청 학생생활과",
         "studentLife",
         "바로사용",
-        "편집가능"
+        "편집가능",
+        "HWP"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
-      "sourceResourceId": "acquisition-harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3327,7 +3896,7 @@
       "previewUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼.docx",
       "priority": 62,
       "tags": [
         "자료실 - 정보공개 운영 매뉴얼",
@@ -3336,11 +3905,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
-      "sourceResourceId": "acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3356,7 +3925,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
       "priority": 66,
       "tags": [
@@ -3366,11 +3935,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
-      "id": "form-ready-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
-      "sourceResourceId": "acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "sourceResourceId": "acquisition-existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3386,7 +3955,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
       "priority": 66,
       "tags": [
@@ -3396,7 +3965,555 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-0-서식-초등-2-11-2-1-도-",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-0-서식-초등-2-11-2-1-도-단위-지원-장학-서식",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "장학의 실제 및 평가 - [서식-초등-2-11-2-1] 도 단위 지원 장학 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=83e156b45e08be0624817bd2a51f6416",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=83e156b45e08be0624817bd2a51f6416",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-0-서식-초등-2-11-2-1-도-단위-지원-장학-서식.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-0-서식-초등-2-11-2-1-도-단위-지원-장학-서식.docx",
+      "priority": 50,
+      "tags": [
+        "장학의 실제 및 평가 - [서식-초등-2-11-2-1] 도 단위 지원 장학 서식",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-1-서식-초등-2-11-2-2-컨설",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-1-서식-초등-2-11-2-2-컨설팅장학-관련-서식",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "장학의 실제 및 평가 - [서식-초등-2-11-2-2] 컨설팅장학 관련 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-2-11-2-2] ì»¨ì¤íì¥í ê´ë ¨ ìì.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d5522256ee30d694252c4abd5e00bd40",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d5522256ee30d694252c4abd5e00bd40",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d5522256ee30d694252c4abd5e00bd40",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-1-서식-초등-2-11-2-2-컨설팅장학-관련-서식.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d5522256ee30d694252c4abd5e00bd40",
+      "priority": 50,
+      "tags": [
+        "장학의 실제 및 평가 - [서식-초등-2-11-2-2] 컨설팅장학 관련 서식",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-2-서식-초등-2-11-2-3-심층",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-2-서식-초등-2-11-2-3-심층수업컨설팅-관련-서식",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "장학의 실제 및 평가 - [서식-초등-2-11-2-3] 심층수업컨설팅 관련 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-2-11-2-3] ì¬ì¸µììì»¨ì¤í ê´ë ¨ ìì.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28199b0adaf85b11d8f52548d7a2d05e",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28199b0adaf85b11d8f52548d7a2d05e",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28199b0adaf85b11d8f52548d7a2d05e",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14576-cntntsid-6587-2-서식-초등-2-11-2-3-심층수업컨설팅-관련-서식.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28199b0adaf85b11d8f52548d7a2d05e",
+      "priority": 50,
+      "tags": [
+        "장학의 실제 및 평가 - [서식-초등-2-11-2-3] 심층수업컨설팅 관련 서식",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-2-서식-초등-1-9-1-1-전입생",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-2-서식-초등-1-9-1-1-전입생-개인정보이용-동의서",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "전입학생 학적 처리 - [서식-초등-1-9-1-1] 전입생 개인정보이용 동의서, 스쿨뱅킹 동의서(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-1-9-1-1] ì ìì ê°ì¸ì ë³´ì´ì© ëìì ë° ì¤ì¿¨ë±í¹ ëìì(ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a4b8da881dc8c2121c8697c73b21e4b5",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a4b8da881dc8c2121c8697c73b21e4b5",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a4b8da881dc8c2121c8697c73b21e4b5",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-2-서식-초등-1-9-1-1-전입생-개인정보이용-동의서.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a4b8da881dc8c2121c8697c73b21e4b5",
+      "priority": 50,
+      "tags": [
+        "전입학생 학적 처리 - [서식-초등-1-9-1-1] 전입생 개인정보이용 동의서, 스쿨뱅킹 동의서(예시)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-3-서식-초등-1-9-1-2-전입생",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-3-서식-초등-1-9-1-2-전입생-학반-배치-학교-내",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "전입학생 학적 처리 - [서식-초등-1-9-1-2] 전입생 학반 배치 학교 내규 및 관련 서식(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-1-9-1-2] ì ìì íë° ë°°ì¹ íêµ ë´ê· ë° ê´ë ¨ ìì(ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3152b3e666e1a6f9607c96750d77d7a7",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3152b3e666e1a6f9607c96750d77d7a7",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3152b3e666e1a6f9607c96750d77d7a7",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-3-서식-초등-1-9-1-2-전입생-학반-배치-학교-내.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3152b3e666e1a6f9607c96750d77d7a7",
+      "priority": 50,
+      "tags": [
+        "전입학생 학적 처리 - [서식-초등-1-9-1-2] 전입생 학반 배치 학교 내규 및 관련 서식(예시)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-4-서식-초등-1-9-1-3-학생정",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-4-서식-초등-1-9-1-3-학생정서-행동특성검사-요청",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "전입학생 학적 처리 - [서식-초등-1-9-1-3] 학생정서·행동특성검사 요청 기안문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "pdf",
+      "fileName": "2025 ì´ë±íêµ íì  ìë¬´ ë§¤ë´ì¼(íì¬ì©).pdf",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e5cc91a0f409de1e4f2f3e56f656a24c",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e5cc91a0f409de1e4f2f3e56f656a24c",
+      "previewUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e5cc91a0f409de1e4f2f3e56f656a24c",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-4-서식-초등-1-9-1-3-학생정서-행동특성검사-요청.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-4-서식-초등-1-9-1-3-학생정서-행동특성검사-요청.docx",
+      "priority": 50,
+      "tags": [
+        "전입학생 학적 처리 - [서식-초등-1-9-1-3] 학생정서·행동특성검사 요청 기안문",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "PDF"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-1-학적업무-관련서식",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-1-학적업무-관련서식",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "전입학생 학적 처리 - 학적업무 관련서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c535068f8d188110d0b70d1ce40cb708",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c535068f8d188110d0b70d1ce40cb708",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-1-학적업무-관련서식.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14536-cntntsid-6497-1-학적업무-관련서식.docx",
+      "priority": 50,
+      "tags": [
+        "전입학생 학적 처리 - 학적업무 관련서식",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-0-서식-초등-2-3-1-1-과목별",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-0-서식-초등-2-3-1-1-과목별-교수학습-및-평가-",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-1] 과목별 교수학습 및 평가 계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-2-3-1-1] ê³¼ëª©ë³ êµìíìµ ë° íê° ê³í(ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f6318257f2feecb1feea16d82deeeb9",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f6318257f2feecb1feea16d82deeeb9",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f6318257f2feecb1feea16d82deeeb9",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-0-서식-초등-2-3-1-1-과목별-교수학습-및-평가.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3f6318257f2feecb1feea16d82deeeb9",
+      "priority": 66,
+      "tags": [
+        "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-1] 과목별 교수학습 및 평가 계획(예시)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "편집가능",
+        "HWP"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-1-서식-초등-2-3-1-2-평가-",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-1-서식-초등-2-3-1-2-평가-정보표-서식-hwp",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-2] 평가 정보표(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-2-3-1-2] íê° ì ë³´í(ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e896d962fe0dbb89b12ce1c12d7b99c0",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e896d962fe0dbb89b12ce1c12d7b99c0",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e896d962fe0dbb89b12ce1c12d7b99c0",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-1-서식-초등-2-3-1-2-평가-정보표-서식-hwp.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e896d962fe0dbb89b12ce1c12d7b99c0",
+      "priority": 66,
+      "tags": [
+        "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-2] 평가 정보표(서식)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "편집가능",
+        "HWP"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-2-서식-초등-2-3-1-3-자체-",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-2-서식-초등-2-3-1-3-자체-점검표-단위학교용-h",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-3] 자체 점검표(단위학교용)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-2-3-1-3] ìì²´ ì ê²í(ë¨ìíêµì©).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0be9aa1045a508a4c43d720cac27ea43",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0be9aa1045a508a4c43d720cac27ea43",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0be9aa1045a508a4c43d720cac27ea43",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-2-서식-초등-2-3-1-3-자체-점검표-단위학교용-h.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0be9aa1045a508a4c43d720cac27ea43",
+      "priority": 66,
+      "tags": [
+        "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-3] 자체 점검표(단위학교용)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "편집가능",
+        "HWP"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-3-서식-초등-2-3-1-4-202",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-3-서식-초등-2-3-1-4-2026학년도-초등-과정중",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-4] - 2026학년도 초등 과정중심 평가(관련 서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "2026íëë ì´ë± ê³¼ì ì¤ì¬ íê°(ê´ë ¨ ìì).hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f077f37c37c69cac61ae3a2cdeffd98f",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f077f37c37c69cac61ae3a2cdeffd98f",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f077f37c37c69cac61ae3a2cdeffd98f",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14569-cntntsid-6558-3-서식-초등-2-3-1-4-2026학년도-초등-과정중.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f077f37c37c69cac61ae3a2cdeffd98f",
+      "priority": 56,
+      "tags": [
+        "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-4] - 2026학년도 초등 과정중심 평가(관련 서식)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15727-cntntsid-6544-0-4-학교자체평가-결과보고서-서식",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15727-cntntsid-6544-0-4-학교자체평가-결과보고서-서식-초등-hwpx",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학교평가 - 4. 학교자체평가 결과보고서 서식(초등)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwpx",
+      "fileName": "4. íêµìì²´íê° ê²°ê³¼ë³´ê³ ì ìì(ì´ë±).hwpx",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cf1bf6d6c1794a6cf44483b632d407be",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cf1bf6d6c1794a6cf44483b632d407be",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cf1bf6d6c1794a6cf44483b632d407be",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15727-cntntsid-6544-0-4-학교자체평가-결과보고서-서식-초등-hwpx.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cf1bf6d6c1794a6cf44483b632d407be",
+      "priority": 66,
+      "tags": [
+        "학교평가 - 4. 학교자체평가 결과보고서 서식(초등)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "편집가능",
+        "HWPX"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15727-cntntsid-6544-1-5-학교자체평가-결과보고서-서식",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15727-cntntsid-6544-1-5-학교자체평가-결과보고서-서식-특수-hwpx",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학교평가 - 5. 학교자체평가 결과보고서 서식(특수)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwpx",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://edupia/cf/fileDownload.do?fileKey=b613d62f6ead8e6eb49a9cdeebbacdc7",
+      "downloadUrl": "https://edupia/cf/fileDownload.do?fileKey=b613d62f6ead8e6eb49a9cdeebbacdc7",
+      "previewUrl": "",
+      "editableUrl": "https://edupia/cf/fileDownload.do?fileKey=b613d62f6ead8e6eb49a9cdeebbacdc7",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15727-cntntsid-6544-1-5-학교자체평가-결과보고서-서식-특수-hwpx.pdf",
+      "plannedEditableUrl": "https://edupia/cf/fileDownload.do?fileKey=b613d62f6ead8e6eb49a9cdeebbacdc7",
+      "priority": 66,
+      "tags": [
+        "학교평가 - 5. 학교자체평가 결과보고서 서식(특수)",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14601-cntntsid-6613-0-서식-초등-3-3-3-1-심의위",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14601-cntntsid-6613-0-서식-초등-3-3-3-1-심의위원회-요청-과정-전체",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학교폭력대책심의위원회 심의 - [서식-초등-3-3-3-1] 심의위원회 요청 과정 전체 양식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "schoolViolenceSafety",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-3-3-1] ì¬ìììí ìì²­ ê³¼ì  ì ì²´ ìì.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd8fd356de4fc0e4c6b9451d8c8fe41f",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd8fd356de4fc0e4c6b9451d8c8fe41f",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd8fd356de4fc0e4c6b9451d8c8fe41f",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14601-cntntsid-6613-0-서식-초등-3-3-3-1-심의위원회-요청-과정-전체.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd8fd356de4fc0e4c6b9451d8c8fe41f",
+      "priority": 78,
+      "tags": [
+        "학교폭력대책심의위원회 심의 - [서식-초등-3-3-3-1] 심의위원회 요청 과정 전체 양식",
+        "경상북도교육청 학교지원종합자료실",
+        "schoolViolenceSafety",
+        "바로사용",
+        "편집가능",
+        "HWP"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-0-서식-초등-3-6-1-1-학생-",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-0-서식-초등-3-6-1-1-학생-중심-상담활동-지원",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학생상담 - [서식-초등-3-6-1-1]학생 중심 상담활동 지원",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "general",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-6-1-1]íì ì¤ì¬ ìë´íë ì§ì.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b2944273b87fee8425e5c5ec0feccf8",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b2944273b87fee8425e5c5ec0feccf8",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b2944273b87fee8425e5c5ec0feccf8",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-0-서식-초등-3-6-1-1-학생-중심-상담활동-지원.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0b2944273b87fee8425e5c5ec0feccf8",
+      "priority": 50,
+      "tags": [
+        "학생상담 - [서식-초등-3-6-1-1]학생 중심 상담활동 지원",
+        "경상북도교육청 학교지원종합자료실",
+        "general",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-1-서식-초등-3-6-1-2-또래상",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-1-서식-초등-3-6-1-2-또래상담-도우미-프로그램-",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학생상담 - [서식-초등-3-6-1-2]또래상담(도우미)프로그램 운영",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "general",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-6-1-2]ëëìë´(ëì°ë¯¸)íë¡ê·¸ë¨ ì´ì.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=78f4e7bb14cdd99326a7981dc0856ad4",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=78f4e7bb14cdd99326a7981dc0856ad4",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=78f4e7bb14cdd99326a7981dc0856ad4",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-1-서식-초등-3-6-1-2-또래상담-도우미-프로그램.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=78f4e7bb14cdd99326a7981dc0856ad4",
+      "priority": 50,
+      "tags": [
+        "학생상담 - [서식-초등-3-6-1-2]또래상담(도우미)프로그램 운영",
+        "경상북도교육청 학교지원종합자료실",
+        "general",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-2-서식-초등-3-6-1-3-학생학",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-2-서식-초등-3-6-1-3-학생학부모상담주간운영계획-",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학생상담 - [서식-초등-3-6-1-3]학생학부모상담주간운영계획(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "general",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9b39f5bad56f18fda6f005e17161abfc",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9b39f5bad56f18fda6f005e17161abfc",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-2-서식-초등-3-6-1-3-학생학부모상담주간운영계획.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-2-서식-초등-3-6-1-3-학생학부모상담주간운영계획.docx",
+      "priority": 50,
+      "tags": [
+        "학생상담 - [서식-초등-3-6-1-3]학생학부모상담주간운영계획(예시)",
+        "경상북도교육청 학교지원종합자료실",
+        "general",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-3-서식-초등-3-6-1-4-학업중",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-3-서식-초등-3-6-1-4-학업중단숙려제-new-st",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "학생상담 - [서식-초등-3-6-1-4]학업중단숙려제[New-Stsrt프로그램] 운영",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e75874ce7690bb27bee14f738b33c27e",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e75874ce7690bb27bee14f738b33c27e",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-3-서식-초등-3-6-1-4-학업중단숙려제-new-st.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14614-cntntsid-6623-3-서식-초등-3-6-1-4-학업중단숙려제-new-st.docx",
+      "priority": 50,
+      "tags": [
+        "학생상담 - [서식-초등-3-6-1-4]학업중단숙려제[New-Stsrt프로그램] 운영",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-5532-0-붙임1-2021학년도-현장실습-지원금-신청-매뉴얼-pdf",
@@ -3426,7 +4543,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-5532-1-붙임2-2021학년도-현장실습-지원금-업무처리기준-안-pdf",
@@ -3456,7 +4573,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-5532-2-붙임3-2021학년도-현장실습-지원금-q-a-pdf",
@@ -3486,7 +4603,371 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-08-04T03:49:32.149Z"
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-0-서식-초등-3-13-2-1-교통",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-0-서식-초등-3-13-2-1-교통-안전-점검-항목-및",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-1] 교통 안전 점검 항목 및 안전교육",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=98855e5fd1d5b08d4cfdd90e28ab62a0",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=98855e5fd1d5b08d4cfdd90e28ab62a0",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-0-서식-초등-3-13-2-1-교통-안전-점검-항목-및.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-0-서식-초등-3-13-2-1-교통-안전-점검-항목-및.docx",
+      "priority": 62,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-1] 교통 안전 점검 항목 및 안전교육",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-9-서식-초등-3-13-2-10-경",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-9-서식-초등-3-13-2-10-경주지역-수학여행-프로",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-10] 경주지역 수학여행 프로그램 소개",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c1aa342caca54fbdae2e8d74acc301a3",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c1aa342caca54fbdae2e8d74acc301a3",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-9-서식-초등-3-13-2-10-경주지역-수학여행-프로.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-9-서식-초등-3-13-2-10-경주지역-수학여행-프로.docx",
+      "priority": 50,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-10] 경주지역 수학여행 프로그램 소개",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-10-서식-초등-3-13-2-11-",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-10-서식-초등-3-13-2-11-체험학습-불참자-환불",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-11] 체험학습 불참자 환불 및 정산보고",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ca20105095821c57f47fde0f934f3bbb",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ca20105095821c57f47fde0f934f3bbb",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-10-서식-초등-3-13-2-11-체험학습-불참자-환불.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-10-서식-초등-3-13-2-11-체험학습-불참자-환불.docx",
+      "priority": 50,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-11] 체험학습 불참자 환불 및 정산보고",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-1-서식-초등-3-13-2-2-음식",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-1-서식-초등-3-13-2-2-음식-안전-점검-항목-및",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-2] 음식 안전 점검 항목 및 안전교육",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-13-2-2] ìì ìì  ì ê² í­ëª© ë° ì¡°ì¹ ì¬í­.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1f5d35f60bdcbbb305e2651a1cec46de",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1f5d35f60bdcbbb305e2651a1cec46de",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1f5d35f60bdcbbb305e2651a1cec46de",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-1-서식-초등-3-13-2-2-음식-안전-점검-항목-및.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1f5d35f60bdcbbb305e2651a1cec46de",
+      "priority": 62,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-2] 음식 안전 점검 항목 및 안전교육",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-2-서식-초등-3-13-2-3-숙소",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-2-서식-초등-3-13-2-3-숙소-안전-점검-항목-및",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-3] 숙소 안전 점검 항목 및 안전교육",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-13-2-3] ìì ìì  ì ê² í­ëª© ë° ì¡°ì¹ ì¬í­.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=797aac2c667d786fcd4c7bfa72718b94",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=797aac2c667d786fcd4c7bfa72718b94",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=797aac2c667d786fcd4c7bfa72718b94",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-2-서식-초등-3-13-2-3-숙소-안전-점검-항목-및.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=797aac2c667d786fcd4c7bfa72718b94",
+      "priority": 62,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-3] 숙소 안전 점검 항목 및 안전교육",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-3-서식-초등-3-13-2-4-화재",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-3-서식-초등-3-13-2-4-화재-예방-안전-점검-항",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-4] 화재 예방 안전 점검 항목 및 조치 사항",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-13-2-4] íì¬ ìë°© ìì  ì ê² í­ëª© ë° ì¡°ì¹ ì¬í­.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=353521eabec1d3a440952988c8a579e4",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=353521eabec1d3a440952988c8a579e4",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=353521eabec1d3a440952988c8a579e4",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-3-서식-초등-3-13-2-4-화재-예방-안전-점검-항.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=353521eabec1d3a440952988c8a579e4",
+      "priority": 62,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-4] 화재 예방 안전 점검 항목 및 조치 사항",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-4-서식-초등-3-13-2-5-활동",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-4-서식-초등-3-13-2-5-활동별-안전-점검-항목-",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-5] 활동별 안전 점검 항목 및 조치 사항",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-13-2-5] íëë³ ìì  ì ê² í­ëª© ë° ì¡°ì¹ ì¬í­.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c09a0ae05a79a2ffb8ad77af2065d53d",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c09a0ae05a79a2ffb8ad77af2065d53d",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c09a0ae05a79a2ffb8ad77af2065d53d",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-4-서식-초등-3-13-2-5-활동별-안전-점검-항목.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c09a0ae05a79a2ffb8ad77af2065d53d",
+      "priority": 62,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-5] 활동별 안전 점검 항목 및 조치 사항",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-5-서식-초등-3-13-2-6-활동",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-5-서식-초등-3-13-2-6-활동별-응급-조치-사항",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-6] 활동별 응급 조치 사항",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-13-2-6] íëë³ ìê¸ ì¡°ì¹ ì¬í­.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7f8e539570380781bada0b17742fb93b",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7f8e539570380781bada0b17742fb93b",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7f8e539570380781bada0b17742fb93b",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-5-서식-초등-3-13-2-6-활동별-응급-조치-사항.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7f8e539570380781bada0b17742fb93b",
+      "priority": 50,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-6] 활동별 응급 조치 사항",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-6-서식-초등-3-13-2-7-수학",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-6-서식-초등-3-13-2-7-수학여행-사전-점검-서비",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-7] 수학여행 사전 점검 서비스 기관 소개",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "file",
+      "fileName": "",
+      "verifiedFile": false,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2edb1a776d200078f713a6658204b236",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2edb1a776d200078f713a6658204b236",
+      "previewUrl": "",
+      "editableUrl": "",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-6-서식-초등-3-13-2-7-수학여행-사전-점검-서비.pdf",
+      "plannedEditableUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-6-서식-초등-3-13-2-7-수학여행-사전-점검-서비.docx",
+      "priority": 50,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-7] 수학여행 사전 점검 서비스 기관 소개",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-7-서식-초등-3-13-2-8-청렴",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-7-서식-초등-3-13-2-8-청렴-체크리스트",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-8] 청렴 체크리스트",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-13-2-8] ì²­ë ´ ì²´í¬ë¦¬ì¤í¸.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cfbf36a8f576388811853fa9e1f7a633",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cfbf36a8f576388811853fa9e1f7a633",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cfbf36a8f576388811853fa9e1f7a633",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-7-서식-초등-3-13-2-8-청렴-체크리스트.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cfbf36a8f576388811853fa9e1f7a633",
+      "priority": 50,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-8] 청렴 체크리스트",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-8-서식-초등-3-13-2-9-현장",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-8-서식-초등-3-13-2-9-현장체험학습-사안보고서",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 운영 - [서식-초등-3-13-2-9] 현장체험학습 사안보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-13-2-9] íì¥ì²´ííìµ ì¬ìë³´ê³ ì.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=727366085ec5f0e0bd3eba4b29f76763",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=727366085ec5f0e0bd3eba4b29f76763",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=727366085ec5f0e0bd3eba4b29f76763",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14630-cntntsid-6640-8-서식-초등-3-13-2-9-현장체험학습-사안보고서.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=727366085ec5f0e0bd3eba4b29f76763",
+      "priority": 50,
+      "tags": [
+        "현장체험학습 운영 - [서식-초등-3-13-2-9] 현장체험학습 사안보고서",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
+    },
+    {
+      "id": "form-ready-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14631-cntntsid-6642-0-서식-초등-3-13-3-1-주제",
+      "sourceResourceId": "acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14631-cntntsid-6642-0-서식-초등-3-13-3-1-주제별체험학습-결과-설문",
+      "kind": "ready",
+      "status": "ready",
+      "statusLabel": "바로 사용",
+      "title": "현장체험학습 평가 및 개선 - [서식-초등-3-13-3-1] 주제별체험학습 결과 설문",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "category": "studentLife",
+      "hierarchy": null,
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "format": "hwp",
+      "fileName": "[ìì-ì´ë±-3-13-3-1] ì£¼ì ë³ì²´ííìµ ê²°ê³¼ ì¤ë¬¸.hwp",
+      "verifiedFile": true,
+      "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=15d29f0e949ad4641f761110d1e0bbdc",
+      "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=15d29f0e949ad4641f761110d1e0bbdc",
+      "previewUrl": "",
+      "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=15d29f0e949ad4641f761110d1e0bbdc",
+      "plannedPdfUrl": "generated/forms/acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14631-cntntsid-6642-0-서식-초등-3-13-3-1-주제별체험학습-결과-설문.pdf",
+      "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=15d29f0e949ad4641f761110d1e0bbdc",
+      "priority": 50,
+      "tags": [
+        "현장체험학습 평가 및 개선 - [서식-초등-3-13-3-1] 주제별체험학습 결과 설문",
+        "경상북도교육청 학교지원종합자료실",
+        "studentLife",
+        "바로사용",
+        "HWP",
+        "편집가능"
+      ],
+      "generatedAt": "2026-08-04T11:23:15.582Z"
     }
   ]
 }; });
