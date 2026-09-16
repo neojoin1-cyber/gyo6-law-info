@@ -6,25 +6,25 @@
     root.GYO6_PUBLIC_RESOURCE_ACQUISITION = data;
   }
 })(typeof globalThis !== "undefined" ? globalThis : window, function createPublicResourceAcquisition() { return {
-  "version": "generated-2026-09-16T13-34-37-598Z",
-  "generatedAt": "2026-09-16T13:34:37.598Z",
+  "version": "generated-2026-09-16T19-36-37-773Z",
+  "generatedAt": "2026-09-16T19:36:37.773Z",
   "stats": {
     "existingResources": 1393,
     "missions": 8,
-    "candidates": 1483,
-    "publicCandidates": 1401,
-    "harvestedFiles": 174,
-    "highPriority": 123,
+    "candidates": 1482,
+    "publicCandidates": 1400,
+    "harvestedFiles": 181,
+    "highPriority": 127,
     "directUrlNeeded": 85,
     "byCategory": {
       "careerEmployment": 43,
       "fieldTraining": 178,
       "general": 196,
+      "schoolViolenceSafety": 247,
+      "studentLife": 400,
       "privacyRecords": 81,
       "schoolAdmin": 252,
-      "schoolViolenceSafety": 247,
-      "staffLabor": 85,
-      "studentLife": 401
+      "staffLabor": 85
     }
   },
   "missions": [
@@ -197,7 +197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6472-0-리플렛-2023-고졸채용기업-지원정책-pdf",
@@ -221,7 +221,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7004-0-고교-졸업생-지원-혜택-2024-7-pdf",
@@ -245,7 +245,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7195-0-2-2024년-고졸채용기업-지원정책-리플릿-pdf",
@@ -269,7 +269,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7196-1-2024년-고졸청년-지원정책-pdf",
@@ -293,7 +293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7196-0-4-2024년-고졸청년-지원정책-리플릿-pdf",
@@ -317,7 +317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145569-0-2025년-고졸채용기업-지원정책-리플릿-pdf",
@@ -341,7 +341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7492-0-2025년-고졸채용기업-지원정책-자료집-pdf",
@@ -365,7 +365,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145569-1-2025년-고졸채용기업-지원정책-자료집-pdf",
@@ -389,7 +389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7351-0-자료집-2025년-고졸청년-지원사업-pdf",
@@ -413,7 +413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7618-0-2-중앙취업지원센터-2026년-고졸채용기업-지원정책-자료집-pdf",
@@ -437,7 +437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7618-1-4-중앙취업지원센터-2026년-고졸채용기업-지원정책-리플릿-pdf",
@@ -461,7 +461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7617-0-1-중앙취업지원센터-2026년-고졸청년-지원정책-자료집-pdf",
@@ -485,7 +485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7617-1-3-중앙취업지원센터-2026년-고졸청년-지원정책-리플릿-pdf",
@@ -509,7 +509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5531-0-붙임1-고교-취업연계-장려금-신청-매뉴얼-pdf",
@@ -537,7 +537,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5531-1-붙임1-법정대리인-동의서-양식-pdf",
@@ -565,7 +565,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145654-0-붙임-1-1-2026년-고졸청년-지원정책-자료집-pdf",
@@ -593,7 +593,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145654-1-붙임-1-2-2026년-고졸청년-지원정책-리플릿-pdf",
@@ -621,7 +621,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145654-2-붙임-2-1-2026년-고졸채용기업-지원정책-자료집-pdf",
@@ -649,7 +649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145654-3-붙임-2-2-2026년-고졸채용기업-지원정책-리플릿-pdf",
@@ -677,7 +677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-6716-0-인천-취업지원센터-리플렛-pdf",
@@ -701,7 +701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5522-0-2021년-청년내일채움공제-시행지침-게시-pdf",
@@ -725,7 +725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7291-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-pdf",
@@ -749,7 +749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7349-0-2025-현장실습-바로가기-및-실습일지-작성방법-휴대폰용-pdf",
@@ -773,7 +773,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7292-0-2025년-hifive-사용자-매뉴얼-학생용-pdf",
@@ -797,7 +797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7287-0-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -825,7 +825,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7290-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
@@ -849,7 +849,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7290-1-2025-직업계고-현장실습생-보험가입-및-수당-세무회계처리-pdf",
@@ -873,7 +873,103 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-3-2025-직업계고-현장실습생-강의안-최종-25-06-30-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "★2025 직업계고 현장실습생 강의안(최종)_25.06.30.",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' ★2025 직업계고 현장실습생 강의안(최종)_25.06.30..pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250724&filerealname=%E2%98%852025+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EA%B0%95%EC%9D%98%EC%95%88%28%EC%B5%9C%EC%A2%85%29_25.06.30..pdf&filename=D4BEA8A57A9F4809BA1AF7AB760ABB5E.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-4-2026-직업계고-현장실습생-강의안-최종-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "★2026 직업계고 현장실습생 강의안(최종)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' ★2026 직업계고 현장실습생 강의안(최종).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=%E2%98%852026+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EA%B0%95%EC%9D%98%EC%95%88%28%EC%B5%9C%EC%A2%85%29.pdf&filename=DBE023DD49F94C749803C83E83DAECDD.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-2-1-통합본-2026년-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "1. [통합본] 2026년 직업계고 현장실습 산업안전 매뉴얼",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 1. [통합본] 2026년 직업계고 현장실습 산업안전 매뉴얼.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=1.+%5B%ED%86%B5%ED%95%A9%EB%B3%B8%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=FDB32A7BFE0A41F6A8EF973E5EC29F47.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-3-2-공업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2. [공업] 2026년 직업계고 현장실습 산업안전 핸드북",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2. [공업] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=2.+%5B%EA%B3%B5%EC%97%85%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=E23088A47EB74D1995A4FBD510C41052.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-4237-0-현장실습-참여-기업-지원정책-현황-수정-pdf",
@@ -897,7 +993,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6641-0-매뉴얼-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-pdf",
@@ -921,7 +1017,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-6465-0-붙임1-2023학년도-현장실습-지원금-통합신청-사전신청-매뉴얼-학생용-pdf",
@@ -949,7 +1045,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-6465-1-붙임2-2023학년도-현장실습-지원금-faq-pdf",
@@ -977,7 +1073,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6470-0-1-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-기업용-1-pdf",
@@ -1001,7 +1097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6470-1-2-2023년-개정-현장실습-간편-매뉴얼-기업용-1-pdf",
@@ -1025,7 +1121,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7128-0-2024-직업계고-취업실무-매뉴얼-내지-학생용-pdf",
@@ -1049,7 +1145,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7147-0-최종-2024-직업계고-취업실무-매뉴얼-내지-교사용-pdf",
@@ -1073,7 +1169,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6962-0-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
@@ -1101,7 +1197,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6963-0-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1129,7 +1225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6961-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
@@ -1157,7 +1253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6961-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
@@ -1185,7 +1281,127 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-3-2024년-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습 산업안전 매뉴얼",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습 산업안전 매뉴얼.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=3B76057D62D246F995E54F2CB7276AEF.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-0-2024년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습 산업안전 핸드북(건설)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(건설).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B1%B4%EC%84%A4%29.pdf&filename=F29FFFC36BAE41019EC15A689900AEC1.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-1-2024년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습 산업안전 핸드북(공업)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(공업).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B3%B5%EC%97%85%29.pdf&filename=FEC522C711354867AAB8FF5F60C8285B.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-2-2024년-직업계고-현장실습-산업안전-핸드북-농수산상업및가사-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습 산업안전 핸드북(농수산상업및가사)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(농수산상업및가사).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EB%86%8D%EC%88%98%EC%82%B0%EC%83%81%EC%97%85%EB%B0%8F%EA%B0%80%EC%82%AC%29.pdf&filename=85D454242B9F4DDEB56CA199B24E737E.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-4-2024년-직업계고-현장실습생-대상-강의안-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습생 대상 강의안",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습생 대상 강의안.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EB%8C%80%EC%83%81+%EA%B0%95%EC%9D%98%EC%95%88.pdf&filename=50C531B30168437CA00809EF27E8F4AF.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6959-0-2024년-hifive-현장실습-관리시스템-매뉴얼-학생용-pdf",
@@ -1209,7 +1425,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7198-0-2024학년도-고졸-취업-활성화-지원-사업-안내-리플릿-pdf",
@@ -1233,7 +1449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7347-0-2025-직업계고-취업실무-매뉴얼-내지-학생용-최종-pdf",
@@ -1257,7 +1473,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7331-0-2025-직업계고-취업실무-매뉴얼-최종-pdf",
@@ -1281,7 +1497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-education-library-141253-0-2025-현장실습-바로가기-및-실습일지-작성방법-휴대폰용-pdf",
@@ -1305,7 +1521,103 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-0-2025년-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2025년 직업계고 현장실습 산업안전 매뉴얼",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2025년 직업계고 현장실습 산업안전 매뉴얼.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=D1C7D658B31C4A0E8AC566EEE2406362.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-1-2025년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2025년 직업계고 현장실습 산업안전 핸드북(건설)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(건설).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B1%B4%EC%84%A4%29.pdf&filename=7C4A6EF123874467A2DFD6F9DCFC21EF.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-4-2025년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2025년 직업계고 현장실습 산업안전 핸드북(공업)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(공업).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B3%B5%EC%97%85%29.pdf&filename=A3972BF0DE034337A61990D4A3CAC61B.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-2-2025년-직업계고-현장실습-산업안전-핸드북-농업-수산-해운-상업-및-가사-실업-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2025년 직업계고 현장실습 산업안전 핸드북(농업, 수산 해운, 상업 및 가사 실업)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(농업, 수산 해운, 상업 및 가사 실업).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EB%86%8D%EC%97%85%2C+%EC%88%98%EC%82%B0+%ED%95%B4%EC%9A%B4%2C+%EC%83%81%EC%97%85+%EB%B0%8F+%EA%B0%80%EC%82%AC+%EC%8B%A4%EC%97%85%29.pdf&filename=FB03D927E8F9412387416F90CC1B8382.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7313-0-2025-직업계고-현장실습생-보험가입-및-수당-세무회계처리-pdf",
@@ -1329,7 +1641,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7294-0-01-2025학년도-현장실습-지원금-통합신청-매뉴얼-pdf",
@@ -1353,7 +1665,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7294-1-02-2025학년도-현장실습-지원금-faq-pdf",
@@ -1377,7 +1689,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7638-0-2026-직업계고-취업실무매뉴얼-교사용-최종-pdf",
@@ -1401,7 +1713,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7637-0-2026-직업계고-취업실무매뉴얼-학생용-최종-pdf",
@@ -1425,7 +1737,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7607-0-2026-현장실습-기업현장교육-지원-pdf",
@@ -1449,7 +1761,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7606-0-2026-현장실습-지원금-신청방법-pdf",
@@ -1473,7 +1785,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7578-0-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
@@ -1501,7 +1813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-0-1-통합본-2026년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -1525,7 +1837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-1-2-공업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -1549,7 +1861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-2-3-건설-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -1573,7 +1885,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-3-4-농업-수산해운-상업-가사실업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -1597,7 +1909,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7574-0-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-책자-기업용-pdf",
@@ -1621,7 +1933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7574-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
@@ -1645,7 +1957,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7553-0-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-책자-학교용-pdf",
@@ -1669,7 +1981,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7553-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
@@ -1693,7 +2005,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7575-0-2026-hifive-시스템-매뉴얼-학교용-0519-압축-pdf",
@@ -1717,7 +2029,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7575-1-2026-hifive-시스템-매뉴얼-학생용-0818-pdf",
@@ -1741,7 +2053,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6958-0-2024년-개인정보활용동의서-서식-hwp",
@@ -1769,7 +2081,55 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-0-3-건설-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "3. [건설] 2026년 직업계고 현장실습 산업안전 핸드북",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 3. [건설] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=3.+%5B%EA%B1%B4%EC%84%A4%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=12FE3EDA27FB44DAA26FAAB89352635C.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-1-4-농업-수산해운-상업-가사실업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "4. [농업,수산해운,상업,가사실업] 2026년 직업계고 현장실습 산업안전 핸드북",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 4. [농업,수산해운,상업,가사실업] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=4.+%5B%EB%86%8D%EC%97%85%2C%EC%88%98%EC%82%B0%ED%95%B4%EC%9A%B4%2C%EC%83%81%EC%97%85%2C%EA%B0%80%EC%82%AC%EC%8B%A4%EC%97%85%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=5BE2A9C61A0D412FB9E4A1E44DBE4F03.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7314-0-서식-기업현장교사-자격-확인서-hwp",
@@ -1797,7 +2157,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-0-붙임1-2021학년도-현장실습-지원금-신청-매뉴얼-pdf",
@@ -1825,7 +2185,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-1-붙임2-2021학년도-현장실습-지원금-업무처리기준-안-pdf",
@@ -1853,7 +2213,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-2-붙임3-2021학년도-현장실습-지원금-q-a-pdf",
@@ -1881,7 +2241,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7576-0-현장실습생-노동인권-권익보호-및-산업안전보건교육-관리자-매뉴얼-총괄교사용-pdf",
@@ -1905,7 +2265,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-hifive-education-library-143951-0-q-실습일지-휴무일-처리-매뉴얼-pdf",
@@ -1929,7 +2289,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5469-0-조기취업형-계약학과-선도대학육성-사업개요-pdf",
@@ -1953,7 +2313,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5469-1-조기취업형-계약학과-참여대학-홈페이지-및-연락처-pdf",
@@ -1977,259 +2337,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-0-서식-유특-6-1-2-1-특수교육대상학생-취학의무-유예-면제-신청-공문-양식",
-      "category": "general",
-      "type": "form",
-      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-1 특수교육대상학생 취학의무(유예, 면제) 신청 (공문 양식)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-1 특수교육대상학생 취학의무(유예, 면제) 신청 (공문 양식)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8c368b329a31414d9b08651a2621d977",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8c368b329a31414d9b08651a2621d977",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-1-서식-유특-6-1-2-2-특수교육대상학생-재취학-승인-신청-공문-양식",
-      "category": "general",
-      "type": "form",
-      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-2 특수교육대상학생 재취학 승인 신청 (공문 양식)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-2 특수교육대상학생 재취학 승인 신청 (공문 양식)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7722d46b1cc1a76bd8bd3cdca732d195",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7722d46b1cc1a76bd8bd3cdca732d195",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-2-서식-유특-6-1-2-3-특수교육대상학생-취학의무-유예-면제-신청서",
-      "category": "general",
-      "type": "form",
-      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-3 특수교육대상학생 취학의무(유예, 면제) 신청서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-3 특수교육대상학생 취학의무(유예, 면제) 신청서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d5ed3b8e7866ff89205794567f18aedf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d5ed3b8e7866ff89205794567f18aedf",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-3-서식-유특-6-1-2-4-특수교육대상학생-재취학-신청서",
-      "category": "general",
-      "type": "form",
-      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-4 특수교육대상학생 재취학 신청서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-4 특수교육대상학생 재취학 신청서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=86c20a0742619fa79780d82cbd8fd793",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=86c20a0742619fa79780d82cbd8fd793",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-4-서식-유특-6-1-2-5-학교장-의견서-유예-면제",
-      "category": "general",
-      "type": "form",
-      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-5 학교장 의견서(유예, 면제)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-5 학교장 의견서(유예, 면제)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a16ad05e81a6ad789ad88b875ce2891c",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a16ad05e81a6ad789ad88b875ce2891c",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-6-서식-유특-6-1-2-7-개별화교육지원팀-협의록",
-      "category": "general",
-      "type": "form",
-      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-7 개별화교육지원팀 협의록",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-7 개별화교육지원팀 협의록",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=39edf20f6a243ca61f22f673dc5df0a9",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=39edf20f6a243ca61f22f673dc5df0a9",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-5-서식-유특-6-1-2-6-개인정보-수집-이용에-관한-동의서",
-      "category": "privacyRecords",
-      "type": "form",
-      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-6 개인정보 수집 · 이용에 관한 동의서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-6 개인정보 수집 · 이용에 관한 동의서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=df41a25ef8149a50020a03b49e3bca38",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=df41a25ef8149a50020a03b49e3bca38",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15929-cntntsid-6813-0-서식-행정기관-6-1-1-1-자리배치-예시",
-      "category": "schoolAdmin",
-      "type": "form",
-      "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-1] 자리배치 예시",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "업무협약(MOU) 체결 및 계약 업무 업무협약(MOU) 체결 [서식-행정기관-6-1-1-1] 자리배치 예시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b4b3656e5ac81490dde1e93fed17b9e5",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b4b3656e5ac81490dde1e93fed17b9e5",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15929-cntntsid-6813-1-서식-행정기관-6-1-1-2-협약서-예시",
-      "category": "schoolAdmin",
-      "type": "form",
-      "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-2] 협약서 예시",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "업무협약(MOU) 체결 및 계약 업무 업무협약(MOU) 체결 [서식-행정기관-6-1-1-2] 협약서 예시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=79d38b7080a15a04c43b844da5c479d1",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=79d38b7080a15a04c43b844da5c479d1",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1548192-0-25-학교폭력-사안처리-가이드북-pdf",
@@ -2253,7 +2361,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1569593-0-26-학교폭력-사안처리-가이드북-pdf",
@@ -2277,7 +2385,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-588219-1-서식-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-hwp",
@@ -2305,7 +2413,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1562027-0-교육부-학교-내-성희롱-성폭력-사안대응-업무안내서-2025년-개정-pdf",
@@ -2329,7 +2437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-588219-0-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-pdf",
@@ -2353,7 +2461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1509624-0-1-2023년-사안처리-가이드북-hwpx",
@@ -2377,7 +2485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1560985-0-16-디지털-성폭력-및-딥페이크등-예방교육자료-제작-최종-보고서-제출-pdf",
@@ -2405,7 +2513,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1512170-0-2-2023-학교폭력-사안처리-세부설명-a-to-z-pdf",
@@ -2429,7 +2537,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-583028-0-2022년-폭력예방교육-운영안내-지침-pdf",
@@ -2453,7 +2561,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1535303-0-2024-1차-학교폭력-실태조사-결과-hwp",
@@ -2477,7 +2585,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1549081-0-2024-2차-학교폭력-실태-표본-조사-결과-최종-pdf",
@@ -2501,7 +2609,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1525064-0-2024년-사건통보서-및-재발방지대책-제출-서식-hwp",
@@ -2529,7 +2637,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1532095-0-2024년-학교폭력-사안처리-가이드북-개정안-hwpx",
@@ -2553,7 +2661,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1559065-0-2025-1차-학교폭력-실태-전수-조사-결과-누리집용-hwp",
@@ -2577,7 +2685,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1548192-1-2025-학교폭력-사안처리-세부설명-a-to-z-서식모음집-hwpx",
@@ -2605,7 +2713,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1570140-0-2025년-2차-학교폭력-실태-표본-조사-결과-누리집-탑재용-hwpx",
@@ -2629,7 +2737,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1576546-0-2026-학교폭력-피해학생-전문교육기관-선정-결과-공고문-안내용-hwpx",
@@ -2653,7 +2761,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-1511311-0-23년-학교폭력-사안처리-가이드북-한글파일-hwpx",
@@ -2677,7 +2785,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1575631-0-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
@@ -2705,7 +2813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-583659-0-게시용-2022-성희롱-성폭력-사안처리지원단-구성-운영-계획-hwp",
@@ -2729,7 +2837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-573475-0-교육부-양성평등정책담당관-학교-내-성희롱-성폭력-사안처리-사례집-배포용-2020-12월-pdf",
@@ -2753,7 +2861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1562027-1-단계별-관련-서식-2025개정판-학교내성희롱성폭력사안대응업무안내서-hwpx",
@@ -2781,7 +2889,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-572186-0-사안처리-핸드북-발송용-pdf",
@@ -2805,7 +2913,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-583659-1-성희롱-성폭력-사안처리지원단-외부지원-신청서-hwp",
@@ -2833,7 +2941,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1575631-1-성희롱성폭력-사안발생-미-통보-동의서-서식-hwpx",
@@ -2861,7 +2969,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-568298-0-여성가족부-권익기반과-2021년-폭력예방교육-운영안내-지침-최종-pdf",
@@ -2885,7 +2993,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1544100-0-여성가족부-성폭력방지과-번-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
@@ -2913,7 +3021,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1541549-0-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-pdf",
@@ -2937,7 +3045,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1541549-1-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-단계별-관련-서식-hwp",
@@ -2965,7 +3073,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-578707-0-충청북도교육청용-교직원-성희롱-성폭력-사안처리-대응-매뉴얼-2021-9-hwp",
@@ -2989,7 +3097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-588221-0-학교-내-성희롱-성폭력-사안처리지원단-업무매뉴얼-pdf",
@@ -3013,7 +3121,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "harvest-cbe-school-violence-545690-0-학교폭력-사안처리-가이드북-일부개정판-pdf",
@@ -3037,44 +3145,88 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15925-cntntsid-6805-0-서식-행정기관-5-1-1-1-출장-보고서예시",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "복무 - [서식-행정기관-5-1-1-1] 출장 보고서예시",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "복무 [서식-행정기관-5-1-1-1] 출장 보고서예시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5f60bb4fcbc7e6d39300d15fd3401e8a",
+      "id": "harvest-gbe-student-life-1396580-0-관리자-학교폭력-사안처리-절차-안내-교재본-pdf",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "자료실 - (관리자)학교폭력 사안처리 절차 안내_교재본",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 자료실 (관리자)학교폭력 사안처리 절차 안내_교재본.pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1396580/doc_1788vabe9=fdvac=48v76=96v62=d8fevc578vb06d_v2635.pdf",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5f60bb4fcbc7e6d39300d15fd3401e8a",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
+      "id": "harvest-gbe-student-life-568617-0-2019학년도-여름방학대비-경북학생생활지도-연수자료-hwp",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "자료실 - 2019학년도_여름방학대비_경북학생생활지도_연수자료",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "생활지도 자료실 2019학년도_여름방학대비_경북학생생활지도_연수자료.hwp",
+      "url": "https://www.gbe.kr/uploads/BOARD/2019/06/BOARD_201906281700526256116138.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1491796-0-2024-학부모용-학교폭력-예방교육-모음집-최종-pdf",
+      "category": "studentLife",
+      "type": "guide",
+      "title": "자료실 - 2024 학부모용 학교폭력 예방교육 모음집_최종",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 자료실 2024 학부모용 학교폭력 예방교육 모음집_최종.pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1491796/doc_9bd6v1316=48v71=47v0b=8av80=0471v8840v1c5e_v5420.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학생생활과 자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1625762-1-관련-서식-hwp",
       "category": "studentLife",
       "type": "form",
-      "title": "자료실 - [붙임1] 교사용 학생 자살 징후 체크리스트",
+      "title": "자료실 - 관련 서식",
       "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 자료실 [붙임1] 교사용 학생 자살 징후 체크리스트.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+      "query": "아동학대 자료실 관련 서식.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3086,23 +3238,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
+      "id": "harvest-gbe-student-life-1345592-0-교원의-학생생활지도에-관한-고시-해설서-1016-pdf",
       "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 3. 교사용 학생 자살징후 체크리스트",
+      "type": "rule",
+      "title": "자료실 - 교원의 학생생활지도에 관한 고시 해설서-1016",
       "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 자료실 3. 교사용 학생 자살징후 체크리스트.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+      "query": "생활지도 자료실 교원의 학생생활지도에 관한 고시 해설서-1016.pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1345592/doc_4d7fv262a=19vbc=42vc8=8dvd0=b7abvdb14v740b_v862.pdf",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3113,24 +3265,20 @@
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "harvest-gbe-student-life-961271-0-개정-학교폭력예방-및-대책에-관한-법률-시행-관련-안내-최종-학생생활과-hwp",
+      "id": "harvest-gbe-student-life-1625762-0-성희롱성폭령-사안처리-안내서-6-29-pdf",
       "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 안내(최종)-학생생활과-",
+      "type": "guide",
+      "title": "자료실 - 성희롱성폭령 사안처리 안내서(6. 29.)",
       "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 자료실 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 안내(최종)-학생생활과-.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_eb1cv9470=1bv5a=4cv0f=83v8f=f339vdaf4v20e2_v426.hwp",
+      "query": "아동학대 자료실 성희롱성폭령 사안처리 안내서(6. 29.).pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_9e90v2d21=ecvdc=4cv21=abvc5=fdb1vd5edvf327_v7326.pdf",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3141,46 +3289,14 @@
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_eb1cv9470=1bv5a=4cv0f=83v8f=f339vdaf4v20e2_v426.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "harvest-gbe-student-life-961271-1-개정-학교폭력예방-및-대책에-관한-법률-시행-관련-학교용-각종-서식-hwp",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 학교용 각종 서식",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 자료실 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 학교용 각종 서식.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_aa01v8fca=abvb6=48v30=a7v73=d4b7va536v1c2a_v7710.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_aa01v8fca=abvb6=48v30=a7v73=d4b7va536v1c2a_v7710.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1600483-2-정보공개-운영-매뉴얼",
+      "id": "harvest-gbe-student-life-1497001-0-정보공개-운영-매뉴얼",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 정보공개 운영 매뉴얼",
@@ -3201,16 +3317,16 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
+      "id": "harvest-gbe-student-life-1625762-2-지침-예시안-hwp",
       "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 정보공개 운영 매뉴얼",
+      "type": "guide",
+      "title": "자료실 - 지침 예시안",
       "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 자료실 정보공개 운영 매뉴얼",
-      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "query": "아동학대 자료실 지침 예시안.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_0a1bvef24=b8va2=41v37=98vdd=5294vd33av44fe_v7743.hwp",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3221,99 +3337,11 @@
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 제출서식(동의서)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 자료실 제출서식(동의서).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 제출서식(소방시설등 자체점검 실시결과 보고서)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 자료실 제출서식(소방시설등 자체점검 실시결과 보고서).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1600483-0-학교폭력-예방-및-사안처리-관련-체크리스트-pdf",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 학교폭력 예방 및 사안처리 관련 체크리스트",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "학교폭력 자료실 학교폭력 예방 및 사안처리 관련 체크리스트.pdf",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -3341,7 +3369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -3369,7 +3397,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -3397,7 +3425,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-직업계고-구인의뢰-운영-안내",
@@ -3421,7 +3449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-고졸-청년층-취업지원-프로그램-hi",
@@ -3445,7 +3473,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-고졸청년층-취업지원프로그램-개발-연구",
@@ -3469,7 +3497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-대한상공회의소-국가기술자격-시험-출제자료",
@@ -3493,7 +3521,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-서울교육청-직업계고-취업-정책-안내",
@@ -3517,7 +3545,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-직무별-자기소개서-작성-가이드",
@@ -3541,7 +3569,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-졸업자-취업통계-조사-운영",
@@ -3565,7 +3593,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-중앙취업지원센터-설립-운영-방안",
@@ -3589,7 +3617,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-채용연계형-직무교육과정-지원",
@@ -3613,7 +3641,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-학생-취업지원-만족도와-취업성과",
@@ -3637,7 +3665,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-취업지원-서비스-제공을-위한-취업상담-매뉴얼",
@@ -3665,10 +3693,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-44049-0-공문-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-알림-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-44049-0-공문-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-알림-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "(공문) 안전 권익 확보를 위한 직업계고 현장실습 추가 개선방안 알림",
@@ -3689,10 +3717,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38919-0-공문-직업계고-현장실습-안전점검-등을-통한-안전사고-예방-철저-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38919-0-공문-직업계고-현장실습-안전점검-등을-통한-안전사고-예방-철저-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "(공문) 직업계고 현장실습 안전점검 등을 통한 안전사고 예방 철저",
@@ -3713,10 +3741,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "(붙임1) 산업안전점검표(공통)",
@@ -3741,10 +3769,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "(붙임2) 2021 직업계고 산업안전 매뉴얼",
@@ -3769,7 +3797,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -3793,10 +3821,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-126838-0-교안-반도체-사업장-현장실습생을-위한-건강관리-길잡이-ppt-pptx",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-126838-0-교안-반도체-사업장-현장실습생을-위한-건강관리-길잡이-ppt-pptx",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[교안] 반도체 사업장 현장실습생을 위한 건강관리 길잡이_PPT",
@@ -3817,10 +3845,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "[붙임1] 2021학년도 직업계고 현장실습 운영 매뉴얼_서식",
@@ -3845,10 +3873,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
       "category": "fieldTraining",
       "type": "form",
       "title": "[붙임2] (안내)_산업체_현장실습_참여_동의서(학부모_동의서)_서식_안내",
@@ -3873,10 +3901,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "[서식] 2025년 개정 직업계고 현장실습 매뉴얼 서식모음집",
@@ -3901,10 +3929,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "[서식] 2026년 개정 직업계고 현장실습 공통매뉴얼 서식모음집",
@@ -3929,10 +3957,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "[서식]2024년 개정 직업계고 현장실습 매뉴얼 서식모음집",
@@ -3957,10 +3985,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-0-안전보건공단-직업계고-카드북1-차량계-건설기계작업-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-0-안전보건공단-직업계고-카드북1-차량계-건설기계작업-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북1_차량계 건설기계작업_웹용",
@@ -3981,10 +4009,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-1-안전보건공단-직업계고-카드북2-중량물운반-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-1-안전보건공단-직업계고-카드북2-중량물운반-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북2_중량물운반_웹용",
@@ -4005,10 +4033,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-2-안전보건공단-직업계고-카드북3-금속성형기계작업-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-2-안전보건공단-직업계고-카드북3-금속성형기계작업-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북3_금속성형기계작업_웹용",
@@ -4029,10 +4057,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-3-안전보건공단-직업계고-카드북4-금속절삭기계-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-3-안전보건공단-직업계고-카드북4-금속절삭기계-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북4_금속절삭기계_웹용",
@@ -4053,10 +4081,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-4-안전보건공단-직업계고-카드북5-식품제조작업-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-4-안전보건공단-직업계고-카드북5-식품제조작업-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북5_식품제조작업_웹용",
@@ -4077,10 +4105,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-5-안전보건공단-직업계고-카드북6-세척제취급작업-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-5-안전보건공단-직업계고-카드북6-세척제취급작업-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북6_세척제취급작업_웹용",
@@ -4101,10 +4129,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
       "category": "fieldTraining",
       "type": "form",
       "title": "★[붙임] 2024 현장실습 매뉴얼 주요 변경사항 신구대조표",
@@ -4129,58 +4157,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-3-2025-직업계고-현장실습생-강의안-최종-25-06-30-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "★2025 직업계고 현장실습생 강의안(최종)_25.06.30.",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' ★2025 직업계고 현장실습생 강의안(최종)_25.06.30..pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250724&filerealname=%E2%98%852025+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EA%B0%95%EC%9D%98%EC%95%88%28%EC%B5%9C%EC%A2%85%29_25.06.30..pdf&filename=D4BEA8A57A9F4809BA1AF7AB760ABB5E.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-4-2026-직업계고-현장실습생-강의안-최종-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "★2026 직업계고 현장실습생 강의안(최종)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' ★2026 직업계고 현장실습생 강의안(최종).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=%E2%98%852026+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EA%B0%95%EC%9D%98%EC%95%88%28%EC%B5%9C%EC%A2%85%29.pdf&filename=DBE023DD49F94C749803C83E83DAECDD.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-72151-0-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-72151-0-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "★산업안전 매뉴얼",
@@ -4201,10 +4181,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-65570-0-최종-2022-직업계고-현장실습생-대상-강의안-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-65570-0-최종-2022-직업계고-현장실습생-대상-강의안-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "★최종_2022 직업계고 현장실습생 대상 강의안",
@@ -4225,10 +4205,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127332-0-1-1-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127332-0-1-1-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1-1. 2023년 개정 직업계고 현장실습 운영 공통 매뉴얼(학교용)",
@@ -4249,10 +4229,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127332-2-1-2-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127332-2-1-2-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-hwp",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1-2. 2023년 개정 직업계고 현장실습 운영 공통 매뉴얼(학교용)",
@@ -4273,34 +4253,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-2-1-통합본-2026년-직업계고-현장실습-산업안전-매뉴얼-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "1. [통합본] 2026년 직업계고 현장실습 산업안전 매뉴얼",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 1. [통합본] 2026년 직업계고 현장실습 산업안전 매뉴얼.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=1.+%5B%ED%86%B5%ED%95%A9%EB%B3%B8%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=FDB32A7BFE0A41F6A8EF973E5EC29F47.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-128160-0-1-2023년-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-128160-0-1-2023년-직업계고-현장실습-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 2023년 직업계고 현장실습 산업안전 매뉴얼",
@@ -4321,10 +4277,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-0-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-0-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 2026년 개정 직업계고 현장실습 운영 공통매뉴얼_학교용",
@@ -4345,10 +4301,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-0-1-2026년-개정-직업계고-현장실습-운영",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-0-1",
       "category": "fieldTraining",
       "type": "form",
       "title": "1. 2026년 개정 직업계고 현장실습 운영 공통매뉴얼_학교용",
@@ -4373,10 +4329,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134988-0-1-직업계고-현장실습-운영-공통-매뉴얼-안내-2024년-개정-주요-변경사항-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134988-0-1-직업계고-현장실습-운영-공통-매뉴얼-안내-2024년-개정-주요-변경사항-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 직업계고 현장실습 운영 공통 매뉴얼 안내_2024년 개정 주요 변경사항",
@@ -4397,10 +4353,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38639-0-1-한국공인노무사회-2021-직업계고-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38639-0-1-한국공인노무사회-2021-직업계고-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 한국공인노무사회 - 2021 직업계고 산업안전 매뉴얼",
@@ -4421,10 +4377,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-33248-0-1-한국공인노무사회-직업계고-실험-실습실-안전보건관리-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-33248-0-1-한국공인노무사회-직업계고-실험-실습실-안전보건관리-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 한국공인노무사회-직업계고 실험.실습실 안전보건관리 매뉴얼",
@@ -4445,34 +4401,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-3-2-공업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2. [공업] 2026년 직업계고 현장실습 산업안전 핸드북",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2. [공업] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=2.+%5B%EA%B3%B5%EC%97%85%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=E23088A47EB74D1995A4FBD510C41052.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "2. 2023년 개정 직업계고 현장실습 매뉴얼 서식모음집",
@@ -4497,10 +4429,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-1-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-1-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2. 2026년 개정 직업계고 현장실습 운영 공통매뉴얼_기업용",
@@ -4521,10 +4453,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-1-2-2026년-개정-직업계고-현장실습-운영",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-1-2",
       "category": "fieldTraining",
       "type": "form",
       "title": "2. 2026년 개정 직업계고 현장실습 운영 공통매뉴얼_기업용",
@@ -4549,10 +4481,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134988-1-2-직업계고-현장실습-운영의-이해-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134988-1-2-직업계고-현장실습-운영의-이해-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2. 직업계고 현장실습 운영의 이해",
@@ -4573,7 +4505,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -4597,10 +4529,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-33248-1-2-한국공인노무사회-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-33248-1-2-한국공인노무사회-직업계고-현장실습-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2. 한국공인노무사회-직업계고 현장실습 산업안전 매뉴얼",
@@ -4621,10 +4553,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-30450-0-2019학년도-직업계고-현장실습-운영-매뉴얼-수정본-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-30450-0-2019학년도-직업계고-현장실습-운영-매뉴얼-수정본-hwp",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2019학년도 직업계고 현장실습 운영 매뉴얼(수정본)",
@@ -4645,10 +4577,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-29681-0-2019학년도-직업계고-현장실습-운영-안내자료-배포용-pptx",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-29681-0-2019학년도-직업계고-현장실습-운영-안내자료-배포용-pptx",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2019학년도 직업계고 현장실습 운영 안내자료(배포용)",
@@ -4669,10 +4601,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-32692-0-2020학년도-직업계고-현장실습-운영-안내자료-배부용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-32692-0-2020학년도-직업계고-현장실습-운영-안내자료-배부용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2020학년도 직업계고 현장실습 운영 안내자료(배부용)",
@@ -4693,10 +4625,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-36857-0-2021-직업계고-현장실습-운영-매뉴얼-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-36857-0-2021-직업계고-현장실습-운영-매뉴얼-최종-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2021 직업계고 현장실습 운영 매뉴얼(최종)",
@@ -4717,10 +4649,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-73129-0-2022개정-직업계고현장실습운영공통매뉴얼-학교용-최종본-0630-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-73129-0-2022개정-직업계고현장실습운영공통매뉴얼-학교용-최종본-0630-hwp",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2022개정_직업계고현장실습운영공통매뉴얼(학교용)_최종본(0630)",
@@ -4741,10 +4673,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-65309-0-2022년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-1-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-65309-0-2022년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-1-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2022년 개정 직업계고 현장실습 운영 공통 매뉴얼(학교용) (1)",
@@ -4765,10 +4697,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127566-0-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127566-0-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 개정 직업계고 현장실습 운영 공통 매뉴얼(기업용)",
@@ -4789,10 +4721,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127566-1-2023년-개정-현장실습-간편-매뉴얼-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127566-1-2023년-개정-현장실습-간편-매뉴얼-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 개정 현장실습 간편 매뉴얼(기업용)",
@@ -4813,10 +4745,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127647-0-2023년-개정-현장실습-간편-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127647-0-2023년-개정-현장실습-간편-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 개정 현장실습 간편 매뉴얼(학교용)",
@@ -4837,7 +4769,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -4861,10 +4793,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127696-1-2023년-hifive-현장실습-관리시스템-매뉴얼-학교-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127696-1-2023년-hifive-현장실습-관리시스템-매뉴얼-학교-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 HIFIVE 현장실습 관리시스템 매뉴얼(학교)",
@@ -4885,10 +4817,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127696-0-2023년-hifive-현장실습-활용-매뉴얼-학생-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127696-0-2023년-hifive-현장실습-활용-매뉴얼-학생-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 HIFIVE 현장실습 활용 매뉴얼(학생)",
@@ -4909,7 +4841,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -4933,7 +4865,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -4957,7 +4889,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -4981,130 +4913,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-3-2024년-직업계고-현장실습-산업안전-매뉴얼-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습 산업안전 매뉴얼",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습 산업안전 매뉴얼.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=3B76057D62D246F995E54F2CB7276AEF.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-0-2024년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습 산업안전 핸드북(건설)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(건설).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B1%B4%EC%84%A4%29.pdf&filename=F29FFFC36BAE41019EC15A689900AEC1.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-1-2024년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습 산업안전 핸드북(공업)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(공업).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B3%B5%EC%97%85%29.pdf&filename=FEC522C711354867AAB8FF5F60C8285B.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-2-2024년-직업계고-현장실습-산업안전-핸드북-농수산상업및가사-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습 산업안전 핸드북(농수산상업및가사)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(농수산상업및가사).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EB%86%8D%EC%88%98%EC%82%B0%EC%83%81%EC%97%85%EB%B0%8F%EA%B0%80%EC%82%AC%29.pdf&filename=85D454242B9F4DDEB56CA199B24E737E.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-4-2024년-직업계고-현장실습생-대상-강의안-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습생 대상 강의안",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습생 대상 강의안.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EB%8C%80%EC%83%81+%EA%B0%95%EC%9D%98%EC%95%88.pdf&filename=50C531B30168437CA00809EF27E8F4AF.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-134651-0-2024년-hifive-현장실습-관리시스템-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134651-0-2024년-hifive-현장실습-관리시스템-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2024년 HIFIVE 현장실습 관리시스템 매뉴얼(학교용)",
@@ -5125,10 +4937,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134651-1-2024년-hifive-현장실습-관리시스템-매뉴얼-학생용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134651-1-2024년-hifive-현장실습-관리시스템-매뉴얼-학생용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2024년 HIFIVE 현장실습 관리시스템 매뉴얼(학생용)",
@@ -5149,106 +4961,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-0-2025년-직업계고-현장실습-산업안전-매뉴얼-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2025년 직업계고 현장실습 산업안전 매뉴얼",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2025년 직업계고 현장실습 산업안전 매뉴얼.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=D1C7D658B31C4A0E8AC566EEE2406362.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-1-2025년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2025년 직업계고 현장실습 산업안전 핸드북(건설)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(건설).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B1%B4%EC%84%A4%29.pdf&filename=7C4A6EF123874467A2DFD6F9DCFC21EF.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-4-2025년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2025년 직업계고 현장실습 산업안전 핸드북(공업)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(공업).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B3%B5%EC%97%85%29.pdf&filename=A3972BF0DE034337A61990D4A3CAC61B.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-2-2025년-직업계고-현장실습-산업안전-핸드북-농업-수산-해운-상업-및-가사-실업-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2025년 직업계고 현장실습 산업안전 핸드북(농업, 수산 해운, 상업 및 가사 실업)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(농업, 수산 해운, 상업 및 가사 실업).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EB%86%8D%EC%97%85%2C+%EC%88%98%EC%82%B0+%ED%95%B4%EC%9A%B4%2C+%EC%83%81%EC%97%85+%EB%B0%8F+%EA%B0%80%EC%82%AC+%EC%8B%A4%EC%97%85%29.pdf&filename=FB03D927E8F9412387416F90CC1B8382.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2025년 직업계고 현장실습 운영 공통 매뉴얼(기업용)",
@@ -5269,10 +4985,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-20",
       "category": "fieldTraining",
       "type": "form",
       "title": "2025년 직업계고 현장실습 운영 공통 매뉴얼(기업용)",
@@ -5297,10 +5013,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2025년 직업계고 현장실습 운영 공통 매뉴얼(학교용)",
@@ -5321,10 +5037,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-20",
       "category": "fieldTraining",
       "type": "form",
       "title": "2025년 직업계고 현장실습 운영 공통 매뉴얼(학교용)",
@@ -5349,10 +5065,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140473-1-2025년-hifive-사용자-매뉴얼-학생용-250820-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140473-1-2025년-hifive-사용자-매뉴얼-학생용-250820-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2025년 HIFIVE 사용자 매뉴얼(학생용)_250820",
@@ -5373,10 +5089,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140473-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-v-1-4-250820-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140473-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-v-1-4-250820-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2025년 HIFIVE 현장실습 관리시스템 매뉴얼(학교용)_V.1.4_250820",
@@ -5397,7 +5113,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5421,7 +5137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5445,7 +5161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5469,10 +5185,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145403-0-2026-hifive-시스템-매뉴얼-학교용-0907-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145403-0-2026-hifive-시스템-매뉴얼-학교용-0907-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2026 HIFIVE 시스템 매뉴얼(학교용)_0907",
@@ -5493,7 +5209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5517,10 +5233,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145403-1-2026-hifive-시스템-매뉴얼-학생용-0819-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145403-1-2026-hifive-시스템-매뉴얼-학생용-0819-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2026 HIFIVE 시스템 매뉴얼(학생용)_0819",
@@ -5541,10 +5257,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-3-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-3-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2026년 개정 직업계고 현장실습 운영 공통매뉴얼 리플릿_기업용",
@@ -5565,10 +5281,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-3-2026년-개정-직업계고-현장실습-운영-공",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-3-20",
       "category": "fieldTraining",
       "type": "form",
       "title": "2026년 개정 직업계고 현장실습 운영 공통매뉴얼 리플릿_기업용",
@@ -5593,10 +5309,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2026년 개정 직업계고 현장실습 운영 공통매뉴얼 리플릿_학교용",
@@ -5617,10 +5333,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-2-2026년-개정-직업계고-현장실습-운영-공",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-2-20",
       "category": "fieldTraining",
       "type": "form",
       "title": "2026년 개정 직업계고 현장실습 운영 공통매뉴얼 리플릿_학교용",
@@ -5645,7 +5361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5669,7 +5385,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5693,34 +5409,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-0-3-건설-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "3. [건설] 2026년 직업계고 현장실습 산업안전 핸드북",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 3. [건설] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=3.+%5B%EA%B1%B4%EC%84%A4%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=12FE3EDA27FB44DAA26FAAB89352635C.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-128161-0-3-2023년-직업계고-현장실습생-대상-강의안-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-128161-0-3-2023년-직업계고-현장실습생-대상-강의안-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "3. 2023년 직업계고 현장실습생 대상 강의안",
@@ -5741,10 +5433,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38639-1-3-한국공인노무사회-2021-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38639-1-3-한국공인노무사회-2021-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "3. 한국공인노무사회 - 2021 실습생을 위한 꼭 알아야 할 현장실습(미니책자)",
@@ -5765,10 +5457,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-33248-2-3-한국공인노무사회-직업계고-현장실습-기업지원정책-전단-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-33248-2-3-한국공인노무사회-직업계고-현장실습-기업지원정책-전단-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "3. 한국공인노무사회-직업계고 현장실습 기업지원정책 전단",
@@ -5789,34 +5481,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-1-4-농업-수산해운-상업-가사실업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "4. [농업,수산해운,상업,가사실업] 2026년 직업계고 현장실습 산업안전 핸드북",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 4. [농업,수산해운,상업,가사실업] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=4.+%5B%EB%86%8D%EC%97%85%2C%EC%88%98%EC%82%B0%ED%95%B4%EC%9A%B4%2C%EC%83%81%EC%97%85%2C%EA%B0%80%EC%82%AC%EC%8B%A4%EC%97%85%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=5BE2A9C61A0D412FB9E4A1E44DBE4F03.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-33248-3-4-한국공인노무사회-2020-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-33248-3-4-한국공인노무사회-2020-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "4. 한국공인노무사회-2020 실습생을 위한 꼭 알아야 할 현장실습(미니책자)",
@@ -5837,7 +5505,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-취창업지원센터-일반자료실",
@@ -5861,7 +5529,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-현장실습-선도기업-인정-절차",
@@ -5885,7 +5553,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5913,7 +5581,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5941,7 +5609,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5969,7 +5637,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-대한상공회의소-직업훈련-특성화고-지원사업",
@@ -5993,10 +5661,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "리플릿-직업계고 현장실습 운영 공통 매뉴얼 (기업용)_최종",
@@ -6017,10 +5685,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플",
       "category": "fieldTraining",
       "type": "form",
       "title": "리플릿-직업계고 현장실습 운영 공통 매뉴얼 (기업용)_최종",
@@ -6045,10 +5713,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "리플릿-직업계고 현장실습 운영 공통 매뉴얼 (학교용)_최종",
@@ -6069,10 +5737,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플",
       "category": "fieldTraining",
       "type": "form",
       "title": "리플릿-직업계고 현장실습 운영 공통 매뉴얼 (학교용)_최종",
@@ -6097,10 +5765,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-126838-1-반도체사업장-현장실습생-건강관리-길잡이-웹용-단면-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-126838-1-반도체사업장-현장실습생-건강관리-길잡이-웹용-단면-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "반도체사업장 현장실습생 건강관리 길잡이(웹용_단면)",
@@ -6121,10 +5789,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임. 2022학년도 현장실습 지원금 사전신청 매뉴얼_최종",
@@ -6149,10 +5817,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임1. 2024 직업계고 현장실습 운영 공통 매뉴얼(학교용)_한글",
@@ -6177,10 +5845,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임1. 2024 직업계고 현장실습 운영 공통 매뉴얼(학교용)_PDF",
@@ -6205,10 +5873,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임2. 2024 직업계고 현장실습 운영 공통 매뉴얼(기업용)_한글",
@@ -6233,10 +5901,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임2. 2024 직업계고 현장실습 운영 공통 매뉴얼(기업용)_PDF",
@@ -6261,10 +5929,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임2. 실습기업 수정 기능 이용 매뉴얼",
@@ -6289,7 +5957,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6313,7 +5981,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-서울교육청-직업계고-현장실습-자료실",
@@ -6337,10 +6005,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-44049-1-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-44049-1-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-hwp",
       "category": "fieldTraining",
       "type": "guide",
       "title": "안전·권익 확보를 위한 직업계고 현장실습 추가 개선방안",
@@ -6361,7 +6029,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-취업지원관-업무-매뉴얼",
@@ -6385,10 +6053,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-75109-0-직업계고-현장실습-운영-간편-매뉴얼-기업용-0713-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-75109-0-직업계고-현장실습-운영-간편-매뉴얼-기업용-0713-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "직업계고 현장실습 운영 간편 매뉴얼(기업용)-0713",
@@ -6409,10 +6077,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-75109-1-직업계고-현장실습-운영-간편-매뉴얼-학생-학교용-0713-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-75109-1-직업계고-현장실습-운영-간편-매뉴얼-학생-학교용-0713-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "직업계고 현장실습 운영 간편 매뉴얼(학생 학교용)-0713",
@@ -6433,10 +6101,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-75109-2-직업계고-현장실습-운영-매뉴얼-기업용-내지0713-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-75109-2-직업계고-현장실습-운영-매뉴얼-기업용-내지0713-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "직업계고 현장실습 운영 매뉴얼(기업용)-내지0713",
@@ -6457,10 +6125,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-75109-3-직업계고-현장실습-운영-매뉴얼-학교용-내지0713-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-75109-3-직업계고-현장실습-운영-매뉴얼-학교용-내지0713-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "직업계고 현장실습 운영 매뉴얼(학교용)-내지0713",
@@ -6481,10 +6149,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134596-1-hifive-권한-부여-사용자-매뉴얼-공인노무사회-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134596-1-hifive-권한-부여-사용자-매뉴얼-공인노무사회-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "HIFIVE 권한 부여 사용자 매뉴얼(공인노무사회)",
@@ -6505,10 +6173,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134596-0-hifive-권한-부여-사용자-매뉴얼-학교-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134596-0-hifive-권한-부여-사용자-매뉴얼-학교-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "HIFIVE 권한 부여 사용자 매뉴얼(학교)",
@@ -6529,7 +6197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6553,7 +6221,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6581,7 +6249,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6609,7 +6277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6637,7 +6305,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6665,7 +6333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6693,7 +6361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6717,7 +6385,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6741,7 +6409,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6765,7 +6433,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6789,7 +6457,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6817,7 +6485,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6845,7 +6513,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6873,7 +6541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6897,7 +6565,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6921,7 +6589,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6949,7 +6617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6977,7 +6645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7005,7 +6673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7033,7 +6701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7061,7 +6729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7089,7 +6757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7117,7 +6785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7145,7 +6813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7173,7 +6841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7201,7 +6869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7229,7 +6897,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7257,7 +6925,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7285,7 +6953,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7313,7 +6981,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7341,7 +7009,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7369,7 +7037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7397,7 +7065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7425,7 +7093,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7453,7 +7121,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7481,7 +7149,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7509,7 +7177,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7537,7 +7205,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7565,7 +7233,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7593,7 +7261,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7621,7 +7289,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7649,7 +7317,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7677,7 +7345,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7705,7 +7373,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7733,7 +7401,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7761,7 +7429,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7789,7 +7457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7817,7 +7485,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7845,7 +7513,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7873,7 +7541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7901,7 +7569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7929,7 +7597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7957,7 +7625,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7985,7 +7653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8013,7 +7681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8037,7 +7705,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8065,7 +7733,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8089,7 +7757,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-고교생-맞춤형-고용서비스",
@@ -8113,7 +7781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8137,7 +7805,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8161,7 +7829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8185,7 +7853,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8213,7 +7881,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8237,7 +7905,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8261,7 +7929,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8289,7 +7957,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8317,7 +7985,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8345,7 +8013,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8373,7 +8041,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8401,7 +8069,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8429,7 +8097,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8457,7 +8125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8485,7 +8153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8513,7 +8181,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8541,7 +8209,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8569,7 +8237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8597,7 +8265,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8625,7 +8293,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8653,7 +8321,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8681,7 +8349,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8709,7 +8377,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8737,7 +8405,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8761,7 +8429,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8785,7 +8453,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8813,7 +8481,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8841,7 +8509,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8869,7 +8537,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8897,7 +8565,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8925,7 +8593,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8953,7 +8621,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8981,7 +8649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9009,7 +8677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9037,7 +8705,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9065,7 +8733,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9093,7 +8761,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9121,7 +8789,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9149,7 +8817,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9177,7 +8845,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9205,7 +8873,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9229,7 +8897,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9253,7 +8921,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9281,7 +8949,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9309,7 +8977,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9333,7 +9001,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-law-직업교육훈련-촉진법",
@@ -9357,7 +9025,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-law-초-중등교육법",
@@ -9381,7 +9049,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9405,7 +9073,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9429,7 +9097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9457,7 +9125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9485,7 +9153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9513,7 +9181,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9541,7 +9209,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9569,7 +9237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9597,7 +9265,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9625,7 +9293,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9653,7 +9321,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9681,7 +9349,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9709,7 +9377,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9733,7 +9401,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9757,7 +9425,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9785,7 +9453,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9809,7 +9477,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9837,7 +9505,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9865,7 +9533,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9893,7 +9561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9921,7 +9589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9949,7 +9617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9977,7 +9645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10005,7 +9673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10033,7 +9701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10061,7 +9729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10089,7 +9757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10117,7 +9785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10145,7 +9813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10173,7 +9841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10201,7 +9869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10229,7 +9897,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10257,7 +9925,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10285,7 +9953,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10313,7 +9981,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10341,7 +10009,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10369,7 +10037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10397,7 +10065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10425,7 +10093,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10453,7 +10121,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10481,7 +10149,175 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-0-서식-유특-6-1-2-1-특수교육대상학생-취학의무",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-1 특수교육대상학생 취학의무(유예, 면제) 신청 (공문 양식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-1 특수교육대상학생 취학의무(유예, 면제) 신청 (공문 양식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8c368b329a31414d9b08651a2621d977",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8c368b329a31414d9b08651a2621d977",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-1-서식-유특-6-1-2-2-특수교육대상학생-재취학-승",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-2 특수교육대상학생 재취학 승인 신청 (공문 양식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-2 특수교육대상학생 재취학 승인 신청 (공문 양식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7722d46b1cc1a76bd8bd3cdca732d195",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7722d46b1cc1a76bd8bd3cdca732d195",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-2-서식-유특-6-1-2-3-특수교육대상학생-취학의무",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-3 특수교육대상학생 취학의무(유예, 면제) 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-3 특수교육대상학생 취학의무(유예, 면제) 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d5ed3b8e7866ff89205794567f18aedf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d5ed3b8e7866ff89205794567f18aedf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-3-서식-유특-6-1-2-4-특수교육대상학생-재취학-신",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-4 특수교육대상학생 재취학 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-4 특수교육대상학생 재취학 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=86c20a0742619fa79780d82cbd8fd793",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=86c20a0742619fa79780d82cbd8fd793",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-4-서식-유특-6-1-2-5-학교장-의견서-유예-면제",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-5 학교장 의견서(유예, 면제)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-5 학교장 의견서(유예, 면제)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a16ad05e81a6ad789ad88b875ce2891c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a16ad05e81a6ad789ad88b875ce2891c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-6-서식-유특-6-1-2-7-개별화교육지원팀-협의록",
+      "category": "general",
+      "type": "form",
+      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-7 개별화교육지원팀 협의록",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-7 개별화교육지원팀 협의록",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=39edf20f6a243ca61f22f673dc5df0a9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=39edf20f6a243ca61f22f673dc5df0a9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10509,7 +10345,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10537,7 +10373,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10565,7 +10401,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10593,7 +10429,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10621,7 +10457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10649,7 +10485,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10677,7 +10513,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10705,7 +10541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10733,7 +10569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10761,7 +10597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10789,7 +10625,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10817,7 +10653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10845,7 +10681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10873,7 +10709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10901,7 +10737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10929,7 +10765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10957,7 +10793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10985,7 +10821,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11013,7 +10849,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11041,7 +10877,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11069,7 +10905,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11097,7 +10933,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11125,7 +10961,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11153,7 +10989,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11181,7 +11017,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11209,7 +11045,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11237,7 +11073,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11265,7 +11101,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11293,7 +11129,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11321,7 +11157,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11349,7 +11185,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11377,7 +11213,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11405,7 +11241,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11433,7 +11269,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11461,7 +11297,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11489,7 +11325,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11517,7 +11353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11541,7 +11377,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11565,7 +11401,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11593,7 +11429,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11621,7 +11457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11645,7 +11481,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11673,7 +11509,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11701,7 +11537,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11725,7 +11561,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11753,7 +11589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11781,7 +11617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11809,7 +11645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11837,7 +11673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11865,7 +11701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11893,7 +11729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11921,7 +11757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11949,7 +11785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11977,7 +11813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12005,7 +11841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12033,7 +11869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12061,7 +11897,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12089,7 +11925,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12117,7 +11953,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12145,7 +11981,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12173,7 +12009,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12201,7 +12037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12229,7 +12065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12257,7 +12093,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12285,7 +12121,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12313,7 +12149,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12337,7 +12173,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12361,7 +12197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12385,7 +12221,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12409,7 +12245,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12433,7 +12269,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12461,7 +12297,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12489,7 +12325,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12517,7 +12353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12545,7 +12381,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12569,7 +12405,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12593,7 +12429,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12621,7 +12457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12645,7 +12481,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12669,7 +12505,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12693,7 +12529,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12721,7 +12557,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12749,7 +12585,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12773,7 +12609,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12797,7 +12633,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12821,7 +12657,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12849,7 +12685,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12877,7 +12713,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12905,7 +12741,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12929,7 +12765,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12953,7 +12789,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12977,7 +12813,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13001,7 +12837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13029,7 +12865,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13057,7 +12893,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13085,7 +12921,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13109,7 +12945,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13137,7 +12973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13161,7 +12997,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13189,7 +13025,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13217,7 +13053,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13245,7 +13081,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13273,7 +13109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13301,7 +13137,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13329,7 +13165,35 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-20877-cntntsid-8640-5-서식-유특-6-1-2-6-개인정보-수집-이용에-관한",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-6 개인정보 수집 · 이용에 관한 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육대상자 취학 진학 및 유예 면제 서식-유특-6-1-2-6 개인정보 수집 · 이용에 관한 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=df41a25ef8149a50020a03b49e3bca38",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=df41a25ef8149a50020a03b49e3bca38",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13357,7 +13221,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13385,7 +13249,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13413,7 +13277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13441,7 +13305,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13469,7 +13333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13497,7 +13361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13525,7 +13389,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13553,7 +13417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13581,7 +13445,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13609,7 +13473,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13637,7 +13501,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13661,7 +13525,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13685,7 +13549,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13709,7 +13573,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13733,7 +13597,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13757,7 +13621,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13781,7 +13645,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13805,7 +13669,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13829,7 +13693,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13853,7 +13717,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13877,7 +13741,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13901,7 +13765,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13925,7 +13789,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13949,7 +13813,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13973,7 +13837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13997,7 +13861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14021,7 +13885,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14045,7 +13909,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14069,7 +13933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14093,7 +13957,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14117,7 +13981,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14141,7 +14005,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14165,7 +14029,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14189,7 +14053,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14213,7 +14077,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14237,7 +14101,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14261,7 +14125,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14285,7 +14149,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14309,7 +14173,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14333,7 +14197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14357,7 +14221,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14381,7 +14245,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14405,7 +14269,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14429,7 +14293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14453,7 +14317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14477,7 +14341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14505,7 +14369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14529,7 +14393,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14553,7 +14417,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14577,7 +14441,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14601,7 +14465,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14625,7 +14489,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14649,7 +14513,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14673,7 +14537,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14697,7 +14561,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14721,7 +14585,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14745,7 +14609,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14769,7 +14633,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14793,7 +14657,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14817,7 +14681,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14841,7 +14705,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14865,7 +14729,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14889,7 +14753,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14913,7 +14777,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14937,7 +14801,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14961,7 +14825,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14985,7 +14849,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15009,7 +14873,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15033,7 +14897,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15057,7 +14921,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15081,7 +14945,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15105,7 +14969,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15129,7 +14993,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15153,7 +15017,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15177,7 +15041,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15201,7 +15065,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15225,7 +15089,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15249,7 +15113,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15277,7 +15141,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15305,7 +15169,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15333,7 +15197,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15361,7 +15225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15389,7 +15253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15417,7 +15281,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15445,7 +15309,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15473,7 +15337,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15501,7 +15365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15529,7 +15393,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15557,7 +15421,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15585,7 +15449,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15613,7 +15477,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15641,7 +15505,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15669,7 +15533,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15697,7 +15561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15725,7 +15589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15753,7 +15617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15781,7 +15645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15809,7 +15673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15837,7 +15701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15865,7 +15729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15893,7 +15757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15921,7 +15785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15949,7 +15813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15977,7 +15841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16005,7 +15869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16033,7 +15897,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16061,7 +15925,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16089,7 +15953,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16117,7 +15981,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16145,7 +16009,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16173,7 +16037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16201,7 +16065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16229,7 +16093,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16257,7 +16121,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16285,7 +16149,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16313,7 +16177,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16341,7 +16205,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16369,7 +16233,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16397,7 +16261,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16425,7 +16289,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16453,7 +16317,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16481,7 +16345,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16509,7 +16373,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16537,7 +16401,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16565,7 +16429,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16593,7 +16457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16621,7 +16485,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16649,7 +16513,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16677,7 +16541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16705,7 +16569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16733,7 +16597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16761,7 +16625,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16789,7 +16653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16817,7 +16681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16845,7 +16709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16873,7 +16737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16901,7 +16765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16929,7 +16793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16957,7 +16821,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16985,7 +16849,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17013,7 +16877,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17041,7 +16905,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17069,7 +16933,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17097,7 +16961,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17125,7 +16989,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17153,7 +17017,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17181,7 +17045,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17209,7 +17073,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17237,7 +17101,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17265,7 +17129,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17293,7 +17157,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17321,7 +17185,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17345,7 +17209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17373,7 +17237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17397,7 +17261,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17425,7 +17289,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17453,7 +17317,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17481,7 +17345,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17505,10 +17369,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1564258-1-최종-2",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-acco",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - (최종) 2026학년도 공립학교회계 예산편성 기본지침",
@@ -17529,10 +17393,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1297292-0-2023-3-2-2023학년도-학교회계-예산편성-기본지침-최종-개정사항-반영-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1297292-0-2023-3-2-2023학년도-학교회계-예산편성-기본지침-최종-개정사항-반영-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영",
@@ -17553,10 +17417,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1459768-0-2025",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-acco",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★★ 2025 공립학교회계예산편성 지침 최종(인쇄본)",
@@ -17577,10 +17441,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1459768-1-2025",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-acco",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★★2025학년도_공립학교회계_예산편성_기본지침(인쇄본)",
@@ -17601,10 +17465,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-983816-0-2022학년도-학교회계-예산편성-기본지침-최종-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-983816-0-2022학년도-학교회계-예산편성-기본지침-최종-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★2022학년도_학교회계_예산편성_기본지침(최종)",
@@ -17625,10 +17489,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1264173-0-2023학년도-학교회계-예산편성-기본지침-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1264173-0-2023학년도-학교회계-예산편성-기본지침-최종-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★2023학년도 학교회계 예산편성 기본지침(최종)",
@@ -17649,10 +17513,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-389974-0-2019학년도-학교회계-예산편성-기본지침-업로드-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389974-0-2019학년도-학교회계-예산편성-기본지침-업로드-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2019학년도 학교회계 예산편성 기본지침(업로드)",
@@ -17673,10 +17537,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-389974-1-2019학년도-학교회계-예산편성-기본지침-pdf-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389974-1-2019학년도-학교회계-예산편성-기본지침-pdf-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2019학년도 학교회계 예산편성 기본지침(pdf)",
@@ -17697,10 +17561,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-389975-0-2020학년도-학교회계-예산편성-기본지침-2019-11-29-홈페이지-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389975-0-2020학년도-학교회계-예산편성-기본지침-2019-11-29-홈페이지-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2020학년도 학교회계 예산편성 기본지침(2019.11.29.)_홈페이지",
@@ -17721,10 +17585,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-884918-0-2021학년도-학교회계-예산편성-기본지침-2021-홈페이지-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-884918-0-2021학년도-학교회계-예산편성-기본지침-2021-홈페이지-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2021학년도_학교회계_예산편성_기본지침(2021)-홈페이지",
@@ -17745,10 +17609,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1357166-0-2024학년도-공립학교회계-예산편성-기본지침-홈페이지-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1357166-0-2024학년도-공립학교회계-예산편성-기본지침-홈페이지-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2024학년도 공립학교회계 예산편성 기본지침(홈페이지)",
@@ -17769,10 +17633,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1610395-0-2026",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-acco",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용)",
@@ -17793,10 +17657,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1564258-0-2026",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-acco",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2026학년도_공립학교회계_예산편성_기본지침",
@@ -17817,10 +17681,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1475036-0-일잘러의학교회계실무-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1475036-0-일잘러의학교회계실무-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 일잘러의학교회계실무",
@@ -17841,10 +17705,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1297292-1-정보공개-운영-매뉴얼",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1297292-1-정보공개-운영-매뉴얼",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 정보공개 운영 매뉴얼",
@@ -17865,10 +17729,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1297292-2-pdf-다운로드",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1297292-2-pdf-다운로드",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - PDF 다운로드",
@@ -17889,7 +17753,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17917,7 +17781,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17945,7 +17809,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17973,7 +17837,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18001,7 +17865,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18029,7 +17893,63 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15929-cntntsid-6813-0-서식-행정기관-6-1-1-1-자리배치-예시",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-1] 자리배치 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "업무협약(MOU) 체결 및 계약 업무 업무협약(MOU) 체결 [서식-행정기관-6-1-1-1] 자리배치 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b4b3656e5ac81490dde1e93fed17b9e5",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b4b3656e5ac81490dde1e93fed17b9e5",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15929-cntntsid-6813-1-서식-행정기관-6-1-1-2-협약서-예시",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-2] 협약서 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "업무협약(MOU) 체결 및 계약 업무 업무협약(MOU) 체결 [서식-행정기관-6-1-1-2] 협약서 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=79d38b7080a15a04c43b844da5c479d1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=79d38b7080a15a04c43b844da5c479d1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18057,7 +17977,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18085,7 +18005,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18113,7 +18033,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18141,7 +18061,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18169,7 +18089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18193,7 +18113,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18217,7 +18137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18241,7 +18161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18265,7 +18185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18289,7 +18209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18317,7 +18237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18341,7 +18261,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18365,7 +18285,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18389,7 +18309,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18417,7 +18337,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18445,7 +18365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18469,7 +18389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18493,7 +18413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18517,7 +18437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18541,7 +18461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18565,7 +18485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18589,7 +18509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18613,7 +18533,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18641,7 +18561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18669,7 +18589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18697,7 +18617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18725,7 +18645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18753,7 +18673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18781,7 +18701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18809,7 +18729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18837,7 +18757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18865,7 +18785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18893,7 +18813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18921,7 +18841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18949,7 +18869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18973,7 +18893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19001,7 +18921,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19025,7 +18945,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19053,7 +18973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19081,7 +19001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19105,7 +19025,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19129,7 +19049,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19157,7 +19077,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19185,7 +19105,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19213,7 +19133,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19241,7 +19161,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19265,7 +19185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19289,7 +19209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19313,7 +19233,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19337,7 +19257,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19361,7 +19281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19385,7 +19305,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19413,7 +19333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19437,7 +19357,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19461,7 +19381,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19485,7 +19405,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19513,7 +19433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19541,7 +19461,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19569,7 +19489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19597,7 +19517,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19625,7 +19545,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19653,7 +19573,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19677,7 +19597,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19701,7 +19621,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19725,7 +19645,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19749,7 +19669,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19773,7 +19693,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19797,7 +19717,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19821,7 +19741,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19849,7 +19769,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19873,7 +19793,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19897,7 +19817,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19921,7 +19841,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19945,7 +19865,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19969,7 +19889,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19997,7 +19917,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20021,7 +19941,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20045,7 +19965,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20073,7 +19993,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20097,7 +20017,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20121,7 +20041,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20145,7 +20065,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20169,7 +20089,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20193,7 +20113,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20217,7 +20137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20241,7 +20161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20265,7 +20185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20289,7 +20209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20313,7 +20233,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20337,7 +20257,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20361,7 +20281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20385,7 +20305,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20409,7 +20329,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20433,7 +20353,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20457,7 +20377,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20481,7 +20401,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20505,7 +20425,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20529,7 +20449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20553,7 +20473,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20577,7 +20497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20601,7 +20521,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20625,7 +20545,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20653,7 +20573,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20681,7 +20601,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20709,7 +20629,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20737,7 +20657,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20765,7 +20685,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20789,7 +20709,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20813,7 +20733,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20837,7 +20757,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20861,7 +20781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20885,7 +20805,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20909,7 +20829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20933,7 +20853,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20957,7 +20877,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20981,7 +20901,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21005,7 +20925,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21029,7 +20949,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21053,7 +20973,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21081,7 +21001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21105,7 +21025,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21133,7 +21053,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21157,7 +21077,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21185,7 +21105,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21209,7 +21129,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21233,7 +21153,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21257,7 +21177,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21281,7 +21201,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21305,7 +21225,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21329,7 +21249,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21353,7 +21273,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21381,7 +21301,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21409,7 +21329,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21437,7 +21357,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21465,7 +21385,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21489,7 +21409,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21517,7 +21437,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21545,7 +21465,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21573,7 +21493,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21601,7 +21521,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21629,7 +21549,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21657,7 +21577,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21681,7 +21601,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21709,7 +21629,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21737,7 +21657,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21765,7 +21685,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21793,7 +21713,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21821,7 +21741,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21849,7 +21769,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21877,7 +21797,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21905,7 +21825,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21933,7 +21853,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21961,7 +21881,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21989,7 +21909,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22017,7 +21937,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22045,7 +21965,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22073,7 +21993,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22101,7 +22021,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22129,7 +22049,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22153,7 +22073,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22177,7 +22097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22205,7 +22125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22233,7 +22153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22261,7 +22181,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22289,7 +22209,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22313,7 +22233,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22337,7 +22257,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22361,7 +22281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22385,7 +22305,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22413,7 +22333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22437,7 +22357,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22461,7 +22381,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22485,7 +22405,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22509,7 +22429,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22537,7 +22457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22561,7 +22481,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22585,7 +22505,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22609,7 +22529,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22633,7 +22553,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22657,7 +22577,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22685,7 +22605,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22709,7 +22629,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22733,7 +22653,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22761,7 +22681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22785,7 +22705,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22809,7 +22729,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22833,7 +22753,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22857,7 +22777,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22885,7 +22805,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22909,7 +22829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22937,7 +22857,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22961,7 +22881,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22989,7 +22909,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23013,7 +22933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23041,7 +22961,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23065,7 +22985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23089,7 +23009,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23113,7 +23033,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23141,7 +23061,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23169,7 +23089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23197,7 +23117,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23221,7 +23141,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23245,7 +23165,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23269,7 +23189,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23293,7 +23213,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23317,7 +23237,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23341,7 +23261,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23365,7 +23285,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23389,7 +23309,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23413,7 +23333,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23437,7 +23357,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23461,7 +23381,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23485,7 +23405,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23509,7 +23429,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23533,7 +23453,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23557,7 +23477,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23581,7 +23501,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23605,7 +23525,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23633,7 +23553,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23657,7 +23577,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23681,7 +23601,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23705,7 +23625,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23733,7 +23653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23761,7 +23681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23789,7 +23709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23817,7 +23737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23845,7 +23765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23873,7 +23793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23901,7 +23821,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23925,7 +23845,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23949,7 +23869,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-law-학교안전사고-예방-및-보상에-관한-법률",
@@ -23973,7 +23893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24001,7 +23921,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24029,7 +23949,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24057,7 +23977,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24085,7 +24005,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24113,7 +24033,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24141,7 +24061,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24169,7 +24089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24197,7 +24117,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24225,7 +24145,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24253,7 +24173,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24281,7 +24201,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24309,7 +24229,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24337,7 +24257,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24365,7 +24285,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24393,7 +24313,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24421,7 +24341,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24449,7 +24369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24477,7 +24397,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24505,7 +24425,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24533,7 +24453,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24557,7 +24477,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24581,7 +24501,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24605,7 +24525,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-law-학교폭력예방-및-대책에-관한-법률",
@@ -24629,7 +24549,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24657,7 +24577,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24685,7 +24605,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24713,7 +24633,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24741,7 +24661,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24769,7 +24689,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24797,7 +24717,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24825,7 +24745,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24853,7 +24773,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24881,7 +24801,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24909,7 +24829,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24937,7 +24857,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24965,7 +24885,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24993,7 +24913,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25021,7 +24941,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25049,7 +24969,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25077,7 +24997,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25101,7 +25021,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25129,7 +25049,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25157,7 +25077,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25185,7 +25105,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25213,7 +25133,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25241,7 +25161,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25269,7 +25189,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25297,7 +25217,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25325,7 +25245,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25353,7 +25273,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25381,7 +25301,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25405,7 +25325,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25433,7 +25353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25461,7 +25381,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25489,7 +25409,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25517,7 +25437,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25541,7 +25461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25569,7 +25489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25597,7 +25517,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
@@ -25621,7 +25541,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25649,7 +25569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25677,7 +25597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25705,7 +25625,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25733,7 +25653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25761,7 +25681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25789,7 +25709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25817,7 +25737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25845,7 +25765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25873,7 +25793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-law-근로기준법",
@@ -25897,7 +25817,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25925,7 +25845,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25949,7 +25869,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25973,7 +25893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25997,7 +25917,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26025,7 +25945,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26053,7 +25973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26081,7 +26001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26109,7 +26029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26137,7 +26057,35 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15925-cntntsid-6805-0-서식-행정기관-5-1-1-1-출장-보고서예시",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "복무 - [서식-행정기관-5-1-1-1] 출장 보고서예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "복무 [서식-행정기관-5-1-1-1] 출장 보고서예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5f60bb4fcbc7e6d39300d15fd3401e8a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5f60bb4fcbc7e6d39300d15fd3401e8a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26165,7 +26113,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26193,7 +26141,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26221,7 +26169,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26249,7 +26197,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26277,7 +26225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26305,7 +26253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26333,7 +26281,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26357,7 +26305,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26385,7 +26333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26413,7 +26361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26441,7 +26389,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26469,7 +26417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26493,7 +26441,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26521,7 +26469,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26549,7 +26497,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26573,7 +26521,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26597,7 +26545,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26621,7 +26569,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26645,7 +26593,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26673,7 +26621,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26701,7 +26649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26729,7 +26677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26753,7 +26701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26781,7 +26729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26809,7 +26757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26837,7 +26785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26865,7 +26813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26893,7 +26841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26921,7 +26869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26945,7 +26893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26969,7 +26917,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26993,7 +26941,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27017,7 +26965,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27045,7 +26993,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27073,7 +27021,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27101,7 +27049,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27125,7 +27073,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27149,7 +27097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27173,7 +27121,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27197,7 +27145,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27221,7 +27169,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27245,7 +27193,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27269,7 +27217,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27293,7 +27241,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27321,7 +27269,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27345,7 +27293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27369,7 +27317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27393,7 +27341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27421,7 +27369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27445,7 +27393,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27469,7 +27417,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27493,7 +27441,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27517,7 +27465,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27545,7 +27493,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27569,7 +27517,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27593,7 +27541,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27621,7 +27569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27645,7 +27593,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27669,7 +27617,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27693,7 +27641,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27717,7 +27665,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27741,7 +27689,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27765,7 +27713,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27793,7 +27741,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27817,7 +27765,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27841,7 +27789,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27865,7 +27813,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27889,7 +27837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27913,7 +27861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27937,7 +27885,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27961,7 +27909,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27985,7 +27933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28013,7 +27961,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28037,7 +27985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28061,7 +28009,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28085,7 +28033,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28109,7 +28057,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28133,7 +28081,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28157,7 +28105,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28181,7 +28129,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28205,7 +28153,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28229,7 +28177,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28253,7 +28201,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28277,7 +28225,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28305,7 +28253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28333,7 +28281,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28361,7 +28309,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28389,7 +28337,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28417,7 +28365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28445,7 +28393,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28473,7 +28421,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28501,7 +28449,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28529,7 +28477,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28557,7 +28505,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28585,7 +28533,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28613,7 +28561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28641,7 +28589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28669,7 +28617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28697,7 +28645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28721,7 +28669,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28749,7 +28697,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28777,7 +28725,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28801,7 +28749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28829,7 +28777,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28857,7 +28805,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28885,7 +28833,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28913,7 +28861,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28941,7 +28889,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28969,7 +28917,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28997,7 +28945,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29025,7 +28973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29053,7 +29001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29081,7 +29029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29109,7 +29057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29137,7 +29085,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29165,7 +29113,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29189,7 +29137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29213,7 +29161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29241,7 +29189,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29269,7 +29217,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29297,7 +29245,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29325,7 +29273,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29353,7 +29301,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29381,7 +29329,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29405,7 +29353,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29433,7 +29381,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29461,7 +29409,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29489,7 +29437,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29517,7 +29465,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29545,7 +29493,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29573,7 +29521,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29601,7 +29549,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29625,7 +29573,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29649,7 +29597,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29677,7 +29625,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29705,7 +29653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29733,7 +29681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29761,7 +29709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29789,7 +29737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29817,7 +29765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29845,7 +29793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29873,7 +29821,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29901,7 +29849,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29929,7 +29877,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29957,7 +29905,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29985,7 +29933,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30013,7 +29961,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30041,7 +29989,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30069,7 +30017,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30097,7 +30045,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30125,7 +30073,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30153,7 +30101,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30181,7 +30129,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30209,7 +30157,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30237,7 +30185,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30265,7 +30213,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30293,7 +30241,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30321,7 +30269,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30349,7 +30297,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30377,7 +30325,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30405,7 +30353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30433,7 +30381,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30461,7 +30409,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30489,7 +30437,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30517,7 +30465,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30545,7 +30493,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30573,7 +30521,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30601,7 +30549,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30629,7 +30577,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30657,7 +30605,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30685,7 +30633,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30713,7 +30661,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30741,7 +30689,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30769,7 +30717,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30797,7 +30745,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30825,7 +30773,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30849,7 +30797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30873,7 +30821,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30897,7 +30845,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30921,7 +30869,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30945,7 +30893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30969,7 +30917,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30997,7 +30945,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31025,7 +30973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31053,7 +31001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31081,7 +31029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31105,7 +31053,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31129,7 +31077,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31153,7 +31101,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31177,7 +31125,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31201,7 +31149,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31225,7 +31173,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31249,7 +31197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31277,7 +31225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31305,7 +31253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31333,7 +31281,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31361,7 +31309,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31389,7 +31337,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31417,7 +31365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31445,7 +31393,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31473,7 +31421,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31501,7 +31449,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31529,7 +31477,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31557,7 +31505,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31585,7 +31533,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31613,7 +31561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31641,7 +31589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31669,7 +31617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31697,7 +31645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31725,7 +31673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31753,7 +31701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31781,7 +31729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31809,7 +31757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31833,31 +31781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1396580-0-관리자-학교폭력-사안처리-절차-안내-교재본-pdf",
-      "category": "studentLife",
-      "type": "guide",
-      "title": "자료실 - (관리자)학교폭력 사안처리 절차 안내_교재본",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "학교폭력 자료실 (관리자)학교폭력 사안처리 절차 안내_교재본.pdf",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1396580/doc_1788vabe9=fdvac=48v76=96v62=d8fevc578vb06d_v2635.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31885,7 +31809,35 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - [붙임1] 교사용 학생 자살 징후 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 자료실 [붙임1] 교사용 학생 자살 징후 체크리스트.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31909,7 +31861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31933,31 +31885,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-568617-0-2019학년도-여름방학대비-경북학생생활지도-연수자료-hw",
-      "category": "studentLife",
-      "type": "guide",
-      "title": "자료실 - 2019학년도_여름방학대비_경북학생생활지도_연수자료",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "생활지도 자료실 2019학년도_여름방학대비_경북학생생활지도_연수자료.hwp",
-      "url": "https://www.gbe.kr/uploads/BOARD/2019/06/BOARD_201906281700526256116138.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31981,7 +31909,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32005,7 +31933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32033,7 +31961,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32057,7 +31985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32081,7 +32009,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32109,31 +32037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1491796-0-2024-학부모용-학교폭력-예방교육-모음집-최종-pdf",
-      "category": "studentLife",
-      "type": "guide",
-      "title": "자료실 - 2024 학부모용 학교폭력 예방교육 모음집_최종",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "학교폭력 자료실 2024 학부모용 학교폭력 예방교육 모음집_최종.pdf",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1491796/doc_9bd6v1316=48v71=47v0b=8av80=0471v8840v1c5e_v5420.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32157,7 +32061,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32185,7 +32089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32213,7 +32117,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32237,7 +32141,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32261,7 +32165,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32285,7 +32189,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32313,10 +32217,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1584459-0-2026학년도-현장중심-학교폭력-예방-및-대책-경북교육",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1584459-0-2026학년도-현",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2026학년도 현장중심 학교폭력 예방 및 대책(경북교육청)",
@@ -32337,7 +32241,35 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 3. 교사용 학생 자살징후 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 자료실 3. 교사용 학생 자살징후 체크리스트.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32361,59 +32293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 관련 서식",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "아동학대 자료실 관련 서식.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-0-성희롱성폭령-사안처리-안내서-6-29-pdf",
-      "category": "studentLife",
-      "type": "guide",
-      "title": "자료실 - 성희롱성폭령 사안처리 안내서(6. 29.)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "아동학대 자료실 성희롱성폭령 사안처리 안내서(6. 29.).pdf",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_9e90v2d21=ecvdc=4cv21=abvc5=fdb1vd5edvf327_v7326.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32441,16 +32321,16 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-2-지침-예시안-hwp",
+      "id": "existing-acquisition-harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
       "category": "studentLife",
-      "type": "guide",
-      "title": "자료실 - 지침 예시안",
+      "type": "form",
+      "title": "자료실 - 정보공개 운영 매뉴얼",
       "provider": "경상북도교육청 학생생활과",
-      "query": "아동학대 자료실 지침 예시안.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_0a1bvef24=b8va2=41v37=98vdd=5294vd33av44fe_v7743.hwp",
+      "query": "체크리스트 자료실 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "normal",
@@ -32461,11 +32341,71 @@
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 제출서식(동의서)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 자료실 제출서식(동의서).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 제출서식(소방시설등 자체점검 실시결과 보고서)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 자료실 제출서식(소방시설등 자체점검 실시결과 보고서).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32489,7 +32429,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32513,10 +32453,38 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1515207-0-학교폭력-예방-컨설팅단-연수자료-용량조절-1-pptx",
+      "id": "existing-acquisition-harvest-gbe-student-life-1600483-0-학교폭력-예방-및-사안처리-관련-체크리스트-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 학교폭력 예방 및 사안처리 관련 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "학교폭력 자료실 학교폭력 예방 및 사안처리 관련 체크리스트.pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-16T19:36:37.773Z"
+    },
+    {
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1515207-0-학교폭력-예방-컨",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 학교폭력 예방 컨설팅단 연수자료(용량조절)1",
@@ -32537,7 +32505,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32565,7 +32533,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32593,7 +32561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32621,7 +32589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32649,7 +32617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32677,7 +32645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32705,7 +32673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32733,7 +32701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32761,7 +32729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32789,7 +32757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32817,7 +32785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32845,7 +32813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32873,7 +32841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32901,7 +32869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32925,7 +32893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32953,7 +32921,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32977,7 +32945,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33005,7 +32973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33033,7 +33001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33061,7 +33029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33089,7 +33057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33113,7 +33081,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33141,7 +33109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33169,7 +33137,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33197,7 +33165,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33225,7 +33193,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33253,7 +33221,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33281,7 +33249,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33309,7 +33277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33337,7 +33305,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33365,7 +33333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33393,7 +33361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-career-guide-컴퓨터활용능력-자격-채용-우대-안내",
@@ -33417,7 +33385,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33445,7 +33413,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33473,7 +33441,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33501,7 +33469,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33525,7 +33493,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33553,7 +33521,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33581,7 +33549,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33609,7 +33577,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33637,7 +33605,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33665,7 +33633,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33689,7 +33657,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33713,7 +33681,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33741,7 +33709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33769,7 +33737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33797,7 +33765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33825,7 +33793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33849,7 +33817,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33877,7 +33845,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33905,7 +33873,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33933,7 +33901,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33961,7 +33929,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33989,7 +33957,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34017,7 +33985,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34045,7 +34013,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34073,7 +34041,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34101,7 +34069,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34129,7 +34097,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34157,7 +34125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34185,7 +34153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34213,7 +34181,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34241,7 +34209,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34269,7 +34237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34297,7 +34265,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34325,7 +34293,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34353,7 +34321,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-curated-guide-학교생활기록부-기재요령",
@@ -34381,15 +34349,15 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "existing-acquisition-mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
+      "id": "existing-acquisition-mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
       "title": "학교생활기록작성및관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
       "description": "학교생활기록 작성 및 관리지침 출결 정정 경조사 보존",
@@ -34409,7 +34377,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34437,7 +34405,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34465,7 +34433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34493,7 +34461,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34521,7 +34489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34545,7 +34513,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34569,7 +34537,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34593,7 +34561,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34617,7 +34585,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34645,7 +34613,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34673,7 +34641,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34701,7 +34669,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34729,7 +34697,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34757,7 +34725,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34785,7 +34753,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34813,7 +34781,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34841,7 +34809,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34869,7 +34837,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34897,7 +34865,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34925,7 +34893,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34953,7 +34921,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34981,7 +34949,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35009,7 +34977,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35037,7 +35005,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35065,7 +35033,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35093,7 +35061,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35121,7 +35089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35149,7 +35117,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35177,7 +35145,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35205,7 +35173,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35233,7 +35201,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35261,7 +35229,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35289,7 +35257,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35313,7 +35281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35337,7 +35305,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35365,7 +35333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35393,7 +35361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35421,7 +35389,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35449,7 +35417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35477,7 +35445,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35505,7 +35473,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35533,7 +35501,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35561,7 +35529,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35589,7 +35557,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35617,7 +35585,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35645,7 +35613,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35673,7 +35641,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35701,7 +35669,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35729,7 +35697,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35757,7 +35725,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35785,7 +35753,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35813,7 +35781,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35841,7 +35809,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35869,7 +35837,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35897,7 +35865,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35925,7 +35893,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35949,7 +35917,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35977,7 +35945,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36005,7 +35973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36033,7 +36001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36061,7 +36029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36089,7 +36057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36117,7 +36085,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36145,7 +36113,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36173,7 +36141,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36201,7 +36169,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36229,7 +36197,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36257,7 +36225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36285,7 +36253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36313,7 +36281,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36341,7 +36309,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36369,7 +36337,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36397,7 +36365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36425,7 +36393,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36453,7 +36421,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36481,7 +36449,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36509,7 +36477,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36537,7 +36505,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36565,7 +36533,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36593,7 +36561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36621,7 +36589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36649,7 +36617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36677,7 +36645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36705,7 +36673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36733,7 +36701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36761,7 +36729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36789,7 +36757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36813,7 +36781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36841,7 +36809,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36869,7 +36837,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36897,7 +36865,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36925,7 +36893,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36953,7 +36921,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36981,7 +36949,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
@@ -37005,18 +36973,18 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
+      "id": "mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
-      "title": "2026 학교생활기록 작성 및 관리지침",
+      "title": "2027 학교생활기록 작성 및 관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "description": "교육부·국가법령정보센터 공식자료에서 2027 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "low",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
@@ -37033,7 +37001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "mission-general-law-law-go-kr-2026-초-중등교육법",
@@ -37057,7 +37025,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
       "id": "mission-general-law-law-go-kr-2027-초-중등교육법",
@@ -37081,18 +37049,18 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     },
     {
-      "id": "mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
+      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
-      "title": "2027 학교생활기록 작성 및 관리지침",
+      "title": "2026 학교생활기록 작성 및 관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2027 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "low",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
@@ -37109,7 +37077,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-16T13:34:37.598Z"
+      "generatedAt": "2026-09-16T19:36:37.773Z"
     }
   ]
 }; });
