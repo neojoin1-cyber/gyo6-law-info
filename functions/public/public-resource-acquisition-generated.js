@@ -6,25 +6,25 @@
     root.GYO6_PUBLIC_RESOURCE_ACQUISITION = data;
   }
 })(typeof globalThis !== "undefined" ? globalThis : window, function createPublicResourceAcquisition() { return {
-  "version": "generated-2026-09-21T20-28-09-548Z",
-  "generatedAt": "2026-09-21T20:28:09.548Z",
+  "version": "generated-2026-09-22T05-09-26-689Z",
+  "generatedAt": "2026-09-22T05:09:26.689Z",
   "stats": {
     "existingResources": 1395,
     "missions": 8,
-    "candidates": 1486,
-    "publicCandidates": 1404,
-    "harvestedFiles": 220,
-    "highPriority": 166,
+    "candidates": 1485,
+    "publicCandidates": 1403,
+    "harvestedFiles": 201,
+    "highPriority": 159,
     "directUrlNeeded": 85,
     "byCategory": {
       "careerEmployment": 43,
       "fieldTraining": 180,
       "general": 196,
+      "privacyRecords": 81,
       "schoolAdmin": 252,
       "schoolViolenceSafety": 247,
-      "staffLabor": 88,
-      "studentLife": 399,
-      "privacyRecords": 81
+      "staffLabor": 85,
+      "studentLife": 401
     }
   },
   "missions": [
@@ -197,7 +197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6472-0-리플렛-2023-고졸채용기업-지원정책-pdf",
@@ -221,7 +221,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7004-0-고교-졸업생-지원-혜택-2024-7-pdf",
@@ -245,7 +245,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7195-0-2-2024년-고졸채용기업-지원정책-리플릿-pdf",
@@ -269,7 +269,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7196-1-2024년-고졸청년-지원정책-pdf",
@@ -293,7 +293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7196-0-4-2024년-고졸청년-지원정책-리플릿-pdf",
@@ -317,7 +317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145569-0-2025년-고졸채용기업-지원정책-리플릿-pdf",
@@ -341,7 +341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7492-0-2025년-고졸채용기업-지원정책-자료집-pdf",
@@ -365,7 +365,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145569-1-2025년-고졸채용기업-지원정책-자료집-pdf",
@@ -389,7 +389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7351-0-자료집-2025년-고졸청년-지원사업-pdf",
@@ -413,7 +413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7618-0-2-중앙취업지원센터-2026년-고졸채용기업-지원정책-자료집-pdf",
@@ -437,7 +437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7618-1-4-중앙취업지원센터-2026년-고졸채용기업-지원정책-리플릿-pdf",
@@ -461,7 +461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7617-0-1-중앙취업지원센터-2026년-고졸청년-지원정책-자료집-pdf",
@@ -485,7 +485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7617-1-3-중앙취업지원센터-2026년-고졸청년-지원정책-리플릿-pdf",
@@ -509,91 +509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-2-1-3-자기소개서",
-      "category": "careerEmployment",
-      "type": "form",
-      "title": "각종 서식 - [1-3] 자기소개서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [1-3] 자기소개서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=adf16c350181d9199f4fbfadc64d3657",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=adf16c350181d9199f4fbfadc64d3657",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-23-서식-9-5-면접질문지",
-      "category": "careerEmployment",
-      "type": "form",
-      "title": "각종 서식 - [서식 9-5] 면접질문지",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 9-5] 면접질문지",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9bca5e92e528f12b9dc38a47f1adcf2b",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9bca5e92e528f12b9dc38a47f1adcf2b",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-24-서식-9-6-면접심사점수지계표",
-      "category": "careerEmployment",
-      "type": "form",
-      "title": "각종 서식 - [서식 9-6] 면접심사점수지계표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 9-6] 면접심사점수지계표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f7b1708779b38d9bafe4a392f6b1283e",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f7b1708779b38d9bafe4a392f6b1283e",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5531-0-붙임1-고교-취업연계-장려금-신청-매뉴얼-pdf",
@@ -621,7 +537,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5531-1-붙임1-법정대리인-동의서-양식-pdf",
@@ -649,7 +565,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145654-0-붙임-1-1-2026년-고졸청년-지원정책-자료집-pdf",
@@ -677,7 +593,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145654-1-붙임-1-2-2026년-고졸청년-지원정책-리플릿-pdf",
@@ -705,7 +621,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145654-2-붙임-2-1-2026년-고졸채용기업-지원정책-자료집-pdf",
@@ -733,7 +649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-145654-3-붙임-2-2-2026년-고졸채용기업-지원정책-리플릿-pdf",
@@ -761,7 +677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-6716-0-인천-취업지원센터-리플렛-pdf",
@@ -785,7 +701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5522-0-2021년-청년내일채움공제-시행지침-게시-pdf",
@@ -809,7 +725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7291-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-pdf",
@@ -833,7 +749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7349-0-2025-현장실습-바로가기-및-실습일지-작성방법-휴대폰용-pdf",
@@ -857,7 +773,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7292-0-2025년-hifive-사용자-매뉴얼-학생용-pdf",
@@ -881,7 +797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7287-0-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -909,7 +825,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7290-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
@@ -933,7 +849,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7290-1-2025-직업계고-현장실습생-보험가입-및-수당-세무회계처리-pdf",
@@ -957,7 +873,103 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-3-2025-직업계고-현장실습생-강의안-최종-25-06-30-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "★2025 직업계고 현장실습생 강의안(최종)_25.06.30.",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' ★2025 직업계고 현장실습생 강의안(최종)_25.06.30..pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250724&filerealname=%E2%98%852025+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EA%B0%95%EC%9D%98%EC%95%88%28%EC%B5%9C%EC%A2%85%29_25.06.30..pdf&filename=D4BEA8A57A9F4809BA1AF7AB760ABB5E.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-4-2026-직업계고-현장실습생-강의안-최종-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "★2026 직업계고 현장실습생 강의안(최종)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' ★2026 직업계고 현장실습생 강의안(최종).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=%E2%98%852026+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EA%B0%95%EC%9D%98%EC%95%88%28%EC%B5%9C%EC%A2%85%29.pdf&filename=DBE023DD49F94C749803C83E83DAECDD.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-2-1-통합본-2026년-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "1. [통합본] 2026년 직업계고 현장실습 산업안전 매뉴얼",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 1. [통합본] 2026년 직업계고 현장실습 산업안전 매뉴얼.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=1.+%5B%ED%86%B5%ED%95%A9%EB%B3%B8%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=FDB32A7BFE0A41F6A8EF973E5EC29F47.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-3-2-공업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2. [공업] 2026년 직업계고 현장실습 산업안전 핸드북",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2. [공업] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=2.+%5B%EA%B3%B5%EC%97%85%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=E23088A47EB74D1995A4FBD510C41052.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-4237-0-현장실습-참여-기업-지원정책-현황-수정-pdf",
@@ -981,7 +993,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6641-0-매뉴얼-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-pdf",
@@ -1005,7 +1017,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-6465-0-붙임1-2023학년도-현장실습-지원금-통합신청-사전신청-매뉴얼-학생용-pdf",
@@ -1033,7 +1045,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-6465-1-붙임2-2023학년도-현장실습-지원금-faq-pdf",
@@ -1061,7 +1073,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6470-0-1-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-기업용-1-pdf",
@@ -1085,7 +1097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6470-1-2-2023년-개정-현장실습-간편-매뉴얼-기업용-1-pdf",
@@ -1109,7 +1121,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7128-0-2024-직업계고-취업실무-매뉴얼-내지-학생용-pdf",
@@ -1133,7 +1145,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7147-0-최종-2024-직업계고-취업실무-매뉴얼-내지-교사용-pdf",
@@ -1157,7 +1169,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6962-0-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
@@ -1185,7 +1197,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6963-0-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1213,7 +1225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6961-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
@@ -1241,7 +1253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6961-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
@@ -1269,7 +1281,127 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-3-2024년-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습 산업안전 매뉴얼",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습 산업안전 매뉴얼.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=3B76057D62D246F995E54F2CB7276AEF.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-0-2024년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습 산업안전 핸드북(건설)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(건설).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B1%B4%EC%84%A4%29.pdf&filename=F29FFFC36BAE41019EC15A689900AEC1.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-1-2024년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습 산업안전 핸드북(공업)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(공업).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B3%B5%EC%97%85%29.pdf&filename=FEC522C711354867AAB8FF5F60C8285B.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-2-2024년-직업계고-현장실습-산업안전-핸드북-농수산상업및가사-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습 산업안전 핸드북(농수산상업및가사)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(농수산상업및가사).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EB%86%8D%EC%88%98%EC%82%B0%EC%83%81%EC%97%85%EB%B0%8F%EA%B0%80%EC%82%AC%29.pdf&filename=85D454242B9F4DDEB56CA199B24E737E.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-135480-4-2024년-직업계고-현장실습생-대상-강의안-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2024년 직업계고 현장실습생 대상 강의안",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2024년 직업계고 현장실습생 대상 강의안.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EB%8C%80%EC%83%81+%EA%B0%95%EC%9D%98%EC%95%88.pdf&filename=50C531B30168437CA00809EF27E8F4AF.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6959-0-2024년-hifive-현장실습-관리시스템-매뉴얼-학생용-pdf",
@@ -1293,7 +1425,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7198-0-2024학년도-고졸-취업-활성화-지원-사업-안내-리플릿-pdf",
@@ -1317,7 +1449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7347-0-2025-직업계고-취업실무-매뉴얼-내지-학생용-최종-pdf",
@@ -1341,7 +1473,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7331-0-2025-직업계고-취업실무-매뉴얼-최종-pdf",
@@ -1365,7 +1497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-education-library-141253-0-2025-현장실습-바로가기-및-실습일지-작성방법-휴대폰용-pdf",
@@ -1389,7 +1521,103 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-0-2025년-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2025년 직업계고 현장실습 산업안전 매뉴얼",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2025년 직업계고 현장실습 산업안전 매뉴얼.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=D1C7D658B31C4A0E8AC566EEE2406362.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-1-2025년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2025년 직업계고 현장실습 산업안전 핸드북(건설)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(건설).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B1%B4%EC%84%A4%29.pdf&filename=7C4A6EF123874467A2DFD6F9DCFC21EF.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-4-2025년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2025년 직업계고 현장실습 산업안전 핸드북(공업)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(공업).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B3%B5%EC%97%85%29.pdf&filename=A3972BF0DE034337A61990D4A3CAC61B.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-141274-2-2025년-직업계고-현장실습-산업안전-핸드북-농업-수산-해운-상업-및-가사-실업-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "2025년 직업계고 현장실습 산업안전 핸드북(농업, 수산 해운, 상업 및 가사 실업)",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(농업, 수산 해운, 상업 및 가사 실업).pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EB%86%8D%EC%97%85%2C+%EC%88%98%EC%82%B0+%ED%95%B4%EC%9A%B4%2C+%EC%83%81%EC%97%85+%EB%B0%8F+%EA%B0%80%EC%82%AC+%EC%8B%A4%EC%97%85%29.pdf&filename=FB03D927E8F9412387416F90CC1B8382.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7313-0-2025-직업계고-현장실습생-보험가입-및-수당-세무회계처리-pdf",
@@ -1413,7 +1641,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7294-0-01-2025학년도-현장실습-지원금-통합신청-매뉴얼-pdf",
@@ -1437,7 +1665,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7294-1-02-2025학년도-현장실습-지원금-faq-pdf",
@@ -1461,7 +1689,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7638-0-2026-직업계고-취업실무매뉴얼-교사용-최종-pdf",
@@ -1485,7 +1713,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7637-0-2026-직업계고-취업실무매뉴얼-학생용-최종-pdf",
@@ -1509,7 +1737,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7607-0-2026-현장실습-기업현장교육-지원-pdf",
@@ -1533,7 +1761,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7606-0-2026-현장실습-지원금-신청방법-pdf",
@@ -1557,7 +1785,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7578-0-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
@@ -1585,7 +1813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-0-1-통합본-2026년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -1609,7 +1837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-1-2-공업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -1633,7 +1861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-2-3-건설-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -1657,7 +1885,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-3-4-농업-수산해운-상업-가사실업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -1681,7 +1909,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7574-0-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-책자-기업용-pdf",
@@ -1705,7 +1933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7574-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
@@ -1729,7 +1957,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7553-0-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-책자-학교용-pdf",
@@ -1753,7 +1981,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7553-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
@@ -1777,7 +2005,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7575-0-2026-hifive-시스템-매뉴얼-학교용-0519-압축-pdf",
@@ -1801,7 +2029,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7575-1-2026-hifive-시스템-매뉴얼-학생용-0818-pdf",
@@ -1825,7 +2053,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6958-0-2024년-개인정보활용동의서-서식-hwp",
@@ -1853,7 +2081,55 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-0-3-건설-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "3. [건설] 2026년 직업계고 현장실습 산업안전 핸드북",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 3. [건설] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=3.+%5B%EA%B1%B4%EC%84%A4%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=12FE3EDA27FB44DAA26FAAB89352635C.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-hifive-education-library-145895-1-4-농업-수산해운-상업-가사실업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
+      "category": "fieldTraining",
+      "type": "guide",
+      "title": "4. [농업,수산해운,상업,가사실업] 2026년 직업계고 현장실습 산업안전 핸드북",
+      "provider": "교육부·하이파이브",
+      "query": "산업안전 매뉴얼 '+reg_name+' 4. [농업,수산해운,상업,가사실업] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
+      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=4.+%5B%EB%86%8D%EC%97%85%2C%EC%88%98%EC%82%B0%ED%95%B4%EC%9A%B4%2C%EC%83%81%EC%97%85%2C%EA%B0%80%EC%82%AC%EC%8B%A4%EC%97%85%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=5BE2A9C61A0D412FB9E4A1E44DBE4F03.pdf",
+      "searchDomain": "hifive.go.kr",
+      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "하이파이브 교육자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7314-0-서식-기업현장교사-자격-확인서-hwp",
@@ -1881,7 +2157,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-0-붙임1-2021학년도-현장실습-지원금-신청-매뉴얼-pdf",
@@ -1909,7 +2185,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-1-붙임2-2021학년도-현장실습-지원금-업무처리기준-안-pdf",
@@ -1937,7 +2213,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-2-붙임3-2021학년도-현장실습-지원금-q-a-pdf",
@@ -1965,7 +2241,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7576-0-현장실습생-노동인권-권익보호-및-산업안전보건교육-관리자-매뉴얼-총괄교사용-pdf",
@@ -1989,7 +2265,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-hifive-education-library-143951-0-q-실습일지-휴무일-처리-매뉴얼-pdf",
@@ -2013,16 +2289,16 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-1-1-2-지원서",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-0-서식-중등-8-2-1-1-개별화교육계획서-예시안",
       "category": "general",
       "type": "form",
-      "title": "각종 서식 - [1-2] 지원서",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-1] 개별화교육계획서(예시안)",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [1-2] 지원서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9424fbf6569cec4dad5224221fb82e92",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-1] 개별화교육계획서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a8fb90325bde6830504297018769dbbe",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2034,23 +2310,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9424fbf6569cec4dad5224221fb82e92",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a8fb90325bde6830504297018769dbbe",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-3-1-4-채용서류반환청구서",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-1-서식-중등-8-2-1-2-개별화교육계획-요구-조사서-예시안",
       "category": "general",
       "type": "form",
-      "title": "각종 서식 - [1-4] 채용서류반환청구서",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-2] 개별화교육계획 요구 조사서(예시안)",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [1-4] 채용서류반환청구서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ef0845152b1c77bbfb8499748b0f87a7",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-2] 개별화교육계획 요구 조사서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88cec1a953b68fc9a800bc3784c90367",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2062,23 +2338,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ef0845152b1c77bbfb8499748b0f87a7",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88cec1a953b68fc9a800bc3784c90367",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-6-1-7-발령-문안-예시",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-3-서식-중등-8-2-1-4-나이스-개별화교육계획-등록-동의서-예시안",
       "category": "general",
       "type": "form",
-      "title": "각종 서식 - [1-7] 발령 문안 예시",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [1-7] 발령 문안 예시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6b7fdb8811bd736df92e90c687b847f0",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=50838fd642850c5fecf51c1029d60fb6",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2090,23 +2366,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6b7fdb8811bd736df92e90c687b847f0",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=50838fd642850c5fecf51c1029d60fb6",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-25-서식-10-자격취득에따른경력합산신청서",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-4-서식-중등-8-2-1-5-개별화교육지원팀-협의회-관련-서식-예시안",
       "category": "general",
       "type": "form",
-      "title": "각종 서식 - [서식 10] 자격취득에따른경력합산신청서",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 10] 자격취득에따른경력합산신청서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bb4060a2033dfeb209c63dfb38caf259",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7b610fca3312301f06546ad10fd8ea2c",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2118,23 +2394,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bb4060a2033dfeb209c63dfb38caf259",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7b610fca3312301f06546ad10fd8ea2c",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-26-서식-11-호봉획정을위한경력기간합산신청서",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-5-서식-중등-8-2-1-6-개별화교육계획-운영-자체-점검표",
       "category": "general",
       "type": "form",
-      "title": "각종 서식 - [서식 11] 호봉획정을위한경력기간합산신청서",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-6] 개별화교육계획 운영 자체 점검표",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 11] 호봉획정을위한경력기간합산신청서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=18082cbe5cc948316b4b4b5fc9edd19b",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-6] 개별화교육계획 운영 자체 점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=66d716100f0c05c78b1cbf5c5e44c64a",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2146,23 +2422,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=18082cbe5cc948316b4b4b5fc9edd19b",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=66d716100f0c05c78b1cbf5c5e44c64a",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-14-서식-7-1-서약서-1",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15625-cntntsid-7035-0-2023학년도-교육공무원-초등-인사관리지침-pdf",
       "category": "general",
-      "type": "form",
-      "title": "각종 서식 - [서식 7-1] 서약서 1",
+      "type": "rule",
+      "title": "근무성적 평정 관련 규정 - 2023학년도 교육공무원(초등) 인사관리지침",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 7-1] 서약서 1",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa72a2d4f53709d27f40bcb897e931dc",
+      "query": "근무성적 평정 근무성적 평정 관련 규정 2023학년도 교육공무원(초등) 인사관리지침.pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a5affddbdecf16c5aa7e23083491a3dd",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2173,24 +2449,20 @@
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa72a2d4f53709d27f40bcb897e931dc",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-15-서식-7-2-서약서-2",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15625-cntntsid-7035-2-2026학년도-교육공무원-중등-인사관리지침",
       "category": "general",
-      "type": "form",
-      "title": "각종 서식 - [서식 7-2] 서약서 2",
+      "type": "rule",
+      "title": "근무성적 평정 관련 규정 - 2026학년도 교육공무원(중등) 인사관리지침",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 7-2] 서약서 2",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bdac43c70499bb8c4e8360b80cdfab8b",
+      "query": "근무성적 평정 근무성적 평정 관련 규정 2026학년도 교육공무원(중등) 인사관리지침",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d589d548f2c48b10cc91d41151c85b4a",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2201,519 +2473,11 @@
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bdac43c70499bb8c4e8360b80cdfab8b",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-20-서식-9-2-심사위원서약서",
-      "category": "general",
-      "type": "form",
-      "title": "각종 서식 - [서식 9-2] 심사위원서약서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 9-2] 심사위원서약서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=64348aee24e1c1e142744143af7986a9",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=64348aee24e1c1e142744143af7986a9",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-21-서식-9-3-서류심사점수집계표",
-      "category": "general",
-      "type": "form",
-      "title": "각종 서식 - [서식 9-3] 서류심사점수집계표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 9-3] 서류심사점수집계표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e33e65d62efb39f2abffea6c03b05c8f",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e33e65d62efb39f2abffea6c03b05c8f",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15626-cntntsid-7037-0-서식-교원인사-4-3-2-1-근무성적-평정점",
-      "category": "general",
-      "type": "form",
-      "title": "근무성적 평정 세부 방법 - [서식-교원인사-4-3-2-1]근무성적 평정점",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "근무성적 평정 세부 방법 [서식-교원인사-4-3-2-1]근무성적 평정점",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cbe05ed69a24f213cff6748414d90023",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cbe05ed69a24f213cff6748414d90023",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-0-서식-교원인사-4-7-4-1-근무성적평정통계표",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-1] 근무성적평정통계표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-1] 근무성적평정통계표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=60970c09fabed3d22b806a83d7419ee8",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=60970c09fabed3d22b806a83d7419ee8",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-9-서식-교원인사-4-7-4-10-특수학급-담당자-경력증명서",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-10] 특수학급 담당자 경력증명서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-10] 특수학급 담당자 경력증명서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7cb8137fcfed08a912f0ac351e6ce7fa",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7cb8137fcfed08a912f0ac351e6ce7fa",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-10-서식-교원인사-4-7-4-11-농-어촌-교육-진흥-지정학교-근무-확인서",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-11] 농·어촌 교육 진흥 지정학교 근무 확인서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-11] 농·어촌 교육 진흥 지정학교 근무 확인서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=637e30e3abe02e4e9d379102864856ae",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=637e30e3abe02e4e9d379102864856ae",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-11-서식-교원인사-4-7-4-12-도서-벽지-소재-교육기관-근무-확인서",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-12] 도서·벽지 소재 교육기관 근무 확인서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-12] 도서·벽지 소재 교육기관 근무 확인서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=53e421c62d099b99dddb64e974bc0eb6",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=53e421c62d099b99dddb64e974bc0eb6",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-12-서식-교원인사-4-7-4-13-영재교육원-지도교사-근무-확인서",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-13] 영재교육원 지도교사 근무 확인서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-13] 영재교육원 지도교사 근무 확인서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a993a61159d8bf404deeb2d518a20b04",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a993a61159d8bf404deeb2d518a20b04",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-13-서식-교원인사-4-7-4-14-정책지원학교-교사-근무-확인서",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-14] 정책지원학교 교사 근무 확인서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-14] 정책지원학교 교사 근무 확인서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28ffa63075acace3d6ecd706a1f69da7",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28ffa63075acace3d6ecd706a1f69da7",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-14-서식-교원인사-4-7-4-15-교장-교감-승진후보자-근무-희망지",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-15] 교장.교감 승진후보자 근무 희망지",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-15] 교장.교감 승진후보자 근무 희망지",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9ac3792df08d065e92a3a1bf42b7e57f",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9ac3792df08d065e92a3a1bf42b7e57f",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-1-서식-교원인사-4-7-4-2-경력평정표",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-2] 경력평정표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-2] 경력평정표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9eb88e387d1067b330a5c77e4f3411e8",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9eb88e387d1067b330a5c77e4f3411e8",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-2-서식-교원인사-4-7-4-3-연수성적평정표",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-3] 연수성적평정표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-3] 연수성적평정표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a89ebb34f6f0b550103d1f2e33b86999",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a89ebb34f6f0b550103d1f2e33b86999",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-3-서식-교원인사-4-7-4-4-가산점-평정표",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-4] 가산점 평정표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-4] 가산점 평정표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f00beed2d37d83f5d8396bb1cae22218",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f00beed2d37d83f5d8396bb1cae22218",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-4-서식-교원인사-4-7-4-5-연수이수실적-평정자료",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-5] 연수이수실적 평정자료",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-5] 연수이수실적 평정자료",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d520c51ba4296a8fb39abad57ce39257",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d520c51ba4296a8fb39abad57ce39257",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-5-서식-교원인사-4-7-4-6-교육공무원-승진-규정",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-6] 교육공무원 승진 규정",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-6] 교육공무원 승진 규정",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b91fe08eaa4894772638a1335a291f3e",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b91fe08eaa4894772638a1335a291f3e",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-6-서식-교원인사-4-7-4-7-연구학교-근무-확인서",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-7] 연구학교 근무 확인서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-7] 연구학교 근무 확인서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=91d929d750c4dce6dcfa93c236b76c66",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=91d929d750c4dce6dcfa93c236b76c66",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-8-서식-교원인사-4-7-4-9-보직교사-경력증명서",
-      "category": "general",
-      "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-9] 보직교사 경력증명서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-9] 보직교사 경력증명서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b2aec652ac9231468468951d0913eb68",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b2aec652ac9231468468951d0913eb68",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15629-cntntsid-7041-0-서식-교원인사-7-7-4-2-교육성적-환산점-조견표",
-      "category": "general",
-      "type": "form",
-      "title": "연수성적 평정 세부 방법 - [서식-교원인사-7-7-4-2] 교육성적 환산점 조견표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "연수성적 평정 세부 방법 [서식-교원인사-7-7-4-2] 교육성적 환산점 조견표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8308fa078373ed3870b75925cedc65e1",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8308fa078373ed3870b75925cedc65e1",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5469-0-조기취업형-계약학과-선도대학육성-사업개요-pdf",
@@ -2737,7 +2501,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5469-1-조기취업형-계약학과-참여대학-홈페이지-및-연락처-pdf",
@@ -2761,16 +2525,16 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15387-cntntsid-6684-0-2025-늘봄학교-운영-길라잡이-서식편",
-      "category": "schoolAdmin",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16561-cntntsid-6995-0-서식-중등-8-4-1-1-치료지원서비스제공-계획서",
+      "category": "general",
       "type": "form",
-      "title": "계획 및 준비(사업부서) - 2025 늘봄학교 운영 길라잡이(서식편)",
+      "title": "치료지원 - [서식-중등-8-4-1-1] 치료지원서비스제공 계획서",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "방과후학교 교육활동비 계획 및 준비(사업부서) 2025 늘봄학교 운영 길라잡이(서식편)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=aba82e335b2c3de69595242f3532ca3b",
+      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-1] 치료지원서비스제공 계획서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a309ae1953f7c0741b843afb9c8a50db",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2782,23 +2546,135 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=aba82e335b2c3de69595242f3532ca3b",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a309ae1953f7c0741b843afb9c8a50db",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-school-accounting-1610395-0-2026학년도-공립학교회계-예산편성-기본지침-변경사항-게시용-pdf",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16551-cntntsid-6979-2-서식-중등-8-2-1-3-개인정보활용동의서-예시안",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개별화교육계획 - [서식-중등-8-2-1-3] 개인정보활용동의서(예시안)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-3] 개인정보활용동의서(예시안)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b63f5880f4dd9f1dd5cdc493ff458113",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b63f5880f4dd9f1dd5cdc493ff458113",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14644-cntntsid-6662-0-서식-초등-4-1-3-1-개인정보-내부관리-계획-예시",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "개인정보 내부관리 계획 - [서식-초등-4-1-3-1] 개인정보 내부관리 계획 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "개인정보 내부관리 계획 [서식-초등-4-1-3-1] 개인정보 내부관리 계획 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=23284f16c0042b0f848b3f6eaee817a7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=23284f16c0042b0f848b3f6eaee817a7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16561-cntntsid-6995-3-서식-중등-8-4-1-4-개인정보-수집-이용-제공-활용-동의서",
+      "category": "privacyRecords",
+      "type": "form",
+      "title": "치료지원 - [서식-중등-8-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=847c16425feff28de054a8c64d60cbad",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=847c16425feff28de054a8c64d60cbad",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14841-cntntsid-6380-0-2026-중등-방과후학교-길라잡이-서식",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "방과후학교 업무 흐름(개인위탁) - 2026 중등 방과후학교 길라잡이 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후학교 업무 흐름(개인위탁) 2026 중등 방과후학교 길라잡이 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1297292-0-2023-3-2-2023학년도-학교회계-예산편성-기본지침-최종-개정사항-반영-pdf",
       "category": "schoolAdmin",
       "type": "guide",
-      "title": "안내·지침서 - 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용)",
+      "title": "안내·지침서 - ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영",
       "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용).pdf",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1610395/doc_c838vf80a=ddva5=4ave4=9av58=197evf130v2fe9_v307.pdf",
+      "query": "학교회계 안내·지침서 ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영.pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1297292/doc_6963v319b=37vbf=42ve8=93vf3=6406v8298vc299_v8158.pdf",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -2813,15 +2689,15 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-school-accounting-1610395-1-정보공개-운영-매뉴얼",
+      "id": "harvest-gbe-school-accounting-1297292-1-정보공개-운영-매뉴얼",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 정보공개 운영 매뉴얼",
       "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 정보공개 운영 매뉴얼",
+      "query": "학교회계 안내·지침서 정보공개 운영 매뉴얼",
       "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
@@ -2837,15 +2713,15 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-school-accounting-1610395-2-pdf-다운로드",
+      "id": "harvest-gbe-school-accounting-1297292-2-pdf-다운로드",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - PDF 다운로드",
       "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 PDF 다운로드",
+      "query": "학교회계 안내·지침서 PDF 다운로드",
       "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
@@ -2861,35 +2737,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-11-서식-4-성범죄-경력조회-및-아동학대관련범죄-전력-조회-동의서",
-      "category": "schoolViolenceSafety",
-      "type": "form",
-      "title": "각종 서식 - [서식 4] 성범죄 경력조회 및 아동학대관련범죄 전력 조회 동의서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 4] 성범죄 경력조회 및 아동학대관련범죄 전력 조회 동의서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=790cdf03b88bdb729d9655f32cff78c7",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=790cdf03b88bdb729d9655f32cff78c7",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1548192-0-25-학교폭력-사안처리-가이드북-pdf",
@@ -2913,7 +2761,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1569593-0-26-학교폭력-사안처리-가이드북-pdf",
@@ -2937,7 +2785,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-588219-1-서식-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-hwp",
@@ -2965,7 +2813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1562027-0-교육부-학교-내-성희롱-성폭력-사안대응-업무안내서-2025년-개정-pdf",
@@ -2989,7 +2837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-588219-0-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-pdf",
@@ -3013,7 +2861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1509624-0-1-2023년-사안처리-가이드북-hwpx",
@@ -3037,7 +2885,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1560985-0-16-디지털-성폭력-및-딥페이크등-예방교육자료-제작-최종-보고서-제출-pdf",
@@ -3065,7 +2913,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1512170-0-2-2023-학교폭력-사안처리-세부설명-a-to-z-pdf",
@@ -3089,7 +2937,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-583028-0-2022년-폭력예방교육-운영안내-지침-pdf",
@@ -3113,7 +2961,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1535303-0-2024-1차-학교폭력-실태조사-결과-hwp",
@@ -3137,7 +2985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1549081-0-2024-2차-학교폭력-실태-표본-조사-결과-최종-pdf",
@@ -3161,7 +3009,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1525064-0-2024년-사건통보서-및-재발방지대책-제출-서식-hwp",
@@ -3189,7 +3037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1532095-0-2024년-학교폭력-사안처리-가이드북-개정안-hwpx",
@@ -3213,7 +3061,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1559065-0-2025-1차-학교폭력-실태-전수-조사-결과-누리집용-hwp",
@@ -3237,7 +3085,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1548192-1-2025-학교폭력-사안처리-세부설명-a-to-z-서식모음집-hwpx",
@@ -3265,7 +3113,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1570140-0-2025년-2차-학교폭력-실태-표본-조사-결과-누리집-탑재용-hwpx",
@@ -3289,7 +3137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1576546-0-2026-학교폭력-피해학생-전문교육기관-선정-결과-공고문-안내용-hwpx",
@@ -3313,7 +3161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-1511311-0-23년-학교폭력-사안처리-가이드북-한글파일-hwpx",
@@ -3337,7 +3185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1575631-0-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
@@ -3365,7 +3213,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-583659-0-게시용-2022-성희롱-성폭력-사안처리지원단-구성-운영-계획-hwp",
@@ -3389,7 +3237,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-573475-0-교육부-양성평등정책담당관-학교-내-성희롱-성폭력-사안처리-사례집-배포용-2020-12월-pdf",
@@ -3413,7 +3261,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1562027-1-단계별-관련-서식-2025개정판-학교내성희롱성폭력사안대응업무안내서-hwpx",
@@ -3441,7 +3289,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-572186-0-사안처리-핸드북-발송용-pdf",
@@ -3465,7 +3313,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-583659-1-성희롱-성폭력-사안처리지원단-외부지원-신청서-hwp",
@@ -3493,7 +3341,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1575631-1-성희롱성폭력-사안발생-미-통보-동의서-서식-hwpx",
@@ -3521,7 +3369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-568298-0-여성가족부-권익기반과-2021년-폭력예방교육-운영안내-지침-최종-pdf",
@@ -3545,7 +3393,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1544100-0-여성가족부-성폭력방지과-번-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
@@ -3573,7 +3421,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1541549-0-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-pdf",
@@ -3597,7 +3445,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-1541549-1-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-단계별-관련-서식-hwp",
@@ -3625,7 +3473,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-578707-0-충청북도교육청용-교직원-성희롱-성폭력-사안처리-대응-매뉴얼-2021-9-hwp",
@@ -3649,7 +3497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-sexual-awareness-588221-0-학교-내-성희롱-성폭력-사안처리지원단-업무매뉴얼-pdf",
@@ -3673,7 +3521,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "harvest-cbe-school-violence-545690-0-학교폭력-사안처리-가이드북-일부개정판-pdf",
@@ -3697,16 +3545,16 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-7-서식-교원인사-4-7-4-8-학교폭력-예방-및-대응-기여교사-확인서",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16561-cntntsid-6995-2-서식-중등-8-4-1-3-성범죄-경력-및-아동학대관련범죄-전력-조회-동의서",
       "category": "schoolViolenceSafety",
       "type": "form",
-      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-8] 학교폭력 예방 및 대응 기여교사 확인서",
+      "title": "치료지원 - [서식-중등-8-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-8] 학교폭력 예방 및 대응 기여교사 확인서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de90dd949139eebd4733bed981cd39d9",
+      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=042adc0095b4b1ca63fa4a5cec83c3bb",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3718,51 +3566,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de90dd949139eebd4733bed981cd39d9",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=042adc0095b4b1ca63fa4a5cec83c3bb",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15458-cntntsid-6753-0-서식-행정-16-5-1-1-재난상황조서",
-      "category": "schoolViolenceSafety",
-      "type": "form",
-      "title": "한국교육시설안전원 공제 가입 - [서식-행정-16-5-1-1] 재난상황조서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "한국교육시설안전원 한국교육시설안전원 공제 가입 [서식-행정-16-5-1-1] 재난상황조서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c3f99bb209ddab75d901060728c19fc6",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c3f99bb209ddab75d901060728c19fc6",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-4-1-5-계약제교원-채용-계약서",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15894-cntntsid-7104-0-서식-관리-12-4-1-1-민원-응대-요령",
       "category": "staffLabor",
       "type": "form",
-      "title": "각종 서식 - [1-5] 계약제교원 채용 계약서",
+      "title": "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-1] 민원 응대 요령",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [1-5] 계약제교원 채용 계약서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=adebaa1d9a064128cc43c4a1b9c85040",
+      "query": "공직자 민원응대 매뉴얼 [서식-관리-12-4-1-1] 민원 응대 요령",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c19a7c7b46665d1c59b36b49a97f3860",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3774,23 +3594,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=adebaa1d9a064128cc43c4a1b9c85040",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c19a7c7b46665d1c59b36b49a97f3860",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-5-1-6-계약제교원-근로-계약서",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15894-cntntsid-7104-1-서식-관리-12-4-1-2-민원편람",
       "category": "staffLabor",
       "type": "form",
-      "title": "각종 서식 - [1-6] 계약제교원 근로 계약서",
+      "title": "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-2] 민원편람",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [1-6] 계약제교원 근로 계약서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1c352904ca2bf98d8d77a2d3eb682ddc",
+      "query": "공직자 민원응대 매뉴얼 [서식-관리-12-4-1-2] 민원편람",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fac37123bd76c48c714db2eb0278fe27",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3802,23 +3622,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1c352904ca2bf98d8d77a2d3eb682ddc",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fac37123bd76c48c714db2eb0278fe27",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-7-1-8-계약제교원-운영현황-자체점검표",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15139-cntntsid-7044-0-서식-관리-3-3-1-1-교육공무직원-채용-및-퇴직-관련-각종-예시안",
       "category": "staffLabor",
       "type": "form",
-      "title": "각종 서식 - [1-8] 계약제교원 운영현황 자체점검표",
+      "title": "교육공무직원 인사 관리 - [서식-관리-3-3-1-1] 교육공무직원 채용 및 퇴직 관련 각종 예시안",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [1-8] 계약제교원 운영현황 자체점검표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=75d2cf6ca665794ca433b587028435b1",
+      "query": "교육공무직원 관리 교육공무직원 인사 관리 [서식-관리-3-3-1-1] 교육공무직원 채용 및 퇴직 관련 각종 예시안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ef9320f0b2d5d968cfca3577f81d7e8",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3830,23 +3650,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=75d2cf6ca665794ca433b587028435b1",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ef9320f0b2d5d968cfca3577f81d7e8",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-8-서식-1-기간제교원-인력풀-등록-신청서",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15139-cntntsid-7044-1-서식-관리-3-3-1-2-교육공무직원-발령대장-예시안",
       "category": "staffLabor",
       "type": "form",
-      "title": "각종 서식 - [서식 1] 기간제교원 인력풀 등록 신청서",
+      "title": "교육공무직원 인사 관리 - [서식-관리-3-3-1-2] 교육공무직원 발령대장 예시안",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 1] 기간제교원 인력풀 등록 신청서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=447b9a373356abc429b2a006f324fff2",
+      "query": "교육공무직원 관리 교육공무직원 인사 관리 [서식-관리-3-3-1-2] 교육공무직원 발령대장 예시안",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd9c04abebb2a89272fa6b250d8e8e40",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
@@ -3858,554 +3678,22 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=447b9a373356abc429b2a006f324fff2",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd9c04abebb2a89272fa6b250d8e8e40",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-13-서식-6-기간제교원-임용사항-보고-서식",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "각종 서식 - [서식 6] 기간제교원 임용사항 보고 서식",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 6] 기간제교원 임용사항 보고 서식",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2fecfeda76bcde421eaebe55dce9333c",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2fecfeda76bcde421eaebe55dce9333c",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-16-서식-8-1-기간제교원육아휴직원",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "각종 서식 - [서식 8-1] 기간제교원육아휴직원",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 8-1] 기간제교원육아휴직원",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=83ca13a35e174f7932881ede65a4895d",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=83ca13a35e174f7932881ede65a4895d",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-17-서식-8-2-기간제교원육아휴직원복직원",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "각종 서식 - [서식 8-2] 기간제교원육아휴직원복직원",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 8-2] 기간제교원육아휴직원복직원",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de7aee7d20117753005a0ed3445fef3b",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de7aee7d20117753005a0ed3445fef3b",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-18-서식-8-3-고용보험제출용육아휴직확인서",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "각종 서식 - [서식 8-3] 고용보험제출용육아휴직확인서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 8-3] 고용보험제출용육아휴직확인서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3076d9b318efee049edc2f7db1837c51",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3076d9b318efee049edc2f7db1837c51",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-0-전체-계약제교원-채용-관련-참고자료-및-각종-서식",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "각종 서식 - [전체] 계약제교원 채용 관련 참고자료 및 각종 서식",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [전체] 계약제교원 채용 관련 참고자료 및 각종 서식",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3c93e5f606e188cb3c1aa3269574c104",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3c93e5f606e188cb3c1aa3269574c104",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14818-cntntsid-7249-0-서식-초등-8-7-5-1-기간제-교원-근무실적평가서-서식",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-1] 기간제 교원 근무실적평가서(서식)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "계약제교원 근무성적 평정 [서식-초등-8-7-5-1] 기간제 교원 근무실적평가서(서식)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e7a6b73e6b3ed962fd53c3d8357821d1",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e7a6b73e6b3ed962fd53c3d8357821d1",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14818-cntntsid-7249-1-서식-초등-8-7-5-2-기간제-교원-평가결과보고서-보고용-서식",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-2] 기간제 교원 평가결과보고서_보고용(서식)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "계약제교원 근무성적 평정 [서식-초등-8-7-5-2] 기간제 교원 평가결과보고서_보고용(서식)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ea06365bb416344bf216906b6e6fb39a",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ea06365bb416344bf216906b6e6fb39a",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14818-cntntsid-7249-2-서식-초등-8-7-5-3-기간제-교원-연수실적관리대장-서식",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-3] 기간제 교원 연수실적관리대장(서식)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "계약제교원 근무성적 평정 [서식-초등-8-7-5-3] 기간제 교원 연수실적관리대장(서식)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=16d18cceccc1d57e17d1595a9cffb569",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=16d18cceccc1d57e17d1595a9cffb569",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14818-cntntsid-7249-3-서식-초등-8-7-5-4-기간제-교원-조기퇴직-기안및사직원-서식",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-4] 기간제 교원 조기퇴직 기안및사직원(서식)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "계약제교원 근무성적 평정 [서식-초등-8-7-5-4] 기간제 교원 조기퇴직 기안및사직원(서식)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a7081a13cb82438e6186deaf661348ea",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a7081a13cb82438e6186deaf661348ea",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14818-cntntsid-7249-4-서식-초등-8-7-5-5-계약제-교원-운영현황-자체점검표-서식",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-5] 계약제 교원 운영현황 자체점검표(서식)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "계약제교원 근무성적 평정 [서식-초등-8-7-5-5] 계약제 교원 운영현황 자체점검표(서식)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3d5e4b398cf78799390a86a68ba56e89",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3d5e4b398cf78799390a86a68ba56e89",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-9-서식-2-근무실적-평가-동의서",
-      "category": "studentLife",
-      "type": "form",
-      "title": "각종 서식 - [서식 2] 근무실적 평가 동의서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 2] 근무실적 평가 동의서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fcb5d679a8bf550ac13ece797e22581e",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fcb5d679a8bf550ac13ece797e22581e",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-10-서식-3-근무실적-평가서",
-      "category": "studentLife",
-      "type": "form",
-      "title": "각종 서식 - [서식 3] 근무실적 평가서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 3] 근무실적 평가서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbed219a1e45c923af5e59586589ab49",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbed219a1e45c923af5e59586589ab49",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-12-서식-5-기간제교원-평가결과-보고서",
-      "category": "studentLife",
-      "type": "form",
-      "title": "각종 서식 - [서식 5] 기간제교원 평가결과 보고서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 5] 기간제교원 평가결과 보고서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ef26c39949857c5dc31f64b6e9dc237d",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ef26c39949857c5dc31f64b6e9dc237d",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-19-서식-9-1-서류평가심사표",
-      "category": "studentLife",
-      "type": "form",
-      "title": "각종 서식 - [서식 9-1] 서류평가심사표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 9-1] 서류평가심사표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=46e30df9e071b352825d8473dcb4347e",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=46e30df9e071b352825d8473dcb4347e",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-22-서식-9-4-수업실연평가표",
-      "category": "studentLife",
-      "type": "form",
-      "title": "각종 서식 - [서식 9-4] 수업실연평가표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "각종 서식 [서식 9-4] 수업실연평가표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=edd776471ecde99165538033131ce709",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학교지원종합자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=edd776471ecde99165538033131ce709",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1627082-0-붙임-1-학교-내-성희롱성폭력-사안처리-안내서-pdf",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - [붙임 1] 학교 내 성희롱성폭력 사안처리 안내서",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "성폭력 자료실 [붙임 1] 학교 내 성희롱성폭력 사안처리 안내서.pdf",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_1c5ev8f22=18vea=43vff=88v36=f1b0vb8a8v2aaa_v6612.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_1c5ev8f22=18vea=43vff=88v36=f1b0vb8a8v2aaa_v6612.pdf",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - [붙임1] 교사용 학생 자살 징후 체크리스트",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 자료실 [붙임1] 교사용 학생 자살 징후 체크리스트.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 3. 교사용 학생 자살징후 체크리스트",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 자료실 3. 교사용 학생 자살징후 체크리스트.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1627082-1-관련-서식-hwp",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 관련 서식",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "성폭력 자료실 관련 서식.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_abedvfaae=afvc3=47vea=9avab=c681v184av7a2e_v6676.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_abedvfaae=afvc3=47vea=9avab=c681v184av7a2e_v6676.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "harvest-gbe-student-life-1353996-0-정보공개-운영-매뉴얼",
+      "id": "harvest-gbe-student-life-1497001-0-정보공개-운영-매뉴얼",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 정보공개 운영 매뉴얼",
       "provider": "경상북도교육청 학생생활과",
-      "query": "아동학대 자료실 정보공개 운영 매뉴얼",
+      "query": "딥페이크 자료실 정보공개 운영 매뉴얼",
       "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
@@ -4421,91 +3709,623 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-16561-cntntsid-6995-1-서식-중등-8-4-1-2-치료지원서비스제공-기록지-및-월별-평가서",
       "category": "studentLife",
       "type": "form",
-      "title": "자료실 - 정보공개 운영 매뉴얼",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 자료실 정보공개 운영 매뉴얼",
-      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "title": "치료지원 - [서식-중등-8-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2049c9d4eb0e2d4bbb4e0cb29a31eed7",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2049c9d4eb0e2d4bbb4e0cb29a31eed7",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14894-cntntsid-6469-0-서식-중등-2-2-2-1-평가계획-관련-학업성적관리위원회-회의록-예시",
       "category": "studentLife",
       "type": "form",
-      "title": "자료실 - 제출서식(동의서)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 자료실 제출서식(동의서).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-1] 평가계획 관련 학업성적관리위원회 회의록(예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-1] 평가계획 관련 학업성적관리위원회 회의록(예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=81cd5eaf5d8baf3787fa68037b956f52",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=81cd5eaf5d8baf3787fa68037b956f52",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14894-cntntsid-6469-1-서식-중등-2-2-2-2-교과별-평가계획-학업성적관리위원회-심의안-예시",
       "category": "studentLife",
       "type": "form",
-      "title": "자료실 - 제출서식(소방시설등 자체점검 실시결과 보고서)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 자료실 제출서식(소방시설등 자체점검 실시결과 보고서).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-2] 교과별 평가계획 학업성적관리위원회 심의안 (예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-2] 교과별 평가계획 학업성적관리위원회 심의안 (예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=56fc6db5b0699b91ae23877c0e7817c7",
       "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "경북교육청 학생생활과 자료실",
+      "missionLabel": "경북교육청 학교지원종합자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=56fc6db5b0699b91ae23877c0e7817c7",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14894-cntntsid-6469-2-서식-중등-2-2-2-3-평가계획-관련-가정통신문-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-3] 평가계획 관련 가정통신문(예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-3] 평가계획 관련 가정통신문(예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=152dce9f1d8800bafca800f5e23f6735",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=152dce9f1d8800bafca800f5e23f6735",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14894-cntntsid-6469-3-서식-중등-2-2-2-4-평가계획-정보공시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-4] 평가계획 정보공시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-4] 평가계획 정보공시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=62c48b7adeae2b6dd423136e544afc5e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=62c48b7adeae2b6dd423136e544afc5e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15703-cntntsid-6470-0-서식-초등-1-3-1-2026학년도-학교생활기록부-기재요령-초등학교-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-초등-1-3-1] 2026학년도 학교생활기록부 기재요령(초등학교)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-초등-1-3-1] 2026학년도 학교생활기록부 기재요령(초등학교).pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f5913fd2fba7055dc0ad565aee8ff05b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f5913fd2fba7055dc0ad565aee8ff05b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15703-cntntsid-6470-1-서식-초등-1-3-2-2026학년도-학교생활기록부-기재요령-주요-개정사항-초등학교-pptx",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-초등-1-3-2] 2026학년도 학교생활기록부 기재요령 주요 개정사항(초등학교)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-초등-1-3-2] 2026학년도 학교생활기록부 기재요령 주요 개정사항(초등학교).pptx",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1fe3ea6fb8f6179c0786e932346069f2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1fe3ea6fb8f6179c0786e932346069f2",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15703-cntntsid-6470-2-서식-초등-1-3-3-2026학년도-학적-업무-매뉴얼-초등학교-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-초등-1-3-3] 2026학년도 학적 업무 매뉴얼(초등학교)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-초등-1-3-3] 2026학년도 학적 업무 매뉴얼(초등학교).pdf",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2017b43a12e29ace0d995b47a2643876",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2017b43a12e29ace0d995b47a2643876",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15703-cntntsid-6470-3-서식-초등-1-3-4-서식-초등1-3-4-2026학년도-학적-업무-매뉴얼-한글파일-서식포함-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학교생활기록부 관리 - [서식-초등-1-3-4] [서식-초등1-3-4] 2026학년도 학적 업무 매뉴얼(한글파일 서식포함)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학교생활기록부 관리 [서식-초등-1-3-4] [서식-초등1-3-4] 2026학년도 학적 업무 매뉴얼(한글파일 서식포함).hwp",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8a0414e897fac93cb0a119b91fbfb9f4",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8a0414e897fac93cb0a119b91fbfb9f4",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-0-서식-중등-1-10-2-1-고등학교전-편-재입학-지원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-1] 고등학교전·편·재입학 지원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-1] 고등학교전·편·재입학 지원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13cecbb364564f9944a78c8a4a35812a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13cecbb364564f9944a78c8a4a35812a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-1-서식-중등-1-10-2-2-고등학교-전-편입학-배정-의뢰서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-2] 고등학교 전·편입학 배정 의뢰서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-2] 고등학교 전·편입학 배정 의뢰서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1408efe8b6d2937788eb8f5032c52988",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1408efe8b6d2937788eb8f5032c52988",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-2-서식-중등-1-10-2-3-거주확인서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-3] 거주확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-3] 거주확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de1a5e3a9fc4961fd62ffabb24713474",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de1a5e3a9fc4961fd62ffabb24713474",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-3-서식-중등-1-10-2-4-귀국자-편입학-원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-4] 귀국자 편입학 원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-4] 귀국자 편입학 원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d0d879bddbe253aeea17b52e364c0d5a",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d0d879bddbe253aeea17b52e364c0d5a",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-4-서식-중등-1-10-2-5-평준화-일반고등학교-전-편입학-배정원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-5] 평준화 일반고등학교 전·편입학 배정원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-5] 평준화 일반고등학교 전·편입학 배정원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9886eec2280eb3d4b6515d63daaae767",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9886eec2280eb3d4b6515d63daaae767",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-5-서식-중등-1-10-2-6-평준화지역-비평준화지역-고등학교-전학-지원서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-6] 평준화지역·비평준화지역 고등학교 전학 지원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-6] 평준화지역·비평준화지역 고등학교 전학 지원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbf3f1b03d454b8b414a74e4d45e83fd",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbf3f1b03d454b8b414a74e4d45e83fd",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-6-서식-중등-1-10-2-7-고등학교-학년결정-입학신청서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-7] 고등학교 학년결정 입학신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-7] 고등학교 학년결정 입학신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=628d10fb29d27872b5236539b2a371da",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=628d10fb29d27872b5236539b2a371da",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-7-서식-중등-1-10-2-8-전학을-위한-학교장의-노력현황",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-8] 전학을 위한 학교장의 노력현황",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-8] 전학을 위한 학교장의 노력현황",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6695561f43dde35792f3136eba3cdbe",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6695561f43dde35792f3136eba3cdbe",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14855-cntntsid-6396-8-서식-중등-1-10-2-9-귀국학생의-재취학에-따른-조기진급-졸업-진학평가위원회-협의결과",
+      "category": "studentLife",
+      "type": "form",
+      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-9] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-9] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5b3ace64cd22c3fa25dc155109b9ae20",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5b3ace64cd22c3fa25dc155109b9ae20",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14974-cntntsid-6709-0-서식-중등-4-12-3-1-현장체험학습-사전안전교육자료-예시",
+      "category": "studentLife",
+      "type": "form",
+      "title": "현장체험학습 운영 - [서식-중등-4-12-3-1]현장체험학습 사전안전교육자료(예시)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "현장체험학습 운영 [서식-중등-4-12-3-1]현장체험학습 사전안전교육자료(예시)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13d1f5daaaa25f4ece555c473034e735",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교지원종합자료실",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13d1f5daaaa25f4ece555c473034e735",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-2-1-3-자기소개서",
+      "category": "careerEmployment",
+      "type": "form",
+      "title": "각종 서식 - [1-3] 자기소개서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [1-3] 자기소개서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=adf16c350181d9199f4fbfadc64d3657",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=adf16c350181d9199f4fbfadc64d3657",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-23-서식-9-5-면접질문지",
+      "category": "careerEmployment",
+      "type": "form",
+      "title": "각종 서식 - [서식 9-5] 면접질문지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 9-5] 면접질문지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9bca5e92e528f12b9dc38a47f1adcf2b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9bca5e92e528f12b9dc38a47f1adcf2b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-24-서식-9-6-면접심사점수지계표",
+      "category": "careerEmployment",
+      "type": "form",
+      "title": "각종 서식 - [서식 9-6] 면접심사점수지계표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 9-6] 면접심사점수지계표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f7b1708779b38d9bafe4a392f6b1283e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f7b1708779b38d9bafe4a392f6b1283e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-직업계고-구인의뢰-운영-안내",
@@ -4529,7 +4349,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-고졸-청년층-취업지원-프로그램-hi",
@@ -4553,7 +4373,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-고졸청년층-취업지원프로그램-개발-연구",
@@ -4577,7 +4397,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-대한상공회의소-국가기술자격-시험-출제자료",
@@ -4601,7 +4421,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-서울교육청-직업계고-취업-정책-안내",
@@ -4625,7 +4445,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-직무별-자기소개서-작성-가이드",
@@ -4649,7 +4469,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-졸업자-취업통계-조사-운영",
@@ -4673,7 +4493,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-중앙취업지원센터-설립-운영-방안",
@@ -4697,7 +4517,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-채용연계형-직무교육과정-지원",
@@ -4721,7 +4541,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-학생-취업지원-만족도와-취업성과",
@@ -4745,7 +4565,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-취업지원-서비스-제공을-위한-취업상담-매뉴얼",
@@ -4773,10 +4593,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-44049-0-공문-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-알림-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-44049-0-공문-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-알림-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "(공문) 안전 권익 확보를 위한 직업계고 현장실습 추가 개선방안 알림",
@@ -4797,10 +4617,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38919-0-공문-직업계고-현장실습-안전점검-등을-통한-안전사고-예방-철저-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38919-0-공문-직업계고-현장실습-안전점검-등을-통한-안전사고-예방-철저-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "(공문) 직업계고 현장실습 안전점검 등을 통한 안전사고 예방 철저",
@@ -4821,10 +4641,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-146624-1-기특한명장-명장진로프로그램-매뉴얼-명장용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-146624-1-기특한명장-명장진로프로그램-매뉴얼-명장용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "(기특한명장)_명장진로프로그램_매뉴얼(명장용)",
@@ -4845,10 +4665,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-146624-0-기특한명장-명장진로프로그램-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-146624-0-기특한명장-명장진로프로그램-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "(기특한명장)_명장진로프로그램_매뉴얼(학교용)",
@@ -4869,10 +4689,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "(붙임1) 산업안전점검표(공통)",
@@ -4897,10 +4717,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "(붙임2) 2021 직업계고 산업안전 매뉴얼",
@@ -4925,7 +4745,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -4949,10 +4769,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-126838-0-교안-반도체-사업장-현장실습생을-위한-건강관리-길잡이-ppt-pptx",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-126838-0-교안-반도체-사업장-현장실습생을-위한-건강관리-길잡이-ppt-pptx",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[교안] 반도체 사업장 현장실습생을 위한 건강관리 길잡이_PPT",
@@ -4973,10 +4793,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "[붙임1] 2021학년도 직업계고 현장실습 운영 매뉴얼_서식",
@@ -5001,10 +4821,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
       "category": "fieldTraining",
       "type": "form",
       "title": "[붙임2] (안내)_산업체_현장실습_참여_동의서(학부모_동의서)_서식_안내",
@@ -5029,10 +4849,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "[서식] 2025년 개정 직업계고 현장실습 매뉴얼 서식모음집",
@@ -5057,10 +4877,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "[서식] 2026년 개정 직업계고 현장실습 공통매뉴얼 서식모음집",
@@ -5085,10 +4905,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "[서식]2024년 개정 직업계고 현장실습 매뉴얼 서식모음집",
@@ -5113,10 +4933,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-0-안전보건공단-직업계고-카드북1-차량계-건설기계작업-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-0-안전보건공단-직업계고-카드북1-차량계-건설기계작업-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북1_차량계 건설기계작업_웹용",
@@ -5137,10 +4957,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-1-안전보건공단-직업계고-카드북2-중량물운반-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-1-안전보건공단-직업계고-카드북2-중량물운반-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북2_중량물운반_웹용",
@@ -5161,10 +4981,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-2-안전보건공단-직업계고-카드북3-금속성형기계작업-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-2-안전보건공단-직업계고-카드북3-금속성형기계작업-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북3_금속성형기계작업_웹용",
@@ -5185,10 +5005,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-3-안전보건공단-직업계고-카드북4-금속절삭기계-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-3-안전보건공단-직업계고-카드북4-금속절삭기계-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북4_금속절삭기계_웹용",
@@ -5209,10 +5029,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-4-안전보건공단-직업계고-카드북5-식품제조작업-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-4-안전보건공단-직업계고-카드북5-식품제조작업-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북5_식품제조작업_웹용",
@@ -5233,10 +5053,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-132949-5-안전보건공단-직업계고-카드북6-세척제취급작업-웹용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-132949-5-안전보건공단-직업계고-카드북6-세척제취급작업-웹용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "[안전보건공단] 직업계고 카드북6_세척제취급작업_웹용",
@@ -5257,10 +5077,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
       "category": "fieldTraining",
       "type": "form",
       "title": "★[붙임] 2024 현장실습 매뉴얼 주요 변경사항 신구대조표",
@@ -5285,58 +5105,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-3-2025-직업계고-현장실습생-강의안-최종-25-06-30-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "★2025 직업계고 현장실습생 강의안(최종)_25.06.30.",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' ★2025 직업계고 현장실습생 강의안(최종)_25.06.30..pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250724&filerealname=%E2%98%852025+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EA%B0%95%EC%9D%98%EC%95%88%28%EC%B5%9C%EC%A2%85%29_25.06.30..pdf&filename=D4BEA8A57A9F4809BA1AF7AB760ABB5E.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-4-2026-직업계고-현장실습생-강의안-최종-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "★2026 직업계고 현장실습생 강의안(최종)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' ★2026 직업계고 현장실습생 강의안(최종).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=%E2%98%852026+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EA%B0%95%EC%9D%98%EC%95%88%28%EC%B5%9C%EC%A2%85%29.pdf&filename=DBE023DD49F94C749803C83E83DAECDD.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-72151-0-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-72151-0-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "★산업안전 매뉴얼",
@@ -5357,10 +5129,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-65570-0-최종-2022-직업계고-현장실습생-대상-강의안-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-65570-0-최종-2022-직업계고-현장실습생-대상-강의안-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "★최종_2022 직업계고 현장실습생 대상 강의안",
@@ -5381,10 +5153,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127332-0-1-1-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127332-0-1-1-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1-1. 2023년 개정 직업계고 현장실습 운영 공통 매뉴얼(학교용)",
@@ -5405,10 +5177,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127332-2-1-2-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127332-2-1-2-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-hwp",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1-2. 2023년 개정 직업계고 현장실습 운영 공통 매뉴얼(학교용)",
@@ -5429,34 +5201,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-2-1-통합본-2026년-직업계고-현장실습-산업안전-매뉴얼-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "1. [통합본] 2026년 직업계고 현장실습 산업안전 매뉴얼",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 1. [통합본] 2026년 직업계고 현장실습 산업안전 매뉴얼.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=1.+%5B%ED%86%B5%ED%95%A9%EB%B3%B8%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=FDB32A7BFE0A41F6A8EF973E5EC29F47.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-128160-0-1-2023년-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-128160-0-1-2023년-직업계고-현장실습-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 2023년 직업계고 현장실습 산업안전 매뉴얼",
@@ -5477,10 +5225,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-0-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-0-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 2026년 개정 직업계고 현장실습 운영 공통매뉴얼_학교용",
@@ -5501,7 +5249,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5529,10 +5277,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134988-0-1-직업계고-현장실습-운영-공통-매뉴얼-안내-2024년-개정-주요-변경사항-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134988-0-1-직업계고-현장실습-운영-공통-매뉴얼-안내-2024년-개정-주요-변경사항-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 직업계고 현장실습 운영 공통 매뉴얼 안내_2024년 개정 주요 변경사항",
@@ -5553,10 +5301,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38639-0-1-한국공인노무사회-2021-직업계고-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38639-0-1-한국공인노무사회-2021-직업계고-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 한국공인노무사회 - 2021 직업계고 산업안전 매뉴얼",
@@ -5577,10 +5325,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-33248-0-1-한국공인노무사회-직업계고-실험-실습실-안전보건관리-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-33248-0-1-한국공인노무사회-직업계고-실험-실습실-안전보건관리-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "1. 한국공인노무사회-직업계고 실험.실습실 안전보건관리 매뉴얼",
@@ -5601,34 +5349,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-3-2-공업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2. [공업] 2026년 직업계고 현장실습 산업안전 핸드북",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2. [공업] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=2.+%5B%EA%B3%B5%EC%97%85%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=E23088A47EB74D1995A4FBD510C41052.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "2. 2023년 개정 직업계고 현장실습 매뉴얼 서식모음집",
@@ -5653,10 +5377,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-1-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-1-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2. 2026년 개정 직업계고 현장실습 운영 공통매뉴얼_기업용",
@@ -5677,7 +5401,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5705,10 +5429,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134988-1-2-직업계고-현장실습-운영의-이해-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134988-1-2-직업계고-현장실습-운영의-이해-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2. 직업계고 현장실습 운영의 이해",
@@ -5729,7 +5453,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5753,10 +5477,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-33248-1-2-한국공인노무사회-직업계고-현장실습-산업안전-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-33248-1-2-한국공인노무사회-직업계고-현장실습-산업안전-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2. 한국공인노무사회-직업계고 현장실습 산업안전 매뉴얼",
@@ -5777,10 +5501,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-30450-0-2019학년도-직업계고-현장실습-운영-매뉴얼-수정본-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-30450-0-2019학년도-직업계고-현장실습-운영-매뉴얼-수정본-hwp",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2019학년도 직업계고 현장실습 운영 매뉴얼(수정본)",
@@ -5801,10 +5525,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-29681-0-2019학년도-직업계고-현장실습-운영-안내자료-배포용-pptx",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-29681-0-2019학년도-직업계고-현장실습-운영-안내자료-배포용-pptx",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2019학년도 직업계고 현장실습 운영 안내자료(배포용)",
@@ -5825,10 +5549,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-32692-0-2020학년도-직업계고-현장실습-운영-안내자료-배부용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-32692-0-2020학년도-직업계고-현장실습-운영-안내자료-배부용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2020학년도 직업계고 현장실습 운영 안내자료(배부용)",
@@ -5849,10 +5573,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-36857-0-2021-직업계고-현장실습-운영-매뉴얼-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-36857-0-2021-직업계고-현장실습-운영-매뉴얼-최종-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2021 직업계고 현장실습 운영 매뉴얼(최종)",
@@ -5873,10 +5597,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-73129-0-2022개정-직업계고현장실습운영공통매뉴얼-학교용-최종본-0630-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-73129-0-2022개정-직업계고현장실습운영공통매뉴얼-학교용-최종본-0630-hwp",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2022개정_직업계고현장실습운영공통매뉴얼(학교용)_최종본(0630)",
@@ -5897,10 +5621,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-65309-0-2022년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-1-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-65309-0-2022년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-1-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2022년 개정 직업계고 현장실습 운영 공통 매뉴얼(학교용) (1)",
@@ -5921,10 +5645,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127566-0-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127566-0-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 개정 직업계고 현장실습 운영 공통 매뉴얼(기업용)",
@@ -5945,10 +5669,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127566-1-2023년-개정-현장실습-간편-매뉴얼-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127566-1-2023년-개정-현장실습-간편-매뉴얼-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 개정 현장실습 간편 매뉴얼(기업용)",
@@ -5969,10 +5693,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127647-0-2023년-개정-현장실습-간편-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127647-0-2023년-개정-현장실습-간편-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 개정 현장실습 간편 매뉴얼(학교용)",
@@ -5993,7 +5717,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6017,10 +5741,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127696-1-2023년-hifive-현장실습-관리시스템-매뉴얼-학교-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127696-1-2023년-hifive-현장실습-관리시스템-매뉴얼-학교-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 HIFIVE 현장실습 관리시스템 매뉴얼(학교)",
@@ -6041,10 +5765,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-127696-0-2023년-hifive-현장실습-활용-매뉴얼-학생-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-127696-0-2023년-hifive-현장실습-활용-매뉴얼-학생-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2023년 HIFIVE 현장실습 활용 매뉴얼(학생)",
@@ -6065,7 +5789,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6089,7 +5813,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6113,7 +5837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6137,130 +5861,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-3-2024년-직업계고-현장실습-산업안전-매뉴얼-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습 산업안전 매뉴얼",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습 산업안전 매뉴얼.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=3B76057D62D246F995E54F2CB7276AEF.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-0-2024년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습 산업안전 핸드북(건설)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(건설).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B1%B4%EC%84%A4%29.pdf&filename=F29FFFC36BAE41019EC15A689900AEC1.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-1-2024년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습 산업안전 핸드북(공업)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(공업).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B3%B5%EC%97%85%29.pdf&filename=FEC522C711354867AAB8FF5F60C8285B.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-2-2024년-직업계고-현장실습-산업안전-핸드북-농수산상업및가사-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습 산업안전 핸드북(농수산상업및가사)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습 산업안전 핸드북(농수산상업및가사).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EB%86%8D%EC%88%98%EC%82%B0%EC%83%81%EC%97%85%EB%B0%8F%EA%B0%80%EC%82%AC%29.pdf&filename=85D454242B9F4DDEB56CA199B24E737E.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-135480-4-2024년-직업계고-현장실습생-대상-강의안-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2024년 직업계고 현장실습생 대상 강의안",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2024년 직업계고 현장실습생 대상 강의안.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20240731&filerealname=2024%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5%EC%83%9D+%EB%8C%80%EC%83%81+%EA%B0%95%EC%9D%98%EC%95%88.pdf&filename=50C531B30168437CA00809EF27E8F4AF.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-134651-0-2024년-hifive-현장실습-관리시스템-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134651-0-2024년-hifive-현장실습-관리시스템-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2024년 HIFIVE 현장실습 관리시스템 매뉴얼(학교용)",
@@ -6281,10 +5885,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134651-1-2024년-hifive-현장실습-관리시스템-매뉴얼-학생용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134651-1-2024년-hifive-현장실습-관리시스템-매뉴얼-학생용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2024년 HIFIVE 현장실습 관리시스템 매뉴얼(학생용)",
@@ -6305,106 +5909,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-0-2025년-직업계고-현장실습-산업안전-매뉴얼-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2025년 직업계고 현장실습 산업안전 매뉴얼",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2025년 직업계고 현장실습 산업안전 매뉴얼.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%EB%A7%A4%EB%89%B4%EC%96%BC.pdf&filename=D1C7D658B31C4A0E8AC566EEE2406362.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-1-2025년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2025년 직업계고 현장실습 산업안전 핸드북(건설)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(건설).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B1%B4%EC%84%A4%29.pdf&filename=7C4A6EF123874467A2DFD6F9DCFC21EF.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-4-2025년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2025년 직업계고 현장실습 산업안전 핸드북(공업)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(공업).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EA%B3%B5%EC%97%85%29.pdf&filename=A3972BF0DE034337A61990D4A3CAC61B.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-141274-2-2025년-직업계고-현장실습-산업안전-핸드북-농업-수산-해운-상업-및-가사-실업-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "2025년 직업계고 현장실습 산업안전 핸드북(농업, 수산 해운, 상업 및 가사 실업)",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 2025년 직업계고 현장실습 산업안전 핸드북(농업, 수산 해운, 상업 및 가사 실업).pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20250723&filerealname=2025%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81%28%EB%86%8D%EC%97%85%2C+%EC%88%98%EC%82%B0+%ED%95%B4%EC%9A%B4%2C+%EC%83%81%EC%97%85+%EB%B0%8F+%EA%B0%80%EC%82%AC+%EC%8B%A4%EC%97%85%29.pdf&filename=FB03D927E8F9412387416F90CC1B8382.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2025년 직업계고 현장실습 운영 공통 매뉴얼(기업용)",
@@ -6425,7 +5933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6453,10 +5961,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2025년 직업계고 현장실습 운영 공통 매뉴얼(학교용)",
@@ -6477,7 +5985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6505,10 +6013,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140473-1-2025년-hifive-사용자-매뉴얼-학생용-250820-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140473-1-2025년-hifive-사용자-매뉴얼-학생용-250820-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2025년 HIFIVE 사용자 매뉴얼(학생용)_250820",
@@ -6529,10 +6037,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140473-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-v-1-4-250820-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140473-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-v-1-4-250820-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2025년 HIFIVE 현장실습 관리시스템 매뉴얼(학교용)_V.1.4_250820",
@@ -6553,7 +6061,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6577,7 +6085,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6601,7 +6109,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6625,10 +6133,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145403-0-2026-hifive-시스템-매뉴얼-학교용-0907-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145403-0-2026-hifive-시스템-매뉴얼-학교용-0907-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2026 HIFIVE 시스템 매뉴얼(학교용)_0907",
@@ -6649,7 +6157,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6673,10 +6181,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145403-1-2026-hifive-시스템-매뉴얼-학생용-0819-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145403-1-2026-hifive-시스템-매뉴얼-학생용-0819-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2026 HIFIVE 시스템 매뉴얼(학생용)_0819",
@@ -6697,10 +6205,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-3-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-기업용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-3-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-기업용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2026년 개정 직업계고 현장실습 운영 공통매뉴얼 리플릿_기업용",
@@ -6721,7 +6229,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6749,10 +6257,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145174-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-학교용-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-145174-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-학교용-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "2026년 개정 직업계고 현장실습 운영 공통매뉴얼 리플릿_학교용",
@@ -6773,7 +6281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6801,7 +6309,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6825,7 +6333,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6849,34 +6357,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-0-3-건설-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "3. [건설] 2026년 직업계고 현장실습 산업안전 핸드북",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 3. [건설] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=3.+%5B%EA%B1%B4%EC%84%A4%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=12FE3EDA27FB44DAA26FAAB89352635C.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-128161-0-3-2023년-직업계고-현장실습생-대상-강의안-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-128161-0-3-2023년-직업계고-현장실습생-대상-강의안-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "3. 2023년 직업계고 현장실습생 대상 강의안",
@@ -6897,10 +6381,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-38639-1-3-한국공인노무사회-2021-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-38639-1-3-한국공인노무사회-2021-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "3. 한국공인노무사회 - 2021 실습생을 위한 꼭 알아야 할 현장실습(미니책자)",
@@ -6921,10 +6405,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-33248-2-3-한국공인노무사회-직업계고-현장실습-기업지원정책-전단-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-33248-2-3-한국공인노무사회-직업계고-현장실습-기업지원정책-전단-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "3. 한국공인노무사회-직업계고 현장실습 기업지원정책 전단",
@@ -6945,34 +6429,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-145895-1-4-농업-수산해운-상업-가사실업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
-      "category": "fieldTraining",
-      "type": "guide",
-      "title": "4. [농업,수산해운,상업,가사실업] 2026년 직업계고 현장실습 산업안전 핸드북",
-      "provider": "교육부·하이파이브",
-      "query": "'+reg_name+' 4. [농업,수산해운,상업,가사실업] 2026년 직업계고 현장실습 산업안전 핸드북.pdf",
-      "url": "https://www.hifive.go.kr/common/FileDown.do?filepath=bbs%2F20260803&filerealname=4.+%5B%EB%86%8D%EC%97%85%2C%EC%88%98%EC%82%B0%ED%95%B4%EC%9A%B4%2C%EC%83%81%EC%97%85%2C%EA%B0%80%EC%82%AC%EC%8B%A4%EC%97%85%5D+2026%EB%85%84+%EC%A7%81%EC%97%85%EA%B3%84%EA%B3%A0+%ED%98%84%EC%9E%A5%EC%8B%A4%EC%8A%B5+%EC%82%B0%EC%97%85%EC%95%88%EC%A0%84+%ED%95%B8%EB%93%9C%EB%B6%81.pdf&filename=5BE2A9C61A0D412FB9E4A1E44DBE4F03.pdf",
-      "searchDomain": "hifive.go.kr",
-      "description": "하이파이브 교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-hifive-education-library-33248-3-4-한국공인노무사회-2020-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-33248-3-4-한국공인노무사회-2020-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "4. 한국공인노무사회-2020 실습생을 위한 꼭 알아야 할 현장실습(미니책자)",
@@ -6993,7 +6453,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-취창업지원센터-일반자료실",
@@ -7017,7 +6477,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-현장실습-선도기업-인정-절차",
@@ -7041,7 +6501,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7069,7 +6529,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7097,7 +6557,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7125,7 +6585,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-대한상공회의소-직업훈련-특성화고-지원사업",
@@ -7149,10 +6609,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "리플릿-직업계고 현장실습 운영 공통 매뉴얼 (기업용)_최종",
@@ -7173,7 +6633,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7201,10 +6661,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "리플릿-직업계고 현장실습 운영 공통 매뉴얼 (학교용)_최종",
@@ -7225,7 +6685,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7253,10 +6713,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-126838-1-반도체사업장-현장실습생-건강관리-길잡이-웹용-단면-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-hifive-education-library-126838-1-반도체사업장-현장실습생-건강관리-길잡이-웹용-단면-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "반도체사업장 현장실습생 건강관리 길잡이(웹용_단면)",
@@ -7277,10 +6737,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임. 2022학년도 현장실습 지원금 사전신청 매뉴얼_최종",
@@ -7305,10 +6765,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임1. 2024 직업계고 현장실습 운영 공통 매뉴얼(학교용)_한글",
@@ -7333,10 +6793,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임1. 2024 직업계고 현장실습 운영 공통 매뉴얼(학교용)_PDF",
@@ -7361,10 +6821,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임2. 2024 직업계고 현장실습 운영 공통 매뉴얼(기업용)_한글",
@@ -7389,10 +6849,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임2. 2024 직업계고 현장실습 운영 공통 매뉴얼(기업용)_PDF",
@@ -7417,10 +6877,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
       "category": "fieldTraining",
       "type": "form",
       "title": "붙임2. 실습기업 수정 기능 이용 매뉴얼",
@@ -7445,7 +6905,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7469,7 +6929,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-서울교육청-직업계고-현장실습-자료실",
@@ -7493,10 +6953,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-44049-1-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-44049-1-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-hwp",
       "category": "fieldTraining",
       "type": "guide",
       "title": "안전·권익 확보를 위한 직업계고 현장실습 추가 개선방안",
@@ -7517,7 +6977,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-취업지원관-업무-매뉴얼",
@@ -7541,10 +7001,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-75109-0-직업계고-현장실습-운영-간편-매뉴얼-기업용-0713-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-75109-0-직업계고-현장실습-운영-간편-매뉴얼-기업용-0713-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "직업계고 현장실습 운영 간편 매뉴얼(기업용)-0713",
@@ -7565,10 +7025,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-75109-1-직업계고-현장실습-운영-간편-매뉴얼-학생-학교용-0713-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-75109-1-직업계고-현장실습-운영-간편-매뉴얼-학생-학교용-0713-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "직업계고 현장실습 운영 간편 매뉴얼(학생 학교용)-0713",
@@ -7589,10 +7049,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-75109-2-직업계고-현장실습-운영-매뉴얼-기업용-내지0713-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-75109-2-직업계고-현장실습-운영-매뉴얼-기업용-내지0713-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "직업계고 현장실습 운영 매뉴얼(기업용)-내지0713",
@@ -7613,10 +7073,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-75109-3-직업계고-현장실습-운영-매뉴얼-학교용-내지0713-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-75109-3-직업계고-현장실습-운영-매뉴얼-학교용-내지0713-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "직업계고 현장실습 운영 매뉴얼(학교용)-내지0713",
@@ -7637,10 +7097,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134596-1-hifive-권한-부여-사용자-매뉴얼-공인노무사회-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134596-1-hifive-권한-부여-사용자-매뉴얼-공인노무사회-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "HIFIVE 권한 부여 사용자 매뉴얼(공인노무사회)",
@@ -7661,10 +7121,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-hifive-education-library-134596-0-hifive-권한-부여-사용자-매뉴얼-학교-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-hifive-education-library-134596-0-hifive-권한-부여-사용자-매뉴얼-학교-pdf",
       "category": "fieldTraining",
       "type": "guide",
       "title": "HIFIVE 권한 부여 사용자 매뉴얼(학교)",
@@ -7685,7 +7145,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7709,7 +7169,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7737,7 +7197,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7765,7 +7225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7793,7 +7253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7821,7 +7281,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7849,7 +7309,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7873,7 +7333,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7897,7 +7357,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7921,7 +7381,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7945,7 +7405,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7973,7 +7433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8001,7 +7461,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8029,7 +7489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8053,7 +7513,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8077,7 +7537,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8105,7 +7565,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8133,7 +7593,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8161,7 +7621,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8189,7 +7649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8217,7 +7677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8245,7 +7705,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8273,7 +7733,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8301,7 +7761,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8329,7 +7789,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8357,7 +7817,203 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-1-1-2-지원서",
+      "category": "general",
+      "type": "form",
+      "title": "각종 서식 - [1-2] 지원서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [1-2] 지원서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9424fbf6569cec4dad5224221fb82e92",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9424fbf6569cec4dad5224221fb82e92",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-3-1-4-채용서류반환청구서",
+      "category": "general",
+      "type": "form",
+      "title": "각종 서식 - [1-4] 채용서류반환청구서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [1-4] 채용서류반환청구서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ef0845152b1c77bbfb8499748b0f87a7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ef0845152b1c77bbfb8499748b0f87a7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-6-1-7-발령-문안-예시",
+      "category": "general",
+      "type": "form",
+      "title": "각종 서식 - [1-7] 발령 문안 예시",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [1-7] 발령 문안 예시",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6b7fdb8811bd736df92e90c687b847f0",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=6b7fdb8811bd736df92e90c687b847f0",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-25-서식-10-자격취득에따른경력합산신청서",
+      "category": "general",
+      "type": "form",
+      "title": "각종 서식 - [서식 10] 자격취득에따른경력합산신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 10] 자격취득에따른경력합산신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bb4060a2033dfeb209c63dfb38caf259",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bb4060a2033dfeb209c63dfb38caf259",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-26-서식-11-호봉획정을위한경력기간합산신청서",
+      "category": "general",
+      "type": "form",
+      "title": "각종 서식 - [서식 11] 호봉획정을위한경력기간합산신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 11] 호봉획정을위한경력기간합산신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=18082cbe5cc948316b4b4b5fc9edd19b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=18082cbe5cc948316b4b4b5fc9edd19b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-14-서식-7-1-서약서-1",
+      "category": "general",
+      "type": "form",
+      "title": "각종 서식 - [서식 7-1] 서약서 1",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 7-1] 서약서 1",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa72a2d4f53709d27f40bcb897e931dc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa72a2d4f53709d27f40bcb897e931dc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-15-서식-7-2-서약서-2",
+      "category": "general",
+      "type": "form",
+      "title": "각종 서식 - [서식 7-2] 서약서 2",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 7-2] 서약서 2",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bdac43c70499bb8c4e8360b80cdfab8b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=bdac43c70499bb8c4e8360b80cdfab8b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8385,16 +8041,16 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-20-서식-9-2-심사위원서약서",
       "category": "general",
       "type": "form",
-      "title": "개별화교육계획 - [서식-중등-8-2-1-1] 개별화교육계획서(예시안)",
+      "title": "각종 서식 - [서식 9-2] 심사위원서약서",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-1] 개별화교육계획서(예시안)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a8fb90325bde6830504297018769dbbe",
+      "query": "각종 서식 [서식 9-2] 심사위원서약서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=64348aee24e1c1e142744143af7986a9",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "normal",
@@ -8406,23 +8062,23 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a8fb90325bde6830504297018769dbbe",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=64348aee24e1c1e142744143af7986a9",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-21-서식-9-3-서류심사점수집계표",
       "category": "general",
       "type": "form",
-      "title": "개별화교육계획 - [서식-중등-8-2-1-2] 개별화교육계획 요구 조사서(예시안)",
+      "title": "각종 서식 - [서식 9-3] 서류심사점수집계표",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-2] 개별화교육계획 요구 조사서(예시안)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88cec1a953b68fc9a800bc3784c90367",
+      "query": "각종 서식 [서식 9-3] 서류심사점수집계표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e33e65d62efb39f2abffea6c03b05c8f",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "normal",
@@ -8434,98 +8090,14 @@
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=88cec1a953b68fc9a800bc3784c90367",
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=e33e65d62efb39f2abffea6c03b05c8f",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "general",
-      "type": "form",
-      "title": "개별화교육계획 - [서식-중등-8-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=50838fd642850c5fecf51c1029d60fb6",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=50838fd642850c5fecf51c1029d60fb6",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "general",
-      "type": "form",
-      "title": "개별화교육계획 - [서식-중등-8-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7b610fca3312301f06546ad10fd8ea2c",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7b610fca3312301f06546ad10fd8ea2c",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "general",
-      "type": "form",
-      "title": "개별화교육계획 - [서식-중등-8-2-1-6] 개별화교육계획 운영 자체 점검표",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-6] 개별화교육계획 운영 자체 점검표",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=66d716100f0c05c78b1cbf5c5e44c64a",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=66d716100f0c05c78b1cbf5c5e44c64a",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8553,7 +8125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8581,7 +8153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8609,7 +8181,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8637,7 +8209,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8665,7 +8237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8693,7 +8265,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8721,7 +8293,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8749,7 +8321,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8777,7 +8349,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8805,7 +8377,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8833,7 +8405,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8861,7 +8433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8889,7 +8461,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8917,7 +8489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8941,7 +8513,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8969,7 +8541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8993,7 +8565,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-고교생-맞춤형-고용서비스",
@@ -9017,7 +8589,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9041,16 +8613,16 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15626-cntntsid-7037-0-서식-교원인사-4-3-2-1-근무성적-평정점",
       "category": "general",
-      "type": "rule",
-      "title": "근무성적 평정 관련 규정 - 2023학년도 교육공무원(초등) 인사관리지침",
+      "type": "form",
+      "title": "근무성적 평정 세부 방법 - [서식-교원인사-4-3-2-1]근무성적 평정점",
       "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "근무성적 평정 근무성적 평정 관련 규정 2023학년도 교육공무원(초등) 인사관리지침.pdf",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a5affddbdecf16c5aa7e23083491a3dd",
+      "query": "근무성적 평정 세부 방법 [서식-교원인사-4-3-2-1]근무성적 평정점",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cbe05ed69a24f213cff6748414d90023",
       "searchDomain": "gbe.kr",
       "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
       "priority": "normal",
@@ -9061,35 +8633,15 @@
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=cbe05ed69a24f213cff6748414d90023",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "general",
-      "type": "rule",
-      "title": "근무성적 평정 관련 규정 - 2026학년도 교육공무원(중등) 인사관리지침",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "근무성적 평정 근무성적 평정 관련 규정 2026학년도 교육공무원(중등) 인사관리지침",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d589d548f2c48b10cc91d41151c85b4a",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9113,7 +8665,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9137,7 +8689,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9165,7 +8717,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9193,7 +8745,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9221,7 +8773,399 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-0-서식-교원인사-4-7-4-1-근무성적평정통계표",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-1] 근무성적평정통계표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-1] 근무성적평정통계표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=60970c09fabed3d22b806a83d7419ee8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=60970c09fabed3d22b806a83d7419ee8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-9-서식-교원인사-4-7-4-10-특수학급-담당자-경력",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-10] 특수학급 담당자 경력증명서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-10] 특수학급 담당자 경력증명서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7cb8137fcfed08a912f0ac351e6ce7fa",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=7cb8137fcfed08a912f0ac351e6ce7fa",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-10-서식-교원인사-4-7-4-11-농-어촌-교육-진흥",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-11] 농·어촌 교육 진흥 지정학교 근무 확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-11] 농·어촌 교육 진흥 지정학교 근무 확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=637e30e3abe02e4e9d379102864856ae",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=637e30e3abe02e4e9d379102864856ae",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-11-서식-교원인사-4-7-4-12-도서-벽지-소재-교",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-12] 도서·벽지 소재 교육기관 근무 확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-12] 도서·벽지 소재 교육기관 근무 확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=53e421c62d099b99dddb64e974bc0eb6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=53e421c62d099b99dddb64e974bc0eb6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-12-서식-교원인사-4-7-4-13-영재교육원-지도교사",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-13] 영재교육원 지도교사 근무 확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-13] 영재교육원 지도교사 근무 확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a993a61159d8bf404deeb2d518a20b04",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a993a61159d8bf404deeb2d518a20b04",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-13-서식-교원인사-4-7-4-14-정책지원학교-교사",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-14] 정책지원학교 교사 근무 확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-14] 정책지원학교 교사 근무 확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28ffa63075acace3d6ecd706a1f69da7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=28ffa63075acace3d6ecd706a1f69da7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-14-서식-교원인사-4-7-4-15-교장-교감-승진후보",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-15] 교장.교감 승진후보자 근무 희망지",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-15] 교장.교감 승진후보자 근무 희망지",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9ac3792df08d065e92a3a1bf42b7e57f",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9ac3792df08d065e92a3a1bf42b7e57f",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-1-서식-교원인사-4-7-4-2-경력평정표",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-2] 경력평정표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-2] 경력평정표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9eb88e387d1067b330a5c77e4f3411e8",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9eb88e387d1067b330a5c77e4f3411e8",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-2-서식-교원인사-4-7-4-3-연수성적평정표",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-3] 연수성적평정표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-3] 연수성적평정표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a89ebb34f6f0b550103d1f2e33b86999",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a89ebb34f6f0b550103d1f2e33b86999",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-3-서식-교원인사-4-7-4-4-가산점-평정표",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-4] 가산점 평정표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-4] 가산점 평정표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f00beed2d37d83f5d8396bb1cae22218",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=f00beed2d37d83f5d8396bb1cae22218",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-4-서식-교원인사-4-7-4-5-연수이수실적-평정자료",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-5] 연수이수실적 평정자료",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-5] 연수이수실적 평정자료",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d520c51ba4296a8fb39abad57ce39257",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d520c51ba4296a8fb39abad57ce39257",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-5-서식-교원인사-4-7-4-6-교육공무원-승진-규정",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-6] 교육공무원 승진 규정",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-6] 교육공무원 승진 규정",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b91fe08eaa4894772638a1335a291f3e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b91fe08eaa4894772638a1335a291f3e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-6-서식-교원인사-4-7-4-7-연구학교-근무-확인서",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-7] 연구학교 근무 확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-7] 연구학교 근무 확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=91d929d750c4dce6dcfa93c236b76c66",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=91d929d750c4dce6dcfa93c236b76c66",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-8-서식-교원인사-4-7-4-9-보직교사-경력증명서",
+      "category": "general",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-9] 보직교사 경력증명서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-9] 보직교사 경력증명서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b2aec652ac9231468468951d0913eb68",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b2aec652ac9231468468951d0913eb68",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9245,7 +9189,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9269,7 +9213,35 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15629-cntntsid-7041-0-서식-교원인사-7-7-4-2-교육성적-환산점-조견표",
+      "category": "general",
+      "type": "form",
+      "title": "연수성적 평정 세부 방법 - [서식-교원인사-7-7-4-2] 교육성적 환산점 조견표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "연수성적 평정 세부 방법 [서식-교원인사-7-7-4-2] 교육성적 환산점 조견표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8308fa078373ed3870b75925cedc65e1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8308fa078373ed3870b75925cedc65e1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9297,7 +9269,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9325,7 +9297,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9353,7 +9325,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9381,7 +9353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9409,7 +9381,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9437,7 +9409,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9465,7 +9437,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9493,7 +9465,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9521,7 +9493,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9549,7 +9521,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9577,7 +9549,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9605,7 +9577,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9633,7 +9605,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9661,7 +9633,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9685,7 +9657,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9709,7 +9681,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9737,7 +9709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9765,7 +9737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9789,7 +9761,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-law-직업교육훈련-촉진법",
@@ -9813,7 +9785,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-law-초-중등교육법",
@@ -9837,7 +9809,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9861,7 +9833,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9885,35 +9857,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "general",
-      "type": "form",
-      "title": "치료지원 - [서식-중등-8-4-1-1] 치료지원서비스제공 계획서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-1] 치료지원서비스제공 계획서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a309ae1953f7c0741b843afb9c8a50db",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a309ae1953f7c0741b843afb9c8a50db",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9941,7 +9885,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9969,7 +9913,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9997,7 +9941,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10025,7 +9969,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10053,7 +9997,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10081,7 +10025,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10109,7 +10053,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10137,7 +10081,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10165,7 +10109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10189,7 +10133,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10213,7 +10157,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10241,7 +10185,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10265,7 +10209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10293,7 +10237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10321,7 +10265,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10349,7 +10293,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10377,7 +10321,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10405,7 +10349,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10433,7 +10377,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10461,7 +10405,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10489,7 +10433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10517,7 +10461,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10545,7 +10489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10573,7 +10517,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10601,7 +10545,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10629,7 +10573,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10657,7 +10601,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10685,7 +10629,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10713,7 +10657,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10741,7 +10685,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10769,7 +10713,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10797,7 +10741,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10825,7 +10769,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10853,7 +10797,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10881,7 +10825,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10909,7 +10853,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10937,7 +10881,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10965,7 +10909,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -10993,7 +10937,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11021,7 +10965,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11049,7 +10993,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11077,7 +11021,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11105,7 +11049,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11133,7 +11077,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11161,7 +11105,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11189,7 +11133,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11217,7 +11161,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11245,7 +11189,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11273,7 +11217,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11301,7 +11245,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11329,7 +11273,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11357,7 +11301,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11385,7 +11329,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11413,7 +11357,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11441,7 +11385,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11469,7 +11413,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11497,7 +11441,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11525,7 +11469,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11553,7 +11497,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11581,7 +11525,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11609,7 +11553,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11637,7 +11581,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11665,7 +11609,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11693,7 +11637,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11721,7 +11665,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11749,7 +11693,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11777,7 +11721,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11805,10 +11749,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-4] 학교장 의견서",
@@ -11833,7 +11777,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11861,7 +11805,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11889,7 +11833,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11917,7 +11861,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11945,7 +11889,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11973,7 +11917,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12001,7 +11945,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12029,7 +11973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12057,7 +12001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12085,7 +12029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12113,7 +12057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12141,7 +12085,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12165,7 +12109,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12189,7 +12133,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12217,7 +12161,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12245,7 +12189,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12269,7 +12213,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12297,7 +12241,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12325,7 +12269,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12349,35 +12293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "privacyRecords",
-      "type": "form",
-      "title": "개별화교육계획 - [서식-중등-8-2-1-3] 개인정보활용동의서(예시안)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 지원 개별화교육계획 [서식-중등-8-2-1-3] 개인정보활용동의서(예시안)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b63f5880f4dd9f1dd5cdc493ff458113",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b63f5880f4dd9f1dd5cdc493ff458113",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12405,7 +12321,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12433,7 +12349,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12461,7 +12377,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12489,7 +12405,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12517,7 +12433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12545,7 +12461,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12573,35 +12489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "privacyRecords",
-      "type": "form",
-      "title": "개인정보 내부관리 계획 - [서식-초등-4-1-3-1] 개인정보 내부관리 계획 예시",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "개인정보 내부관리 계획 [서식-초등-4-1-3-1] 개인정보 내부관리 계획 예시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=23284f16c0042b0f848b3f6eaee817a7",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=23284f16c0042b0f848b3f6eaee817a7",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12629,7 +12517,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12657,7 +12545,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12685,7 +12573,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12713,7 +12601,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12741,7 +12629,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12769,7 +12657,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12797,7 +12685,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12825,7 +12713,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12853,7 +12741,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12881,7 +12769,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12909,7 +12797,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12937,7 +12825,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12961,7 +12849,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12985,7 +12873,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13009,7 +12897,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13033,7 +12921,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13057,7 +12945,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13085,7 +12973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13113,7 +13001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13141,7 +13029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13169,7 +13057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13193,7 +13081,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13217,7 +13105,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13245,7 +13133,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13269,7 +13157,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13293,7 +13181,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13317,7 +13205,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13345,7 +13233,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13373,7 +13261,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13397,7 +13285,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13421,7 +13309,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13445,7 +13333,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13473,7 +13361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13501,7 +13389,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13529,7 +13417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13553,7 +13441,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13577,7 +13465,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13601,7 +13489,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13625,35 +13513,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "privacyRecords",
-      "type": "form",
-      "title": "치료지원 - [서식-중등-8-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=847c16425feff28de054a8c64d60cbad",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=847c16425feff28de054a8c64d60cbad",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13681,7 +13541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13709,7 +13569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13733,7 +13593,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13761,7 +13621,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13785,7 +13645,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13813,7 +13673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13841,7 +13701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13869,7 +13729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13897,7 +13757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13925,7 +13785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13953,7 +13813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13981,7 +13841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14009,7 +13869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14037,7 +13897,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14065,7 +13925,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14093,7 +13953,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14121,7 +13981,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14149,7 +14009,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14177,7 +14037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14205,7 +14065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14233,7 +14093,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14261,7 +14121,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14289,7 +14149,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14313,7 +14173,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14337,7 +14197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14361,7 +14221,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14385,7 +14245,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14409,7 +14269,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14433,7 +14293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14457,7 +14317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14481,7 +14341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14505,7 +14365,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14529,7 +14389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14553,7 +14413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14577,7 +14437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14601,7 +14461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14625,7 +14485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14649,7 +14509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14673,7 +14533,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14697,7 +14557,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14721,7 +14581,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14745,7 +14605,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14769,7 +14629,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14793,7 +14653,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14817,7 +14677,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14841,7 +14701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14865,7 +14725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14889,7 +14749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14913,7 +14773,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14937,7 +14797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14961,7 +14821,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14985,7 +14845,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15009,7 +14869,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15033,7 +14893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15057,7 +14917,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15081,7 +14941,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15105,7 +14965,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15129,7 +14989,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15157,7 +15017,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15181,7 +15041,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15205,7 +15065,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15229,7 +15089,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15253,7 +15113,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15277,7 +15137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15301,7 +15161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15325,7 +15185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15349,7 +15209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15373,7 +15233,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15397,7 +15257,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15421,7 +15281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15445,7 +15305,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15469,7 +15329,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15493,7 +15353,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15517,7 +15377,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15541,7 +15401,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15565,7 +15425,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15589,7 +15449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15613,7 +15473,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15637,7 +15497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15661,7 +15521,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15685,7 +15545,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15709,7 +15569,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15733,7 +15593,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15757,7 +15617,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15781,7 +15641,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15805,7 +15665,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15829,7 +15689,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15853,7 +15713,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15877,7 +15737,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15901,7 +15761,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15929,7 +15789,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15957,7 +15817,35 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15387-cntntsid-6684-0-2025-늘봄학교-운영-길라잡이-서식편",
+      "category": "schoolAdmin",
+      "type": "form",
+      "title": "계획 및 준비(사업부서) - 2025 늘봄학교 운영 길라잡이(서식편)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "방과후학교 교육활동비 계획 및 준비(사업부서) 2025 늘봄학교 운영 길라잡이(서식편)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=aba82e335b2c3de69595242f3532ca3b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=aba82e335b2c3de69595242f3532ca3b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15985,7 +15873,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16013,7 +15901,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16041,7 +15929,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16069,7 +15957,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16097,7 +15985,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16125,7 +16013,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16153,7 +16041,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16181,7 +16069,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16209,7 +16097,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16237,7 +16125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16265,7 +16153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16293,7 +16181,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16321,7 +16209,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16349,7 +16237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16377,7 +16265,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16405,7 +16293,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16433,7 +16321,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16461,7 +16349,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16489,7 +16377,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16517,7 +16405,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16545,7 +16433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16573,7 +16461,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16601,7 +16489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16629,7 +16517,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16657,7 +16545,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16685,7 +16573,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16713,7 +16601,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16741,7 +16629,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16769,7 +16657,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16797,7 +16685,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16825,7 +16713,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16853,7 +16741,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16881,7 +16769,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16909,7 +16797,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16937,7 +16825,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16965,7 +16853,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16993,7 +16881,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17021,7 +16909,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17049,7 +16937,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17077,7 +16965,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17105,7 +16993,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17133,7 +17021,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17161,7 +17049,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17189,7 +17077,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17217,7 +17105,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17245,7 +17133,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17273,7 +17161,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17301,7 +17189,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17329,7 +17217,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17357,7 +17245,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17385,7 +17273,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17413,7 +17301,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17441,7 +17329,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17469,7 +17357,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17497,7 +17385,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17525,7 +17413,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17553,7 +17441,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17581,7 +17469,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17609,7 +17497,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17637,7 +17525,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17665,35 +17553,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "schoolAdmin",
-      "type": "form",
-      "title": "방과후학교 업무 흐름(개인위탁) - 2026 중등 방과후학교 길라잡이 서식",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "방과후학교 업무 흐름(개인위탁) 2026 중등 방과후학교 길라잡이 서식",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fa1eb2fe8afd9143e8e287c1b28a7351",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17721,7 +17581,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17749,7 +17609,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17777,7 +17637,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17805,7 +17665,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17833,7 +17693,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17861,7 +17721,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17889,7 +17749,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17917,7 +17777,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17945,7 +17805,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17969,7 +17829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -17997,7 +17857,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18021,7 +17881,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18049,7 +17909,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18077,7 +17937,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18105,7 +17965,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18129,10 +17989,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1564258-1-최종-2026학년도-공립학교회계-예산편성-기본지침-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1564258-1-최종-2026학년도-공립학교회계-예산편성-기본지침-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - (최종) 2026학년도 공립학교회계 예산편성 기본지침",
@@ -18153,34 +18013,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1297292-0-2023-3-2-2023학년도-학교회계-예산편성-기본지침-최종-개정사항-반영-pdf",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영.pdf",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1297292/doc_6963v319b=37vbf=42ve8=93vf3=6406v8298vc299_v8158.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1459768-0-2025-공립학교회계예산편성-지침-최종-인쇄본-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1459768-0-2025-공립학교회계예산편성-지침-최종-인쇄본-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★★ 2025 공립학교회계예산편성 지침 최종(인쇄본)",
@@ -18201,10 +18037,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1459768-1-2025학년도-공립학교회계-예산편성-기본지침-인쇄본-hwp",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1459768-1-2025학년도-공립학교회계-예산편성-기본지침-인쇄본-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★★2025학년도_공립학교회계_예산편성_기본지침(인쇄본)",
@@ -18225,10 +18061,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-983816-0-2022학년도-학교회계-예산편성-기본지침-최종-hwp",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-983816-0-2022학년도-학교회계-예산편성-기본지침-최종-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★2022학년도_학교회계_예산편성_기본지침(최종)",
@@ -18249,10 +18085,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1264173-0-2023학년도-학교회계-예산편성-기본지침-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1264173-0-2023학년도-학교회계-예산편성-기본지침-최종-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★2023학년도 학교회계 예산편성 기본지침(최종)",
@@ -18273,10 +18109,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389974-0-2019학년도-학교회계-예산편성-기본지침-업로드-hwp",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389974-0-2019학년도-학교회계-예산편성-기본지침-업로드-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2019학년도 학교회계 예산편성 기본지침(업로드)",
@@ -18297,10 +18133,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389974-1-2019학년도-학교회계-예산편성-기본지침-pdf-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389974-1-2019학년도-학교회계-예산편성-기본지침-pdf-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2019학년도 학교회계 예산편성 기본지침(pdf)",
@@ -18321,10 +18157,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389975-0-2020학년도-학교회계-예산편성-기본지침-2019-11-29-홈페이지-hwp",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389975-0-2020학년도-학교회계-예산편성-기본지침-2019-11-29-홈페이지-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2020학년도 학교회계 예산편성 기본지침(2019.11.29.)_홈페이지",
@@ -18345,10 +18181,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-884918-0-2021학년도-학교회계-예산편성-기본지침-2021-홈페이지-hwp",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-884918-0-2021학년도-학교회계-예산편성-기본지침-2021-홈페이지-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2021학년도_학교회계_예산편성_기본지침(2021)-홈페이지",
@@ -18369,10 +18205,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1357166-0-2024학년도-공립학교회계-예산편성-기본지침-홈페이지-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1357166-0-2024학년도-공립학교회계-예산편성-기본지침-홈페이지-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2024학년도 공립학교회계 예산편성 기본지침(홈페이지)",
@@ -18393,10 +18229,34 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1564258-0-2026학년도-공립학교회계-예산편성-기본지침-hwp",
+      "id": "existing-acquisition-harvest-gbe-school-accounting-1610395-0-2026학년도-공립학교회계-예산편성-기본지침-변경사항-게시용-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용)",
+      "provider": "경상북도교육청",
+      "query": "예산편성 안내·지침서 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용).pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1610395/doc_c838vf80a=ddva5=4ave4=9av58=197evf130v2fe9_v307.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1564258-0-2026학년도-공립학교회계-예산편성-기본지침-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2026학년도_공립학교회계_예산편성_기본지침",
@@ -18417,10 +18277,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1475036-0-일잘러의학교회계실무-pdf",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1475036-0-일잘러의학교회계실무-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 일잘러의학교회계실무",
@@ -18441,7 +18301,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18469,7 +18329,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18497,7 +18357,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18525,7 +18385,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18553,7 +18413,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18581,10 +18441,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-1] 자리배치 예시",
@@ -18609,10 +18469,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-2] 협약서 예시",
@@ -18637,7 +18497,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18665,7 +18525,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18693,7 +18553,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18721,7 +18581,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18749,7 +18609,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18777,7 +18637,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18801,7 +18661,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18825,7 +18685,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18849,7 +18709,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18873,7 +18733,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18897,7 +18757,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18925,7 +18785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18949,7 +18809,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18973,7 +18833,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18997,7 +18857,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19025,7 +18885,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19053,7 +18913,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19077,7 +18937,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19101,7 +18961,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19125,7 +18985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19149,7 +19009,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19173,7 +19033,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19197,7 +19057,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19221,7 +19081,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19249,7 +19109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19277,7 +19137,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19305,7 +19165,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19333,7 +19193,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19361,7 +19221,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19389,7 +19249,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19417,7 +19277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19445,7 +19305,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19473,7 +19333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19501,7 +19361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19529,7 +19389,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19557,7 +19417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19581,7 +19441,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19609,7 +19469,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19633,7 +19493,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19661,7 +19521,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19689,7 +19549,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19713,7 +19573,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19737,7 +19597,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19765,7 +19625,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19793,7 +19653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19821,7 +19681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19849,7 +19709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19873,7 +19733,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19897,7 +19757,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19921,7 +19781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19945,7 +19805,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19969,7 +19829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19993,7 +19853,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20021,7 +19881,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20045,7 +19905,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20069,7 +19929,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20093,7 +19953,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20121,7 +19981,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20149,7 +20009,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20177,7 +20037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20205,7 +20065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20233,7 +20093,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20261,7 +20121,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20285,7 +20145,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20309,7 +20169,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20333,7 +20193,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20357,7 +20217,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20381,7 +20241,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20405,7 +20265,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20429,7 +20289,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20457,7 +20317,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20481,7 +20341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20505,7 +20365,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20529,7 +20389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20553,7 +20413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20577,7 +20437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20605,7 +20465,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20629,7 +20489,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20653,7 +20513,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20681,7 +20541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20705,7 +20565,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20729,7 +20589,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20753,7 +20613,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20777,7 +20637,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20801,7 +20661,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20825,7 +20685,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20849,7 +20709,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20873,7 +20733,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20897,7 +20757,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20921,7 +20781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20945,7 +20805,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20969,7 +20829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20993,7 +20853,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21017,7 +20877,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21041,7 +20901,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21065,7 +20925,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21089,7 +20949,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21113,7 +20973,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21137,7 +20997,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21161,7 +21021,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21185,7 +21045,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21209,7 +21069,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21233,7 +21093,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21261,7 +21121,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21289,7 +21149,35 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-11-서식-4-성범죄-경력조회-및-아동학대관련범죄-전력",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "각종 서식 - [서식 4] 성범죄 경력조회 및 아동학대관련범죄 전력 조회 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 4] 성범죄 경력조회 및 아동학대관련범죄 전력 조회 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=790cdf03b88bdb729d9655f32cff78c7",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=790cdf03b88bdb729d9655f32cff78c7",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21317,7 +21205,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21345,7 +21233,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21369,7 +21257,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21393,7 +21281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21417,7 +21305,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21441,7 +21329,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21465,7 +21353,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21489,7 +21377,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21513,7 +21401,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21537,7 +21425,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21561,7 +21449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21585,7 +21473,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21609,7 +21497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21633,7 +21521,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21661,7 +21549,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21685,7 +21573,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21713,7 +21601,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21737,7 +21625,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21765,7 +21653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21789,7 +21677,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21813,7 +21701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21837,7 +21725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21861,7 +21749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21885,7 +21773,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21909,7 +21797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21933,7 +21821,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21961,7 +21849,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21989,7 +21877,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22017,7 +21905,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22045,7 +21933,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22069,7 +21957,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22097,7 +21985,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22125,7 +22013,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22153,7 +22041,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22181,7 +22069,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22209,7 +22097,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22237,7 +22125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22261,7 +22149,35 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15641-cntntsid-7085-7-서식-교원인사-4-7-4-8-학교폭력-예방-및-대응",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-8] 학교폭력 예방 및 대응 기여교사 확인서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "승진 관련 각종 서식 [서식-교원인사-4-7-4-8] 학교폭력 예방 및 대응 기여교사 확인서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de90dd949139eebd4733bed981cd39d9",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de90dd949139eebd4733bed981cd39d9",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22289,7 +22205,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22317,7 +22233,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22345,7 +22261,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22373,7 +22289,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22401,7 +22317,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22429,7 +22345,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22457,7 +22373,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22485,7 +22401,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22513,7 +22429,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22541,7 +22457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22569,7 +22485,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22597,7 +22513,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22625,7 +22541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22653,7 +22569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22681,7 +22597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22705,7 +22621,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22729,7 +22645,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22757,7 +22673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22785,7 +22701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22813,7 +22729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22841,7 +22757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22865,7 +22781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22889,7 +22805,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22913,7 +22829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22937,7 +22853,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22965,7 +22881,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22989,7 +22905,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23013,7 +22929,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23037,7 +22953,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23061,7 +22977,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23089,7 +23005,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23113,7 +23029,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23137,7 +23053,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23161,7 +23077,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23185,7 +23101,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23209,7 +23125,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23237,7 +23153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23261,7 +23177,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23285,7 +23201,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23313,7 +23229,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23337,7 +23253,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23361,7 +23277,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23385,7 +23301,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23409,7 +23325,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23437,7 +23353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23461,7 +23377,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23489,7 +23405,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23513,7 +23429,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23541,7 +23457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23565,7 +23481,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23593,7 +23509,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23617,7 +23533,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23641,7 +23557,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23665,35 +23581,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "schoolViolenceSafety",
-      "type": "form",
-      "title": "치료지원 - [서식-중등-8-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=042adc0095b4b1ca63fa4a5cec83c3bb",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=042adc0095b4b1ca63fa4a5cec83c3bb",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23721,7 +23609,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23749,7 +23637,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23773,7 +23661,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23797,7 +23685,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23821,7 +23709,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23845,7 +23733,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23869,7 +23757,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23893,7 +23781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23917,7 +23805,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23941,7 +23829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23965,7 +23853,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23989,7 +23877,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24013,7 +23901,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24037,7 +23925,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24061,7 +23949,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24085,7 +23973,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24109,7 +23997,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24133,7 +24021,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24157,7 +24045,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24185,7 +24073,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24209,7 +24097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24233,7 +24121,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24257,7 +24145,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24285,7 +24173,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24313,7 +24201,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24341,7 +24229,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24369,7 +24257,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24397,7 +24285,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24425,7 +24313,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24453,7 +24341,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24477,7 +24365,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24501,7 +24389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-law-학교안전사고-예방-및-보상에-관한-법률",
@@ -24525,7 +24413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24553,7 +24441,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24581,7 +24469,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24609,7 +24497,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24637,7 +24525,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24665,7 +24553,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24693,7 +24581,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24721,7 +24609,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24749,7 +24637,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24777,7 +24665,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24805,7 +24693,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24833,7 +24721,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24861,7 +24749,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24889,7 +24777,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24917,7 +24805,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24945,7 +24833,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24973,7 +24861,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25001,7 +24889,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25029,7 +24917,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25057,7 +24945,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25085,7 +24973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25109,7 +24997,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25133,7 +25021,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25157,7 +25045,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-law-학교폭력예방-및-대책에-관한-법률",
@@ -25181,7 +25069,35 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15458-cntntsid-6753-0-서식-행정-16-5-1-1-재난상황조서",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "한국교육시설안전원 공제 가입 - [서식-행정-16-5-1-1] 재난상황조서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "한국교육시설안전원 한국교육시설안전원 공제 가입 [서식-행정-16-5-1-1] 재난상황조서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c3f99bb209ddab75d901060728c19fc6",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c3f99bb209ddab75d901060728c19fc6",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25209,7 +25125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25237,7 +25153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25265,7 +25181,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25293,7 +25209,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25321,7 +25237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25349,7 +25265,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25377,7 +25293,231 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-4-1-5-계약제교원-채용-계약서",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "각종 서식 - [1-5] 계약제교원 채용 계약서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [1-5] 계약제교원 채용 계약서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=adebaa1d9a064128cc43c4a1b9c85040",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=adebaa1d9a064128cc43c4a1b9c85040",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-5-1-6-계약제교원-근로-계약서",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "각종 서식 - [1-6] 계약제교원 근로 계약서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [1-6] 계약제교원 근로 계약서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1c352904ca2bf98d8d77a2d3eb682ddc",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1c352904ca2bf98d8d77a2d3eb682ddc",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-7-1-8-계약제교원-운영현황-자체점검표",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "각종 서식 - [1-8] 계약제교원 운영현황 자체점검표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [1-8] 계약제교원 운영현황 자체점검표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=75d2cf6ca665794ca433b587028435b1",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=75d2cf6ca665794ca433b587028435b1",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-8-서식-1-기간제교원-인력풀-등록-신청서",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "각종 서식 - [서식 1] 기간제교원 인력풀 등록 신청서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 1] 기간제교원 인력풀 등록 신청서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=447b9a373356abc429b2a006f324fff2",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=447b9a373356abc429b2a006f324fff2",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-13-서식-6-기간제교원-임용사항-보고-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "각종 서식 - [서식 6] 기간제교원 임용사항 보고 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 6] 기간제교원 임용사항 보고 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2fecfeda76bcde421eaebe55dce9333c",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2fecfeda76bcde421eaebe55dce9333c",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-16-서식-8-1-기간제교원육아휴직원",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "각종 서식 - [서식 8-1] 기간제교원육아휴직원",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 8-1] 기간제교원육아휴직원",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=83ca13a35e174f7932881ede65a4895d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=83ca13a35e174f7932881ede65a4895d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-17-서식-8-2-기간제교원육아휴직원복직원",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "각종 서식 - [서식 8-2] 기간제교원육아휴직원복직원",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 8-2] 기간제교원육아휴직원복직원",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de7aee7d20117753005a0ed3445fef3b",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de7aee7d20117753005a0ed3445fef3b",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-0-전체-계약제교원-채용-관련-참고자료-및-각종-서식",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "각종 서식 - [전체] 계약제교원 채용 관련 참고자료 및 각종 서식",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [전체] 계약제교원 채용 관련 참고자료 및 각종 서식",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3c93e5f606e188cb3c1aa3269574c104",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3c93e5f606e188cb3c1aa3269574c104",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25401,7 +25541,91 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14818-cntntsid-7249-2-서식-초등-8-7-5-3-기간제-교원-연수실적관리대",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-3] 기간제 교원 연수실적관리대장(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 근무성적 평정 [서식-초등-8-7-5-3] 기간제 교원 연수실적관리대장(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=16d18cceccc1d57e17d1595a9cffb569",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=16d18cceccc1d57e17d1595a9cffb569",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14818-cntntsid-7249-3-서식-초등-8-7-5-4-기간제-교원-조기퇴직-기안",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-4] 기간제 교원 조기퇴직 기안및사직원(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 근무성적 평정 [서식-초등-8-7-5-4] 기간제 교원 조기퇴직 기안및사직원(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a7081a13cb82438e6186deaf661348ea",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=a7081a13cb82438e6186deaf661348ea",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-14818-cntntsid-7249-4-서식-초등-8-7-5-5-계약제-교원-운영현황-자체",
+      "category": "staffLabor",
+      "type": "form",
+      "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-5] 계약제 교원 운영현황 자체점검표(서식)",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "계약제교원 근무성적 평정 [서식-초등-8-7-5-5] 계약제 교원 운영현황 자체점검표(서식)",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3d5e4b398cf78799390a86a68ba56e89",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=3d5e4b398cf78799390a86a68ba56e89",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25429,7 +25653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25457,7 +25681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25485,7 +25709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25513,7 +25737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25541,7 +25765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25569,7 +25793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25597,7 +25821,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25621,66 +25845,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-1] 민원 응대 요령",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "공직자 민원응대 매뉴얼 [서식-관리-12-4-1-1] 민원 응대 요령",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c19a7c7b46665d1c59b36b49a97f3860",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=c19a7c7b46665d1c59b36b49a97f3860",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-2] 민원편람",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "공직자 민원응대 매뉴얼 [서식-관리-12-4-1-2] 민원편람",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fac37123bd76c48c714db2eb0278fe27",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fac37123bd76c48c714db2eb0278fe27",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
       "category": "staffLabor",
       "type": "form",
       "title": "교원의 복무 관리 - [서식-초등-8-5-1-1] 여비(국내출장비)정산 신청서(서식)",
@@ -25705,10 +25873,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "교원의 복무 관리 - [서식-초등-8-5-1-2] 국내여비(가족여비,이전비)지급신청서(서식)",
@@ -25733,7 +25901,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25757,63 +25925,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "교육공무직원 인사 관리 - [서식-관리-3-3-1-1] 교육공무직원 채용 및 퇴직 관련 각종 예시안",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "교육공무직원 관리 교육공무직원 인사 관리 [서식-관리-3-3-1-1] 교육공무직원 채용 및 퇴직 관련 각종 예시안",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ef9320f0b2d5d968cfca3577f81d7e8",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=0ef9320f0b2d5d968cfca3577f81d7e8",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "staffLabor",
-      "type": "form",
-      "title": "교육공무직원 인사 관리 - [서식-관리-3-3-1-2] 교육공무직원 발령대장 예시안",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "교육공무직원 관리 교육공무직원 인사 관리 [서식-관리-3-3-1-2] 교육공무직원 발령대장 예시안",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd9c04abebb2a89272fa6b250d8e8e40",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fd9c04abebb2a89272fa6b250d8e8e40",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
@@ -25837,7 +25949,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25865,7 +25977,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25893,7 +26005,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25921,7 +26033,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25949,7 +26061,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25977,7 +26089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26005,7 +26117,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26033,7 +26145,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26061,7 +26173,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26089,7 +26201,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-law-근로기준법",
@@ -26113,7 +26225,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26141,7 +26253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26165,7 +26277,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26189,7 +26301,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26213,7 +26325,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26241,7 +26353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26269,7 +26381,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26297,7 +26409,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26325,7 +26437,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26353,10 +26465,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무 - [서식-행정기관-5-1-1-1] 출장 보고서예시",
@@ -26381,7 +26493,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26409,7 +26521,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26437,7 +26549,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26465,7 +26577,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26493,7 +26605,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26521,7 +26633,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26549,7 +26661,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26577,7 +26689,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26601,7 +26713,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26629,7 +26741,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26657,7 +26769,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26685,7 +26797,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26713,7 +26825,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26737,7 +26849,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26765,7 +26877,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26793,7 +26905,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26817,7 +26929,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26841,7 +26953,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26865,7 +26977,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26889,7 +27001,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26917,7 +27029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26945,7 +27057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26973,7 +27085,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26997,10 +27109,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-10]유학휴직 서약서_계획서_학교장추천서",
@@ -27025,10 +27137,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴가 - [서식-초등-8-5-2-1] 교원 휴가 관련 서식 모음(서식)",
@@ -27053,10 +27165,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴가 - [서식-초등-8-5-2-2] 교육공무원 공무외 국외여행 업무처리 지침 개정(2023.1.26.)",
@@ -27081,10 +27193,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴가 - [서식-초등-8-5-2-3] 교원 휴가 관련 질의·답변 자료집",
@@ -27109,10 +27221,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴가 - [서식-초등-8-5-2-4] 공무 국외 출장 관련 서식",
@@ -27137,7 +27249,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27165,7 +27277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27189,7 +27301,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27213,7 +27325,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27237,7 +27349,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27261,7 +27373,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27289,7 +27401,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27317,7 +27429,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27345,7 +27457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27369,7 +27481,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27393,7 +27505,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27417,7 +27529,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27441,7 +27553,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27465,7 +27577,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27489,7 +27601,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27513,7 +27625,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27537,7 +27649,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27565,7 +27677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27589,7 +27701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27613,7 +27725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27637,7 +27749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27665,7 +27777,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27689,7 +27801,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27713,7 +27825,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27737,7 +27849,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27761,7 +27873,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27789,7 +27901,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27813,7 +27925,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27837,7 +27949,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27865,7 +27977,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27889,7 +28001,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27913,7 +28025,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27937,7 +28049,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27961,7 +28073,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27985,7 +28097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28009,7 +28121,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28037,7 +28149,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28061,7 +28173,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28085,7 +28197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28109,7 +28221,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28133,7 +28245,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28157,7 +28269,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28181,7 +28293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28205,7 +28317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28229,7 +28341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28257,7 +28369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28281,7 +28393,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28305,7 +28417,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28329,7 +28441,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28353,7 +28465,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28377,7 +28489,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28401,7 +28513,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28425,7 +28537,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28449,7 +28561,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28473,7 +28585,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28497,7 +28609,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28521,7 +28633,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28549,7 +28661,147 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-9-서식-2-근무실적-평가-동의서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "각종 서식 - [서식 2] 근무실적 평가 동의서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 2] 근무실적 평가 동의서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fcb5d679a8bf550ac13ece797e22581e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fcb5d679a8bf550ac13ece797e22581e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-10-서식-3-근무실적-평가서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "각종 서식 - [서식 3] 근무실적 평가서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 3] 근무실적 평가서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbed219a1e45c923af5e59586589ab49",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbed219a1e45c923af5e59586589ab49",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-12-서식-5-기간제교원-평가결과-보고서",
+      "category": "studentLife",
+      "type": "form",
+      "title": "각종 서식 - [서식 5] 기간제교원 평가결과 보고서",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 5] 기간제교원 평가결과 보고서",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ef26c39949857c5dc31f64b6e9dc237d",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=ef26c39949857c5dc31f64b6e9dc237d",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-19-서식-9-1-서류평가심사표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "각종 서식 - [서식 9-1] 서류평가심사표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 9-1] 서류평가심사표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=46e30df9e071b352825d8473dcb4347e",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=46e30df9e071b352825d8473dcb4347e",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntntsview-do-mi-15613-cntntsid-7026-22-서식-9-4-수업실연평가표",
+      "category": "studentLife",
+      "type": "form",
+      "title": "각종 서식 - [서식 9-4] 수업실연평가표",
+      "provider": "경상북도교육청 학교지원종합자료실",
+      "query": "각종 서식 [서식 9-4] 수업실연평가표",
+      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=edd776471ecde99165538033131ce709",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=edd776471ecde99165538033131ce709",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28577,7 +28829,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28605,7 +28857,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28633,7 +28885,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28661,7 +28913,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28689,7 +28941,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28717,7 +28969,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28745,7 +28997,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28773,7 +29025,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28801,7 +29053,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28825,7 +29077,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28853,7 +29105,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28881,7 +29133,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28905,7 +29157,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28933,7 +29185,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28961,7 +29213,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28989,7 +29241,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29017,7 +29269,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29045,7 +29297,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29073,7 +29325,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29101,7 +29353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29129,7 +29381,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29157,7 +29409,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29185,7 +29437,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29213,7 +29465,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29241,7 +29493,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29269,7 +29521,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29293,7 +29545,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29317,7 +29569,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29345,7 +29597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29373,7 +29625,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29401,7 +29653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29429,7 +29681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29457,7 +29709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29485,7 +29737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29509,7 +29761,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29537,7 +29789,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29565,7 +29817,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29593,7 +29845,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29621,7 +29873,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29649,7 +29901,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29677,7 +29929,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29705,7 +29957,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29729,7 +29981,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29753,7 +30005,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29781,7 +30033,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29809,7 +30061,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29837,7 +30089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29865,7 +30117,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29893,7 +30145,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29921,7 +30173,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29949,7 +30201,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29977,7 +30229,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30005,7 +30257,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30033,7 +30285,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30061,7 +30313,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30089,7 +30341,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30117,7 +30369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30145,7 +30397,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30173,7 +30425,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30201,7 +30453,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30229,7 +30481,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30257,7 +30509,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30285,7 +30537,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30313,7 +30565,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30341,7 +30593,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30369,7 +30621,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30397,7 +30649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30425,7 +30677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30453,7 +30705,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30481,7 +30733,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30509,7 +30761,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30537,7 +30789,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30565,7 +30817,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30593,7 +30845,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30621,7 +30873,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30649,7 +30901,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30677,7 +30929,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30705,7 +30957,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30733,7 +30985,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30761,7 +31013,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30789,7 +31041,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30817,7 +31069,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30845,7 +31097,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30873,7 +31125,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30901,7 +31153,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30929,7 +31181,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30953,7 +31205,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30977,7 +31229,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31001,7 +31253,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31025,7 +31277,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31049,7 +31301,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31073,7 +31325,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31101,7 +31353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31129,7 +31381,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31157,7 +31409,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31185,7 +31437,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31209,7 +31461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31233,7 +31485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31257,7 +31509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31281,7 +31533,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31305,7 +31557,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31329,7 +31581,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31353,7 +31605,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31381,7 +31633,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31409,7 +31661,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31437,7 +31689,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31465,7 +31717,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31493,7 +31745,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31521,7 +31773,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31549,7 +31801,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31577,7 +31829,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31605,7 +31857,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31633,7 +31885,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31661,7 +31913,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31689,7 +31941,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31717,7 +31969,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31745,7 +31997,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31773,7 +32025,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31801,7 +32053,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31829,7 +32081,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31857,7 +32109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31885,7 +32137,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31913,7 +32165,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31937,7 +32189,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31961,7 +32213,63 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1627082-0-붙임-1-학교-내-성희롱성폭력-사안처리-안내서-pdf",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - [붙임 1] 학교 내 성희롱성폭력 사안처리 안내서",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "성폭력 자료실 [붙임 1] 학교 내 성희롱성폭력 사안처리 안내서.pdf",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_1c5ev8f22=18vea=43vff=88v36=f1b0vb8a8v2aaa_v6612.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_1c5ev8f22=18vea=43vff=88v36=f1b0vb8a8v2aaa_v6612.pdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - [붙임1] 교사용 학생 자살 징후 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 자료실 [붙임1] 교사용 학생 자살 징후 체크리스트.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31985,7 +32293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32009,7 +32317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32033,7 +32341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32057,7 +32365,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32081,7 +32389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32109,7 +32417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32133,7 +32441,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32157,7 +32465,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32185,7 +32493,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32209,7 +32517,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32233,7 +32541,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32261,7 +32569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32289,7 +32597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32313,7 +32621,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32337,7 +32645,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32361,7 +32669,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32389,7 +32697,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32413,7 +32721,35 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 3. 교사용 학생 자살징후 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 자료실 3. 교사용 학생 자살징후 체크리스트.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32437,7 +32773,35 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1627082-1-관련-서식-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 관련 서식",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "성폭력 자료실 관련 서식.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_abedvfaae=afvc3=47vea=9avab=c681v184av7a2e_v6676.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_abedvfaae=afvc3=47vea=9avab=c681v184av7a2e_v6676.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32461,7 +32825,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32489,7 +32853,91 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 자료실 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 제출서식(동의서)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 자료실 제출서식(동의서).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "category": "studentLife",
+      "type": "form",
+      "title": "자료실 - 제출서식(소방시설등 자체점검 실시결과 보고서)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 자료실 제출서식(소방시설등 자체점검 실시결과 보고서).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32513,7 +32961,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32537,7 +32985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32561,7 +33009,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32589,7 +33037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32613,7 +33061,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32641,7 +33089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32669,7 +33117,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32697,7 +33145,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32725,7 +33173,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32753,7 +33201,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32781,7 +33229,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32809,7 +33257,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32837,7 +33285,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32865,7 +33313,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32893,7 +33341,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32921,7 +33369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32949,7 +33397,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -32977,7 +33425,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33001,7 +33449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33029,7 +33477,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33053,7 +33501,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33081,7 +33529,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33109,7 +33557,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33137,7 +33585,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33165,7 +33613,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33189,7 +33637,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33217,7 +33665,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33245,7 +33693,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33273,7 +33721,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33301,7 +33749,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33329,7 +33777,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33357,7 +33805,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33385,35 +33833,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "치료지원 - [서식-중등-8-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "특수교육 관련 서비스 치료지원 [서식-중등-8-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2049c9d4eb0e2d4bbb4e0cb29a31eed7",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2049c9d4eb0e2d4bbb4e0cb29a31eed7",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33441,7 +33861,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33469,7 +33889,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-career-guide-컴퓨터활용능력-자격-채용-우대-안내",
@@ -33493,7 +33913,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33521,7 +33941,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33549,7 +33969,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33577,7 +33997,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33601,7 +34021,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33629,7 +34049,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33657,7 +34077,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33685,7 +34105,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33713,7 +34133,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33741,7 +34161,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33765,7 +34185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33789,119 +34209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-1] 평가계획 관련 학업성적관리위원회 회의록(예시",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-1] 평가계획 관련 학업성적관리위원회 회의록(예시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=81cd5eaf5d8baf3787fa68037b956f52",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=81cd5eaf5d8baf3787fa68037b956f52",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-2] 교과별 평가계획 학업성적관리위원회 심의안 (예시",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-2] 교과별 평가계획 학업성적관리위원회 심의안 (예시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=56fc6db5b0699b91ae23877c0e7817c7",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=56fc6db5b0699b91ae23877c0e7817c7",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-3] 평가계획 관련 가정통신문(예시",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-3] 평가계획 관련 가정통신문(예시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=152dce9f1d8800bafca800f5e23f6735",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=152dce9f1d8800bafca800f5e23f6735",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-4] 평가계획 정보공시",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "평가계획안 심의 및 평가계획 정보공시 [서식-중등-2-2-2-4] 평가계획 정보공시",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=62c48b7adeae2b6dd423136e544afc5e",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=62c48b7adeae2b6dd423136e544afc5e",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33925,7 +34233,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33953,7 +34261,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33981,7 +34289,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34009,7 +34317,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34037,7 +34345,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34065,7 +34373,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34093,7 +34401,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34121,7 +34429,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34149,7 +34457,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34177,7 +34485,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34205,7 +34513,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34233,7 +34541,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34261,7 +34569,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34289,7 +34597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34317,63 +34625,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학교생활기록부 관리 - [서식-초등-1-3-3] 2026학년도 학적 업무 매뉴얼(초등학교)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학교생활기록부 관리 [서식-초등-1-3-3] 2026학년도 학적 업무 매뉴얼(초등학교).pdf",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2017b43a12e29ace0d995b47a2643876",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=2017b43a12e29ace0d995b47a2643876",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학교생활기록부 관리 - [서식-초등-1-3-4] [서식-초등1-3-4] 2026학년도 학적 업무 매뉴얼(한글파일 서식포함)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학교생활기록부 관리 [서식-초등-1-3-4] [서식-초등1-3-4] 2026학년도 학적 업무 매뉴얼(한글파일 서식포함).hwp",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8a0414e897fac93cb0a119b91fbfb9f4",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=8a0414e897fac93cb0a119b91fbfb9f4",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34401,7 +34653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34429,7 +34681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-curated-guide-학교생활기록부-기재요령",
@@ -34457,15 +34709,15 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "existing-acquisition-mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
+      "id": "existing-acquisition-mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
       "title": "학교생활기록작성및관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
       "description": "학교생활기록 작성 및 관리지침 출결 정정 경조사 보존",
@@ -34485,7 +34737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34513,7 +34765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34541,7 +34793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34569,7 +34821,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34597,7 +34849,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34621,7 +34873,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34645,7 +34897,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34669,7 +34921,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34693,7 +34945,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34721,7 +34973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34749,7 +35001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34777,7 +35029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34805,7 +35057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34833,7 +35085,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34861,7 +35113,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34889,7 +35141,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34917,7 +35169,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34945,7 +35197,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34973,7 +35225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35001,7 +35253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35029,7 +35281,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35057,7 +35309,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35085,7 +35337,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35113,7 +35365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35141,7 +35393,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35169,7 +35421,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35197,7 +35449,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35225,7 +35477,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35253,7 +35505,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35281,7 +35533,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35309,7 +35561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35337,7 +35589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35365,7 +35617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35389,7 +35641,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35413,259 +35665,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-1] 고등학교전·편·재입학 지원서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-1] 고등학교전·편·재입학 지원서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13cecbb364564f9944a78c8a4a35812a",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13cecbb364564f9944a78c8a4a35812a",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-2] 고등학교 전·편입학 배정 의뢰서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-2] 고등학교 전·편입학 배정 의뢰서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1408efe8b6d2937788eb8f5032c52988",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=1408efe8b6d2937788eb8f5032c52988",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-3] 거주확인서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-3] 거주확인서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de1a5e3a9fc4961fd62ffabb24713474",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=de1a5e3a9fc4961fd62ffabb24713474",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-4] 귀국자 편입학 원서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-4] 귀국자 편입학 원서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d0d879bddbe253aeea17b52e364c0d5a",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d0d879bddbe253aeea17b52e364c0d5a",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-5] 평준화 일반고등학교 전·편입학 배정원서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-5] 평준화 일반고등학교 전·편입학 배정원서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9886eec2280eb3d4b6515d63daaae767",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=9886eec2280eb3d4b6515d63daaae767",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-6] 평준화지역·비평준화지역 고등학교 전학 지원서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-6] 평준화지역·비평준화지역 고등학교 전학 지원서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbf3f1b03d454b8b414a74e4d45e83fd",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=dbf3f1b03d454b8b414a74e4d45e83fd",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-7] 고등학교 학년결정 입학신청서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-7] 고등학교 학년결정 입학신청서",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=628d10fb29d27872b5236539b2a371da",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=628d10fb29d27872b5236539b2a371da",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-8] 전학을 위한 학교장의 노력현황",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-8] 전학을 위한 학교장의 노력현황",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6695561f43dde35792f3136eba3cdbe",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b6695561f43dde35792f3136eba3cdbe",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-9] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "학적관리(고교 전・편입학) [서식-중등-1-10-2-9] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5b3ace64cd22c3fa25dc155109b9ae20",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=5b3ace64cd22c3fa25dc155109b9ae20",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35693,7 +35693,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35721,7 +35721,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35749,7 +35749,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35777,7 +35777,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35805,7 +35805,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35833,7 +35833,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35861,7 +35861,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35889,7 +35889,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35917,7 +35917,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35945,7 +35945,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35973,7 +35973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36001,7 +36001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36025,7 +36025,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36053,7 +36053,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36081,7 +36081,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36109,7 +36109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36137,7 +36137,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36165,7 +36165,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36193,7 +36193,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36221,7 +36221,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36249,7 +36249,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36277,7 +36277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36305,7 +36305,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36333,7 +36333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36361,7 +36361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36389,7 +36389,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36417,7 +36417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36445,7 +36445,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36473,35 +36473,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "현장체험학습 운영 - [서식-중등-4-12-3-1]현장체험학습 사전안전교육자료(예시)",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "query": "현장체험학습 운영 [서식-중등-4-12-3-1]현장체험학습 사전안전교육자료(예시)",
-      "url": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13d1f5daaaa25f4ece555c473034e735",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=13d1f5daaaa25f4ece555c473034e735",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36529,7 +36501,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36557,7 +36529,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36585,7 +36557,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36613,7 +36585,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36641,7 +36613,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36669,7 +36641,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36697,7 +36669,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36725,7 +36697,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36753,7 +36725,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36781,7 +36753,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36809,7 +36781,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36837,7 +36809,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36865,7 +36837,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36889,7 +36861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36917,7 +36889,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36945,7 +36917,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -36973,7 +36945,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37001,7 +36973,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37029,7 +37001,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37057,7 +37029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
@@ -37081,18 +37053,18 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
+      "id": "mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
-      "title": "2026 학교생활기록 작성 및 관리지침",
+      "title": "2027 학교생활기록 작성 및 관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "description": "교육부·국가법령정보센터 공식자료에서 2027 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "low",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
@@ -37109,7 +37081,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "mission-general-law-law-go-kr-2026-초-중등교육법",
@@ -37133,7 +37105,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
       "id": "mission-general-law-law-go-kr-2027-초-중등교육법",
@@ -37157,18 +37129,18 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     },
     {
-      "id": "mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
+      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
-      "title": "2027 학교생활기록 작성 및 관리지침",
+      "title": "2026 학교생활기록 작성 및 관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2027 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "low",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
@@ -37185,7 +37157,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-09-21T20:28:09.548Z"
+      "generatedAt": "2026-09-22T05:09:26.689Z"
     }
   ]
 }; });
