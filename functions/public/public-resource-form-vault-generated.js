@@ -6,28 +6,28 @@
     root.GYO6_PUBLIC_RESOURCE_FORM_VAULT = data;
   }
 })(typeof globalThis !== "undefined" ? globalThis : window, function createGeneratedPublicResourceFormVault() { return {
-  "version": "career-employment-expanded-2026-11-02T06-31-36-400Z",
-  "generatedAt": "2026-11-02T06:31:51.087Z",
+  "version": "career-employment-expanded-2026-11-02T18-37-17-287Z",
+  "generatedAt": "2026-11-02T18:37:30.974Z",
   "policy": "form-vault-v2-career-employment-official-source",
   "stats": {
-    "total": 123,
+    "total": 120,
     "target": 10000,
-    "ready": 123,
-    "pdfPreview": 45,
-    "editable": 77,
-    "plannedPdf": 84,
-    "plannedEditable": 84,
+    "ready": 120,
+    "pdfPreview": 43,
+    "editable": 75,
+    "plannedPdf": 81,
+    "plannedEditable": 81,
     "extractionQueued": 0,
     "highPriorityExtraction": 0,
     "byCategory": {
       "careerEmployment": 45,
       "fieldTraining": 28,
-      "privacyRecords": 3,
       "staffLabor": 1,
       "schoolViolenceSafety": 15,
-      "schoolAdmin": 5,
-      "studentLife": 18,
-      "general": 8
+      "schoolAdmin": 4,
+      "studentLife": 17,
+      "general": 8,
+      "privacyRecords": 2
     },
     "careerEmploymentReady": 45,
     "careerEmploymentCoverage": {
@@ -36,7 +36,7 @@
       "fieldToEmployment": 37,
       "employmentAdministration": 1
     },
-    "verifiedFiles": 120
+    "verifiedFiles": 117
   },
   "entries": [
     {
@@ -712,8 +712,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-nhfd8q",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn",
+      "id": "form-ready-career-crossfile-k7t7rs",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -743,8 +743,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-nhfd8q",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn",
+      "id": "form-ready-career-crossfile-k7t7rs",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -774,8 +774,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-nhfd8q",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn",
+      "id": "form-ready-career-crossfile-k7t7rs",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -805,8 +805,8 @@
       "verifiedFile": true
     },
     {
-      "id": "form-ready-career-crossfile-nhfd8q",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn",
+      "id": "form-ready-career-crossfile-k7t7rs",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -863,7 +863,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z",
+      "generatedAt": "2026-11-02T18:37:17.151Z",
       "employmentScope": "jobPreparation",
       "verifiedOfficial": true
     },
@@ -895,13 +895,13 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z",
+      "generatedAt": "2026-11-02T18:37:17.151Z",
       "employmentScope": "jobPreparation",
       "verifiedOfficial": true
     },
     {
-      "id": "form-ready-career-crossfile-nhfd8q",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn",
+      "id": "form-ready-career-crossfile-k7t7rs",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -928,8 +928,8 @@
       "sourceTier": "previous-generated-index"
     },
     {
-      "id": "form-ready-career-crossfile-nhfd8q",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn",
+      "id": "form-ready-career-crossfile-k7t7rs",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -956,8 +956,8 @@
       "sourceTier": "previous-generated-index"
     },
     {
-      "id": "form-ready-career-crossfile-nhfd8q",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn",
+      "id": "form-ready-career-crossfile-k7t7rs",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -1071,7 +1071,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z",
+      "generatedAt": "2026-11-02T18:37:17.151Z",
       "employmentScope": "jobPreparation",
       "verifiedOfficial": true
     },
@@ -1103,7 +1103,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z",
+      "generatedAt": "2026-11-02T18:37:17.151Z",
       "employmentScope": "jobPreparation",
       "verifiedOfficial": true
     },
@@ -1135,7 +1135,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z",
+      "generatedAt": "2026-11-02T18:37:17.151Z",
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true
     },
@@ -1167,7 +1167,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z",
+      "generatedAt": "2026-11-02T18:37:17.151Z",
       "employmentScope": "fieldToEmployment",
       "verifiedOfficial": true
     },
@@ -1441,7 +1441,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
@@ -1471,7 +1471,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-7287-0-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1501,7 +1501,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
@@ -1531,7 +1531,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
@@ -1560,7 +1560,7 @@
         "fieldTraining",
         "바로사용"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1590,7 +1590,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
@@ -1620,7 +1620,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1650,7 +1650,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
@@ -1680,7 +1680,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1710,7 +1710,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-6465-0-붙임1-2023학년도-현장실습-지원금-통합신청-사전신청-매뉴얼-학생용-pdf",
@@ -1740,7 +1740,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-6465-1-붙임2-2023학년도-현장실습-지원금-faq-pdf",
@@ -1770,7 +1770,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6962-0-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
@@ -1800,7 +1800,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6963-0-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1830,7 +1830,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6961-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
@@ -1860,7 +1860,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6961-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
@@ -1890,7 +1890,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-7578-0-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
@@ -1920,7 +1920,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-6958-0-2024년-개인정보활용동의서-서식-hwp",
@@ -1950,52 +1950,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-main-cm-cn",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-main-cm-cntnts-cntnts",
-      "kind": "ready",
-      "status": "ready",
-      "statusLabel": "바로 사용",
-      "title": "개인정보 처리방침 - [별지 제1호 서식] 개인정보 열람, 정정 삭제, 처리정지 요구서",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "category": "privacyRecords",
-      "hierarchy": null,
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "format": "hwp",
-      "fileName": "[ë³ì§ ì 1í¸ ìì] ê°ì¸ì ë³´ ì´ë, ì ì  ì­ì , ì²ë¦¬ì ì§ ìêµ¬ì.hwp",
-      "verifiedFile": true,
-      "sourceUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=6f2fef8dae1c3a8d65accef37ec8e2a7",
-      "downloadUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=6f2fef8dae1c3a8d65accef37ec8e2a7",
-      "previewUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "editableUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=6f2fef8dae1c3a8d65accef37ec8e2a7",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-main-cm-cntnts-cntnts.pdf",
-      "plannedEditableUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=6f2fef8dae1c3a8d65accef37ec8e2a7",
-      "priority": 66,
-      "tags": [
-        "개인정보 처리방침 - [별지 제1호 서식] 개인정보 열람, 정정 삭제, 처리정지 요구서",
-        "경상북도교육청 학교지원종합자료실",
-        "privacyRecords",
-        "바로사용",
-        "편집가능",
-        "개인정보 처리방침 - [별지 제2호 서식] 개인정보 위임장",
-        "개인정보 처리방침 - [별지 제3호 서식] 개인정보 열람등 조치 이의신청서",
-        "민원서식ㆍ편람 - 서식받기",
-        "staffLabor",
-        "민원서식ㆍ편람 - 정보공개 운영 매뉴얼",
-        "PDF미리보기",
-        "민원서식ㆍ편람 - 파일받기",
-        "민원서식ㆍ편람 - PDF 다운로드",
-        "정보공개 청구서 - 정보공개 운영 매뉴얼",
-        "정보공개 청구서 - 정보공개 청구서 서식 다운로드",
-        "정보공개 청구서 - PDF 다운로드"
-      ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
-    },
-    {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-studentguidancerule-https-www-gbe-kr-",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-c",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-studentguidancer",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-studentguidancerule-https-w",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2011,7 +1970,7 @@
       "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d4ab0d01682927eda5c5729436528437",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d4ab0d01682927eda5c5729436528437",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-studentguidancerule-https-www-gbe-kr-edupia-cm-c.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-studentguidancerule-https-w.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=d4ab0d01682927eda5c5729436528437",
       "priority": 66,
       "tags": [
@@ -2028,7 +1987,7 @@
         "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-7]20○○학년도 제○차 학생생활규정 제·개정 협의회 결과",
         "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-8]20○○학년도학생선도위원회운영계획"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-field-training-7314-0-서식-기업현장교사-자격-확인서-hwp",
@@ -2058,11 +2017,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-789864-0-코로나바이러스감염증-19-대응-",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-789864-0-코로나바이러스감염증-19-대응-지침-지자체용-제9-",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-78986",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-789864-0-코로나바이러스",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2078,7 +2037,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_789864/doc_523e0751-f534-4a59-8fa6-9a216d6fc9931594876448230.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_789864/doc_523e0751-f534-4a59-8fa6-9a216d6fc9931594876448230.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-789864-0-코로나바이러스감염증-19-대응-지침-지자체용-제9.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-789864-0-코로나바이러스.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_789864/doc_523e0751-f534-4a59-8fa6-9a216d6fc9931594876448230.hwp",
       "priority": 66,
       "tags": [
@@ -2088,11 +2047,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-786296-0-코로나바이러스감염증-19-대응-",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-786296-0-코로나바이러스감염증-19-대응-지침-지자체용-제9판",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-78629",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-786296-0-코로나바이러스",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2108,7 +2067,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_786296/doc_e0b35bbd-f8f9-4b62-81ad-1e511a5ef2371593399126597.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_786296/doc_e0b35bbd-f8f9-4b62-81ad-1e511a5ef2371593399126597.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-786296-0-코로나바이러스감염증-19-대응-지침-지자체용-제9판.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-786296-0-코로나바이러스.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_786296/doc_e0b35bbd-f8f9-4b62-81ad-1e511a5ef2371593399126597.hwp",
       "priority": 66,
       "tags": [
@@ -2118,11 +2077,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-787710-1-코로나바이러스감염증-19-대응-",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-787710-1-코로나바이러스감염증-19-대응-지침-지자체용-제9판",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-78771",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-787710-1-코로나바이러스",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2138,7 +2097,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787710/doc_77cbb028-a3c9-47c8-b520-3188e4e5ee491593994269545.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787710/doc_77cbb028-a3c9-47c8-b520-3188e4e5ee491593994269545.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-787710-1-코로나바이러스감염증-19-대응-지침-지자체용-제9판.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-health-response-787710-1-코로나바이러스.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_2885/ntt_787710/doc_77cbb028-a3c9-47c8-b520-3188e4e5ee491593994269545.hwp",
       "priority": 52,
       "tags": [
@@ -2148,7 +2107,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
@@ -2178,7 +2137,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
@@ -2208,7 +2167,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
@@ -2238,7 +2197,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
@@ -2268,7 +2227,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
@@ -2298,7 +2257,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
@@ -2328,7 +2287,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-588219-1-서식-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-hwp",
@@ -2358,7 +2317,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1560985-0-16-디지털-성폭력-및-딥페이크등-예방교육자료-제작-최종-보고서-제출-pdf",
@@ -2388,7 +2347,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1525064-0-2024년-사건통보서-및-재발방지대책-제출-서식-hwp",
@@ -2418,7 +2377,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-school-violence-1548192-1-2025-학교폭력-사안처리-세부설명-a-to-z-서식모음집-hwpx",
@@ -2448,7 +2407,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1575631-0-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
@@ -2478,7 +2437,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1562027-1-단계별-관련-서식-2025개정판-학교내성희롱성폭력사안대응업무안내서-hwpx",
@@ -2508,7 +2467,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-583659-1-성희롱-성폭력-사안처리지원단-외부지원-신청서-hwp",
@@ -2538,7 +2497,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1575631-1-성희롱성폭력-사안발생-미-통보-동의서-서식-hwpx",
@@ -2568,7 +2527,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1544100-0-여성가족부-성폭력방지과-번-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
@@ -2598,7 +2557,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-cbe-sexual-awareness-1541549-1-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-단계별-관련-서식-hwp",
@@ -2628,11 +2587,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -2646,9 +2605,9 @@
       "verifiedFile": true,
       "sourceUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbbc829dd0cd5617d9ac75d6088f5faa",
       "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbbc829dd0cd5617d9ac75d6088f5faa",
-      "previewUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=542e1540ef7e941ece92264243d8f3b8",
+      "previewUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b71749dfad3def127f651aa634f9ae53",
       "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbbc829dd0cd5617d9ac75d6088f5faa",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-edupia-cm-cntnts-cntn.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=fbbc829dd0cd5617d9ac75d6088f5faa",
       "priority": 84,
       "tags": [
@@ -2657,27 +2616,27 @@
         "schoolViolenceSafety",
         "바로사용",
         "편집가능",
-        "미인정 유학 학생의 학적 처리 - [서식-초등-1-11-2-2] 2026 초등학교 학적 업무 매뉴얼 서식",
+        "생활기록부 - [서식-유-2-3-12]2026 유치원생활기록부 기재요령(배포본)",
         "studentLife",
         "미인정 유학 학생의 학적 처리 - [서식-초등-1-11-2-1]2026 초등학교 학적 업무 매뉴얼",
+        "미인정 유학 학생의 학적 처리 - [서식-초등-1-11-2-2] 2026 초등학교 학적 업무 매뉴얼 서식",
         "방과후과정 운영 - [서식-유-4-1-1-26]2026학년도 유치원 교육과정 운영 지원 및 방과후 과정 운영 내실화 계획",
         "schoolAdmin",
         "방과후학교 업무 흐름(개인위탁) - 2026 중등 방과후학교 길라잡이 서식",
         "방과후학교 업무 흐름(업체위탁) - 2026 중등 방과후학교 길라잡이 서식",
         "방과후학교 회계 관리 - 2026 중등 방과후학교 운영 길라잡이 서식",
         "방과후학교 회계 관리 - 2026 초등 돌봄교육 운영 길라잡이 서식",
-        "생활기록부 - [서식-유-2-3-12]2026 유치원생활기록부 기재요령(배포본)",
         "생활기록부 - [서식-유-2-3-13]2026 유치원생활기록부 작성 현장지원 자료",
         "안전하고 행복한 학교 - [서식-중등-4-4-1-1] 2026년 학교안전사고 예방 지역계획",
         "엄마품 돌봄 - [서식-유-4-3-1-6] 2026학년도 돌봄유치원 운영계획",
         "영어회화전문강사 관리 - [서식-초등-8-8-1-1] 2026 영어회화전문강사 업무편람",
-        "PDF미리보기",
         "영재학급 운영 평가 - [서식-초등-4-8-4-1] 2026학년도 영재교육기관 각종 서식",
         "예산 관리 - [서식-관리-4-1-1] 2026학년도 공립학교회계 예산편성 기본지침",
         "장학의 실제 및 평가 - [서식-초등-2-11-2-1] 2026학년도 초등 현장 맞춤형 장학 현황 제출 서식",
         "장학의 실제 및 평가 - [서식-초등-2-11-2-4] 2026학년도 초등 현장 맞춤형 장학 기본 계획",
         "전출학생 학적 처리 - 2026학년도 학적 업무 매뉴얼(한글파일 서식 포함)",
         "평가 출제 후 활용 및 보안 관리 - [서식-중등-2-5-3-1] 2026 중학교 학업성적 평가관리 단계별 업무 매뉴얼",
+        "PDF미리보기",
         "평가 출제 후 활용 및 보안 관리 - [서식-중등-2-5-3-2] 2026 고등학교 학업성적 평가관리 단계별 업무 매뉴얼",
         "학교 평가 - [서식-관리-2-2-1-2] 2026 학교평가 길라잡이(중등)",
         "학교 평가 - [서식-관리-2-2-1-3] 2026 학교평가 길라잡이(중등)",
@@ -2776,6 +2735,9 @@
         "개인정보 보호 업무 - [서식-중등-6-13-1-6] 개인정보파일 (등록, 변경등록) 신청서",
         "개인정보 보호 업무 - [서식-중등-6-13-1-8] 개인정보처리방침(홈페이지탑재) 관리 매뉴얼",
         "개인정보 보호(취급자)교육 - [서식-중등 6-12-3-1] 정보보안 및 개인정보 보호 취급자 교육자료",
+        "개인정보 처리방침 - [별지 제1호 서식] 개인정보 열람, 정정 삭제, 처리정지 요구서",
+        "개인정보 처리방침 - [별지 제2호 서식] 개인정보 위임장",
+        "개인정보 처리방침 - [별지 제3호 서식] 개인정보 열람등 조치 이의신청서",
         "개인정보 처리방침 - [서식-초등-4-1-2-1] 학교 개인정보처리방침 관리 매뉴얼",
         "개인정보 처리방침 - [서식-초등-4-1-2-3] 개인정보 처리방침 작성지침",
         "개인정보 파일 등록 - [서식-초등-4-1-1-1] 각 급 학교 개인정보 수집업무 길잡이(초등용)",
@@ -2833,6 +2795,10 @@
         "긴급 돌봄 - [서식-유-4-3-2-4] 유치원 긴급돌봄 비상연락망",
         "다면평가 - [서식-관리-6-3-1-1] 다면 평가 추진 절차",
         "민원 응대 요령 - [서식-관리-11-9-1-1] 특별민원 29개 유형 대응 매뉴얼(예시)",
+        "민원서식ㆍ편람 - 서식받기",
+        "민원서식ㆍ편람 - 정보공개 운영 매뉴얼",
+        "민원서식ㆍ편람 - 파일받기",
+        "민원서식ㆍ편람 - PDF 다운로드",
         "방과후 특기・적성교육 - [서식-중등-8-4-2-1] 특수교육대상학생 방과후학교 신청 관련 보호자 확인서",
         "방과후 특기・적성교육 - [서식-중등-8-4-2-2] 특수교육대상학생 방과후 특기적성교육 연간계획서",
         "방과후 특기・적성교육 - [서식-중등-8-4-2-3] 특수교육대상학생 방과후 특기적성교육 제공일지 및 출석부",
@@ -3017,6 +2983,9 @@
         "정보공개 청구 및 접수 - [서식-행정-5-2-1-1] 정보공개청구서",
         "정보공개 청구 및 접수 - [서식-행정-5-2-1-2] 정보공개구술청구서",
         "정보공개 청구 및 접수 - [서식-행정-5-2-1-3] 정보공개처리대장",
+        "정보공개 청구서 - 정보공개 운영 매뉴얼",
+        "정보공개 청구서 - 정보공개 청구서 서식 다운로드",
+        "정보공개 청구서 - PDF 다운로드",
         "정보공개여부 결정 - [서식-행정-5-2-2-1] 공개 여부 결정기간 연장 통지서",
         "정보공개여부 결정 - [서식-행정-5-2-2-2] 정보공개 청구외([ ]부존재 [ ]진정.질의 등) 통지서",
         "정보공개여부 결정 - [서식-행정-5-2-2-3] 정보공개 청구사실 통지서",
@@ -3203,6 +3172,7 @@
         "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-3]사이버폭력 인식 및 대처 학년별 학습지",
         "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-4]불법촬영 및 유포 행위 관련 가정통신문(예시",
         "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-5]도박중독 예방교육 가정통신문(예시",
+        "행정심판 - 법률상담신청서 양식 다운로드",
         "현장체험학습 계획 - [서식-중등-4-12-2-1]수학여행 실시 기본 계획(예시)",
         "현장체험학습 계획 - [서식-중등-4-12-2-2]수학여행 사전 수요 조사 가정통신문(예시)",
         "현장체험학습 계획 - [서식-중등-4-12-2-3]현장체험학습 가정통신문(예시)",
@@ -3239,11 +3209,11 @@
         "휴가 - [서식-초등-8-5-2-4] 공무 국외 출장 관련 서식",
         "휴직자 복무관리 - [서식-행정-2-3-2-1] 휴직자 복무상황 신고서"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-1283157-0-붙임-2023년도-학교운영위",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-1283157-0-붙임-2023년도-학교운영위원회-운영계획-발송-",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-1283",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-1283157-0-붙임-20",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3259,7 +3229,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_1901/ntt_1283157/doc_af7evfa0e=24v3a=41v17=a1v5a=8960v8407v57c4_v9771.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_1901/ntt_1283157/doc_af7evfa0e=24v3a=41v17=a1v5a=8960v8407v57c4_v9771.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-1283157-0-붙임-2023년도-학교운영위원회-운영계획-발송.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-1283157-0-붙임-20.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_1901/ntt_1283157/doc_af7evfa0e=24v3a=41v17=a1v5a=8960v8407v57c4_v9771.hwp",
       "priority": 69,
       "tags": [
@@ -3269,11 +3239,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1627082-0-붙임-1-학교-내-성희롱성폭력-사안",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1627082-0-붙임-1-학교-내-성희롱성폭력-사안처리-안내서-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1627082-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1627082-0-붙임-1-학교-내",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3290,7 +3260,7 @@
       "previewUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_1c5ev8f22=18vea=43vff=88v36=f1b0vb8a8v2aaa_v6612.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1627082/doc_1c5ev8f22=18vea=43vff=88v36=f1b0vb8a8v2aaa_v6612.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1627082-0-붙임-1-학교-내-성희롱성폭력-사안처리-안내서-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1627082-0-붙임-1-학교-내.docx",
       "priority": 62,
       "tags": [
         "자료실 - [붙임 1] 학교 내 성희롱성폭력 사안처리 안내서",
@@ -3299,11 +3269,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-772142-0-붙임1-교육자료-학교운영위원회",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-772142-0-붙임1-교육자료-학교운영위원회-온라인시스템-이용방",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-7721",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-772142-0-붙임1-교육",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3319,7 +3289,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_1901/ntt_772142/doc_b4d67b48-caed-4cdf-8c46-282221c1c6cd1584424577107.pptx",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_1901/ntt_772142/doc_b4d67b48-caed-4cdf-8c46-282221c1c6cd1584424577107.pptx",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-772142-0-붙임1-교육자료-학교운영위원회-온라인시스템-이용방.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-committee-772142-0-붙임1-교육.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_1901/ntt_772142/doc_b4d67b48-caed-4cdf-8c46-282221c1c6cd1584424577107.pptx",
       "priority": 66,
       "tags": [
@@ -3329,11 +3299,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-909735-1-2021학년도-수학여행-수련활동-등-현장",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-909735-1-2021학년도-수학여행-수련활동-등-현장체험학습-운영-안내서",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-909735-1-2",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-909735-1-2021학년도-수학여행",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3349,7 +3319,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_909735/doc_f414vc21f=2dv1f=48v48=85va0=2014v29b8v306e_v2948.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_909735/doc_f414vc21f=2dv1f=48v48=85va0=2014v29b8v306e_v2948.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-909735-1-2021학년도-수학여행-수련활동-등-현장체험학습-운영-안내서.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-909735-1-2021학년도-수학여행.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_909735/doc_f414vc21f=2dv1f=48v48=85va0=2014v29b8v306e_v2948.hwp",
       "priority": 67,
       "tags": [
@@ -3359,11 +3329,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1284315-1-2023학년도-수학여행-수련활동-등-현",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1284315-1-2023학년도-수학여행-수련활동-등-현장체험학습-운영-안내",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1284315-1-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1284315-1-2023학년도-수학여",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3379,7 +3349,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1284315/doc_acb8v4ed1=e9vac=4bv40=95v07=ad78v7f81v0692_v8752.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1284315/doc_acb8v4ed1=e9vac=4bv40=95v07=ad78v7f81v0692_v8752.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1284315-1-2023학년도-수학여행-수련활동-등-현장체험학습-운영-안내.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1284315-1-2023학년도-수학여.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1284315/doc_acb8v4ed1=e9vac=4bv40=95v07=ad78v7f81v0692_v8752.hwp",
       "priority": 69,
       "tags": [
@@ -3389,11 +3359,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1385989-1-2024학년도-수학여행-수련활동-등-현",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1385989-1-2024학년도-수학여행-수련활동-등-현장체험학습-운영-안내",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1385989-1-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1385989-1-2024학년도-수학여",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3409,7 +3379,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1385989/doc_84davdc7e=c4v9a=48v0d=95v0e=a02ev882ev542c_v1966.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1385989/doc_84davdc7e=c4v9a=48v0d=95v0e=a02ev882ev542c_v1966.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1385989-1-2024학년도-수학여행-수련활동-등-현장체험학습-운영-안내.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1385989-1-2024학년도-수학여.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1385989/doc_84davdc7e=c4v9a=48v0d=95v0e=a02ev882ev542c_v1966.hwp",
       "priority": 70,
       "tags": [
@@ -3419,11 +3389,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1493035-0-2025학년도-수학여행-수련활동-등-현",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1493035-0-2025학년도-수학여행-수련활동-등-현장체험학습-운영-안내",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1493035-0-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1493035-0-2025학년도-수학여",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3439,7 +3409,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1493035/doc_9357vf5bf=f4vb5=43vdb=b7vf5=bb68vc33ev2438_v308.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1493035/doc_9357vf5bf=f4vb5=43vdb=b7vf5=bb68vc33ev2438_v308.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1493035-0-2025학년도-수학여행-수련활동-등-현장체험학습-운영-안내.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1493035-0-2025학년도-수학여.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1493035/doc_9357vf5bf=f4vb5=43vdb=b7vf5=bb68vc33ev2438_v308.hwp",
       "priority": 71,
       "tags": [
@@ -3449,11 +3419,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-1591411-0-2026학년",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-1591411-0-2026학년도-학교장-허가-교외",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceg",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-159141",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3470,20 +3440,21 @@
       "previewUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1591411/doc_56devb23c=a7vf6=41v5a=a6v50=52b9vdf85v4068_v2224.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1591411/doc_56devb23c=a7vf6=41v5a=a6v50=52b9vdf85v4068_v2224.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-1591411-0-2026학년도-학교장-허가-교외.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-159141.docx",
       "priority": 68,
       "tags": [
         "자료실 - 2026학년도 학교장 허가 교외체험학습 운영 지침",
         "경상북도교육청 학생생활과",
         "studentLife",
         "바로사용",
-        "PDF미리보기"
+        "PDF미리보기",
+        "자료실 - 정보공개 운영 매뉴얼"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1186466-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3499,7 +3470,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1186466-0-3-교사용-학생.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
       "priority": 66,
       "tags": [
@@ -3509,11 +3480,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3529,7 +3500,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1625762-1-관련-서식-hwp.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1625762/doc_2047vc04d=2dv95=40v4c=8ev10=3a66v9e53ve613_v8987.hwp",
       "priority": 66,
       "tags": [
@@ -3539,11 +3510,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649080-0-붙임-3-학교폭력-전담조사관-활동-",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649080-0-붙임-3-학교폭력-전담조사관-활동-우수사례-작성-양식-",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649080-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649080-0-붙임-3-학교폭력",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3559,7 +3530,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1649080/doc_a144v3892=davcb=41v95=b8v75=8309v60a1vb8b8_v1680.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1649080/doc_a144v3892=davcb=41v95=b8v75=8309v60a1vb8b8_v1680.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649080-0-붙임-3-학교폭력-전담조사관-활동-우수사례-작성-양식.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649080-0-붙임-3-학교폭력.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1649080/doc_a144v3892=davcb=41v95=b8v75=8309v60a1vb8b8_v1680.hwp",
       "priority": 78,
       "tags": [
@@ -3569,11 +3540,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649082-0-붙임2-2026년-학교폭력-제로센터",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649082-0-붙임2-2026년-학교폭력-제로센터-지원단-활동-우수사",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649082-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649082-0-붙임2-2026년",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3589,7 +3560,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1649082/doc_b054v405e=3bv17=4fv38=8cv35=844dv0041v8332_v7624.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1649082/doc_b054v405e=3bv17=4fv38=8cv35=844dv0041v8332_v7624.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649082-0-붙임2-2026년-학교폭력-제로센터-지원단-활동-우수사.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1649082-0-붙임2-2026년.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1649082/doc_b054v405e=3bv17=4fv38=8cv35=844dv0041v8332_v7624.hwp",
       "priority": 84,
       "tags": [
@@ -3599,11 +3570,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-772069-1-운영-안내서-부록3-14-한글파일-hwp",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-772069-1-운영-안내서-부록3-14-한글파일-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-772069-1-운",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-772069-1-운영-안내서-부록3-1",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3619,7 +3590,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_772069/doc_b8533023-2237-47c2-ab90-b9c60e81cf461584408354756.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_772069/doc_b8533023-2237-47c2-ab90-b9c60e81cf461584408354756.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-772069-1-운영-안내서-부록3-14-한글파일-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-772069-1-운영-안내서-부록3-1.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_772069/doc_b8533023-2237-47c2-ab90-b9c60e81cf461584408354756.hwp",
       "priority": 66,
       "tags": [
@@ -3629,41 +3600,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-1591411-1-정보공개-운",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-1591411-1-정보공개-운영-매뉴얼",
-      "kind": "ready",
-      "status": "ready",
-      "statusLabel": "바로 사용",
-      "title": "자료실 - 정보공개 운영 매뉴얼",
-      "provider": "경상북도교육청 학생생활과",
-      "category": "studentLife",
-      "hierarchy": null,
-      "description": "2026학년도 학교장허가 교외체험학습 운영 지침에서 확인한 첨부 원문 파일",
-      "format": "pdf",
-      "fileName": "2021 ì ë³´ê³µê° ì´ì ë§¤ë´ì¼.pdf",
-      "verifiedFile": true,
-      "sourceUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "downloadUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "previewUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "editableUrl": "",
-      "plannedPdfUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-1591411-1-정보공개-운영-매뉴얼.docx",
-      "priority": 68,
-      "tags": [
-        "자료실 - 정보공개 운영 매뉴얼",
-        "경상북도교육청 학생생활과",
-        "studentLife",
-        "바로사용",
-        "PDF미리보기"
-      ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
-    },
-    {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3679,7 +3620,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-1-제출서식-동의서.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
       "priority": 66,
       "tags": [
@@ -3689,11 +3630,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3709,7 +3650,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1192624-0-제출서식-소방시설.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
       "priority": 66,
       "tags": [
@@ -3719,11 +3660,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1600483-0-학교폭력-예방-및-사안처리-관련-체",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1600483-0-학교폭력-예방-및-사안처리-관련-체크리스트-pdf",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1600483-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1600483-0-학교폭력-예방-및",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3740,7 +3681,7 @@
       "previewUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1600483/doc_29a9v8577=17v3f=43vd5=9cv3d=9e2ev859ev5769_v3412.pdf",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1600483-0-학교폭력-예방-및-사안처리-관련-체크리스트-pdf.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-student-life-1600483-0-학교폭력-예방-및.docx",
       "priority": 74,
       "tags": [
         "자료실 - 학교폭력 예방 및 사안처리 관련 체크리스트",
@@ -3749,11 +3690,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1177565-1-현장체험학습-운영-안내서-부록서식-한글",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1177565-1-현장체험학습-운영-안내서-부록서식-한글파일-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1177565-1-",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1177565-1-현장체험학습-운영-안",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3769,7 +3710,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1177565/doc_a19evb921=97vce=40v1f=bcv71=a845vd801v96f1_v8400.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1177565/doc_a19evb921=97vce=40v1f=bcv71=a845vd801v96f1_v8400.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1177565-1-현장체험학습-운영-안내서-부록서식-한글파일-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-field-trip-1177565-1-현장체험학습-운영-안.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/main/na/bbs_1875/ntt_1177565/doc_a19evb921=97vce=40v1f=bcv71=a845vd801v96f1_v8400.hwp",
       "priority": 66,
       "tags": [
@@ -3779,7 +3720,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acq",
@@ -3978,11 +3919,11 @@
         "흡연예방사업 예산 편성 및 집행 - [서식-초등-5-6-3-2] 사업예산집행결과 서식",
         "2026학년도 학교장허가 교외체험학습 운영 지침"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-0-10월-탑재-업무처리지침",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-0-10월-탑재-업무처리지침-자료집-연계-202",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-16",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-0-10월",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -3998,7 +3939,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1632312/doc_b752v3dc4=12v5c=45v20=a8vd5=124av43aeve43d_v3605.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1632312/doc_b752v3dc4=12v5c=45v20=a8vd5=124av43aeve43d_v3605.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-0-10월-탑재-업무처리지침-자료집-연계-202.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-0-10월.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1632312/doc_b752v3dc4=12v5c=45v20=a8vd5=124av43aeve43d_v3605.hwp",
       "priority": 73,
       "tags": [
@@ -4008,11 +3949,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-2-7월-탑재-2027학년도",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-2-7월-탑재-2027학년도-대학수학능력시험-업",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-16",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-2-7월-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4028,7 +3969,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1632312/doc_3fbav2f3b=23v31=49vfc=92vac=89a9v6c5fv2443_v8834.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1632312/doc_3fbav2f3b=23v31=49vfc=92vac=89a9v6c5fv2443_v8834.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-2-7월-탑재-2027학년도-대학수학능력시험-업.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1632312-2-7월.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1632312/doc_3fbav2f3b=23v31=49vfc=92vac=89a9v6c5fv2443_v8834.hwp",
       "priority": 73,
       "tags": [
@@ -4038,11 +3979,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1380208-0-붙임-3-2024학년도-",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1380208-0-붙임-3-2024학년도-학업성적관리업무-자체",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-13",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1380208-0-붙임-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4058,7 +3999,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1380208/doc_f08av8d4e=a1v74=44v53=9dvab=9f82v99f3v4fe8_v3096.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1380208/doc_f08av8d4e=a1v74=44v53=9dvab=9f82v99f3v4fe8_v3096.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1380208-0-붙임-3-2024학년도-학업성적관리업무-자체.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1380208-0-붙임.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1380208/doc_f08av8d4e=a1v74=44v53=9dvab=9f82v99f3v4fe8_v3096.hwp",
       "priority": 70,
       "tags": [
@@ -4068,11 +4009,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1609886-0-붙임-교수-학습과정안-서",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1609886-0-붙임-교수-학습과정안-서식-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-16",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1609886-0-붙임-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4088,7 +4029,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1609886/doc_27cbvd59e=a6vd7=46v06=b7v3e=c6dfvd617vf486_v6803.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1609886/doc_27cbvd59e=a6vd7=46v06=b7v3e=c6dfvd617vf486_v6803.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1609886-0-붙임-교수-학습과정안-서식-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1609886-0-붙임.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_mid/na/bbs_2665/ntt_1609886/doc_27cbvd59e=a6vd7=46v06=b7v3e=c6dfvd617vf486_v6803.hwp",
       "priority": 66,
       "tags": [
@@ -4098,11 +4039,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-0-붙임1-2026-초등돌봄",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-0-붙임1-2026-초등돌봄교육-운영-길라잡이-",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-15",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-0-붙임1",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4118,7 +4059,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_5404v99dd=7cv2b=4cv46=advb5=21a7v9325v1243_v3979.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_5404v99dd=7cv2b=4cv46=advb5=21a7v9325v1243_v3979.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-0-붙임1-2026-초등돌봄교육-운영-길라잡이.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-0-붙임1.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_5404v99dd=7cv2b=4cv46=advb5=21a7v9325v1243_v3979.hwp",
       "priority": 72,
       "tags": [
@@ -4128,11 +4069,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-1-붙임2-2026-초등돌봄",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-1-붙임2-2026-초등돌봄교육-운영-길라잡이-",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-15",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-1-붙임2",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4148,7 +4089,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_07b0vbc63=d7v74=4bv4f=9fvef=05d4v8c67v272d_v1178.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_07b0vbc63=d7v74=4bv4f=9fvef=05d4v8c67v272d_v1178.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-1-붙임2-2026-초등돌봄교육-운영-길라잡이.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1594788-1-붙임2.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_edu/na/bbs_2646/ntt_1594788/doc_07b0vbc63=d7v74=4bv4f=9fvef=05d4v8c67v272d_v1178.hwp",
       "priority": 72,
       "tags": [
@@ -4158,11 +4099,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-563299-2-1402-상담기록서식-예시",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-563299-2-1402-상담기록서식-예시-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-56",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-563299-2-1402",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4178,7 +4119,7 @@
       "downloadUrl": "https://www.gbe.kr/uploads/old/data/gbe/upFiles/bbs/999982725500000000/1402%20%EC%83%81%EB%8B%B4%EA%B8%B0%EB%A1%9D%EC%84%9C%EC%8B%9D(%EC%98%88%EC%8B%9C).hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/uploads/old/data/gbe/upFiles/bbs/999982725500000000/1402%20%EC%83%81%EB%8B%B4%EA%B8%B0%EB%A1%9D%EC%84%9C%EC%8B%9D(%EC%98%88%EC%8B%9C).hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-563299-2-1402-상담기록서식-예시-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-563299-2-1402.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/uploads/old/data/gbe/upFiles/bbs/999982725500000000/1402%20%EC%83%81%EB%8B%B4%EA%B8%B0%EB%A1%9D%EC%84%9C%EC%8B%9D(%EC%98%88%EC%8B%9C).hwp",
       "priority": 66,
       "tags": [
@@ -4188,11 +4129,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1592277-0-2026-초등-학적-업무",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1592277-0-2026-초등-학적-업무-매뉴얼-내지-서식-",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-15",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1592277-0-202",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4208,7 +4149,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1592277/doc_0f14ve95d=1ev16=4fv18=9fvcd=a8e2ve83evc3e1_v1906.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1592277/doc_0f14ve95d=1ev16=4fv18=9fvcd=a8e2ve83evc3e1_v1906.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1592277-0-2026-초등-학적-업무-매뉴얼-내지-서식.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1592277-0-202.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_con/na/bbs_2660/ntt_1592277/doc_0f14ve95d=1ev16=4fv18=9fvcd=a8e2ve83evc3e1_v1906.hwp",
       "priority": 72,
       "tags": [
@@ -4218,11 +4159,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-3-정보공개-운영-매뉴얼",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-3-정보공개-운영-매뉴얼",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-16",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-3-정보공",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4239,7 +4180,7 @@
       "previewUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
       "editableUrl": "",
       "plannedPdfUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-3-정보공개-운영-매뉴얼.docx",
+      "plannedEditableUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-3-정보공.docx",
       "priority": 62,
       "tags": [
         "통합자료실 - 정보공개 운영 매뉴얼",
@@ -4248,11 +4189,11 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-0-제출서류1-착공서류-목록",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-0-제출서류1-착공서류-목록-및-서식-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-16",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-0-제출서",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4268,7 +4209,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_df76vab18=4bv19=46vd5=b9v66=aa4avc885vf30e_v6289.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_df76vab18=4bv19=46vd5=b9v66=aa4avc885vf30e_v6289.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-0-제출서류1-착공서류-목록-및-서식-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-0-제출서.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_df76vab18=4bv19=46vd5=b9v66=aa4avc885vf30e_v6289.hwp",
       "priority": 66,
       "tags": [
@@ -4278,11 +4219,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-1-제출서류2-공사중-제출서",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-1-제출서류2-공사중-제출서류-목록-및-서식-h",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-16",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-1-제출서",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4298,7 +4239,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_9553vc818=b0v5f=4bv18=90vf2=b2e0v9c43v7f4e_v2263.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_9553vc818=b0v5f=4bv18=90vf2=b2e0v9c43v7f4e_v2263.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-1-제출서류2-공사중-제출서류-목록-및-서식-h.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-1-제출서.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_9553vc818=b0v5f=4bv18=90vf2=b2e0v9c43v7f4e_v2263.hwp",
       "priority": 66,
       "tags": [
@@ -4308,11 +4249,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-2-제출서류3-준공서류-목록",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-2-제출서류3-준공서류-목록-및-서식-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-16",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-2-제출서",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4328,7 +4269,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_7d26va768=3fv0b=4fv62=93vff=a16dv0880vb5bb_v596.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_7d26va768=3fv0b=4fv62=93vff=a16dv0880vb5bb_v596.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-2-제출서류3-준공서류-목록-및-서식-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1647994-2-제출서.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_fac/na/bbs_2741/ntt_1647994/doc_7d26va768=3fv0b=4fv62=93vff=a16dv0880vb5bb_v596.hwp",
       "priority": 66,
       "tags": [
@@ -4338,11 +4279,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1634442-0-학교주관-교복구매길라잡이",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1634442-0-학교주관-교복구매길라잡이-각종서식-hwp",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-16",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1634442-0-학교주",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4358,7 +4299,7 @@
       "downloadUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1634442/doc_6894ve704=90v02=45v13=8bv74=4bf4vfb49vc98d_v9449.hwp",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1634442/doc_6894ve704=90v02=45v13=8bv74=4bf4vfb49vc98d_v9449.hwp",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1634442-0-학교주관-교복구매길라잡이-각종서식-hwp.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-integrated-library-1634442-0-학교주.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1634442/doc_6894ve704=90v02=45v13=8bv74=4bf4vfb49vc98d_v9449.hwp",
       "priority": 66,
       "tags": [
@@ -4368,11 +4309,11 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-https-www-gbe-kr",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-https-www-gbe-kr-edupia-cm-",
+      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceg",
+      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-https-",
       "kind": "ready",
       "status": "ready",
       "statusLabel": "바로 사용",
@@ -4388,7 +4329,7 @@
       "downloadUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b049f3f05f1fd30573dc10a31074f981",
       "previewUrl": "",
       "editableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b049f3f05f1fd30573dc10a31074f981",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-https-www-gbe-kr-edupia-cm.pdf",
+      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-registry-fieldexperienceguide-https.pdf",
       "plannedEditableUrl": "https://www.gbe.kr/edupia/cf/fileDownload.do?fileKey=b049f3f05f1fd30573dc10a31074f981",
       "priority": 69,
       "tags": [
@@ -4398,37 +4339,7 @@
         "바로사용",
         "편집가능"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
-    },
-    {
-      "id": "form-ready-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-law-cm-cnt",
-      "sourceResourceId": "acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-law-cm-cntnts-cntntsv",
-      "kind": "ready",
-      "status": "ready",
-      "statusLabel": "바로 사용",
-      "title": "행정심판 - 법률상담신청서 양식 다운로드",
-      "provider": "경상북도교육청 학교지원종합자료실",
-      "category": "schoolAdmin",
-      "hierarchy": null,
-      "description": "경북교육청 학교지원종합자료실에서 확인한 첨부 원문 파일",
-      "format": "hwp",
-      "fileName": "ë¬´ë£ ë²ë¥  ìë´ ì ì²­ì(ìì).hwp",
-      "verifiedFile": true,
-      "sourceUrl": "https://www.gbe.kr/law/cf/fileDownload.do?fileKey=a9a87d64fcbf1d3fad51e0f7a9b54914",
-      "downloadUrl": "https://www.gbe.kr/law/cf/fileDownload.do?fileKey=a9a87d64fcbf1d3fad51e0f7a9b54914",
-      "previewUrl": "",
-      "editableUrl": "https://www.gbe.kr/law/cf/fileDownload.do?fileKey=a9a87d64fcbf1d3fad51e0f7a9b54914",
-      "plannedPdfUrl": "generated/forms/acquisition-existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-edupia-content-https-www-gbe-kr-law-cm-cntnts-cntntsv.pdf",
-      "plannedEditableUrl": "https://www.gbe.kr/law/cf/fileDownload.do?fileKey=a9a87d64fcbf1d3fad51e0f7a9b54914",
-      "priority": 66,
-      "tags": [
-        "행정심판 - 법률상담신청서 양식 다운로드",
-        "경상북도교육청 학교지원종합자료실",
-        "schoolAdmin",
-        "바로사용",
-        "편집가능"
-      ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-5532-0-붙임1-2021학년도-현장실습-지원금-신청-매뉴얼-pdf",
@@ -4458,7 +4369,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-5532-1-붙임2-2021학년도-현장실습-지원금-업무처리기준-안-pdf",
@@ -4488,7 +4399,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     },
     {
       "id": "form-ready-acquisition-harvest-sen-highjob-employment-policy-5532-2-붙임3-2021학년도-현장실습-지원금-q-a-pdf",
@@ -4518,7 +4429,7 @@
         "바로사용",
         "PDF미리보기"
       ],
-      "generatedAt": "2026-11-02T06:31:36.255Z"
+      "generatedAt": "2026-11-02T18:37:17.151Z"
     }
   ]
 }; });
