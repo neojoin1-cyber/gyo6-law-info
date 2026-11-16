@@ -6,25 +6,25 @@
     root.GYO6_PUBLIC_RESOURCE_ACQUISITION = data;
   }
 })(typeof globalThis !== "undefined" ? globalThis : window, function createPublicResourceAcquisition() { return {
-  "version": "generated-2026-11-15T21-06-33-915Z",
-  "generatedAt": "2026-11-15T21:06:33.915Z",
+  "version": "generated-2026-11-16T06-48-18-114Z",
+  "generatedAt": "2026-11-16T06:48:18.114Z",
   "stats": {
     "existingResources": 1413,
     "missions": 8,
-    "candidates": 1501,
-    "publicCandidates": 1419,
-    "harvestedFiles": 238,
-    "highPriority": 193,
+    "candidates": 1503,
+    "publicCandidates": 1421,
+    "harvestedFiles": 212,
+    "highPriority": 179,
     "directUrlNeeded": 85,
     "byCategory": {
       "careerEmployment": 43,
       "fieldTraining": 181,
       "general": 202,
-      "schoolViolenceSafety": 248,
-      "privacyRecords": 81,
       "schoolAdmin": 253,
-      "staffLabor": 85,
-      "studentLife": 408
+      "studentLife": 410,
+      "privacyRecords": 81,
+      "schoolViolenceSafety": 248,
+      "staffLabor": 85
     }
   },
   "missions": [
@@ -197,7 +197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6472-0-리플렛-2023-고졸채용기업-지원정책-pdf",
@@ -221,7 +221,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7004-0-고교-졸업생-지원-혜택-2024-7-pdf",
@@ -245,7 +245,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7195-0-2-2024년-고졸채용기업-지원정책-리플릿-pdf",
@@ -269,7 +269,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7196-1-2024년-고졸청년-지원정책-pdf",
@@ -293,7 +293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7196-0-4-2024년-고졸청년-지원정책-리플릿-pdf",
@@ -317,7 +317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145569-0-2025년-고졸채용기업-지원정책-리플릿-pdf",
@@ -341,7 +341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7492-0-2025년-고졸채용기업-지원정책-자료집-pdf",
@@ -365,7 +365,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145569-1-2025년-고졸채용기업-지원정책-자료집-pdf",
@@ -389,7 +389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7351-0-자료집-2025년-고졸청년-지원사업-pdf",
@@ -413,7 +413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7618-0-2-중앙취업지원센터-2026년-고졸채용기업-지원정책-자료집-pdf",
@@ -437,7 +437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7618-1-4-중앙취업지원센터-2026년-고졸채용기업-지원정책-리플릿-pdf",
@@ -461,7 +461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7617-0-1-중앙취업지원센터-2026년-고졸청년-지원정책-자료집-pdf",
@@ -485,7 +485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-7617-1-3-중앙취업지원센터-2026년-고졸청년-지원정책-리플릿-pdf",
@@ -509,7 +509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5531-0-붙임1-고교-취업연계-장려금-신청-매뉴얼-pdf",
@@ -537,7 +537,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5531-1-붙임1-법정대리인-동의서-양식-pdf",
@@ -565,7 +565,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145654-0-붙임-1-1-2026년-고졸청년-지원정책-자료집-pdf",
@@ -593,7 +593,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145654-1-붙임-1-2-2026년-고졸청년-지원정책-리플릿-pdf",
@@ -621,7 +621,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145654-2-붙임-2-1-2026년-고졸채용기업-지원정책-자료집-pdf",
@@ -649,7 +649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145654-3-붙임-2-2-2026년-고졸채용기업-지원정책-리플릿-pdf",
@@ -677,7 +677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-career-employment-library-6716-0-인천-취업지원센터-리플렛-pdf",
@@ -701,7 +701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5522-0-2021년-청년내일채움공제-시행지침-게시-pdf",
@@ -725,7 +725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-44049-0-공문-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-알림-pdf",
@@ -749,7 +749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-38919-0-공문-직업계고-현장실습-안전점검-등을-통한-안전사고-예방-철저-pdf",
@@ -773,7 +773,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-146624-1-기특한명장-명장진로프로그램-매뉴얼-명장용-pdf",
@@ -797,7 +797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-146624-0-기특한명장-명장진로프로그램-매뉴얼-학교용-pdf",
@@ -821,7 +821,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-38919-1-붙임1-산업안전점검표-공통-hwp",
@@ -849,7 +849,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-38919-2-붙임2-2021-직업계고-산업안전-매뉴얼-pdf",
@@ -877,7 +877,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7291-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-pdf",
@@ -901,7 +901,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7349-0-2025-현장실습-바로가기-및-실습일지-작성방법-휴대폰용-pdf",
@@ -925,7 +925,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7292-0-2025년-hifive-사용자-매뉴얼-학생용-pdf",
@@ -949,7 +949,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7287-0-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -977,7 +977,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7290-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
@@ -1001,7 +1001,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7290-1-2025-직업계고-현장실습생-보험가입-및-수당-세무회계처리-pdf",
@@ -1025,7 +1025,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-126838-0-교안-반도체-사업장-현장실습생을-위한-건강관리-길잡이-ppt-pptx",
@@ -1049,7 +1049,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-37096-0-붙임1-2021학년도-직업계고-현장실습-운영-매뉴얼-서식-hwp",
@@ -1077,7 +1077,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-37096-1-붙임2-안내-산업체-현장실습-참여-동의서-학부모-동의서-서식-안내-pptx",
@@ -1105,7 +1105,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-3-서식-2025년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1133,7 +1133,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-4-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
@@ -1161,7 +1161,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-4-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1189,7 +1189,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-0-안전보건공단-직업계고-카드북1-차량계-건설기계작업-웹용-pdf",
@@ -1213,7 +1213,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-1-안전보건공단-직업계고-카드북2-중량물운반-웹용-pdf",
@@ -1237,7 +1237,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-2-안전보건공단-직업계고-카드북3-금속성형기계작업-웹용-pdf",
@@ -1261,7 +1261,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-3-안전보건공단-직업계고-카드북4-금속절삭기계-웹용-pdf",
@@ -1285,7 +1285,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-4-안전보건공단-직업계고-카드북5-식품제조작업-웹용-pdf",
@@ -1309,7 +1309,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-132949-5-안전보건공단-직업계고-카드북6-세척제취급작업-웹용-pdf",
@@ -1333,7 +1333,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134917-0-붙임-2024-현장실습-매뉴얼-주요-변경사항-신구대조표-hwpx",
@@ -1361,7 +1361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-3-2025-직업계고-현장실습생-강의안-최종-25-06-30-pdf",
@@ -1385,7 +1385,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145895-4-2026-직업계고-현장실습생-강의안-최종-pdf",
@@ -1409,7 +1409,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-72151-0-산업안전-매뉴얼-pdf",
@@ -1433,7 +1433,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-65570-0-최종-2022-직업계고-현장실습생-대상-강의안-pdf",
@@ -1457,7 +1457,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-127332-0-1-1-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
@@ -1481,7 +1481,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-127332-2-1-2-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-hwp",
@@ -1505,7 +1505,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145895-2-1-통합본-2026년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -1529,7 +1529,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-128160-0-1-2023년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -1553,7 +1553,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-0-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
@@ -1577,7 +1577,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134988-0-1-직업계고-현장실습-운영-공통-매뉴얼-안내-2024년-개정-주요-변경사항-pdf",
@@ -1601,7 +1601,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-38639-0-1-한국공인노무사회-2021-직업계고-산업안전-매뉴얼-pdf",
@@ -1625,7 +1625,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-33248-0-1-한국공인노무사회-직업계고-실험-실습실-안전보건관리-매뉴얼-pdf",
@@ -1649,7 +1649,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145895-3-2-공업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -1673,7 +1673,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-127332-1-2-2023년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -1701,7 +1701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-1-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
@@ -1725,7 +1725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134988-1-2-직업계고-현장실습-운영의-이해-pdf",
@@ -1749,7 +1749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-33248-1-2-한국공인노무사회-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -1773,7 +1773,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-30450-0-2019학년도-직업계고-현장실습-운영-매뉴얼-수정본-hwp",
@@ -1797,7 +1797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-29681-0-2019학년도-직업계고-현장실습-운영-안내자료-배포용-pptx",
@@ -1821,7 +1821,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-4237-0-현장실습-참여-기업-지원정책-현황-수정-pdf",
@@ -1845,7 +1845,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-32692-0-2020학년도-직업계고-현장실습-운영-안내자료-배부용-pdf",
@@ -1869,7 +1869,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-73129-0-2022개정-직업계고현장실습운영공통매뉴얼-학교용-최종본-0630-hwp",
@@ -1893,7 +1893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-65309-0-2022년-개정-직업계고-현장실습-운영-공통-매뉴얼-학교용-1-pdf",
@@ -1917,7 +1917,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6641-0-매뉴얼-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-pdf",
@@ -1941,7 +1941,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-6465-0-붙임1-2023학년도-현장실습-지원금-통합신청-사전신청-매뉴얼-학생용-pdf",
@@ -1969,7 +1969,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-6465-1-붙임2-2023학년도-현장실습-지원금-faq-pdf",
@@ -1997,7 +1997,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6470-0-1-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-기업용-1-pdf",
@@ -2021,7 +2021,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6470-1-2-2023년-개정-현장실습-간편-매뉴얼-기업용-1-pdf",
@@ -2045,7 +2045,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-127566-0-2023년-개정-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
@@ -2069,7 +2069,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-127566-1-2023년-개정-현장실습-간편-매뉴얼-기업용-pdf",
@@ -2093,7 +2093,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-127647-0-2023년-개정-현장실습-간편-매뉴얼-학교용-pdf",
@@ -2117,7 +2117,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-127696-1-2023년-hifive-현장실습-관리시스템-매뉴얼-학교-pdf",
@@ -2141,7 +2141,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-127696-0-2023년-hifive-현장실습-활용-매뉴얼-학생-pdf",
@@ -2165,7 +2165,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7128-0-2024-직업계고-취업실무-매뉴얼-내지-학생용-pdf",
@@ -2189,7 +2189,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7147-0-최종-2024-직업계고-취업실무-매뉴얼-내지-교사용-pdf",
@@ -2213,7 +2213,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6962-0-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
@@ -2241,7 +2241,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6963-0-서식-2024년-개정-직업계고-현장실습-매뉴얼-서식모음집-hwp",
@@ -2269,7 +2269,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6961-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
@@ -2297,7 +2297,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6961-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
@@ -2325,7 +2325,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-3-2024년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -2349,7 +2349,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-0-2024년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
@@ -2373,7 +2373,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-1-2024년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
@@ -2397,7 +2397,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-2-2024년-직업계고-현장실습-산업안전-핸드북-농수산상업및가사-pdf",
@@ -2421,7 +2421,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-135480-4-2024년-직업계고-현장실습생-대상-강의안-pdf",
@@ -2445,7 +2445,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134651-0-2024년-hifive-현장실습-관리시스템-매뉴얼-학교용-pdf",
@@ -2469,7 +2469,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134651-1-2024년-hifive-현장실습-관리시스템-매뉴얼-학생용-pdf",
@@ -2493,7 +2493,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6959-0-2024년-hifive-현장실습-관리시스템-매뉴얼-학생용-pdf",
@@ -2517,7 +2517,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7198-0-2024학년도-고졸-취업-활성화-지원-사업-안내-리플릿-pdf",
@@ -2541,7 +2541,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7347-0-2025-직업계고-취업실무-매뉴얼-내지-학생용-최종-pdf",
@@ -2565,7 +2565,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7331-0-2025-직업계고-취업실무-매뉴얼-최종-pdf",
@@ -2589,7 +2589,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-141253-0-2025-현장실습-바로가기-및-실습일지-작성방법-휴대폰용-pdf",
@@ -2613,7 +2613,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-0-2025년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -2637,7 +2637,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-1-2025년-직업계고-현장실습-산업안전-핸드북-건설-pdf",
@@ -2661,7 +2661,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-4-2025년-직업계고-현장실습-산업안전-핸드북-공업-pdf",
@@ -2685,7 +2685,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-141274-2-2025년-직업계고-현장실습-산업안전-핸드북-농업-수산-해운-상업-및-가사-실업-pdf",
@@ -2709,7 +2709,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7313-0-2025-직업계고-현장실습생-보험가입-및-수당-세무회계처리-pdf",
@@ -2733,7 +2733,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-2-2025년-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf",
@@ -2757,7 +2757,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-0-2025년-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf",
@@ -2781,7 +2781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-140473-1-2025년-hifive-사용자-매뉴얼-학생용-250820-pdf",
@@ -2805,7 +2805,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-140473-0-2025년-hifive-현장실습-관리시스템-매뉴얼-학교용-v-1-4-250820-pdf",
@@ -2829,7 +2829,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7294-0-01-2025학년도-현장실습-지원금-통합신청-매뉴얼-pdf",
@@ -2853,7 +2853,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7294-1-02-2025학년도-현장실습-지원금-faq-pdf",
@@ -2877,7 +2877,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7638-0-2026-직업계고-취업실무매뉴얼-교사용-최종-pdf",
@@ -2901,7 +2901,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7637-0-2026-직업계고-취업실무매뉴얼-학생용-최종-pdf",
@@ -2925,7 +2925,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7607-0-2026-현장실습-기업현장교육-지원-pdf",
@@ -2949,7 +2949,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7606-0-2026-현장실습-지원금-신청방법-pdf",
@@ -2973,7 +2973,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145403-0-2026-hifive-시스템-매뉴얼-학교용-0907-pdf",
@@ -2997,7 +2997,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145403-1-2026-hifive-시스템-매뉴얼-학생용-0819-pdf",
@@ -3021,7 +3021,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7578-0-서식-2026년-개정-직업계고-현장실습-공통매뉴얼-서식모음집-hwp",
@@ -3049,7 +3049,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-3-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-기업용-pdf",
@@ -3073,7 +3073,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145174-2-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-리플릿-학교용-pdf",
@@ -3097,7 +3097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-0-1-통합본-2026년-직업계고-현장실습-산업안전-매뉴얼-pdf",
@@ -3121,7 +3121,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-1-2-공업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -3145,7 +3145,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-2-3-건설-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -3169,7 +3169,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7634-3-4-농업-수산해운-상업-가사실업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -3193,7 +3193,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7574-0-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-책자-기업용-pdf",
@@ -3217,7 +3217,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7574-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-기업용-pdf",
@@ -3241,7 +3241,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7553-0-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-책자-학교용-pdf",
@@ -3265,7 +3265,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7553-1-2026년-개정-직업계고-현장실습-운영-공통매뉴얼-학교용-pdf",
@@ -3289,7 +3289,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7575-0-2026-hifive-시스템-매뉴얼-학교용-0519-압축-pdf",
@@ -3313,7 +3313,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7575-1-2026-hifive-시스템-매뉴얼-학생용-0818-pdf",
@@ -3337,7 +3337,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-6958-0-2024년-개인정보활용동의서-서식-hwp",
@@ -3365,7 +3365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145895-0-3-건설-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -3389,7 +3389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-128161-0-3-2023년-직업계고-현장실습생-대상-강의안-pdf",
@@ -3413,7 +3413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-38639-1-3-한국공인노무사회-2021-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
@@ -3437,7 +3437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-33248-2-3-한국공인노무사회-직업계고-현장실습-기업지원정책-전단-pdf",
@@ -3461,7 +3461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-145895-1-4-농업-수산해운-상업-가사실업-2026년-직업계고-현장실습-산업안전-핸드북-pdf",
@@ -3485,7 +3485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-33248-3-4-한국공인노무사회-2020-실습생을-위한-꼭-알아야-할-현장실습-미니책자-pdf",
@@ -3509,7 +3509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7314-0-서식-기업현장교사-자격-확인서-hwp",
@@ -3537,7 +3537,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-1-리플릿-직업계고-현장실습-운영-공통-매뉴얼-기업용-최종-pdf",
@@ -3561,7 +3561,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-140762-4-리플릿-직업계고-현장실습-운영-공통-매뉴얼-학교용-최종-pdf",
@@ -3585,7 +3585,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-126838-1-반도체사업장-현장실습생-건강관리-길잡이-웹용-단면-pdf",
@@ -3609,7 +3609,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-65389-0-붙임-2022학년도-현장실습-지원금-사전신청-매뉴얼-최종-pdf",
@@ -3637,7 +3637,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-1-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-한글-hwp",
@@ -3665,7 +3665,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-0-붙임1-2024-직업계고-현장실습-운영-공통-매뉴얼-학교용-pdf-pdf",
@@ -3693,7 +3693,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-3-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-한글-hwp",
@@ -3721,7 +3721,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134743-2-붙임2-2024-직업계고-현장실습-운영-공통-매뉴얼-기업용-pdf-pdf",
@@ -3749,7 +3749,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-46051-0-붙임2-실습기업-수정-기능-이용-매뉴얼-pdf",
@@ -3777,7 +3777,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-44049-1-안전-권익-확보를-위한-직업계고-현장실습-추가-개선방안-hwp",
@@ -3801,7 +3801,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-75109-0-직업계고-현장실습-운영-간편-매뉴얼-기업용-0713-pdf",
@@ -3825,7 +3825,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-75109-1-직업계고-현장실습-운영-간편-매뉴얼-학생-학교용-0713-pdf",
@@ -3849,7 +3849,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-75109-2-직업계고-현장실습-운영-매뉴얼-기업용-내지0713-pdf",
@@ -3873,7 +3873,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-75109-3-직업계고-현장실습-운영-매뉴얼-학교용-내지0713-pdf",
@@ -3897,7 +3897,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7767-0-현장실습-중점관리-기업-현황-xls",
@@ -3921,7 +3921,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-0-붙임1-2021학년도-현장실습-지원금-신청-매뉴얼-pdf",
@@ -3949,7 +3949,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-1-붙임2-2021학년도-현장실습-지원금-업무처리기준-안-pdf",
@@ -3977,7 +3977,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5532-2-붙임3-2021학년도-현장실습-지원금-q-a-pdf",
@@ -4005,7 +4005,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-field-training-7576-0-현장실습생-노동인권-권익보호-및-산업안전보건교육-관리자-매뉴얼-총괄교사용-pdf",
@@ -4029,7 +4029,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134596-1-hifive-권한-부여-사용자-매뉴얼-공인노무사회-pdf",
@@ -4053,7 +4053,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-134596-0-hifive-권한-부여-사용자-매뉴얼-학교-pdf",
@@ -4077,7 +4077,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-hifive-education-library-143951-0-q-실습일지-휴무일-처리-매뉴얼-pdf",
@@ -4101,7 +4101,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5469-0-조기취업형-계약학과-선도대학육성-사업개요-pdf",
@@ -4125,7 +4125,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "harvest-sen-highjob-employment-policy-5469-1-조기취업형-계약학과-참여대학-홈페이지-및-연락처-pdf",
@@ -4149,21 +4149,21 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-school-violence-1548192-0-25-학교폭력-사안처리-가이드북-pdf",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-school-accounting-1564258-1-최종-2026학년도-공립학교회계-예산편성-기본지침-pdf",
+      "category": "schoolAdmin",
       "type": "guide",
-      "title": "사용자 - '25 학교폭력 사안처리 가이드북",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사안처리 사용자 '25 학교폭력 사안처리 가이드북.pdf",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/04/022CC18A-033A-37BD-E189-997CB87C3F9B.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "title": "안내·지침서 - (최종) 2026학년도 공립학교회계 예산편성 기본지침",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 (최종) 2026학년도 공립학교회계 예산편성 기본지침.pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1564258/doc_ecf4v04ac=c1v77=42vb5=bevb7=fa32v4a1avbc59_v4417.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -4173,21 +4173,21 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-school-violence-1569593-0-26-학교폭력-사안처리-가이드북-pdf",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-school-accounting-1297292-0-2023-3-2-2023학년도-학교회계-예산편성-기본지침-최종-개정사항-반영-pdf",
+      "category": "schoolAdmin",
       "type": "guide",
-      "title": "사용자 - '26 학교폭력 사안처리 가이드북",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사용자 '26 학교폭력 사안처리 가이드북.pdf",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/03/9CA0E6C1-EBB5-5E10-9586-5F16C1E16D8A.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "title": "안내·지침서 - ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영.pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1297292/doc_6963v319b=37vbf=42ve8=93vf3=6406v8298vc299_v8158.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -4197,349 +4197,349 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-sexual-awareness-588219-1-서식-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-hwp",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-school-accounting-1459768-0-2025-공립학교회계예산편성-지침-최종-인쇄본-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - ★★ 2025 공립학교회계예산편성 지침 최종(인쇄본)",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 ★★ 2025 공립학교회계예산편성 지침 최종(인쇄본).pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1459768/doc_9a98vc876=72v84=4dv2b=b3v1f=f910vaa81v044b_v4304.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1459768-1-2025학년도-공립학교회계-예산편성-기본지침-인쇄본-hwp",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - ★★2025학년도_공립학교회계_예산편성_기본지침(인쇄본)",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 ★★2025학년도_공립학교회계_예산편성_기본지침(인쇄본).hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1459768/doc_97edv79dc=ebv17=4cvd1=94vc9=d1c4vc4b0vbd1d_v6834.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-389975-0-2020학년도-학교회계-예산편성-기본지침-2019-11-29-홈페이지-hwp",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - 2020학년도 학교회계 예산편성 기본지침(2019.11.29.)_홈페이지",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 2020학년도 학교회계 예산편성 기본지침(2019.11.29.)_홈페이지.hwp",
+      "url": "https://www.gbe.kr/uploads/BOARD/2019/12/BOARD_201912031155438051691859.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1357166-0-2024학년도-공립학교회계-예산편성-기본지침-홈페이지-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - 2024학년도 공립학교회계 예산편성 기본지침(홈페이지)",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 2024학년도 공립학교회계 예산편성 기본지침(홈페이지).pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1357166/doc_71bfv0650=0cv3c=41v4a=94vf8=d70av97e6v0bc8_v4599.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1610395-0-2026학년도-공립학교회계-예산편성-기본지침-변경사항-게시용-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용)",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용).pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1610395/doc_c838vf80a=ddva5=4ave4=9av58=197evf130v2fe9_v307.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1564258-0-2026학년도-공립학교회계-예산편성-기본지침-hwp",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - 2026학년도_공립학교회계_예산편성_기본지침",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 2026학년도_공립학교회계_예산편성_기본지침.hwp",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1564258/doc_5b9cv3bc9=ebvac=4cv31=9bv7e=1161vc3c0v586a_v5123.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1475036-0-일잘러의학교회계실무-pdf",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - 일잘러의학교회계실무",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 일잘러의학교회계실무.pdf",
+      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1475036/doc_5d34v1f14=d7vb6=48v7c=81vbb=4451v2439v2bdb_v2384.pdf",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1610395-1-정보공개-운영-매뉴얼",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-school-accounting-1610395-2-pdf-다운로드",
+      "category": "schoolAdmin",
+      "type": "guide",
+      "title": "안내·지침서 - PDF 다운로드",
+      "provider": "경상북도교육청",
+      "query": "학교회계 안내·지침서 PDF 다운로드",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
+      "priority": "high",
+      "source": "official-file-harvest",
+      "missionLabel": "경북교육청 학교회계 안내·지침서",
+      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
+      "qualityScore": 98,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "harvest-gbe-student-life-1285472-0-붙임1-교사용-학생-자살-징후-체크리스트-hwp",
+      "category": "studentLife",
       "type": "form",
-      "title": "사용자 - (서식) 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "사안처리 사용자 (서식) 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼.hwp",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644762.hwp",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "title": "자료실 - [붙임1] 교사용 학생 자살 징후 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 자료실 [붙임1] 교사용 학생 자살 징후 체크리스트.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644762.hwp",
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-sexual-awareness-1562027-0-교육부-학교-내-성희롱-성폭력-사안대응-업무안내서-2025년-개정-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - [교육부]학교 내 성희롱 성폭력 사안대응 업무안내서(2025년 개정)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 [교육부]학교 내 성희롱 성폭력 사안대응 업무안내서(2025년 개정).pdf",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/CF568C9D-4783-CC44-0C17-8D718F500467.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-588219-0-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - ★ 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "사안처리 사용자 ★ 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼.pdf",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644761.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-school-violence-1509624-0-1-2023년-사안처리-가이드북-hwpx",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 1. 2023년 사안처리 가이드북",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사안처리 사용자 1. 2023년 사안처리 가이드북.hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2023/07/57ECC6D4-D655-BD66-ADD7-6C9A3432E1AC.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-1560985-0-16-디지털-성폭력-및-딥페이크등-예방교육자료-제작-최종-보고서-제출-pdf",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-student-life-1186466-0-3-교사용-학생-자살징후-체크리스트-hwp",
+      "category": "studentLife",
       "type": "form",
-      "title": "사용자 - 16. 디지털 성폭력 및 딥페이크등 예방교육자료 제작 최종 보고서(제출)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 16. 디지털 성폭력 및 딥페이크등 예방교육자료 제작 최종 보고서(제출).pdf",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3DA6A511-69E9-F3F9-4C97-AB346E22FBBD.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "title": "자료실 - 3. 교사용 학생 자살징후 체크리스트",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 자료실 3. 교사용 학생 자살징후 체크리스트.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3DA6A511-69E9-F3F9-4C97-AB346E22FBBD.pdf",
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-school-violence-1512170-0-2-2023-학교폭력-사안처리-세부설명-a-to-z-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 2. 2023. 학교폭력 사안처리 세부설명 A to Z",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사안처리 사용자 2. 2023. 학교폭력 사안처리 세부설명 A to Z.pdf",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2023/09/1F60CC1A-916E-DA03-FE66-6492C7E32042.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-583028-0-2022년-폭력예방교육-운영안내-지침-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 2022년 폭력예방교육 운영안내(지침)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "예방교육 사용자 2022년 폭력예방교육 운영안내(지침).pdf",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16444682231.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-school-violence-1535303-0-2024-1차-학교폭력-실태조사-결과-hwp",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 2024. 1차 학교폭력 실태조사 결과",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사용자 2024. 1차 학교폭력 실태조사 결과.hwp",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/09/40329B09-5570-6F46-F4B6-9A14F8EF17D7.hwp",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-school-violence-1549081-0-2024-2차-학교폭력-실태-표본-조사-결과-최종-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 2024. 2차 학교폭력 실태(표본)조사 결과_최종",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사용자 2024. 2차 학교폭력 실태(표본)조사 결과_최종 .pdf",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/05/B1609003-3E6B-4D2B-9846-CF5D41B19374.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-1525064-0-2024년-사건통보서-및-재발방지대책-제출-서식-hwp",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-student-life-961271-0-개정-학교폭력예방-및-대책에-관한-법률-시행-관련-안내-최종-학생생활과-hwp",
+      "category": "studentLife",
       "type": "form",
-      "title": "사용자 - 2024년 사건통보서 및 재발방지대책 제출 서식",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 2024년 사건통보서 및 재발방지대책 제출 서식.hwp",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2024/04/B2694D0A-ED33-0136-20EA-B36A524AE3F7.hwp",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "title": "자료실 - 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 안내(최종)-학생생활과-",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 자료실 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 안내(최종)-학생생활과-.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_eb1cv9470=1bv5a=4cv0f=83v8f=f339vdaf4v20e2_v426.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2024/04/B2694D0A-ED33-0136-20EA-B36A524AE3F7.hwp",
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_eb1cv9470=1bv5a=4cv0f=83v8f=f339vdaf4v20e2_v426.hwp",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-school-violence-1532095-0-2024년-학교폭력-사안처리-가이드북-개정안-hwpx",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 2024년 학교폭력 사안처리 가이드북 개정안",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사안처리 사용자 2024년 학교폭력 사안처리 가이드북 개정안.hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/07/2B8746F1-D91A-9198-AB2E-3AD3CEC07373.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-school-violence-1559065-0-2025-1차-학교폭력-실태-전수-조사-결과-누리집용-hwp",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 2025. 1차 학교폭력 실태(전수)조사 결과(누리집용)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사용자 2025. 1차 학교폭력 실태(전수)조사 결과(누리집용).hwp",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/11/15C12F59-7697-5891-98C8-8FC9E7CF31CD.hwp",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-school-violence-1548192-1-2025-학교폭력-사안처리-세부설명-a-to-z-서식모음집-hwpx",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-student-life-961271-1-개정-학교폭력예방-및-대책에-관한-법률-시행-관련-학교용-각종-서식-hwp",
+      "category": "studentLife",
       "type": "form",
-      "title": "사용자 - 2025. 학교폭력 사안처리 세부설명 A to Z (서식모음집)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사안처리 사용자 2025. 학교폭력 사안처리 세부설명 A to Z (서식모음집).hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/08/7CD816BB-2537-3414-6031-21F8A3CF39FC.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "title": "자료실 - 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 학교용 각종 서식",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 자료실 개정 학교폭력예방 및 대책에 관한 법률 시행 관련 학교용 각종 서식.hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_aa01v8fca=abvb6=48v30=a7v73=d4b7va536v1c2a_v7710.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/08/7CD816BB-2537-3414-6031-21F8A3CF39FC.hwpx",
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_961271/doc_aa01v8fca=abvb6=48v30=a7v73=d4b7va536v1c2a_v7710.hwp",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-school-violence-1570140-0-2025년-2차-학교폭력-실태-표본-조사-결과-누리집-탑재용-hwpx",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-student-life-1542123-0-정보공개-운영-매뉴얼",
+      "category": "studentLife",
       "type": "guide",
-      "title": "사용자 - 2025년 2차 학교폭력 실태(표본)조사 결과(누리집 탑재용)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사용자 2025년 2차 학교폭력 실태(표본)조사 결과(누리집 탑재용).hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/04/60EA93F7-7E85-9701-A93C-0EEEDC1FA1C7.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "title": "자료실 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "성폭력 자료실 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
@@ -4549,442 +4549,94 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-school-violence-1580132-0-2026-1차-학교폭력-실태조사-결과-누리집용-hwpx",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 2026. 1차 학교폭력 실태조사 결과(누리집용)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사용자 2026. 1차 학교폭력 실태조사 결과(누리집용).hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/10/473481FA-70B1-FF02-B6AE-DFFFE943C735.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-school-violence-1576546-0-2026-학교폭력-피해학생-전문교육기관-선정-결과-공고문-안내용-hwpx",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 2026. 학교폭력 피해학생 전문교육기관 선정 결과 공고문(안내용)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사용자 2026. 학교폭력 피해학생 전문교육기관 선정 결과 공고문(안내용).hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/07/4A44E2E3-B20E-E8FC-989A-4AFB37CCFA2B.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-school-violence-1511311-0-23년-학교폭력-사안처리-가이드북-한글파일-hwpx",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 23년 학교폭력 사안처리 가이드북(한글파일)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "가이드북 사용자 23년 학교폭력 사안처리 가이드북(한글파일).hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/07/A84E1F3B-C9FF-9D13-464E-D7CF150AD62C.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-1575631-0-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-student-life-1285472-1-정보공개-운영-매뉴얼",
+      "category": "studentLife",
       "type": "form",
-      "title": "사용자 - 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식.xlsx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2026/07/70A07090-52E0-B0E0-1CE0-777EC508BDB9.xlsx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "title": "자료실 - 정보공개 운영 매뉴얼",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "체크리스트 자료실 정보공개 운영 매뉴얼",
+      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2026/07/70A07090-52E0-B0E0-1CE0-777EC508BDB9.xlsx",
+        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-sexual-awareness-583659-0-게시용-2022-성희롱-성폭력-사안처리지원단-구성-운영-계획-hwp",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 게시용) 2022. 성희롱·성폭력 사안처리지원단 구성·운영 계획",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "사안처리 사용자 게시용) 2022. 성희롱·성폭력 사안처리지원단 구성·운영 계획.hwp",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475261.hwp",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-573475-0-교육부-양성평등정책담당관-학교-내-성희롱-성폭력-사안처리-사례집-배포용-2020-12월-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 교육부 양성평등정책담당관_학교 내 성희롱 성폭력 사안처리 사례집(배포용)2020.12월",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "사안처리 사용자 교육부 양성평등정책담당관_학교 내 성희롱 성폭력 사안처리 사례집(배포용)2020.12월.pdf",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16202979431.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-1562027-1-단계별-관련-서식-2025개정판-학교내성희롱성폭력사안대응업무안내서-hwpx",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-student-life-1192624-1-제출서식-동의서-hwp",
+      "category": "studentLife",
       "type": "form",
-      "title": "사용자 - 단계별 관련 서식_[2025개정판]학교내성희롱성폭력사안대응업무안내서",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 단계별 관련 서식_[2025개정판]학교내성희롱성폭력사안대응업무안내서.hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3AECD204-2541-B00C-16BC-3C1F90779283.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "title": "자료실 - 제출서식(동의서)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 자료실 제출서식(동의서).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3AECD204-2541-B00C-16BC-3C1F90779283.hwpx",
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-school-violence-572186-0-사안처리-핸드북-발송용-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 사안처리 핸드북(발송용)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사안처리 사용자 사안처리 핸드북(발송용).pdf",
-      "url": "https://www.cbe.go.kr/upload/na_old/7c106bed-9ac3-4285-9b5f-a23b372a0c00/2021/16174263511.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-583659-1-성희롱-성폭력-사안처리지원단-외부지원-신청서-hwp",
-      "category": "schoolViolenceSafety",
+      "id": "harvest-gbe-student-life-1192624-0-제출서식-소방시설등-자체점검-실시결과-보고서-hwp",
+      "category": "studentLife",
       "type": "form",
-      "title": "사용자 - 성희롱·성폭력 사안처리지원단 외부지원 신청서",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "사안처리 사용자 성희롱·성폭력 사안처리지원단 외부지원 신청서.hwp",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475262.hwp",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "title": "자료실 - 제출서식(소방시설등 자체점검 실시결과 보고서)",
+      "provider": "경상북도교육청 학생생활과",
+      "query": "관련 서식 자료실 제출서식(소방시설등 자체점검 실시결과 보고서).hwp",
+      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
+      "searchDomain": "gbe.kr",
+      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
       "priority": "high",
       "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
+      "missionLabel": "경북교육청 학생생활과 자료실",
       "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
       "qualityScore": 98,
       "includeInLibrary": true,
       "needsDirectUrl": false,
       "extraction": {
         "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475262.hwp",
+        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
         "status": "queued_for_verified_pdf_docx_split",
         "outputFormats": [
           "pdf",
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "harvest-cbe-sexual-awareness-1575631-1-성희롱성폭력-사안발생-미-통보-동의서-서식-hwpx",
-      "category": "schoolViolenceSafety",
-      "type": "form",
-      "title": "사용자 - 성희롱성폭력 사안발생 (미)통보 동의서(서식)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 성희롱성폭력 사안발생 (미)통보 동의서(서식).hwpx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2026/07/2E6E9BBF-8E23-E2EF-ABFD-9B87A99217A0.hwpx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2026/07/2E6E9BBF-8E23-E2EF-ABFD-9B87A99217A0.hwpx",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-568298-0-여성가족부-권익기반과-2021년-폭력예방교육-운영안내-지침-최종-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 여성가족부 권익기반과_2021년 폭력예방교육 운영안내(지침)_최종",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "예방교육 사용자 여성가족부 권익기반과_2021년 폭력예방교육 운영안내(지침)_최종.pdf",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16127450531.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-1544100-0-여성가족부-성폭력방지과-번-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
-      "category": "schoolViolenceSafety",
-      "type": "form",
-      "title": "사용자 - 여성가족부 성폭력방지과_②번 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 여성가족부 성폭력방지과_②번 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식.xlsx",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/2EBCEF60-57EC-43F2-A45A-0A1F2D068932.xlsx",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/2EBCEF60-57EC-43F2-A45A-0A1F2D068932.xlsx",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-1541549-0-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼.pdf",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/01/9F3CA501-1CA3-B09C-13B9-FA4C912389D7.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-1541549-1-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-단계별-관련-서식-hwp",
-      "category": "schoolViolenceSafety",
-      "type": "form",
-      "title": "사용자 - 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼 [단계별 관련 서식]",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "성폭력 사용자 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼 [단계별 관련 서식].hwp",
-      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/CA0E6530-3591-F9C6-F7D7-900C9EF26B4C.hwp",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/CA0E6530-3591-F9C6-F7D7-900C9EF26B4C.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-578707-0-충청북도교육청용-교직원-성희롱-성폭력-사안처리-대응-매뉴얼-2021-9-hwp",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 충청북도교육청용 교직원 성희롱 성폭력 사안처리 대응 매뉴얼 (2021.9.)",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "사안처리 사용자 충청북도교육청용 교직원 성희롱 성폭력 사안처리 대응 매뉴얼 (2021.9.).hwp",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16334319591.hwp",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-sexual-awareness-588221-0-학교-내-성희롱-성폭력-사안처리지원단-업무매뉴얼-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 학교 내 성희롱 성폭력 사안처리지원단 업무매뉴얼",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "사안처리 사용자 학교 내 성희롱 성폭력 사안처리지원단 업무매뉴얼.pdf",
-      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521646551.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 성인식개선 자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "harvest-cbe-school-violence-545690-0-학교폭력-사안처리-가이드북-일부개정판-pdf",
-      "category": "schoolViolenceSafety",
-      "type": "guide",
-      "title": "사용자 - 학교폭력 사안처리 가이드북-일부개정판",
-      "provider": "충청북도교육청 인성시민과",
-      "query": "학교폭력 사안처리 사용자 학교폭력 사안처리 가이드북-일부개정판.pdf",
-      "url": "https://www.cbe.go.kr/upload/na_old/7c106bed-9ac3-4285-9b5f-a23b372a0c00/2019/15699401241.pdf",
-      "searchDomain": "cbe.go.kr",
-      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
-      "priority": "high",
-      "source": "official-file-harvest",
-      "missionLabel": "충북교육청 학교폭력예방교육자료실",
-      "reason": "공식 게시글 상세 화면에서 첨부파일 직접 URL을 추출",
-      "qualityScore": 98,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "careerEmployment",
       "type": "form",
       "title": "각종 서식 - [1-3] 자기소개서",
@@ -5009,10 +4661,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "careerEmployment",
       "type": "form",
       "title": "각종 서식 - [서식 9-5] 면접질문지",
@@ -5037,10 +4689,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "careerEmployment",
       "type": "form",
       "title": "각종 서식 - [서식 9-6] 면접심사점수지계표",
@@ -5065,7 +4717,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-직업계고-구인의뢰-운영-안내",
@@ -5089,7 +4741,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-고졸-청년층-취업지원-프로그램-hi",
@@ -5113,7 +4765,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-고졸청년층-취업지원프로그램-개발-연구",
@@ -5137,7 +4789,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-대한상공회의소-국가기술자격-시험-출제자료",
@@ -5161,7 +4813,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-서울교육청-직업계고-취업-정책-안내",
@@ -5185,7 +4837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-직무별-자기소개서-작성-가이드",
@@ -5209,7 +4861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-졸업자-취업통계-조사-운영",
@@ -5233,7 +4885,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-중앙취업지원센터-설립-운영-방안",
@@ -5257,7 +4909,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-채용연계형-직무교육과정-지원",
@@ -5281,7 +4933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-학생-취업지원-만족도와-취업성과",
@@ -5305,7 +4957,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-취업지원-서비스-제공을-위한-취업상담-매뉴얼",
@@ -5333,7 +4985,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5357,7 +5009,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5385,7 +5037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5413,7 +5065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5437,7 +5089,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5461,7 +5113,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5485,7 +5137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5509,7 +5161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5533,7 +5185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5557,7 +5209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5585,7 +5237,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5613,7 +5265,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5637,7 +5289,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5661,7 +5313,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5685,7 +5337,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5709,7 +5361,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5737,7 +5389,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5765,7 +5417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5789,7 +5441,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5813,7 +5465,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-취창업지원센터-일반자료실",
@@ -5837,7 +5489,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-경기교육청-현장실습-선도기업-인정-절차",
@@ -5861,10 +5513,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "fieldTraining",
       "type": "form",
       "title": "교육실습생 평가 및 유의사항 - [서식-중등-3-6-3-1]학교현장실습 결과 보고서 양식",
@@ -5889,10 +5541,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "fieldTraining",
       "type": "form",
       "title": "교육실습생 평가 및 유의사항 - [서식-중등-3-6-3-2]학교현장실습 결과 확인서 양식",
@@ -5917,10 +5569,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "fieldTraining",
       "type": "form",
       "title": "교육실습생 평가 및 유의사항 - [서식-중등-3-6-3-3]학교현장실습 결과 총괄표 양식",
@@ -5945,7 +5597,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-대한상공회의소-직업훈련-특성화고-지원사업",
@@ -5969,7 +5621,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -5997,7 +5649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6025,7 +5677,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6049,7 +5701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-서울교육청-직업계고-현장실습-자료실",
@@ -6073,7 +5725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-직업계고-취업지원관-업무-매뉴얼",
@@ -6097,7 +5749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6121,7 +5773,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6149,7 +5801,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6177,7 +5829,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6205,7 +5857,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6233,7 +5885,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6261,7 +5913,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6285,7 +5937,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6309,7 +5961,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6333,7 +5985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6357,7 +6009,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6385,7 +6037,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6413,7 +6065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6441,7 +6093,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6465,7 +6117,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6489,7 +6141,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6517,7 +6169,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6545,7 +6197,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6573,7 +6225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6601,10 +6253,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "1가정 2자녀 특수교육대상학생 지원 - [서식-중특-8-4-4-1] 1가정 2자녀 특수교육대상학생 지원 신청서",
@@ -6629,10 +6281,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "1가정 2자녀 특수교육대상학생 지원 - [서식-중특-8-4-4-2] 1가정 2자녀 특수교육대상학생 지원 내역(학교 보관용)",
@@ -6657,10 +6309,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "1가정 2자녀 특수교육대상학생 지원 - [서식-중특-8-4-4-3] 1가정 2자녀 특수교육대상학생 지원 내역-체크리스트(지원 제외 항목 포함)",
@@ -6685,10 +6337,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "1가정 2자녀 특수교육대상학생 지원 - [서식-초특-7-4-3-1]특수교육대상학생 통학비 지원 신청서",
@@ -6713,10 +6365,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "1가정 2자녀 특수교육대상학생 지원 - [서식-초특-7-4-3-2]통학거리 확인 보충자료",
@@ -6741,10 +6393,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "1가정 2자녀 특수교육대상학생 지원 - [서식-초특-7-4-3-3]특수교육대상학생 통학비 지원 대상자 명부",
@@ -6769,10 +6421,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [1-2] 지원서",
@@ -6797,10 +6449,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [1-4] 채용서류반환청구서",
@@ -6825,10 +6477,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [1-7] 발령 문안 예시",
@@ -6853,10 +6505,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [서식 10] 자격취득에따른경력합산신청서",
@@ -6881,10 +6533,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [서식 11] 호봉획정을위한경력기간합산신청서",
@@ -6909,10 +6561,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [서식 7-1] 서약서 1",
@@ -6937,10 +6589,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [서식 7-2] 서약서 2",
@@ -6965,7 +6617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -6993,10 +6645,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [서식 9-2] 심사위원서약서",
@@ -7021,10 +6673,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "각종 서식 - [서식 9-3] 서류심사점수집계표",
@@ -7049,10 +6701,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-중등-8-2-1-1] 개별화교육계획서(예시안)",
@@ -7077,10 +6729,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-중등-8-2-1-2] 개별화교육계획 요구 조사서(예시안)",
@@ -7105,10 +6757,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-중등-8-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
@@ -7133,10 +6785,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-중등-8-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
@@ -7161,10 +6813,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-중등-8-2-1-6] 개별화교육계획 운영 자체 점검표",
@@ -7189,10 +6841,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-초등-7-2-1-1] 개별화교육계획서(예시안)",
@@ -7217,10 +6869,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-초등-7-2-1-2] 개별화교육계획 요구 조사서(예시안)",
@@ -7245,10 +6897,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-초등-7-2-1-4] 나이스 개별화교육계획 등록 동의서(예시안)",
@@ -7273,10 +6925,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-초등-7-2-1-5] 개별화교육지원팀 협의회 관련 서식(예시안)",
@@ -7301,10 +6953,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - [서식-초등-7-2-1-6] 개별화교육계획 운영 자체 점검표",
@@ -7329,10 +6981,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-1 개별화교육지원팀 운영안내 및 회의 유형 희망조사를 위한 가정통신문",
@@ -7357,10 +7009,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-10 개별화교육계획 운영 자체 점검표",
@@ -7385,10 +7037,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-2 개별화교육계획 기초 조사서",
@@ -7413,10 +7065,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-3 나이스 개별화교육계획 등록 동의",
@@ -7441,10 +7093,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-5 보호자 위임장",
@@ -7469,10 +7121,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-6 회의 안내 가정통신문",
@@ -7497,10 +7149,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-7 개별화교육지원팀 협의록",
@@ -7525,10 +7177,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-8 개별화교육지원팀 협의회 시나리오(예시)",
@@ -7553,10 +7205,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-9 개별화교육계획 서식",
@@ -7581,10 +7233,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "rule",
       "title": "경력 평정 관련 규정 - 2023학년도 교육공무원(초등) 인사관리지침",
@@ -7605,10 +7257,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "경력 평정 관련 규정 - 2024. 3. 1. 시행 각종 서식",
@@ -7633,10 +7285,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "rule",
       "title": "경력 평정 관련 규정 - 2026학년도 교육공무원(중등) 인사관리지침",
@@ -7657,7 +7309,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-고교생-맞춤형-고용서비스",
@@ -7681,7 +7333,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -7705,10 +7357,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "rule",
       "title": "근무성적 평정 관련 규정 - 2023학년도 교육공무원(초등) 인사관리지침",
@@ -7729,10 +7381,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "rule",
       "title": "근무성적 평정 관련 규정 - 2026학년도 교육공무원(중등) 인사관리지침",
@@ -7753,10 +7405,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "근무성적 평정 세부 방법 - [서식-교원인사-4-3-2-1]근무성적 평정점",
@@ -7781,10 +7433,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "guide",
       "title": "근무성적평정서 작성 및 제출 - 경상북도교육감 소속 지방공무원 평정업무 처리 지침(2025.8.)",
@@ -7805,10 +7457,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "guide",
       "title": "누리집(홈페이지) 운영 지침 - PDF 다운로드",
@@ -7829,10 +7481,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "보결수업 규정 - [서식-초등-1-4-1] 보결수업 배정 원칙(예시)",
@@ -7857,10 +7509,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "보결수업 규정 - [서식-초등-1-4-3] 보결 수업에 관한 규정",
@@ -7885,10 +7537,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "상담 및 치료 - [서식-초등-4-4-3-1] 인터넷·스마트폰 이용습관 진단조사 결과 위험사용자군 관리 각종 서식",
@@ -7913,10 +7565,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-1] 근무성적평정통계표",
@@ -7941,10 +7593,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-10] 특수학급 담당자 경력증명서",
@@ -7969,10 +7621,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-11] 농·어촌 교육 진흥 지정학교 근무 확인서",
@@ -7997,10 +7649,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-12] 도서·벽지 소재 교육기관 근무 확인서",
@@ -8025,10 +7677,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-13] 영재교육원 지도교사 근무 확인서",
@@ -8053,10 +7705,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-14] 정책지원학교 교사 근무 확인서",
@@ -8081,10 +7733,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-15] 교장.교감 승진후보자 근무 희망지",
@@ -8109,10 +7761,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-2] 경력평정표",
@@ -8137,10 +7789,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-3] 연수성적평정표",
@@ -8165,10 +7817,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-4] 가산점 평정표",
@@ -8193,10 +7845,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-5] 연수이수실적 평정자료",
@@ -8221,10 +7873,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-6] 교육공무원 승진 규정",
@@ -8249,10 +7901,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-7] 연구학교 근무 확인서",
@@ -8277,10 +7929,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-9] 보직교사 경력증명서",
@@ -8305,10 +7957,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "rule",
       "title": "연수성적 평정 관련 규정 - 2024학년도 교육공무원 초등, 중등 인사관리지침",
@@ -8329,10 +7981,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "rule",
       "title": "연수성적 평정 관련 규정 - 2026학년도 교육공무원 중등 인사관리지침",
@@ -8353,10 +8005,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "연수성적 평정 세부 방법 - [서식-교원인사-7-7-4-2] 교육성적 환산점 조견표",
@@ -8381,10 +8033,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-중등–7-11-1-1-1] 개인별상담카드",
@@ -8409,10 +8061,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-중등–7-11-1-1-2] 식습관조사",
@@ -8437,10 +8089,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-중등–7-11-1-1-3] 운동습관조사",
@@ -8465,10 +8117,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-중등–7-11-1-1-4] 행동습관조사",
@@ -8493,10 +8145,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-중등–7-11-1-1-5] 감정과 식품섭취에 대한 조사",
@@ -8521,10 +8173,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-중등–7-11-1-1-6] 가족 식습관 조사",
@@ -8549,10 +8201,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-중등–7-11-1-1-7] 개인별상담카드개인별 상담자 카드(학생)",
@@ -8577,10 +8229,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-초등–6-6-1-1] 개인별상담카드",
@@ -8605,10 +8257,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-초등–6-6-1-2] 식습관조사",
@@ -8633,10 +8285,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-초등–6-6-1-3] 운동습관조사",
@@ -8661,10 +8313,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-초등–6-6-1-4] 행동습관조사",
@@ -8689,10 +8341,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-초등–6-6-1-5] 감정과 식품섭취에 대한 조사",
@@ -8717,10 +8369,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-초등–6-6-1-6] 가족 식습관 조사",
@@ -8745,10 +8397,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "영양상담의 계획 - [서식-초등–6-6-1-7] 개인별상담카드개인별 상담자 카드(학생)",
@@ -8773,10 +8425,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "guide",
       "title": "영양상담의 계획 - 학교 영앙상담 매뉴얼",
@@ -8797,10 +8449,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "guide",
       "title": "영양상담의 계획 - 학교 영양상담 매뉴얼",
@@ -8821,10 +8473,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "의식과 의전 일반 지침 - [서식-관리-8-1-1-1] 의전 및 의식 세부 지침",
@@ -8849,10 +8501,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "의식과 의전 일반 지침 - [서식-관리-8-1-1-2] 각종 의식 예시안",
@@ -8877,7 +8529,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8901,7 +8553,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-law-직업교육훈련-촉진법",
@@ -8925,7 +8577,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-law-초-중등교육법",
@@ -8949,7 +8601,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8973,7 +8625,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -8997,10 +8649,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "치료지원 - [서식-중등-8-4-1-1] 치료지원서비스제공 계획서",
@@ -9025,10 +8677,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "치료지원 - [서식-초등-7-4-1-1] 치료지원서비스제공 계획서",
@@ -9053,10 +8705,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "치료지원 - 서식-유특-6-4-1-2. 특수교육관련서비스 바우처카드 발급 신청서",
@@ -9081,10 +8733,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "치료지원 - 서식-유특-6-4-1-3. 특수교육대상학생 치료지원 신청 안내 가정통신문(예시)",
@@ -9109,10 +8761,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "치료지원 - 서식-유특-6-4-1-6. 장애인학대관련범죄등 경력 조회 동의서",
@@ -9137,10 +8789,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "치료지원 - 서식-유특-6-4-1-7. 경북i짱짱카드 포인트 추가 요청서",
@@ -9165,10 +8817,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "치료지원 - 서식-유특-6-4-1-8. 특수교육대상학생 치료지원 내용 변경 신청서",
@@ -9193,7 +8845,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9221,10 +8873,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "타시･도교류(전출) - [서식] 나이스 기반 시·도간 희망내신 프로그램 매뉴얼",
@@ -9249,10 +8901,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "통합자료실 - (10월 탑재_업무처리지침 자료집 연계)2027학년도 대학수학능력시험 업무용 서식",
@@ -9277,10 +8929,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "통합자료실 - (7월 탑재) 2027학년도 대학수학능력시험 업무처리 서식",
@@ -9305,10 +8957,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "통합자료실 - [붙임 3 ] 2024학년도 학업성적관리업무 자체 점검표(단위학교용)",
@@ -9333,10 +8985,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "통합자료실 - [붙임] 교수-학습과정안(서식)",
@@ -9361,10 +9013,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "guide",
       "title": "통합자료실 - 1402 진로진학상담교사 배치 및 운영 지침 일부 개정_결재",
@@ -9385,10 +9037,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "guide",
       "title": "통합자료실 - 1402 진로진학상담교사 배치 및 운영 지침_결재",
@@ -9409,7 +9061,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -9437,10 +9089,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "통합자료실 - 제출서류1(착공서류 목록 및 서식)",
@@ -9465,10 +9117,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "통합자료실 - 제출서류2(공사중 제출서류 목록 및 서식)",
@@ -9493,10 +9145,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "통합자료실 - 제출서류3(준공서류 목록 및 서식)",
@@ -9521,10 +9173,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "guide",
       "title": "통합자료실 - 중등학교 진로전담교사 배치 및 운영 지침(2025)",
@@ -9545,10 +9197,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "통합자료실 - 학교주관 교복구매길라잡이(각종서식)",
@@ -9573,10 +9225,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육 자원봉사자 지원 - 서식-유특-6-5-2-1 자원봉사자 모집공고",
@@ -9601,10 +9253,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육 자원봉사자 지원 - 서식-유특-6-5-2-2 자원봉사활동 참여 신청서",
@@ -9629,10 +9281,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육 자원봉사자 지원 - 서식-유특-6-5-2-3 특수교육지원 자원봉사자 위촉장",
@@ -9657,10 +9309,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육 자원봉사자 지원 - 서식-유특-6-5-2-4 특수교육지원 자원봉사 확인서 및 활동 내역",
@@ -9685,10 +9337,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육 자원봉사자 지원 - 서식-유특-6-5-2-6 장애인학대관련범죄 등 경력 조회 동의서",
@@ -9713,10 +9365,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 선정 취소 - [서식-초등-7-1-4-1] 특수교육대상학생 선정·배치 취소 신청서",
@@ -9741,10 +9393,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 선정 취소 - [서식-초등-7-1-4-2] 개별화교육지원팀 협의록",
@@ -9769,10 +9421,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 선정 취소 - 서식-유특-6-1-4-1 특수교육대상학생 선정 · 배치 취소 신청(공문 양식)",
@@ -9797,10 +9449,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 선정 취소 - 서식-유특-6-1-4-2 특수교육대상학생 선정 · 배치 취소 신청서",
@@ -9825,10 +9477,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 선정 취소 - 서식-유특-6-1-4-4 개별화교육지원팀 협의록",
@@ -9853,10 +9505,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 선정 취소 - 서식-유특-6-1-4-5 학교장(기관장)의견서(건강장애학생용)",
@@ -9881,10 +9533,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-2 특수교육대상학생 선정 · 배치 신청서",
@@ -9909,10 +9561,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-3 학교장 의견서",
@@ -9937,10 +9589,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-5 기초 조사 카드(담임교사용)",
@@ -9965,10 +9617,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-6 기초 조사 카드(보호자용)",
@@ -9993,10 +9645,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-7 선정 배치 결과 통지서",
@@ -10021,10 +9673,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-8 학교장(기관장)의견서(건강장애학생용)",
@@ -10049,10 +9701,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-2] 특수교육대상자 선정·배치 신청서",
@@ -10077,10 +9729,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-3] 학교장 의견서",
@@ -10105,10 +9757,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-5] 기초 조사 카드(담임교사용)",
@@ -10133,10 +9785,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 전학 및 재배치 - [서식-초등-7-1-3-1] 전출 관련 공문 양식",
@@ -10161,10 +9813,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 전학 및 재배치 - [서식-초등-7-1-3-2] 재배치 신청서",
@@ -10189,10 +9841,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 전학 및 재배치 - [서식-초등-7-1-3-4] 개별화교육지원팀 협의록",
@@ -10217,10 +9869,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-1 특수교육대상학생 취학의무(유예, 면제) 신청 (공문 양식)",
@@ -10245,10 +9897,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-2 특수교육대상학생 재취학 승인 신청 (공문 양식)",
@@ -10273,10 +9925,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-3 특수교육대상학생 취학의무(유예, 면제) 신청서",
@@ -10301,10 +9953,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-4 특수교육대상학생 재취학 신청서",
@@ -10329,10 +9981,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-5 학교장 의견서(유예, 면제)",
@@ -10357,10 +10009,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-7 개별화교육지원팀 협의록",
@@ -10385,10 +10037,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학・진학 및 유예・면제 - [서식-초등-7-1-2-1] 특수교육대상자 취학의무(유예,면제) 신청서",
@@ -10413,10 +10065,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학・진학 및 유예・면제 - [서식-초등-7-1-2-2] 특수교육대상자 재취학 신청서",
@@ -10441,10 +10093,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학・진학 및 유예・면제 - [서식-초등-7-1-2-3] 개별화교육지원팀 협의록",
@@ -10469,10 +10121,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상자 취학・진학 및 유예・면제 - [서식-초등-7-1-2-4] 학교장 의견서",
@@ -10497,10 +10149,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상학생 전학 및 재배치 - 서식-유특-6-1-3-1 도내 동일 유형 재배치(전출 관련 공문 양식)",
@@ -10525,10 +10177,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상학생 전학 및 재배치 - 서식-유특-6-1-3-2 도내 배치 유형 변경 재배치(전출 관련 공문 양식)",
@@ -10553,10 +10205,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상학생 전학 및 재배치 - 서식-유특-6-1-3-3 타시도 재배치 의뢰(전출 관련 공문 양식)",
@@ -10581,10 +10233,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상학생 전학 및 재배치 - 서식-유특-6-1-3-4 특수교육대상학생 재배치 신청서",
@@ -10609,10 +10261,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육대상학생 전학 및 재배치 - 서식-유특-6-1-3-6 개별화교육지원팀 협의록",
@@ -10637,10 +10289,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육실무사 지원 - 서식-유특-6-5-1-1 특수교육실무사 학교 배치 신청서",
@@ -10665,10 +10317,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육실무사 지원 - 서식-유특-6-5-1-2 특수교육실무사 지원 요구 학생 기초자료",
@@ -10693,10 +10345,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육실무사 지원 - 서식-유특-6-5-1-3 특수교육실무사 지원 요구 학생 행동 평정표",
@@ -10721,10 +10373,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육실무사 지원 - 서식-유특-6-5-1-4 특수교육실무사 운용 계획",
@@ -10749,10 +10401,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "특수교육실무사 지원 - 서식-유특-6-5-1-6 특수교육실무사 업무일지(예시)",
@@ -10777,10 +10429,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "학교운동부 기숙사 운영 - [서식-중등-7-15-8-1] 학생선수 기숙사 운영규정(예시)",
@@ -10805,10 +10457,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "학부모 상담 - [서식-유-2-5-1-1]학부모 상담주간 운영 계획",
@@ -10833,10 +10485,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "학부모 상담 - [서식-유-2-5-1-2]학부모 상담 신청 안내문",
@@ -10861,10 +10513,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "학생상담 - [서식-초등-3-6-1-1]학생 중심 상담활동 지원",
@@ -10889,10 +10541,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "학생상담 - [서식-초등-3-6-1-2]또래상담(도우미)프로그램 운영",
@@ -10917,10 +10569,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "학생상담 - [서식-초등-3-6-1-3]학생학부모상담주간운영계획(예시)",
@@ -10945,10 +10597,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "학생생활교육 - [서식-초등-8-9-1-1] 학생생활교육",
@@ -10973,10 +10625,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "학생생활교육 - [서식-초등-8-9-1-2] 2020년 회복적 생활교육 안내 자료",
@@ -11001,7 +10653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11029,7 +10681,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11057,7 +10709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11085,10 +10737,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "general",
       "type": "form",
       "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-4] 학교장 의견서",
@@ -11113,7 +10765,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11141,7 +10793,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11169,7 +10821,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11197,7 +10849,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11225,7 +10877,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11253,7 +10905,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11281,7 +10933,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11309,7 +10961,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11337,7 +10989,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11365,7 +11017,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11393,7 +11045,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11421,7 +11073,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11445,7 +11097,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11469,7 +11121,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11497,7 +11149,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11525,7 +11177,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11549,7 +11201,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11577,7 +11229,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -11605,10 +11257,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "110수화(화상)·채팅상담 - 정보공개 운영 매뉴얼",
@@ -11629,10 +11281,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개별화교육계획 - [서식-중등-8-2-1-3] 개인정보활용동의서(예시안)",
@@ -11657,10 +11309,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개별화교육계획 - [서식-초등-7-2-1-3] 개인정보활용동의서(예시안)",
@@ -11685,10 +11337,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개별화교육계획 - 서식-유특-6-2-1-4 개인정보 활용동의서",
@@ -11713,10 +11365,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 - [서식-유-6-2-1-1] 개인정보 보호 내부 관리계획 기안문",
@@ -11741,10 +11393,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 - [서식-유-6-2-1-2] 개인정보 보호 내부 관리계획",
@@ -11769,10 +11421,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 - [서식-유-6-2-1-3] 개인정보 보호 업무 추진 계획 수립 기안문",
@@ -11797,10 +11449,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 - [서식-유-6-2-1-4] 개인정보 보호 업무 추진 계획",
@@ -11825,10 +11477,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 - [서식-유-6-2-1-6] 개인정보 처리방침",
@@ -11853,10 +11505,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 내부관리 계획 - [서식-초등-4-1-3-1] 개인정보 내부관리 계획 예시",
@@ -11881,10 +11533,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 보호 업무 - [서식-중등-6-13-1-1] 개인정보 내부관리 계획 예시",
@@ -11909,10 +11561,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 보호 업무 - [서식-중등-6-13-1-3] 각급학교 개인정보 수집업무 길잡이(중고용)",
@@ -11937,10 +11589,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 보호 업무 - [서식-중등-6-13-1-4] 개인정보 수집·이용·제공 동의서(학년초, 사안별)",
@@ -11965,10 +11617,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 보호 업무 - [서식-중등-6-13-1-5] 공문서 처리 관련 유의사항(개인정보 및 민감정보 공개, 업무 비관련자 공람)",
@@ -11993,10 +11645,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 보호 업무 - [서식-중등-6-13-1-6] 개인정보파일 (등록, 변경등록) 신청서",
@@ -12021,10 +11673,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 보호 업무 - [서식-중등-6-13-1-8] 개인정보처리방침(홈페이지탑재) 관리 매뉴얼",
@@ -12049,10 +11701,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 보호(취급자)교육 - [서식-중등 6-12-3-1] 정보보안 및 개인정보 보호 취급자 교육자료",
@@ -12077,10 +11729,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 처리방침 - [별지 제1호 서식] 개인정보 열람, 정정 삭제, 처리정지 요구서",
@@ -12105,10 +11757,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 처리방침 - [별지 제2호 서식] 개인정보 위임장",
@@ -12133,10 +11785,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 처리방침 - [별지 제3호 서식] 개인정보 열람등 조치 이의신청서",
@@ -12161,10 +11813,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 처리방침 - [서식-초등-4-1-2-1] 학교 개인정보처리방침 관리 매뉴얼",
@@ -12189,10 +11841,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 처리방침 - [서식-초등-4-1-2-3] 개인정보 처리방침 작성지침",
@@ -12217,10 +11869,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "개인정보 처리방침 - 다운로드",
@@ -12241,10 +11893,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "개인정보 처리방침 - 동의를 받아 처리하는 개인정보파일 바로보기",
@@ -12265,10 +11917,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "개인정보 처리방침 - 동의를 받지 않고 처리하는 개인정보파일 바로보기",
@@ -12289,10 +11941,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "개인정보 처리방침 - 정보공개 운영 매뉴얼",
@@ -12313,10 +11965,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "개인정보 처리방침 - PDF 다운로드",
@@ -12337,10 +11989,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 파일 등록 - [서식-초등-4-1-1-1] 각 급 학교 개인정보 수집업무 길잡이(초등용)",
@@ -12365,10 +12017,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 파일 등록 - [서식-초등-4-1-1-2] 개인정보 점검 프로그램 실행 방법",
@@ -12393,10 +12045,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보 파일 등록 - [서식-초등-4-1-1-3] 2025년 개인정보파일 등록 매뉴얼",
@@ -12421,10 +12073,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "개인정보보호 교육 - [서식-초등-4-1-4-1]개인정보 보호 교육 자료",
@@ -12449,7 +12101,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12473,7 +12125,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12497,7 +12149,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -12525,10 +12177,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "누리집(홈페이지) 운영 지침 - 정보공개 운영 매뉴얼",
@@ -12549,10 +12201,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "알기 쉬운 개인정보 처리방침 - 정보공개 운영 매뉴얼",
@@ -12573,10 +12225,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "알기 쉬운 개인정보 처리방침 - PDF 다운로드",
@@ -12597,10 +12249,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "영양상담의 계획 - [서식-초등–6-6-1-8] ( )월 상담기록부",
@@ -12625,10 +12277,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "영양상담의 계획 - [서식–중등-7-11-1-1-8] ○○월 상담기록부",
@@ -12653,10 +12305,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "정보공개 대상 정보 - 정보공개 운영 매뉴얼",
@@ -12677,10 +12329,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "정보공개 대상 정보 - PDF 다운로드",
@@ -12701,10 +12353,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "정보공개 청구 및 접수 - 정보공개 매뉴얼",
@@ -12725,10 +12377,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "정보공개 청구서 - 정보공개 운영 매뉴얼",
@@ -12753,10 +12405,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "정보공개 청구서 - 정보공개 청구서 서식 다운로드",
@@ -12781,10 +12433,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "정보공개 청구서 - PDF 다운로드",
@@ -12809,10 +12461,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "정보공개 청구접수처리 흐름도 - 정보공개 운영 매뉴얼",
@@ -12833,10 +12485,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "정보공개 청구접수처리 흐름도 - PDF 다운로드",
@@ -12857,10 +12509,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "제도개요 - 정보공개 운영 매뉴얼",
@@ -12881,10 +12533,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "청렴신고센터안내 - 정보공개 운영 매뉴얼",
@@ -12905,10 +12557,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "치료지원 - [서식-중등-8-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
@@ -12933,10 +12585,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "치료지원 - [서식-초등-7-4-1-4] 개인정보 수집·이용·제공·활용 동의서",
@@ -12961,10 +12613,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "치료지원 - 서식-유특-6-4-1-4. 개인정보 수집·이용에 관한 동의서",
@@ -12989,10 +12641,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "콜센터 상담예약제 - 정보공개 운영 매뉴얼",
@@ -13013,10 +12665,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "통합자료실 - 1402 상담기록서식(예시)",
@@ -13041,10 +12693,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "guide",
       "title": "통합자료실 - 정보공개 운영 매뉴얼",
@@ -13065,10 +12717,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "통합자료실 - 정보공개 운영 매뉴얼",
@@ -13093,10 +12745,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육대상자 선정 취소 - [서식-초등-7-1-4-3] 개인정보 수집 및 이용 동의서",
@@ -13121,10 +12773,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육대상자 선정 취소 - 서식-유특-6-1-4-3 개인정보 수집 · 이용에 관한 동의",
@@ -13149,10 +12801,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-4 개인정보 수집 · 이용에 관한 동의서",
@@ -13177,10 +12829,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-4] 개인정보 수집 및 이용 동의서",
@@ -13205,10 +12857,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육대상자 전학 및 재배치 - [서식-초등-7-1-3-3] 개인정보 수집 및 이용 동의서",
@@ -13233,10 +12885,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육대상자 취학 진학 및 유예 면제 - 서식-유특-6-1-2-6 개인정보 수집 · 이용에 관한 동의서",
@@ -13261,10 +12913,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육대상자 취학・진학 및 유예・면제 - [서식-초등-7-1-2-5] 개인정보 수집 및 이용 동의서",
@@ -13289,10 +12941,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육대상학생 전학 및 재배치 - 서식-유특-6-1-3-5 개인정보 수집 · 이용에 관한 동의서",
@@ -13317,10 +12969,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "특수교육실무사 지원 - 서식-유특-6-5-1-5 개인정보 수집이용에 관한 동의서",
@@ -13345,10 +12997,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "privacyRecords",
       "type": "form",
       "title": "학부모 상담 - [서식-유-2-5-1-3]학부모 상담 기록지",
@@ -13373,7 +13025,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13401,7 +13053,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13429,7 +13081,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13457,7 +13109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13485,7 +13137,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13513,7 +13165,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13541,7 +13193,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13569,7 +13221,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13593,7 +13245,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13617,7 +13269,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13641,7 +13293,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13665,7 +13317,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13689,7 +13341,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13713,7 +13365,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13737,7 +13389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13761,7 +13413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13785,7 +13437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13809,7 +13461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13833,7 +13485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13857,7 +13509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13881,7 +13533,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13905,7 +13557,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13929,7 +13581,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13953,7 +13605,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -13977,7 +13629,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14001,7 +13653,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14025,7 +13677,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14049,7 +13701,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14073,7 +13725,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14097,7 +13749,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14121,7 +13773,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14145,7 +13797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14169,7 +13821,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14193,7 +13845,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14217,7 +13869,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14241,7 +13893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14265,7 +13917,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14289,7 +13941,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14313,7 +13965,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14337,7 +13989,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14361,7 +14013,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14385,7 +14037,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14409,7 +14061,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14437,7 +14089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14461,7 +14113,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14485,7 +14137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14509,7 +14161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14533,7 +14185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14557,7 +14209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14581,7 +14233,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14605,7 +14257,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14629,7 +14281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14653,7 +14305,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14677,7 +14329,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14701,7 +14353,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14725,7 +14377,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14749,7 +14401,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14773,7 +14425,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14797,7 +14449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14821,7 +14473,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14845,7 +14497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14869,7 +14521,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14893,7 +14545,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14917,7 +14569,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14941,7 +14593,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14965,7 +14617,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -14989,7 +14641,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15013,7 +14665,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15037,7 +14689,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15061,7 +14713,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15085,7 +14737,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15109,7 +14761,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15133,7 +14785,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15157,7 +14809,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15181,7 +14833,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15209,10 +14861,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "계약 관리 - [서식-관리-4-2-1-1] 계약 관리 세부 안내 사항_2025년 7월",
@@ -15237,10 +14889,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "계획 및 준비(사업부서) - 2025 늘봄학교 운영 길라잡이(서식편)",
@@ -15265,10 +14917,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "근무성적평정 - [서식-초등-8-2-3-2] 행정처분및징계자현황(교사용)(서식)",
@@ -15293,10 +14945,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "근무성적평정서 작성 및 제출 - [서식-행정-2-1-2-1]근무성적 평정자 및 확인자 지정 현황[별표 1]",
@@ -15321,10 +14973,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "근무성적평정서 작성 및 제출 - [서식-행정-2-1-2-2]「경상북도교육감 소속 지방공무원 평정업무 처리지침」 별지 제4호 서식",
@@ -15349,10 +15001,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "긴급 돌봄 - [서식-유-4-3-2-1] 유치원 긴급돌봄 운영계획",
@@ -15377,10 +15029,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "긴급 돌봄 - [서식-유-4-3-2-2] 유치원 긴급돌봄 안내장",
@@ -15405,10 +15057,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "긴급 돌봄 - [서식-유-4-3-2-3] 유치원 긴급돌봄 운영 및 귀가 일지",
@@ -15433,10 +15085,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "긴급 돌봄 - [서식-유-4-3-2-4] 유치원 긴급돌봄 비상연락망",
@@ -15461,10 +15113,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-중등-8-4-2-1] 특수교육대상학생 방과후학교 신청 관련 보호자 확인서",
@@ -15489,10 +15141,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-중등-8-4-2-2] 특수교육대상학생 방과후 특기적성교육 연간계획서",
@@ -15517,10 +15169,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-중등-8-4-2-3] 특수교육대상학생 방과후 특기적성교육 제공일지 및 출석부",
@@ -15545,10 +15197,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-중등-8-4-2-5] 개인정보 수집·이용·제공·활용 동의서",
@@ -15573,10 +15225,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-초등-7-4-2-1] 특수교육대상학생 방과후학교 신청 관련 보호자 확인서",
@@ -15601,10 +15253,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-초등-7-4-2-2] 특수교육대상학생 방과후 특기적성교육 연간계획서",
@@ -15629,10 +15281,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-초등-7-4-2-3] 특수교육대상학생 방과후 특기적성교육 제공일지 및 출석부",
@@ -15657,10 +15309,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-초등-7-4-2-5] 개인정보 수집·이용·제공·활용 동의서",
@@ -15685,7 +15337,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15713,7 +15365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15741,7 +15393,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15769,7 +15421,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15797,7 +15449,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15825,7 +15477,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15853,7 +15505,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15881,7 +15533,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15909,7 +15561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15937,7 +15589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15965,7 +15617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -15993,7 +15645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16021,7 +15673,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16049,7 +15701,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16077,7 +15729,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16105,7 +15757,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16133,7 +15785,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16161,7 +15813,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16189,7 +15841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16217,7 +15869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16245,7 +15897,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16273,7 +15925,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16301,7 +15953,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -16329,10 +15981,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-1] 방과후 과정 운영계획",
@@ -16357,10 +16009,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-10] 귀가일지",
@@ -16385,10 +16037,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-11] 방과후 과정 운영 점검표",
@@ -16413,10 +16065,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-12] 학부모 설문조사",
@@ -16441,10 +16093,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-13] 간식일지",
@@ -16469,10 +16121,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-14] 유치원 보존식표",
@@ -16497,10 +16149,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-19] 엄마품돌봄 운영 계획",
@@ -16525,10 +16177,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-2] 방과후 과정 운영계획 심의",
@@ -16553,10 +16205,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-20] 엄마품돌봄 신청서",
@@ -16581,10 +16233,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-21] 엄마품돌봄 출석부",
@@ -16609,10 +16261,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-22] 엄마품돌봄 비상연락망",
@@ -16637,10 +16289,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-23] 엄마품돌봄 등하원일지",
@@ -16665,10 +16317,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-24] 엄마품돌봄 귀가일지",
@@ -16693,10 +16345,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-25] 재량휴업 중 돌봄 신청 안내장",
@@ -16721,10 +16373,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-26]2026학년도 유치원 교육과정 운영 지원 및 방과후 과정 운영 내실화 계획",
@@ -16749,10 +16401,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-3] 급·간식 운영 계획",
@@ -16777,10 +16429,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-4] 유아귀가 동의서",
@@ -16805,10 +16457,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-5] 개인조사 설문지",
@@ -16833,10 +16485,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-6] 방과후과정 신청서",
@@ -16861,10 +16513,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-7] 통학버스 승·하차 동의서",
@@ -16889,10 +16541,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-8] 통학버스 이용 신청서",
@@ -16917,10 +16569,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - [서식-유-4-1-1-9] 방과후 과정 일지",
@@ -16945,10 +16597,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후과정 운영 - 보고서식1호~7호",
@@ -16973,10 +16625,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후학교 업무 흐름(개인위탁) - 2026 중등 방과후학교 길라잡이 서식",
@@ -17001,10 +16653,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후학교 업무 흐름(업체위탁) - 2026 중등 방과후학교 길라잡이 서식",
@@ -17029,10 +16681,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후학교 회계 관리 - 2026 중등 방과후학교 운영 길라잡이 서식",
@@ -17057,10 +16709,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방과후학교 회계 관리 - 2026 초등 돌봄교육 운영 길라잡이 서식",
@@ -17085,10 +16737,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방학중 방과후 과정 - [서식-유-4-2-1-1] 방학중 방과후 과정운영계획",
@@ -17113,10 +16765,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방학중 방과후 과정 - [서식-유-4-2-1-2] 방학중 방과후 과정 신청서",
@@ -17141,10 +16793,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방학중 방과후 과정 - [서식-유-4-2-1-4] 방학중 방과후 과정 출석부",
@@ -17169,10 +16821,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방학중 방과후 과정 - [서식-유-4-2-1-5] 방학중 방과후 과정 운영 일지",
@@ -17197,10 +16849,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "방학중 방과후 과정 - [서식-유-4-2-1-6] 방학중 방과후 과정 귀가 일지",
@@ -17225,10 +16877,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "보결수업 규정 - [서식-초등-1-4-2] 보결수업 수당 지급에 대한 학교운영위원회 심의 안건(예시)",
@@ -17253,10 +16905,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "보조금 및 지원금, 순세계잉여금, 학교회계간이전수입 - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -17277,10 +16929,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "성과계획서 작성 및 성과 관리 - [서식-행정-2-1-1-1]별지 제1호, 2호, 3호서식",
@@ -17305,10 +16957,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "성립전예산 - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -17329,10 +16981,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "스포츠강사 관리 - [서식-초등-11-3-1] 초등(특수)학교 스포츠강사 학교단위 선발업무 매뉴얼",
@@ -17357,10 +17009,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "스포츠강사 관리 - [서식-초등-11-3-2] 초등(특수) 스포츠강사 인사관리 지침",
@@ -17385,10 +17037,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "스포츠강사 관리 - [서식-초등-11-3-3] 초등스포츠강사 관리규정 각종 서식",
@@ -17413,10 +17065,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내 - 정보공개 운영 매뉴얼",
@@ -17437,106 +17089,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - (최종) 2026학년도 공립학교회계 예산편성 기본지침",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 (최종) 2026학년도 공립학교회계 예산편성 기본지침.pdf",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1564258/doc_ecf4v04ac=c1v77=42vb5=bevb7=fa32v4a1avbc59_v4417.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1297292-0-2023-3-2-2023학년도-학교회계-예산편성-기본지침-최종-개정사항-반영-pdf",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 ★(2023.3.2.)2023학년도 학교회계 예산편성 기본지침(최종)-개정사항 반영.pdf",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1297292/doc_6963v319b=37vbf=42ve8=93vf3=6406v8298vc299_v8158.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1459768-0-2025-공립학교회계예산편성-지침-최종-인쇄본-pdf",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - ★★ 2025 공립학교회계예산편성 지침 최종(인쇄본)",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 ★★ 2025 공립학교회계예산편성 지침 최종(인쇄본).pdf",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1459768/doc_9a98vc876=72v84=4dv2b=b3v1f=f910vaa81v044b_v4304.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1459768-1-2025학년도-공립학교회계-예산편성-기본지침-인쇄본-hwp",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - ★★2025학년도_공립학교회계_예산편성_기본지침(인쇄본)",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 ★★2025학년도_공립학교회계_예산편성_기본지침(인쇄본).hwp",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1459768/doc_97edv79dc=ebv17=4cvd1=94vc9=d1c4vc4b0vbd1d_v6834.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-983816-0-2022학년도-학교회계-예산편성-기본지침-최종-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-983816-0-2022학년도-학교회계-예산편성-기본지침-최종-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★2022학년도_학교회계_예산편성_기본지침(최종)",
@@ -17557,10 +17113,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1264173-0-2023학년도-학교회계-예산편성-기본지침-최종-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-1264173-0-2023학년도-학교회계-예산편성-기본지침-최종-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - ★2023학년도 학교회계 예산편성 기본지침(최종)",
@@ -17581,10 +17137,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-389974-0-2019학년도-학교회계-예산편성-기본지침-업로드-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389974-0-2019학년도-학교회계-예산편성-기본지침-업로드-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2019학년도 학교회계 예산편성 기본지침(업로드)",
@@ -17605,10 +17161,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-389974-1-2019학년도-학교회계-예산편성-기본지침-pdf-pdf",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-389974-1-2019학년도-학교회계-예산편성-기본지침-pdf-pdf",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2019학년도 학교회계 예산편성 기본지침(pdf)",
@@ -17629,34 +17185,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-389975-0-2020학년도-학교회계-예산편성-기본지침-2019-11-29-홈페이지-hwp",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - 2020학년도 학교회계 예산편성 기본지침(2019.11.29.)_홈페이지",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 2020학년도 학교회계 예산편성 기본지침(2019.11.29.)_홈페이지.hwp",
-      "url": "https://www.gbe.kr/uploads/BOARD/2019/12/BOARD_201912031155438051691859.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-884918-0-2021학년도-학교회계-예산편성-기본지침-2021-홈페이지-hwp",
+      "id": "existing-acquisition-existing-acquisition-harvest-gbe-school-accounting-884918-0-2021학년도-학교회계-예산편성-기본지침-2021-홈페이지-hwp",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "안내·지침서 - 2021학년도_학교회계_예산편성_기본지침(2021)-홈페이지",
@@ -17677,154 +17209,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1357166-0-2024학년도-공립학교회계-예산편성-기본지침-홈페이지-pdf",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - 2024학년도 공립학교회계 예산편성 기본지침(홈페이지)",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 2024학년도 공립학교회계 예산편성 기본지침(홈페이지).pdf",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1357166/doc_71bfv0650=0cv3c=41v4a=94vf8=d70av97e6v0bc8_v4599.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용)",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 2026학년도 공립학교회계 예산편성 기본지침 변경사항(게시용).pdf",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1610395/doc_c838vf80a=ddva5=4ave4=9av58=197evf130v2fe9_v307.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - 2026학년도_공립학교회계_예산편성_기본지침",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 2026학년도_공립학교회계_예산편성_기본지침.hwp",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1564258/doc_5b9cv3bc9=ebvac=4cv31=9bv7e=1161vc3c0v586a_v5123.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1475036-0-일잘러의학교회계실무-pdf",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - 일잘러의학교회계실무",
-      "provider": "경상북도교육청",
-      "query": "학교회계 안내·지침서 일잘러의학교회계실무.pdf",
-      "url": "https://www.gbe.kr/upload/main/na/bbs_1852/ntt_1475036/doc_5d34v1f14=d7vb6=48v7c=81vbb=4451v2439v2bdb_v2384.pdf",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1357166-1-정보공개-운영-매뉴얼",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - 정보공개 운영 매뉴얼",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 정보공개 운영 매뉴얼",
-      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-harvest-gbe-school-accounting-1357166-2-pdf-다운로드",
-      "category": "schoolAdmin",
-      "type": "guide",
-      "title": "안내·지침서 - PDF 다운로드",
-      "provider": "경상북도교육청",
-      "query": "예산편성 안내·지침서 PDF 다운로드",
-      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학교회계 안내·지침서에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "엄마품 돌봄 - [서식-유-4-3-1-1] 엄마품돌봄 운영 계획",
@@ -17849,10 +17237,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "엄마품 돌봄 - [서식-유-4-3-1-2] 엄마품 돌봄 신청서",
@@ -17877,10 +17265,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "엄마품 돌봄 - [서식-유-4-3-1-3] 엄마품돌봄 비상연락망",
@@ -17905,10 +17293,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "엄마품 돌봄 - [서식-유-4-3-1-4] 엄마품돌봄 운영 및 귀가일지",
@@ -17933,10 +17321,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "엄마품 돌봄 - [서식-유-4-3-1-6] 2026학년도 돌봄유치원 운영계획",
@@ -17961,10 +17349,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-1] 자리배치 예시",
@@ -17989,10 +17377,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "업무협약(MOU) 체결 - [서식-행정기관-6-1-1-2] 협약서 예시",
@@ -18017,10 +17405,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "업체 선정/계약 단계 - [서식-중등-4-13-3-1]교복품질심사위원회 회의 결과",
@@ -18045,7 +17433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18073,10 +17461,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "영어회화전문강사 관리 - [서식-초등-8-8-1-1] 2026 영어회화전문강사 업무편람",
@@ -18101,7 +17489,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18129,7 +17517,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18157,10 +17545,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "예산 관리 - [서식-관리-4-1-1] 2026학년도 공립학교회계 예산편성 기본지침",
@@ -18185,10 +17573,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "예산규모 - 정보공개 운영 매뉴얼",
@@ -18209,10 +17597,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "예산안 심의·확정 - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -18233,10 +17621,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "예산의 이용 및 전용 - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -18257,10 +17645,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "예산의 이월 - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -18281,10 +17669,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "예산의 편성 - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -18305,10 +17693,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "예산집행 품의[발의] - [서식-행정-11-1-2-1] 지출품의서",
@@ -18333,7 +17721,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18357,7 +17745,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18381,7 +17769,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18405,10 +17793,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "자료실 - (붙임) 2023년도 학교운영위원회 운영계획 (발송)",
@@ -18433,10 +17821,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "자료실 - [붙임1]교육자료_학교운영위원회 온라인시스템 이용방법 추가자료(20.3.11.)-선관위 최종",
@@ -18461,10 +17849,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "자료실 - 2021년 학교운영위원회 핸드북(최종완료)-수정",
@@ -18485,10 +17873,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "자료실 - 2025 학교운영위원회 길잡이(최종본)",
@@ -18509,10 +17897,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "자료실 - 2026학년도 학교운영위원회 운영 계획",
@@ -18533,10 +17921,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "자료실 - 정보공개 운영 매뉴얼",
@@ -18557,10 +17945,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "자료실 - 학교운영위원회 업무편람(2023년도)",
@@ -18581,10 +17969,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "자료실 - 학교운영위원회 핸드북(2023년 개정)",
@@ -18605,10 +17993,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "자료실 - 학교운영위원회업무편람(2016년도)",
@@ -18629,10 +18017,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "재량휴업 중 돌봄 - [서식-유-4-3-3-1] 재량휴업일 중 돌봄 운영 계획",
@@ -18657,10 +18045,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "재량휴업 중 돌봄 - [서식-유-4-3-3-2] 재량휴업중 돌봄 신청 안내장",
@@ -18685,10 +18073,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "재량휴업 중 돌봄 - [서식-유-4-3-3-3] 재량휴업중 돌봄 운영 및 귀가 일지",
@@ -18713,10 +18101,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개 청구 및 접수 - [서식-행정-5-2-1-1] 정보공개청구서",
@@ -18741,10 +18129,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개 청구 및 접수 - [서식-행정-5-2-1-2] 정보공개구술청구서",
@@ -18769,10 +18157,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개 청구 및 접수 - [서식-행정-5-2-1-3] 정보공개처리대장",
@@ -18797,10 +18185,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개여부 결정 - [서식-행정-5-2-2-1] 공개 여부 결정기간 연장 통지서",
@@ -18825,10 +18213,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개여부 결정 - [서식-행정-5-2-2-2] 정보공개 청구외([ ]부존재 [ ]진정.질의 등) 통지서",
@@ -18853,10 +18241,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개여부 결정 - [서식-행정-5-2-2-3] 정보공개 청구사실 통지서",
@@ -18881,10 +18269,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개여부 결정 - [서식-행정-5-2-2-4] 제3자 의견 청취서",
@@ -18909,10 +18297,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개여부 결정 - [서식-행정-5-2-2-5] 제3자 의견서(비공개 요청서)",
@@ -18937,10 +18325,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "정보공개여부 결정 - [서식-행정-5-2-2-6] 제3자에대한 정보공개 결정통지서",
@@ -18965,7 +18353,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -18989,7 +18377,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19017,10 +18405,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "추가경정예산 - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -19041,10 +18429,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "통합자료실 - [붙임1] 2026 초등돌봄교육 운영 길라잡이 서식 98 수정사항",
@@ -19069,10 +18457,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "통합자료실 - [붙임2] 2026 초등돌봄교육 운영 길라잡이 서식 98 신구대조표",
@@ -19097,10 +18485,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "통합자료실 - 2025 학교운영위원회 길잡이(최종본)",
@@ -19121,10 +18509,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "통합자료실 - 학교운영위원회 핸드북(2023년 개정)",
@@ -19145,7 +18533,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19173,7 +18561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19201,7 +18589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19229,10 +18617,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "학교운영위원회 구성 계획 수립 및 홍보 - [서식-행정-7-1-2-1] 학교운영위원회 위원 구성 계획",
@@ -19257,7 +18645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19281,7 +18669,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19305,7 +18693,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19329,7 +18717,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19353,7 +18741,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19377,7 +18765,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19401,7 +18789,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19429,7 +18817,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19453,7 +18841,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19477,10 +18865,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "guide",
       "title": "학교회계 결산 - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -19501,10 +18889,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "학업성적관리위원회 운영 - [서식-중등-1-17-1-1] 2026학년도 경상북도 고등학교 학업성적관리 시행지침",
@@ -19529,10 +18917,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "학업성적관리위원회 운영 - [서식-중등-1-17-1-2] 2026학년도 경상북도 고등학교 학업성적관리 시행지침 신·구조문 대조표",
@@ -19557,10 +18945,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "학업성적관리위원회 운영 - [서식-중등-1-17-1-3] 2026학년도 경상북도 중학교 학업성적관리 시행지침",
@@ -19585,10 +18973,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "학업성적관리위원회 운영 - [서식-중등-1-17-1-4] 2026학년도 경상북도 중학교 학업성적관리 시행지침 신·구조문 대조표",
@@ -19613,10 +19001,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolAdmin",
       "type": "form",
       "title": "행정심판 - 법률상담신청서 양식 다운로드",
@@ -19641,7 +19029,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19669,7 +19057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19693,7 +19081,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19717,7 +19105,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19741,7 +19129,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19765,7 +19153,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19789,7 +19177,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19813,7 +19201,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19837,7 +19225,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19865,7 +19253,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19889,7 +19277,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19913,7 +19301,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19937,7 +19325,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19961,7 +19349,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -19985,7 +19373,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20013,7 +19401,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20037,7 +19425,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20061,7 +19449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20089,7 +19477,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20113,7 +19501,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20137,7 +19525,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20161,7 +19549,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20185,7 +19573,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20209,7 +19597,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20233,7 +19621,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20257,7 +19645,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20281,7 +19669,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20305,7 +19693,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20329,7 +19717,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20353,7 +19741,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20377,7 +19765,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20401,7 +19789,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20425,7 +19813,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20449,7 +19837,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20473,7 +19861,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20497,7 +19885,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20521,7 +19909,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20545,7 +19933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20569,7 +19957,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20593,7 +19981,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20617,7 +20005,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20641,7 +20029,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20669,7 +20057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -20697,10 +20085,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "각종 서식 - [서식 4] 성범죄 경력조회 및 아동학대관련범죄 전력 조회 동의서",
@@ -20725,10 +20113,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "교육공동체와의 협력적 안전체계 구축 - [서식-중등-4-3-4-1]의무교육단계 미인정결석 학생 관리 기준",
@@ -20753,10 +20141,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "급식 안전 관리 - [서식-관리-10-4-1-1] 학교 식중독 의심환자 발생 보고 서식",
@@ -20781,10 +20169,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - (개요)코로나바이러스감염증-19 대응 지침(지자체용) 제9판_배포용",
@@ -20805,10 +20193,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - (정오표2)코로나바이러스감염증-19 대응 지침(지자체용)제9판_200629",
@@ -20829,10 +20217,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 20200507_유초중등_및_특수학교_코로나19_감염예방_관리안내_제2판(결재용)",
@@ -20853,10 +20241,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 유·초·중등및특수학교 코로나19매뉴얼(요약)-2-2판-최종(발송용)",
@@ -20877,10 +20265,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 유·초·중등및특수학교 코로나19매뉴얼(요약)-3판-최종(발송용)",
@@ -20901,10 +20289,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 유·초·중등및특수학교 코로나19매뉴얼(요약)-4판-최종(발송용)",
@@ -20925,10 +20313,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 유초중등 및 특수학교 코로나19 감염예방 관리매뉴얼 제4판",
@@ -20949,10 +20337,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 유초중등및특수학교 코로나19 감염예방 관리매뉴얼 제2-2판(0720)_발송용-최종",
@@ -20973,10 +20361,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 유초중등및특수학교 코로나19 감염예방 관리매뉴얼 제3판(1217)_발송용(최종)",
@@ -20997,10 +20385,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 정보공개 운영 매뉴얼",
@@ -21021,10 +20409,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 코로나바이러스감염증-19 대응 지침(지자체용) 제10-3판",
@@ -21045,10 +20433,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 코로나바이러스감염증-19 대응 지침(지자체용) 제10-3판 개정전후대비표",
@@ -21069,10 +20457,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "대응지침 - 코로나바이러스감염증-19 대응 지침(지자체용) 제9-1판_부록_최종",
@@ -21097,10 +20485,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 코로나바이러스감염증-19 대응 지침(지자체용) 제9-1판_최종",
@@ -21121,10 +20509,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "대응지침 - 코로나바이러스감염증-19 대응 지침(지자체용) 제9판 부록_배포용_0625",
@@ -21149,10 +20537,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 코로나바이러스감염증-19 대응 지침(지자체용)제9판_배포200629",
@@ -21173,10 +20561,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "대응지침 - 코로나바이러스감염증-19 대응 지침(지자체용)제9판_부록 배포용200629",
@@ -21201,10 +20589,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 코로나바이러스감염증-19 대응지침 지자체용(제9-5판)",
@@ -21225,10 +20613,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 코로나바이러스감염증-19 대응지침 지자체용(제9-5판) 개정전후 대비표",
@@ -21249,10 +20637,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 코로나바이러스감염증-19 대응지침(지자체용) 제 10판",
@@ -21273,10 +20661,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 코로나바이러스감염증-19 대응지침(지자체용)제 10판 개정전후대비표",
@@ -21297,10 +20685,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 학교 감염병 예방 위기대응 매뉴얼 제3차 개정(초중고특수학교용)",
@@ -21321,10 +20709,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - 학교 감염병 예방 위기대응 매뉴얼 제3차 개정판(유치원용)",
@@ -21345,10 +20733,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "대응지침 - PDF 다운로드",
@@ -21369,10 +20757,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-중등-8-4-2-4] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
@@ -21397,10 +20785,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "방과후 특기・적성교육 - [서식-초등-7-4-2-4] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
@@ -21425,10 +20813,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "보건(교육)실 시설 및 기구 확충 - [서식-초등-5-1-3-1] 보건실 현대화 사업 계획(예시)",
@@ -21453,10 +20841,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "보건(교육)실 시설 및 기구 확충 - [서식-초등-5-1-3-2] 고등학교 이하 각급 학교 교구·설비 기준",
@@ -21481,10 +20869,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "보건(교육)실 시설 및 기구 확충 - 학교 보건실 현대화 메뉴얼",
@@ -21505,10 +20893,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "보건교육 계획수립 및 운영 - [서식-초등-5-3-1-1] 보건교육 운영계획(예시)",
@@ -21533,10 +20921,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "보건교육 계획수립 및 운영 - [서식-초등-5-3-1-2] 학생 건강증진 프로그램 계획(예시)",
@@ -21561,10 +20949,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "보건교육 계획수립 및 운영 - [서식-초등-5-3-1-3] 유인물 및 홍보 교육자료(예시)",
@@ -21589,10 +20977,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "보건실 시설 요건 및 관리 - [서식-중등-7-1-3-1] 학교 응급환자 관리 계획(예시)",
@@ -21617,10 +21005,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "보건실 운영 계획 - [서식-초등-5-1-1-1] 보건일지 서식(예시)",
@@ -21645,10 +21033,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "보건실 운영 계획 - [서식-초등—5-1-1-2] 보건실 비품대장 서식(예시)",
@@ -21673,7 +21061,107 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1548192-0-25-학교폭력-사안처리-가이드북-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - '25 학교폭력 사안처리 가이드북",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 사용자 '25 학교폭력 사안처리 가이드북.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/04/022CC18A-033A-37BD-E189-997CB87C3F9B.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1569593-0-26-학교폭력-사안처리-가이드북-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - '26 학교폭력 사안처리 가이드북",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사용자 '26 학교폭력 사안처리 가이드북.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/03/9CA0E6C1-EBB5-5E10-9586-5F16C1E16D8A.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-588219-1-서식-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - (서식) 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 사용자 (서식) 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼.hwp",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644762.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644762.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1562027-0-교육부-학교-내-성희롱-성폭력-사안대응-업무안내서-2025년-개정-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - [교육부]학교 내 성희롱 성폭력 사안대응 업무안내서(2025년 개정)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 [교육부]학교 내 성희롱 성폭력 사안대응 업무안내서(2025년 개정).pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/CF568C9D-4783-CC44-0C17-8D718F500467.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -21697,10 +21185,742 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-588219-0-학교-성희롱성폭력-사안처리-컨설팅-매뉴얼-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - ★ 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 사용자 ★ 학교 성희롱성폭력 사안처리 컨설팅 매뉴얼.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521644761.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1509624-0-1-2023년-사안처리-가이드북-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 1. 2023년 사안처리 가이드북",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 사용자 1. 2023년 사안처리 가이드북.hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2023/07/57ECC6D4-D655-BD66-ADD7-6C9A3432E1AC.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1560985-0-16-디지털-성폭력-및-딥페이크등-예방교육자료-제작-최종-보고서-제출-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 16. 디지털 성폭력 및 딥페이크등 예방교육자료 제작 최종 보고서(제출)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 16. 디지털 성폭력 및 딥페이크등 예방교육자료 제작 최종 보고서(제출).pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3DA6A511-69E9-F3F9-4C97-AB346E22FBBD.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3DA6A511-69E9-F3F9-4C97-AB346E22FBBD.pdf",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1512170-0-2-2023-학교폭력-사안처리-세부설명-a-to-z-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2. 2023. 학교폭력 사안처리 세부설명 A to Z",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 사용자 2. 2023. 학교폭력 사안처리 세부설명 A to Z.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2023/09/1F60CC1A-916E-DA03-FE66-6492C7E32042.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-583028-0-2022년-폭력예방교육-운영안내-지침-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2022년 폭력예방교육 운영안내(지침)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "예방교육 사용자 2022년 폭력예방교육 운영안내(지침).pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16444682231.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1535303-0-2024-1차-학교폭력-실태조사-결과-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2024. 1차 학교폭력 실태조사 결과",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사용자 2024. 1차 학교폭력 실태조사 결과.hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/09/40329B09-5570-6F46-F4B6-9A14F8EF17D7.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1549081-0-2024-2차-학교폭력-실태-표본-조사-결과-최종-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2024. 2차 학교폭력 실태(표본)조사 결과_최종",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사용자 2024. 2차 학교폭력 실태(표본)조사 결과_최종 .pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/05/B1609003-3E6B-4D2B-9846-CF5D41B19374.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1525064-0-2024년-사건통보서-및-재발방지대책-제출-서식-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 2024년 사건통보서 및 재발방지대책 제출 서식",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 2024년 사건통보서 및 재발방지대책 제출 서식.hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2024/04/B2694D0A-ED33-0136-20EA-B36A524AE3F7.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2024/04/B2694D0A-ED33-0136-20EA-B36A524AE3F7.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1532095-0-2024년-학교폭력-사안처리-가이드북-개정안-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2024년 학교폭력 사안처리 가이드북 개정안",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 사용자 2024년 학교폭력 사안처리 가이드북 개정안.hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/07/2B8746F1-D91A-9198-AB2E-3AD3CEC07373.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1559065-0-2025-1차-학교폭력-실태-전수-조사-결과-누리집용-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2025. 1차 학교폭력 실태(전수)조사 결과(누리집용)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사용자 2025. 1차 학교폭력 실태(전수)조사 결과(누리집용).hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/11/15C12F59-7697-5891-98C8-8FC9E7CF31CD.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1548192-1-2025-학교폭력-사안처리-세부설명-a-to-z-서식모음집-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 2025. 학교폭력 사안처리 세부설명 A to Z (서식모음집)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 사용자 2025. 학교폭력 사안처리 세부설명 A to Z (서식모음집).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/08/7CD816BB-2537-3414-6031-21F8A3CF39FC.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2025/08/7CD816BB-2537-3414-6031-21F8A3CF39FC.hwpx",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1570140-0-2025년-2차-학교폭력-실태-표본-조사-결과-누리집-탑재용-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2025년 2차 학교폭력 실태(표본)조사 결과(누리집 탑재용)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사용자 2025년 2차 학교폭력 실태(표본)조사 결과(누리집 탑재용).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/04/60EA93F7-7E85-9701-A93C-0EEEDC1FA1C7.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1580132-0-2026-1차-학교폭력-실태조사-결과-누리집용-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2026. 1차 학교폭력 실태조사 결과(누리집용)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사용자 2026. 1차 학교폭력 실태조사 결과(누리집용).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/10/473481FA-70B1-FF02-B6AE-DFFFE943C735.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1576546-0-2026-학교폭력-피해학생-전문교육기관-선정-결과-공고문-안내용-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 2026. 학교폭력 피해학생 전문교육기관 선정 결과 공고문(안내용)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사용자 2026. 학교폭력 피해학생 전문교육기관 선정 결과 공고문(안내용).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2026/07/4A44E2E3-B20E-E8FC-989A-4AFB37CCFA2B.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-1511311-0-23년-학교폭력-사안처리-가이드북-한글파일-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 23년 학교폭력 사안처리 가이드북(한글파일)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "가이드북 사용자 23년 학교폭력 사안처리 가이드북(한글파일).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1661/2024/07/A84E1F3B-C9FF-9D13-464E-D7CF150AD62C.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1575631-0-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식.xlsx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2026/07/70A07090-52E0-B0E0-1CE0-777EC508BDB9.xlsx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2026/07/70A07090-52E0-B0E0-1CE0-777EC508BDB9.xlsx",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-583659-0-게시용-2022-성희롱-성폭력-사안처리지원단-구성-운영-계획-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 게시용) 2022. 성희롱·성폭력 사안처리지원단 구성·운영 계획",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 사용자 게시용) 2022. 성희롱·성폭력 사안처리지원단 구성·운영 계획.hwp",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475261.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-573475-0-교육부-양성평등정책담당관-학교-내-성희롱-성폭력-사안처리-사례집-배포용-2020-12월-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 교육부 양성평등정책담당관_학교 내 성희롱 성폭력 사안처리 사례집(배포용)2020.12월",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 사용자 교육부 양성평등정책담당관_학교 내 성희롱 성폭력 사안처리 사례집(배포용)2020.12월.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16202979431.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1562027-1-단계별-관련-서식-2025개정판-학교내성희롱성폭력사안대응업무안내서-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 단계별 관련 서식_[2025개정판]학교내성희롱성폭력사안대응업무안내서",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 단계별 관련 서식_[2025개정판]학교내성희롱성폭력사안대응업무안내서.hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3AECD204-2541-B00C-16BC-3C1F90779283.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/12/3AECD204-2541-B00C-16BC-3C1F90779283.hwpx",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-572186-0-사안처리-핸드북-발송용-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 사안처리 핸드북(발송용)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 사용자 사안처리 핸드북(발송용).pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/7c106bed-9ac3-4285-9b5f-a23b372a0c00/2021/16174263511.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-583659-1-성희롱-성폭력-사안처리지원단-외부지원-신청서-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 성희롱·성폭력 사안처리지원단 외부지원 신청서",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 사용자 성희롱·성폭력 사안처리지원단 외부지원 신청서.hwp",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475262.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16448475262.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1575631-1-성희롱성폭력-사안발생-미-통보-동의서-서식-hwpx",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 성희롱성폭력 사안발생 (미)통보 동의서(서식)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 성희롱성폭력 사안발생 (미)통보 동의서(서식).hwpx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2026/07/2E6E9BBF-8E23-E2EF-ABFD-9B87A99217A0.hwpx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2026/07/2E6E9BBF-8E23-E2EF-ABFD-9B87A99217A0.hwpx",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-568298-0-여성가족부-권익기반과-2021년-폭력예방교육-운영안내-지침-최종-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 여성가족부 권익기반과_2021년 폭력예방교육 운영안내(지침)_최종",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "예방교육 사용자 여성가족부 권익기반과_2021년 폭력예방교육 운영안내(지침)_최종.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16127450531.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1544100-0-여성가족부-성폭력방지과-번-각급학교-유치원등-성희롱-성폭력-사건-통보-및-재발방지대책-제출-서식-xlsx",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 여성가족부 성폭력방지과_②번 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 여성가족부 성폭력방지과_②번 각급학교，유치원등 성희롱·성폭력 사건 통보 및 재발방지대책 제출 서식.xlsx",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/2EBCEF60-57EC-43F2-A45A-0A1F2D068932.xlsx",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/2EBCEF60-57EC-43F2-A45A-0A1F2D068932.xlsx",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1541549-0-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼.pdf",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/01/9F3CA501-1CA3-B09C-13B9-FA4C912389D7.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-1541549-1-충청북도교육청-학교-기관-내-성희롱-성폭력-사안-대응-매뉴얼-단계별-관련-서식-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "form",
+      "title": "사용자 - 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼 [단계별 관련 서식]",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "성폭력 사용자 충청북도교육청 학교(기관) 내 성희롱 성폭력 사안 대응 매뉴얼 [단계별 관련 서식].hwp",
+      "url": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/CA0E6530-3591-F9C6-F7D7-900C9EF26B4C.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": true,
+        "originalFileUrl": "https://www.cbe.go.kr/upload/dept-21/na/bbs_1416/2025/02/CA0E6530-3591-F9C6-F7D7-900C9EF26B4C.hwp",
+        "status": "queued_for_verified_pdf_docx_split",
+        "outputFormats": [
+          "pdf",
+          "docx"
+        ]
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-578707-0-충청북도교육청용-교직원-성희롱-성폭력-사안처리-대응-매뉴얼-2021-9-hwp",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 충청북도교육청용 교직원 성희롱 성폭력 사안처리 대응 매뉴얼 (2021.9.)",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 사용자 충청북도교육청용 교직원 성희롱 성폭력 사안처리 대응 매뉴얼 (2021.9.).hwp",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2021/16334319591.hwp",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-sexual-awareness-588221-0-학교-내-성희롱-성폭력-사안처리지원단-업무매뉴얼-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 학교 내 성희롱 성폭력 사안처리지원단 업무매뉴얼",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "사안처리 사용자 학교 내 성희롱 성폭력 사안처리지원단 업무매뉴얼.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/00001988/2022/16521646551.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 성인식개선 자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-harvest-cbe-school-violence-545690-0-학교폭력-사안처리-가이드북-일부개정판-pdf",
+      "category": "schoolViolenceSafety",
+      "type": "guide",
+      "title": "사용자 - 학교폭력 사안처리 가이드북-일부개정판",
+      "provider": "충청북도교육청 인성시민과",
+      "query": "학교폭력 사안처리 사용자 학교폭력 사안처리 가이드북-일부개정판.pdf",
+      "url": "https://www.cbe.go.kr/upload/na_old/7c106bed-9ac3-4285-9b5f-a23b372a0c00/2019/15699401241.pdf",
+      "searchDomain": "cbe.go.kr",
+      "description": "충북교육청 학교폭력예방교육자료실에서 확인한 첨부 원문 파일",
+      "priority": "normal",
+      "source": "previous-generated-index",
+      "missionLabel": "",
+      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
+      "qualityScore": 96,
+      "includeInLibrary": true,
+      "needsDirectUrl": false,
+      "extraction": {
+        "embeddedFormCandidate": false,
+        "status": "source_only",
+        "outputFormats": []
+      },
+      "generatedAt": "2026-11-16T06:48:18.114Z"
+    },
+    {
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "승진 관련 각종 서식 - [서식-교원인사-4-7-4-8] 학교폭력 예방 및 대응 기여교사 확인서",
@@ -21725,10 +21945,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "아동학대 발견 및 신고 - [서식-교무학사-3-1-1-1] 아동학대체크리스트",
@@ -21753,10 +21973,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-1]2026학년도 유아 안전 365 프로젝트 계획",
@@ -21781,10 +22001,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-10]영유아 건강검진 안내문",
@@ -21809,10 +22029,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-11]투약 의뢰서",
@@ -21837,10 +22057,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-12]보건일지",
@@ -21865,10 +22085,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-14]교직원 심폐소생술 등 응급처치교육계획",
@@ -21893,10 +22113,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-2]부모교육자료1(아동학대예방)",
@@ -21921,10 +22141,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-3]부모교육자료2(성폭력예방)",
@@ -21949,10 +22169,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-4]귀가 동의서",
@@ -21977,10 +22197,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-5]가정방문 협조 요청서",
@@ -22005,10 +22225,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-6]보건 운영 계획",
@@ -22033,10 +22253,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-7]감염병 관리 계획",
@@ -22061,10 +22281,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-8]응급처치 동의서",
@@ -22089,10 +22309,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전 · 보건교육 - [서식-유-5-1-1-9]유아 건강상태 조사서",
@@ -22117,10 +22337,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전교육 - [서식-초등-3-8-1-1] 학교안전사고 예방 학교계획 작성 예시",
@@ -22145,10 +22365,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "안전교육 - 학교현장 재난유형별 교육훈련 매뉴얼",
@@ -22169,10 +22389,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "안전교육 - 학교현장 재난유형별 교육훈련 매뉴얼(학생용)",
@@ -22193,10 +22413,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-1] 2026년 학교안전사고 예방 지역계획",
@@ -22221,10 +22441,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-2]학교안전사고 예방 학교계획 작성 예시",
@@ -22249,10 +22469,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-3]학년별 학생 안전교육의 시간 및 횟수",
@@ -22277,10 +22497,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-4]수학여행 안전교육 및 점검자료",
@@ -22305,10 +22525,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "영양상담의 계획 - 영양(교)사를 위한 학교급식업무매뉴얼",
@@ -22329,7 +22549,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22353,7 +22573,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22377,7 +22597,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22401,7 +22621,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22429,7 +22649,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22453,7 +22673,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22477,7 +22697,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22501,7 +22721,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22525,7 +22745,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22553,7 +22773,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22577,7 +22797,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22601,7 +22821,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22625,7 +22845,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22649,7 +22869,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22673,7 +22893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22701,7 +22921,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22725,7 +22945,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22749,7 +22969,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22777,7 +22997,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22801,7 +23021,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22825,7 +23045,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22849,7 +23069,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22873,7 +23093,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22901,7 +23121,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22925,7 +23145,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22953,7 +23173,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -22977,7 +23197,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23005,7 +23225,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23029,7 +23249,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23057,7 +23277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23081,7 +23301,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23105,7 +23325,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23129,10 +23349,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "치료지원 - [서식-중등-8-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
@@ -23157,10 +23377,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "치료지원 - [서식-초등-7-4-1-3] 성범죄 경력 및 아동학대관련범죄 전력 조회 동의서",
@@ -23185,10 +23405,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "치료지원 - 서식-유특-6-4-1-5. 성범죄 경력 및 아동학대관련 범죄전력 조회 동의서",
@@ -23213,7 +23433,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23237,7 +23457,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23261,7 +23481,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23285,7 +23505,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23309,7 +23529,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23333,7 +23553,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23357,7 +23577,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23381,7 +23601,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23405,7 +23625,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23429,7 +23649,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23453,7 +23673,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23477,7 +23697,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23501,7 +23721,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23525,7 +23745,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23549,7 +23769,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23573,7 +23793,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23597,7 +23817,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23621,10 +23841,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "특수교육 자원봉사자 지원 - 서식-유특-6-5-2-5 성범죄 경력 및 아동학대관련 범죄전력 조회 동의서",
@@ -23649,7 +23869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23673,7 +23893,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23697,7 +23917,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23721,10 +23941,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교 보건교육 - [서식-중등-7-1-1-1] 학교보건 및 건강증진 계획(예시)",
@@ -23749,10 +23969,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교 보건교육 계획수립 - [서식-초등—5-2-1-1] 학교 보건교육 연간계획(예시)",
@@ -23777,10 +23997,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교 안전 사고 대응 - [서식-관리-10-1-1-1] 학생 사고 보고서",
@@ -23805,7 +24025,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23833,7 +24053,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23861,7 +24081,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23889,7 +24109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23917,7 +24137,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23941,7 +24161,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -23965,7 +24185,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-law-학교안전사고-예방-및-보상에-관한-법률",
@@ -23989,10 +24209,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교운동부 기숙사 운영 - [서식-중등-7-15-8-2] 학생선수 기숙사 안전관리 수칙 및 점검사항",
@@ -24017,10 +24237,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교운동부 안전관리 - [서식-중등-7-15-6-1] 대회 참가 인솔 시 안전점검 내용(예시)",
@@ -24045,10 +24265,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교운동부 안전관리 - [서식-중등-7-15-6-2] 학생선수 대회 참가 및 전지훈련 안전교육자료(예시)",
@@ -24073,10 +24293,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 발생 사안처리 절차 - [서식-중등-4-6-1-1]학교폭력 전담기구 운영 계획",
@@ -24101,10 +24321,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 발생 사안처리 절차 - [서식-중등-4-6-1-2]학교폭력 사안 발생 시 처리 절차hwp",
@@ -24129,10 +24349,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 발생 사안처리 절차 - [서식-중등-4-6-1-3] 학교폭력 사안처리 길라잡이",
@@ -24157,10 +24377,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 발생 사안처리 절차 - [서식-중등-4-6-1-4] 학교폭력_사안처리 길라잡이각종 양식 모음",
@@ -24185,10 +24405,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 사안 조사 - [서식-중등-4-6-1-3] 학교폭력 사안처리 길라잡이",
@@ -24213,10 +24433,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-1]학교폭력·범죄 예방 점검 체크리스트",
@@ -24241,10 +24461,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-10]학교안전사고 예방 지역계획 및 작성 예시안",
@@ -24269,10 +24489,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-11]2023학년도 학생 안전교육 편성·운영 기준",
@@ -24297,10 +24517,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-12]2023학년도 배움터지킴이 자원봉사자 운영계획",
@@ -24325,10 +24545,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-2]CCTV설치안내 가정통신문",
@@ -24353,10 +24573,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-3]CCTV 화상정보 열람 신청서",
@@ -24381,10 +24601,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-6]학교내학부모 및 외부인 출입통제 안내 가정통신문",
@@ -24409,10 +24629,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-7]외부인 학교 방문 일지",
@@ -24437,10 +24657,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-8]배움터지킴이 운영 계획",
@@ -24465,10 +24685,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력 예방 및 안전 인프라 확충 - [서식-중등-4-3-1-9]배움터지킴이 자원봉사자 모집공고 및 지원서",
@@ -24493,10 +24713,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력대책심의위원회 심의 - [서식-초등-3-3-3-1] 심의위원회 요청 과정 전체 양식",
@@ -24521,10 +24741,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "학교폭력예방 및 근절 대책 수립 - [서식-교무학사-3-2-1-2] 2026학교폭력사안처리길라잡이(최종)",
@@ -24549,10 +24769,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "학교폭력예방 및 대처 방안 - 2026학교폭력사안처리길라잡이(최종)",
@@ -24573,10 +24793,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "학교폭력예방 및 대처 방안 - 25년 학교폭력 사안 발생 시 처리 절차",
@@ -24597,10 +24817,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "guide",
       "title": "학교폭력예방 및 대처 방안 - 학교내 성희롱성폭력 대응 절차",
@@ -24621,7 +24841,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-law-학교폭력예방-및-대책에-관한-법률",
@@ -24645,10 +24865,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "한국교육시설안전원 공제 가입 - [서식-행정-16-5-1-1] 재난상황조서",
@@ -24673,10 +24893,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-1]학교폭력예방 및 근절계획(예시",
@@ -24701,10 +24921,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-2]학생자치순찰대 운영 계획",
@@ -24729,10 +24949,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-3]사이버폭력 인식 및 대처 학년별 학습지",
@@ -24757,10 +24977,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-4]불법촬영 및 유포 행위 관련 가정통신문(예시",
@@ -24785,10 +25005,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "schoolViolenceSafety",
       "type": "form",
       "title": "행복한 학교문화 정착을 위한 학교폭력 예방 활동 강화 - [서식-중등-4-3-2-5]도박중독 예방교육 가정통신문(예시",
@@ -24813,7 +25033,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24841,7 +25061,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -24869,10 +25089,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "각종 서식 - [1-5] 계약제교원 채용 계약서",
@@ -24897,10 +25117,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "각종 서식 - [1-6] 계약제교원 근로 계약서",
@@ -24925,10 +25145,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "각종 서식 - [1-8] 계약제교원 운영현황 자체점검표",
@@ -24953,10 +25173,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "각종 서식 - [서식 1] 기간제교원 인력풀 등록 신청서",
@@ -24981,10 +25201,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "각종 서식 - [서식 6] 기간제교원 임용사항 보고 서식",
@@ -25009,10 +25229,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "각종 서식 - [서식 8-1] 기간제교원육아휴직원",
@@ -25037,10 +25257,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "각종 서식 - [서식 8-2] 기간제교원육아휴직원복직원",
@@ -25065,10 +25285,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "각종 서식 - [전체] 계약제교원 채용 관련 참고자료 및 각종 서식",
@@ -25093,10 +25313,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "계약제 교원 채용 - 2023 경상북도 계약제교원 운영 지침",
@@ -25117,10 +25337,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-3] 기간제 교원 연수실적관리대장(서식)",
@@ -25145,10 +25365,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-4] 기간제 교원 조기퇴직 기안및사직원(서식)",
@@ -25173,10 +25393,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 근무성적 평정 - [서식-초등-8-7-5-5] 계약제 교원 운영현황 자체점검표(서식)",
@@ -25201,10 +25421,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 임용 일반 - [서식-중등-1-23-1-1] 계약제교원 자료전송 매뉴얼",
@@ -25229,10 +25449,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-1] 계약제교원 채용 관련 서식",
@@ -25257,10 +25477,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-2] 계약제교원 관련 기타 서식",
@@ -25285,10 +25505,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-3] 계약제교원 임용 기안문(예시)",
@@ -25313,10 +25533,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-4] 범죄경력 유무조회 기안문(예시)",
@@ -25341,10 +25561,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-5] 계약제교원 결격사유-범죄경력 통합조회 업무처리 안내",
@@ -25369,10 +25589,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "계약제교원 임용 절차 - [서식-중등-1-23-2-6] 교육공무원 호봉 획정 조서(예시)",
@@ -25397,10 +25617,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "계약제교원 임용 절차 - 2026 경상북도 계약제교원 운영 지침",
@@ -25421,10 +25641,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-1] 민원 응대 요령",
@@ -25449,10 +25669,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "공직자 민원응대 매뉴얼 - [서식-관리-12-4-1-2] 민원편람",
@@ -25477,10 +25697,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "교원의 복무 관리 - [서식-초등-8-5-1-1] 여비(국내출장비)정산 신청서(서식)",
@@ -25505,10 +25725,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "교원의 복무 관리 - [서식-초등-8-5-1-2] 국내여비(가족여비,이전비)지급신청서(서식)",
@@ -25533,7 +25753,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25557,10 +25777,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "교육공무직원 인사 관리 - [서식-관리-3-3-1-1] 교육공무직원 채용 및 퇴직 관련 각종 예시안",
@@ -25585,10 +25805,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "교육공무직원 인사 관리 - [서식-관리-3-3-1-2] 교육공무직원 발령대장 예시안",
@@ -25613,7 +25833,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
@@ -25637,10 +25857,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-1]학교규칙 운영메뉴얼(2022년)",
@@ -25665,10 +25885,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-2]학교규칙 제.개정 절차",
@@ -25693,10 +25913,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-3]그린마일리지 운영 계획",
@@ -25721,10 +25941,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-4]학교규칙(학생생활에관한사항) 자체점검표",
@@ -25749,10 +25969,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-5]20○○학년도학교생활규정제·개정위원회구성",
@@ -25777,10 +25997,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-6]제○차 학생 생활규정 제·개정을 위한 의견 수렴 결과",
@@ -25805,10 +26025,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-7]20○○학년도 제○차 학생생활규정 제·개정 협의회 결과",
@@ -25833,10 +26053,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "규칙과 질서가 있는 학교문화 개선 - [서식-중등-4-1-1-8]20○○학년도학생선도위원회운영계획",
@@ -25861,7 +26081,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -25889,7 +26109,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-law-근로기준법",
@@ -25913,10 +26133,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "민원 응대 요령 - [서식-관리-11-9-1-1] 특별민원 29개 유형 대응 매뉴얼(예시)",
@@ -25941,10 +26161,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "민원 응대 요령 - 국민권익위원회『특별민원 대응 매뉴얼』",
@@ -25965,10 +26185,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "민원사무처리안내 - 정보공개 운영 매뉴얼",
@@ -25989,10 +26209,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "민원서비스이행표준 - 정보공개 운영 매뉴얼",
@@ -26013,10 +26233,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "민원서식ㆍ편람 - 서식받기",
@@ -26041,10 +26261,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "민원서식ㆍ편람 - 정보공개 운영 매뉴얼",
@@ -26069,10 +26289,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "민원서식ㆍ편람 - 파일받기",
@@ -26097,10 +26317,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "민원서식ㆍ편람 - PDF 다운로드",
@@ -26125,10 +26345,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "방학중 방과후 과정 - [서식-유-4-2-1-3] 방학중 방과후 과정 근무상황부",
@@ -26153,10 +26373,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무 - [서식-행정기관-5-1-1-1] 출장 보고서예시",
@@ -26181,10 +26401,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무 관리 사항 - [서식-관리-7-1-1-1] 복무 보고 서식",
@@ -26209,10 +26429,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무 관리 사항 - [서식-관리-7-1-1-2] 복무 관리 서식",
@@ -26237,10 +26457,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무 관리 사항 - [서식-관리-7-1-1-3] 유연근무제 서식",
@@ -26265,10 +26485,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무 관리 사항 - [서식-관리-7-1-1-4] 개정 주요 내용(2023)",
@@ -26293,10 +26513,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무관리 - [서식-행정-6-1-2-1] 임신기 근로시간 단축 신청서",
@@ -26321,10 +26541,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무관리 - [서식-행정-6-1-2-2] 육아기 근로시간 단축 신청서",
@@ -26349,10 +26569,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "복무관리 - [서식-행정-6-1-2-3] 가족돌봄 등을 위한 근로시간 단축 신청서",
@@ -26377,10 +26597,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "승차(방문) 민원 배달제 - 정보공개 운영 매뉴얼",
@@ -26401,10 +26621,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "엄마품 돌봄 - [서식-유-4-3-1-5] 엄마품돌봄 근무상황부",
@@ -26429,10 +26649,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "운동부 지도자 채용 및 복무 관리 - [서식 중등 7-15-5-1] 학교운동부지도자(전임코치) 운영지침",
@@ -26457,10 +26677,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "운동부 지도자 채용 및 복무 관리 - [서식 중등 7-15-5-3] 전임코치 계약 관리지침",
@@ -26485,10 +26705,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "운동부 지도자 채용 및 복무 관리 - [서식 중등 7-15-5-4] 전임코치 근로계약서(예시)",
@@ -26513,7 +26733,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26537,10 +26757,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "채용 및 계약 - [서식-행정-6-1-1-1] 표준근로계약서 양식",
@@ -26565,10 +26785,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "채용 및 계약 - [서식-행정-6-1-1-2] (붙임1) 경상북도교육감 소속 일반직공무원 결원 대체인력 및 업무대행 제도 운영 지침(안내)",
@@ -26593,10 +26813,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "채용 및 계약 - 경상북도교육감 소속 교육공무직원 공정채용 업무 처리지침",
@@ -26617,10 +26837,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "채용 및 계약 - 경상북도교육감 소속 교육공무직원 공정채용 업무 처리지침 해설서",
@@ -26641,10 +26861,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "rule",
       "title": "채용 및 계약 - 경상북도교육감 소속 교육공무직원 관리규정(전문)",
@@ -26665,10 +26885,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "rule",
       "title": "채용 및 계약 - 경상북도교육감 소속 특수운영직군 종사자 관리규정(전문)",
@@ -26689,10 +26909,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "특성화 프로그램 강사채용 - [서식-유-4-4-2-3] 특성화프로그램 강사 면접 계획",
@@ -26717,10 +26937,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "특성화 프로그램 강사채용 - [서식-유-4-4-2-4] 특성화프로그램 강사 2차 면접 심사 결과",
@@ -26745,10 +26965,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "팩스 민원 발급 - [서식-행정-5-1-3-1] 팩스민원신청서",
@@ -26773,10 +26993,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "guide",
       "title": "행정서비스헌장 - 정보공개 운영 매뉴얼",
@@ -26797,10 +27017,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴(복)직 관련 공문 및 서식 - [서식-교원인사-1-5-1-10]유학휴직 서약서_계획서_학교장추천서",
@@ -26825,10 +27045,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴가 - [서식-초등-8-5-2-1] 교원 휴가 관련 서식 모음(서식)",
@@ -26853,10 +27073,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴가 - [서식-초등-8-5-2-2] 교육공무원 공무외 국외여행 업무처리 지침 개정(2023.1.26.)",
@@ -26881,10 +27101,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴가 - [서식-초등-8-5-2-3] 교원 휴가 관련 질의·답변 자료집",
@@ -26909,10 +27129,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴가 - [서식-초등-8-5-2-4] 공무 국외 출장 관련 서식",
@@ -26937,10 +27157,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "staffLabor",
       "type": "form",
       "title": "휴직자 복무관리 - [서식-행정-2-3-2-1] 휴직자 복무상황 신고서",
@@ -26965,7 +27185,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -26989,7 +27209,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27013,7 +27233,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27037,7 +27257,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27061,7 +27281,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27089,7 +27309,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27117,7 +27337,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27145,7 +27365,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27169,7 +27389,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27193,7 +27413,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27217,7 +27437,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27241,7 +27461,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27265,7 +27485,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27289,7 +27509,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27313,7 +27533,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27337,7 +27557,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27365,7 +27585,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27389,7 +27609,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27413,7 +27633,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27437,7 +27657,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27465,7 +27685,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27489,7 +27709,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27513,7 +27733,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27537,7 +27757,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27561,7 +27781,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27589,7 +27809,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27613,7 +27833,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27637,7 +27857,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27665,7 +27885,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27689,7 +27909,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27713,7 +27933,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27737,7 +27957,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27761,7 +27981,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27785,7 +28005,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27809,7 +28029,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27837,7 +28057,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27861,7 +28081,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27885,7 +28105,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27909,7 +28129,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27933,7 +28153,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27957,7 +28177,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -27981,7 +28201,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28005,7 +28225,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28029,7 +28249,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28057,7 +28277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28081,7 +28301,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28105,7 +28325,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28129,7 +28349,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28153,7 +28373,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28177,7 +28397,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28201,7 +28421,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28225,7 +28445,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28249,7 +28469,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28273,7 +28493,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28297,7 +28517,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28321,7 +28541,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28349,10 +28569,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "각종 서식 - [서식 2] 근무실적 평가 동의서",
@@ -28377,10 +28597,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "각종 서식 - [서식 3] 근무실적 평가서",
@@ -28405,10 +28625,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "각종 서식 - [서식 5] 기간제교원 평가결과 보고서",
@@ -28433,10 +28653,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "각종 서식 - [서식 9-1] 서류평가심사표",
@@ -28461,10 +28681,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "각종 서식 - [서식 9-4] 수업실연평가표",
@@ -28489,7 +28709,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28517,7 +28737,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28545,10 +28765,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "결과 평가 및 처리 - [서식-초등-4-14-2-1] PAPS 측정 결과지",
@@ -28573,10 +28793,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "결과 평가 및 처리 - [서식-초등-4-14-2-2] PAPS 체크리스트",
@@ -28601,10 +28821,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "결과 평가 및 처리 - [서식-초등-4-14-2-3] PAPS 기록지",
@@ -28629,10 +28849,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "결과 평가 및 처리 - [서식-초등-4-14-2-4] 자기신체평가 설문지",
@@ -28657,10 +28877,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "결과 평가 및 처리 - [서식-초등-4-14-2-5] 자세평가 설문지",
@@ -28685,10 +28905,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "결과 평가 및 처리 - [서식-초등-4-14-2-6] 종합유연성검사 숫자카드",
@@ -28713,10 +28933,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "결과 평가 및 처리 - [서식-초등-4-14-2-7] 건강체력교실 운영 계획(예시)",
@@ -28741,7 +28961,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28765,7 +28985,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28793,7 +29013,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -28821,10 +29041,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "계획 및 준비(사업부서) - 2025학년도 수학여행 수련활동 등 현장체험학습 운영안내서",
@@ -28845,10 +29065,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-1] PAPS 실시 계획(예시)",
@@ -28873,10 +29093,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-2] PAPS 측정 종목 구성",
@@ -28901,10 +29121,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-3] PAPS 측정 준비 사항",
@@ -28929,10 +29149,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-4] PAPS 측정 장비 안내",
@@ -28957,10 +29177,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "계획 수립 및 검사 실시 - [서식-초등-4-14-1-5] PAPS 관련 FAQ",
@@ -28985,10 +29205,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "교사 다면평가 - [서식-초등-8-2-2-1] 다면평가자 서약서(서식)",
@@ -29013,10 +29233,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "교사 다면평가 - [서식-초등-8-2-2-2] (교사)자기실적평가표(서식)",
@@ -29041,10 +29261,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "교사 다면평가 - [서식-초등-8-2-2-3] (교감)자기실적평가표(서식)",
@@ -29069,10 +29289,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "교사 다면평가 - [서식-초등-8-2-2-4] 다면평가(정성,정량)기준표(예시)",
@@ -29097,10 +29317,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "교사 다면평가 - [서식-초등-8-2-2-5] 교사다면평가 시행 계획(내부결재)",
@@ -29125,7 +29345,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29153,7 +29373,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29181,7 +29401,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29209,7 +29429,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29233,7 +29453,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29257,10 +29477,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "교육공동체와의 협력적 안전체계 구축 - [서식-중등-4-3-4-2]학업중단숙려제 New-Start프로그램 운영 계획서",
@@ -29285,10 +29505,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "교육공동체와의 협력적 안전체계 구축 - [서식-중등-4-3-4-3]학업중단숙려제 New-Start프로그램 안내 가정통신문",
@@ -29313,10 +29533,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "교육공동체와의 협력적 안전체계 구축 - [서식-중등-4-3-4-4]2023 학업중단숙려제 운영 기준",
@@ -29341,7 +29561,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29369,7 +29589,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29397,7 +29617,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29425,7 +29645,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29449,10 +29669,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "근무성적평정 - [서식-초등-8-2-3-1] 근평 및 다면평가 관련 조견표",
@@ -29477,10 +29697,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "다면평가 - [서식-관리-6-3-1-1] 다면 평가 추진 절차",
@@ -29505,7 +29725,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29533,7 +29753,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29561,7 +29781,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29589,7 +29809,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29617,7 +29837,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29645,7 +29865,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29669,7 +29889,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29693,10 +29913,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "미인정 유학 학생의 학적 처리 - [서식-초등-1-11-2-1]2026 초등학교 학적 업무 매뉴얼",
@@ -29721,10 +29941,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "미인정 유학 학생의 학적 처리 - [서식-초등-1-11-2-2] 2026 초등학교 학적 업무 매뉴얼 서식",
@@ -29749,10 +29969,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "봄 꽃 놀이 - [서식-유-3-3-1-1] 봄 꽃 놀이 체험학습 기안",
@@ -29777,10 +29997,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "봄 꽃 놀이 - [서식-유-3-3-1-2] 봄 꽃 놀이 체험학습 사전답사 기안",
@@ -29805,10 +30025,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "봄 꽃 놀이 - [서식-유-3-3-1-3] 봄 꽃 놀이 체험학습 사전답사 결과 보고서",
@@ -29833,10 +30053,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "봄 꽃 놀이 - [서식-유-3-3-1-4] 봄 꽃 놀이 체험학습 계획",
@@ -29861,10 +30081,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "봄 꽃 놀이 - [서식-유-3-3-1-5] 봄 꽃 놀이 체험학습 안내장",
@@ -29889,10 +30109,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "북한이탈주민 학생의 학적 처리 - [서식-초등-1-11-3-2] 북한이탈주민 학생 신상카드 예시",
@@ -29917,7 +30137,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29945,7 +30165,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -29973,7 +30193,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30001,7 +30221,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30029,7 +30249,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30057,7 +30277,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30085,7 +30305,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30113,7 +30333,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30141,7 +30361,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30169,7 +30389,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30197,7 +30417,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30225,10 +30445,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-1]「유치원생활기록부 작성 및 관리지침」(교육부고시 제2025-8호)",
@@ -30253,10 +30473,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-2]유치원생활기록부 작성 보고 기안",
@@ -30281,10 +30501,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-3]유치원생활기록부 서식(2025)",
@@ -30309,10 +30529,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-4]유치원생활기록부 색인목록",
@@ -30337,10 +30557,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-5]특기사항 기록을 위한 학부모 동의서",
@@ -30365,10 +30585,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-6]유치원생활기록부 정정보고 기안",
@@ -30393,10 +30613,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-7]유치원생활기록부 정정대장 서식(2025)",
@@ -30421,10 +30641,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-8]유치원생활기록부 송부-요청 기안",
@@ -30449,10 +30669,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-1-9]유치원생활기록부 송부요청서",
@@ -30477,10 +30697,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-10]학적처리 사용 용어",
@@ -30505,7 +30725,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30533,7 +30753,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30561,10 +30781,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-12]2026 유치원생활기록부 기재요령(배포본)",
@@ -30589,7 +30809,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30617,10 +30837,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 - [서식-유-2-3-13]2026 유치원생활기록부 작성 현장지원 자료",
@@ -30645,10 +30865,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 기재 요령 - [서식 중등 7-13-9-1] 학교스포츠클럽 활동사항 입력(예시)",
@@ -30673,10 +30893,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 기재 요령 - [서식 중등 7-13-9-2] 자유학기 예술·체육 특기사항 입력(예시)",
@@ -30701,10 +30921,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "생활기록부 기재 요령 - [서식 중등 7-13-9-3] 체육 교과 세부능력 및 특기사항 입력(예시)",
@@ -30729,10 +30949,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "성과상여금 평가(교사) - [서식-초등-8-4-1] 성과상여금-개인정보제공동의서(서식)",
@@ -30757,10 +30977,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "성과상여금 평가(교사) - [서식-초등-8-4-2] 성과상여금-최상위등급심사의결서(서식)",
@@ -30785,10 +31005,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "성과상여금 평가(교사) - [서식-초등-8-4-3] 성과상여금-이의신청서(서식)",
@@ -30813,7 +31033,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30841,7 +31061,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30869,7 +31089,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30897,7 +31117,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30925,7 +31145,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30949,7 +31169,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30973,7 +31193,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -30997,7 +31217,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31021,7 +31241,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31045,10 +31265,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "수익자부담경비(현장체험학습, 급식비 등) - 2026학년도 공립학교회계 예산편성 기본지침",
@@ -31069,10 +31289,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "수행평가 - [서식-중등-2-4-1-1] 서술형평가 문제지(예시)",
@@ -31097,10 +31317,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "수행평가 - [서식-중등-2-4-1-2] 서술형평가 채점기준표(예시)",
@@ -31125,10 +31345,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "수행평가 - [서식-중등-2-4-1-3] 수행평가 반영 비율(예시)",
@@ -31153,10 +31373,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "수행평가 - [서식-중등-2-4-1-4] 가정통신문(예시)",
@@ -31181,10 +31401,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "수행평가 - 2026학년도 경상북도 고등학교 학업성적관리 시행지침",
@@ -31205,10 +31425,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "수행평가 - 2026학년도 경상북도 중학교 학업성적관리 시행지침",
@@ -31229,7 +31449,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31253,7 +31473,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31277,7 +31497,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31301,7 +31521,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31325,7 +31545,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -31349,10 +31569,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "안전하고 행복한 학교 - [서식-중등-4-4-1-5]문화현장체험학습 안전교육 안내 예시",
@@ -31377,10 +31597,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "연간 교수-학습활동 계획 - [서식-중1-2-1-1]연간 교수-학습활동 계획",
@@ -31405,10 +31625,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "영재학급 운영 평가 - [서식-초등-4-8-4-1] 2026학년도 영재교육기관 각종 서식",
@@ -31433,10 +31653,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - [서식-초등-1-5-4-1] 병원학교 입교 신청서 기안문",
@@ -31461,10 +31681,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - [서식-초등-1-5-4-2] 병원학교 입교 신청 담임 의견서",
@@ -31489,10 +31709,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - [서식-초등-1-5-4-3] 병원학교 입·퇴교 신청서",
@@ -31517,10 +31737,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - [서식-초등-1-5-4-4] 대안교육 의뢰 기안",
@@ -31545,10 +31765,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - [서식-초등-1-5-4-5] 꿈사랑학교 원격수업 신청서(신규 또는 재신청)",
@@ -31573,10 +31793,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - [서식-초등-1-5-4-6] 꿈사랑학교 원격수업 퇴교 신청서",
@@ -31601,10 +31821,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - 초등 대안교육 위탁교육 신청서(서식)",
@@ -31629,10 +31849,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - 초등 대안교육 위탁교육 추천서(서식)",
@@ -31657,10 +31877,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "위탁학생의 출결 - 초등 대안교육 취탁교육 개인정보활용동의서",
@@ -31685,10 +31905,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "유아평가 - [서식-유-2-4-1-1]영역별 유아 평가지",
@@ -31713,10 +31933,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "인정 유학 학생의 학적 처리 - [서식-초등-1-11-1-1] 면제(유예)신청서 서식",
@@ -31741,10 +31961,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "인정 유학 학생의 학적 처리 - [서식-초등-1-11-1-2] 귀국학생 등의(취학, 재취학, 편입학)신청서 서식",
@@ -31769,10 +31989,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "인정 유학 학생의 학적 처리 - [서식-초등-1-11-1-3] 재취학에 따른 조기진급·졸업·진학평가위원회 기안문 서식(예시)",
@@ -31797,10 +32017,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "인정 유학 학생의 학적 처리 - [서식-초등-1-11-1-4] 재취학 허가 기안문",
@@ -31825,10 +32045,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "인정 유학 학생의 학적 처리 - [서식-초등-1-11-1-5] 재취학 학부모 동의서",
@@ -31853,10 +32073,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "인정 유학 학생의 학적 처리 - [서식-초등-1-11-1-6] 귀국학생 관련 서류 사실 확인서(학부모용)",
@@ -31881,10 +32101,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "인정 유학 학생의 학적 처리 - [서식-초등-1-11-1-7] 학력인정 및 학년결정 신청서",
@@ -31909,10 +32129,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "인정 유학 학생의 학적 처리 - 2023 학적업무 관련서식",
@@ -31937,10 +32157,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "인정 유학 학생의 학적 처리 - 2025 초등학교 학적업무 매뉴얼",
@@ -31961,10 +32181,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - (관리자)학교폭력 사안처리 절차 안내_교재본",
@@ -31985,10 +32205,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - [붙임 1] 학교 내 성희롱성폭력 사안처리 안내서",
@@ -32013,38 +32233,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - [붙임1] 교사용 학생 자살 징후 체크리스트",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 자료실 [붙임1] 교사용 학생 자살 징후 체크리스트.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1285472/doc_2b51v5a00=e5v72=4cv31=bav7d=7a62ve136v9e06_v822.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2019년 수학여행 등 현장체험학습 매뉴얼 신구대조(경북교육청)",
@@ -32065,10 +32257,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2019년 수학여행 등 현장체험학습 운영매뉴얼(경북교육청)",
@@ -32089,10 +32281,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2019학년도_여름방학대비_경북학생생활지도_연수자료",
@@ -32113,10 +32305,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2020학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
@@ -32137,10 +32329,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2021학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
@@ -32161,10 +32353,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 2021학년도 수학여행 수련활동 등 현장체험학습 운영 안내서_부록 서식_한글파일",
@@ -32189,10 +32381,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2022학년도 현장체험학습 운영 안내서",
@@ -32213,10 +32405,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
@@ -32237,10 +32429,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서(서식)",
@@ -32265,10 +32457,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2024 학부모용 학교폭력 예방교육 모음집_최종",
@@ -32289,10 +32481,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2024학년도 수학여행.수련활동 등 현장체험학습 운영 안내서",
@@ -32313,10 +32505,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 2024학년도 수학여행.수련활동 등 현장체험학습 운영 안내서(부록_서식)",
@@ -32341,10 +32533,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 2025학년도 수학여행.수련활동 등 현장체험학습 운영 안내서(서식_부록)",
@@ -32369,10 +32561,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2025학년도 현장체험학습 운영 안내서",
@@ -32393,10 +32585,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2026학년도 수학여행·수련활동·일일형현장체험학습 운영 안내서",
@@ -32417,10 +32609,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2026학년도 수학여행·수련활동·일일형현장체험학습 운영 안내서(안)",
@@ -32441,10 +32633,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 2026학년도 학교장 허가 교외체험학습 운영 지침",
@@ -32469,10 +32661,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 2026학년도 현장중심 학교폭력 예방 및 대책(경북교육청)",
@@ -32493,38 +32685,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 3. 교사용 학생 자살징후 체크리스트",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "체크리스트 자료실 3. 교사용 학생 자살징후 체크리스트.hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1186466/doc_3e70v58a8=adv60=47vac=94v1e=165cv9370v3f62_v5086.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 경북교육청 학교장허가 교외체험학습 운영 지침(2020.5.14.)",
@@ -32545,10 +32709,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 관련 서식",
@@ -32573,10 +32737,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 붙임 3. 학교폭력 전담조사관 활동 우수사례 작성(양식)",
@@ -32601,10 +32765,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 붙임2. 2026년 학교폭력 제로센터 지원단 활동 우수사례 제출(양식)",
@@ -32629,10 +32793,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 성희롱성폭령 사안처리 안내서(6. 29.)",
@@ -32653,10 +32817,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 운영 안내서 부록3-14(한글파일)",
@@ -32681,118 +32845,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
-      "category": "studentLife",
-      "type": "guide",
-      "title": "자료실 - 정보공개 운영 매뉴얼",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "교외체험학습 자료실 정보공개 운영 매뉴얼",
-      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": false,
-        "status": "source_only",
-        "outputFormats": []
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 정보공개 운영 매뉴얼",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "2026학년도 학교장허가 교외체험학습 운영 지침 신청서 보고서 출석 인정 자료실 정보공개 운영 매뉴얼",
-      "url": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-      "searchDomain": "gbe.kr",
-      "description": "2026학년도 학교장허가 교외체험학습 운영 지침에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/main/cf/fileDownload.do?fileKey=e222516e166c749cc7c6222205dcf514&mi=17868",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 제출서식(동의서)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 자료실 제출서식(동의서).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_4350v5010=00vd6=42vb1=a5vbf=ea83v5797v1a10_v3533.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
-      "category": "studentLife",
-      "type": "form",
-      "title": "자료실 - 제출서식(소방시설등 자체점검 실시결과 보고서)",
-      "provider": "경상북도교육청 학생생활과",
-      "query": "관련 서식 자료실 제출서식(소방시설등 자체점검 실시결과 보고서).hwp",
-      "url": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
-      "searchDomain": "gbe.kr",
-      "description": "경북교육청 학생생활과 자료실에서 확인한 첨부 원문 파일",
-      "priority": "normal",
-      "source": "previous-generated-index",
-      "missionLabel": "",
-      "reason": "직전 검증 완료 인덱스를 보존하고 새 공식자료를 누적",
-      "qualityScore": 96,
-      "includeInLibrary": true,
-      "needsDirectUrl": false,
-      "extraction": {
-        "embeddedFormCandidate": true,
-        "originalFileUrl": "https://www.gbe.kr/upload/dep_stu/na/bbs_2693/ntt_1192624/doc_aee9vba08=99v1c=40vf1=86vf4=96d5v48bev1f67_v1419.hwp",
-        "status": "queued_for_verified_pdf_docx_split",
-        "outputFormats": [
-          "pdf",
-          "docx"
-        ]
-      },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
-    },
-    {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 지침 예시안",
@@ -32813,10 +32869,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 학교장허가 교외체험학습 운영 지침 개정(2021.6.)",
@@ -32837,10 +32893,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 학교장허가 교외체험학습 운영 지침(2023. 3. 1.시행)",
@@ -32861,10 +32917,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 학교폭력 예방 및 사안처리 관련 체크리스트",
@@ -32889,10 +32945,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "자료실 - 학교폭력 예방 컨설팅단 연수자료(용량조절)1",
@@ -32913,10 +32969,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자료실 - 현장체험학습 운영 안내서_부록서식_한글파일",
@@ -32941,10 +32997,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-1] 컨설팅 장학 신청서",
@@ -32969,10 +33025,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-2] 컨설팅 장학 결과 보고서",
@@ -32997,10 +33053,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-3] 심층 수업 컨설팅 신청서",
@@ -33025,10 +33081,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-4] 심층 수업 컨설팅 보고서",
@@ -33053,10 +33109,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-5] 교육(지원)청 지원 장학 신청서",
@@ -33081,10 +33137,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "자율장학의 실제 및 평가 - [서식-중등-3-2-2-6] 교육(지원)청 지원 장학 결과 보고서",
@@ -33109,10 +33165,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "장학의 실제 및 평가 - [서식-초등-2-11-2-1] 2026학년도 초등 현장 맞춤형 장학 현황 제출 서식",
@@ -33137,7 +33193,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33165,10 +33221,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "장학의 실제 및 평가 - [서식-초등-2-11-2-2] 초등 현장 맞춤형 장학 관련 활용 각종 서식",
@@ -33193,7 +33249,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33221,10 +33277,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "장학의 실제 및 평가 - [서식-초등-2-11-2-3] 수업지기 심층수업컨설팅 운영 현황 제출 서식(학교용)",
@@ -33249,7 +33305,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -33277,10 +33333,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "장학의 실제 및 평가 - [서식-초등-2-11-2-4] 2026학년도 초등 현장 맞춤형 장학 기본 계획",
@@ -33305,10 +33361,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "전입학생 학적 처리 - [서식-초등-1-9-1-1] 전입생 개인정보이용 동의서, 스쿨뱅킹 동의서(예시)",
@@ -33333,10 +33389,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "전입학생 학적 처리 - [서식-초등-1-9-1-2] 전입생 학반 배치 학교 내규 및 관련 서식(예시)",
@@ -33361,10 +33417,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "전입학생 학적 처리 - [서식-초등-1-9-1-3] 학생정서·행동특성검사 요청 기안문",
@@ -33389,10 +33445,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "전입학생 학적 처리 - 2025 초등학교 학적업무 매뉴얼",
@@ -33413,10 +33469,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "전입학생 학적 처리 - 학적업무 관련서식",
@@ -33441,10 +33497,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "전출학생 학적 처리 - 2026학년도 학적 업무 매뉴얼(초등학교)",
@@ -33465,10 +33521,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "전출학생 학적 처리 - 2026학년도 학적 업무 매뉴얼(한글파일 서식 포함)",
@@ -33493,10 +33549,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "정원외 학적 관리 - [서식-초등-1-8-2-1] 정원 외 학적관리 기안문",
@@ -33521,10 +33577,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "정원외 학적 관리 - [서식-초등-1-8-2-2] 의무교육 관리 대장",
@@ -33549,10 +33605,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "정원외 학적 관리 - [서식-초등-1-8-2-3] 의무교육 관리 대장(유예·면제·정원 외 관리)",
@@ -33577,10 +33633,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "정원외 학적 관리 - 2025 초등학교 학적업무 매뉴얼",
@@ -33601,10 +33657,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "조기진급·졸업·진학 평가위원회 - [서식-초등-1-7-3-1] 조기진급·졸업 진학 평가 위원회 구성 기안문",
@@ -33629,10 +33685,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "출결 및 전출입 - [서식-유-1-3-1-1]재원증명서",
@@ -33657,10 +33713,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "출결 및 전출입 - [서식-유-1-3-1-2]교외체험학습 신청서",
@@ -33685,10 +33741,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "출결 및 전출입 - [서식-유-1-3-1-3]교외체험학습 보고서",
@@ -33713,10 +33769,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "출결 및 전출입 - [서식-유-1-3-1-4]교외체험학습 대리 인솔 위임장",
@@ -33741,10 +33797,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "출결 및 전출입 - [서식-유-1-3-1-5]유아이동부",
@@ -33769,10 +33825,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "출결 및 전출입 - [서식-유-1-3-1-6]퇴학신청서",
@@ -33797,10 +33853,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "치료지원 - [서식-중등-8-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
@@ -33825,10 +33881,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "치료지원 - [서식-초등-7-4-1-2] 치료지원서비스제공 기록지 및 월별 평가서",
@@ -33853,10 +33909,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "치료지원 - 서식-유특-6-4-1-1. 치료지원서비스제공기록지 및 월별 평가서",
@@ -33881,7 +33937,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-career-guide-컴퓨터활용능력-자격-채용-우대-안내",
@@ -33905,10 +33961,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "통합자료실 - 2026 초등 학적 업무 매뉴얼 내지(서식 포함)",
@@ -33933,10 +33989,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "특수교육대상자 신규 선정 배치 - 서식-유특-6-1-1-1 특수교육대상학생 진단 · 평가 의뢰서",
@@ -33961,10 +34017,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "특수교육대상자 신규 선정・배치 - [서식-초등-7-1-1-1] 특수교육대상자 진단·평가 의뢰서",
@@ -33989,10 +34045,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "평가 운영 및 결과 활용 - 2026학년도 경상북도 초등학교 학업성적관리 시행지침(2026. 3. 1. 시행)",
@@ -34013,10 +34069,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가 출제 계획 수립 - [서식-중등-2-5-1-1] 평가 출제 관련 교과협의록 예시",
@@ -34041,10 +34097,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가 출제 계획 수립 - [서식-중등-2-5-1-2] 평가 출제시 유의사항 연수 예시",
@@ -34069,10 +34125,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가 출제 계획 수립 - [서식-중등-2-5-1-3] 평가 안내 가정통신문 예시",
@@ -34097,10 +34153,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가 출제 후 활용 및 보안 관리 - [서식-중등-2-5-3-1] 2026 중학교 학업성적 평가관리 단계별 업무 매뉴얼",
@@ -34125,10 +34181,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가 출제 후 활용 및 보안 관리 - [서식-중등-2-5-3-2] 2026 고등학교 학업성적 평가관리 단계별 업무 매뉴얼",
@@ -34153,10 +34209,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "평가 출제 후 활용 및 보안 관리 - 2026학년도 경상북도 고등학교 학업성적관리 시행지침",
@@ -34177,10 +34233,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "평가 출제 후 활용 및 보안 관리 - 2026학년도 경상북도 중학교 학업성적관리 시행지침",
@@ -34201,10 +34257,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-1] 평가계획 관련 학업성적관리위원회 회의록(예시",
@@ -34229,10 +34285,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-2] 교과별 평가계획 학업성적관리위원회 심의안 (예시",
@@ -34257,10 +34313,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-3] 평가계획 관련 가정통신문(예시",
@@ -34285,10 +34341,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "평가계획안 심의 및 평가계획 정보공시 - [서식-중등-2-2-2-4] 평가계획 정보공시",
@@ -34313,7 +34369,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34337,10 +34393,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교 평가 - [서식-관리-2-2-1-1] 학교 평가 영역 및 지표",
@@ -34365,10 +34421,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교 평가 - [서식-관리-2-2-1-2] 2026 학교평가 길라잡이(중등)",
@@ -34393,10 +34449,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교 평가 - [서식-관리-2-2-1-3] 2026 학교평가 길라잡이(중등)",
@@ -34421,10 +34477,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교 평가 - [서식1] 2026 학교평가 길라잡이(중등)",
@@ -34449,10 +34505,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교교육과정 평가와 개선 - [서식-초등-2-1-7-1] 학교교육과정 평가 문항 자료",
@@ -34477,10 +34533,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교교육과정 평가와 개선 - [서식-초등-2-1-7-2] 학교교육과정 평가 자료(업무별 평가)",
@@ -34505,10 +34561,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교교육과정 평가와 개선 - [서식-초등-2-1-7-3] 학교교육과정 평가 자료(부서별 협의)",
@@ -34533,10 +34589,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-1] 과목별 교수학습 및 평가 계획(예시)",
@@ -34561,10 +34617,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-2] 평가 정보표(서식)",
@@ -34589,10 +34645,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-3] 자체 점검표(단위학교용)",
@@ -34617,10 +34673,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교교육과정분석 및 평가계획 수립 - [서식-초등-2-3-1-4] - 2026학년도 초등 과정중심 평가(관련 서식)",
@@ -34645,10 +34701,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교생활기록부 관리 - [서식-중등-1-15-1-5] 2025학년도 학교생활기록부 현장점검 도움자료(중)",
@@ -34673,10 +34729,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교생활기록부 관리 - [서식-중등-1-15-1-6] 2025학년도 학교생활기록부 현장점검 도움자료(고)",
@@ -34701,10 +34757,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교생활기록부 관리 - [서식-중등-1-15-1-7] ○○○학교 학교생활기록부 점검결과표(예시)",
@@ -34729,10 +34785,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교생활기록부 관리 - [서식-초등-1-3-3] 2026학년도 학적 업무 매뉴얼(초등학교)",
@@ -34757,10 +34813,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교생활기록부 관리 - [서식-초등-1-3-4] [서식-초등1-3-4] 2026학년도 학적 업무 매뉴얼(한글파일 서식포함)",
@@ -34785,7 +34841,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34813,7 +34869,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -34841,7 +34897,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-curated-guide-학교생활기록부-기재요령",
@@ -34869,15 +34925,15 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
+      "id": "existing-acquisition-mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
       "title": "학교생활기록작성및관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
       "description": "학교생활기록 작성 및 관리지침 출결 정정 경조사 보존",
@@ -34897,10 +34953,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교스포츠클럽 운영 및 평가 - [서식-초등-4-11-2-1] 방과 후 학교스포츠클럽 등록 및 운영",
@@ -34925,10 +34981,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교스포츠클럽 운영 및 평가 - [서식-초등-4-11-2-3] 사업실적보고서",
@@ -34953,10 +35009,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교스포츠클럽 운영 및 평가 - [서식-초등-4-11-2-4] 교육지원청 단위 학교스포츠클럽 리그(대회) 참가신청서",
@@ -34981,10 +35037,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교장허가 교외체험학습 - [서식-중등-1-13-1-1] 학교장허가 교외체험학습 운영(2023.3.1.시행)",
@@ -35009,7 +35065,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35033,7 +35089,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35057,7 +35113,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35081,7 +35137,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35105,10 +35161,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 - 4. 학교자체평가 결과보고서 서식(초등)",
@@ -35133,10 +35189,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 - 5. 학교자체평가 결과보고서 서식(특수)",
@@ -35161,10 +35217,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 기준(평가지표) - [서식-중등-3-8-2-1] 학교평가 평가지표",
@@ -35189,10 +35245,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-1] 학교평가 위원회 구성 및 협의회 계획",
@@ -35217,10 +35273,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-2] 학교평가 추진 계획",
@@ -35245,10 +35301,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-3] 학교평가 연수 및 등록부",
@@ -35273,10 +35329,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-4] 학교평가 실행 양식",
@@ -35301,10 +35357,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-5] 학교평가 결과 확인서",
@@ -35329,10 +35385,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학교평가 시행 개요 및 절차 - [서식-중등-3-8-1-6] 학교평가 결과 나눔(공유)",
@@ -35357,7 +35413,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35385,7 +35441,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35413,7 +35469,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35441,7 +35497,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -35469,10 +35525,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-1] 학기초 평가계획 관련 교과협의록 예시",
@@ -35497,10 +35553,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-2] 1학년 자유학년제 평가계획 예시",
@@ -35525,10 +35581,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학년별·교과별 평가계획 수립 - [서식-중등-2-2-1-3] 2·3학년 평가계획 예시",
@@ -35553,10 +35609,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학생 출결관리 - [서식-중등-1-12-1-1] 질병 결석신고서(예시)",
@@ -35581,10 +35637,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학생 출결관리 - [서식-중등-1-12-1-2] 기타 결석신고서(예시)",
@@ -35609,10 +35665,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학생 출결관리 - [서식-중등-1-12-1-3] 출석인정 결석신고서(예시)",
@@ -35637,10 +35693,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학생 출결관리 - [서식-중등-1-12-1-4] 지각,조퇴,결과계(예시)",
@@ -35665,10 +35721,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학생 출결관리 - [서식-중등-1-12-1-5]] 내교통지서(예시)",
@@ -35693,10 +35749,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학생 출결관리 - [서식-중등-1-12-1-6] 아동학대 피해의심학생 및 무단결석 학생 발생시 대응방안",
@@ -35721,10 +35777,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학생 출결관리 - [서식-중등-1-12-1-7] 법정 감염병으로 인한 등교중지 관련 협조문(예시)",
@@ -35749,10 +35805,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학생상담 - [서식-초등-3-6-1-4]학업중단숙려제[New-Stsrt프로그램] 운영",
@@ -35777,10 +35833,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "학업성적관리위원회 운영 - 2026 고학교 학업성적 평가관리 단계별 업무 매뉴얼",
@@ -35801,10 +35857,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "학업성적관리위원회 운영 - 2026 중학교 학업성적 평가관리 단계별 업무 매뉴얼",
@@ -35825,10 +35881,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-1] 고등학교전·편·재입학 지원서",
@@ -35853,10 +35909,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-2] 고등학교 전·편입학 배정 의뢰서",
@@ -35881,10 +35937,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-3] 거주확인서",
@@ -35909,10 +35965,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-4] 귀국자 편입학 원서",
@@ -35937,10 +35993,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-5] 평준화 일반고등학교 전·편입학 배정원서",
@@ -35965,10 +36021,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-6] 평준화지역·비평준화지역 고등학교 전학 지원서",
@@ -35993,10 +36049,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-7] 고등학교 학년결정 입학신청서",
@@ -36021,10 +36077,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-8] 전학을 위한 학교장의 노력현황",
@@ -36049,10 +36105,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(고교 전・편입학) - [서식-중등-1-10-2-9] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
@@ -36077,10 +36133,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(유예,면제 및 정원 외 관리) - [서식-중등-1-11-1-1] 복학통지서(예시)",
@@ -36105,10 +36161,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(유예,면제 및 정원 외 관리) - [서식-중등-1-11-1-2] 의무교육관리위원회 협의록(예시)",
@@ -36133,10 +36189,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(유예,면제 및 정원 외 관리) - [서식-중등-1-11-1-3] 취학의무 유예(면제) 신청서(예시)",
@@ -36161,10 +36217,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(유예,면제 및 정원 외 관리) - [서식-중등-1-11-1-4] 취학의무 유예(면제) 통지문(예시)",
@@ -36189,10 +36245,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(유예,면제 및 정원 외 관리) - 2022 학적업무관련서식",
@@ -36217,10 +36273,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-1] 중학교 전·편·재입학 배정원서",
@@ -36245,10 +36301,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-2] 중학교 전·편·재입학 지원서",
@@ -36273,10 +36329,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-3] 중학교 전·편입학 배정 의뢰서",
@@ -36301,10 +36357,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-4] 거주확인서",
@@ -36329,10 +36385,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-5] 귀국자 편입학 원서",
@@ -36357,10 +36413,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-6] 귀국학생의 재취학에 따른 조기진급,졸업,진학평가위원회 협의결과",
@@ -36385,10 +36441,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "학적관리(중학교 전・편입학) - [서식-중등-1-10-1-7] 중학교 학교폭력 가해학생 전학 서류(예시)",
@@ -36413,10 +36469,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "학적관리(중학교 전・편입학) - 귀국자 특례입학 업무처리 지침",
@@ -36437,10 +36493,10 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 - [서식-관리-12-1-1-1] 2023학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
@@ -36465,10 +36521,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-중등-4-12-2-1]수학여행 실시 기본 계획(예시)",
@@ -36493,10 +36549,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-중등-4-12-2-2]수학여행 사전 수요 조사 가정통신문(예시)",
@@ -36521,10 +36577,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-중등-4-12-2-3]현장체험학습 가정통신문(예시)",
@@ -36549,10 +36605,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-중등-4-12-2-4]현장체험학습(수학여행) 잔류학생 지도계획(예시)",
@@ -36577,10 +36633,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-1] 현장체험학습 안전교육 계획",
@@ -36605,10 +36661,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-10] 국외 현장체험학습 자체점검표",
@@ -36633,10 +36689,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-11] 국외 현장체험학습 신고서",
@@ -36661,10 +36717,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-2] 현장체험학습 활성화위원회 구성 현황",
@@ -36689,10 +36745,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-3] 현장체험학습 KS표준에 의한 점검 항목",
@@ -36717,10 +36773,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-4] 체험학습 용역업체 제안서 평가 항목 및 배점표",
@@ -36745,10 +36801,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-5] 숙박형 현장체험학습 현장답사 안전점검표",
@@ -36773,10 +36829,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-6] 숙박형 현장체험학습 자체점검표",
@@ -36801,10 +36857,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-7] 1일형 현장체험학습 현장답사 안전점검표",
@@ -36829,10 +36885,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-8] 1일형 현장체험학습 자체점검표",
@@ -36857,10 +36913,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 계획 - [서식-초등-3-13-1-9] 국외 현장체험학습 상황별 안전점검표",
@@ -36885,10 +36941,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-중등-4-12-3-1]현장체험학습 사전안전교육자료(예시)",
@@ -36913,10 +36969,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-1] 교통 안전 점검 항목 및 안전교육",
@@ -36941,10 +36997,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-10] 경주지역 수학여행 프로그램 소개",
@@ -36969,10 +37025,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-11] 체험학습 불참자 환불 및 정산보고",
@@ -36997,10 +37053,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-2] 음식 안전 점검 항목 및 안전교육",
@@ -37025,10 +37081,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-3] 숙소 안전 점검 항목 및 안전교육",
@@ -37053,10 +37109,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-4] 화재 예방 안전 점검 항목 및 조치 사항",
@@ -37081,10 +37137,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-5] 활동별 안전 점검 항목 및 조치 사항",
@@ -37109,10 +37165,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-6] 활동별 응급 조치 사항",
@@ -37137,10 +37193,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-7] 수학여행 사전 점검 서비스 기관 소개",
@@ -37165,10 +37221,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-8] 청렴 체크리스트",
@@ -37193,10 +37249,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 운영 - [서식-초등-3-13-2-9] 현장체험학습 사안보고서",
@@ -37221,10 +37277,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 평가 - [서식-중등-4-12-4-1]현장체험학습 만족도 조사 설문지(예시)",
@@ -37249,10 +37305,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "form",
       "title": "현장체험학습 평가 및 개선 - [서식-초등-3-13-3-1] 주제별체험학습 결과 설문",
@@ -37277,10 +37333,10 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ha",
+      "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
       "category": "studentLife",
       "type": "guide",
       "title": "현장체험학습의 이해 - 2025학년도 수학여행 수련활동 등 현장체험학습 운영 안내서",
@@ -37301,7 +37357,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37329,7 +37385,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37357,7 +37413,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37385,7 +37441,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37413,7 +37469,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37441,7 +37497,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-existing-acquisition-ex",
@@ -37469,7 +37525,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "mission-stafflabor-rule-law-go-kr-국가공무원-복무규정",
@@ -37493,18 +37549,18 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
+      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
-      "title": "2027 학교생활기록 작성 및 관리지침",
+      "title": "2026 학교생활기록 작성 및 관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2027 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "low",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
@@ -37521,7 +37577,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "mission-general-law-law-go-kr-2026-초-중등교육법",
@@ -37545,7 +37601,7 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
       "id": "mission-general-law-law-go-kr-2027-초-중등교육법",
@@ -37569,18 +37625,18 @@
         "status": "source_only",
         "outputFormats": []
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     },
     {
-      "id": "mission-studentlife-rule-law-go-kr-2026-학교생활기록-작성-및-관리지침",
+      "id": "mission-studentlife-rule-law-go-kr-2027-학교생활기록-작성-및-관리지침",
       "category": "studentLife",
       "type": "rule",
-      "title": "2026 학교생활기록 작성 및 관리지침",
+      "title": "2027 학교생활기록 작성 및 관리지침",
       "provider": "교육부·국가법령정보센터",
-      "query": "2026 학교생활기록 작성 및 관리지침 출결 정정 보존",
+      "query": "2027 학교생활기록 작성 및 관리지침 출결 정정 보존",
       "url": "https://www.law.go.kr/행정규칙/%ED%95%99%EA%B5%90%EC%83%9D%ED%99%9C%EA%B8%B0%EB%A1%9D%EC%9E%91%EC%84%B1%EB%B0%8F%EA%B4%80%EB%A6%AC%EC%A7%80%EC%B9%A8",
       "searchDomain": "law.go.kr",
-      "description": "교육부·국가법령정보센터 공식자료에서 2026 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
+      "description": "교육부·국가법령정보센터 공식자료에서 2027 학교생활기록 작성 및 관리지침 출결 정정 보존 원문·서식을 확인하는 자동 확보 후보",
       "priority": "low",
       "source": "mission-seed",
       "missionLabel": "학생생활·학적",
@@ -37597,7 +37653,7 @@
           "docx"
         ]
       },
-      "generatedAt": "2026-11-15T21:06:33.915Z"
+      "generatedAt": "2026-11-16T06:48:18.114Z"
     }
   ]
 }; });
